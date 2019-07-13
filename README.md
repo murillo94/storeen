@@ -1,1 +1,1 @@
-# store
+# storeen-frontend
