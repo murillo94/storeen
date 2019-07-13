@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": ["react", "jsx-a11y"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "class-methods-use-this": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/destructuring-assignment": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/button-has-type": 0,
+    "react/no-array-index-key": 0,
+    "import/no-extraneous-dependencies": [0],
+    "import/extensions": ["error", { "js": "never", "json": "always" }],
+    "no-undef": 0,
+    "no-restricted-globals": 0,
+    "no-nested-ternary": 0,
+    "no-restricted-syntax": 0,
+    "no-prototype-builtins": 0,
+    "radix": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "jsx-a11y/anchor-is-valid": 0
+  }
+}

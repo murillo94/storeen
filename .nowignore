@@ -1,0 +1,13 @@
+README.md
+.gitignore
+.next
+.git
+.cache
+.eslintrc
+.prettierrc
+node_modules
+dist
+coverage
+jest.*
+__tests__
+__mocks__
