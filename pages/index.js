@@ -7,8 +7,9 @@ const Home = () => (
     <Container title="Produtos">
       <Button text="Novo produto" />
       <Button text="Filtrar" icon="filter" />
-      <Input placeholder="Camiseta Longa" />
-      <Input labelText="Título do produto" />
+      <Input id="product" name="product" placeholder="Camiseta Longa" />
+      <Input labelText="Título do produto" id="title" name="title" />
+      <Input id="search" name="search" placeholder="Pesquisar" icon="search" />
     </Container>
   </>
 );

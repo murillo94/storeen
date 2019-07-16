@@ -27,6 +27,10 @@ class StoreenDoc extends Document {
                   margin: 0;
                   color: #333;
                 }
+
+                *, :after, :before {
+                  box-sizing: border-box;
+                }
               `
             }}
           />

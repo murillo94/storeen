@@ -4,19 +4,20 @@ const Button = ({
   type = 'button',
   text = '',
   icon = '',
-  onClick = () => null
+  border = '1px solid gray',
+  onClick = null
 }) => (
   <>
     <button type={type} onClick={onClick}>
       {icon && <Icon name={icon} size={17} />}
-      <span>{text}</span>
+      {text && <span>{text}</span>}
     </button>
 
     <style jsx>
       {`
         button {
           font-size: 14px;
-          border: 1px solid gray;
+          border: ${border};
           border-radius: 8px;
           padding: 10px;
           cursor: pointer;
