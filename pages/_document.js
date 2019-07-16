@@ -17,8 +17,6 @@ class StoreenDoc extends Document {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
           <link rel="icon" type="image/png" href="/static/images/favicon.png" />
-
-          <title>Storeen</title>
           <style
             dangerouslySetInnerHTML={{
               __html: `
