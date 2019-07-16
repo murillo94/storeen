@@ -19,15 +19,17 @@ const Button = ({
           font-size: 14px;
           border: ${border};
           border-radius: 8px;
-          padding: 10px;
+          height: 39px;
+          padding: 0 10px;
           cursor: pointer;
           display: inline-flex;
           align-items: center;
           justify-content: center;
+          vertical-align: middle;
         }
 
         span {
-          margin-left: 5px;
+          margin-left: ${icon ? '5px' : 0};
         }
       `}
     </style>
