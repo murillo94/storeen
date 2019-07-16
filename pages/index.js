@@ -1,10 +1,12 @@
+import Container from '../components/Container';
+import SubHeader from '../components/SubHeader';
 import Button from '../components/Button';
 import Input from '../components/Input';
-import Container from '../components/Container';
 
 const Home = () => (
   <>
-    <Container title="Produtos">
+    <Container title="Geral">
+      <SubHeader title="Produtos" />
       <Button text="Novo produto" />
       <Button text="Filtrar" icon="filter" />
       <Input id="product" name="product" placeholder="Camiseta Longa" />
