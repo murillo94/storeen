@@ -1,7 +1,7 @@
 import Label from '../Label';
 import Button from '../Button';
 
-const InputNormal = ({ type, id, name, placeholder, border }) => (
+const InputNormal = ({ type, id, name, placeholder, border, marginBottom }) => (
   <>
     <input
       type={type}
@@ -21,6 +21,7 @@ const InputNormal = ({ type, id, name, placeholder, border }) => (
           border: ${border};
           border-radius: 8px;
           padding: 10px;
+          margin-bottom: ${marginBottom};
           width: 100%;
           display: block;
         }
@@ -29,7 +30,16 @@ const InputNormal = ({ type, id, name, placeholder, border }) => (
   </>
 );
 
-const InputIcon = ({ type, id, name, placeholder, icon, border, onClick }) => (
+const InputIcon = ({
+  type,
+  id,
+  name,
+  placeholder,
+  icon,
+  border,
+  marginBottom,
+  onClick
+}) => (
   <>
     <div className="container">
       <div className="input">
@@ -39,6 +49,7 @@ const InputIcon = ({ type, id, name, placeholder, icon, border, onClick }) => (
           name={name}
           placeholder={placeholder}
           border={border}
+          marginBottom={0}
         />
       </div>
       <span className="icon">
@@ -53,6 +64,7 @@ const InputIcon = ({ type, id, name, placeholder, icon, border, onClick }) => (
           border-radius: 8px;
           display: flex;
           align-items: center;
+          margin-bottom: ${marginBottom};
         }
 
         .input {
@@ -77,6 +89,7 @@ const Input = ({
   labelText = '',
   icon = '',
   border = '1px solid gray',
+  marginBottom = '20px',
   onClick = null
 }) => (
   <>
@@ -89,6 +102,7 @@ const Input = ({
         placeholder={placeholder}
         icon={icon}
         border="none"
+        marginBottom={marginBottom}
         onClick={onClick}
       />
     ) : (
@@ -98,6 +112,7 @@ const Input = ({
         name={name}
         placeholder={placeholder}
         border={border}
+        marginBottom={marginBottom}
       />
     )}
   </>
