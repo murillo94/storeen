@@ -52,9 +52,9 @@ const InputIcon = ({
           marginBottom={0}
         />
       </div>
-      <span className="icon">
+      <div className="icon">
         <Button icon={icon} border={border} onClick={onClick} />
-      </span>
+      </div>
     </div>
 
     <style jsx>

@@ -1,4 +1,5 @@
 import Icon from '../icon';
+import { Text } from '../typography';
 
 const Button = ({
   type = 'button',
@@ -10,7 +11,7 @@ const Button = ({
   <>
     <button type={type} onClick={onClick}>
       {icon && <Icon name={icon} size={17} />}
-      {text && <span>{text}</span>}
+      {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
     </button>
 
     <style jsx>
@@ -26,10 +27,6 @@ const Button = ({
           align-items: center;
           justify-content: center;
           vertical-align: middle;
-        }
-
-        span {
-          margin-left: ${icon ? '5px' : 0};
         }
       `}
     </style>
