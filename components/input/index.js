@@ -1,4 +1,4 @@
-import Label from '../label';
+import { Label } from '../typography';
 import Button from '../button';
 
 const InputNormal = ({ type, id, name, placeholder, border, marginBottom }) => (

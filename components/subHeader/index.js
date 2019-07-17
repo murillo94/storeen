@@ -1,7 +1,9 @@
+import { Heading } from '../typography';
+
 const SubHeader = ({ children, title }) => (
   <>
     <header>
-      <h1>{title}</h1>
+      <Heading text={title} />
       {children && <div>{children}</div>}
     </header>
 
@@ -12,12 +14,6 @@ const SubHeader = ({ children, title }) => (
           align-items: center;
           justify-content: space-between;
           margin-bottom: 40px;
-        }
-
-        h1 {
-          font-size: 28px;
-          font-weight: 600;
-          margin: 0;
         }
       `}
     </style>

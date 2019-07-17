@@ -1,8 +1,10 @@
+import { Heading } from '../typography';
+
 const Container = ({ children, title = '' }) => (
   <>
     <section>
       <header>
-        <h2>{title}</h2>
+        <Heading is="h2" text={title} />
       </header>
       {children}
     </section>
@@ -18,12 +20,6 @@ const Container = ({ children, title = '' }) => (
 
         header {
           margin-bottom: 20px;
-        }
-
-        h2 {
-          font-size: 18px;
-          font-weight: 600;
-          margin: 0;
         }
       `}
     </style>

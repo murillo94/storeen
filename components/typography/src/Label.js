@@ -1,6 +1,6 @@
 const Label = ({ htmlFor = null, text = '' }) => (
   <>
-    <label htmlFor={htmlFor}> {text} </label>
+    <label htmlFor={htmlFor}>{text}</label>
 
     <style jsx>
       {`
