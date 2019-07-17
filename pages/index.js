@@ -1,7 +1,7 @@
-import Container from '../components/Container';
-import SubHeader from '../components/SubHeader';
-import Button from '../components/Button';
-import Input from '../components/Input';
+import Container from '../components/container';
+import SubHeader from '../components/subHeader';
+import Button from '../components/button';
+import Input from '../components/input';
 
 const Home = () => (
   <div>

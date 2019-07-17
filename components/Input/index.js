@@ -1,5 +1,5 @@
-import Label from '../Label';
-import Button from '../Button';
+import Label from '../label';
+import Button from '../button';
 
 const InputNormal = ({ type, id, name, placeholder, border, marginBottom }) => (
   <>
