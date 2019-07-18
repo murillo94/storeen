@@ -6,10 +6,11 @@ const Button = ({
   text = '',
   icon = '',
   border = '1px solid gray',
+  margin,
   onClick = null
 }) => (
   <>
-    <button type={type} onClick={onClick}>
+    <button type={type} onClick={onClick} style={{ margin }}>
       {icon && <Icon name={icon} size={17} />}
       {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
     </button>

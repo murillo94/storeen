@@ -1,6 +1,6 @@
-const H1 = ({ text }) => (
+const H1 = ({ text, margin }) => (
   <>
-    <h1>{text}</h1>
+    <h1 style={{ margin }}>{text}</h1>
 
     <style jsx>
       {`
@@ -14,9 +14,9 @@ const H1 = ({ text }) => (
   </>
 );
 
-const H2 = ({ text }) => (
+const H2 = ({ text, margin }) => (
   <>
-    <h2>{text}</h2>
+    <h2 style={{ margin }}>{text}</h2>
 
     <style jsx>
       {`
@@ -30,10 +30,27 @@ const H2 = ({ text }) => (
   </>
 );
 
-const Heading = ({ is = 'h1', text = '' }) => (
+const H3 = ({ text, margin }) => (
   <>
-    {is === 'h1' && <H1 text={text} />}
-    {is === 'h2' && <H2 text={text} />}
+    <h3 style={{ margin }}>{text}</h3>
+
+    <style jsx>
+      {`
+        h3 {
+          font-size: 15px;
+          font-weight: 600;
+          margin: 0;
+        }
+      `}
+    </style>
+  </>
+);
+
+const Heading = ({ is = 'h1', text = '', margin }) => (
+  <>
+    {is === 'h1' && <H1 text={text} margin={margin} />}
+    {is === 'h2' && <H2 text={text} margin={margin} />}
+    {is === 'h3' && <H3 text={text} margin={margin} />}
   </>
 );
 

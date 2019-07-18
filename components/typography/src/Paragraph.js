@@ -6,7 +6,7 @@ const Paragraph = ({ text = '' }) => (
       {`
         p {
           font-size: 14px;
-          margin-bottom: 10px;
+          margin: 0 0 10px;
         }
       `}
     </style>

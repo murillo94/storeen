@@ -1,8 +1,8 @@
 import { Heading } from '../typography';
 
-const Container = ({ children, title = '' }) => (
+const Container = ({ children, title = '', margin }) => (
   <>
-    <section>
+    <section style={{ margin }}>
       <header>
         <Heading is="h2" text={title} />
       </header>
