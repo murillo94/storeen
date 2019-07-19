@@ -1,7 +1,7 @@
 import Menu from '../components/menu';
 import Header from '../components/header';
 
-const Content = ({ children, title, padding = 20 }) => (
+const Content = ({ children, title, padding = '20px' }) => (
   <>
     <div className="container">
       <Menu />
@@ -25,7 +25,7 @@ const Content = ({ children, title, padding = 20 }) => (
           flex: 1;
         }
 
-        .main-container: {
+        .main-container {
           padding: ${padding};
         }
       `}
