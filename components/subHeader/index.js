@@ -1,7 +1,12 @@
 import Button from '../button';
 import { Heading } from '../typography';
 
-const SubHeader = ({ children, title, hasBack, onClick = null }) => (
+const SubHeader = ({
+  children,
+  title = '',
+  hasBack = false,
+  onClick = null
+}) => (
   <>
     <header>
       <div>
