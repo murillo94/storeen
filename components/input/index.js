@@ -62,9 +62,9 @@ const InputIcon = ({
         .container {
           border: 1px solid gray;
           border-radius: 8px;
+          margin-bottom: ${marginBottom};
           display: flex;
           align-items: center;
-          margin-bottom: ${marginBottom};
         }
 
         .input {
@@ -73,8 +73,8 @@ const InputIcon = ({
         }
 
         .icon {
-          flex: 0.01;
           text-align: center;
+          flex: 0.01;
         }
       `}
     </style>

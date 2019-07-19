@@ -1,3 +1,5 @@
+import Page from '../layouts/page';
+
 import Container from '../components/container';
 import SubHeader from '../components/subHeader';
 import Button from '../components/button';
@@ -5,7 +7,7 @@ import Input from '../components/input';
 import { Heading, Paragraph } from '../components/typography';
 
 const Home = () => (
-  <>
+  <Page>
     <div>
       <SubHeader title="Produtos">
         <Button text="Novo produto" margin="0 10px 0 0" />
@@ -41,7 +43,7 @@ const Home = () => (
         }
       `}
     </style>
-  </>
+  </Page>
 );
 
 export default Home;
