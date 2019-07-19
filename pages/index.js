@@ -24,7 +24,7 @@ const Home = () => (
       </Container>
     </div>
     <div>
-      <SubHeader title="Promoções">
+      <SubHeader title="Promoções" hasBack>
         <Button text="Novo produto" />
       </SubHeader>
       <Container title="Geral">

@@ -1,9 +1,15 @@
+import Button from '../button';
 import { Heading } from '../typography';
 
-const SubHeader = ({ children, title }) => (
+const SubHeader = ({ children, title, hasBack, onClick = null }) => (
   <>
     <header>
-      <Heading text={title} />
+      <div>
+        {hasBack && (
+          <Button icon="chevron-left" onClick={onClick} border="none" />
+        )}
+        <Heading text={title} margin={hasBack && '0 0 0 5px'} />
+      </div>
       {children && <div>{children}</div>}
     </header>
 
@@ -14,6 +20,12 @@ const SubHeader = ({ children, title }) => (
           align-items: center;
           justify-content: space-between;
           margin-bottom: 40px;
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       `}
     </style>
