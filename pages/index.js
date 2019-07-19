@@ -38,8 +38,7 @@ const Home = () => (
     <style jsx>
       {`
         div {
-          width: 800px;
-          margin: 50px auto;
+          margin: 0 0 70px;
         }
       `}
     </style>

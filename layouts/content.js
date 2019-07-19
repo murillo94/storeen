@@ -1,13 +1,15 @@
 import Menu from '../components/menu';
 import Header from '../components/header';
 
-const Content = ({ children, title, padding = '20px' }) => (
+const Content = ({ children, title, padding = '30px' }) => (
   <>
     <div className="container">
       <Menu />
       <main>
         <Header title={title} />
-        <div className="main-container">{children}</div>
+        <div className="main-container">
+          <div className="main-children">{children}</div>
+        </div>
       </main>
     </div>
 
@@ -27,6 +29,18 @@ const Content = ({ children, title, padding = '20px' }) => (
 
         .main-container {
           padding: ${padding};
+        }
+
+        .main-children {
+          width: 800px;
+          margin: 20px auto 0;
+        }
+
+        @media (max-width: 991px) {
+          .main-children {
+            width: 100%;
+            margin: 0 auto;
+          }
         }
       `}
     </style>
