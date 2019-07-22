@@ -1,6 +1,10 @@
 const Header = () => (
   <>
-    <header>teste header</header>
+    <header>
+      <div>ver minha loja</div>
+      <div>Minha conta</div>
+    </header>
+
     <style jsx>
       {`
         header {
@@ -11,6 +15,9 @@ const Header = () => (
           top: 0;
           left: 0;
           z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
       `}
     </style>

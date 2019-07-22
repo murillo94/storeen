@@ -35,6 +35,7 @@ const Home = () => (
         <Paragraph text="Não tem valor de pedido" />
       </Container>
     </div>
+
     <style jsx>
       {`
         div {

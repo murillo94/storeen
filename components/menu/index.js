@@ -1,6 +1,7 @@
 const Menu = () => (
   <>
     <nav>teste menu</nav>
+
     <style jsx>
       {`
         nav {
