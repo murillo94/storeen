@@ -1,6 +1,12 @@
+import Image from '../image';
+
 const Menu = () => (
   <>
-    <nav>teste menu</nav>
+    <nav>
+      <div className="logo">
+        <Image src="/static/images/favicon.png" />
+      </div>
+    </nav>
 
     <style jsx>
       {`
