@@ -40,7 +40,7 @@ const Dropdown = ({
           }
 
           span {
-            font-size: 16px;
+            font-size: 15px;
           }
         `}
       </style>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Menu from '../components/menu';
 import Header from '../components/header';
+import Button from '../components/button';
 import { Dropdown, DropdownGroup, DropdownItem } from '../components/dropdown';
 
 const UserInfo = () => (
@@ -20,7 +21,7 @@ const Content = ({ children, title, padding = '30px' }) => {
         <Menu />
         <main>
           <Header title={title}>
-            <div>ver minha loja</div>
+            <Button text="ver minha loja" border="none" icon="home" />
             <Dropdown
               visible={visibleUserInfo}
               content={<UserInfo />}
