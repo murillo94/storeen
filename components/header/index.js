@@ -1,16 +1,13 @@
-const Header = () => (
+const Header = ({ children }) => (
   <>
-    <header>
-      <div>ver minha loja</div>
-      <div>Minha conta</div>
-    </header>
+    <header>{children}</header>
 
     <style jsx>
       {`
         header {
           background-color: white;
           border-bottom: 1px solid gray;
-          padding: 15px;
+          padding: 10px;
           position: sticky;
           top: 0;
           left: 0;

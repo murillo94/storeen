@@ -1,15 +1,3 @@
-const Dropdown = () => (
-  <>
-    <div>Dropdown</div>
-
-    <style jsx>
-      {`
-        div {
-          background-color: white;
-        }
-      `}
-    </style>
-  </>
-);
-
-export default Dropdown;
+export { default as Dropdown } from './src/Dropdown';
+export { default as DropdownGroup } from './src/DropdownGroup';
+export { default as DropdownItem } from './src/DropdownItem';

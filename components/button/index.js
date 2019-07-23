@@ -2,6 +2,7 @@ import Icon from '../icon';
 import { Text } from '../typography';
 
 const Button = ({
+  children,
   type = 'button',
   text = '',
   icon = '',
@@ -11,8 +12,14 @@ const Button = ({
 }) => (
   <>
     <button type={type} onClick={onClick} style={{ margin }}>
-      {icon && <Icon name={icon} size={17} />}
-      {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
+      {children ? (
+        <>{children}</>
+      ) : (
+        <>
+          {icon && <Icon name={icon} size={17} />}
+          {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
+        </>
+      )}
     </button>
 
     <style jsx>
