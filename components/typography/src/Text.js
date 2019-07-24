@@ -1,6 +1,6 @@
-const Text = ({ text = '', margin }) => (
+const Text = ({ text = '', margin, fontWeight }) => (
   <>
-    <span style={{ margin }}>{text}</span>
+    <span style={{ margin, fontWeight }}>{text}</span>
 
     <style jsx>
       {`

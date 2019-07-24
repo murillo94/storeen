@@ -21,7 +21,7 @@ const Content = ({ children, title, padding = '30px' }) => {
         <Menu />
         <main>
           <Header title={title}>
-            <Button text="ver minha loja" border="none" icon="home" />
+            <Button text="ver minha loja" border="none" icon="external-link" />
             <Dropdown
               visible={visibleUserInfo}
               content={<UserInfo />}
