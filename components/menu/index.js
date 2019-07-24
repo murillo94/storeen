@@ -4,7 +4,7 @@ const Menu = () => (
   <>
     <nav>
       <div className="logo">
-        <Image src="/static/images/favicon.png" />
+        <Image src="/static/images/favicon.png" width={35} height={35} />
       </div>
     </nav>
 
@@ -24,6 +24,10 @@ const Menu = () => (
           flex-direction: column;
           justify-content: space-between;
           flex-shrink: 0;
+        }
+
+        .logo {
+          margin: 20px;
         }
       `}
     </style>

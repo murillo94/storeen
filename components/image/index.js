@@ -1,5 +1,5 @@
-const Image = ({ url, alt, width, height }) => (
-  <img src={url} alt={alt} width={width} height={height} />
+const Image = ({ src, alt, width, height }) => (
+  <img src={src} alt={alt} width={width} height={height} />
 );
 
 export default Image;
