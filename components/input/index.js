@@ -7,11 +7,13 @@ const InputNormal = ({ type, id, name, placeholder, border, marginBottom }) => (
       type={type}
       id={id}
       name={name}
+      aria-describedby={`${id}-message`}
+      aria-labelledby={`${id}-label`}
       placeholder={placeholder}
-      spellCheck="false"
       autoComplete="off"
       autoCapitalize="off"
       autoCorrect="off"
+      spellCheck="false"
     />
 
     <style jsx>
@@ -93,7 +95,7 @@ const Input = ({
   onClick = null
 }) => (
   <>
-    {labelText && <Label htmlFor={id} text={labelText} />}
+    {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
     {icon ? (
       <InputIcon
         type={type}

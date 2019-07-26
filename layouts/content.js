@@ -5,15 +5,15 @@ import Header from '../components/header';
 import Button from '../components/button';
 import { Dropdown, DropdownGroup, DropdownItem } from '../components/dropdown';
 
-const UserInfo = () => (
-  <DropdownGroup>
+const UserInfo = ({ id, hidden }) => (
+  <DropdownGroup id={id} hidden={hidden}>
     <DropdownItem>Configurações</DropdownItem>
     <DropdownItem>Sair</DropdownItem>
   </DropdownGroup>
 );
 
 const Content = ({ children, title, padding = '30px' }) => {
-  const [visibleUserInfo, setVisibleUserInfo] = useState();
+  const [visibleUserInfo, setVisibleUserInfo] = useState(false);
 
   return (
     <>
@@ -23,11 +23,10 @@ const Content = ({ children, title, padding = '30px' }) => {
           <Header title={title}>
             <Button text="ver minha loja" border="none" icon="external-link" />
             <Dropdown
+              id="user-info"
               visible={visibleUserInfo}
-              content={<UserInfo />}
-              onClick={() => {
-                setVisibleUserInfo(!visibleUserInfo);
-              }}
+              content={<UserInfo id="user-info" hidden={!visibleUserInfo} />}
+              onClick={() => setVisibleUserInfo(!visibleUserInfo)}
             >
               Minha conta
             </Dropdown>

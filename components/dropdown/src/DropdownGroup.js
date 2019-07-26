@@ -1,6 +1,8 @@
-const DropdownGroup = ({ children }) => (
+const DropdownGroup = ({ children, id = null, hidden = true }) => (
   <>
-    <ul>{children}</ul>
+    <ul role="menu" id={id} hidden={hidden}>
+      {children}
+    </ul>
 
     <style jsx>
       {`

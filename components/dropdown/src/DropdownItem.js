@@ -1,6 +1,6 @@
 const DropdownItem = ({ children }) => (
   <>
-    <li>{children}</li>
+    <li role="menuitem">{children}</li>
 
     <style jsx>
       {`

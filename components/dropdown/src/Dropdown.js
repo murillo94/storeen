@@ -5,6 +5,7 @@ import Button from '../../button';
 const Dropdown = ({
   children,
   content,
+  id,
   icon = '',
   visible = false,
   onClick = null
@@ -26,10 +27,17 @@ const Dropdown = ({
   return (
     <>
       <div ref={node}>
-        <Button icon={icon} border="none" onClick={onClick}>
+        <Button
+          icon={icon}
+          border="none"
+          aria-controls={id}
+          aria-expanded={visible}
+          aria-haspopup="menu"
+          onClick={onClick}
+        >
           <span>{children}</span>
         </Button>
-        {visible && <div>{content}</div>}
+        {content}
       </div>
 
       <style jsx>

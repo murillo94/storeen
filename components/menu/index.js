@@ -10,7 +10,7 @@ const Logo = () => (
     <style jsx>
       {`
         div {
-          margin: 20px;
+          margin: 20px 20px 50px;
         }
       `}
     </style>
@@ -39,7 +39,7 @@ const Menu = () => (
           background-color: white;
           border-right: 1px solid gray;
           text-align: center;
-          width: 145px;
+          width: 180px;
           height: 100vh;
           overflow: auto;
           position: sticky;

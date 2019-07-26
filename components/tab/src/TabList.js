@@ -1,6 +1,8 @@
-const TabList = ({ children }) => (
+const TabList = ({ children, ariaLabel = 'Menu lateral' }) => (
   <>
-    <ul>{children}</ul>
+    <ul role="tablist" aria-orientation="vertical" aria-label={ariaLabel}>
+      {children}
+    </ul>
 
     <style jsx>
       {`
