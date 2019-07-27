@@ -8,6 +8,11 @@ const DropdownItem = ({ children }) => (
           background-color: white;
           padding: 5px;
         }
+
+        li > :global(a) {
+          color: inherit;
+          text-decoration: none;
+        }
       `}
     </style>
   </>
