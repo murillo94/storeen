@@ -12,7 +12,7 @@ const UserInfo = ({ id, hidden, href = '/' }) => (
   </DropdownGroup>
 );
 
-const Content = ({ children, title, padding = '30px' }) => {
+const Content = ({ children, title = '', padding = '30px' }) => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
 
   return (

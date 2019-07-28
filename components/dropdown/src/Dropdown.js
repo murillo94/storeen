@@ -4,8 +4,8 @@ import Button from '../../button';
 
 const Dropdown = ({
   children,
-  content,
-  id,
+  content = null,
+  id = null,
   icon = '',
   visible = false,
   onClick = null

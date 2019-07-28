@@ -7,7 +7,7 @@ const Button = ({
   text = '',
   icon = '',
   border = '1px solid gray',
-  margin,
+  margin = null,
   onClick = null,
   ...props
 }) => (

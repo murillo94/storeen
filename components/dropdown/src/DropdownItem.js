@@ -17,11 +17,6 @@ const DropdownItem = ({ children, href = '/', onClick = null }) => (
           background-color: white;
           padding: 5px;
         }
-
-        li > :global(a) {
-          color: inherit;
-          text-decoration: none;
-        }
       `}
     </style>
   </>

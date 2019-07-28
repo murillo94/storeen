@@ -38,14 +38,6 @@ const Tab = ({
           align-items: center;
         }
 
-        li > :global(a) {
-          color: inherit;
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
         li:hover {
           background-color: gray;
           color: white;
