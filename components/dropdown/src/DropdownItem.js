@@ -1,6 +1,15 @@
-const DropdownItem = ({ children }) => (
+import DropdownItemLink from './DropdownItemLink';
+import DropdownItemButton from './DropdownItemButton';
+
+const DropdownItem = ({ children, href = '/', onClick = null }) => (
   <>
-    <li role="menuitem">{children}</li>
+    <li role="menuitem">
+      {href ? (
+        <DropdownItemLink href={href}>{children}</DropdownItemLink>
+      ) : (
+        <DropdownItemButton onClick={onClick}>{children}</DropdownItemButton>
+      )}
+    </li>
 
     <style jsx>
       {`

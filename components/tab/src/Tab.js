@@ -1,11 +1,28 @@
+import TabLink from './TabLink';
+import TabButton from './TabButton';
 import Icon from '../../icon';
 import { Text } from '../../typography';
 
-const Tab = ({ text, icon, selected = false }) => (
+const Tab = ({
+  text = '',
+  icon = '',
+  href = '/',
+  onClick = null,
+  selected = false
+}) => (
   <>
     <li role="tab" aria-selected={selected}>
-      {icon && <Icon name={icon} size={20} />}
-      <Text text={text} margin={icon && '0 0 0 10px'} fontWeight={500} />
+      {href ? (
+        <TabLink href={href}>
+          {icon && <Icon name={icon} size={20} />}
+          <Text text={text} margin={icon && '0 0 0 10px'} fontWeight={500} />
+        </TabLink>
+      ) : (
+        <TabButton onClick={onClick}>
+          {icon && <Icon name={icon} size={20} />}
+          <Text text={text} margin={icon && '0 0 0 10px'} fontWeight={500} />
+        </TabButton>
+      )}
     </li>
 
     <style jsx>
@@ -21,12 +38,20 @@ const Tab = ({ text, icon, selected = false }) => (
           align-items: center;
         }
 
+        li > :global(a) {
+          color: inherit;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         li:hover {
           background-color: gray;
           color: white;
         }
 
-        li:hover > :global(svg) {
+        li:hover > :global(a) > :global(svg) {
           stroke: white;
         }
       `}

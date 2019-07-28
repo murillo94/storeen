@@ -23,12 +23,12 @@ const Menu = () => (
       <div>
         <Logo />
         <TabList>
-          <Tab text="Início" icon="home" />
-          <Tab text="Relatórios" icon="bar-chart" />
-          <Tab text="Pedidos" icon="clipboard" />
-          <Tab text="Produtos" icon="box" />
-          <Tab text="Promoções" icon="dollar-sign" />
-          <Tab text="Categorias" icon="tag" />
+          <Tab text="Início" icon="home" href="/" />
+          <Tab text="Relatórios" icon="bar-chart" href="/" />
+          <Tab text="Pedidos" icon="clipboard" href="/" />
+          <Tab text="Produtos" icon="box" href="/" />
+          <Tab text="Promoções" icon="dollar-sign" href="/" />
+          <Tab text="Categorias" icon="tag" href="/" />
         </TabList>
       </div>
     </nav>

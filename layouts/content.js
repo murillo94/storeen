@@ -1,25 +1,14 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 import Menu from '../components/menu';
 import Header from '../components/header';
 import Button from '../components/button';
 import { Dropdown, DropdownGroup, DropdownItem } from '../components/dropdown';
 
-const Option = ({ href = '/', text = '' }) => (
-  <Link href={href}>
-    <a>{text}</a>
-  </Link>
-);
-
-const UserInfo = ({ id, hidden }) => (
+const UserInfo = ({ id, hidden, href = '/' }) => (
   <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem>
-      <Option text="Configurações" />
-    </DropdownItem>
-    <DropdownItem>
-      <Option text="Sair" />
-    </DropdownItem>
+    <DropdownItem href={href}>Configurações</DropdownItem>
+    <DropdownItem href={href}>Sair</DropdownItem>
   </DropdownGroup>
 );
 
