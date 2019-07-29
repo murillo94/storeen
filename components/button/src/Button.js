@@ -8,6 +8,7 @@ const Button = ({
   icon = '',
   border = '1px solid gray',
   margin = null,
+  width = 'auto',
   disabled = false,
   onClick = null,
   ...props
@@ -18,7 +19,7 @@ const Button = ({
       disabled={disabled}
       aria-disabled={disabled}
       onClick={onClick}
-      style={{ margin }}
+      style={{ margin, width }}
       {...props}
     >
       {children ? (
@@ -42,7 +43,6 @@ const Button = ({
           cursor: pointer;
           display: inline-flex;
           align-items: center;
-          justify-content: center;
           vertical-align: middle;
         }
       `}
