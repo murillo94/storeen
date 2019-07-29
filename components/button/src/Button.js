@@ -8,11 +8,19 @@ const Button = ({
   icon = '',
   border = '1px solid gray',
   margin = null,
+  disabled = false,
   onClick = null,
   ...props
 }) => (
   <>
-    <button type={type} onClick={onClick} style={{ margin }} {...props}>
+    <button
+      type={type}
+      disabled={disabled}
+      aria-disabled={disabled}
+      onClick={onClick}
+      style={{ margin }}
+      {...props}
+    >
       {children ? (
         <>{children}</>
       ) : (

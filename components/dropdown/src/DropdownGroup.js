@@ -1,6 +1,6 @@
 const DropdownGroup = ({ children, id = null, hidden = true }) => (
   <>
-    <ul role="menu" id={id} hidden={hidden}>
+    <ul role="menu" id={id} aria-orientation="vertical" hidden={hidden}>
       {children}
     </ul>
 
