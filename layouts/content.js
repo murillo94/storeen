@@ -12,7 +12,7 @@ const UserInfo = ({ id, hidden, href = '/' }) => (
   </DropdownGroup>
 );
 
-const Content = ({ children, title = '', padding = '30px' }) => {
+const Content = ({ children, padding = '30px' }) => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
 
   return (
@@ -20,7 +20,7 @@ const Content = ({ children, title = '', padding = '30px' }) => {
       <div className="container">
         <Menu />
         <main>
-          <Header title={title}>
+          <Header>
             <Button text="ver minha loja" border="none" icon="external-link" />
             <Dropdown
               id="user-info"
