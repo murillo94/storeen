@@ -7,7 +7,7 @@ import { Dropdown, DropdownGroup, DropdownItem } from '../components/dropdown';
 
 const UserInfo = ({ id, hidden, href = '/' }) => (
   <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem href={href}>Configurações</DropdownItem>
+    <DropdownItem href="/settings">Configurações</DropdownItem>
     <DropdownItem href={href}>Sair</DropdownItem>
   </DropdownGroup>
 );
