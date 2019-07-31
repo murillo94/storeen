@@ -36,6 +36,7 @@ const Button = ({
       {`
         button {
           font-size: 14px;
+          background-color: white;
           border: ${border};
           border-radius: 8px;
           height: 39px;
