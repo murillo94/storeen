@@ -4,13 +4,18 @@ import { TabList, Tab } from '../../tab';
 const Logo = () => (
   <>
     <div>
-      <Image src="/static/images/favicon.png" width={35} height={35} />
+      <Image
+        src="/static/images/logo-all-horizontal.svg"
+        width="85%"
+        height="100%"
+      />
     </div>
 
     <style jsx>
       {`
         div {
-          margin: 20px 20px 50px;
+          text-align: left;
+          margin: 20px 20px 40px;
         }
       `}
     </style>
