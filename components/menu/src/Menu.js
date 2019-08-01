@@ -6,7 +6,7 @@ const Logo = () => (
     <div>
       <Image
         src="/static/images/logo-all-horizontal.svg"
-        width="85%"
+        width="120px"
         height="100%"
       />
     </div>
