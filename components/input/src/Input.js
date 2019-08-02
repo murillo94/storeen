@@ -22,7 +22,7 @@ const Input = ({
         name={name}
         placeholder={placeholder}
         icon={icon}
-        border="none"
+        border={border}
         marginBottom={marginBottom}
         onClick={onClick}
       />

@@ -13,34 +13,34 @@ const InputIcon = ({
 }) => (
   <>
     <div className="container">
-      <div className="input">
-        <InputText
-          type={type}
-          id={id}
-          name={name}
-          placeholder={placeholder}
-          border={border}
-          marginBottom={0}
-        />
-      </div>
-      <div className="icon">
-        <Button icon={icon} border={border} onClick={onClick} />
-      </div>
+      <InputText
+        type={type}
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        border={border}
+        marginBottom={marginBottom}
+      />
+      <Button icon={icon} border={border} onClick={onClick} />
     </div>
 
     <style jsx>
       {`
         .container {
-          border: 1px solid gray;
-          border-radius: 8px;
-          margin-bottom: ${marginBottom};
           display: flex;
           align-items: center;
         }
 
-        .input {
-          display: inline-block;
-          flex: 0.99;
+        .container :global(input) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: none;
+        }
+
+        .container :global(button) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-left: none;
         }
 
         .icon {
