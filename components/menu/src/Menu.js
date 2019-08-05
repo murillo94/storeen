@@ -28,7 +28,7 @@ const Menu = () => (
       <div>
         <Logo />
         <TabList>
-          <Tab text="Início" icon="home" href="/" />
+          <Tab text="Início" icon="home" href="/home" />
           <Tab text="Relatórios" icon="bar-chart" href="/reports" />
           <Tab text="Pedidos" icon="clipboard" href="/orders" />
           <Tab text="Produtos" icon="box" href="/products" />
