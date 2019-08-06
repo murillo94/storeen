@@ -11,7 +11,7 @@ const TabLink = ({ children, href }) => (
         a {
           color: inherit;
           text-decoration: none;
-          padding: 10px 6px;
+          padding: 8px 6px;
           width: 100%;
           display: flex;
           align-items: center;

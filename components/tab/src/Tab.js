@@ -25,7 +25,7 @@ const Tab = withRouter(
 
     return (
       <>
-        <li role="tab" aria-selected={selected}>
+        <li role="tab" aria-selected={href ? !!isActive : selected}>
           {href ? (
             <TabLink href={href}>
               <Content text={text} icon={icon} />
