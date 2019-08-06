@@ -12,6 +12,9 @@ const DropdownItemLink = ({ children, href }) => (
           color: inherit;
           text-decoration: none;
           padding: 4px 8px;
+          width: 100%;
+          display: flex;
+          align-items: center;
         }
       `}
     </style>
