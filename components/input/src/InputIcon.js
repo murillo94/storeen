@@ -41,6 +41,7 @@ const InputIcon = ({
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-left: none;
+          height: 39px;
         }
 
         .icon {
