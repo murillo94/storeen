@@ -50,6 +50,10 @@ const Tab = withRouter(
               align-items: center;
             }
 
+            li > :global(a) > :global(svg) {
+              stroke: ${isActive ? 'white' : 'gray'};
+            }
+
             li:hover {
               background-color: gray;
               color: white;
@@ -58,10 +62,6 @@ const Tab = withRouter(
 
             li:hover > :global(a) > :global(svg) {
               stroke: white;
-            }
-
-            li > :global(a) > :global(svg) {
-              stroke: ${isActive ? 'white' : 'gray'};
             }
           `}
         </style>

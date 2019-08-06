@@ -15,7 +15,16 @@ const DropdownItem = ({ children, href = '/', onClick = null }) => (
       {`
         li {
           background-color: white;
-          padding: 5px;
+          margin: 2px 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+        }
+
+        li:hover {
+          background-color: gray;
+          color: white;
+          opacity: 0.6;
         }
       `}
     </style>

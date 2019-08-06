@@ -11,6 +11,7 @@ const DropdownItemLink = ({ children, href }) => (
         a {
           color: inherit;
           text-decoration: none;
+          padding: 4px 8px;
         }
       `}
     </style>
