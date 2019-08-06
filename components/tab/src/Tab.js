@@ -40,8 +40,8 @@ const Tab = withRouter(
         <style jsx>
           {`
             li {
-              background-color: ${isActive ? 'gray' : 'white'};
-              color: ${isActive ? 'white' : 'inherit'};
+              background-color: white;
+              color: inherit;
               border-radius: 8px;
               text-align: left;
               margin: 6px 10px;
@@ -51,17 +51,30 @@ const Tab = withRouter(
             }
 
             li > :global(a) > :global(svg) {
-              stroke: ${isActive ? 'white' : 'gray'};
+              stroke: gray;
+            }
+
+            li[aria-selected='true'] {
+              background-color: gray;
+              color: white;
+            }
+
+            li[aria-selected='true'] > :global(a) > :global(svg) {
+              stroke: white;
             }
 
             li:hover {
               background-color: gray;
               color: white;
-              opacity: ${isActive ? '1' : '.6'};
+              opacity: 0.6;
             }
 
             li:hover > :global(a) > :global(svg) {
               stroke: white;
+            }
+
+            li[aria-selected='true']:hover {
+              opacity: 1;
             }
           `}
         </style>
