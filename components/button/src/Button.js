@@ -44,6 +44,7 @@ const Button = ({
           cursor: pointer;
           display: inline-flex;
           align-items: center;
+          justify-content: center;
           vertical-align: middle;
         }
       `}
