@@ -8,7 +8,7 @@ import Button from '../components/button';
 const Logo = () => (
   <>
     <div>
-      <Image src="/static/images/logo-icon.svg" width="60px" height="60px" />
+      <Image src="/static/images/logo-icon.svg" width="57px" height="57px" />
     </div>
 
     <style jsx>
@@ -29,7 +29,7 @@ const Home = () => {
       <section>
         <main>
           <div>
-            <Heading text="Entrar" margin="0 0 20px" />
+            <Heading text="Entrar" margin="0 0 35px" />
             <Paragraph text="Não tem uma conta ainda?" margin="0 0 5px" />
             <Anchor href="/" text="Crie sua loja, é gratis!" hover />
             <Logo />
