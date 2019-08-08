@@ -1,7 +1,7 @@
 import Router from 'next/router';
 
 import Image from '../components/image';
-import { Heading, Anchor } from '../components/typography';
+import { Heading, Paragraph, Anchor } from '../components/typography';
 import Input from '../components/input';
 import Button from '../components/button';
 
@@ -14,7 +14,7 @@ const Logo = () => (
     <style jsx>
       {`
         div {
-          margin: 20px 20px 40px;
+          margin: 35px 0;
         }
       `}
     </style>
@@ -29,7 +29,9 @@ const Home = () => {
       <section>
         <main>
           <div>
-            <Heading text="Entrar" />
+            <Heading text="Entrar" margin="0 0 20px" />
+            <Paragraph text="Não tem uma conta ainda?" margin="0 0 5px" />
+            <Anchor href="/" text="Crie sua loja, é gratis!" hover />
             <Logo />
             <Input type="email" labelText="Email" id="email" name="email" />
             <Input
