@@ -31,7 +31,7 @@ const Home = () => {
           <div>
             <Heading text="Entrar" margin="0 0 35px" />
             <Paragraph text="Não tem uma conta ainda?" margin="0 0 5px" />
-            <Anchor href="/" text="Crie sua loja, é grátis!" hover />
+            <Anchor href="/" text="Crie sua loja, é grátis!" />
             <Logo />
             <Input type="email" labelText="Email" id="email" name="email" />
             <Input
@@ -46,7 +46,7 @@ const Home = () => {
               margin="20px 0 30px"
               onClick={handleClickSignIn}
             />
-            <Anchor href="/" text="Esqueceu sua senha?" hover />
+            <Anchor href="/" text="Esqueceu sua senha?" />
           </div>
         </main>
       </section>

@@ -1,4 +1,4 @@
-const Anchor = ({ href = null, text = '', hover = false }) => (
+const Anchor = ({ href = null, text = '', hover = true }) => (
   <>
     <a href={href}>{text}</a>
 
@@ -8,7 +8,6 @@ const Anchor = ({ href = null, text = '', hover = false }) => (
           font-size: 14px;
           color: inherit;
           text-decoration: none;
-          display: block;
         }
 
         a:hover {
