@@ -31,7 +31,7 @@ const Home = () => {
           <div>
             <Heading text="Entrar" margin="0 0 35px" />
             <Paragraph text="Não tem uma conta ainda?" margin="0 0 5px" />
-            <Anchor href="/" text="Crie sua loja, é gratis!" hover />
+            <Anchor href="/" text="Crie sua loja, é grátis!" hover />
             <Logo />
             <Input type="email" labelText="Email" id="email" name="email" />
             <Input
