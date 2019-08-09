@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
-import Menu from '../components/menu';
-import Header from '../components/header';
-import Button from '../components/button';
-import { Dropdown, DropdownGroup, DropdownItem } from '../components/dropdown';
+import Menu from '../../components/menu';
+import Header from '../../components/header';
+import Button from '../../components/button';
+import {
+  Dropdown,
+  DropdownGroup,
+  DropdownItem
+} from '../../components/dropdown';
 
 const UserInfo = ({ id, hidden, href = '/' }) => (
   <DropdownGroup id={id} hidden={hidden}>

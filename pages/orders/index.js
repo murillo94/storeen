@@ -1,4 +1,5 @@
-import Page from '../../layouts/page';
+import Page from '../../layouts/admin/page';
+
 import SubHeader from '../../components/subHeader';
 
 const Orders = () => (
