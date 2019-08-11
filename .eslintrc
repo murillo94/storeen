@@ -53,5 +53,12 @@
         }
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["components", "./components"]]
+      }
+    }
   }
 }
