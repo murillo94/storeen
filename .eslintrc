@@ -57,7 +57,11 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [["components", "./components"], ["layouts", "./layouts"]]
+        "map": [
+          ["components", "./components"],
+          ["layouts", "./layouts"],
+          ["themes", "./themes"]
+        ]
       }
     }
   }
