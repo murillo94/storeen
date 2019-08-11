@@ -1,4 +1,4 @@
-const Text = ({ text = '', margin, fontWeight }) => (
+const Text = ({ text = '', margin = null, fontWeight = null }) => (
   <>
     <span style={{ margin, fontWeight }}>{text}</span>
 

@@ -1,4 +1,4 @@
-const H1 = ({ text, margin }) => (
+const H1 = ({ text, margin = null }) => (
   <>
     <h1 style={{ margin }}>{text}</h1>
 
@@ -14,7 +14,7 @@ const H1 = ({ text, margin }) => (
   </>
 );
 
-const H2 = ({ text, margin }) => (
+const H2 = ({ text, margin = null }) => (
   <>
     <h2 style={{ margin }}>{text}</h2>
 
@@ -30,7 +30,7 @@ const H2 = ({ text, margin }) => (
   </>
 );
 
-const H3 = ({ text, margin }) => (
+const H3 = ({ text, margin = null }) => (
   <>
     <h3 style={{ margin }}>{text}</h3>
 
@@ -46,7 +46,7 @@ const H3 = ({ text, margin }) => (
   </>
 );
 
-const Heading = ({ is = 'h1', text = '', margin }) => (
+const Heading = ({ is = 'h1', text = '', margin = null }) => (
   <>
     {is === 'h1' && <H1 text={text} margin={margin} />}
     {is === 'h2' && <H2 text={text} margin={margin} />}

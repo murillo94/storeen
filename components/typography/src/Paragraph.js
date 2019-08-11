@@ -1,4 +1,4 @@
-const Paragraph = ({ text = '', margin }) => (
+const Paragraph = ({ text = '', margin = null }) => (
   <>
     <p style={{ margin }}>{text}</p>
 
