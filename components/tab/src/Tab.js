@@ -1,9 +1,9 @@
 import { withRouter } from 'next/router';
 
+import Icon from 'components/icon';
+import { Text } from 'components/typography';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
-import Icon from '../../icon';
-import { Text } from '../../typography';
 
 const Content = ({ text, icon }) => (
   <>

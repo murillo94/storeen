@@ -1,5 +1,5 @@
-import Icon from '../../icon';
-import { Text } from '../../typography';
+import Icon from 'components/icon';
+import { Text } from 'components/typography';
 
 const Button = ({
   children,

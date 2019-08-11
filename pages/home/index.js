@@ -1,10 +1,10 @@
-import Page from '../../layouts/admin/page';
+import Page from 'layouts/admin/page';
 
-import Container from '../../components/container';
-import SubHeader from '../../components/subHeader';
-import Button from '../../components/button';
-import Input from '../../components/input';
-import { Heading, Paragraph } from '../../components/typography';
+import Container from 'components/container';
+import SubHeader from 'components/subHeader';
+import Button from 'components/button';
+import Input from 'components/input';
+import { Heading, Paragraph } from 'components/typography';
 
 const Home = () => (
   <Page>

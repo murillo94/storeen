@@ -1,5 +1,5 @@
-import Image from '../../image';
-import { TabList, Tab } from '../../tab';
+import Image from 'components/image';
+import { TabList, Tab } from 'components/tab';
 
 const Logo = () => (
   <>

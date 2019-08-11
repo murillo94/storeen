@@ -1,4 +1,4 @@
-import { Label } from '../../typography';
+import { Label } from 'components/typography';
 import InputText from './InputText';
 import InputIcon from './InputIcon';
 

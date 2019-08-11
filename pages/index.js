@@ -1,11 +1,11 @@
 import Router from 'next/router';
 
-import Page from '../layouts/login/page';
+import Page from 'layouts/login/page';
 
-import Image from '../components/image';
-import { Heading, Paragraph, Anchor } from '../components/typography';
-import Input from '../components/input';
-import Button from '../components/button';
+import Image from 'components/image';
+import { Heading, Paragraph, Anchor } from 'components/typography';
+import Input from 'components/input';
+import Button from 'components/button';
 
 const Logo = () => (
   <div>

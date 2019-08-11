@@ -1,5 +1,5 @@
+import Button from 'components/button';
 import InputText from './InputText';
-import Button from '../../button';
 
 const InputIcon = ({
   type,

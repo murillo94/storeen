@@ -1,5 +1,5 @@
-import Button from '../../button';
-import { Heading } from '../../typography';
+import Button from 'components/button';
+import { Heading } from 'components/typography';
 
 const SubHeader = ({
   children,

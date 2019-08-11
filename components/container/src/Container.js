@@ -1,4 +1,4 @@
-import { Heading } from '../../typography';
+import { Heading } from 'components/typography';
 
 const Container = ({ children, title = '', margin = null }) => (
   <>
