@@ -22,6 +22,9 @@ export const positive500 = '#38b57a';
 export const positive600 = '#1fac6a';
 export const positive700 = '#07a35a';
 
+export const mono0 = '#ffffff';
+export const mono50 = '#fafafd';
+export const mono75 = '#f7f7fc';
 export const mono100 = '#dadada';
 export const mono200 = '#d1d1d1';
 export const mono300 = '#c7c7c7';

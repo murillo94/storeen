@@ -47,7 +47,6 @@ const Content = ({ children, padding = '30px' }) => {
           }
 
           main {
-            background-color: white;
             flex: 1;
           }
 

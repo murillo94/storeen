@@ -9,7 +9,6 @@ const Page = ({ children }) => (
     <style jsx>
       {`
         section {
-          background-color: #f7f7fc;
           text-align: center;
           min-height: 100vh;
           width: 100%;

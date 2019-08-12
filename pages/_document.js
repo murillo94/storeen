@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import { mono900 } from 'themes/colors';
+import { mono75, mono900 } from 'themes/colors';
 
 class StoreenDoc extends Document {
   static async getInitialProps(ctx) {
@@ -27,8 +27,9 @@ class StoreenDoc extends Document {
                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
                   font-size: 14px;
-                  margin: 0;
+                  background-color: ${mono75};
                   color: ${mono900};
+                  margin: 0;
                 }
 
                 *, :after, :before {
