@@ -16,7 +16,7 @@ const Container = ({ children, title = '', margin = null }) => (
           border: 1px solid gray;
           border-radius: 10px;
           padding: 20px;
-          margin-bottom: 20px;
+          margin-bottom: 70px;
         }
 
         header {

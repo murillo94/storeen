@@ -21,7 +21,7 @@ const InputIcon = ({
         border={border}
         marginBottom={marginBottom}
       />
-      <Button icon={icon} border={border} onClick={onClick} />
+      <Button icon={icon} customStyle={{ border }} onClick={onClick} />
     </div>
 
     <style jsx>

@@ -7,6 +7,10 @@ import { Heading, Paragraph, Anchor } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+const buttonStyle = {
+  width: '100%',
+  margin: '20px 0 30px'
+};
 const Logo = () => (
   <div>
     <Image
@@ -31,8 +35,7 @@ const Home = () => {
       <Input type="password" labelText="Senha" id="password" name="password" />
       <Button
         text="Entrar"
-        width="100%"
-        margin="20px 0 30px"
+        customStyle={buttonStyle}
         onClick={handleClickSignIn}
       />
       <Anchor href="/password/new" text="Esqueceu sua senha?" />

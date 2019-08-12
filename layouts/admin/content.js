@@ -5,6 +5,10 @@ import Header from 'components/header';
 import Button from 'components/button';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 
+const buttonStyle = {
+  border: 'none'
+};
+
 const UserInfo = ({ id, hidden, href = '/' }) => (
   <DropdownGroup id={id} hidden={hidden}>
     <DropdownItem href="/settings">Configurações</DropdownItem>
@@ -21,7 +25,11 @@ const Content = ({ children, padding = '30px' }) => {
         <Menu />
         <main>
           <Header>
-            <Button text="ver minha loja" border="none" icon="external-link" />
+            <Button
+              text="ver minha loja"
+              icon="external-link"
+              customStyle={buttonStyle}
+            />
             <Dropdown
               id="user-info"
               visible={visibleUserInfo}

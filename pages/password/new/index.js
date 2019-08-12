@@ -5,6 +5,11 @@ import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+const buttonStyle = {
+  width: '100%',
+  margin: '10px 0'
+};
+
 const Logo = () => (
   <div>
     <Image
@@ -21,7 +26,7 @@ const New = () => (
     <Heading text="Redefinir sua senha" />
     <Logo />
     <Input type="email" labelText="Email" id="email" name="email" />
-    <Button text="Redefinir senha" width="100%" margin="10px 0" />
+    <Button text="Redefinir senha" customStyle={buttonStyle} />
   </Page>
 );
 

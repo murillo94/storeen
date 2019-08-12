@@ -1,7 +1,12 @@
 import Button from 'components/button';
 
+const buttonStyle = {
+  width: '100%',
+  border: 'none'
+};
+
 const TabButton = ({ children, onClick }) => (
-  <Button width="100%" border="none" onClick={onClick}>
+  <Button customStyle={buttonStyle} onClick={onClick}>
     {children}
   </Button>
 );

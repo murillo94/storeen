@@ -2,6 +2,10 @@ import React, { useRef, useEffect } from 'react';
 
 import Button from 'components/button';
 
+const buttonStyle = {
+  border: 'none'
+};
+
 const Dropdown = ({
   children,
   content = null,
@@ -29,10 +33,10 @@ const Dropdown = ({
       <div ref={node}>
         <Button
           icon={icon}
-          border="none"
           aria-controls={id}
           aria-expanded={visible}
           aria-haspopup="menu"
+          customStyle={buttonStyle}
           onClick={onClick}
         >
           <span>{children}</span>

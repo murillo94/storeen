@@ -5,6 +5,11 @@ import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+const buttonStyle = {
+  width: '100%',
+  margin: '10px 0'
+};
+
 const Logo = () => (
   <div>
     <Image
@@ -21,7 +26,7 @@ const Change = () => (
     <Heading text="Nova senha" />
     <Logo />
     <Input type="password" labelText="Senha" id="password" name="password" />
-    <Button text="Alterar senha" width="100%" margin="10px 0" />
+    <Button text="Alterar senha" customStyle={buttonStyle} />
   </Page>
 );
 

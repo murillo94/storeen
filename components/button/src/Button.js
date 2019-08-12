@@ -1,14 +1,19 @@
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
 
+import style from '../style';
+
+const defaultStyle = {
+  width: 'auto'
+};
+
 const Button = ({
   children,
+  appearance = 'default',
   type = 'button',
   text = '',
   icon = '',
-  border = '1px solid gray',
-  margin = null,
-  width = 'auto',
+  customStyle = {},
   disabled = false,
   onClick = null,
   ...props
@@ -18,15 +23,18 @@ const Button = ({
       type={type}
       disabled={disabled}
       aria-disabled={disabled}
+      className={appearance}
+      style={{ ...defaultStyle, ...customStyle }}
       onClick={onClick}
-      style={{ margin, width }}
       {...props}
     >
       {children ? (
         <>{children}</>
       ) : (
         <>
-          {icon && <Icon name={icon} size={17} />}
+          {icon && (
+            <Icon name={icon} size={17} color={style[appearance].color} />
+          )}
           {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
         </>
       )}
@@ -36,8 +44,11 @@ const Button = ({
       {`
         button {
           font-size: 14px;
-          background-color: white;
-          border: ${border};
+          color: ${style[appearance].color};
+          background-color: ${style[appearance].backgroundColor};
+          border-style: solid;
+          border-width: 1px;
+          border-color: ${style[appearance].borderColor};
           border-radius: 8px;
           height: 39px;
           padding: 0 10px;
@@ -46,6 +57,12 @@ const Button = ({
           align-items: center;
           justify-content: center;
           vertical-align: middle;
+        }
+
+        :hover {
+          color: ${style[appearance].hover.color};
+          background-color: ${style[appearance].hover.backgroundColor};
+          border-color: ${style[appearance].hover.borderColor};
         }
       `}
     </style>

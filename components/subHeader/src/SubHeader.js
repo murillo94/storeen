@@ -1,6 +1,10 @@
 import Button from 'components/button';
 import { Heading } from 'components/typography';
 
+const buttonStyle = {
+  border: 'none'
+};
+
 const SubHeader = ({
   children,
   title = '',
@@ -11,7 +15,11 @@ const SubHeader = ({
     <header>
       <div>
         {hasBack && (
-          <Button icon="chevron-left" onClick={onClick} border="none" />
+          <Button
+            icon="chevron-left"
+            customStyle={buttonStyle}
+            onClick={onClick}
+          />
         )}
         <Heading text={title} margin={hasBack && '0 0 0 5px'} />
       </div>
