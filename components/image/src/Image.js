@@ -3,9 +3,15 @@ const Image = ({
   alt = null,
   width = 0,
   height = 0,
-  margin = null
+  customStyle = {}
 }) => (
-  <img src={src} alt={alt} width={width} height={height} style={{ margin }} />
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    style={{ ...customStyle }}
+  />
 );
 
 export default Image;

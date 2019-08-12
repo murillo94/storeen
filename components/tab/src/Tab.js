@@ -8,7 +8,10 @@ import TabButton from './TabButton';
 const Content = ({ text, icon }) => (
   <>
     {icon && <Icon name={icon} size={20} />}
-    <Text text={text} margin={icon && '0 0 0 10px'} fontWeight={500} />
+    <Text
+      text={text}
+      customStyle={{ margin: icon && '0 0 0 10px', fontWeight: 500 }}
+    />
   </>
 );
 

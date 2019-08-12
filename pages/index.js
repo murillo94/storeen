@@ -7,17 +7,30 @@ import { Heading, Paragraph, Anchor } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+const imageStyle = {
+  margin: '35px 0'
+};
+
+const headingStyle = {
+  margin: '0 0 35px'
+};
+
+const paragraphStyle = {
+  margin: '0 0 5px'
+};
+
 const buttonStyle = {
   width: '100%',
   margin: '20px 0 30px'
 };
+
 const Logo = () => (
   <div>
     <Image
       src="/static/images/logo-icon.svg"
       width="57px"
       height="57px"
-      margin="35px 0"
+      customStyle={imageStyle}
     />
   </div>
 );
@@ -27,8 +40,8 @@ const Home = () => {
 
   return (
     <Page>
-      <Heading text="Entrar" margin="0 0 35px" />
-      <Paragraph text="Não tem uma conta ainda?" margin="0 0 5px" />
+      <Heading text="Entrar" customStyle={headingStyle} />
+      <Paragraph text="Não tem uma conta ainda?" customStyle={paragraphStyle} />
       <Anchor href="/" text="Crie sua loja, é grátis!" />
       <Logo />
       <Input type="email" labelText="Email" id="email" name="email" />

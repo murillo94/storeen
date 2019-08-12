@@ -35,7 +35,9 @@ const Button = ({
           {icon && (
             <Icon name={icon} size={17} color={style[appearance].color} />
           )}
-          {text && <Text text={text} margin={icon && '0 0 0 5px'} />}
+          {text && (
+            <Text text={text} customStyle={{ margin: icon && '0 0 0 5px' }} />
+          )}
         </>
       )}
     </button>

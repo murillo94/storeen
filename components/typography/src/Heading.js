@@ -1,6 +1,6 @@
-const H1 = ({ text, margin = null }) => (
+const H1 = ({ text, customStyle }) => (
   <>
-    <h1 style={{ margin }}>{text}</h1>
+    <h1 style={{ ...customStyle }}>{text}</h1>
 
     <style jsx>
       {`
@@ -14,9 +14,9 @@ const H1 = ({ text, margin = null }) => (
   </>
 );
 
-const H2 = ({ text, margin = null }) => (
+const H2 = ({ text, customStyle }) => (
   <>
-    <h2 style={{ margin }}>{text}</h2>
+    <h2 style={{ ...customStyle }}>{text}</h2>
 
     <style jsx>
       {`
@@ -30,9 +30,9 @@ const H2 = ({ text, margin = null }) => (
   </>
 );
 
-const H3 = ({ text, margin = null }) => (
+const H3 = ({ text, customStyle }) => (
   <>
-    <h3 style={{ margin }}>{text}</h3>
+    <h3 style={{ ...customStyle }}>{text}</h3>
 
     <style jsx>
       {`
@@ -46,11 +46,11 @@ const H3 = ({ text, margin = null }) => (
   </>
 );
 
-const Heading = ({ is = 'h1', text = '', margin = null }) => (
+const Heading = ({ is = 'h1', text = '', customStyle = {} }) => (
   <>
-    {is === 'h1' && <H1 text={text} margin={margin} />}
-    {is === 'h2' && <H2 text={text} margin={margin} />}
-    {is === 'h3' && <H3 text={text} margin={margin} />}
+    {is === 'h1' && <H1 text={text} customStyle={customStyle} />}
+    {is === 'h2' && <H2 text={text} customStyle={customStyle} />}
+    {is === 'h3' && <H3 text={text} customStyle={customStyle} />}
   </>
 );
 

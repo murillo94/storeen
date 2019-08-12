@@ -10,13 +10,17 @@ const buttonStyle = {
   margin: '10px 0'
 };
 
+const imageStyle = {
+  margin: '35px 0'
+};
+
 const Logo = () => (
   <div>
     <Image
       src="/static/images/logo-icon.svg"
       width="57px"
       height="57px"
-      margin="35px 0"
+      customStyle={imageStyle}
     />
   </div>
 );

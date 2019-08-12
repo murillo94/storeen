@@ -22,7 +22,10 @@ const SubHeader = ({
             onClick={onClick}
           />
         )}
-        <Heading text={title} margin={hasBack && '0 0 0 5px'} />
+        <Heading
+          text={title}
+          customStyle={{ margin: hasBack && '0 0 0 5px' }}
+        />
       </div>
       {children && <div>{children}</div>}
     </header>

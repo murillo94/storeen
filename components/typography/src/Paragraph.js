@@ -1,6 +1,6 @@
-const Paragraph = ({ text = '', margin = null }) => (
+const Paragraph = ({ text = '', customStyle = {} }) => (
   <>
-    <p style={{ margin }}>{text}</p>
+    <p style={{ ...customStyle }}>{text}</p>
 
     <style jsx>
       {`
