@@ -24,7 +24,7 @@ const style = {
   },
   minimal: {
     color: mono900,
-    backgroundColor: mono0,
+    backgroundColor: 'transparent',
     borderColor: mono200,
     hover: {
       color: mono900,

@@ -26,6 +26,7 @@ const Content = ({ children, padding = '30px' }) => {
         <main>
           <Header>
             <Button
+              appearance="minimal"
               text="ver minha loja"
               icon="external-link"
               customStyle={buttonStyle}

@@ -16,6 +16,7 @@ const SubHeader = ({
       <div>
         {hasBack && (
           <Button
+            appearance="minimal"
             icon="chevron-left"
             customStyle={buttonStyle}
             onClick={onClick}

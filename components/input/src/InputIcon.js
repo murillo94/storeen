@@ -1,6 +1,10 @@
 import Button from 'components/button';
 import InputText from './InputText';
 
+const buttonStyle = {
+  borderLeft: 0
+};
+
 const InputIcon = ({
   type,
   id,
@@ -21,7 +25,12 @@ const InputIcon = ({
         border={border}
         marginBottom={marginBottom}
       />
-      <Button icon={icon} customStyle={{ border }} onClick={onClick} />
+      <Button
+        appearance="minimal"
+        icon={icon}
+        customStyle={{ border, ...buttonStyle }}
+        onClick={onClick}
+      />
     </div>
 
     <style jsx>

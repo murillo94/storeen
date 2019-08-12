@@ -8,6 +8,7 @@ const buttonStyle = {
 
 const Dropdown = ({
   children,
+  appearance = 'minimal',
   content = null,
   id = null,
   icon = '',
@@ -32,6 +33,7 @@ const Dropdown = ({
     <>
       <div ref={node}>
         <Button
+          appearance={appearance}
           icon={icon}
           aria-controls={id}
           aria-expanded={visible}
