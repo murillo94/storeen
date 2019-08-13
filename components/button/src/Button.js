@@ -1,7 +1,7 @@
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
 
-import style from '../style';
+import useTheme from 'themes/useTheme';
 
 const defaultStyle = {
   width: 'auto'
@@ -17,58 +17,59 @@ const Button = ({
   disabled = false,
   onClick = null,
   ...props
-}) => (
-  <>
-    <button
-      type={type}
-      disabled={disabled}
-      aria-disabled={disabled}
-      className={appearance}
-      style={{ ...defaultStyle, ...customStyle }}
-      onClick={onClick}
-      {...props}
-    >
-      {children ? (
-        <>{children}</>
-      ) : (
-        <>
-          {icon && (
-            <Icon name={icon} size={17} color={style[appearance].color} />
-          )}
-          {text && (
-            <Text text={text} customStyle={{ margin: icon && '0 0 0 5px' }} />
-          )}
-        </>
-      )}
-    </button>
+}) => {
+  const theme = useTheme(appearance);
 
-    <style jsx>
-      {`
-        button {
-          font-size: 14px;
-          color: ${style[appearance].color};
-          background-color: ${style[appearance].backgroundColor};
-          border-style: solid;
-          border-width: 1px;
-          border-color: ${style[appearance].borderColor};
-          border-radius: 8px;
-          height: 39px;
-          padding: 0 10px;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          vertical-align: middle;
-        }
+  return (
+    <>
+      <button
+        type={type}
+        disabled={disabled}
+        aria-disabled={disabled}
+        style={{ ...defaultStyle, ...customStyle }}
+        onClick={onClick}
+        {...props}
+      >
+        {children ? (
+          <>{children}</>
+        ) : (
+          <>
+            {icon && <Icon name={icon} size={17} color={theme.color} />}
+            {text && (
+              <Text text={text} customStyle={{ margin: icon && '0 0 0 5px' }} />
+            )}
+          </>
+        )}
+      </button>
 
-        :hover {
-          color: ${style[appearance].hover.color};
-          background-color: ${style[appearance].hover.backgroundColor};
-          border-color: ${style[appearance].hover.borderColor};
-        }
-      `}
-    </style>
-  </>
-);
+      <style jsx>
+        {`
+          button {
+            font-size: 14px;
+            color: ${theme.color};
+            background-color: ${theme.backgroundColor};
+            border-style: solid;
+            border-width: 1px;
+            border-color: ${theme.borderColor};
+            border-radius: 8px;
+            height: 39px;
+            padding: 0 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+          }
+
+          :hover {
+            color: ${theme.hover.color};
+            background-color: ${theme.hover.backgroundColor};
+            border-color: ${theme.hover.borderColor};
+          }
+        `}
+      </style>
+    </>
+  );
+};
 
 export default Button;
