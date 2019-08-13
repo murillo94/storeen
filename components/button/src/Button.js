@@ -48,9 +48,7 @@ const Button = ({
             font-size: 14px;
             color: ${theme.color};
             background-color: ${theme.backgroundColor};
-            border-style: solid;
-            border-width: 1px;
-            border-color: ${theme.borderColor};
+            border: 1px solid ${theme.borderColor};
             border-radius: 8px;
             height: 39px;
             padding: 0 10px;
