@@ -1,4 +1,5 @@
 import useTheme from 'themes/useTheme';
+import { mono0 } from 'themes/colors';
 import DropdownItemLink from './DropdownItemLink';
 import DropdownItemButton from './DropdownItemButton';
 
@@ -23,7 +24,7 @@ const DropdownItem = ({
       <style jsx>
         {`
           li {
-            background-color: white;
+            background-color: ${mono0};
             border-radius: 4px;
             margin: 2px 0;
             cursor: pointer;

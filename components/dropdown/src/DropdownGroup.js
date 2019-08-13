@@ -1,4 +1,5 @@
 import useTheme from 'themes/useTheme';
+import { mono0 } from 'themes/colors';
 
 const DropdownGroup = ({
   children,
@@ -17,8 +18,9 @@ const DropdownGroup = ({
       <style jsx>
         {`
           ul {
+            background-color: ${mono0};
             border: 1px solid ${theme.borderColor};
-            background-color: white;
+            border-radius: 5px;
             list-style: none;
             padding: 5px;
             margin: 5px 0 0;

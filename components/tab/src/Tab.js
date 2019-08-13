@@ -2,6 +2,7 @@ import { withRouter } from 'next/router';
 
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
+import useTheme from 'themes/useTheme';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
 
@@ -17,6 +18,7 @@ const Content = ({ text, icon }) => (
 
 const Tab = withRouter(
   ({
+    appearance = 'minimal',
     text = '',
     icon = '',
     href = '',
@@ -24,6 +26,7 @@ const Tab = withRouter(
     selected = false,
     router
   }) => {
+    const theme = useTheme(appearance);
     const isActive = router.pathname.match(href);
 
     return (
@@ -43,7 +46,7 @@ const Tab = withRouter(
         <style jsx>
           {`
             li {
-              background-color: white;
+              background-color: ${theme.backgroundColor};
               color: inherit;
               border-radius: 8px;
               text-align: left;
@@ -53,31 +56,14 @@ const Tab = withRouter(
               align-items: center;
             }
 
-            li > :global(a) > :global(svg) {
-              stroke: gray;
-            }
-
             li[aria-selected='true'] {
-              background-color: gray;
-              color: white;
-            }
-
-            li[aria-selected='true'] > :global(a) > :global(svg) {
-              stroke: white;
+              background-color: ${theme.hover.backgroundColor};
+              opacity: 1 !important;
             }
 
             li:hover {
-              background-color: gray;
-              color: white;
-              opacity: 0.6;
-            }
-
-            li:hover > :global(a) > :global(svg) {
-              stroke: white;
-            }
-
-            li[aria-selected='true']:hover {
-              opacity: 1;
+              background-color: ${theme.hover.backgroundColor};
+              opacity: 0.85;
             }
           `}
         </style>
