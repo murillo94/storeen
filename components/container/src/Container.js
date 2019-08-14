@@ -15,8 +15,9 @@ const Container = ({ children, title = '' }) => (
       {`
         section {
           background-color: ${mono0};
-          border: 1px solid gray;
-          border-radius: 10px;
+          box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04),
+            0 1px 3px 0 rgba(63, 63, 68, 0.15);
+          border-radius: 8px;
           padding: 20px;
           margin-bottom: 70px;
         }
