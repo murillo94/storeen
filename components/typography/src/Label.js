@@ -1,4 +1,4 @@
-const Label = ({ id = null, htmlFor = null, text = '' }) => (
+const Label = ({ id = null, htmlFor = null, text = '', color = 'inherit' }) => (
   <>
     <label id={id} htmlFor={htmlFor}>
       {text}
@@ -8,6 +8,7 @@ const Label = ({ id = null, htmlFor = null, text = '' }) => (
       {`
         label {
           font-size: 14px;
+          color: ${color};
           text-align: left;
           margin-bottom: 5px;
           display: block;

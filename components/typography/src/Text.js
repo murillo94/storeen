@@ -1,4 +1,4 @@
-const Text = ({ text = '', customStyle = {} }) => (
+const Text = ({ text = '', color = 'inherit', customStyle = {} }) => (
   <>
     <span style={{ ...customStyle }}>{text}</span>
 
@@ -6,6 +6,7 @@ const Text = ({ text = '', customStyle = {} }) => (
       {`
         span {
           font-size: 14px;
+          color: ${color};
         }
       `}
     </style>

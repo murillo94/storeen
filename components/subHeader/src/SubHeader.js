@@ -24,7 +24,7 @@ const SubHeader = ({
         )}
         <Heading
           text={title}
-          customStyle={{ margin: hasBack && '0 0 0 5px' }}
+          customStyle={{ margin: hasBack ? '0 0 0 5px' : 0 }}
         />
       </div>
       {children && <div>{children}</div>}

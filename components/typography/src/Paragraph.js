@@ -1,4 +1,4 @@
-const Paragraph = ({ text = '', customStyle = {} }) => (
+const Paragraph = ({ text = '', color = 'inherit', customStyle = {} }) => (
   <>
     <p style={{ ...customStyle }}>{text}</p>
 
@@ -6,6 +6,7 @@ const Paragraph = ({ text = '', customStyle = {} }) => (
       {`
         p {
           font-size: 14px;
+          color: ${color};
           margin: 0 0 10px;
         }
       `}
