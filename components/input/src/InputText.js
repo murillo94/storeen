@@ -33,8 +33,14 @@ const InputText = ({
             border: 1px solid ${theme.borderColor};
             border-radius: 8px;
             padding: 10px;
+            outline: 0;
             width: 100%;
             display: block;
+          }
+
+          :focus {
+            box-shadow: 0 0 0 3px rgba(96, 120, 255, 0.2);
+            border-color: #6078ff;
           }
         `}
       </style>

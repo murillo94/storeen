@@ -55,6 +55,7 @@ const Button = ({
             border-radius: 8px;
             height: 39px;
             padding: 0 10px;
+            outline: 0;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
@@ -66,6 +67,11 @@ const Button = ({
             color: ${theme.hover.color};
             background-color: ${theme.hover.backgroundColor};
             border-color: ${theme.hover.borderColor};
+          }
+
+          :focus {
+            box-shadow: 0 0 0 3px rgba(96, 120, 255, 0.2);
+            border-color: #6078ff;
           }
         `}
       </style>

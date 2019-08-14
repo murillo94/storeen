@@ -61,7 +61,7 @@ const Tab = withRouter(
               opacity: 1 !important;
             }
 
-            li:hover {
+            :hover {
               background-color: ${theme.hover.backgroundColor};
               opacity: 0.85;
             }
