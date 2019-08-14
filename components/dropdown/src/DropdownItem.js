@@ -26,7 +26,7 @@ const DropdownItem = ({
           li {
             background-color: ${mono0};
             border-radius: 4px;
-            margin: 2px 0;
+            margin: 3px 0;
             cursor: pointer;
             display: flex;
             align-items: center;
