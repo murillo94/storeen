@@ -6,29 +6,29 @@ const buttonStyle = {
 };
 
 const InputIcon = ({
+  appearance,
   type,
   id,
   name,
   placeholder,
   icon,
-  border,
-  marginBottom,
+  customStyle,
   onClick
 }) => (
   <>
     <div className="container">
       <InputText
+        appearance={appearance}
         type={type}
         id={id}
         name={name}
         placeholder={placeholder}
-        border={border}
-        marginBottom={marginBottom}
+        customStyle={customStyle}
       />
       <Button
-        appearance="minimal"
+        appearance={appearance}
         icon={icon}
-        customStyle={{ border, ...buttonStyle }}
+        customStyle={buttonStyle}
         onClick={onClick}
       />
     </div>

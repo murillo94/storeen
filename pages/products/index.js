@@ -9,6 +9,10 @@ const buttonStyle = {
   margin: '0 10px 0 0'
 };
 
+const inputSearchStyle = {
+  marginBottom: 0
+};
+
 const Products = () => (
   <Page>
     <SubHeader title="Produtos">
@@ -23,7 +27,7 @@ const Products = () => (
         name="search"
         placeholder="Pesquisar"
         icon="search"
-        marginBottom={0}
+        customStyle={inputSearchStyle}
       />
     </Container>
   </Page>

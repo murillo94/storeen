@@ -2,38 +2,42 @@ import { Label } from 'components/typography';
 import InputText from './InputText';
 import InputIcon from './InputIcon';
 
+const defaultStyle = {
+  marginBottom: '20px'
+};
+
 const Input = ({
+  appearance = 'minimal',
   type = 'text',
   id = null,
   name = '',
   labelText = '',
   placeholder = '',
   icon = '',
-  border = '1px solid gray',
-  marginBottom = '20px',
+  customStyle = {},
   onClick = null
 }) => (
   <>
     {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
     {icon ? (
       <InputIcon
+        appearance={appearance}
         type={type}
         id={id}
         name={name}
         placeholder={placeholder}
         icon={icon}
-        border={border}
-        marginBottom={marginBottom}
+        customStyle={{ ...defaultStyle, ...customStyle }}
         onClick={onClick}
       />
     ) : (
       <InputText
+        appearance={appearance}
         type={type}
         id={id}
         name={name}
         placeholder={placeholder}
-        border={border}
-        marginBottom={marginBottom}
+        customStyle={{ ...defaultStyle, ...customStyle }}
       />
     )}
   </>
