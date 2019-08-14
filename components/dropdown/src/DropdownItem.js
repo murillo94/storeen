@@ -32,7 +32,7 @@ const DropdownItem = ({
             align-items: center;
           }
 
-          li:hover {
+          :hover {
             background-color: ${theme.hover.backgroundColor};
             color: ${theme.hover.color};
           }
