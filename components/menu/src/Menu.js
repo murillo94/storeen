@@ -1,6 +1,8 @@
 import Image from 'components/image';
 import { TabList, Tab } from 'components/tab';
 
+import { mono0, mono200 } from 'themes/colors';
+
 const Logo = () => (
   <>
     <div>
@@ -41,8 +43,8 @@ const Menu = () => (
     <style jsx>
       {`
         nav {
-          background-color: white;
-          border-right: 1px solid gray;
+          background-color: ${mono0};
+          border-right: 1px solid ${mono200};
           text-align: center;
           width: 180px;
           height: 100vh;

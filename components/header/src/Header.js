@@ -1,3 +1,5 @@
+import { mono0, mono200 } from 'themes/colors';
+
 const Header = ({ children }) => (
   <>
     <header>{children}</header>
@@ -5,8 +7,8 @@ const Header = ({ children }) => (
     <style jsx>
       {`
         header {
-          background-color: white;
-          border-bottom: 1px solid gray;
+          background-color: ${mono0};
+          border-bottom: 1px solid ${mono200};
           padding: 10px;
           position: sticky;
           top: 0;

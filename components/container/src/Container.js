@@ -1,5 +1,7 @@
 import { Heading } from 'components/typography';
 
+import { mono0 } from 'themes/colors';
+
 const Container = ({ children, title = '' }) => (
   <>
     <section>
@@ -12,7 +14,7 @@ const Container = ({ children, title = '' }) => (
     <style jsx>
       {`
         section {
-          background-color: white;
+          background-color: ${mono0};
           border: 1px solid gray;
           border-radius: 10px;
           padding: 20px;

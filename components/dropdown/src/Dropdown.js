@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 
 import Button from 'components/button';
 
+import { mono0 } from 'themes/colors';
+
 const buttonStyle = {
   border: 'none'
 };
@@ -49,7 +51,7 @@ const Dropdown = ({
       <style jsx>
         {`
           div {
-            background-color: white;
+            background-color: ${mono0};
             position: relative;
           }
 
