@@ -1,7 +1,8 @@
 import useTheme from 'themes/useTheme';
 import { mono0 } from 'themes/colors';
-import DropdownItemLink from './DropdownItemLink';
+import { radius500 } from 'themes/radius';
 import DropdownItemButton from './DropdownItemButton';
+import DropdownItemLink from './DropdownItemLink';
 
 const DropdownItem = ({
   children,
@@ -25,7 +26,7 @@ const DropdownItem = ({
         {`
           li {
             background-color: ${mono0};
-            border-radius: 4px;
+            border-radius: ${radius500};
             margin: 3px 0;
             cursor: pointer;
             display: flex;

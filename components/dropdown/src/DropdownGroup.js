@@ -1,5 +1,6 @@
 import useTheme from 'themes/useTheme';
 import { mono0 } from 'themes/colors';
+import { radius500 } from 'themes/radius';
 
 const DropdownGroup = ({
   children,
@@ -20,7 +21,7 @@ const DropdownGroup = ({
           ul {
             background-color: ${mono0};
             border: 1px solid ${theme.borderColor};
-            border-radius: 5px;
+            border-radius: ${radius500};
             list-style: none;
             padding: 5px;
             margin: 5px 0 0;
