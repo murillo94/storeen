@@ -26,6 +26,8 @@ class StoreenDoc extends Document {
                   font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+                  -webkit-font-smoothing: antialiased;
+	                -moz-osx-font-smoothing: grayscale;
                   font-size: 14px;
                   background-color: ${mono75};
                   color: ${mono900};
