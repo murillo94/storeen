@@ -71,8 +71,8 @@ const Button = ({
           }
 
           :focus {
-            box-shadow: 0 0 0 3px rgba(96, 120, 255, 0.2);
-            border-color: #6078ff;
+            box-shadow: ${theme.focus.boxShadow};
+            border-color: ${theme.focus.borderColor};
           }
         `}
       </style>

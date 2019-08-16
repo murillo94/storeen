@@ -10,6 +10,7 @@ import {
   positive700,
   positive600
 } from 'themes/colors';
+import { primary, negative, positive } from 'themes/shadows';
 
 const theme = {
   default: {
@@ -20,6 +21,10 @@ const theme = {
       color: mono0,
       backgroundColor: primary600,
       borderColor: primary600
+    },
+    focus: {
+      boxShadow: primary,
+      borderColor: primary700
     }
   },
   minimal: {
@@ -30,6 +35,10 @@ const theme = {
       color: mono900,
       backgroundColor: mono100,
       borderColor: mono100
+    },
+    focus: {
+      boxShadow: primary,
+      borderColor: primary700
     }
   },
   negative: {
@@ -40,6 +49,10 @@ const theme = {
       color: mono0,
       backgroundColor: negative600,
       borderColor: negative600
+    },
+    focus: {
+      boxShadow: negative,
+      borderColor: negative600
     }
   },
   positive: {
@@ -49,6 +62,10 @@ const theme = {
     hover: {
       color: mono0,
       backgroundColor: positive600,
+      borderColor: positive600
+    },
+    focus: {
+      boxShadow: positive,
       borderColor: positive600
     }
   }

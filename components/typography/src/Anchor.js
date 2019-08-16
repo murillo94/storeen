@@ -1,3 +1,6 @@
+import { primary } from 'themes/shadows';
+import { primary700 } from 'themes/colors';
+
 const Anchor = ({
   href = null,
   text = '',
@@ -21,8 +24,8 @@ const Anchor = ({
         }
 
         :focus {
-          box-shadow: 0 0 0 3px rgba(96, 120, 255, 0.2);
-          border-color: #6078ff;
+          box-shadow: ${primary};
+          border-color: ${primary700};
         }
       `}
     </style>
