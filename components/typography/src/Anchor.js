@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { primary } from 'themes/shadows';
 import { primary700 } from 'themes/colors';
 
@@ -8,7 +10,9 @@ const Anchor = ({
   hover = true
 }) => (
   <>
-    <a href={href}>{text}</a>
+    <Link href={href}>
+      <a>{text}</a>
+    </Link>
 
     <style jsx>
       {`
