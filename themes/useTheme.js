@@ -1,7 +1,7 @@
 import {
   mono0,
-  mono200,
   mono100,
+  mono200,
   mono900,
   primary700,
   primary600,
