@@ -50,6 +50,7 @@ const Button = ({
         {`
           button {
             font-size: 14px;
+            font-weight: ${appearance !== 'minimal' ? 500 : 400};
             color: ${theme.color};
             background-color: ${theme.backgroundColor};
             border: 1px solid ${theme.borderColor};
