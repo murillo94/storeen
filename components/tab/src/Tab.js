@@ -3,7 +3,7 @@ import { withRouter } from 'next/router';
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
 import useTheme from 'themes/useTheme';
-import { radius800 } from 'themes/radius';
+import { radius600 } from 'themes/radius';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
 
@@ -49,7 +49,7 @@ const Tab = withRouter(
             li {
               background-color: ${theme.backgroundColor};
               color: inherit;
-              border-radius: ${radius800};
+              border-radius: ${radius600};
               text-align: left;
               margin: 6px 10px;
               cursor: pointer;

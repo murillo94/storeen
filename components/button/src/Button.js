@@ -2,7 +2,7 @@ import Icon from 'components/icon';
 import { Text } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
-import { radius800 } from 'themes/radius';
+import { radius600 } from 'themes/radius';
 
 const defaultStyle = {
   width: 'auto'
@@ -54,7 +54,7 @@ const Button = ({
             color: ${theme.color};
             background-color: ${theme.backgroundColor};
             border: 1px solid ${theme.borderColor};
-            border-radius: ${radius800};
+            border-radius: ${radius600};
             height: 39px;
             padding: 0 10px;
             outline: 0;

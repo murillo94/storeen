@@ -1,5 +1,5 @@
 import useTheme from 'themes/useTheme';
-import { radius800 } from 'themes/radius';
+import { radius600 } from 'themes/radius';
 
 const InputText = ({
   appearance,
@@ -32,7 +32,7 @@ const InputText = ({
           input {
             font-size: 14px;
             border: 1px solid ${theme.borderColor};
-            border-radius: ${radius800};
+            border-radius: ${radius600};
             padding: 10px;
             outline: 0;
             width: 100%;

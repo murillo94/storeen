@@ -8,11 +8,11 @@ import Input from 'components/input';
 import Button from 'components/button';
 
 const imageStyle = {
-  margin: '35px 0'
+  margin: '30px 0'
 };
 
 const headingStyle = {
-  margin: '0 0 35px'
+  margin: '0 0 30px'
 };
 
 const paragraphStyle = {
@@ -21,7 +21,7 @@ const paragraphStyle = {
 
 const buttonStyle = {
   width: '100%',
-  margin: '20px 0 30px'
+  margin: '20px 0 25px'
 };
 
 const Logo = () => (
