@@ -37,6 +37,7 @@ const SubHeader = ({
           display: flex;
           align-items: center;
           justify-content: space-between;
+          min-height: 39px;
         }
 
         div {
