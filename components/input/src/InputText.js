@@ -1,4 +1,5 @@
 import useTheme from 'themes/useTheme';
+import { mono500 } from 'themes/colors';
 import { radius600 } from 'themes/radius';
 
 const InputText = ({
@@ -42,6 +43,10 @@ const InputText = ({
           :focus {
             box-shadow: ${theme.focus.boxShadow};
             border-color: ${theme.focus.borderColor};
+          }
+
+          ::placeholder {
+            color: ${mono500};
           }
         `}
       </style>
