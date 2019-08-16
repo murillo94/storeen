@@ -1,3 +1,5 @@
+import useFont from 'themes/useFont';
+
 const H1 = ({ text, color, customStyle }) => (
   <>
     <h1 style={{ ...customStyle }}>{text}</h1>
@@ -54,12 +56,22 @@ const Heading = ({
   text = '',
   color = 'inherit',
   customStyle = {}
-}) => (
-  <>
-    {is === 'h1' && <H1 text={text} color={color} customStyle={customStyle} />}
-    {is === 'h2' && <H2 text={text} color={color} customStyle={customStyle} />}
-    {is === 'h3' && <H3 text={text} color={color} customStyle={customStyle} />}
-  </>
-);
+}) => {
+  const fontColor = useFont(color);
+
+  return (
+    <>
+      {is === 'h1' && (
+        <H1 text={text} color={fontColor} customStyle={customStyle} />
+      )}
+      {is === 'h2' && (
+        <H2 text={text} color={fontColor} customStyle={customStyle} />
+      )}
+      {is === 'h3' && (
+        <H3 text={text} color={fontColor} customStyle={customStyle} />
+      )}
+    </>
+  );
+};
 
 export default Heading;

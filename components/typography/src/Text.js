@@ -1,16 +1,21 @@
-const Text = ({ text = '', color = 'inherit', customStyle = {} }) => (
-  <>
-    <span style={{ ...customStyle }}>{text}</span>
+import useFont from 'themes/useFont';
 
-    <style jsx>
-      {`
-        span {
-          font-size: 14px;
-          color: ${color};
-        }
-      `}
-    </style>
-  </>
-);
+const Text = ({ text = '', color = 'inherit', customStyle = {} }) => {
+  const fontColor = useFont(color);
 
+  return (
+    <>
+      <span style={{ ...customStyle }}>{text}</span>
+
+      <style jsx>
+        {`
+          span {
+            font-size: 14px;
+            color: ${fontColor};
+          }
+        `}
+      </style>
+    </>
+  );
+};
 export default Text;

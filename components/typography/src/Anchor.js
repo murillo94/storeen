@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import useFont from 'themes/useFont';
 import { primary } from 'themes/shadows';
 import { primary700 } from 'themes/colors';
 
@@ -8,32 +9,36 @@ const Anchor = ({
   text = '',
   color = 'inherit',
   hover = true
-}) => (
-  <>
-    <Link href={href}>
-      <a>{text}</a>
-    </Link>
+}) => {
+  const fontColor = useFont(color);
 
-    <style jsx>
-      {`
-        a {
-          font-size: 14px;
-          color: ${color};
-          text-decoration: none;
-          outline: 0;
-        }
+  return (
+    <>
+      <Link href={href}>
+        <a>{text}</a>
+      </Link>
 
-        :hover {
-          text-decoration: ${hover && 'underline'};
-        }
+      <style jsx>
+        {`
+          a {
+            font-size: 14px;
+            color: ${fontColor};
+            text-decoration: none;
+            outline: 0;
+          }
 
-        :focus {
-          box-shadow: ${primary};
-          border-color: ${primary700};
-        }
-      `}
-    </style>
-  </>
-);
+          :hover {
+            text-decoration: ${hover && 'underline'};
+          }
+
+          :focus {
+            box-shadow: ${primary};
+            border-color: ${primary700};
+          }
+        `}
+      </style>
+    </>
+  );
+};
 
 export default Anchor;

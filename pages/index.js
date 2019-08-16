@@ -41,8 +41,12 @@ const Home = () => {
   return (
     <Page>
       <Heading text="Entrar" customStyle={headingStyle} />
-      <Paragraph text="Não tem uma conta ainda?" customStyle={paragraphStyle} />
-      <Anchor href="/" text="Crie sua loja, é grátis!" />
+      <Paragraph
+        text="Não tem uma conta ainda?"
+        color="muted"
+        customStyle={paragraphStyle}
+      />
+      <Anchor href="/" text="Crie sua loja, é grátis!" color="primary" />
       <Logo />
       <Input type="email" labelText="Email" id="email" name="email" />
       <Input type="password" labelText="Senha" id="password" name="password" />
@@ -51,7 +55,7 @@ const Home = () => {
         customStyle={buttonStyle}
         onClick={handleClickSignIn}
       />
-      <Anchor href="/password/new" text="Esqueceu sua senha?" />
+      <Anchor href="/password/new" text="Esqueceu sua senha?" color="primary" />
     </Page>
   );
 };

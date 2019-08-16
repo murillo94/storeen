@@ -1,21 +1,27 @@
-const Label = ({ id = null, htmlFor = null, text = '', color = 'inherit' }) => (
-  <>
-    <label id={id} htmlFor={htmlFor}>
-      {text}
-    </label>
+import useFont from 'themes/useFont';
 
-    <style jsx>
-      {`
-        label {
-          font-size: 14px;
-          color: ${color};
-          text-align: left;
-          margin-bottom: 5px;
-          display: block;
-        }
-      `}
-    </style>
-  </>
-);
+const Label = ({ id = null, htmlFor = null, text = '', color = 'inherit' }) => {
+  const fontColor = useFont(color);
+
+  return (
+    <>
+      <label id={id} htmlFor={htmlFor}>
+        {text}
+      </label>
+
+      <style jsx>
+        {`
+          label {
+            font-size: 14px;
+            color: ${fontColor};
+            text-align: left;
+            margin-bottom: 5px;
+            display: block;
+          }
+        `}
+      </style>
+    </>
+  );
+};
 
 export default Label;
