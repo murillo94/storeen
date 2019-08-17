@@ -2,10 +2,6 @@ import { Label } from 'components/typography';
 import InputText from './InputText';
 import InputIcon from './InputIcon';
 
-const defaultStyle = {
-  marginBottom: '20px'
-};
-
 const Input = ({
   appearance = 'minimal',
   type = 'text',
@@ -17,7 +13,7 @@ const Input = ({
   customStyle = {},
   onClick = null
 }) => (
-  <>
+  <div>
     {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
     {icon ? (
       <InputIcon
@@ -27,7 +23,7 @@ const Input = ({
         name={name}
         placeholder={placeholder}
         icon={icon}
-        customStyle={{ ...defaultStyle, ...customStyle }}
+        customStyle={{ ...customStyle }}
         onClick={onClick}
       />
     ) : (
@@ -37,10 +33,18 @@ const Input = ({
         id={id}
         name={name}
         placeholder={placeholder}
-        customStyle={{ ...defaultStyle, ...customStyle }}
+        customStyle={{ ...customStyle }}
       />
     )}
-  </>
+
+    <style jsx>
+      {`
+        div + div {
+          margin-top: 20px;
+        }
+      `}
+    </style>
+  </div>
 );
 
 export default Input;

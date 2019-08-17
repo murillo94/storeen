@@ -6,10 +6,6 @@ import Container from 'components/container';
 import SubHeader from 'components/subHeader';
 import Input from 'components/input';
 
-const inputSearchStyle = {
-  marginBottom: 0
-};
-
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
 
@@ -20,12 +16,7 @@ const AddProduct = () => {
         <Input labelText="Título do produto" id="title" name="title" />
         <Input labelText="Descrição" id="description" name="description" />
         <Input labelText="Preço" id="price" name="price" />
-        <Input
-          labelText="Código do produto"
-          id="code"
-          name="code"
-          customStyle={inputSearchStyle}
-        />
+        <Input labelText="Código do produto" id="code" name="code" />
       </Container>
       <Container title="Imagens">img aqui</Container>
     </Page>
