@@ -14,7 +14,7 @@ const InputGroup = ({ children, type = 'normal' }) => (
         }
 
         div :global(div) {
-          min-width: 175px;
+          width: 175px;
         }
 
         div :global(div) + :global(div) {
