@@ -4,7 +4,7 @@ import Page from 'layouts/admin/page';
 
 import Container from 'components/container';
 import SubHeader from 'components/subHeader';
-import Input from 'components/input';
+import { InputGroup, Input } from 'components/input';
 
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
@@ -19,7 +19,10 @@ const AddProduct = () => {
       </Container>
       <Container title="Imagens">img aqui</Container>
       <Container title="Preços">
-        <Input labelText="Preço" id="price" name="price" />
+        <InputGroup type="inline">
+          <Input labelText="Preço" id="price" name="price" />
+          <Input labelText="Preço" id="price" name="price" />
+        </InputGroup>
       </Container>
     </Page>
   );

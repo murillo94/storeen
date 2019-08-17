@@ -12,7 +12,6 @@ const InputIcon = ({
   name,
   placeholder,
   icon,
-  customStyle,
   onClick
 }) => (
   <>
@@ -23,7 +22,6 @@ const InputIcon = ({
         id={id}
         name={name}
         placeholder={placeholder}
-        customStyle={customStyle}
       />
       <Button
         appearance={appearance}

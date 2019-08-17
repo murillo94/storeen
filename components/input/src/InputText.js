@@ -2,14 +2,7 @@ import useTheme from 'themes/useTheme';
 import { mono500 } from 'themes/colors';
 import { radius600 } from 'themes/radius';
 
-const InputText = ({
-  appearance,
-  type,
-  id,
-  name,
-  placeholder,
-  customStyle
-}) => {
+const InputText = ({ appearance, type, id, name, placeholder }) => {
   const theme = useTheme(appearance);
 
   return (
@@ -25,7 +18,6 @@ const InputText = ({
         autoCapitalize="off"
         autoCorrect="off"
         spellCheck="false"
-        style={{ ...customStyle }}
       />
 
       <style jsx>

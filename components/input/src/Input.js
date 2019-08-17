@@ -10,32 +10,32 @@ const Input = ({
   labelText = '',
   placeholder = '',
   icon = '',
-  customStyle = {},
+
   onClick = null
 }) => (
-  <div>
-    {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
-    {icon ? (
-      <InputIcon
-        appearance={appearance}
-        type={type}
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        icon={icon}
-        customStyle={{ ...customStyle }}
-        onClick={onClick}
-      />
-    ) : (
-      <InputText
-        appearance={appearance}
-        type={type}
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        customStyle={{ ...customStyle }}
-      />
-    )}
+  <>
+    <div>
+      {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
+      {icon ? (
+        <InputIcon
+          appearance={appearance}
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          icon={icon}
+          onClick={onClick}
+        />
+      ) : (
+        <InputText
+          appearance={appearance}
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+        />
+      )}
+    </div>
 
     <style jsx>
       {`
@@ -44,7 +44,7 @@ const Input = ({
         }
       `}
     </style>
-  </div>
+  </>
 );
 
 export default Input;
