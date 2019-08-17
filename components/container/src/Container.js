@@ -20,7 +20,7 @@ const Container = ({ children, title = '' }) => (
             0 1px 3px 0 rgba(63, 63, 68, 0.15);
           border-radius: ${radius600};
           padding: 20px;
-          margin-bottom: 50px;
+          margin-bottom: 45px;
         }
 
         header {

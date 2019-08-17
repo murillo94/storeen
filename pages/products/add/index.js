@@ -15,10 +15,12 @@ const AddProduct = () => {
       <Container title="Geral">
         <Input labelText="Título do produto" id="title" name="title" />
         <Input labelText="Descrição" id="description" name="description" />
-        <Input labelText="Preço" id="price" name="price" />
         <Input labelText="Código do produto" id="code" name="code" />
       </Container>
       <Container title="Imagens">img aqui</Container>
+      <Container title="Preços">
+        <Input labelText="Preço" id="price" name="price" />
+      </Container>
     </Page>
   );
 };
