@@ -10,7 +10,7 @@ const inputSearchStyle = {
   marginBottom: 0
 };
 
-const Products = () => {
+const AddProduct = () => {
   const handleBack = () => Router.push('/products');
 
   return (
@@ -32,4 +32,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default AddProduct;

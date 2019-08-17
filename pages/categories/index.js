@@ -1,11 +1,20 @@
+import Router from 'next/router';
+
 import Page from 'layouts/admin/page';
 
 import SubHeader from 'components/subHeader';
+import Button from 'components/button';
 
-const Categories = () => (
-  <Page>
-    <SubHeader title="Categorias" />
-  </Page>
-);
+const Categories = () => {
+  const handleAddCategorie = () => Router.push('/categories/add');
+
+  return (
+    <Page>
+      <SubHeader title="Categorias">
+        <Button text="Nova categoria" onClick={handleAddCategorie} />
+      </SubHeader>
+    </Page>
+  );
+};
 
 export default Categories;
