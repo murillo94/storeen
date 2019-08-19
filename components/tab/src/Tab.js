@@ -2,10 +2,11 @@ import { withRouter } from 'next/router';
 
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
-import useTheme from 'themes/useTheme';
-import { radius600 } from 'themes/radius';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
+
+import useTheme from 'themes/useTheme';
+import { radius600 } from 'themes/radius';
 
 const Content = ({ text, icon }) => (
   <>
