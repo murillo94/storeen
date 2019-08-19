@@ -4,7 +4,6 @@ export { default as Table } from './src/Table';
 
 export { default as TableHead } from './src/TableHead';
 export { default as TableHeaderCell } from './src/TableHeaderCell';
-export { default as TextTableHeaderCell } from './src/TextTableHeaderCell';
 
 // Table body and contents
 

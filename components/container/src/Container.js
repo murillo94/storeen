@@ -6,9 +6,11 @@ import { radius600 } from 'themes/radius';
 const Container = ({ children, title = '' }) => (
   <>
     <section>
-      <header>
-        <Heading is="h2" text={title} />
-      </header>
+      {title && (
+        <header>
+          <Heading is="h2" text={title} />
+        </header>
+      )}
       {children}
     </section>
 

@@ -11,10 +11,11 @@ const buttonStyle = {
 const Dropdown = ({
   children,
   appearance = 'minimal',
-  content = null,
   id = null,
   icon = '',
+  text = '',
   visible = false,
+  hasBorder = false,
   onClick = null
 }) => {
   const node = useRef();
@@ -37,15 +38,14 @@ const Dropdown = ({
         <Button
           appearance={appearance}
           icon={icon}
+          text={text}
           aria-controls={id}
           aria-expanded={visible}
           aria-haspopup="menu"
-          customStyle={buttonStyle}
+          customStyle={!hasBorder && buttonStyle}
           onClick={onClick}
-        >
-          <span>{children}</span>
-        </Button>
-        {content}
+        />
+        {children}
       </div>
 
       <style jsx>

@@ -27,17 +27,17 @@ const Content = ({ children, padding = '30px' }) => {
           <Header>
             <Button
               appearance="minimal"
-              text="ver minha loja"
               icon="external-link"
+              text="ver minha loja"
               customStyle={buttonStyle}
             />
             <Dropdown
               id="user-info"
               visible={visibleUserInfo}
-              content={<UserInfo id="user-info" hidden={!visibleUserInfo} />}
+              text="Minha conta"
               onClick={() => setVisibleUserInfo(!visibleUserInfo)}
             >
-              Minha conta
+              <UserInfo id="user-info" hidden={!visibleUserInfo} />
             </Dropdown>
           </Header>
           <div className="main-container">
