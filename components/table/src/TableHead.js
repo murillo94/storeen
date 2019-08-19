@@ -1,3 +1,4 @@
+import { Input } from 'components/input';
 import TableRow from './TableRow';
 import TableHeaderCell from './TableHeaderCell';
 import TextTableCell from './TextTableCell';
@@ -11,7 +12,15 @@ const TableHead = ({ children, hasSearch = false }) => (
     <div>
       {(children || hasSearch) && (
         <div className="header-options">
-          {hasSearch && <div>search</div>}
+          {hasSearch && (
+            <Input
+              type="search"
+              id="search-product"
+              name="search-product"
+              icon="search"
+              placeholder="Buscar produtos"
+            />
+          )}
           <div>{children}</div>
         </div>
       )}
@@ -41,6 +50,10 @@ const TableHead = ({ children, hasSearch = false }) => (
           display: flex;
           justify-content: space-between;
           align-itens: center;
+        }
+
+        .header-options :global(input) {
+          width: 300px;
         }
       `}
     </style>

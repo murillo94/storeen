@@ -10,7 +10,6 @@ const Input = ({
   labelText = '',
   placeholder = '',
   icon = '',
-
   onClick = null
 }) => (
   <>
