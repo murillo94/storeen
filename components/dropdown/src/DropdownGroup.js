@@ -25,6 +25,7 @@ const DropdownGroup = ({
             list-style: none;
             padding: 5px;
             margin: 5px 0 0;
+            min-width: 100px;
             position: absolute;
             right: 0;
             left: auto;
