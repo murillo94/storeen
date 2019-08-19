@@ -54,10 +54,6 @@ const Dropdown = ({
             background-color: ${mono0};
             position: relative;
           }
-
-          span {
-            font-size: 15px;
-          }
         `}
       </style>
     </>
