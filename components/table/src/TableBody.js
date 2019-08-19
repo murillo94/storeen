@@ -1,6 +1,5 @@
-import { positive700 } from 'themes/colors';
-
 import Icon from 'components/icon';
+import { positive700 } from 'themes/colors';
 import TableRow from './TableRow';
 import TextTableCell from './TextTableCell';
 

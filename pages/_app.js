@@ -1,6 +1,6 @@
+import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
-import React from 'react';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
