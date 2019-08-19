@@ -3,6 +3,8 @@ import Button from 'components/button';
 const buttonStyle = {
   border: 'none',
   padding: '5px 8px',
+  justifyContent: 'flex-start',
+  width: '100%',
   height: 'auto'
 };
 
