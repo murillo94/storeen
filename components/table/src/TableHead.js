@@ -46,7 +46,7 @@ const TableHead = ({ children, hasSearch = false }) => (
     <style jsx>
       {`
         .header-options {
-          margin-bottom: 30px;
+          margin-bottom: 35px;
           display: flex;
           justify-content: space-between;
           align-itens: center;
