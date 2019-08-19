@@ -9,10 +9,10 @@ const buttonStyle = {
   border: 'none'
 };
 
-const UserInfo = ({ id, hidden, href = '/' }) => (
+const UserInfo = ({ id, hidden }) => (
   <DropdownGroup id={id} hidden={hidden}>
     <DropdownItem href="/settings">Configurações</DropdownItem>
-    <DropdownItem href={href}>Sair</DropdownItem>
+    <DropdownItem href="/">Sair</DropdownItem>
   </DropdownGroup>
 );
 

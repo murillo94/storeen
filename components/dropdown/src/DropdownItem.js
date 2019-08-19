@@ -7,7 +7,7 @@ import DropdownItemLink from './DropdownItemLink';
 const DropdownItem = ({
   children,
   appearance = 'minimal',
-  href = '/',
+  href = '',
   onClick = null
 }) => {
   const theme = useTheme(appearance);
@@ -18,7 +18,9 @@ const DropdownItem = ({
         {href ? (
           <DropdownItemLink href={href}>{children}</DropdownItemLink>
         ) : (
-          <DropdownItemButton onClick={onClick}>{children}</DropdownItemButton>
+          <DropdownItemButton appearance={appearance} onClick={onClick}>
+            {children}
+          </DropdownItemButton>
         )}
       </li>
 

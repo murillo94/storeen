@@ -1,7 +1,15 @@
 import Button from 'components/button';
 
-const DropdownItemButton = ({ children, onClick }) => (
-  <Button onClick={onClick}>{children}</Button>
+const buttonStyle = {
+  border: 'none',
+  padding: '5px 8px',
+  height: 'auto'
+};
+
+const DropdownItemButton = ({ children, appearance, onClick }) => (
+  <Button appearance={appearance} customStyle={buttonStyle} onClick={onClick}>
+    {children}
+  </Button>
 );
 
 export default DropdownItemButton;
