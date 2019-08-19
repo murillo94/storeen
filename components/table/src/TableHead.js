@@ -3,6 +3,8 @@ import TableRow from './TableRow';
 import TableHeaderCell from './TableHeaderCell';
 import TextTableCell from './TextTableCell';
 
+import { mono75 } from 'themes/colors';
+
 const textHeaderStyle = {
   fontWeight: '500'
 };
@@ -53,7 +55,14 @@ const TableHead = ({ children, hasSearch = false }) => (
         }
 
         .header-options :global(input) {
+          background-color: ${mono75};
+          border-color: ${mono75};
           width: 300px;
+        }
+
+        .header-options :global(button[type='submit']) {
+          background-color: ${mono75};
+          border-color: ${mono75};
         }
       `}
     </style>

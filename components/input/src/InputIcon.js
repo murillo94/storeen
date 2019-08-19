@@ -25,6 +25,7 @@ const InputIcon = ({
       />
       <Button
         appearance={appearance}
+        type="submit"
         icon={icon}
         customStyle={buttonStyle}
         onClick={onClick}
