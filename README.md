@@ -1,5 +1,3 @@
-# storeen-frontend
-
 <div align="center">
     <br>
     <a href="https://storeen-frontend.now.sh">
