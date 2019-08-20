@@ -18,7 +18,7 @@ const UserInfo = ({ id, hidden }) => (
 
 const Content = ({ children, sidebar, padding }) => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
-  const hasSidebar = sidebar.length;
+  const hasSidebar = !!sidebar.length;
 
   return (
     <>
