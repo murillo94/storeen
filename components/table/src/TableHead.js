@@ -1,6 +1,6 @@
 import { Input } from 'components/input';
 import TableRow from './TableRow';
-import TableHeaderCell from './TableHeaderCell';
+import TableCell from './TableCell';
 import TextTableCell from './TextTableCell';
 
 import { mono75 } from 'themes/colors';
@@ -27,21 +27,21 @@ const TableHead = ({ children, hasSearch = false }) => (
         </div>
       )}
       <TableRow hover={false}>
-        <TableHeaderCell>
+        <TableCell flexBasis="320px">
           <TextTableCell text="Nome" textCustomStyle={textHeaderStyle} />
-        </TableHeaderCell>
-        <TableHeaderCell>
+        </TableCell>
+        <TableCell>
           <TextTableCell text="Preço" textCustomStyle={textHeaderStyle} />
-        </TableHeaderCell>
-        <TableHeaderCell>
+        </TableCell>
+        <TableCell>
           <TextTableCell text="Estoque" textCustomStyle={textHeaderStyle} />
-        </TableHeaderCell>
-        <TableHeaderCell>
+        </TableCell>
+        <TableCell>
           <TextTableCell
             text="Visibilidade"
             textCustomStyle={textHeaderStyle}
           />
-        </TableHeaderCell>
+        </TableCell>
       </TableRow>
     </div>
 

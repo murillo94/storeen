@@ -10,9 +10,15 @@ const TextTableCell = ({ children, text = '', textCustomStyle }) => (
     <style jsx>
       {`
         div {
+          overflow: hidden;
           display: flex;
           align-items: center;
           flex: 1 1 0%;
+        }
+
+        div :global(span) {
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
       `}
     </style>
