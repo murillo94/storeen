@@ -1,10 +1,64 @@
+import React, { useState } from 'react';
 import Router from 'next/router';
 
 import Page from 'layouts/admin/page';
 
+import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';
-import { Table } from 'components/table';
+import { Table, TableRow, TableCell, TextTableCell } from 'components/table';
+import Icon from 'components/icon';
+
+import { positive700, negative700 } from 'themes/colors';
+
+const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
+const items = [
+  {
+    name: 'Vestido Blue Denim',
+    price: 99.0,
+    stock: 9,
+    visible: true
+  },
+  {
+    name: 'Vestido Yellow Denim',
+    price: 89.0,
+    stock: 3,
+    visible: false
+  },
+  {
+    name: 'Vestido Pink Denim',
+    price: 79.0,
+    stock: 5,
+    visible: true
+  },
+  {
+    name: 'Vestido Red Denim',
+    price: 109.0,
+    stock: 15,
+    visible: false
+  }
+];
+
+const Filter = () => {
+  const [visibleFilter, setVisibleFilter] = useState(false);
+
+  return (
+    <Dropdown
+      id="filter"
+      visible={visibleFilter}
+      hasBorder
+      appearance="minimal"
+      icon="filter"
+      text="Filtrar"
+      onClick={() => setVisibleFilter(!visibleFilter)}
+    >
+      <DropdownGroup id="filter" hidden={!visibleFilter}>
+        <DropdownItem>teste1</DropdownItem>
+        <DropdownItem>teste2</DropdownItem>
+      </DropdownGroup>
+    </Dropdown>
+  );
+};
 
 const Products = () => {
   const handleAddProduct = () => Router.push('/products/add');
@@ -14,7 +68,29 @@ const Products = () => {
       <SubHeader title="Produtos">
         <Button text="Novo produto" onClick={handleAddProduct} />
       </SubHeader>
-      <Table />
+      <Table headers={headers} optionsHeader={<Filter />} hasSearch>
+        {items.map(item => (
+          <TableRow key={item.name}>
+            <TableCell flexBasis="320px">
+              <TextTableCell text={item.name} />
+            </TableCell>
+            <TableCell>
+              <TextTableCell text={item.price} />
+            </TableCell>
+            <TableCell>
+              <TextTableCell text={item.stock} />
+            </TableCell>
+            <TableCell>
+              <TextTableCell>
+                <Icon
+                  name="eye"
+                  color={item.visible ? positive700 : negative700}
+                />
+              </TextTableCell>
+            </TableCell>
+          </TableRow>
+        ))}
+      </Table>
     </Page>
   );
 };

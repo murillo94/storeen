@@ -1,6 +1,6 @@
 import { mono0, mono75, mono100 } from 'themes/colors';
 
-const TableRow = ({ children, hover = true }) => (
+const TableRow = ({ children, isBody = true, hover = true }) => (
   <>
     <div>{children}</div>
 
@@ -11,6 +11,10 @@ const TableRow = ({ children, hover = true }) => (
           border-bottom: 1px solid ${mono100};
           height: 64px;
           display: flex;
+        }
+
+        :last-child {
+          border-bottom: ${isBody && 'none'};
         }
 
         :hover {

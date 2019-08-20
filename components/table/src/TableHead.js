@@ -1,3 +1,5 @@
+import React, { Fragment } from 'react';
+
 import { Input } from 'components/input';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
@@ -9,7 +11,7 @@ const textHeaderStyle = {
   fontWeight: '500'
 };
 
-const TableHead = ({ children, hasSearch = false }) => (
+const TableHead = ({ children, headers, hasSearch }) => (
   <>
     <div>
       {(children || hasSearch) && (
@@ -26,22 +28,14 @@ const TableHead = ({ children, hasSearch = false }) => (
           <div>{children}</div>
         </div>
       )}
-      <TableRow hover={false}>
-        <TableCell flexBasis="320px">
-          <TextTableCell text="Nome" textCustomStyle={textHeaderStyle} />
-        </TableCell>
-        <TableCell>
-          <TextTableCell text="Preço" textCustomStyle={textHeaderStyle} />
-        </TableCell>
-        <TableCell>
-          <TextTableCell text="Estoque" textCustomStyle={textHeaderStyle} />
-        </TableCell>
-        <TableCell>
-          <TextTableCell
-            text="Visibilidade"
-            textCustomStyle={textHeaderStyle}
-          />
-        </TableCell>
+      <TableRow isBody={false} hover={false}>
+        {headers.map((title, index) => (
+          <Fragment key={title}>
+            <TableCell flexBasis={index === 0 && '320px'}>
+              <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
+            </TableCell>
+          </Fragment>
+        ))}
       </TableRow>
     </div>
 
