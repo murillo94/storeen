@@ -11,7 +11,7 @@ const TableCell = ({ children, flexBasis = '' }) => (
           display: flex;
           align-items: center;
           flex: 1 1 0%;
-          padding-right: 10px;
+          padding-right: 20px;
         }
 
         .cellWidth {
