@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
+import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 import Menu from 'components/menu';
 import Header from 'components/header';
 import Button from 'components/button';
-import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
+import { TabList, Tab } from 'components/tab';
 
 const buttonStyle = {
   border: 'none'
@@ -43,7 +44,13 @@ const Content = ({ children, sidebar, padding }) => {
           </Header>
           <div className="main-container">
             <div className={`main-children ${hasSidebar && 'sidebar'}`}>
-              {hasSidebar && <div>sidebar</div>}
+              {hasSidebar && (
+                <TabList>
+                  {sidebar.map(item => (
+                    <Tab text={item.name} icon={item.icon} href={item.href} />
+                  ))}
+                </TabList>
+              )}
               {children}
             </div>
           </div>
@@ -65,16 +72,18 @@ const Content = ({ children, sidebar, padding }) => {
 
           .main-container {
             padding: ${padding};
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
           }
 
           .main-children {
-            width: 800px;
             margin: 20px auto 0;
+            min-width: 991px;
           }
 
           .sidebar {
             display: flex;
-            align-items: flex-start;
           }
 
           @media (max-width: 991px) {

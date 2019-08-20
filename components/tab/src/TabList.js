@@ -1,5 +1,3 @@
-import { mono0 } from 'themes/colors';
-
 const TabList = ({ children, ariaLabel = 'Menu lateral' }) => (
   <>
     <ul role="tablist" aria-orientation="vertical" aria-label={ariaLabel}>
@@ -9,7 +7,7 @@ const TabList = ({ children, ariaLabel = 'Menu lateral' }) => (
     <style jsx>
       {`
         ul {
-          background-color: ${mono0};
+          background-color: transparent;
           list-style: none;
           padding: 0;
         }

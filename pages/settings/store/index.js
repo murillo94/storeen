@@ -16,9 +16,9 @@ const sidebar = [
   }
 ];
 
-const Settings = () => (
+const StoreSettings = () => (
   <Page sidebar={sidebar}>
-    <Container title="Perfil">
+    <Container title="Dados da loja">
       <Input labelText="Título do produto" id="title" name="title" />
       <Input labelText="Descrição" id="description" name="description" />
       <Input labelText="Código do produto" id="code" name="code" />
@@ -26,7 +26,4 @@ const Settings = () => (
   </Page>
 );
 
-export default Settings;
-
-/* width: 200px;
-    margin-right: 50px; */
+export default StoreSettings;

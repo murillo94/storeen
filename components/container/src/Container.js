@@ -23,6 +23,7 @@ const Container = ({ children, title = '' }) => (
           border-radius: ${radius600};
           padding: 20px;
           margin-bottom: 45px;
+          width: 100%;
         }
 
         header {
