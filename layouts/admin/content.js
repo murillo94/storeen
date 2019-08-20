@@ -16,8 +16,9 @@ const UserInfo = ({ id, hidden }) => (
   </DropdownGroup>
 );
 
-const Content = ({ children, padding = '30px' }) => {
+const Content = ({ children, sidebar, padding }) => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
+  const hasSidebar = sidebar.length;
 
   return (
     <>
@@ -41,7 +42,10 @@ const Content = ({ children, padding = '30px' }) => {
             </Dropdown>
           </Header>
           <div className="main-container">
-            <div className="main-children">{children}</div>
+            <div className={`main-children ${hasSidebar && 'sidebar'}`}>
+              {hasSidebar && <div>sidebar</div>}
+              {children}
+            </div>
           </div>
         </main>
       </div>
@@ -66,6 +70,11 @@ const Content = ({ children, padding = '30px' }) => {
           .main-children {
             width: 800px;
             margin: 20px auto 0;
+          }
+
+          .sidebar {
+            display: flex;
+            align-items: flex-start;
           }
 
           @media (max-width: 991px) {
