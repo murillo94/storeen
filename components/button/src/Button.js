@@ -55,8 +55,7 @@ const Button = ({
             background-color: ${theme.backgroundColor};
             border: 1px solid ${theme.borderColor};
             border-radius: ${radius600};
-            height: 39px;
-            padding: 0 10px;
+            padding: 10px;
             outline: 0;
             cursor: pointer;
             display: inline-flex;

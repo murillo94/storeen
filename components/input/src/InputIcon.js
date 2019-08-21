@@ -36,20 +36,27 @@ const InputIcon = ({
       {`
         .container {
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
+          align-items: stretch;
+          width: 100%;
         }
 
         .container :global(input) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
           border-right: none;
+          flex: 1 1 auto;
         }
 
         .container :global(button) {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-left: none;
-          height: 39px;
+        }
+
+        .container :global(input):focus,
+        .container :global(input):focus {
+          z-index: 1;
         }
 
         .icon {
