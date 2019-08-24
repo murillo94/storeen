@@ -24,6 +24,7 @@ const InputText = ({ appearance, type, id, name, placeholder }) => {
         {`
           input {
             font-size: 14px;
+            background-clip: padding-box;
             border: 1px solid ${theme.borderColor};
             border-radius: ${radius600};
             padding: 10px;
