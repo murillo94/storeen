@@ -38,7 +38,7 @@ const Promotions = () => {
       <SubHeader title="Promoções">
         <Button text="Nova promoção" onClick={handleAddPromotion} />
       </SubHeader>
-      <Table headers={headers} hasSearch>
+      <Table headers={headers} hasSearch placeholderSearchSuffix="promoções">
         {items.map(item => (
           <TableRow key={item.name}>
             <TableCell flexBasis="320px">

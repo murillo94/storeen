@@ -47,7 +47,12 @@ const Content = ({ children, sidebar, padding }) => {
               {hasSidebar && (
                 <TabList>
                   {sidebar.map(item => (
-                    <Tab text={item.name} icon={item.icon} href={item.href} />
+                    <Tab
+                      key={item.name}
+                      text={item.name}
+                      icon={item.icon}
+                      href={item.href}
+                    />
                   ))}
                 </TabList>
               )}

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Input } from 'components/input';
 import TableRow from './TableRow';
@@ -11,7 +11,12 @@ const textHeaderStyle = {
   fontWeight: '500'
 };
 
-const TableHead = ({ children, headers, hasSearch }) => (
+const TableHead = ({
+  children,
+  headers,
+  hasSearch,
+  placeholderSearchSuffix
+}) => (
   <>
     <div>
       {(children || hasSearch) && (
@@ -22,7 +27,7 @@ const TableHead = ({ children, headers, hasSearch }) => (
               id="search-product"
               name="search-product"
               icon="search"
-              placeholder="Buscar produtos"
+              placeholder={`Buscar ${placeholderSearchSuffix}`}
             />
           )}
           <div>{children}</div>
@@ -30,11 +35,9 @@ const TableHead = ({ children, headers, hasSearch }) => (
       )}
       <TableRow isBody={false} hover={false}>
         {headers.map((title, index) => (
-          <Fragment key={title}>
-            <TableCell flexBasis={index === 0 && '320px'}>
-              <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
-            </TableCell>
-          </Fragment>
+          <TableCell key={title} flexBasis={index === 0 && '320px'}>
+            <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
+          </TableCell>
         ))}
       </TableRow>
     </div>

@@ -6,11 +6,16 @@ const Table = ({
   children,
   optionsHeader,
   headers = [],
-  hasSearch = false
+  hasSearch = false,
+  placeholderSearchSuffix = ''
 }) => {
   return (
     <Container>
-      <TableHead headers={headers} hasSearch={hasSearch}>
+      <TableHead
+        headers={headers}
+        hasSearch={hasSearch}
+        placeholderSearchSuffix={placeholderSearchSuffix}
+      >
         {optionsHeader}
       </TableHead>
       <TableBody>{children}</TableBody>

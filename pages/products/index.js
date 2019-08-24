@@ -68,7 +68,12 @@ const Products = () => {
       <SubHeader title="Produtos">
         <Button text="Novo produto" onClick={handleAddProduct} />
       </SubHeader>
-      <Table headers={headers} optionsHeader={<Filter />} hasSearch>
+      <Table
+        headers={headers}
+        optionsHeader={<Filter />}
+        hasSearch
+        placeholderSearchSuffix="produtos"
+      >
         {items.map(item => (
           <TableRow key={item.name}>
             <TableCell flexBasis="320px">
