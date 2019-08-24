@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Input } from 'components/input';
 import TableRow from './TableRow';
 import TableCell from './TableCell';

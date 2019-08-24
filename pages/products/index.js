@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Router from 'next/router';
 
-import Page from 'layouts/admin/page';
+import Page from 'layouts/adminContent/page';
 
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 import SubHeader from 'components/subHeader';

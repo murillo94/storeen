@@ -1,6 +1,15 @@
-const TabList = ({ children, ariaLabel = 'Menu lateral' }) => (
+const TabList = ({
+  children,
+  ariaLabel = 'Menu lateral',
+  customStyle = {}
+}) => (
   <>
-    <ul role="tablist" aria-orientation="vertical" aria-label={ariaLabel}>
+    <ul
+      role="tablist"
+      aria-orientation="vertical"
+      aria-label={ariaLabel}
+      style={{ ...customStyle }}
+    >
       {children}
     </ul>
 
@@ -10,6 +19,7 @@ const TabList = ({ children, ariaLabel = 'Menu lateral' }) => (
           background-color: transparent;
           list-style: none;
           padding: 0;
+          margin: 0;
         }
       `}
     </style>

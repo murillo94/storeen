@@ -1,14 +1,37 @@
 import React, { useState } from 'react';
 
+import Image from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
-import Menu from 'components/menu';
+import { TabList, Tab } from 'components/tab';
 import Header from 'components/header';
 import Button from 'components/button';
-import { TabList, Tab } from 'components/tab';
+
+import { mono0, mono200 } from 'themes/colors';
 
 const buttonStyle = {
   border: 'none'
 };
+
+const Logo = () => (
+  <>
+    <div>
+      <Image
+        src="/static/images/logo-all-horizontal.svg"
+        width="120px"
+        height="100%"
+      />
+    </div>
+
+    <style jsx>
+      {`
+        div {
+          text-align: left;
+          margin: 20px 20px 40px;
+        }
+      `}
+    </style>
+  </>
+);
 
 const UserInfo = ({ id, hidden }) => (
   <DropdownGroup id={id} hidden={hidden}>
@@ -17,14 +40,25 @@ const UserInfo = ({ id, hidden }) => (
   </DropdownGroup>
 );
 
-const Content = ({ children, sidebar, padding }) => {
+const Content = ({ children, padding }) => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
-  const hasSidebar = !!sidebar.length;
 
   return (
     <>
       <div className="container">
-        <Menu />
+        <nav>
+          <div>
+            <Logo />
+            <TabList>
+              <Tab text="Início" icon="home" href="/home" />
+              <Tab text="Relatórios" icon="bar-chart" href="/reports" />
+              <Tab text="Pedidos" icon="clipboard" href="/orders" />
+              <Tab text="Produtos" icon="box" href="/products" />
+              <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
+              <Tab text="Categorias" icon="tag" href="/categories" />
+            </TabList>
+          </div>
+        </nav>
         <main>
           <Header>
             <Button
@@ -43,21 +77,7 @@ const Content = ({ children, sidebar, padding }) => {
             </Dropdown>
           </Header>
           <div className="main-container">
-            <div className={`main-children ${hasSidebar && 'sidebar'}`}>
-              {hasSidebar && (
-                <TabList>
-                  {sidebar.map(item => (
-                    <Tab
-                      key={item.name}
-                      text={item.name}
-                      icon={item.icon}
-                      href={item.href}
-                    />
-                  ))}
-                </TabList>
-              )}
-              {children}
-            </div>
+            <div className="main-children">{children}</div>
           </div>
         </main>
       </div>
@@ -69,6 +89,22 @@ const Content = ({ children, sidebar, padding }) => {
             min-height: 100%;
             display: flex;
             flex-grow: 1;
+          }
+
+          nav {
+            background-color: ${mono0};
+            border-right: 1px solid ${mono200};
+            text-align: center;
+            width: 180px;
+            height: 100vh;
+            overflow: auto;
+            position: sticky;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
           }
 
           main {
@@ -85,10 +121,6 @@ const Content = ({ children, sidebar, padding }) => {
           .main-children {
             margin: 20px auto 0;
             min-width: 800px;
-          }
-
-          .sidebar {
-            display: flex;
           }
 
           @media (max-width: 991px) {
