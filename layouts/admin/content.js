@@ -79,7 +79,7 @@ const Content = ({ children, sidebar, padding }) => {
 
           .main-children {
             margin: 20px auto 0;
-            min-width: 991px;
+            min-width: 800px;
           }
 
           .sidebar {
