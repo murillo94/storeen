@@ -13,15 +13,27 @@ const AddProduct = () => {
     <Page>
       <SubHeader title="Novo Produto" hasBack onClick={handleBack} />
       <Container title="Geral">
-        <Input labelText="Título do produto" id="title" name="title" />
-        <Input labelText="Descrição" id="description" name="description" />
-        <Input labelText="Código do produto" id="code" name="code" />
+        <Input
+          labelText="Título do produto"
+          id="product-title"
+          name="product-title"
+        />
+        <Input
+          labelText="Descrição"
+          id="product-description"
+          name="product-description"
+        />
+        <Input
+          labelText="Código do produto"
+          id="product-code"
+          name="product-code"
+        />
       </Container>
       <Container title="Imagens">img aqui</Container>
       <Container title="Preços">
         <InputGroup type="inline">
-          <Input labelText="Preço" id="price" name="price" />
-          <Input labelText="Preço" id="price" name="price" />
+          <Input labelText="Preço" id="product-price" name="product-price" />
+          <Input labelText="Preço" id="product-price" name="product-price" />
         </InputGroup>
       </Container>
     </Page>

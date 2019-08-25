@@ -22,8 +22,8 @@ const TableHead = ({
           {hasSearch && (
             <Input
               type="search"
-              id="search-product"
-              name="search-product"
+              id="search"
+              name="search"
               icon="search"
               placeholder={`Buscar ${placeholderSearchSuffix}`}
             />

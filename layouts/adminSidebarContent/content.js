@@ -16,7 +16,7 @@ const Content = ({ children, sidebar, padding, customStyle }) => (
             />
           ))}
         </TabList>
-        {children}
+        <div className="children">{children}</div>
       </div>
     </AdminPage>
 
@@ -24,6 +24,10 @@ const Content = ({ children, sidebar, padding, customStyle }) => (
       {`
         .sidebar {
           display: flex;
+        }
+
+        .children {
+          width: 100%;
         }
       `}
     </style>

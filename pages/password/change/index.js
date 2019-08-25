@@ -29,7 +29,12 @@ const Change = () => (
   <Page>
     <Heading text="Nova senha" />
     <Logo />
-    <Input type="password" labelText="Senha" id="password" name="password" />
+    <Input
+      type="password"
+      labelText="Senha"
+      id="new-password"
+      name="new-password"
+    />
     <Button text="Alterar senha" customStyle={buttonStyle} />
   </Page>
 );
