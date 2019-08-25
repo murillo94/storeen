@@ -26,7 +26,7 @@ const Logo = () => (
       {`
         div {
           text-align: left;
-          margin: 20px 20px 40px;
+          margin: 0 20px 40px;
         }
       `}
     </style>
@@ -35,7 +35,7 @@ const Logo = () => (
 
 const UserInfo = ({ id, hidden }) => (
   <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem href="/settings">Configurações</DropdownItem>
+    <DropdownItem href="/settings/profile">Sua conta</DropdownItem>
     <DropdownItem href="/">Sair</DropdownItem>
   </DropdownGroup>
 );
@@ -58,6 +58,9 @@ const Content = ({ children, padding }) => {
               <Tab text="Categorias" icon="tag" href="/categories" />
             </TabList>
           </div>
+          <TabList>
+            <Tab text="Configurações" icon="settings" href="/settings" />
+          </TabList>
         </nav>
         <main>
           <Header>
@@ -95,6 +98,7 @@ const Content = ({ children, padding }) => {
             background-color: ${mono0};
             border-right: 1px solid ${mono200};
             text-align: center;
+            padding: 20px 0 10px;
             width: 180px;
             height: 100vh;
             overflow: auto;

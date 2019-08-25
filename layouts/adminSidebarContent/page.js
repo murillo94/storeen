@@ -9,7 +9,7 @@ const sidebar = [
   {
     name: 'Perfil',
     icon: 'user',
-    href: '/settings'
+    href: '/settings/profile'
   },
   {
     name: 'Dados da loja',
