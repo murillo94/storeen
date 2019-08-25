@@ -5,7 +5,7 @@ import { Input } from 'components/input';
 
 const ProfileSettings = () => (
   <Page>
-    <Container title="Perfil">
+    <Container title="Dados pessoais">
       <Input labelText="Nome" id="user-name" name="user-name" />
       <Input type="email" labelText="Email" id="user-email" name="user-email" />
       <Input

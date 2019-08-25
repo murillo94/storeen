@@ -35,7 +35,7 @@ const Logo = () => (
 
 const UserInfo = ({ id, hidden }) => (
   <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem href="/settings/profile">Sua conta</DropdownItem>
+    <DropdownItem href="/settings/profile">Meus dados</DropdownItem>
     <DropdownItem href="/">Sair</DropdownItem>
   </DropdownGroup>
 );
