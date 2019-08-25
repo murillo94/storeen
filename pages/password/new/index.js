@@ -7,11 +7,11 @@ import Button from 'components/button';
 
 const buttonStyle = {
   width: '100%',
-  margin: '10px 0'
+  margin: '20px 0'
 };
 
 const imageStyle = {
-  margin: '35px 0'
+  margin: '30px 0'
 };
 
 const Logo = () => (

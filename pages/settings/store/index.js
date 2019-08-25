@@ -5,15 +5,22 @@ import { Input } from 'components/input';
 
 const StoreSettings = () => (
   <Page>
-    <Container title="Dados da loja">
+    <Container
+      title="Dados da loja"
+      subTitle="Algumas informações que são necessárias para o seu público conhecer melhor a sua marca."
+    >
       <Input labelText="Nome da loja" id="store-name" name="store-name" />
+      <Input labelText="Sobre" id="store-about" name="store-about" />
       <Input
         labelText="Endereço da sua loja na internet"
         id="store-url"
         name="store-url"
       />
     </Container>
-    <Container title="Atendimento">
+    <Container
+      title="Atendimento"
+      subTitle="Essas informações ficaram disponível no rodapé da loja."
+    >
       <Input
         type="email"
         labelText="E-mail de atendimento"
@@ -27,7 +34,10 @@ const StoreSettings = () => (
         name="help-phone"
       />
     </Container>
-    <Container title="Dados da empresa">
+    <Container
+      title="Dados da empresa"
+      subTitle="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
+    >
       <Input labelText="Razão Social" id="company-name" name="company-name" />
       <Input type="number" labelText="CNPJ" id="cnpj" name="cnpj" />
       <Input
@@ -41,7 +51,10 @@ const StoreSettings = () => (
         name="company-municipal-tax"
       />
     </Container>
-    <Container title="Dados do responsável">
+    <Container
+      title="Dados do responsável"
+      subTitle="Seus dados pessoais são usados apenas para o cumprimento das leis vigentes."
+    >
       <Input labelText="Nome" id="responsible-name" name="responsible-name" />
       <Input type="number" labelText="RG" id="rg" name="rg" />
       <Input type="number" labelText="CPF" id="cpf" name="cpf" />
@@ -63,7 +76,10 @@ const StoreSettings = () => (
         name="responsible-phone"
       />
     </Container>
-    <Container title="Endereço">
+    <Container
+      title="Endereço"
+      subTitle="Essas informações ficaram disponível no rodapé da loja."
+    >
       <Input type="number" labelText="CEP" id="store-cep" name="store-cep" />
       <Input labelText="Endereço" id="store-address" name="store-address" />
       <Input labelText="Número" id="store-number" name="store-number" />

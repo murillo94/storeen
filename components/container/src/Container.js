@@ -1,14 +1,25 @@
-import { Heading } from 'components/typography';
+import { Heading, Paragraph } from 'components/typography';
 
 import { mono0 } from 'themes/colors';
 import { radius600 } from 'themes/radius';
 
-const Container = ({ children, title = '' }) => (
+const subTitleStyle = {
+  marginTop: '6px'
+};
+
+const Container = ({ children, title = '', subTitle = '' }) => (
   <>
     <section>
       {title && (
         <header>
           <Heading is="h2" text={title} />
+          {subTitle && (
+            <Paragraph
+              text={subTitle}
+              color="muted"
+              customStyle={subTitleStyle}
+            />
+          )}
         </header>
       )}
       {children}
