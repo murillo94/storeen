@@ -1,4 +1,4 @@
-import Page from 'layouts/adminSidebarContent/page';
+import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
 import { Input } from 'components/input';
