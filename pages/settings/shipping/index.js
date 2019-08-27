@@ -6,9 +6,9 @@ const ShippingSettings = () => (
   <Page>
     <Container
       title="Opções de frete"
-      subTitle="Iremos usar essas informações para entrar em contato com você."
+      subTitle="Escolha as maneiras de levar seus produtos até seus clientes."
     >
-      Opções de frete
+      todo
     </Container>
   </Page>
 );

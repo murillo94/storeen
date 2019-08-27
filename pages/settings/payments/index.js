@@ -6,9 +6,9 @@ const PaymentsSettings = () => (
   <Page>
     <Container
       title="Meios de pagamento"
-      subTitle="Iremos usar essas informações para entrar em contato com você."
+      subTitle="Selecione um meio de pagamento para receber os pagamentos."
     >
-      Meios de pagamento
+      todo
     </Container>
   </Page>
 );
