@@ -1,6 +1,8 @@
 import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const ShippingSettings = () => (
   <Page>
@@ -10,6 +12,9 @@ const ShippingSettings = () => (
     >
       todo
     </Container>
+    <Footer>
+      <Button appearance="positive" text="Salvar" />
+    </Footer>
   </Page>
 );
 

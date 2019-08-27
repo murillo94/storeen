@@ -1,6 +1,8 @@
 import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const PaymentsSettings = () => (
   <Page>
@@ -10,6 +12,9 @@ const PaymentsSettings = () => (
     >
       todo
     </Container>
+    <Footer>
+      <Button appearance="positive" text="Salvar" />
+    </Footer>
   </Page>
 );
 

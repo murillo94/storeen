@@ -40,6 +40,10 @@ const Container = ({ children, title = '', subTitle = '' }) => (
         header {
           margin-bottom: 20px;
         }
+
+        :last-of-type {
+          margin-bottom: 30px;
+        }
       `}
     </style>
   </>

@@ -2,6 +2,8 @@ import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
 import { Input } from 'components/input';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const StoreSettings = () => (
   <Page>
@@ -96,6 +98,9 @@ const StoreSettings = () => (
       <Input labelText="Cidade" id="store-city" name="store-city" />
       <Input labelText="Estado" id="store-state" name="store-state" />
     </Container>
+    <Footer>
+      <Button appearance="positive" text="Salvar" />
+    </Footer>
   </Page>
 );
 

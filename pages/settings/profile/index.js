@@ -2,6 +2,8 @@ import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
 import { Input } from 'components/input';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const ProfileSettings = () => (
   <Page>
@@ -18,6 +20,9 @@ const ProfileSettings = () => (
         name="user-phone"
       />
     </Container>
+    <Footer>
+      <Button appearance="positive" text="Salvar" />
+    </Footer>
   </Page>
 );
 

@@ -1,6 +1,8 @@
 import Page from 'layouts/adminSettingsContent/page';
 
 import Container from 'components/container';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const LegalSettings = () => (
   <Page>
@@ -28,6 +30,9 @@ const LegalSettings = () => (
     >
       todo
     </Container>
+    <Footer>
+      <Button appearance="positive" text="Salvar" />
+    </Footer>
   </Page>
 );
 
