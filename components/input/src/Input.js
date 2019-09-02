@@ -14,7 +14,11 @@ const Input = ({
 }) => (
   <>
     <div>
-      {labelText && <Label id={`${id}-label`} htmlFor={id} text={labelText} />}
+      {labelText && (
+        <Label id={`${id}-label`} htmlFor={id}>
+          {labelText}
+        </Label>
+      )}
       {icon ? (
         <InputIcon
           appearance={appearance}

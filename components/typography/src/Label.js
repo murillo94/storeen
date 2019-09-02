@@ -1,12 +1,12 @@
 import useFont from 'themes/useFont';
 
-const Label = ({ id = null, htmlFor = null, text = '', color = 'inherit' }) => {
+const Label = ({ children, id = null, htmlFor = null, color = 'inherit' }) => {
   const fontColor = useFont(color);
 
   return (
     <>
       <label id={id} htmlFor={htmlFor}>
-        {text}
+        {children}
       </label>
 
       <style jsx>
