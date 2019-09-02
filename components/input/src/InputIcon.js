@@ -15,7 +15,7 @@ const InputIcon = ({
   onClick
 }) => (
   <>
-    <div className="container">
+    <div>
       <InputText
         appearance={appearance}
         type={type}
@@ -34,28 +34,28 @@ const InputIcon = ({
 
     <style jsx>
       {`
-        .container {
+        div {
           display: flex;
           flex-wrap: wrap;
           align-items: stretch;
           width: 100%;
         }
 
-        .container :global(input) {
+        div :global(input) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
           border-right: none;
           flex: 1 1 auto;
         }
 
-        .container :global(button) {
+        div :global(button) {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-left: none;
         }
 
-        .container :global(input):focus,
-        .container :global(input):focus {
+        div :global(input):focus,
+        div :global(input):focus {
           z-index: 1;
         }
 
