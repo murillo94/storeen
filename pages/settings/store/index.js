@@ -99,7 +99,7 @@ const StoreSettings = () => (
       <Input labelText="Estado" id="store-state" name="store-state" />
     </Container>
     <Footer>
-      <Button appearance="positive" text="Salvar" />
+      <Button text="Salvar" />
     </Footer>
   </Page>
 );

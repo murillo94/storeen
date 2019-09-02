@@ -21,7 +21,7 @@ const ProfileSettings = () => (
       />
     </Container>
     <Footer>
-      <Button appearance="positive" text="Salvar" />
+      <Button text="Salvar" />
     </Footer>
   </Page>
 );
