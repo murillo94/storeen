@@ -12,13 +12,19 @@ const Radio = ({
 
   return (
     <>
-      <Label htmlFor={id}>
-        <input type="radio" id={id} value={value} aria-checked={checked} />
-        <span>{value}</span>
-      </Label>
+      <div>
+        <Label htmlFor={id}>
+          <input type="radio" id={id} value={value} aria-checked={checked} />
+          <span>{value}</span>
+        </Label>
+      </div>
 
       <style jsx>
         {`
+          div + div {
+            margin-top: 10px;
+          }
+
           :global(label) {
             cursor: pointer;
             position: relative;

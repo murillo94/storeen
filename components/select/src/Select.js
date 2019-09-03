@@ -37,6 +37,10 @@ const Select = ({
 
       <style jsx>
         {`
+          div + div {
+            margin-top: 20px;
+          }
+
           .container {
             width: 100%;
             position: relative;
@@ -49,10 +53,6 @@ const Select = ({
             pointer-events: none;
             position: absolute;
             right: 5px;
-          }
-
-          div + div {
-            margin-top: 20px;
           }
 
           select {

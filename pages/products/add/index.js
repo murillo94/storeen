@@ -5,6 +5,9 @@ import Page from 'layouts/adminContent/page';
 import Container from 'components/container';
 import SubHeader from 'components/subHeader';
 import { InputGroup, Input } from 'components/input';
+import Select from 'components/select';
+import Checkbox from 'components/checkbox';
+import Radio from 'components/radio';
 
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
@@ -28,6 +31,12 @@ const AddProduct = () => {
           id="product-code"
           name="product-code"
         />
+        <Select labelText="teste1" />
+        <Select labelText="teste2" />
+        <Checkbox value="teste3" />
+        <Checkbox value="teste3" />
+        <Radio value="teste4" />
+        <Radio value="teste4" />
       </Container>
       <Container title="Imagens">img aqui</Container>
       <Container title="Preços">
