@@ -1,28 +1,43 @@
+import { Label } from 'components/typography';
 import Icon from 'components/icon';
 
 import useTheme from 'themes/useTheme';
 import { mono0, mono600 } from 'themes/colors';
 import { radius600 } from 'themes/radius';
 
-const Select = ({ appearance = 'minimal', placeholder = 'teste' }) => {
+const Select = ({
+  appearance = 'minimal',
+  id = null,
+  name = '',
+  labelText = '',
+  options = []
+}) => {
   const theme = useTheme(appearance);
 
   return (
     <>
       <div>
-        <select>
-          <option value="">{placeholder}</option>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-        <Icon name="chevron-down" size={18} color={mono600} />
+        {labelText && (
+          <Label id={`${id}-label`} htmlFor={id}>
+            {labelText}
+          </Label>
+        )}
+        <div className="container">
+          <select id={id} name={name}>
+            <option value="" hidden />
+            {options.map(({ value }) => (
+              <option key={value} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
+          <Icon name="chevron-down" size={18} color={mono600} />
+        </div>
       </div>
 
       <style jsx>
         {`
-          div {
+          .container {
             width: 100%;
             position: relative;
             display: inline-flex;
@@ -30,7 +45,7 @@ const Select = ({ appearance = 'minimal', placeholder = 'teste' }) => {
             align-items: center;
           }
 
-          div :global(svg) {
+          .container :global(svg) {
             pointer-events: none;
             position: absolute;
             right: 5px;
