@@ -26,16 +26,19 @@ const Radio = ({
           }
 
           :global(label) {
-            cursor: pointer;
             position: relative;
           }
 
           input {
             opacity: 0;
+            margin: 0;
+            height: 18px;
+            width: 18px;
           }
 
           span {
             margin-left: 5px;
+            user-select: none;
             display: inline-block;
           }
 
@@ -68,13 +71,13 @@ const Radio = ({
             transition: all 0.15s ease-in-out;
           }
 
-          input:checked + span::before {
-            border-color: ${theme.focus.borderColor};
-          }
-
-          input:checked:focus + span::before {
+          input:focus + span::before {
             border-color: ${theme.focus.borderColor};
             box-shadow: ${theme.focus.boxShadow};
+          }
+
+          input:checked + span::before {
+            border-color: ${theme.focus.borderColor};
           }
 
           input:checked + span::after {
