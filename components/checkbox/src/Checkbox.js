@@ -5,6 +5,7 @@ import useTheme from 'themes/useTheme';
 const Checkbox = ({
   appearance = 'minimal',
   id = null,
+  name = '',
   value = '',
   checked = false
 }) => {
@@ -14,7 +15,13 @@ const Checkbox = ({
     <>
       <div>
         <Label htmlFor={id}>
-          <input type="checkbox" id={id} value={value} aria-checked={checked} />
+          <input
+            type="checkbox"
+            id={id}
+            name={name}
+            value={value}
+            aria-checked={checked}
+          />
           <span>{value}</span>
         </Label>
       </div>

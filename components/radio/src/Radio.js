@@ -5,6 +5,7 @@ import useTheme from 'themes/useTheme';
 const Radio = ({
   appearance = 'minimal',
   id = null,
+  name = '',
   value = '',
   checked = false
 }) => {
@@ -14,7 +15,13 @@ const Radio = ({
     <>
       <div>
         <Label htmlFor={id}>
-          <input type="radio" id={id} value={value} aria-checked={checked} />
+          <input
+            type="radio"
+            id={id}
+            name={name}
+            value={value}
+            aria-checked={checked}
+          />
           <span>{value}</span>
         </Label>
       </div>

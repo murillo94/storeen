@@ -33,10 +33,10 @@ const AddProduct = () => {
         />
         <Select labelText="teste1" />
         <Select labelText="teste2" />
-        <Checkbox value="teste3" />
-        <Checkbox value="teste3" />
-        <Radio value="teste4" />
-        <Radio value="teste4" />
+        <Checkbox id="teste3" value="teste3" name="teste3" />
+        <Checkbox id="teste4" value="teste4" name="teste4" />
+        <Radio id="teste5" value="teste5" name="teste" />
+        <Radio id="teste6" value="teste6" name="teste" />
       </Container>
       <Container title="Imagens">img aqui</Container>
       <Container title="Preços">
