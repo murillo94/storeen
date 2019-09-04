@@ -1,8 +1,20 @@
+import MaskedInput from 'react-text-mask';
+
+import { MASKS } from '../utils/mask';
+
 import useTheme from 'themes/useTheme';
 import { mono500 } from 'themes/colors';
 import { radius600 } from 'themes/radius';
 
-const InputText = ({ appearance, type, id, name, placeholder }) => {
+const Input = ({
+  appearance,
+  type,
+  id,
+  name,
+  value,
+  innerRef,
+  placeholder
+}) => {
   const theme = useTheme(appearance);
 
   return (
@@ -11,6 +23,8 @@ const InputText = ({ appearance, type, id, name, placeholder }) => {
         type={type}
         id={id}
         name={name}
+        value={value}
+        ref={innerRef}
         aria-describedby={`${id}-message`}
         aria-labelledby={`${id}-label`}
         placeholder={placeholder}
@@ -43,6 +57,25 @@ const InputText = ({ appearance, type, id, name, placeholder }) => {
           }
         `}
       </style>
+    </>
+  );
+};
+
+const InputText = ({ mask, ...props }) => {
+  const validMask = MASKS[mask];
+
+  return (
+    <>
+      {validMask ? (
+        <MaskedInput
+          mask={validMask}
+          render={(ref, propsMask) => (
+            <Input innerRef={ref} {...props} {...propsMask} />
+          )}
+        />
+      ) : (
+        <Input {...props} />
+      )}
     </>
   );
 };

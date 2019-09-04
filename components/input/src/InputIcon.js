@@ -10,17 +10,21 @@ const InputIcon = ({
   type,
   id,
   name,
+  value,
   placeholder,
   icon,
+  mask,
   onClick
 }) => (
   <>
     <div>
       <InputText
         appearance={appearance}
+        mask={mask}
         type={type}
         id={id}
         name={name}
+        value={value}
         placeholder={placeholder}
       />
       <Button

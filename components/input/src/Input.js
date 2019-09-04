@@ -7,9 +7,11 @@ const Input = ({
   type = 'text',
   id = null,
   name = '',
+  value = '',
   labelText = '',
   placeholder = '',
   icon = '',
+  mask = '',
   onClick = null
 }) => (
   <div className="input-normal input-form">
@@ -24,8 +26,10 @@ const Input = ({
         type={type}
         id={id}
         name={name}
+        value={value}
         placeholder={placeholder}
         icon={icon}
+        mask={mask}
         onClick={onClick}
       />
     ) : (
@@ -34,7 +38,9 @@ const Input = ({
         type={type}
         id={id}
         name={name}
+        value={value}
         placeholder={placeholder}
+        mask={mask}
       />
     )}
   </div>

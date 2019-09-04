@@ -24,7 +24,8 @@
     "next": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-feather": "^2.0.3"
+    "react-feather": "^2.0.3",
+    "react-text-mask": "^5.4.3"
   },
   "scripts": {
     "dev": "next",
