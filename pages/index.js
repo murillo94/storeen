@@ -4,6 +4,7 @@ import Page from 'layouts/login/page';
 
 import Image from 'components/image';
 import { Heading, Paragraph, Anchor } from 'components/typography';
+import Form from 'components/form';
 import { Input } from 'components/input';
 import Button from 'components/button';
 
@@ -48,8 +49,15 @@ const Home = () => {
       />
       <Anchor href="/" text="Crie sua loja, é grátis!" color="primary" />
       <Logo />
-      <Input type="email" labelText="Email" id="email" name="email" />
-      <Input type="password" labelText="Senha" id="password" name="password" />
+      <Form>
+        <Input type="email" labelText="Email" id="email" name="email" />
+        <Input
+          type="password"
+          labelText="Senha"
+          id="password"
+          name="password"
+        />
+      </Form>
       <Button
         text="Entrar"
         customStyle={buttonStyle}

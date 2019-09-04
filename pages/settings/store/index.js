@@ -10,6 +10,7 @@ const StoreSettings = () => (
     <Container
       title="Dados da loja"
       subTitle="Algumas informações que são necessárias para o seu público conhecer melhor a sua marca."
+      isForm
     >
       <Input labelText="Nome da loja" id="store-name" name="store-name" />
       <Input labelText="Sobre" id="store-about" name="store-about" />
@@ -22,6 +23,7 @@ const StoreSettings = () => (
     <Container
       title="Atendimento"
       subTitle="Essas informações ficaram disponível no rodapé da loja."
+      isForm
     >
       <Input
         type="email"
@@ -39,6 +41,7 @@ const StoreSettings = () => (
     <Container
       title="Dados da empresa"
       subTitle="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
+      isForm
     >
       <Input labelText="Razão Social" id="company-name" name="company-name" />
       <Input type="number" labelText="CNPJ" id="cnpj" name="cnpj" />
@@ -56,6 +59,7 @@ const StoreSettings = () => (
     <Container
       title="Dados do responsável"
       subTitle="Seus dados pessoais são usados apenas para o cumprimento das leis vigentes."
+      isForm
     >
       <Input labelText="Nome" id="responsible-name" name="responsible-name" />
       <Input type="number" labelText="RG" id="rg" name="rg" />
@@ -81,6 +85,7 @@ const StoreSettings = () => (
     <Container
       title="Endereço"
       subTitle="Essas informações ficaram disponível no rodapé da loja."
+      isForm
     >
       <Input type="number" labelText="CEP" id="store-cep" name="store-cep" />
       <Input labelText="Endereço" id="store-address" name="store-address" />

@@ -13,7 +13,7 @@ const Checkbox = ({
 
   return (
     <>
-      <div>
+      <div className="input-check input-form">
         <Label htmlFor={id}>
           <input
             type="checkbox"
@@ -28,10 +28,6 @@ const Checkbox = ({
 
       <style jsx>
         {`
-          div + div {
-            margin-top: 10px;
-          }
-
           :global(label) {
             position: relative;
           }

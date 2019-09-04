@@ -2,8 +2,8 @@ import Router from 'next/router';
 
 import Page from 'layouts/adminContent/page';
 
-import Container from 'components/container';
 import SubHeader from 'components/subHeader';
+import Container from 'components/container';
 import { InputGroup, Input } from 'components/input';
 import Select from 'components/select';
 import Checkbox from 'components/checkbox';
@@ -15,7 +15,7 @@ const AddProduct = () => {
   return (
     <Page>
       <SubHeader title="Novo Produto" hasBack onClick={handleBack} />
-      <Container title="Geral">
+      <Container title="Geral" isForm>
         <Input
           labelText="Título do produto"
           id="product-title"

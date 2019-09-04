@@ -1,3 +1,4 @@
+import Form from 'components/form';
 import { Heading, Paragraph } from 'components/typography';
 
 import { mono0 } from 'themes/colors';
@@ -7,7 +8,7 @@ const subTitleStyle = {
   marginTop: '6px'
 };
 
-const Container = ({ children, title = '', subTitle = '' }) => (
+const Container = ({ children, title = '', subTitle = '', isForm = false }) => (
   <>
     <section>
       {title && (
@@ -22,7 +23,7 @@ const Container = ({ children, title = '', subTitle = '' }) => (
           )}
         </header>
       )}
-      {children}
+      {isForm ? <Form>{children}</Form> : children}
     </section>
 
     <style jsx>

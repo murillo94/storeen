@@ -16,7 +16,7 @@ const Select = ({
 
   return (
     <>
-      <div>
+      <div className="input-normal input-form">
         {labelText && (
           <Label id={`${id}-label`} htmlFor={id}>
             {labelText}
@@ -37,10 +37,6 @@ const Select = ({
 
       <style jsx>
         {`
-          div + div {
-            margin-top: 20px;
-          }
-
           .container {
             width: 100%;
             position: relative;

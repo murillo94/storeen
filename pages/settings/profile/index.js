@@ -10,6 +10,7 @@ const ProfileSettings = () => (
     <Container
       title="Dados pessoais"
       subTitle="Iremos usar essas informações para entrar em contato com você."
+      isForm
     >
       <Input labelText="Nome" id="user-name" name="user-name" />
       <Input type="email" labelText="Email" id="user-email" name="user-email" />

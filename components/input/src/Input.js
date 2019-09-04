@@ -12,42 +12,32 @@ const Input = ({
   icon = '',
   onClick = null
 }) => (
-  <>
-    <div>
-      {labelText && (
-        <Label id={`${id}-label`} htmlFor={id}>
-          {labelText}
-        </Label>
-      )}
-      {icon ? (
-        <InputIcon
-          appearance={appearance}
-          type={type}
-          id={id}
-          name={name}
-          placeholder={placeholder}
-          icon={icon}
-          onClick={onClick}
-        />
-      ) : (
-        <InputText
-          appearance={appearance}
-          type={type}
-          id={id}
-          name={name}
-          placeholder={placeholder}
-        />
-      )}
-    </div>
-
-    <style jsx>
-      {`
-        div + div {
-          margin-top: 20px;
-        }
-      `}
-    </style>
-  </>
+  <div className="input-normal input-form">
+    {labelText && (
+      <Label id={`${id}-label`} htmlFor={id}>
+        {labelText}
+      </Label>
+    )}
+    {icon ? (
+      <InputIcon
+        appearance={appearance}
+        type={type}
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        icon={icon}
+        onClick={onClick}
+      />
+    ) : (
+      <InputText
+        appearance={appearance}
+        type={type}
+        id={id}
+        name={name}
+        placeholder={placeholder}
+      />
+    )}
+  </div>
 );
 
 export default Input;

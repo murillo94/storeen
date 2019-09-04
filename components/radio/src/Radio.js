@@ -13,7 +13,7 @@ const Radio = ({
 
   return (
     <>
-      <div>
+      <div className="input-check input-form">
         <Label htmlFor={id}>
           <input
             type="radio"
@@ -28,10 +28,6 @@ const Radio = ({
 
       <style jsx>
         {`
-          div + div {
-            margin-top: 10px;
-          }
-
           :global(label) {
             position: relative;
           }
