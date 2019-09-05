@@ -36,6 +36,8 @@ const StoreSettings = () => (
         labelText="Telefone de atendimento"
         id="help-phone"
         name="help-phone"
+        mask="phone"
+        value="94315491000103"
       />
     </Container>
     <Container
@@ -44,7 +46,14 @@ const StoreSettings = () => (
       isForm
     >
       <Input labelText="Razão Social" id="company-name" name="company-name" />
-      <Input type="number" labelText="CNPJ" id="cnpj" name="cnpj" />
+      <Input
+        type="text"
+        labelText="CNPJ"
+        id="cnpj"
+        name="cnpj"
+        mask="cnpj"
+        value="94315491000103"
+      />
       <Input
         labelText="Inscrição Municipal"
         id="store-state-tax"
@@ -62,24 +71,35 @@ const StoreSettings = () => (
       isForm
     >
       <Input labelText="Nome" id="responsible-name" name="responsible-name" />
-      <Input type="number" labelText="RG" id="rg" name="rg" />
-      <Input type="number" labelText="CPF" id="cpf" name="cpf" />
+      <Input type="text" labelText="RG" id="rg" name="rg" />
+      <Input
+        type="text"
+        labelText="CPF"
+        id="cpf"
+        name="cpf"
+        mask="cpf"
+        value="94315491000103"
+      />
       <Input
         labelText="Gênero"
         id="responsible-gender"
         name="responsible-gender"
       />
       <Input
-        type="date"
+        type="text"
         labelText="Data de Nascimento"
         id="responsible-birthdate"
         name="responsible-birthdate"
+        mask="birthdate"
+        value="94315491000103"
       />
       <Input
         type="tel"
         labelText="Telefone"
         id="responsible-phone"
         name="responsible-phone"
+        mask="phone"
+        value="94315491000103"
       />
     </Container>
     <Container
@@ -87,7 +107,14 @@ const StoreSettings = () => (
       subTitle="Essas informações ficaram disponível no rodapé da loja."
       isForm
     >
-      <Input type="number" labelText="CEP" id="store-cep" name="store-cep" />
+      <Input
+        type="text"
+        labelText="CEP"
+        id="store-cep"
+        name="store-cep"
+        mask="cep"
+        value="94315491000103"
+      />
       <Input labelText="Endereço" id="store-address" name="store-address" />
       <Input labelText="Número" id="store-number" name="store-number" />
       <Input

@@ -19,6 +19,7 @@ const ProfileSettings = () => (
         labelText="Telefone"
         id="user-phone"
         name="user-phone"
+        mask="phone"
       />
     </Container>
     <Footer>
