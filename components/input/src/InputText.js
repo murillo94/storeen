@@ -47,6 +47,15 @@ const Input = ({
             display: block;
           }
 
+          input[type='number'] {
+            appearance: none;
+          }
+
+          input[type='number']::-webkit-inner-spin-button,
+          input[type='number']::-webkit-outer-spin-button {
+            appearance: none;
+          }
+
           :focus {
             box-shadow: ${theme.focus.boxShadow};
             border-color: ${theme.focus.borderColor};
