@@ -30,13 +30,26 @@ const AddProduct = () => {
           name="product-code"
         />
       </Container>
-      <Container title="Imagens">img aqui</Container>
+      <Container title="Imagens">todo</Container>
       <Container title="Preços">
         <InputGroup type="inline">
-          <Input labelText="Preço" id="product-price" name="product-price" />
-          <Input labelText="Preço" id="product-price" name="product-price" />
+          <Input
+            labelText="Preço"
+            id="product-price"
+            name="product-price"
+            mask="money"
+          />
+          <Input
+            labelText="Preço a ser comparado"
+            id="product-compare-price"
+            name="product-compare-price"
+            mask="money"
+          />
         </InputGroup>
       </Container>
+      <Container title="Fretes">todo</Container>
+      <Container title="Estoque">todo</Container>
+      <Container title="Variações">todo</Container>
     </Page>
   );
 };
