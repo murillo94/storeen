@@ -37,7 +37,6 @@ const StoreSettings = () => (
         id="help-phone"
         name="help-phone"
         mask="phone"
-        value="94315491000103"
       />
     </Container>
     <Container
@@ -46,14 +45,7 @@ const StoreSettings = () => (
       isForm
     >
       <Input labelText="Razão Social" id="company-name" name="company-name" />
-      <Input
-        type="text"
-        labelText="CNPJ"
-        id="cnpj"
-        name="cnpj"
-        mask="cnpj"
-        value="94315491000103"
-      />
+      <Input type="text" labelText="CNPJ" id="cnpj" name="cnpj" mask="cnpj" />
       <Input
         labelText="Inscrição Municipal"
         id="store-state-tax"
@@ -72,14 +64,7 @@ const StoreSettings = () => (
     >
       <Input labelText="Nome" id="responsible-name" name="responsible-name" />
       <Input type="text" labelText="RG" id="rg" name="rg" />
-      <Input
-        type="text"
-        labelText="CPF"
-        id="cpf"
-        name="cpf"
-        mask="cpf"
-        value="94315491000103"
-      />
+      <Input type="text" labelText="CPF" id="cpf" name="cpf" mask="cpf" />
       <Input
         labelText="Gênero"
         id="responsible-gender"
@@ -91,7 +76,6 @@ const StoreSettings = () => (
         id="responsible-birthdate"
         name="responsible-birthdate"
         mask="birthdate"
-        value="94315491000103"
       />
       <Input
         type="tel"
@@ -99,7 +83,6 @@ const StoreSettings = () => (
         id="responsible-phone"
         name="responsible-phone"
         mask="phone"
-        value="94315491000103"
       />
     </Container>
     <Container
@@ -113,7 +96,6 @@ const StoreSettings = () => (
         id="store-cep"
         name="store-cep"
         mask="cep"
-        value="94315491000103"
       />
       <Input labelText="Endereço" id="store-address" name="store-address" />
       <Input labelText="Número" id="store-number" name="store-number" />
