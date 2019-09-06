@@ -1,3 +1,5 @@
+import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+
 export const MASKS = {
   cpf: [
     /\d/,
@@ -36,7 +38,14 @@ export const MASKS = {
     /\d/
   ],
   cep: [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/],
-  money: [],
+  money: createNumberMask({
+    prefix: 'R$ ',
+    thousandsSeparatorSymbol: '.',
+    decimalSymbol: ',',
+    decimalLimit: 2,
+    allowDecimal: true,
+    requireDecimal: false
+  }),
   phone: [
     '(',
     /\d/,
