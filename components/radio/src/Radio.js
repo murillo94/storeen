@@ -2,11 +2,16 @@ import { Label } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
 
+const labelStyle = {
+  display: 'inline-flex'
+};
+
 const Radio = ({
   appearance = 'minimal',
   id = null,
   name = '',
   value = '',
+  text = '',
   checked = false
 }) => {
   const theme = useTheme(appearance);
@@ -14,7 +19,7 @@ const Radio = ({
   return (
     <>
       <div className="input-check input-form">
-        <Label htmlFor={id}>
+        <Label htmlFor={id} customStyle={labelStyle}>
           <input
             type="radio"
             id={id}
@@ -22,7 +27,7 @@ const Radio = ({
             value={value}
             aria-checked={checked}
           />
-          <span>{value}</span>
+          <span>{text}</span>
         </Label>
       </div>
 

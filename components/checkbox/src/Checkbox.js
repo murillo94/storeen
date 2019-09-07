@@ -2,11 +2,16 @@ import { Label } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
 
+const labelStyle = {
+  display: 'inline-flex'
+};
+
 const Checkbox = ({
   appearance = 'minimal',
   id = null,
   name = '',
   value = '',
+  text = '',
   checked = false
 }) => {
   const theme = useTheme(appearance);
@@ -14,15 +19,15 @@ const Checkbox = ({
   return (
     <>
       <div className="input-check input-form">
-        <Label htmlFor={id}>
+        <Label htmlFor={id} customStyle={labelStyle}>
           <input
             type="checkbox"
             id={id}
             name={name}
-            value={value}
+            value={value || checked}
             aria-checked={checked}
           />
-          <span>{value}</span>
+          <span>{text}</span>
         </Label>
       </div>
 
@@ -52,7 +57,7 @@ const Checkbox = ({
             width: 18px;
             height: 18px;
             position: absolute;
-            top: 1px;
+            top: 0;
             left: 0;
             transform: rotate(0deg) scale(1);
             display: block;
@@ -67,7 +72,7 @@ const Checkbox = ({
             width: 5px;
             height: 10px;
             position: absolute;
-            top: 4px;
+            top: 3px;
             left: 7px;
             transform: rotate(45deg) scale(0);
             display: block;

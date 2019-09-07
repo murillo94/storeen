@@ -1,11 +1,17 @@
 import useFont from 'themes/useFont';
 
-const Label = ({ children, id = null, htmlFor = null, color = 'inherit' }) => {
+const Label = ({
+  children,
+  id = null,
+  htmlFor = null,
+  color = 'inherit',
+  customStyle = {}
+}) => {
   const fontColor = useFont(color);
 
   return (
     <>
-      <label id={id} htmlFor={htmlFor}>
+      <label id={id} htmlFor={htmlFor} style={{ ...customStyle }}>
         {children}
       </label>
 

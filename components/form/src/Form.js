@@ -9,7 +9,7 @@ const Form = ({ children }) => (
         }
 
         div :global(.input-check):not(:last-child) {
-          margin-bottom: 10px;
+          margin-bottom: 5px;
         }
       `}
     </style>
