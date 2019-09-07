@@ -1,9 +1,13 @@
-import { Label } from 'components/typography';
+import { Label, Paragraph } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
 
 const labelStyle = {
   display: 'inline-flex'
+};
+
+const descriptionStyle = {
+  margin: '0'
 };
 
 const Checkbox = ({
@@ -12,13 +16,17 @@ const Checkbox = ({
   name = '',
   value = '',
   text = '',
+  description = '',
   checked = false
 }) => {
   const theme = useTheme(appearance);
 
   return (
     <>
-      <div className="input-check input-form">
+      <div
+        className={`input-check input-form ${description &&
+          'with-description'}`}
+      >
         <Label htmlFor={id} customStyle={labelStyle}>
           <input
             type="checkbox"
@@ -29,6 +37,15 @@ const Checkbox = ({
           />
           <span>{text}</span>
         </Label>
+        {description && (
+          <div className="description">
+            <Paragraph
+              text={description}
+              color="muted"
+              customStyle={descriptionStyle}
+            />
+          </div>
+        )}
       </div>
 
       <style jsx>
@@ -94,6 +111,10 @@ const Checkbox = ({
 
           input:checked + span::after {
             transform: rotate(45deg) scale(1);
+          }
+
+          .description {
+            margin-top: 5px;
           }
         `}
       </style>
