@@ -45,7 +45,7 @@ const Checkbox = ({
           }
 
           span {
-            margin-left: 5px;
+            margin-left: 6px;
             user-select: none;
             display: inline-block;
           }
