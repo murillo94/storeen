@@ -5,6 +5,7 @@ import Page from 'layouts/adminContent/page';
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import { InputGroup, Input } from 'components/input';
+import Checkbox from 'components/checkbox';
 
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
@@ -47,9 +48,27 @@ const AddProduct = () => {
           />
         </InputGroup>
       </Container>
-      <Container title="Fretes">todo</Container>
-      <Container title="Estoque">todo</Container>
-      <Container title="Variações">todo</Container>
+      <Container title="Fretes" isForm>
+        <Checkbox
+          id="shipping"
+          name="shipping"
+          text="Este produto necessita de frete?"
+        />
+      </Container>
+      <Container title="Estoque" isForm>
+        <Checkbox
+          id="stock"
+          name="stock"
+          text="Controlar estoque do produto?"
+        />
+      </Container>
+      <Container title="Variações" isForm>
+        <Checkbox
+          id="variations"
+          name="variations"
+          text="Este produto possui variações?"
+        />
+      </Container>
     </Page>
   );
 };
