@@ -20,7 +20,6 @@ const AddProduct = () => {
           labelText="Título do produto"
           id="product-title"
           name="product-title"
-          mask="phone"
         />
         <Input
           labelText="Descrição"

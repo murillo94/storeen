@@ -4,6 +4,7 @@ import Page from 'layouts/adminContent/page';
 
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
+import { Input } from 'components/input';
 import Radio from 'components/radio';
 import Footer from 'components/footer';
 import Button from 'components/button';
@@ -14,7 +15,18 @@ const AddCategorie = () => {
   return (
     <Page>
       <SubHeader title="Nova categoria" hasBack onClick={handleBack} />
-      <Container title="Geral">todo</Container>
+      <Container title="Geral" isForm>
+        <Input
+          labelText="Título da categoria"
+          id="categorie-title"
+          name="categorie-title"
+        />
+        <Input
+          labelText="Descrição"
+          id="categorie-description"
+          name="categorie-description"
+        />
+      </Container>
       <Container title="Tipo" isForm>
         <Radio
           id="manual"
