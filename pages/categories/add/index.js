@@ -5,6 +5,8 @@ import Page from 'layouts/adminContent/page';
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import Radio from 'components/radio';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const AddCategorie = () => {
   const handleBack = () => Router.push('/categories');
@@ -29,6 +31,9 @@ const AddCategorie = () => {
           description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
         />
       </Container>
+      <Footer>
+        <Button text="Salvar" />
+      </Footer>
     </Page>
   );
 };

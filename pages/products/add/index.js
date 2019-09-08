@@ -6,6 +6,8 @@ import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import { InputGroup, Input } from 'components/input';
 import Checkbox from 'components/checkbox';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
@@ -69,6 +71,9 @@ const AddProduct = () => {
           text="Este produto possui variações?"
         />
       </Container>
+      <Footer>
+        <Button text="Salvar" />
+      </Footer>
     </Page>
   );
 };

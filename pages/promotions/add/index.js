@@ -5,6 +5,8 @@ import Page from 'layouts/adminContent/page';
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import Checkbox from 'components/checkbox';
+import Footer from 'components/footer';
+import Button from 'components/button';
 
 const AddPromotion = () => {
   const handleBack = () => Router.push('/promotions');
@@ -25,6 +27,9 @@ const AddPromotion = () => {
       <Container title="Agendar">
         <Checkbox id="schedule" name="schedule" text="Agendar promoção?" />
       </Container>
+      <Footer>
+        <Button text="Salvar" />
+      </Footer>
     </Page>
   );
 };
