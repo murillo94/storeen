@@ -17,7 +17,8 @@ const Checkbox = ({
   value = '',
   text = '',
   description = '',
-  checked = false
+  checked = false,
+  onChange = null
 }) => {
   const theme = useTheme(appearance);
 
@@ -34,6 +35,7 @@ const Checkbox = ({
             name={name}
             value={value || checked}
             aria-checked={checked}
+            onChange={onChange}
           />
           <span>{text}</span>
         </Label>

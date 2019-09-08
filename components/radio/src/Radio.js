@@ -17,7 +17,8 @@ const Radio = ({
   value = '',
   text = '',
   description = '',
-  checked = false
+  checked = false,
+  onChange = null
 }) => {
   const theme = useTheme(appearance);
 
@@ -34,6 +35,7 @@ const Radio = ({
             name={name}
             value={value}
             aria-checked={checked}
+            onChange={onChange}
           />
           <span>{text}</span>
         </Label>
