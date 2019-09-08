@@ -74,13 +74,13 @@ const AddPromotion = () => {
       <Container title="Requisitos mínimos" isForm>
         <Radio
           id="total-value-minimum"
-          name="applicable"
+          name="minimum-requirements"
           value="total-value-minimum"
           text="Valor total do pedido mínimo"
         />
         <Radio
           id="quantity-itens-minimum"
-          name="applicable"
+          name="minimum-requirements"
           value="quantity-itens-minimum"
           text="Quantidade de itens do pedido mínimo"
         />
