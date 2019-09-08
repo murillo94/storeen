@@ -15,6 +15,10 @@ const Form = ({ children }) => (
         div :global(.with-description):not(:last-child) {
           margin-bottom: 15px;
         }
+
+        div :global(button):not(:last-child) {
+          margin-bottom: 20px;
+        }
       `}
     </style>
   </>

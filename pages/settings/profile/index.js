@@ -22,6 +22,31 @@ const ProfileSettings = () => (
         mask="phone"
       />
     </Container>
+    <Container
+      title="Senha"
+      subTitle="Caso seja necessário a alteração da sua senha, clique no botão abaixo."
+      isForm
+    >
+      <Button appearance="minimal" text="Alterar senha" />
+      <Input
+        type="password"
+        labelText="Senha atual"
+        id="actual-password"
+        name="actual-password"
+      />
+      <Input
+        type="password"
+        labelText="Nova senha"
+        id="new-password"
+        name="new-password"
+      />
+      <Input
+        type="password"
+        labelText="Confirmação da nova senha"
+        id="confirm-new-password"
+        name="confirm-new-password"
+      />
+    </Container>
     <Footer>
       <Button text="Salvar" />
     </Footer>
