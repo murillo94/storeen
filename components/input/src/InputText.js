@@ -10,9 +10,9 @@ const Input = ({
   appearance,
   type,
   id,
+  innerRef,
   name,
   value,
-  innerRef,
   placeholder
 }) => {
   const theme = useTheme(appearance);
@@ -22,9 +22,9 @@ const Input = ({
       <input
         type={type}
         id={id}
+        ref={innerRef}
         name={name}
         value={value}
-        ref={innerRef}
         aria-describedby={`${id}-message`}
         aria-labelledby={`${id}-label`}
         placeholder={placeholder}
@@ -79,7 +79,7 @@ const InputText = ({ mask, ...props }) => {
         <MaskedInput
           mask={validMask}
           render={(ref, propsMask) => (
-            <Input innerRef={ref} {...props} {...propsMask} />
+            <Input {...props} {...propsMask} innerRef={ref} />
           )}
         />
       ) : (

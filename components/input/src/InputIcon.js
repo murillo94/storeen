@@ -9,6 +9,7 @@ const InputIcon = ({
   appearance,
   type,
   id,
+  innerRef,
   name,
   value,
   placeholder,
@@ -23,6 +24,7 @@ const InputIcon = ({
         mask={mask}
         type={type}
         id={id}
+        innerRef={innerRef}
         name={name}
         value={value}
         placeholder={placeholder}
