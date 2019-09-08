@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+
 import Router from 'next/router';
 
 import Page from 'layouts/adminContent/page';
@@ -8,6 +10,7 @@ import { Input } from 'components/input';
 import Select from 'components/select';
 import Radio from 'components/radio';
 import Checkbox from 'components/checkbox';
+import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -27,7 +30,18 @@ const promotionTypeOptions = [
 ];
 
 const AddPromotion = () => {
+  const collapsePromotionalCodeRef = useRef(null);
+  const collapseScheduleRef = useRef(null);
+
   const handleBack = () => Router.push('/promotions');
+
+  const handleChangePromotionalCode = () => {
+    collapsePromotionalCodeRef.current.classList.toggle('visible');
+  };
+
+  const handleChangeSchedule = () => {
+    collapseScheduleRef.current.classList.toggle('visible');
+  };
 
   return (
     <Page>
@@ -86,14 +100,34 @@ const AddPromotion = () => {
         />
       </Container>
       <Container title="Código promocional" isForm>
-        <Checkbox
-          id="promotional-code"
-          name="promotional-code"
-          text="Habilitar código promocional?"
-        />
+        <Collapse
+          content={
+            <Checkbox
+              id="promotional-code"
+              name="promotional-code"
+              text="Habilitar código promocional?"
+              onChange={handleChangePromotionalCode}
+            />
+          }
+          ref={collapsePromotionalCodeRef}
+        >
+          todo
+        </Collapse>
       </Container>
-      <Container title="Agendar">
-        <Checkbox id="schedule" name="schedule" text="Agendar promoção?" />
+      <Container title="Agendar" isForm>
+        <Collapse
+          content={
+            <Checkbox
+              id="schedule"
+              name="schedule"
+              text="Agendar promoção?"
+              onChange={handleChangeSchedule}
+            />
+          }
+          ref={collapseScheduleRef}
+        >
+          todo
+        </Collapse>
       </Container>
       <Footer>
         <Button text="Salvar" />
