@@ -1,5 +1,6 @@
 import { Label } from 'components/typography';
 import InputText from './InputText';
+import InputPassword from './InputPassword';
 import InputIcon from './InputIcon';
 
 const Input = ({
@@ -35,16 +36,30 @@ const Input = ({
         onClick={onClick}
       />
     ) : (
-      <InputText
-        appearance={appearance}
-        type={type}
-        id={id}
-        innerRef={innerRef}
-        name={name}
-        value={value}
-        placeholder={placeholder}
-        mask={mask}
-      />
+      <>
+        {type === 'password' ? (
+          <InputPassword
+            appearance={appearance}
+            type={type}
+            id={id}
+            innerRef={innerRef}
+            name={name}
+            value={value}
+            placeholder={placeholder}
+          />
+        ) : (
+          <InputText
+            appearance={appearance}
+            type={type}
+            id={id}
+            innerRef={innerRef}
+            name={name}
+            value={value}
+            placeholder={placeholder}
+            mask={mask}
+          />
+        )}
+      </>
     )}
   </div>
 );

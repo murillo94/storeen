@@ -10,11 +10,9 @@ import Button from 'components/button';
 
 const ProfileSettings = () => {
   const collapsePasswordRef = useRef(null);
-  const actualPasswordRef = useRef(null);
 
   const handleClickVisiblePassword = () => {
     collapsePasswordRef.current.classList.toggle('visible');
-    actualPasswordRef.current.focus();
   };
 
   return (
@@ -58,7 +56,6 @@ const ProfileSettings = () => {
             type="password"
             labelText="Senha atual"
             id="actual-password"
-            innerRef={actualPasswordRef}
             name="actual-password"
           />
           <Input

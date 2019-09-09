@@ -51,13 +51,14 @@ const InputIcon = ({
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
           border-right: none;
-          flex: 1 1 auto;
+          flex: 0.95;
         }
 
         div :global(button) {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-left: none;
+          flex: 0.05;
         }
 
         div :global(input):focus,
