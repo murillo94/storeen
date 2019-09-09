@@ -19,6 +19,13 @@ const Form = ({ children }) => (
         div :global(button):not(:last-child) {
           margin-bottom: 20px;
         }
+
+        div :global(.collapse) > :global(.input-normal),
+        div :global(.collapse) > :global(.input-check),
+        div :global(.collapse) > :global(.with-description),
+        div :global(.collapse) > :global(button) {
+          margin: 0;
+        }
       `}
     </style>
   </>
