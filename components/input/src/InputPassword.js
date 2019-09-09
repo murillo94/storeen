@@ -31,8 +31,7 @@ const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
 
       <style jsx>
         {`
-          :global(.input-normal) :global(div) :global(button),
-          :global(.input-normal) :global(div) :global(button):hover {
+          :global(.input-normal) :global(div) :global(button[type='submit']) {
             background-color: ${mono0};
             border-color: ${theme.borderColor};
           }
