@@ -80,7 +80,32 @@ const AddProduct = () => {
           }
           ref={collapseShippingRef}
         >
-          todo
+          <InputGroup type="inline">
+            <Input
+              labelText="Peso (kg)"
+              id="product-weight"
+              name="product-weight"
+              mask="number"
+            />
+            <Input
+              labelText="Altura (cm)"
+              id="product-height"
+              name="product-height"
+              mask="number"
+            />
+            <Input
+              labelText="Largura (cm)"
+              id="product-width"
+              name="product-width"
+              mask="number"
+            />
+            <Input
+              labelText="Comprimento (cm)"
+              id="product-length"
+              name="product-length"
+              mask="number"
+            />
+          </InputGroup>
         </Collapse>
       </Container>
       <Container title="Estoque" isForm>
@@ -95,7 +120,12 @@ const AddProduct = () => {
           }
           ref={collapseStockRef}
         >
-          todo
+          <Input
+            labelText="Quantidade"
+            id="product-quantity"
+            name="product-quantity"
+            mask="number"
+          />
         </Collapse>
       </Container>
       <Container title="Variações" isForm>

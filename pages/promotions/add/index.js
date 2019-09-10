@@ -103,15 +103,24 @@ const AddPromotion = () => {
         <Collapse
           content={
             <Checkbox
-              id="promotional-code"
-              name="promotional-code"
+              id="code"
+              name="code"
               text="Habilitar código promocional?"
               onChange={handleChangePromotionalCode}
             />
           }
           ref={collapsePromotionalCodeRef}
         >
-          todo
+          <Input
+            labelText="Código da promoção"
+            id="promotional-code"
+            name="promotional-code"
+          />
+          <Checkbox
+            id="promotional-code-unique"
+            name="promotional-code-unique"
+            text="Cupom de uso único por CPF?"
+          />
         </Collapse>
       </Container>
       <Container title="Agendar" isForm>
