@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import InputIcon from './InputIcon';
 
 import useTheme from 'themes/useTheme';
-import { mono0 } from 'themes/colors';
+import { mono0, mono600 } from 'themes/colors';
 
 const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
   const inputPasswordRef = useRef(null);
@@ -41,7 +41,7 @@ const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
             + :global(button)
             :global(svg)
             :global(path) {
-            stroke: ${theme.borderColor};
+            stroke: ${mono600};
             fill: ${theme.hover.borderColor};
           }
 
@@ -50,6 +50,7 @@ const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
             + :global(button)
             :global(svg)
             :global(circle) {
+            stroke: ${mono600};
             fill: ${mono0};
           }
         `}
