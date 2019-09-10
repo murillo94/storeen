@@ -48,7 +48,7 @@ const Select = ({
           .container :global(svg) {
             pointer-events: none;
             position: absolute;
-            right: 5px;
+            right: 6px;
           }
 
           select {
