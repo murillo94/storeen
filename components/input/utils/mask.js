@@ -46,6 +46,13 @@ export const MASKS = {
     allowDecimal: true,
     requireDecimal: false
   }),
+  number: createNumberMask({
+    prefix: '',
+    thousandsSeparatorSymbol: '.',
+    decimalSymbol: ',',
+    allowDecimal: true,
+    requireDecimal: false
+  }),
   phone: [
     '(',
     /\d/,
