@@ -1,6 +1,7 @@
 import { Label, Paragraph } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
+import { radius400 } from 'themes/radius';
 
 const labelStyle = {
   display: 'inline-flex'
@@ -71,7 +72,7 @@ const Checkbox = ({
 
           span::before {
             content: '';
-            border-radius: 4px;
+            border-radius: ${radius400};
             border: 1px solid ${theme.borderColor};
             width: 18px;
             height: 18px;

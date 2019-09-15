@@ -7,6 +7,7 @@ import Header from 'components/header';
 import Button from 'components/button';
 
 import { mono0, mono200 } from 'themes/colors';
+import { radius800 } from 'themes/radius';
 
 const buttonStyle = {
   border: 'none'
@@ -157,6 +158,10 @@ const Content = ({ children, padding }) => {
 
             nav {
               width: 125px;
+            }
+
+            nav :global(ul) :global(li) {
+              border-radius: ${radius800};
             }
 
             nav :global(ul) :global(li) :global(a) {

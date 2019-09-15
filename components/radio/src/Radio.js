@@ -1,6 +1,7 @@
 import { Label, Paragraph } from 'components/typography';
 
 import useTheme from 'themes/useTheme';
+import { radius500 } from 'themes/radius';
 
 const labelStyle = {
   display: 'inline-flex'
@@ -85,7 +86,7 @@ const Radio = ({
           span::after {
             content: '';
             border: 5px solid ${theme.focus.borderColor};
-            border-radius: 5px;
+            border-radius: ${radius500};
             position: absolute;
             top: 5px;
             left: 4px;
