@@ -14,12 +14,15 @@ const buttonStyle = {
 
 const Logo = () => (
   <>
-    <div>
+    <div className="desktop-logo">
       <Image
         src="/static/images/logo-all-horizontal.svg"
         width="120px"
         height="100%"
       />
+    </div>
+    <div className="mobile-logo">
+      <Image src="/static/images/logo-icon.svg" width="35px" height="100%" />
     </div>
 
     <style jsx>
@@ -27,6 +30,21 @@ const Logo = () => (
         div {
           text-align: left;
           margin: 0 20px 40px;
+        }
+
+        .mobile-logo {
+          text-align: center;
+          display: none;
+        }
+
+        @media (max-width: 1124px) {
+          .desktop-logo {
+            display: none;
+          }
+
+          .mobile-logo {
+            display: block;
+          }
         }
       `}
     </style>
@@ -127,10 +145,26 @@ const Content = ({ children, padding }) => {
             width: 800px;
           }
 
-          @media (max-width: 991px) {
+          @media (max-width: 1124px) {
             .main-children {
               width: 100%;
               margin: 0 auto;
+            }
+
+            .main-container {
+              padding: 40px 50px;
+            }
+
+            nav {
+              width: 125px;
+            }
+
+            nav :global(ul) :global(li) :global(a) {
+              flex-direction: column;
+            }
+
+            nav :global(ul) :global(li) :global(a) :global(span) {
+              margin: 10px 0 0 0 !important;
             }
           }
         `}
