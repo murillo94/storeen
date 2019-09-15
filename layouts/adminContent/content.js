@@ -124,8 +124,7 @@ const Content = ({ children, padding }) => {
 
           .main-children {
             margin: 20px auto 0;
-            max-width: 800px;
-            min-width: 800px;
+            width: 800px;
           }
 
           @media (max-width: 991px) {
