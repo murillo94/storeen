@@ -24,7 +24,7 @@ const Logo = () => (
       />
     </div>
     <div className="mobile-logo">
-      <Image src="/static/images/logo-icon.svg" width="35px" height="100%" />
+      <Image src="/static/images/logo-icon.svg" width="40%" height="100%" />
     </div>
 
     <style jsx>
@@ -188,6 +188,7 @@ const Content = ({ children, padding }) => {
 
             nav :global(ul) :global(li) {
               border-radius: ${radius800};
+              margin: 10px;
             }
 
             nav :global(ul) :global(li) :global(a) {
@@ -214,11 +215,13 @@ const Content = ({ children, padding }) => {
             }
 
             nav {
+              height: 100%;
               position: absolute;
               transform: translate3d(-125px, 0, 0);
               transition: transform 0.2s;
               will-change: transform;
               z-index: 2;
+              -webkit-overflow-scrolling: touch;
             }
 
             .nav-button {
