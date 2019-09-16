@@ -5,13 +5,13 @@ const TableCell = ({ children, flexBasis = '' }) => (
     <style jsx>
       {`
         div {
+          padding-right: 20px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
           display: flex;
           align-items: center;
           flex: 1 1 0%;
-          padding-right: 20px;
         }
 
         .cellWidth {
