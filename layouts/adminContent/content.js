@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
+import React, { useState, useRef } from 'react';
 
 import Image from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
@@ -39,12 +40,12 @@ const Logo = () => (
         }
 
         @media (max-width: 1124px) {
-          .desktop-logo {
-            display: none;
-          }
-
           .mobile-logo {
             display: block;
+          }
+
+          .desktop-logo {
+            display: none;
           }
         }
       `}
@@ -60,12 +61,23 @@ const UserInfo = ({ id, hidden }) => (
 );
 
 const Content = ({ children, padding }) => {
+  const menuRef = useRef(null);
+  const menuBackgroundRef = useRef(null);
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
+
+  const handleClickMenu = () => {
+    menuRef.current.classList.toggle('visible');
+    menuBackgroundRef.current.classList.toggle('nav-background');
+  };
+
+  const handleClickUserInfo = () => {
+    setVisibleUserInfo(!visibleUserInfo);
+  };
 
   return (
     <>
       <div className="container">
-        <nav>
+        <nav ref={menuRef}>
           <div>
             <Logo />
             <TabList>
@@ -83,6 +95,14 @@ const Content = ({ children, padding }) => {
         </nav>
         <main>
           <Header>
+            <div className="nav-button">
+              <Button
+                appearance="minimal"
+                icon="menu"
+                customStyle={buttonStyle}
+                onClick={handleClickMenu}
+              />
+            </div>
             <Button
               appearance="minimal"
               icon="external-link"
@@ -93,7 +113,7 @@ const Content = ({ children, padding }) => {
               id="user-info"
               visible={visibleUserInfo}
               text="Minha conta"
-              onClick={() => setVisibleUserInfo(!visibleUserInfo)}
+              onClick={handleClickUserInfo}
             >
               <UserInfo id="user-info" hidden={!visibleUserInfo} />
             </Dropdown>
@@ -102,6 +122,7 @@ const Content = ({ children, padding }) => {
             <div className="main-children">{children}</div>
           </div>
         </main>
+        <div ref={menuBackgroundRef} onClick={handleClickMenu} />
       </div>
 
       <style jsx>
@@ -134,6 +155,20 @@ const Content = ({ children, padding }) => {
             flex: 1;
           }
 
+          .nav-background {
+            background-color: rgba(51, 51, 51, 0.3);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: background-color 0.2s;
+            z-index: 1;
+            display: none;
+          }
+
+          .nav-button {
+            display: none;
+          }
+
           .main-container {
             padding: ${padding};
             display: flex;
@@ -147,15 +182,6 @@ const Content = ({ children, padding }) => {
           }
 
           @media (max-width: 1124px) {
-            .main-children {
-              width: 100%;
-              margin: 0 auto;
-            }
-
-            .main-container {
-              padding: 40px 50px;
-            }
-
             nav {
               width: 125px;
             }
@@ -170,6 +196,37 @@ const Content = ({ children, padding }) => {
 
             nav :global(ul) :global(li) :global(a) :global(span) {
               margin: 10px 0 0 0 !important;
+            }
+
+            .main-container {
+              padding: 40px 50px;
+            }
+
+            .main-children {
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          @media (max-width: 746px) {
+            .visible {
+              transform: translate3d(0, 0, 0);
+            }
+
+            nav {
+              position: absolute;
+              transform: translate3d(-125px, 0, 0);
+              transition: transform 0.2s;
+              will-change: transform;
+              z-index: 2;
+            }
+
+            .nav-button {
+              display: block;
+            }
+
+            .nav-background {
+              display: block;
             }
           }
         `}
