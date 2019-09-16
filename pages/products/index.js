@@ -42,6 +42,10 @@ const items = [
 const Filter = () => {
   const [visibleFilter, setVisibleFilter] = useState(false);
 
+  const handleClickFilter = () => {
+    setVisibleFilter(!visibleFilter);
+  };
+
   return (
     <Dropdown
       id="filter"
@@ -50,7 +54,7 @@ const Filter = () => {
       appearance="minimal"
       icon="filter"
       text="Filtrar"
-      onClick={() => setVisibleFilter(!visibleFilter)}
+      onClick={handleClickFilter}
     >
       <DropdownGroup id="filter" hidden={!visibleFilter}>
         <DropdownItem>teste1</DropdownItem>
