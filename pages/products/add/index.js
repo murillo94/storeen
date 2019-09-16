@@ -52,8 +52,8 @@ const AddProduct = () => {
         />
       </Container>
       <Container title="Imagens">todo</Container>
-      <Container title="Preços">
-        <InputGroup type="inline">
+      <Container title="Preços" isForm>
+        <InputGroup type="row">
           <Input
             labelText="Preço"
             id="product-price"
@@ -80,7 +80,7 @@ const AddProduct = () => {
           }
           ref={collapseShippingRef}
         >
-          <InputGroup type="inline">
+          <InputGroup type="row">
             <Input
               labelText="Peso (kg)"
               id="product-weight"
