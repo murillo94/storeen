@@ -21,7 +21,6 @@ const TableHead = ({
         <div className="header-options">
           {hasSearch && (
             <Input
-              type="search"
               id="search"
               name="search"
               icon="search"
