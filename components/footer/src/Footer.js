@@ -1,4 +1,4 @@
-const Footer = ({ children, align = 'right' }) => (
+const Footer = ({ children, align = 'left' }) => (
   <>
     <footer className={align}>{children}</footer>
 
