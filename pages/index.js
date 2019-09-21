@@ -4,8 +4,8 @@ import Page from 'layouts/login/page';
 
 import Image from 'components/image';
 import { Heading, Paragraph, Anchor } from 'components/typography';
-import Form from 'components/form';
-import { Input } from 'components/input';
+import { Form } from 'components/form';
+import Input from 'components/input';
 import Button from 'components/button';
 
 const imageStyle = {

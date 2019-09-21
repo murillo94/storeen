@@ -1,4 +1,4 @@
-import Form from 'components/form';
+import { Form } from 'components/form';
 import { Heading, Paragraph } from 'components/typography';
 
 import { mono0 } from 'themes/colors';

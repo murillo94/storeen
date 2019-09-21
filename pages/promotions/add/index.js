@@ -6,7 +6,7 @@ import Page from 'layouts/adminContent/page';
 
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
-import { Input } from 'components/input';
+import Input from 'components/input';
 import Select from 'components/select';
 import Radio from 'components/radio';
 import Checkbox from 'components/checkbox';

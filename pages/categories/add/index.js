@@ -4,7 +4,7 @@ import Page from 'layouts/adminContent/page';
 
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
-import { Input } from 'components/input';
+import Input from 'components/input';
 import Radio from 'components/radio';
 import Footer from 'components/footer';
 import Button from 'components/button';

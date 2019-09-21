@@ -6,7 +6,8 @@ import Page from 'layouts/adminContent/page';
 
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
-import { InputGroup, Input } from 'components/input';
+import { FormGroup } from 'components/form';
+import Input from 'components/input';
 import Checkbox from 'components/checkbox';
 import Collapse from 'components/collapse';
 import Footer from 'components/footer';
@@ -53,7 +54,7 @@ const AddProduct = () => {
       </Container>
       <Container title="Imagens">todo</Container>
       <Container title="Preços" isForm>
-        <InputGroup type="row">
+        <FormGroup>
           <Input
             labelText="Preço"
             id="product-price"
@@ -66,7 +67,7 @@ const AddProduct = () => {
             name="product-compare-price"
             mask="money"
           />
-        </InputGroup>
+        </FormGroup>
       </Container>
       <Container title="Fretes" isForm>
         <Collapse
@@ -80,7 +81,7 @@ const AddProduct = () => {
           }
           ref={collapseShippingRef}
         >
-          <InputGroup type="row">
+          <FormGroup>
             <Input
               labelText="Peso (kg)"
               id="product-weight"
@@ -105,7 +106,7 @@ const AddProduct = () => {
               name="product-length"
               mask="number"
             />
-          </InputGroup>
+          </FormGroup>
         </Collapse>
       </Container>
       <Container title="Estoque" isForm>

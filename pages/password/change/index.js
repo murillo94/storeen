@@ -2,7 +2,7 @@ import Page from 'layouts/login/page';
 
 import Image from 'components/image';
 import { Heading } from 'components/typography';
-import { Input } from 'components/input';
+import Input from 'components/input';
 import Button from 'components/button';
 
 const buttonStyle = {

@@ -1,4 +1,5 @@
-import { Input } from 'components/input';
+import Input from 'components/input';
+import { FormGroup } from 'components/form';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
 import TextTableCell from './TextTableCell';
@@ -27,7 +28,7 @@ const TableHead = ({
               placeholder={`Buscar ${placeholderSearchSuffix}`}
             />
           )}
-          <div>{children}</div>
+          <FormGroup>{children}</FormGroup>
         </div>
       )}
       <TableRow isBody={false} hover={false}>

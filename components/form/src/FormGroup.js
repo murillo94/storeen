@@ -1,4 +1,4 @@
-const InputGroup = ({ children, type = 'column' }) => (
+const FormGroup = ({ children, type = 'row' }) => (
   <>
     <div>{children}</div>
 
@@ -25,6 +25,10 @@ const InputGroup = ({ children, type = 'column' }) => (
             margin-bottom: 0px !important;
           }
 
+          div :global(div) + :global(div) {
+            margin-left: 10px;
+          }
+
           div :global(.input-form) + :global(.input-form) {
             margin-left: 20px;
           }
@@ -34,4 +38,4 @@ const InputGroup = ({ children, type = 'column' }) => (
   </>
 );
 
-export default InputGroup;
+export default FormGroup;
