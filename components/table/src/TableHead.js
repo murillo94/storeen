@@ -59,6 +59,21 @@ const TableHead = ({
           background-color: ${mono75};
           border-color: ${mono75};
         }
+
+        @media (max-width: 746px) {
+          .header-options {
+            flex-direction: column;
+          }
+
+          .header-options :global(input),
+          .header-options :global(button[type='button']) {
+            width: 100% !important;
+          }
+
+          .header-options :global(.form-group) {
+            margin-top: 20px;
+          }
+        }
       `}
     </style>
   </>

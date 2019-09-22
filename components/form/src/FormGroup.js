@@ -1,6 +1,6 @@
 const FormGroup = ({ children, type = 'row' }) => (
   <>
-    <div>{children}</div>
+    <div className="form-group">{children}</div>
 
     <style jsx>
       {`
