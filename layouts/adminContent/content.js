@@ -231,6 +231,10 @@ const Content = ({ children, padding }) => {
             .nav-background {
               display: block;
             }
+
+            .main-container {
+              padding: 40px 30px;
+            }
           }
         `}
       </style>
