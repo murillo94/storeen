@@ -5,7 +5,7 @@ import { mono75 } from 'themes/colors';
 
 const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
   <>
-    <div className="header-options">
+    <div>
       {hasSearch && (
         <Input
           id="search"
@@ -27,11 +27,10 @@ const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
         }
 
         div :global(input) {
-          background-color: ${mono75};
-          border-color: ${mono75};
           width: 300px;
         }
 
+        div :global(input),
         div :global(button[type='submit']) {
           background-color: ${mono75};
           border-color: ${mono75};
