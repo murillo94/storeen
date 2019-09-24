@@ -2,6 +2,7 @@ export { default as Table } from './src/Table';
 
 // Table head
 
+export { default as TableOptions } from './src/TableOptions';
 export { default as TableHead } from './src/TableHead';
 
 // Table body and contents
