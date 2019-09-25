@@ -130,8 +130,6 @@ const Content = ({ children, padding }) => {
           .container {
             width: 100%;
             min-height: 100%;
-            display: flex;
-            flex-grow: 1;
           }
 
           nav {
@@ -157,9 +155,11 @@ const Content = ({ children, padding }) => {
 
           .nav-background {
             background-color: rgba(51, 51, 51, 0.3);
-            height: 100%;
-            width: 100%;
             position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             transition: background-color 0.2s;
             z-index: 1;
             display: none;
@@ -234,6 +234,13 @@ const Content = ({ children, padding }) => {
 
             .main-container {
               padding: 40px 30px;
+            }
+          }
+
+          @media (min-width: 746px) {
+            .container {
+              display: flex;
+              flex-grow: 1;
             }
           }
         `}

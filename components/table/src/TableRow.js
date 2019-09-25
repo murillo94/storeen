@@ -2,15 +2,14 @@ import { mono0, mono75, mono100 } from 'themes/colors';
 
 const TableRow = ({ children, isBody = true, hover = true }) => (
   <>
-    <div>{children}</div>
+    <tr>{children}</tr>
 
     <style jsx>
       {`
-        div {
+        tr {
           background-color: ${mono0};
           border-bottom: 1px solid ${mono100};
           height: 64px;
-          display: flex;
         }
 
         :last-child {

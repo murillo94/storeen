@@ -11,16 +11,36 @@ const Table = ({
   placeholderSearchSuffix = ''
 }) => {
   return (
-    <Container>
-      <TableOptions
-        hasSearch={hasSearch}
-        placeholderSearchSuffix={placeholderSearchSuffix}
-      >
-        {optionsHeader}
-      </TableOptions>
-      <TableHead headers={headers} />
-      <TableBody>{children}</TableBody>
-    </Container>
+    <>
+      <Container>
+        <TableOptions
+          hasSearch={hasSearch}
+          placeholderSearchSuffix={placeholderSearchSuffix}
+        >
+          {optionsHeader}
+        </TableOptions>
+        <div>
+          <table>
+            <TableHead headers={headers} />
+            <TableBody>{children}</TableBody>
+          </table>
+        </div>
+      </Container>
+
+      <style jsx>
+        {`
+          div {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+          }
+
+          table {
+            border-collapse: collapse;
+          }
+        `}
+      </style>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import TableRow from './TableRow';
-import TableCell from './TableCell';
+import TableHeadCell from './TableHeadCell';
 import TextTableCell from './TextTableCell';
 
 const textHeaderStyle = {
@@ -7,13 +7,15 @@ const textHeaderStyle = {
 };
 
 const TableHead = ({ headers }) => (
-  <TableRow isBody={false} hover={false}>
-    {headers.map((title, index) => (
-      <TableCell key={title} flexBasis={index === 0 && '320px'}>
-        <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
-      </TableCell>
-    ))}
-  </TableRow>
+  <thead>
+    <TableRow isBody={false} hover={false}>
+      {headers.map((title, index) => (
+        <TableHeadCell key={title} width={index === 0 ? '320px' : ''}>
+          <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
+        </TableHeadCell>
+      ))}
+    </TableRow>
+  </thead>
 );
 
 export default TableHead;

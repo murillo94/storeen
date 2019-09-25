@@ -6,7 +6,12 @@ import Page from 'layouts/adminContent/page';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';
-import { Table, TableRow, TableCell, TextTableCell } from 'components/table';
+import {
+  Table,
+  TableRow,
+  TableBodyCell,
+  TextTableCell
+} from 'components/table';
 import Icon from 'components/icon';
 
 import { positive700, negative700 } from 'themes/colors';
@@ -80,23 +85,23 @@ const Products = () => {
       >
         {items.map(item => (
           <TableRow key={item.name}>
-            <TableCell flexBasis="320px">
+            <TableBodyCell width="320px">
               <TextTableCell text={item.name} />
-            </TableCell>
-            <TableCell>
+            </TableBodyCell>
+            <TableBodyCell>
               <TextTableCell text={item.price} />
-            </TableCell>
-            <TableCell>
+            </TableBodyCell>
+            <TableBodyCell>
               <TextTableCell text={item.stock} />
-            </TableCell>
-            <TableCell>
+            </TableBodyCell>
+            <TableBodyCell>
               <TextTableCell>
                 <Icon
                   name="eye"
                   color={item.visible ? positive700 : negative700}
                 />
               </TextTableCell>
-            </TableCell>
+            </TableBodyCell>
           </TableRow>
         ))}
       </Table>
