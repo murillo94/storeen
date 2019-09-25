@@ -9,8 +9,8 @@ const textHeaderStyle = {
 const TableHead = ({ headers }) => (
   <thead>
     <TableRow isBody={false} hover={false}>
-      {headers.map((title, index) => (
-        <TableHeadCell key={title} width={index === 0 ? '320px' : ''}>
+      {headers.map(title => (
+        <TableHeadCell key={title}>
           <TextTableCell text={title} textCustomStyle={textHeaderStyle} />
         </TableHeadCell>
       ))}

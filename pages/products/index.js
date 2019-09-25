@@ -85,7 +85,7 @@ const Products = () => {
       >
         {items.map(item => (
           <TableRow key={item.name}>
-            <TableBodyCell width="320px">
+            <TableBodyCell>
               <TextTableCell text={item.name} />
             </TableBodyCell>
             <TableBodyCell>

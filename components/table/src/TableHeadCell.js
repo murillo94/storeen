@@ -1,6 +1,4 @@
-const WIDTH = '145px';
-
-const TableHeadCell = ({ children, width = WIDTH }) => (
+const TableHeadCell = ({ children }) => (
   <>
     <th>{children}</th>
 
@@ -8,12 +6,20 @@ const TableHeadCell = ({ children, width = WIDTH }) => (
       {`
         th {
           padding-right: 20px;
-          width: ${width || WIDTH};
+          width: 145px;
+        }
+
+        th:first-child {
+          width: 320px;
         }
 
         @media (max-width: 746px) {
           th {
-            min-width: ${width || WIDTH};
+            min-width: 145px;
+          }
+
+          th:first-child {
+            min-width: 320px;
           }
         }
       `}

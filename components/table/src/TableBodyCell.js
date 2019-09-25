@@ -1,6 +1,4 @@
-const WIDTH = '145px';
-
-const TableBodyCell = ({ children, width = WIDTH }) => (
+const TableBodyCell = ({ children }) => (
   <>
     <td>{children}</td>
 
@@ -8,12 +6,20 @@ const TableBodyCell = ({ children, width = WIDTH }) => (
       {`
         td {
           padding-right: 20px;
-          width: ${width || WIDTH};
+          width: 145px;
+        }
+
+        td:first-child {
+          width: 320px;
         }
 
         @media (max-width: 746px) {
           td {
-            min-width: ${width || WIDTH};
+            min-width: 145px;
+          }
+
+          td:first-child {
+            min-width: 320px;
           }
         }
       `}

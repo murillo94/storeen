@@ -4,7 +4,12 @@ import Page from 'layouts/adminContent/page';
 
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';
-import { Table, TableRow, TableCell, TextTableCell } from 'components/table';
+import {
+  Table,
+  TableRow,
+  TableBodyCell,
+  TextTableCell
+} from 'components/table';
 
 const headers = ['Nome', 'Desconto', 'Data de expiração'];
 const items = [
@@ -41,17 +46,17 @@ const Promotions = () => {
       <Table headers={headers} hasSearch placeholderSearchSuffix="promoções">
         {items.map(item => (
           <TableRow key={item.name}>
-            <TableCell flexBasis="320px">
+            <TableBodyCell>
               <TextTableCell text={item.name} />
-            </TableCell>
-            <TableCell>
+            </TableBodyCell>
+            <TableBodyCell>
               <TextTableCell text={item.discount} />
-            </TableCell>
-            <TableCell>
+            </TableBodyCell>
+            <TableBodyCell>
               <TextTableCell
                 text={item.date_expire ? item.date_expire : 'Não expira'}
               />
-            </TableCell>
+            </TableBodyCell>
           </TableRow>
         ))}
       </Table>
