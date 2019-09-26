@@ -18,20 +18,24 @@ const Logo = () => (
   <>
     <div className="desktop-logo">
       <Image
-        src="/static/images/logo-all-horizontal.svg"
+        src={require('images/logo-all-horizontal.svg')}
         width="120px"
         height="100%"
       />
     </div>
     <div className="mobile-logo">
-      <Image src="/static/images/logo-icon.svg" width="40%" height="100%" />
+      <Image src={require('images/logo-icon.svg')} width="40%" height="100%" />
     </div>
 
     <style jsx>
       {`
         div {
-          text-align: left;
           margin: 0 20px 40px;
+        }
+
+        .desktop-logo {
+          text-align: left;
+          display: block;
         }
 
         .mobile-logo {

@@ -28,7 +28,7 @@ const buttonStyle = {
 const Logo = () => (
   <div>
     <Image
-      src="/static/images/logo-icon.svg"
+      src={require('images/logo-icon.svg')}
       width="57px"
       height="57px"
       customStyle={imageStyle}

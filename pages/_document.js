@@ -18,7 +18,11 @@ class StoreenDoc extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
-          <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            href={require('images/favicon.png')}
+          />
           <style
             dangerouslySetInnerHTML={{
               __html: `
