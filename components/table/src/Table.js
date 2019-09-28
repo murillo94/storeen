@@ -37,6 +37,7 @@ const Table = ({
 
           table {
             border-collapse: collapse;
+            width: 100%;
           }
         `}
       </style>
