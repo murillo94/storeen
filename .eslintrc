@@ -6,7 +6,9 @@
     "prettier"
   ],
   "plugins": ["react", "jsx-a11y"],
+  "parser": "babel-eslint",
   "parserOptions": {
+    "allowImportExportEverywhere": true,
     "ecmaFeatures": {
       "ecmaVersion": 6,
       "sourceType": "module",

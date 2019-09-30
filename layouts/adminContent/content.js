@@ -1,8 +1,8 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 import React, { useState, useRef } from 'react';
 
 import Image from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
+import Overlay from 'components/overlay';
 import { TabList, Tab } from 'components/tab';
 import Header from 'components/header';
 import Button from 'components/button';
@@ -66,12 +66,12 @@ const UserInfo = ({ id, hidden }) => (
 
 const Content = ({ children, padding }) => {
   const menuRef = useRef(null);
-  const menuBackgroundRef = useRef(null);
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
+  const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   const handleClickMenu = () => {
     menuRef.current.classList.toggle('visible');
-    menuBackgroundRef.current.classList.toggle('nav-background');
+    setVisibleSidebar(!visibleSidebar);
   };
 
   const handleClickUserInfo = () => {
@@ -126,7 +126,11 @@ const Content = ({ children, padding }) => {
             <div className="main-children">{children}</div>
           </div>
         </main>
-        <div ref={menuBackgroundRef} onClick={handleClickMenu} />
+        <Overlay
+          id="sidebar"
+          visible={visibleSidebar}
+          onClick={handleClickMenu}
+        />
       </div>
 
       <style jsx>
@@ -155,18 +159,6 @@ const Content = ({ children, padding }) => {
 
           main {
             flex: 1;
-          }
-
-          .nav-background {
-            background-color: rgba(51, 51, 51, 0.3);
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transition: background-color 0.2s;
-            z-index: 1;
-            display: none;
           }
 
           .nav-button {
@@ -229,10 +221,6 @@ const Content = ({ children, padding }) => {
             }
 
             .nav-button {
-              display: block;
-            }
-
-            .nav-background {
               display: block;
             }
 

@@ -16,9 +16,9 @@ const addRootElement = rootElem => {
 
 const usePortal = id => {
   const rootElemRef = useRef(null);
-  const existingParent = document.querySelector(`#${id}`);
 
   useEffect(() => {
+    const existingParent = document.querySelector(`#${id}`);
     const parentElem = existingParent || createRootElement(id);
 
     if (!existingParent) {
@@ -44,7 +44,7 @@ const usePortal = id => {
     return rootElemRef.current;
   };
 
-  return existingParent === undefined ? null : getRootElem();
+  return getRootElem();
 };
 
 export default usePortal;
