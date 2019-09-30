@@ -129,6 +129,7 @@ const Content = ({ children, padding }) => {
         <Overlay
           id="sidebar"
           visible={visibleSidebar}
+          removeBodyScroll
           onClick={handleClickMenu}
         />
       </div>
@@ -212,7 +213,7 @@ const Content = ({ children, padding }) => {
 
             nav {
               height: 100%;
-              position: absolute;
+              position: fixed;
               transform: translate3d(-125px, 0, 0);
               will-change: transform;
               z-index: 2;
