@@ -214,7 +214,6 @@ const Content = ({ children, padding }) => {
               height: 100%;
               position: absolute;
               transform: translate3d(-125px, 0, 0);
-              transition: transform 0.2s;
               will-change: transform;
               z-index: 2;
               -webkit-overflow-scrolling: touch;
