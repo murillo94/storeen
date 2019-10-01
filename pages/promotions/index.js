@@ -1,6 +1,6 @@
 import Router from 'next/router';
 
-import Page from 'layouts/adminContent/page';
+import Page from 'layouts/adminContent';
 
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';

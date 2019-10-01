@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Page from 'layouts/adminSettingsContent/page';
+import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
 import Input from 'components/input';

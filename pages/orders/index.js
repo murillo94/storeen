@@ -1,4 +1,4 @@
-import Page from 'layouts/adminContent/page';
+import Page from 'layouts/adminContent';
 
 import SubHeader from 'components/subHeader';
 

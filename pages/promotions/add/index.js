@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import Router from 'next/router';
 
-import Page from 'layouts/adminContent/page';
+import Page from 'layouts/adminContent';
 
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';

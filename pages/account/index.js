@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import Page from 'layouts/adminSettingsContent/page';
+import Page from 'layouts/adminSettingsContent/profile';
 
 import Container from 'components/container';
 import Input from 'components/input';
@@ -8,7 +8,7 @@ import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
-const ProfileSettings = () => {
+const AccountSettings = () => {
   const collapsePasswordRef = useRef(null);
 
   const handleClickVisiblePassword = () => {
@@ -79,4 +79,4 @@ const ProfileSettings = () => {
   );
 };
 
-export default ProfileSettings;
+export default AccountSettings;

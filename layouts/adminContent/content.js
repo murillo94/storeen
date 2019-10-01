@@ -59,7 +59,7 @@ const Logo = () => (
 
 const UserInfo = ({ id, hidden }) => (
   <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem href="/settings/profile">Meus dados</DropdownItem>
+    <DropdownItem href="/account">Meus dados</DropdownItem>
     <DropdownItem href="/">Sair</DropdownItem>
   </DropdownGroup>
 );
@@ -94,7 +94,7 @@ const Content = ({ children, padding }) => {
             </TabList>
           </div>
           <TabList>
-            <Tab text="Configurações" icon="settings" href="/settings" />
+            <Tab text="Configurações" icon="settings" href="/settings/store" />
           </TabList>
         </nav>
         <main>

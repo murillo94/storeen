@@ -1,4 +1,4 @@
-import Page from 'layouts/login/page';
+import Page from 'layouts/login';
 
 import Image from 'components/image';
 import { Heading } from 'components/typography';

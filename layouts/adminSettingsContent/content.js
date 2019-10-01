@@ -2,12 +2,12 @@ import { default as AdminPage } from 'layouts/adminContent/content';
 
 import { TabList, Tab } from 'components/tab';
 
-const Content = ({ children, sidebar, padding, customStyle }) => (
+const Content = ({ children, options, padding, customStyle }) => (
   <>
     <AdminPage padding={padding}>
       <div className="sidebar">
         <TabList customStyle={customStyle}>
-          {sidebar.map(item => (
+          {options.map(item => (
             <Tab
               key={item.name}
               text={item.name}

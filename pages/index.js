@@ -1,6 +1,6 @@
 import Router from 'next/router';
 
-import Page from 'layouts/login/page';
+import Page from 'layouts/login';
 
 import Image from 'components/image';
 import { Heading, Paragraph, Anchor } from 'components/typography';
