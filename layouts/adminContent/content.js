@@ -94,7 +94,7 @@ const Content = ({ children, padding }) => {
             </TabList>
           </div>
           <TabList>
-            <Tab text="Configurações" icon="settings" href="/settings/store" />
+            <Tab text="Configurações" icon="settings" href="/settings" />
           </TabList>
         </nav>
         <main>

@@ -1,0 +1,82 @@
+import React, { useRef } from 'react';
+
+import Page from 'layouts/adminSettingsContent/account';
+
+import Container from 'components/container';
+import Input from 'components/input';
+import Collapse from 'components/collapse';
+import Footer from 'components/footer';
+import Button from 'components/button';
+
+const AccountSettings = () => {
+  const collapsePasswordRef = useRef(null);
+
+  const handleClickVisiblePassword = () => {
+    collapsePasswordRef.current.classList.toggle('visible');
+  };
+
+  return (
+    <Page>
+      <Container
+        title="Dados pessoais"
+        subTitle="Iremos usar essas informações para entrar em contato com você."
+        isForm
+      >
+        <Input labelText="Nome" id="user-name" name="user-name" />
+        <Input
+          type="email"
+          labelText="Email"
+          id="user-email"
+          name="user-email"
+        />
+        <Input
+          type="tel"
+          labelText="Telefone"
+          id="user-phone"
+          name="user-phone"
+          mask="phone"
+        />
+      </Container>
+      <Container
+        title="Senha"
+        subTitle="Caso seja necessário a alteração da sua senha, clique no botão abaixo."
+        isForm
+      >
+        <Collapse
+          content={
+            <Button
+              appearance="minimal"
+              text="Alterar senha"
+              onClick={handleClickVisiblePassword}
+            />
+          }
+          ref={collapsePasswordRef}
+        >
+          <Input
+            type="password"
+            labelText="Senha atual"
+            id="actual-password"
+            name="actual-password"
+          />
+          <Input
+            type="password"
+            labelText="Nova senha"
+            id="new-password"
+            name="new-password"
+          />
+          <Input
+            type="password"
+            labelText="Confirmação da nova senha"
+            id="confirm-new-password"
+            name="confirm-new-password"
+          />
+        </Collapse>
+      </Container>
+      <Footer>
+        <Button text="Salvar" />
+      </Footer>
+    </Page>
+  );
+};
+
+export default AccountSettings;

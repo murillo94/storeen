@@ -4,7 +4,17 @@ const options = [
   {
     name: 'Meus dados',
     icon: 'user',
-    href: '/account'
+    href: '/account/profile'
+  },
+  {
+    name: 'Planos',
+    icon: 'award',
+    href: '/account/plans'
+  },
+  {
+    name: 'Histórico',
+    icon: 'credit-card',
+    href: '/account/payments'
   }
 ];
 
