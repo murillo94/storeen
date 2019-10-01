@@ -1,20 +1,12 @@
 import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';
-import Footer from 'components/footer';
-import Button from 'components/button';
 
 const PaymentsAccountSettings = () => (
   <Page>
-    <Container
-      title="Histórico de pagamentos"
-      subTitle="Selecione um meio de pagamento para receber os pagamentos."
-    >
-      todo
+    <Container title="Histórico de pagamentos">
+      todo conteúdo e subtítulo
     </Container>
-    <Footer>
-      <Button text="Salvar" />
-    </Footer>
   </Page>
 );
 
