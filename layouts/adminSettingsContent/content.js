@@ -36,8 +36,11 @@ const Content = ({ children, options, padding, customStyle }) => (
           }
 
           .sidebar :global(ul) {
-            margin: 0 0 15px !important;
+            margin: 0 0 20px !important;
             width: 100% !important;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
             display: flex;
           }
 
