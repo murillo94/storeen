@@ -29,6 +29,22 @@ const Content = ({ children, options, padding, customStyle }) => (
         .children {
           width: 100%;
         }
+
+        @media (max-width: 746px) {
+          .sidebar {
+            flex-direction: column;
+          }
+
+          .sidebar :global(ul) {
+            margin: 0 0 15px !important;
+            width: 100% !important;
+            display: flex;
+          }
+
+          .sidebar :global(li) {
+            margin-left: 0 !important;
+          }
+        }
       `}
     </style>
   </>
