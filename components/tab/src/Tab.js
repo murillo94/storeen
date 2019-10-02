@@ -52,6 +52,7 @@ const Tab = withRouter(
               color: inherit;
               border-radius: ${radius600};
               text-align: left;
+              white-space: nowrap;
               margin: 6px 10px;
               cursor: pointer;
               display: flex;
