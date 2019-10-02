@@ -149,6 +149,8 @@ const Content = ({ children, padding }) => {
             width: 180px;
             height: 100vh;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
             position: sticky;
             top: 0;
             left: 0;
@@ -217,7 +219,6 @@ const Content = ({ children, padding }) => {
               transform: translate3d(-125px, 0, 0);
               will-change: transform;
               z-index: 2;
-              -webkit-overflow-scrolling: touch;
             }
 
             .nav-button {
