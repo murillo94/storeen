@@ -1,4 +1,4 @@
-import { default as AdminPage } from 'layouts/adminContent/content';
+import AdminPage from 'layouts/adminContent';
 
 import { TabList, Tab } from 'components/tab';
 
