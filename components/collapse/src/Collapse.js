@@ -1,4 +1,4 @@
-import React, { useRef, cloneElement } from 'react';
+import { useRef, cloneElement } from 'react';
 
 const Collapse = ({ children, content, action = 'onClick' }) => {
   const collapseRef = useRef(null);
