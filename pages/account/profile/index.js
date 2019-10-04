@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';

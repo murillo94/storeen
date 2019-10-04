@@ -1,7 +1,7 @@
-import React from 'react';
+import { Component } from 'react';
 import Router from 'next/router';
 
-export default class extends React.Component {
+export default class extends Component {
   static async getInitialProps({ res }) {
     const url = '/account/profile';
     if (res) {
