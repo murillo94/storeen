@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import Router from 'next/router';
 
@@ -30,18 +30,7 @@ const promotionTypeOptions = [
 ];
 
 const AddPromotion = () => {
-  const collapsePromotionalCodeRef = useRef(null);
-  const collapseScheduleRef = useRef(null);
-
   const handleBack = () => Router.push('/promotions');
-
-  const handleChangePromotionalCode = () => {
-    collapsePromotionalCodeRef.current.classList.toggle('visible');
-  };
-
-  const handleChangeSchedule = () => {
-    collapseScheduleRef.current.classList.toggle('visible');
-  };
 
   return (
     <Page>
@@ -106,10 +95,9 @@ const AddPromotion = () => {
               id="code"
               name="code"
               text="Habilitar código promocional?"
-              onChange={handleChangePromotionalCode}
             />
           }
-          ref={collapsePromotionalCodeRef}
+          action="onChange"
         >
           <Input
             labelText="Código da promoção"
@@ -126,14 +114,9 @@ const AddPromotion = () => {
       <Container title="Agendar" isForm>
         <Collapse
           content={
-            <Checkbox
-              id="schedule"
-              name="schedule"
-              text="Agendar promoção?"
-              onChange={handleChangeSchedule}
-            />
+            <Checkbox id="schedule" name="schedule" text="Agendar promoção?" />
           }
-          ref={collapseScheduleRef}
+          action="onChange"
         >
           todo
         </Collapse>

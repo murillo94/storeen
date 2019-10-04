@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import Router from 'next/router';
 
@@ -14,23 +14,7 @@ import Footer from 'components/footer';
 import Button from 'components/button';
 
 const AddProduct = () => {
-  const collapseShippingRef = useRef(null);
-  const collapseStockRef = useRef(null);
-  const collapseVariationsRef = useRef(null);
-
   const handleBack = () => Router.push('/products');
-
-  const handleChangeShipping = () => {
-    collapseShippingRef.current.classList.toggle('visible');
-  };
-
-  const handleChangeStock = () => {
-    collapseStockRef.current.classList.toggle('visible');
-  };
-
-  const handleChangeVariations = () => {
-    collapseVariationsRef.current.classList.toggle('visible');
-  };
 
   return (
     <Page>
@@ -76,10 +60,9 @@ const AddProduct = () => {
               id="shipping"
               name="shipping"
               text="Este produto necessita de frete?"
-              onChange={handleChangeShipping}
             />
           }
-          ref={collapseShippingRef}
+          action="onChange"
         >
           <FormGroup>
             <Input
@@ -116,10 +99,9 @@ const AddProduct = () => {
               id="stock"
               name="stock"
               text="Controlar estoque do produto?"
-              onChange={handleChangeStock}
             />
           }
-          ref={collapseStockRef}
+          action="onChange"
         >
           <Input
             labelText="Quantidade"
@@ -136,10 +118,9 @@ const AddProduct = () => {
               id="variations"
               name="variations"
               text="Este produto possui variações?"
-              onChange={handleChangeVariations}
             />
           }
-          ref={collapseVariationsRef}
+          action="onChange"
         >
           todo
         </Collapse>
