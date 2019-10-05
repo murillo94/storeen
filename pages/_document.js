@@ -23,9 +23,6 @@ class CustomDocument extends Document {
             type="image/png"
             href={require('images/favicon.png')}
           />
-
-          <title>Storeen</title>
-
           <style
             dangerouslySetInnerHTML={{
               __html: `
