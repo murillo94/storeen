@@ -1,9 +1,10 @@
+import { memo } from 'react';
 import Link from 'next/link';
 
 import { primary } from 'themes/shadows';
 import { primary700 } from 'themes/colors';
 
-const TabLink = ({ children, href }) => (
+const TabLink = memo(({ children, href }) => (
   <>
     <Link href={href}>
       <a>{children}</a>
@@ -28,6 +29,6 @@ const TabLink = ({ children, href }) => (
       `}
     </style>
   </>
-);
+));
 
 export default TabLink;

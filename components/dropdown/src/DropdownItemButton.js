@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Button from 'components/button';
 
 const buttonStyle = {
@@ -7,10 +9,10 @@ const buttonStyle = {
   width: '100%'
 };
 
-const DropdownItemButton = ({ children, appearance, onClick }) => (
+const DropdownItemButton = memo(({ children, appearance, onClick }) => (
   <Button appearance={appearance} customStyle={buttonStyle} onClick={onClick}>
     {children}
   </Button>
-);
+));
 
 export default DropdownItemButton;

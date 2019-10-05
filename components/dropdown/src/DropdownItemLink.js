@@ -1,9 +1,10 @@
+import { memo } from 'react';
 import Link from 'next/link';
 
 import { primary } from 'themes/shadows';
 import { primary700 } from 'themes/colors';
 
-const DropdownItemLink = ({ children, href }) => (
+const DropdownItemLink = memo(({ children, href }) => (
   <>
     <Link href={href}>
       <a>{children}</a>
@@ -28,6 +29,6 @@ const DropdownItemLink = ({ children, href }) => (
       `}
     </style>
   </>
-);
+));
 
 export default DropdownItemLink;

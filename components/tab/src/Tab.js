@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { withRouter } from 'next/router';
 
 import Icon from 'components/icon';
@@ -18,61 +19,63 @@ const Content = ({ text, icon }) => (
   </>
 );
 
-const Tab = withRouter(
-  ({
-    appearance = 'minimal',
-    text = '',
-    icon = '',
-    href = '',
-    onClick = null,
-    selected = false,
-    router
-  }) => {
-    const theme = useTheme(appearance);
-    const isActive = router.pathname.match(href);
+const Tab = memo(
+  withRouter(
+    ({
+      appearance = 'minimal',
+      text = '',
+      icon = '',
+      href = '',
+      onClick = null,
+      selected = false,
+      router
+    }) => {
+      const theme = useTheme(appearance);
+      const isActive = router.pathname.match(href);
 
-    return (
-      <>
-        <li role="tab" aria-selected={href ? !!isActive : selected}>
-          {href ? (
-            <TabLink href={href}>
-              <Content text={text} icon={icon} />
-            </TabLink>
-          ) : (
-            <TabButton onClick={onClick}>
-              <Content text={text} icon={icon} />
-            </TabButton>
-          )}
-        </li>
+      return (
+        <>
+          <li role="tab" aria-selected={href ? !!isActive : selected}>
+            {href ? (
+              <TabLink href={href}>
+                <Content text={text} icon={icon} />
+              </TabLink>
+            ) : (
+              <TabButton onClick={onClick}>
+                <Content text={text} icon={icon} />
+              </TabButton>
+            )}
+          </li>
 
-        <style jsx>
-          {`
-            li {
-              background-color: ${theme.backgroundColor};
-              color: inherit;
-              border-radius: ${radius600};
-              text-align: left;
-              white-space: nowrap;
-              margin: 6px 10px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-            }
+          <style jsx>
+            {`
+              li {
+                background-color: ${theme.backgroundColor};
+                color: inherit;
+                border-radius: ${radius600};
+                text-align: left;
+                white-space: nowrap;
+                margin: 6px 10px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+              }
 
-            li[aria-selected='true'] {
-              background-color: ${theme.hover.backgroundColor};
-              opacity: 1 !important;
-            }
+              li[aria-selected='true'] {
+                background-color: ${theme.hover.backgroundColor};
+                opacity: 1 !important;
+              }
 
-            :hover {
-              background-color: ${theme.hover.backgroundColor};
-              opacity: 0.85;
-            }
-          `}
-        </style>
-      </>
-    );
-  }
+              :hover {
+                background-color: ${theme.hover.backgroundColor};
+                opacity: 0.85;
+              }
+            `}
+          </style>
+        </>
+      );
+    }
+  )
 );
 
 export default Tab;

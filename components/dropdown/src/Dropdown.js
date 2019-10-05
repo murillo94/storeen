@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { memo, useRef, useEffect } from 'react';
 
 import Button from 'components/button';
 
@@ -8,57 +8,60 @@ const buttonStyle = {
   border: 'none'
 };
 
-const Dropdown = ({
-  children,
-  appearance = 'minimal',
-  id = null,
-  icon = '',
-  text = '',
-  visible = false,
-  hasBorder = false,
-  onClick = null
-}) => {
-  const node = useRef();
+const Dropdown = memo(
+  ({
+    children,
+    appearance = 'minimal',
+    id = null,
+    icon = '',
+    text = '',
+    visible = false,
+    hasBorder = false,
+    onClick = null
+  }) => {
+    const node = useRef();
 
-  const handleClick = e => {
-    if (node.current.contains(e.target)) return;
-    if (visible) onClick();
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClick);
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
+    const handleClick = e => {
+      if (node.current.contains(e.target)) return;
+      if (visible) onClick();
     };
-  }, [visible]);
 
-  return (
-    <>
-      <div ref={node}>
-        <Button
-          appearance={appearance}
-          icon={icon}
-          text={text}
-          aria-controls={id}
-          aria-expanded={visible}
-          aria-haspopup="menu"
-          customStyle={!hasBorder && buttonStyle}
-          onClick={onClick}
-        />
-        {children}
-      </div>
+    useEffect(() => {
+      document.addEventListener('mousedown', handleClick);
+      return () => {
+        document.removeEventListener('mousedown', handleClick);
+      };
+    }, [visible]);
 
-      <style jsx>
-        {`
-          div {
-            background-color: ${mono0};
-            position: relative;
-            z-index: 1;
-          }
-        `}
-      </style>
-    </>
-  );
-};
+    return (
+      <>
+        <div ref={node}>
+          <Button
+            appearance={appearance}
+            icon={icon}
+            text={text}
+            aria-controls={id}
+            aria-expanded={visible}
+            aria-haspopup="menu"
+            customStyle={!hasBorder && buttonStyle}
+            onClick={onClick}
+          />
+          {children}
+        </div>
+
+        <style jsx>
+          {`
+            div {
+              background-color: ${mono0};
+              position: relative;
+              z-index: 1;
+            }
+          `}
+        </style>
+      </>
+    );
+  },
+  (prevProps, nextProps) => prevProps.visible === nextProps.visible
+);
 
 export default Dropdown;
