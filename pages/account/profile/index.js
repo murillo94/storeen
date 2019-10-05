@@ -9,35 +9,17 @@ import Footer from 'components/footer';
 import Button from 'components/button';
 
 const AccountSettings = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [actualPassword, setActualPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [newConfirmPassword, setNewConfirmPassword] = useState('');
+  const [infoUser, setInfoUser] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    actualPassword: '',
+    newPassword: '',
+    newConfirmPassword: ''
+  });
 
-  const handleChangeName = e => {
-    setName(e.target.value);
-  };
-
-  const handleChangeEmail = e => {
-    setEmail(e.target.value);
-  };
-
-  const handleChangePhone = e => {
-    setPhone(e.target.value);
-  };
-
-  const handleActualPassword = e => {
-    setActualPassword(e.target.value);
-  };
-
-  const handleNewPassword = e => {
-    setNewPassword(e.target.value);
-  };
-
-  const handleNewConfirmPassword = e => {
-    setNewConfirmPassword(e.target.value);
+  const handleChangeInfoUser = (value, key) => {
+    setInfoUser(prevState => ({ ...prevState, [key]: value }));
   };
 
   return (
@@ -51,25 +33,25 @@ const AccountSettings = () => {
           labelText="Nome"
           id="name"
           name="name"
-          value={name}
-          onChange={handleChangeName}
+          value={infoUser.name}
+          onChange={({ target }) => handleChangeInfoUser(target.value, 'name')}
         />
         <Input
           type="email"
           labelText="Email"
           id="email"
           name="email"
-          value={email}
-          onChange={handleChangeEmail}
+          value={infoUser.email}
+          onChange={({ target }) => handleChangeInfoUser(target.value, 'email')}
         />
         <Input
           type="tel"
           labelText="Telefone"
           id="phone"
           name="phone"
-          value={phone}
+          value={infoUser.phone}
           mask="phone"
-          onChange={handleChangePhone}
+          onChange={({ target }) => handleChangeInfoUser(target.value, 'phone')}
         />
       </Container>
       <Container
@@ -85,24 +67,30 @@ const AccountSettings = () => {
             labelText="Senha atual"
             id="actual-password"
             name="actual-password"
-            value={actualPassword}
-            onChange={handleActualPassword}
+            value={infoUser.actualPassword}
+            onChange={({ target }) =>
+              handleChangeInfoUser(target.value, 'actualPassword')
+            }
           />
           <Input
             type="password"
             labelText="Nova senha"
             id="new-password"
             name="new-password"
-            value={newPassword}
-            onChange={handleNewPassword}
+            value={infoUser.newPassword}
+            onChange={({ target }) =>
+              handleChangeInfoUser(target.value, 'newPassword')
+            }
           />
           <Input
             type="password"
             labelText="Confirmação da nova senha"
             id="new-confirm-password"
             name="new-confirm-password"
-            value={newConfirmPassword}
-            onChange={handleNewConfirmPassword}
+            value={infoUser.newConfirmPassword}
+            onChange={({ target }) =>
+              handleChangeInfoUser(target.value, 'newConfirmPassword')
+            }
           />
         </Collapse>
       </Container>
