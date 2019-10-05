@@ -14,6 +14,7 @@ const Input = ({
   placeholder = '',
   icon = '',
   mask = '',
+  onChange = null,
   onClick = null
 }) => (
   <div className="input-normal input-form">
@@ -33,6 +34,7 @@ const Input = ({
         placeholder={placeholder}
         icon={icon}
         mask={mask}
+        onChange={onChange}
         onClick={onClick}
       />
     ) : (
@@ -46,6 +48,7 @@ const Input = ({
             name={name}
             value={value}
             placeholder={placeholder}
+            onChange={onChange}
           />
         ) : (
           <InputText
@@ -57,6 +60,7 @@ const Input = ({
             value={value}
             placeholder={placeholder}
             mask={mask}
+            onChange={onChange}
           />
         )}
       </>

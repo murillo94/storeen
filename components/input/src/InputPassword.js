@@ -5,7 +5,15 @@ import InputIcon from './InputIcon';
 import useTheme from 'themes/useTheme';
 import { mono0, mono600 } from 'themes/colors';
 
-const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
+const InputPassword = ({
+  appearance,
+  type,
+  id,
+  name,
+  value,
+  placeholder,
+  onChange
+}) => {
   const inputPasswordRef = useRef(null);
   const theme = useTheme(appearance);
 
@@ -26,6 +34,7 @@ const InputPassword = ({ appearance, type, id, name, value, placeholder }) => {
         value={value}
         placeholder={placeholder}
         icon="eye"
+        onChange={onChange}
         onClick={handleClickPassword}
       />
 

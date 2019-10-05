@@ -13,7 +13,8 @@ const Input = ({
   innerRef,
   name,
   value,
-  placeholder
+  placeholder,
+  onChange
 }) => {
   const theme = useTheme(appearance);
 
@@ -32,6 +33,7 @@ const Input = ({
         autoCapitalize="off"
         autoCorrect="off"
         spellCheck="false"
+        onChange={onChange}
       />
 
       <style jsx>
@@ -78,6 +80,7 @@ const InputText = ({ mask, ...props }) => {
       {validMask ? (
         <MaskedInput
           mask={validMask}
+          onChange={props.onChange}
           render={(ref, propsMask) => (
             <Input {...props} {...propsMask} innerRef={ref} />
           )}
