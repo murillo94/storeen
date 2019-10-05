@@ -25,9 +25,9 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "next": "^9.0.7",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-feather": "^2.0.3",
     "react-text-mask": "^5.4.3",
     "text-mask-addons": "^3.8.0"
