@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import Button from 'components/button';
 
 const buttonStyle = {
@@ -7,10 +5,10 @@ const buttonStyle = {
   border: 'none'
 };
 
-const TabButton = memo(({ children, onClick }) => (
+const TabButton = ({ children, onClick }) => (
   <Button customStyle={buttonStyle} onClick={onClick}>
     {children}
   </Button>
-));
+);
 
 export default TabButton;
