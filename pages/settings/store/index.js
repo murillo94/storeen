@@ -5,8 +5,10 @@ import Input from 'components/input';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const StoreSettings = () => (
-  <Page>
+  <>
     <Container
       title="Dados da loja"
       subTitle="Algumas informações que são necessárias para o seu público conhecer melhor a sua marca."
@@ -115,7 +117,7 @@ const StoreSettings = () => (
     <Footer>
       <Button text="Salvar" />
     </Footer>
-  </Page>
+  </>
 );
 
-export default StoreSettings;
+export default useLayout(Page)(StoreSettings);

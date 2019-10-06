@@ -8,6 +8,8 @@ import { Form } from 'components/form';
 import Input from 'components/input';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const imageStyle = {
   margin: '30px 0'
 };
@@ -40,7 +42,7 @@ const Home = () => {
   const handleClickSignIn = () => Router.push('/home');
 
   return (
-    <Page>
+    <>
       <Heading text="Entrar" customStyle={headingStyle} />
       <Paragraph
         text="Não tem uma conta ainda?"
@@ -64,8 +66,8 @@ const Home = () => {
         onClick={handleClickSignIn}
       />
       <Anchor href="/password/new" text="Esqueceu sua senha?" color="primary" />
-    </Page>
+    </>
   );
 };
 
-export default Home;
+export default useLayout(Page)(Home);

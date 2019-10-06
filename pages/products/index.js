@@ -15,6 +15,7 @@ import {
 import Icon from 'components/icon';
 
 import { positive700, negative700 } from 'utils/themes/colors';
+import useLayout from 'utils/layouts/useLayout';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [
@@ -73,7 +74,7 @@ const Products = () => {
   const handleAddProduct = () => Router.push('/products/add');
 
   return (
-    <Page>
+    <>
       <SubHeader title="Produtos">
         <Button text="Novo produto" onClick={handleAddProduct} />
       </SubHeader>
@@ -105,8 +106,8 @@ const Products = () => {
           </TableRow>
         ))}
       </Table>
-    </Page>
+    </>
   );
 };
 
-export default Products;
+export default useLayout(Page)(Products);

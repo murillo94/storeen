@@ -11,11 +11,13 @@ import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const AddProduct = () => {
   const handleBack = () => Router.push('/products');
 
   return (
-    <Page>
+    <>
       <SubHeader title="Novo Produto" hasBack onClick={handleBack} />
       <Container title="Geral" isForm>
         <Input
@@ -126,8 +128,8 @@ const AddProduct = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-    </Page>
+    </>
   );
 };
 
-export default AddProduct;
+export default useLayout(Page)(AddProduct);

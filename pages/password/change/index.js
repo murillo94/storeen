@@ -5,6 +5,8 @@ import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const buttonStyle = {
   width: '100%',
   margin: '20px 0'
@@ -26,7 +28,7 @@ const Logo = () => (
 );
 
 const Change = () => (
-  <Page>
+  <>
     <Heading text="Nova senha" />
     <Logo />
     <Input
@@ -36,7 +38,7 @@ const Change = () => (
       name="new-password"
     />
     <Button text="Alterar senha" customStyle={buttonStyle} />
-  </Page>
+  </>
 );
 
-export default Change;
+export default useLayout(Page)(Change);

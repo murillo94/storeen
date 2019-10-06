@@ -4,8 +4,10 @@ import Container from 'components/container';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const ShippingSettings = () => (
-  <Page>
+  <>
     <Container
       title="Opções de frete"
       subTitle="Escolha as maneiras de levar seus produtos até seus clientes."
@@ -15,7 +17,7 @@ const ShippingSettings = () => (
     <Footer>
       <Button text="Salvar" />
     </Footer>
-  </Page>
+  </>
 );
 
-export default ShippingSettings;
+export default useLayout(Page)(ShippingSettings);

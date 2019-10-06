@@ -7,6 +7,8 @@ import Input from 'components/input';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const refundModel = 'Política de reembolso';
 const privacyModel = 'Política de privacidade';
 const serviceModel = 'Termos de serviço';
@@ -28,7 +30,7 @@ const LegalSettings = () => {
     setShippingDescription(shippingModel);
 
   return (
-    <Page>
+    <>
       <Container
         title="Política de reembolso"
         subTitle="Uma boa política de devolução ou reembolso pode ajudar a proteger a sua empresa e ganhar a confiança dos clientes."
@@ -100,8 +102,8 @@ const LegalSettings = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-    </Page>
+    </>
   );
 };
 
-export default LegalSettings;
+export default useLayout(Page)(LegalSettings);

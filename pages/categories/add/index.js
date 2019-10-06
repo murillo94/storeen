@@ -9,11 +9,13 @@ import Radio from 'components/radio';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const AddCategorie = () => {
   const handleBack = () => Router.push('/categories');
 
   return (
-    <Page>
+    <>
       <SubHeader title="Nova categoria" hasBack onClick={handleBack} />
       <Container title="Geral" isForm>
         <Input
@@ -46,8 +48,8 @@ const AddCategorie = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-    </Page>
+    </>
   );
 };
 
-export default AddCategorie;
+export default useLayout(Page)(AddCategorie);

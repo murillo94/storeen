@@ -2,10 +2,8 @@ import Page from 'layouts/adminContent';
 
 import SubHeader from 'components/subHeader';
 
-const Reports = () => (
-  <Page>
-    <SubHeader title="Relatórios" />
-  </Page>
-);
+import useLayout from 'utils/layouts/useLayout';
 
-export default Reports;
+const Reports = () => <SubHeader title="Relatórios" />;
+
+export default useLayout(Page)(Reports);

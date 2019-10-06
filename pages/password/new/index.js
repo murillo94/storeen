@@ -5,6 +5,8 @@ import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const buttonStyle = {
   width: '100%',
   margin: '20px 0'
@@ -26,12 +28,12 @@ const Logo = () => (
 );
 
 const New = () => (
-  <Page>
+  <>
     <Heading text="Redefinir sua senha" />
     <Logo />
     <Input type="email" labelText="Email" id="email" name="email" />
     <Button text="Redefinir senha" customStyle={buttonStyle} />
-  </Page>
+  </>
 );
 
-export default New;
+export default useLayout(Page)(New);

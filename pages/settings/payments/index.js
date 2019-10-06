@@ -4,8 +4,10 @@ import Container from 'components/container';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const PaymentsSettings = () => (
-  <Page>
+  <>
     <Container
       title="Meios de pagamento"
       subTitle="Selecione um meio de pagamento para receber os pagamentos."
@@ -15,7 +17,7 @@ const PaymentsSettings = () => (
     <Footer>
       <Button text="Salvar" />
     </Footer>
-  </Page>
+  </>
 );
 
-export default PaymentsSettings;
+export default useLayout(Page)(PaymentsSettings);

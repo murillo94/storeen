@@ -12,6 +12,8 @@ import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const promotionTypeOptions = [
   {
     value: 'valor fixo'
@@ -31,7 +33,7 @@ const AddPromotion = () => {
   const handleBack = () => Router.push('/promotions');
 
   return (
-    <Page>
+    <>
       <SubHeader title="Nova Promoção" hasBack onClick={handleBack} />
       <Container title="Geral" isForm>
         <Input
@@ -122,8 +124,8 @@ const AddPromotion = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-    </Page>
+    </>
   );
 };
 
-export default AddPromotion;
+export default useLayout(Page)(AddPromotion);

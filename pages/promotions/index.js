@@ -11,6 +11,8 @@ import {
   TextTableCell
 } from 'components/table';
 
+import useLayout from 'utils/layouts/useLayout';
+
 const headers = ['Nome', 'Desconto', 'Data de expiração'];
 const items = [
   {
@@ -39,7 +41,7 @@ const Promotions = () => {
   const handleAddPromotion = () => Router.push('/promotions/add');
 
   return (
-    <Page>
+    <>
       <SubHeader title="Promoções">
         <Button text="Nova promoção" onClick={handleAddPromotion} />
       </SubHeader>
@@ -60,8 +62,8 @@ const Promotions = () => {
           </TableRow>
         ))}
       </Table>
-    </Page>
+    </>
   );
 };
 
-export default Promotions;
+export default useLayout(Page)(Promotions);

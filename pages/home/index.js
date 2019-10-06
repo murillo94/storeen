@@ -2,10 +2,8 @@ import Page from 'layouts/adminContent';
 
 import SubHeader from 'components/subHeader';
 
-const Home = () => (
-  <Page>
-    <SubHeader title="Início" />
-  </Page>
-);
+import useLayout from 'utils/layouts/useLayout';
 
-export default Home;
+const Home = () => <SubHeader title="Início" />;
+
+export default useLayout(Page)(Home);
