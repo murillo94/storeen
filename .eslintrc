@@ -48,6 +48,7 @@
       0,
       { "arrow": true, "return": true, "declaration": true }
     ],
+    "jsx-a11y/control-has-associated-label": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "jsx-a11y/label-has-associated-control": [
       0,
@@ -72,7 +73,7 @@
         "map": [
           ["components", "./components"],
           ["layouts", "./layouts"],
-          ["themes", "./themes"],
+          ["utils", "./utils"],
           ["images", "./static/images"]
         ]
       }
