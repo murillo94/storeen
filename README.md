@@ -37,8 +37,4 @@ import storeen components
 # space
 
 import storeen utils
-
-# space
-
-import storeen themes
 ```
