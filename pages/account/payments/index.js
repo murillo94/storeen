@@ -2,7 +2,7 @@ import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';
 
-import useLayout from 'layouts/utils/useLayout';
+import useLayout from 'utils/layouts/useLayout';
 
 const PaymentsAccountSettings = () => (
   <Container title="Histórico de pagamentos">
