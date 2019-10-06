@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { primary } from 'themes/shadows';
-import { primary700 } from 'themes/colors';
+import { primary } from 'utils/themes/shadows';
+import { primary700 } from 'utils/themes/colors';
 
 const TabLink = ({ children, href }) => (
   <>

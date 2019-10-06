@@ -1,7 +1,7 @@
 import { Label, Paragraph } from 'components/typography';
 
-import useTheme from 'themes/useTheme';
-import { radius400 } from 'themes/radius';
+import useTheme from 'utils/themes/useTheme';
+import { radius400 } from 'utils/themes/radius';
 
 const labelStyle = {
   display: 'inline-flex'

@@ -2,8 +2,8 @@ import { useRef } from 'react';
 
 import InputIcon from './InputIcon';
 
-import useTheme from 'themes/useTheme';
-import { mono0, mono600 } from 'themes/colors';
+import useTheme from 'utils/themes/useTheme';
+import { mono0, mono600 } from 'utils/themes/colors';
 
 const InputPassword = ({
   appearance,

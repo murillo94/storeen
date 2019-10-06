@@ -5,8 +5,8 @@ import { Text } from 'components/typography';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
 
-import useTheme from 'themes/useTheme';
-import { radius600 } from 'themes/radius';
+import useTheme from 'utils/themes/useTheme';
+import { radius600 } from 'utils/themes/radius';
 
 const Content = ({ text, icon }) => (
   <>

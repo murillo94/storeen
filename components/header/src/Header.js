@@ -1,4 +1,4 @@
-import { mono0, mono200 } from 'themes/colors';
+import { mono0, mono200 } from 'utils/themes/colors';
 
 const Header = ({ children }) => (
   <>

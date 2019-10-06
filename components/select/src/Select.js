@@ -1,9 +1,9 @@
 import { Label } from 'components/typography';
 import Icon from 'components/icon';
 
-import useTheme from 'themes/useTheme';
-import { mono0, mono600 } from 'themes/colors';
-import { radius600 } from 'themes/radius';
+import useTheme from 'utils/themes/useTheme';
+import { mono0, mono600 } from 'utils/themes/colors';
+import { radius600 } from 'utils/themes/radius';
 
 const Select = ({
   appearance = 'minimal',
@@ -24,9 +24,9 @@ const Select = ({
         )}
         <div className="container">
           <select id={id} name={name}>
-            <option value="" hidden />
+            <option value="" aria-label="Empty" hidden />
             {options.map(({ value }) => (
-              <option key={value} value={value}>
+              <option key={value} value={value} aria-label={value}>
                 {value}
               </option>
             ))}

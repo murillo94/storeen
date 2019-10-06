@@ -1,4 +1,4 @@
-import useFont from 'themes/useFont';
+import useFont from 'utils/themes/useFont';
 
 const H1 = ({ text, color, customStyle }) => (
   <>

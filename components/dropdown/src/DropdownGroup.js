@@ -1,6 +1,6 @@
-import useTheme from 'themes/useTheme';
-import { mono0 } from 'themes/colors';
-import { radius500 } from 'themes/radius';
+import useTheme from 'utils/themes/useTheme';
+import { mono0 } from 'utils/themes/colors';
+import { radius500 } from 'utils/themes/radius';
 
 const DropdownGroup = ({
   children,

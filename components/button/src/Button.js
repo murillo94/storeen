@@ -1,8 +1,8 @@
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
 
-import useTheme from 'themes/useTheme';
-import { radius600 } from 'themes/radius';
+import useTheme from 'utils/themes/useTheme';
+import { radius600 } from 'utils/themes/radius';
 
 const defaultStyle = {
   width: 'auto'

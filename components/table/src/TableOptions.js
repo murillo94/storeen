@@ -1,7 +1,7 @@
 import Input from 'components/input';
 import { FormGroup } from 'components/form';
 
-import { mono75 } from 'themes/colors';
+import { mono75 } from 'utils/themes/colors';
 
 const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
   <>

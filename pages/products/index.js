@@ -14,7 +14,7 @@ import {
 } from 'components/table';
 import Icon from 'components/icon';
 
-import { positive700, negative700 } from 'themes/colors';
+import { positive700, negative700 } from 'utils/themes/colors';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [

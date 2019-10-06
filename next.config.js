@@ -14,7 +14,7 @@ module.exports = optimizedImages({
   webpack(config) {
     config.resolve.alias['components'] = path.join(__dirname, 'components');
     config.resolve.alias['layouts'] = path.join(__dirname, 'layouts');
-    config.resolve.alias['themes'] = path.join(__dirname, 'themes');
+    config.resolve.alias['utils'] = path.join(__dirname, 'utils');
     config.resolve.alias['images'] = path.join(__dirname, 'static/images');
     return config;
   }

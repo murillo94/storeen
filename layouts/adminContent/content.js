@@ -7,8 +7,8 @@ import { TabList, Tab } from 'components/tab';
 import Header from 'components/header';
 import Button from 'components/button';
 
-import { mono0, mono200 } from 'themes/colors';
-import { radius800 } from 'themes/radius';
+import { mono0, mono200 } from 'utils/themes/colors';
+import { radius800 } from 'utils/themes/radius';
 
 const buttonStyle = {
   border: 'none'

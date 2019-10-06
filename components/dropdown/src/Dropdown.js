@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 
 import Button from 'components/button';
 
-import { mono0 } from 'themes/colors';
+import { mono0 } from 'utils/themes/colors';
 
 const buttonStyle = {
   border: 'none'
