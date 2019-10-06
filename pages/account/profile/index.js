@@ -8,6 +8,8 @@ import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
+import useLayout from 'layouts/utils/useLayout';
+
 const AccountSettings = () => {
   const [infoUser, setInfoUser] = useState({
     name: '',
@@ -23,7 +25,7 @@ const AccountSettings = () => {
   };
 
   return (
-    <Page>
+    <>
       <Container
         title="Dados pessoais"
         subTitle="Iremos usar essas informações para entrar em contato com você."
@@ -97,8 +99,8 @@ const AccountSettings = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-    </Page>
+    </>
   );
 };
 
-export default AccountSettings;
+export default useLayout(Page)(AccountSettings);

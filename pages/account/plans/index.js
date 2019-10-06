@@ -2,10 +2,10 @@ import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';
 
+import useLayout from 'layouts/utils/useLayout';
+
 const PlansAccountSettings = () => (
-  <Page>
-    <Container title="Planos de cobrança">todo conteúdo e subtítulo</Container>
-  </Page>
+  <Container title="Planos de cobrança">todo conteúdo e subtítulo</Container>
 );
 
-export default PlansAccountSettings;
+export default useLayout(Page)(PlansAccountSettings);
