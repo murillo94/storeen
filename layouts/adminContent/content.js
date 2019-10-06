@@ -57,25 +57,36 @@ const Logo = () => (
   </>
 );
 
-const UserInfo = ({ id, hidden }) => (
-  <DropdownGroup id={id} hidden={hidden}>
-    <DropdownItem href="/account">Meus dados</DropdownItem>
-    <DropdownItem href="/">Sair</DropdownItem>
-  </DropdownGroup>
-);
+const UserInfo = () => {
+  const [visibleUserInfo, setVisibleUserInfo] = useState(false);
+
+  const handleClickUserInfo = () => {
+    setVisibleUserInfo(!visibleUserInfo);
+  };
+
+  return (
+    <Dropdown
+      id="user-info"
+      visible={visibleUserInfo}
+      text="Minha conta"
+      onClick={handleClickUserInfo}
+    >
+      <DropdownGroup id="user-info" hidden={!visibleUserInfo}>
+        <DropdownItem href="/account">Meus dados</DropdownItem>
+        <DropdownItem href="/">Sair</DropdownItem>
+      </DropdownGroup>
+    </Dropdown>
+  );
+};
 
 const Content = ({ children, padding }) => {
   const menuRef = useRef(null);
-  const [visibleUserInfo, setVisibleUserInfo] = useState(false);
+
   const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   const handleClickMenu = () => {
     menuRef.current.classList.toggle('visible');
     setVisibleSidebar(!visibleSidebar);
-  };
-
-  const handleClickUserInfo = () => {
-    setVisibleUserInfo(!visibleUserInfo);
   };
 
   return (
@@ -113,14 +124,7 @@ const Content = ({ children, padding }) => {
               text="ver minha loja"
               customStyle={buttonStyle}
             />
-            <Dropdown
-              id="user-info"
-              visible={visibleUserInfo}
-              text="Minha conta"
-              onClick={handleClickUserInfo}
-            >
-              <UserInfo id="user-info" hidden={!visibleUserInfo} />
-            </Dropdown>
+            <UserInfo />
           </Header>
           <div className="main-container">
             <div className="main-children">{children}</div>
