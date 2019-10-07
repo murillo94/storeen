@@ -10,6 +10,7 @@ const Overlay = ({
   children,
   id = null,
   visible = false,
+  showChildren = false,
   removeBodyScroll = false,
   onClick = null
 }) => {
@@ -29,7 +30,7 @@ const Overlay = ({
 
   return (
     <>
-      {visible && (
+      {visible ? (
         <>
           <Portal id={id}>
             {children}
@@ -58,6 +59,8 @@ const Overlay = ({
             `}
           </style>
         </>
+      ) : (
+        <>{showChildren && children}</>
       )}
     </>
   );

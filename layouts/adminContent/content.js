@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 import Image from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
@@ -80,34 +80,39 @@ const UserInfo = () => {
 };
 
 const Content = ({ children, padding }) => {
-  const menuRef = useRef(null);
-
   const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   const handleClickMenu = () => {
-    menuRef.current.classList.toggle('visible');
     setVisibleSidebar(!visibleSidebar);
   };
 
   return (
     <>
       <div className="container">
-        <nav ref={menuRef}>
-          <div>
-            <Logo />
+        <Overlay
+          id="sidebar"
+          visible={visibleSidebar}
+          showChildren
+          removeBodyScroll
+          onClick={handleClickMenu}
+        >
+          <nav>
+            <div>
+              <Logo />
+              <TabList>
+                <Tab text="Início" icon="home" href="/home" />
+                <Tab text="Relatórios" icon="bar-chart" href="/reports" />
+                <Tab text="Pedidos" icon="clipboard" href="/orders" />
+                <Tab text="Produtos" icon="box" href="/products" />
+                <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
+                <Tab text="Categorias" icon="tag" href="/categories" />
+              </TabList>
+            </div>
             <TabList>
-              <Tab text="Início" icon="home" href="/home" />
-              <Tab text="Relatórios" icon="bar-chart" href="/reports" />
-              <Tab text="Pedidos" icon="clipboard" href="/orders" />
-              <Tab text="Produtos" icon="box" href="/products" />
-              <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
-              <Tab text="Categorias" icon="tag" href="/categories" />
+              <Tab text="Configurações" icon="settings" href="/settings" />
             </TabList>
-          </div>
-          <TabList>
-            <Tab text="Configurações" icon="settings" href="/settings" />
-          </TabList>
-        </nav>
+          </nav>
+        </Overlay>
         <main>
           <Header>
             <div className="nav-button">
@@ -130,12 +135,6 @@ const Content = ({ children, padding }) => {
             <div className="main-children">{children}</div>
           </div>
         </main>
-        <Overlay
-          id="sidebar"
-          visible={visibleSidebar}
-          removeBodyScroll
-          onClick={handleClickMenu}
-        />
       </div>
 
       <style jsx>
@@ -213,14 +212,12 @@ const Content = ({ children, padding }) => {
           }
 
           @media (max-width: 746px) {
-            .visible {
-              transform: translate3d(0, 0, 0);
-            }
-
             nav {
               height: 100%;
               position: fixed;
-              transform: translate3d(-125px, 0, 0);
+              transform: ${visibleSidebar
+                ? 'transform: translate3d(0, 0, 0);'
+                : 'translate3d(-125px, 0, 0)'};
               will-change: transform;
               z-index: 2;
             }
