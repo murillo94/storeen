@@ -74,7 +74,7 @@
           ["containers", "./containers"],
           ["layouts", "./layouts"],
           ["utils", "./utils"],
-          ["images", "./static/images"]
+          ["images", "./public/static/images"]
         ]
       }
     }
