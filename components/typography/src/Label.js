@@ -1,4 +1,4 @@
-import useFont from 'utils/themes/useFont';
+import useFont from 'hooks/themes/useFont';
 
 const Label = ({
   children,

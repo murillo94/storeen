@@ -1,10 +1,10 @@
 import MaskedInput from 'react-text-mask';
 
-import { MASKS } from '../utils/mask';
-
-import useTheme from 'utils/themes/useTheme';
+import useTheme from 'hooks/themes/useTheme';
 import { mono500 } from 'utils/themes/colors';
 import { radius600 } from 'utils/themes/radius';
+
+import { MASKS } from '../utils/mask';
 
 const Input = ({
   appearance,

@@ -5,7 +5,7 @@ import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
 
-import useLayout from 'utils/layouts/useLayout';
+import useLayout from 'hooks/layouts/useLayout';
 
 const buttonStyle = {
   width: '100%',

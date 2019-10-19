@@ -12,7 +12,7 @@ import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
-import useLayout from 'utils/layouts/useLayout';
+import useLayout from 'hooks/layouts/useLayout';
 
 const promotionTypeOptions = [
   {

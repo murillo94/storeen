@@ -5,7 +5,7 @@ import Page from 'layouts/adminContent';
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';
 
-import useLayout from 'utils/layouts/useLayout';
+import useLayout from 'hooks/layouts/useLayout';
 
 const Categories = () => {
   const handleAddCategorie = () => Router.push('/categories/add');

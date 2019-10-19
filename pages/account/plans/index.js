@@ -2,7 +2,7 @@ import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';
 
-import useLayout from 'utils/layouts/useLayout';
+import useLayout from 'hooks/layouts/useLayout';
 
 const PlansAccountSettings = () => (
   <Container title="Planos de cobrança">todo conteúdo e subtítulo</Container>

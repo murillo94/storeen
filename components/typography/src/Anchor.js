@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import useFont from 'utils/themes/useFont';
+import useFont from 'hooks/themes/useFont';
 import { primary } from 'utils/themes/shadows';
 import { primary700 } from 'utils/themes/colors';
 

@@ -1,4 +1,4 @@
-import useFont from 'utils/themes/useFont';
+import useFont from 'hooks/themes/useFont';
 
 const Paragraph = ({ text = '', color = 'inherit', customStyle = {} }) => {
   const fontColor = useFont(color);

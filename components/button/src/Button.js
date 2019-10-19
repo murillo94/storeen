@@ -1,7 +1,7 @@
 import Icon from 'components/icon';
 import { Text } from 'components/typography';
 
-import useTheme from 'utils/themes/useTheme';
+import useTheme from 'hooks/themes/useTheme';
 import { radius600 } from 'utils/themes/radius';
 
 const defaultStyle = {

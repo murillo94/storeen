@@ -1,4 +1,4 @@
-import useAppState from 'utils/containers/useAppState';
+import useAppState from 'hooks/containers/useAppState';
 
 const getActions = setState => ({
   handleChange: (key, value) => {
