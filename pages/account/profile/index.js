@@ -1,6 +1,6 @@
-import { useState } from 'react';
-
 import Page from 'layouts/adminSettingsContent/account';
+
+import useAccountProfile from 'containers/useAccountProfile';
 
 import Container from 'components/container';
 import Input from 'components/input';
@@ -11,18 +11,7 @@ import Button from 'components/button';
 import useLayout from 'utils/layouts/useLayout';
 
 const AccountSettings = () => {
-  const [infoUser, setInfoUser] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    actualPassword: '',
-    newPassword: '',
-    newConfirmPassword: ''
-  });
-
-  const handleChangeInfoUser = (value, key) => {
-    setInfoUser(prevState => ({ ...prevState, [key]: value }));
-  };
+  const { state, actions } = useAccountProfile();
 
   return (
     <>
@@ -35,25 +24,25 @@ const AccountSettings = () => {
           labelText="Nome"
           id="name"
           name="name"
-          value={infoUser.name}
-          onChange={({ target }) => handleChangeInfoUser(target.value, 'name')}
+          value={state.name}
+          onChange={({ target }) => actions.handleChange('name', target.value)}
         />
         <Input
           type="email"
           labelText="Email"
           id="email"
           name="email"
-          value={infoUser.email}
-          onChange={({ target }) => handleChangeInfoUser(target.value, 'email')}
+          value={state.email}
+          onChange={({ target }) => actions.handleChange('email', target.value)}
         />
         <Input
           type="tel"
           labelText="Telefone"
           id="phone"
           name="phone"
-          value={infoUser.phone}
+          value={state.phone}
           mask="phone"
-          onChange={({ target }) => handleChangeInfoUser(target.value, 'phone')}
+          onChange={({ target }) => actions.handleChange('phone', target.value)}
         />
       </Container>
       <Container
@@ -69,9 +58,9 @@ const AccountSettings = () => {
             labelText="Senha atual"
             id="actual-password"
             name="actual-password"
-            value={infoUser.actualPassword}
+            value={state.actualPassword}
             onChange={({ target }) =>
-              handleChangeInfoUser(target.value, 'actualPassword')
+              actions.handleChange('actualPassword', target.value)
             }
           />
           <Input
@@ -79,9 +68,9 @@ const AccountSettings = () => {
             labelText="Nova senha"
             id="new-password"
             name="new-password"
-            value={infoUser.newPassword}
+            value={state.newPassword}
             onChange={({ target }) =>
-              handleChangeInfoUser(target.value, 'newPassword')
+              actions.handleChange('newPassword', target.value)
             }
           />
           <Input
@@ -89,9 +78,9 @@ const AccountSettings = () => {
             labelText="Confirmação da nova senha"
             id="new-confirm-password"
             name="new-confirm-password"
-            value={infoUser.newConfirmPassword}
+            value={state.newConfirmPassword}
             onChange={({ target }) =>
-              handleChangeInfoUser(target.value, 'newConfirmPassword')
+              actions.handleChange('newConfirmPassword', target.value)
             }
           />
         </Collapse>

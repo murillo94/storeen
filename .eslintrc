@@ -71,6 +71,7 @@
       "alias": {
         "map": [
           ["components", "./components"],
+          ["containers", "./containers"],
           ["layouts", "./layouts"],
           ["utils", "./utils"],
           ["images", "./static/images"]
