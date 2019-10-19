@@ -70,12 +70,12 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["components", "./components"],
-          ["containers", "./containers"],
-          ["layouts", "./layouts"],
-          ["hooks", "./hooks"],
-          ["utils", "./utils"],
-          ["images", "./public/static/images"]
+          ["components", "./src/components"],
+          ["containers", "./src/containers"],
+          ["layouts", "./src/layouts"],
+          ["hooks", "./src/hooks"],
+          ["utils", "./src/utils"],
+          ["images", "./src/public/static/images"]
         ]
       }
     }
