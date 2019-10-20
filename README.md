@@ -1,7 +1,7 @@
 <div align="center">
     <br>
     <a href="https://storeen-frontend.now.sh">
-        <img src="https://github.com/murillo94/storeen-frontend/blob/master/public/static/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
+        <img src="https://github.com/murillo94/storeen-frontend/blob/master/src/public/static/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
     </a>
 </div>
 
