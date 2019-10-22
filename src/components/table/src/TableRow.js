@@ -1,4 +1,4 @@
-import { mono0, mono75, mono100 } from 'utils/themes/colors';
+import { mono0, mono75, mono100 } from 'utils/theme/colors';
 
 const TableRow = ({ children, isBody = true, hover = true }) => (
   <>

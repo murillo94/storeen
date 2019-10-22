@@ -1,4 +1,4 @@
-import { mono700, mono900, primary700 } from 'utils/themes/colors';
+import { mono700, mono900, primary700 } from 'utils/theme/colors';
 
 const fonts = {
   default: mono900,

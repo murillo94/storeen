@@ -9,8 +9,8 @@ import {
   negative600,
   positive700,
   positive600
-} from 'utils/themes/colors';
-import { primary, negative, positive } from 'utils/themes/shadows';
+} from 'utils/theme/colors';
+import { primary, negative, positive } from 'utils/theme/shadows';
 
 const theme = {
   default: {

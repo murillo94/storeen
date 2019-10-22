@@ -7,7 +7,7 @@ import TabButton from './TabButton';
 
 import useTheme from 'hooks/theme/useTheme';
 
-import { radius600 } from 'utils/themes/radius';
+import { radius600 } from 'utils/theme/radius';
 
 const Content = ({ text, icon }) => (
   <>

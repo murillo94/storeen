@@ -3,8 +3,8 @@ import DropdownItemButton from './DropdownItemButton';
 
 import useTheme from 'hooks/theme/useTheme';
 
-import { mono0 } from 'utils/themes/colors';
-import { radius500 } from 'utils/themes/radius';
+import { mono0 } from 'utils/theme/colors';
+import { radius500 } from 'utils/theme/radius';
 
 const DropdownItem = ({
   children,

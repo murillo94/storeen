@@ -16,7 +16,7 @@ import Icon from 'components/icon';
 
 import useLayout from 'hooks/layout/useLayout';
 
-import { positive700, negative700 } from 'utils/themes/colors';
+import { positive700, negative700 } from 'utils/theme/colors';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [

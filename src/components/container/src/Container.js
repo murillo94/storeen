@@ -1,8 +1,8 @@
 import { Form } from 'components/form';
 import { Heading, Paragraph } from 'components/typography';
 
-import { mono0 } from 'utils/themes/colors';
-import { radius600 } from 'utils/themes/radius';
+import { mono0 } from 'utils/theme/colors';
+import { radius600 } from 'utils/theme/radius';
 
 const subTitleStyle = {
   marginTop: '6px'

@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 import useFont from 'hooks/theme/useFont';
 
-import { primary } from 'utils/themes/shadows';
-import { primary700 } from 'utils/themes/colors';
+import { primary } from 'utils/theme/shadows';
+import { primary700 } from 'utils/theme/colors';
 
 const Anchor = memo(
   ({ href = null, text = '', color = 'inherit', hover = true }) => {

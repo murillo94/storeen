@@ -3,7 +3,7 @@ import { Text } from 'components/typography';
 
 import useTheme from 'hooks/theme/useTheme';
 
-import { radius600 } from 'utils/themes/radius';
+import { radius600 } from 'utils/theme/radius';
 
 const defaultStyle = {
   width: 'auto'

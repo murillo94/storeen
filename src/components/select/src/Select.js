@@ -3,8 +3,8 @@ import Icon from 'components/icon';
 
 import useTheme from 'hooks/theme/useTheme';
 
-import { mono0, mono600 } from 'utils/themes/colors';
-import { radius600 } from 'utils/themes/radius';
+import { mono0, mono600 } from 'utils/theme/colors';
+import { radius600 } from 'utils/theme/radius';
 
 const Select = ({
   appearance = 'minimal',
