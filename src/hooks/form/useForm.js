@@ -14,7 +14,7 @@ const defaultActions = setState => ({
   }
 });
 
-const useForm = (initialState = {}, customActions = () => {}) => {
+const useForm = (initialState = {}, customActions = () => ({})) => {
   const [state, setState] = useState(initialState);
 
   const actions = useMemo(() => {
