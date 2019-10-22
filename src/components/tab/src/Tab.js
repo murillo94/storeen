@@ -5,7 +5,7 @@ import { Text } from 'components/typography';
 import TabLink from './TabLink';
 import TabButton from './TabButton';
 
-import useTheme from 'hooks/themes/useTheme';
+import useTheme from 'hooks/theme/useTheme';
 
 import { radius600 } from 'utils/themes/radius';
 

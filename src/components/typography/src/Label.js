@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useFont from 'hooks/themes/useFont';
+import useFont from 'hooks/theme/useFont';
 
 const Label = memo(
   ({

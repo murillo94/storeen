@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import InputIcon from './InputIcon';
 
-import useTheme from 'hooks/themes/useTheme';
+import useTheme from 'hooks/theme/useTheme';
 
 import { mono0, mono600 } from 'utils/themes/colors';
 

@@ -1,6 +1,6 @@
 import { Label, Paragraph } from 'components/typography';
 
-import useTheme from 'hooks/themes/useTheme';
+import useTheme from 'hooks/theme/useTheme';
 
 import { radius400 } from 'utils/themes/radius';
 

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useFont from 'hooks/themes/useFont';
+import useFont from 'hooks/theme/useFont';
 
 const Paragraph = memo(({ text = '', color = 'inherit', customStyle = {} }) => {
   const fontColor = useFont(color);

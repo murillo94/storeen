@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import Link from 'next/link';
 
-import useFont from 'hooks/themes/useFont';
+import useFont from 'hooks/theme/useFont';
 
 import { primary } from 'utils/themes/shadows';
 import { primary700 } from 'utils/themes/colors';
