@@ -1,4 +1,4 @@
-import useForm from 'hooks/containers/useForm';
+import useForm from 'hooks/form/useForm';
 
 const useAccountProfile = () =>
   useForm({
