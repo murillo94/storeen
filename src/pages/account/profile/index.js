@@ -11,7 +11,10 @@ import Button from 'components/button';
 import useLayout from 'hooks/layouts/useLayout';
 
 const AccountSettings = () => {
-  const { state, actions } = useAccountProfile();
+  const {
+    state: { personalData, password },
+    actions: { onChange, onSubmit }
+  } = useAccountProfile();
 
   return (
     <>
@@ -23,26 +26,26 @@ const AccountSettings = () => {
         <Input
           labelText="Nome"
           id="name"
-          name="name"
-          value={state.name}
-          onChange={({ target }) => actions.handleChange('name', target.value)}
+          name="personalData.name"
+          value={personalData.name}
+          onChange={onChange}
         />
         <Input
           type="email"
           labelText="Email"
           id="email"
-          name="email"
-          value={state.email}
-          onChange={({ target }) => actions.handleChange('email', target.value)}
+          name="personalData.email"
+          value={personalData.email}
+          onChange={onChange}
         />
         <Input
           type="tel"
           labelText="Telefone"
           id="phone"
-          name="phone"
-          value={state.phone}
+          name="personalData.phone"
+          value={personalData.phone}
           mask="phone"
-          onChange={({ target }) => actions.handleChange('phone', target.value)}
+          onChange={onChange}
         />
       </Container>
       <Container
@@ -57,36 +60,30 @@ const AccountSettings = () => {
             type="password"
             labelText="Senha atual"
             id="actual-password"
-            name="actual-password"
-            value={state.actualPassword}
-            onChange={({ target }) =>
-              actions.handleChange('actualPassword', target.value)
-            }
+            name="password.actualPassword"
+            value={password.actualPassword}
+            onChange={onChange}
           />
           <Input
             type="password"
             labelText="Nova senha"
             id="new-password"
-            name="new-password"
-            value={state.newPassword}
-            onChange={({ target }) =>
-              actions.handleChange('newPassword', target.value)
-            }
+            name="password.newPassword"
+            value={password.newPassword}
+            onChange={onChange}
           />
           <Input
             type="password"
             labelText="Confirmação da nova senha"
             id="new-confirm-password"
-            name="new-confirm-password"
-            value={state.newConfirmPassword}
-            onChange={({ target }) =>
-              actions.handleChange('newConfirmPassword', target.value)
-            }
+            name="password.newConfirmPassword"
+            value={password.newConfirmPassword}
+            onChange={onChange}
           />
         </Collapse>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button text="Salvar" onClick={onSubmit} />
       </Footer>
     </>
   );

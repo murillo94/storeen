@@ -1,19 +1,17 @@
-import useAppState from 'hooks/containers/useAppState';
-
-const getActions = setState => ({
-  handleChange: (key, value) => {
-    setState(prevState => ({ ...prevState, [key]: value }));
-  }
-});
+import useForm from 'hooks/containers/useForm';
 
 const useAccountProfile = () =>
-  useAppState(getActions, {
-    name: '',
-    email: '',
-    phone: '',
-    actualPassword: '',
-    newPassword: '',
-    newConfirmPassword: ''
+  useForm({
+    personalData: {
+      name: '',
+      email: '',
+      phone: ''
+    },
+    password: {
+      actualPassword: '',
+      newPassword: '',
+      newConfirmPassword: ''
+    }
   });
 
 export default useAccountProfile;
