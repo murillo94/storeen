@@ -13,7 +13,7 @@ import useLayout from 'hooks/layouts/useLayout';
 const AccountSettings = () => {
   const {
     state: { personalData, password },
-    actions: { onChange, onSubmit }
+    actions: { onChange }
   } = useAccountProfile();
 
   return (
@@ -83,7 +83,7 @@ const AccountSettings = () => {
         </Collapse>
       </Container>
       <Footer>
-        <Button text="Salvar" onClick={onSubmit} />
+        <Button text="Salvar" />
       </Footer>
     </>
   );
