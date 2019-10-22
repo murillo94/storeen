@@ -20,7 +20,7 @@ const useForm = (initialState = {}, customActions = {}) => {
   const actions = useMemo(() => {
     const mergeActions = {
       ...defaultActions(setState),
-      ...(!!Object.keys(customActions).length && customActions(setState))
+      ...(!!Object.keys(customActions()).length && customActions(setState))
     };
 
     return mergeActions;
