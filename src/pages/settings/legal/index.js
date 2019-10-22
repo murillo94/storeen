@@ -1,6 +1,6 @@
-import { useState } from 'react';
-
 import Page from 'layouts/adminSettingsContent/store';
+
+import useSettingsLegal from 'containers/useSettingsLegal';
 
 import Container from 'components/container';
 import Input from 'components/input';
@@ -9,25 +9,11 @@ import Button from 'components/button';
 
 import useLayout from 'hooks/layout/useLayout';
 
-const refundModel = 'Política de reembolso';
-const privacyModel = 'Política de privacidade';
-const serviceModel = 'Termos de serviço';
-const shippingModel = 'Política de envio';
-
 const LegalSettings = () => {
-  const [refundDescription, setRefundDescription] = useState('');
-  const [privacyDescription, setPrivacyDescription] = useState('');
-  const [serviceDescription, setServiceDescription] = useState('');
-  const [shippingDescription, setShippingDescription] = useState('');
-
-  const handleClickCopyRefundModel = () => setRefundDescription(refundModel);
-
-  const handleClickCopyPrivacyModel = () => setPrivacyDescription(privacyModel);
-
-  const handleClickCopyServiceModel = () => setServiceDescription(serviceModel);
-
-  const handleClickCopyShippingModel = () =>
-    setShippingDescription(shippingModel);
+  const {
+    state: { refund, privacy, service, shipping },
+    actions: { onChange, handleClickCopyModel }
+  } = useSettingsLegal();
 
   return (
     <>
@@ -39,13 +25,14 @@ const LegalSettings = () => {
         <Input
           labelText="Descrição"
           id="refund-description"
-          name="refund-description"
-          value={refundDescription}
+          name="refund.description"
+          value={refund.description}
+          onChange={onChange}
         />
         <Button
           appearance="minimal"
           text="Copiar modelo"
-          onClick={handleClickCopyRefundModel}
+          onClick={() => handleClickCopyModel('refund')}
         />
       </Container>
       <Container
@@ -56,13 +43,14 @@ const LegalSettings = () => {
         <Input
           labelText="Descrição"
           id="privacy-description"
-          name="privacy-description"
-          value={privacyDescription}
+          name="privacy.description"
+          value={privacy.description}
+          onChange={onChange}
         />
         <Button
           appearance="minimal"
           text="Copiar modelo"
-          onClick={handleClickCopyPrivacyModel}
+          onClick={() => handleClickCopyModel('privacy')}
         />
       </Container>
       <Container
@@ -73,13 +61,14 @@ const LegalSettings = () => {
         <Input
           labelText="Descrição"
           id="service-description"
-          name="service-description"
-          value={serviceDescription}
+          name="service.description"
+          value={service.description}
+          onChange={onChange}
         />
         <Button
           appearance="minimal"
           text="Copiar modelo"
-          onClick={handleClickCopyServiceModel}
+          onClick={() => handleClickCopyModel('service')}
         />
       </Container>
       <Container
@@ -90,13 +79,14 @@ const LegalSettings = () => {
         <Input
           labelText="Descrição"
           id="shipping-description"
-          name="shipping-description"
-          value={shippingDescription}
+          name="shipping.description"
+          value={shipping.description}
+          onChange={onChange}
         />
         <Button
           appearance="minimal"
           text="Copiar modelo"
-          onClick={handleClickCopyShippingModel}
+          onClick={() => handleClickCopyModel('shipping')}
         />
       </Container>
       <Footer>
