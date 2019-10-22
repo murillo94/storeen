@@ -14,7 +14,7 @@ import {
 } from 'components/table';
 import Icon from 'components/icon';
 
-import useLayout from 'hooks/layouts/useLayout';
+import useLayout from 'hooks/layout/useLayout';
 
 import { positive700, negative700 } from 'utils/themes/colors';
 

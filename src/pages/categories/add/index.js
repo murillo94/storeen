@@ -9,7 +9,7 @@ import Radio from 'components/radio';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
-import useLayout from 'hooks/layouts/useLayout';
+import useLayout from 'hooks/layout/useLayout';
 
 const AddCategorie = () => {
   const handleBack = () => Router.push('/categories');

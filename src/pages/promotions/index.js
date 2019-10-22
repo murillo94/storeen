@@ -11,7 +11,7 @@ import {
   TextTableCell
 } from 'components/table';
 
-import useLayout from 'hooks/layouts/useLayout';
+import useLayout from 'hooks/layout/useLayout';
 
 const headers = ['Nome', 'Desconto', 'Data de expiração'];
 const items = [

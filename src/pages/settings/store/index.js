@@ -5,7 +5,7 @@ import Input from 'components/input';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
-import useLayout from 'hooks/layouts/useLayout';
+import useLayout from 'hooks/layout/useLayout';
 
 const StoreSettings = () => (
   <>
