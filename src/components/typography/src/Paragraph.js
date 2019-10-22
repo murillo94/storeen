@@ -1,6 +1,8 @@
+import { memo } from 'react';
+
 import useFont from 'hooks/themes/useFont';
 
-const Paragraph = ({ text = '', color = 'inherit', customStyle = {} }) => {
+const Paragraph = memo(({ text = '', color = 'inherit', customStyle = {} }) => {
   const fontColor = useFont(color);
 
   return (
@@ -18,6 +20,6 @@ const Paragraph = ({ text = '', color = 'inherit', customStyle = {} }) => {
       </style>
     </>
   );
-};
+});
 
 export default Paragraph;

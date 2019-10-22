@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import useFont from 'hooks/themes/useFont';
 
 const H1 = ({ text, color, customStyle }) => (
@@ -51,27 +53,24 @@ const H3 = ({ text, color, customStyle }) => (
   </>
 );
 
-const Heading = ({
-  is = 'h1',
-  text = '',
-  color = 'inherit',
-  customStyle = {}
-}) => {
-  const fontColor = useFont(color);
+const Heading = memo(
+  ({ is = 'h1', text = '', color = 'inherit', customStyle = {} }) => {
+    const fontColor = useFont(color);
 
-  return (
-    <>
-      {is === 'h1' && (
-        <H1 text={text} color={fontColor} customStyle={customStyle} />
-      )}
-      {is === 'h2' && (
-        <H2 text={text} color={fontColor} customStyle={customStyle} />
-      )}
-      {is === 'h3' && (
-        <H3 text={text} color={fontColor} customStyle={customStyle} />
-      )}
-    </>
-  );
-};
+    return (
+      <>
+        {is === 'h1' && (
+          <H1 text={text} color={fontColor} customStyle={customStyle} />
+        )}
+        {is === 'h2' && (
+          <H2 text={text} color={fontColor} customStyle={customStyle} />
+        )}
+        {is === 'h3' && (
+          <H3 text={text} color={fontColor} customStyle={customStyle} />
+        )}
+      </>
+    );
+  }
+);
 
 export default Heading;
