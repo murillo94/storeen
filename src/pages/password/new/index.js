@@ -1,5 +1,7 @@
 import Page from 'layouts/login';
 
+import usePasswordNew from 'containers/usePasswordNew';
+
 import Image from 'components/image';
 import { Heading } from 'components/typography';
 import Input from 'components/input';
@@ -27,13 +29,27 @@ const Logo = () => (
   </div>
 );
 
-const New = () => (
-  <>
-    <Heading text="Redefinir sua senha" />
-    <Logo />
-    <Input type="email" labelText="Email" id="email" name="email" />
-    <Button text="Redefinir senha" customStyle={buttonStyle} />
-  </>
-);
+const New = () => {
+  const {
+    state: { email },
+    actions: { onChange }
+  } = usePasswordNew();
+
+  return (
+    <>
+      <Heading text="Redefinir sua senha" />
+      <Logo />
+      <Input
+        type="email"
+        labelText="Email"
+        id="email"
+        name="email"
+        value={email}
+        onChange={onChange}
+      />
+      <Button text="Redefinir senha" customStyle={buttonStyle} />
+    </>
+  );
+};
 
 export default useLayout(Page)(New);
