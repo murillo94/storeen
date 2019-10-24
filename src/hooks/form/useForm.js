@@ -1,16 +1,17 @@
 import { useState, useMemo } from 'react';
+import set from 'set-value';
 
 const defaultActions = setState => ({
   onChange: ({ target }) => {
-    const [parentKey, childKey] = target.name.split('.');
+    const { name, value } = target;
 
-    setState(prevState => ({
-      ...prevState,
-      [parentKey]: {
-        ...prevState[parentKey],
-        [childKey]: target.value
-      }
-    }));
+    setState(prevState => {
+      const newState = set(prevState, name, value);
+
+      return {
+        ...newState
+      };
+    });
   }
 });
 
