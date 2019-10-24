@@ -1,5 +1,7 @@
 import Page from 'layouts/login';
 
+import usePasswordChange from 'containers/usePasswordChange';
+
 import Image from 'components/image';
 import { Heading } from 'components/typography';
 import Input from 'components/input';
@@ -27,18 +29,27 @@ const Logo = () => (
   </div>
 );
 
-const Change = () => (
-  <>
-    <Heading text="Nova senha" />
-    <Logo />
-    <Input
-      type="password"
-      labelText="Senha"
-      id="new-password"
-      name="new-password"
-    />
-    <Button text="Alterar senha" customStyle={buttonStyle} />
-  </>
-);
+const Change = () => {
+  const {
+    state: { newPassword },
+    actions: { onChange }
+  } = usePasswordChange();
+
+  return (
+    <>
+      <Heading text="Nova senha" />
+      <Logo />
+      <Input
+        type="password"
+        labelText="Senha"
+        id="new-password"
+        name="newPassword"
+        value={newPassword}
+        onChange={onChange}
+      />
+      <Button text="Alterar senha" customStyle={buttonStyle} />
+    </>
+  );
+};
 
 export default useLayout(Page)(Change);
