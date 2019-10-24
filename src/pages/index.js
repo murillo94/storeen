@@ -2,6 +2,8 @@ import Router from 'next/router';
 
 import Page from 'layouts/login';
 
+import useLogin from 'containers/useLogin';
+
 import Image from 'components/image';
 import { Heading, Paragraph, Anchor } from 'components/typography';
 import { Form } from 'components/form';
@@ -39,6 +41,11 @@ const Logo = () => (
 );
 
 const Home = () => {
+  const {
+    state: { email, password },
+    actions: { onChange }
+  } = useLogin();
+
   const handleClickSignIn = () => Router.push('/home');
 
   return (
@@ -52,12 +59,21 @@ const Home = () => {
       <Anchor href="/" text="Crie sua loja, é grátis!" color="primary" />
       <Logo />
       <Form>
-        <Input type="email" labelText="Email" id="email" name="email" />
+        <Input
+          type="email"
+          labelText="Email"
+          id="email"
+          name="email"
+          value={email}
+          onChange={onChange}
+        />
         <Input
           type="password"
           labelText="Senha"
           id="password"
           name="password"
+          value={password}
+          onChange={onChange}
         />
       </Form>
       <Button
