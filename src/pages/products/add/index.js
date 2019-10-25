@@ -17,7 +17,7 @@ import useLayout from 'hooks/layout/useLayout';
 
 const AddProduct = () => {
   const {
-    state: { product, price, shipping, stock },
+    state: { product, price, shipping, stock, variations },
     actions: { onChange }
   } = useProductsAdd();
 
@@ -75,8 +75,10 @@ const AddProduct = () => {
           content={
             <Checkbox
               id="shipping"
-              name="shipping"
+              name="shipping.hasShipping"
               text="Este produto necessita de frete?"
+              checked={shipping.hasShipping}
+              onChange={onChange}
             />
           }
           action="onChange"
@@ -122,8 +124,10 @@ const AddProduct = () => {
           content={
             <Checkbox
               id="stock"
-              name="stock"
+              name="stock.hasStock"
               text="Controlar estoque do produto?"
+              checked={stock.hasStock}
+              onChange={onChange}
             />
           }
           action="onChange"
@@ -143,8 +147,10 @@ const AddProduct = () => {
           content={
             <Checkbox
               id="variations"
-              name="variations"
+              name="variations.hasVariations"
               text="Este produto possui variações?"
+              checked={variations.hasVariations}
+              onChange={onChange}
             />
           }
           action="onChange"

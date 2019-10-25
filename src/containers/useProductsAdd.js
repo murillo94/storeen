@@ -13,15 +13,19 @@ const useProductsAdd = () =>
       compare: ''
     },
     shipping: {
+      hasShipping: false,
       weight: '',
       height: '',
       width: '',
       length: ''
     },
     stock: {
+      hasStock: false,
       quantity: ''
     },
-    variations: {}
+    variations: {
+      hasVariations: false
+    }
   });
 
 export default useProductsAdd;
