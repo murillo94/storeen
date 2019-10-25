@@ -36,6 +36,7 @@ const Checkbox = ({
             id={id}
             name={name}
             value={value || checked}
+            checked={checked}
             aria-checked={checked}
             onChange={onChange}
           />
