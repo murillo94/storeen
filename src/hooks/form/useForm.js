@@ -3,10 +3,14 @@ import set from 'set-value';
 
 const defaultActions = setState => ({
   onChange: ({ target }) => {
-    const { name, value } = target;
+    const { name, type } = target;
 
     setState(prevState => {
-      const newState = set(prevState, name, value);
+      const newState = set(
+        prevState,
+        name,
+        type === 'checkbox' ? target.checked : target.value
+      );
 
       return {
         ...newState
