@@ -11,10 +11,13 @@ const usePromotionsAdd = () =>
     applicable: 'all',
     minimumRequirements: 'total-value-minimum',
     promotional: {
+      hasPromotional: true,
       code: '',
       uniqueCode: false
     },
-    schedule: {}
+    schedule: {
+      hasSchedule: false
+    }
   });
 
 export default usePromotionsAdd;

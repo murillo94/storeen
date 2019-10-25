@@ -33,7 +33,13 @@ const promotionTypeOptions = [
 
 const AddPromotion = () => {
   const {
-    state: { promotion, applicable, minimumRequirements, promotional },
+    state: {
+      promotion,
+      applicable,
+      minimumRequirements,
+      promotional,
+      schedule
+    },
     actions: { onChange }
   } = usePromotionsAdd();
 
@@ -123,8 +129,10 @@ const AddPromotion = () => {
           content={
             <Checkbox
               id="code"
-              name="code"
+              name="promotional.hasPromotional"
               text="Habilitar código promocional?"
+              checked={promotional.hasPromotional}
+              onChange={onChange}
             />
           }
           action="onChange"
@@ -148,7 +156,13 @@ const AddPromotion = () => {
       <Container title="Agendar" isForm>
         <Collapse
           content={
-            <Checkbox id="schedule" name="schedule" text="Agendar promoção?" />
+            <Checkbox
+              id="schedule-has-schedule"
+              name="schedule.hasSchedule"
+              text="Agendar promoção?"
+              checked={schedule.hasSchedule}
+              onChange={onChange}
+            />
           }
           action="onChange"
         >
