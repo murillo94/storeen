@@ -2,6 +2,8 @@ import Router from 'next/router';
 
 import Page from 'layouts/adminContent';
 
+import useCategoriesAdd from 'containers/useCategoriesAdd';
+
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import Input from 'components/input';
@@ -12,6 +14,11 @@ import Button from 'components/button';
 import useLayout from 'hooks/layout/useLayout';
 
 const AddCategorie = () => {
+  const {
+    state: { categorie, type },
+    actions: { onChange }
+  } = useCategoriesAdd();
+
   const handleBack = () => Router.push('/categories');
 
   return (
@@ -21,12 +28,16 @@ const AddCategorie = () => {
         <Input
           labelText="Título da categoria"
           id="categorie-title"
-          name="categorie-title"
+          name="categorie.title"
+          value={categorie.title}
+          onChange={onChange}
         />
         <Input
           labelText="Descrição"
           id="categorie-description"
-          name="categorie-description"
+          name="categorie.description"
+          value={categorie.description}
+          onChange={onChange}
         />
       </Container>
       <Container title="Tipo" isForm>
@@ -36,6 +47,8 @@ const AddCategorie = () => {
           value="manual"
           text="Manual"
           description="Escolha os produtos manualmente para essa coleção."
+          checked={type === 'manual'}
+          onChange={onChange}
         />
         <Radio
           id="automated"
@@ -43,6 +56,8 @@ const AddCategorie = () => {
           value="automated"
           text="Automatizada"
           description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
+          checked={type === 'automated'}
+          onChange={onChange}
         />
       </Container>
       <Footer>
