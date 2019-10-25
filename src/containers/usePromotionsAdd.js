@@ -11,7 +11,7 @@ const usePromotionsAdd = () =>
     applicable: 'all',
     minimumRequirements: 'total-value-minimum',
     promotional: {
-      hasPromotional: true,
+      hasPromotional: false,
       code: '',
       uniqueCode: false
     },
