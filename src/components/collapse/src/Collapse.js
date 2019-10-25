@@ -1,4 +1,4 @@
-import { useRef, cloneElement } from 'react';
+import { useRef, useEffect, cloneElement } from 'react';
 
 const Collapse = ({ children, content, action = 'onClick' }) => {
   const collapseRef = useRef(null);
@@ -7,10 +7,20 @@ const Collapse = ({ children, content, action = 'onClick' }) => {
     collapseRef.current.classList.toggle('visible');
   };
 
+  useEffect(() => {
+    const { checked, value } = content.props;
+    if (checked || value) {
+      handleCollapse();
+    }
+  }, []);
+
   return (
     <div className="collapse">
       {cloneElement(content, {
-        [action]: handleCollapse
+        [action]: e => {
+          if (content.props[action]) content.props[action](e);
+          handleCollapse();
+        }
       })}
       <div ref={collapseRef} className="hidden">
         {children}
