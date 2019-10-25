@@ -10,8 +10,10 @@ const Select = ({
   appearance = 'minimal',
   id = null,
   name = '',
+  value = '',
   labelText = '',
-  options = []
+  options = [],
+  onChange = null
 }) => {
   const theme = useTheme(appearance);
 
@@ -24,11 +26,15 @@ const Select = ({
           </Label>
         )}
         <div className="container">
-          <select id={id} name={name}>
+          <select id={id} name={name} value={value} onChange={onChange}>
             <option value="" aria-label="Empty" hidden />
-            {options.map(({ value }) => (
-              <option key={value} value={value} aria-label={value}>
-                {value}
+            {options.map(option => (
+              <option
+                key={option.value}
+                value={option.value}
+                aria-label={option.value}
+              >
+                {option.value}
               </option>
             ))}
           </select>
