@@ -22,6 +22,7 @@ const Logo = () => (
   <div>
     <Image
       src={require('images/logo-icon.svg')}
+      alt="Storeen logo icone"
       width="57px"
       height="57px"
       customStyle={imageStyle}

@@ -19,12 +19,18 @@ const Logo = () => (
     <div className="desktop-logo">
       <Image
         src={require('images/logo-all-horizontal.svg')}
+        alt="Storeen logo com nome horizontal"
         width="120px"
         height="100%"
       />
     </div>
     <div className="mobile-logo">
-      <Image src={require('images/logo-icon.svg')} width="40%" height="100%" />
+      <Image
+        src={require('images/logo-icon.svg')}
+        alt="Storeen logo icone"
+        width="40%"
+        height="100%"
+      />
     </div>
 
     <style jsx>
