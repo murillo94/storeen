@@ -4,10 +4,6 @@ import Button from 'components/button';
 
 import { mono0 } from 'utils/theme/colors';
 
-const buttonStyle = {
-  border: 'none'
-};
-
 const Dropdown = ({
   children,
   appearance = 'minimal',
@@ -42,7 +38,7 @@ const Dropdown = ({
           aria-controls={id}
           aria-expanded={visible}
           aria-haspopup="menu"
-          customStyle={!hasBorder && buttonStyle}
+          hasBorder={hasBorder}
           onClick={onClick}
         />
         {children}

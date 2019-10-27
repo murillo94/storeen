@@ -10,10 +10,6 @@ import Button from 'components/button';
 import { mono0, mono200 } from 'utils/theme/colors';
 import { radius800 } from 'utils/theme/radius';
 
-const buttonStyle = {
-  border: 'none'
-};
-
 const Logo = () => (
   <>
     <div className="desktop-logo">
@@ -125,7 +121,7 @@ const Content = ({ children, padding }) => {
               <Button
                 appearance="minimal"
                 icon="menu"
-                customStyle={buttonStyle}
+                hasBorder={false}
                 onClick={handleClickMenu}
               />
             </div>
@@ -133,7 +129,7 @@ const Content = ({ children, padding }) => {
               appearance="minimal"
               icon="external-link"
               text="ver minha loja"
-              customStyle={buttonStyle}
+              hasBorder={false}
             />
             <UserInfo />
           </Header>

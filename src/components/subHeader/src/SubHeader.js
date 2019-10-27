@@ -1,10 +1,6 @@
 import Button from 'components/button';
 import { Heading } from 'components/typography';
 
-const buttonStyle = {
-  border: 'none'
-};
-
 const SubHeader = ({
   children,
   title = '',
@@ -18,7 +14,7 @@ const SubHeader = ({
           <Button
             appearance="minimal"
             icon="chevron-left"
-            customStyle={buttonStyle}
+            hasBorder={false}
             onClick={onClick}
           />
         )}

@@ -15,8 +15,9 @@ const Button = ({
   type = 'button',
   text = '',
   icon = '',
-  customStyle = {},
+  hasBorder = true,
   disabled = false,
+  customStyle = {},
   onClick = null,
   ...props
 }) => {
@@ -54,7 +55,7 @@ const Button = ({
             font-weight: ${appearance !== 'minimal' ? 500 : 400};
             color: ${theme.color};
             background-color: ${theme.backgroundColor};
-            border: 1px solid ${theme.borderColor};
+            border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
             border-radius: ${radius600};
             padding: 10px;
             outline: 0;
