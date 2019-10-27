@@ -4,7 +4,7 @@ import Page from 'layouts/login';
 
 import useLogin from 'containers/useLogin';
 
-import Image from 'components/image';
+import { Image } from 'components/image';
 import { Heading, Paragraph, Anchor } from 'components/typography';
 import { Form } from 'components/form';
 import Input from 'components/input';

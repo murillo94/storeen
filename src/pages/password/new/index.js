@@ -2,7 +2,7 @@ import Page from 'layouts/login';
 
 import usePasswordNew from 'containers/usePasswordNew';
 
-import Image from 'components/image';
+import { Image } from 'components/image';
 import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';

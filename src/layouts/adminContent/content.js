@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Image from 'components/image';
+import { Image } from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
 import Overlay from 'components/overlay';
 import { TabList, Tab } from 'components/tab';
