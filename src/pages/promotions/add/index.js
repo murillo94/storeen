@@ -2,8 +2,6 @@ import Router from 'next/router';
 
 import Page from 'layouts/adminContent';
 
-import usePromotionsAdd from 'containers/usePromotionsAdd';
-
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import Input from 'components/input';
@@ -13,6 +11,8 @@ import Checkbox from 'components/checkbox';
 import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
+
+import usePromotionsAdd from 'containers/usePromotionsAdd';
 
 import useLayout from 'hooks/layout/useLayout';
 

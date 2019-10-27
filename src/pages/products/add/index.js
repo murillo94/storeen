@@ -2,8 +2,6 @@ import Router from 'next/router';
 
 import Page from 'layouts/adminContent';
 
-import useProductsAdd from 'containers/useProductsAdd';
-
 import SubHeader from 'components/subHeader';
 import Container from 'components/container';
 import { FormGroup } from 'components/form';
@@ -12,6 +10,8 @@ import Checkbox from 'components/checkbox';
 import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
+
+import useProductsAdd from 'containers/useProductsAdd';
 
 import useLayout from 'hooks/layout/useLayout';
 

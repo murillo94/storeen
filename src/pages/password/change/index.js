@@ -1,11 +1,11 @@
 import Page from 'layouts/login';
 
-import usePasswordChange from 'containers/usePasswordChange';
-
 import { Image } from 'components/image';
 import { Heading } from 'components/typography';
 import Input from 'components/input';
 import Button from 'components/button';
+
+import usePasswordChange from 'containers/usePasswordChange';
 
 import useLayout from 'hooks/layout/useLayout';
 

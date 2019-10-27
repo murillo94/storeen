@@ -1,12 +1,12 @@
 import Page from 'layouts/adminSettingsContent/account';
 
-import useAccountProfile from 'containers/useAccountProfile';
-
 import Container from 'components/container';
 import Input from 'components/input';
 import Collapse from 'components/collapse';
 import Footer from 'components/footer';
 import Button from 'components/button';
+
+import useAccountProfile from 'containers/useAccountProfile';
 
 import useLayout from 'hooks/layout/useLayout';
 

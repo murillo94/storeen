@@ -1,11 +1,11 @@
 import Page from 'layouts/adminSettingsContent/store';
 
-import useSettingsStore from 'containers/useSettingsStore';
-
 import Container from 'components/container';
 import Input from 'components/input';
 import Footer from 'components/footer';
 import Button from 'components/button';
+
+import useSettingsStore from 'containers/useSettingsStore';
 
 import useLayout from 'hooks/layout/useLayout';
 
