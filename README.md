@@ -20,6 +20,10 @@ $ yarn dev -p <custom_port>
 
 Avoid add libs to the project, all the ui components/logics must have to be create expect in specifics cases where adding a new lib is the best thing to do.
 
+### Custom style inline
+
+Only add custom style inline when is needed a condition to determine the style if not needed a condition create a object with the style outside the context.
+
 ### Ordering imports
 
 ```
