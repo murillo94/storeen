@@ -13,7 +13,7 @@ const PaymentsSettings = () => (
       title="Meios de pagamento"
       subTitle="Selecione um meio de pagamento para receber os pagamentos."
     >
-      <Container orientation="horizontal" hasBorder>
+      <Container orientation="horizontal" align="between" hasBorder>
         <ImageDescription
           src={require('images/payments/mercadopago.svg')}
           alt="Mercado Pago logo"
@@ -23,7 +23,7 @@ const PaymentsSettings = () => (
         />
         todo
       </Container>
-      <Container orientation="horizontal" hasBorder>
+      <Container orientation="horizontal" align="between" hasBorder>
         <ImageDescription
           src={require('images/payments/wirecard.svg')}
           alt="Wirecard logo"
@@ -33,7 +33,7 @@ const PaymentsSettings = () => (
         />
         todo
       </Container>
-      <Container orientation="horizontal" hasBorder>
+      <Container orientation="horizontal" align="between" hasBorder>
         <ImageDescription
           src={require('images/payments/pagseguro.svg')}
           alt="PagSeguro logo"
