@@ -5,7 +5,7 @@ const TableHeadCell = ({ children }) => (
     <style jsx>
       {`
         th {
-          padding-right: 20px;
+          padding: 0 21px;
           width: 145px;
         }
 

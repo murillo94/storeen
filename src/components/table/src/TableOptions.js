@@ -20,7 +20,7 @@ const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
     <style jsx>
       {`
         div {
-          margin-bottom: 35px;
+          padding: 20px 20px 30px;
           display: flex;
           justify-content: space-between;
           align-itens: center;

@@ -5,20 +5,30 @@ import TableBody from './TableBody';
 
 const Table = ({
   children,
+  title = '',
   optionsHeader,
   headers = [],
+  hasBoxShadow = true,
+  hasBorder = false,
   hasSearch = false,
   placeholderSearchSuffix = ''
 }) => {
   return (
     <>
-      <Container>
-        <TableOptions
-          hasSearch={hasSearch}
-          placeholderSearchSuffix={placeholderSearchSuffix}
-        >
-          {optionsHeader}
-        </TableOptions>
+      <Container
+        title={title}
+        padding="normal"
+        hasBoxShadow={hasBoxShadow}
+        hasBorder={hasBorder}
+      >
+        {(optionsHeader || hasSearch) && (
+          <TableOptions
+            hasSearch={hasSearch}
+            placeholderSearchSuffix={placeholderSearchSuffix}
+          >
+            {optionsHeader}
+          </TableOptions>
+        )}
         <div>
           <table>
             <TableHead headers={headers} />

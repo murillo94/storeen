@@ -17,8 +17,8 @@ const TextTableCell = ({ children, text = '', textCustomStyle }) => (
         }
 
         div :global(span) {
-          text-overflow: ellipsis;
           overflow: hidden;
+          stext-overflow: ellipsis;
         }
       `}
     </style>

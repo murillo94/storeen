@@ -5,7 +5,7 @@ const TableBodyCell = ({ children }) => (
     <style jsx>
       {`
         td {
-          padding-right: 20px;
+          padding: 0 21px;
           width: 145px;
         }
 
