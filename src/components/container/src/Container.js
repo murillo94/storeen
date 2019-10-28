@@ -14,6 +14,7 @@ const Container = ({
   subTitle = '',
   orientation = '',
   align = '',
+  hasBoxShadow = true,
   hasBorder = false,
   isForm = false
 }) => (
@@ -38,7 +39,7 @@ const Container = ({
       {`
         section {
           background-color: ${mono0};
-          box-shadow: ${!hasBorder &&
+          box-shadow: ${hasBoxShadow &&
             '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
           border: ${hasBorder && `1px solid ${mono100}`};
           border-radius: ${radius600};
