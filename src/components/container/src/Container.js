@@ -12,11 +12,13 @@ const Container = ({
   children,
   title = '',
   subTitle = '',
+  orientation = '',
+  align = '',
   hasBorder = false,
   isForm = false
 }) => (
   <>
-    <section>
+    <section className={`${orientation} ${align}`}>
       {title && (
         <header>
           <Heading is="h2" text={title} />
@@ -43,6 +45,31 @@ const Container = ({
           padding: 20px;
           margin-bottom: 45px;
           width: 100%;
+        }
+
+        .vertical {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .horizontal {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .right {
+          justify-content: flex-end;
+        }
+
+        .left {
+          justify-content: flex-start;
+        }
+
+        .between {
+          justify-content: space-between;
         }
 
         header {
