@@ -55,8 +55,9 @@ const Checkbox = ({
 
       <style jsx>
         {`
-          :global(label) {
+          :global(.input-check > label) {
             position: relative;
+            cursor: pointer;
           }
 
           input {
