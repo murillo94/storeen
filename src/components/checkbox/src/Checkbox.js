@@ -60,6 +60,10 @@ const Checkbox = ({
             cursor: pointer;
           }
 
+          div {
+            display: flex;
+          }
+
           input {
             opacity: 0;
             margin: 0;
