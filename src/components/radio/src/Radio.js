@@ -37,6 +37,7 @@ const Radio = ({
             name={name}
             value={value}
             aria-checked={checked}
+            checked={checked}
             onChange={onChange}
           />
           <span>{text}</span>
