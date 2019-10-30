@@ -1,8 +1,13 @@
 import { mono0, mono75, mono100 } from 'utils/theme/colors';
 
-const TableRow = ({ children, isBody = true, hover = true }) => (
+const TableRow = ({
+  children,
+  isBody = true,
+  hover = true,
+  onClick = null
+}) => (
   <>
-    <tr>{children}</tr>
+    <tr onClick={onClick}>{children}</tr>
 
     <style jsx>
       {`
@@ -10,6 +15,7 @@ const TableRow = ({ children, isBody = true, hover = true }) => (
           background-color: ${mono0};
           border-bottom: 1px solid ${mono100};
           height: 64px;
+          cursor: ${onClick ? 'pointer' : 'default'};
         }
 
         :last-child {
