@@ -2,7 +2,7 @@ import useForm from 'hooks/form/useForm';
 
 const useAccountProfile = () =>
   useForm({
-    personalData: {
+    personal: {
       name: '',
       email: '',
       phone: ''

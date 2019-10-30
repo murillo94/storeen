@@ -12,7 +12,7 @@ import useLayout from 'hooks/layout/useLayout';
 
 const AccountSettings = () => {
   const {
-    state: { personalData, password },
+    state: { personal, password },
     actions: { onChange }
   } = useAccountProfile();
 
@@ -26,24 +26,24 @@ const AccountSettings = () => {
         <Input
           labelText="Nome"
           id="name"
-          name="personalData.name"
-          value={personalData.name}
+          name="personal.name"
+          value={personal.name}
           onChange={onChange}
         />
         <Input
           type="email"
           labelText="Email"
           id="email"
-          name="personalData.email"
-          value={personalData.email}
+          name="personal.email"
+          value={personal.email}
           onChange={onChange}
         />
         <Input
           type="tel"
           labelText="Telefone"
           id="phone"
-          name="personalData.phone"
-          value={personalData.phone}
+          name="personal.phone"
+          value={personal.phone}
           mask="phone"
           onChange={onChange}
         />
