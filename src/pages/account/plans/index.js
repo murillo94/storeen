@@ -87,6 +87,7 @@ const PlansAccountSettings = () => {
             id="creditCardNumber"
             name="billing.creditCardNumber"
             value={billing.creditCardNumber}
+            mask="creditCardNumber"
             onChange={onChange}
           />
           <Input
@@ -94,6 +95,7 @@ const PlansAccountSettings = () => {
             id="expirationDate"
             name="billing.expirationDate"
             value={billing.expirationDate}
+            mask="expirationDate"
             onChange={onChange}
           />
           <Input
@@ -101,6 +103,7 @@ const PlansAccountSettings = () => {
             id="cvc"
             name="billing.cvc"
             value={billing.cvc}
+            mask="cvc"
             onChange={onChange}
           />
           <Input
