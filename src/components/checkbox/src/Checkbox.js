@@ -62,6 +62,7 @@ const Checkbox = ({
 
           div {
             display: flex;
+            flex-direction: column;
           }
 
           input {

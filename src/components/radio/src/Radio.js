@@ -62,6 +62,7 @@ const Radio = ({
 
           div {
             display: flex;
+            flex-direction: column;
           }
 
           input {
