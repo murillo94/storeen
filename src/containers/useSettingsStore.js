@@ -12,6 +12,7 @@ const useSettingsStore = () =>
       phone: ''
     },
     company: {
+      hasLegalPerson: false,
       name: '',
       cnpj: '',
       stateTax: '',
