@@ -2,12 +2,19 @@ import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
 import Input from 'components/input';
+import Collapse from 'components/collapse';
+import Checkbox from 'components/checkbox';
+import { Heading } from 'components/typography';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
 import useSettingsStore from 'containers/useSettingsStore';
 
 import useLayout from 'hooks/layout/useLayout';
+
+const headingCompanyStyle = {
+  marginBottom: '20px'
+};
 
 const StoreSettings = () => {
   const {
@@ -68,46 +75,72 @@ const StoreSettings = () => {
         />
       </Container>
       <Container
-        title="Dados da empresa"
-        subTitle="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
+        title={
+          company.hasLegalPerson
+            ? 'Dados de pessoa jurídica'
+            : 'Dados de pessoa física'
+        }
         isForm
       >
-        <Input
-          labelText="Razão Social"
-          id="company-name"
-          name="company.name"
-          value={company.name}
-          onChange={onChange}
-        />
-        <Input
-          type="text"
-          labelText="CNPJ"
-          id="company-cnpj"
-          name="company.cnpj"
-          value={company.cnpj}
-          mask="cnpj"
-          onChange={onChange}
-        />
-        <Input
-          labelText="Inscrição Municipal"
-          id="company-state-tax"
-          name="company.stateTax"
-          value={company.stateTax}
-          onChange={onChange}
-        />
-        <Input
-          labelText="Inscrição Estadual"
-          id="company-municipal-tax"
-          name="company.municipalTax"
-          value={company.municipalTax}
-          onChange={onChange}
-        />
-      </Container>
-      <Container
-        title="Dados do responsável"
-        subTitle="Seus dados pessoais são usados apenas para o cumprimento das leis vigentes."
-        isForm
-      >
+        <Collapse
+          content={
+            <Checkbox
+              id="company-has-legal-person"
+              name="company.hasLegalPerson"
+              text="Exibir dados de pessoa jurídica?"
+              description="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
+              checked={company.hasLegalPerson}
+              onChange={onChange}
+            />
+          }
+          hasMarginBottom
+          action="onChange"
+        >
+          {company.hasLegalPerson && (
+            <Heading
+              is="h3"
+              text="Dados da empresa"
+              customStyle={headingCompanyStyle}
+            />
+          )}
+          <Input
+            labelText="Razão Social"
+            id="company-name"
+            name="company.name"
+            value={company.name}
+            onChange={onChange}
+          />
+          <Input
+            type="text"
+            labelText="CNPJ"
+            id="company-cnpj"
+            name="company.cnpj"
+            value={company.cnpj}
+            mask="cnpj"
+            onChange={onChange}
+          />
+          <Input
+            labelText="Inscrição Municipal"
+            id="company-state-tax"
+            name="company.stateTax"
+            value={company.stateTax}
+            onChange={onChange}
+          />
+          <Input
+            labelText="Inscrição Estadual"
+            id="company-municipal-tax"
+            name="company.municipalTax"
+            value={company.municipalTax}
+            onChange={onChange}
+          />
+        </Collapse>
+        {company.hasLegalPerson && (
+          <Heading
+            is="h3"
+            text="Dados do responsável"
+            customStyle={headingCompanyStyle}
+          />
+        )}
         <Input
           labelText="Nome"
           id="responsible-name"
