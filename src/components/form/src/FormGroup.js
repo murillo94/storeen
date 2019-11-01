@@ -7,6 +7,7 @@ const FormGroup = ({ children, type = 'row' }) => (
         div {
           display: flex;
           flex-direction: ${type};
+          flex-wrap: wrap;
         }
 
         :not(:last-child) {
@@ -21,8 +22,9 @@ const FormGroup = ({ children, type = 'row' }) => (
 
         @media (min-width: 746px) {
           div :global(.input-form) {
-            min-width: 175px;
             margin-bottom: 0px !important;
+            flex: 0.5;
+            min-width: 175px;
           }
 
           div :global(div) + :global(div) {
