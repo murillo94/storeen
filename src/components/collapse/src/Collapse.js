@@ -1,6 +1,11 @@
 import { useRef, useEffect, cloneElement } from 'react';
 
-const Collapse = ({ children, content, action = 'onClick' }) => {
+const Collapse = ({
+  children,
+  content,
+  hasMarginBottom = false,
+  action = 'onClick'
+}) => {
   const collapseRef = useRef(null);
 
   const handleCollapse = () => {
@@ -27,6 +32,10 @@ const Collapse = ({ children, content, action = 'onClick' }) => {
       </div>
       <style jsx>
         {`
+          .collapse {
+            margin-bottom: ${hasMarginBottom && '20px'};
+          }
+
           .hidden {
             display: none;
           }
