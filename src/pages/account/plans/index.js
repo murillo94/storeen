@@ -9,6 +9,7 @@ import {
 import Radio from 'components/radio';
 import Container from 'components/container';
 import Input from 'components/input';
+import { FormGroup } from 'components/form';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -90,22 +91,24 @@ const PlansAccountSettings = () => {
             mask="creditCardNumber"
             onChange={onChange}
           />
-          <Input
-            labelText="Data de validade"
-            id="expirationDate"
-            name="billing.expirationDate"
-            value={billing.expirationDate}
-            mask="expirationDate"
-            onChange={onChange}
-          />
-          <Input
-            labelText="CVC"
-            id="cvc"
-            name="billing.cvc"
-            value={billing.cvc}
-            mask="cvc"
-            onChange={onChange}
-          />
+          <FormGroup>
+            <Input
+              labelText="Data de validade"
+              id="expirationDate"
+              name="billing.expirationDate"
+              value={billing.expirationDate}
+              mask="expirationDate"
+              onChange={onChange}
+            />
+            <Input
+              labelText="CVC"
+              id="cvc"
+              name="billing.cvc"
+              value={billing.cvc}
+              mask="cvc"
+              onChange={onChange}
+            />
+          </FormGroup>
           <Input
             labelText="Nome no cartão"
             id="name"
