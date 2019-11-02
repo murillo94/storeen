@@ -53,6 +53,23 @@ const H3 = ({ text, color, customStyle }) => (
   </>
 );
 
+const H4 = ({ text, color, customStyle }) => (
+  <>
+    <h3 style={{ ...customStyle }}>{text}</h3>
+
+    <style jsx>
+      {`
+        h3 {
+          font-size: 14px;
+          font-weight: 600;
+          color: ${color};
+          margin: 0;
+        }
+      `}
+    </style>
+  </>
+);
+
 const Heading = memo(
   ({ is = 'h1', text = '', color = 'inherit', customStyle = {} }) => {
     const fontColor = useFont(color);
@@ -67,6 +84,9 @@ const Heading = memo(
         )}
         {is === 'h3' && (
           <H3 text={text} color={fontColor} customStyle={customStyle} />
+        )}
+        {is === 'h4' && (
+          <H4 text={text} color={fontColor} customStyle={customStyle} />
         )}
       </>
     );
