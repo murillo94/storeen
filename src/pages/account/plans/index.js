@@ -10,6 +10,7 @@ import Radio from 'components/radio';
 import Container from 'components/container';
 import Input from 'components/input';
 import { FormGroup } from 'components/form';
+import Alert from 'components/alert';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -83,6 +84,7 @@ const PlansAccountSettings = () => {
       </Table>
       {plan.value && plan.value !== 'free' && (
         <Container title="Informações de faturamento" isForm>
+          <Alert title="todo" />
           <Input
             labelText="Número do cartão de crédito"
             id="creditCardNumber"
