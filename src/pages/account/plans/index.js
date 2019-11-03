@@ -19,6 +19,10 @@ import useAccountPlans from 'containers/useAccountPlans';
 import useLayout from 'hooks/layout/useLayout';
 
 const headers = ['Plano', 'Produtos', 'Preço'];
+const typePayment = {
+  monthly: 'mês',
+  anualy: 'anual'
+};
 const items = [
   {
     name: 'Grátis',
@@ -62,7 +66,7 @@ const PlansAccountSettings = () => {
     <>
       <Table title="Planos de cobrança" headers={headers}>
         {items.map(item => (
-          <TableRow key={item.name} onClick={() => onClickPlanRow(item.value)}>
+          <TableRow key={item.name} onClick={() => onClickPlanRow(item)}>
             <TableBodyCell>
               <Radio
                 id={item.value}
@@ -84,7 +88,12 @@ const PlansAccountSettings = () => {
       </Table>
       {plan.value && plan.value !== 'free' && (
         <Container title="Informações de faturamento" isForm>
-          <Alert title="todo" />
+          <Alert
+            title={`Seu plano: ${plan.name} - ${plan.price}/${
+              typePayment[plan.type]
+            }`}
+            description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
+          />
           <Input
             labelText="Número do cartão de crédito"
             id="creditCardNumber"
