@@ -1,12 +1,14 @@
 import useForm from 'hooks/form/useForm';
 
 const customActions = setState => ({
-  onClickPlanRow: value => {
+  onClickPlanRow: ({ name, value, price }) => {
     setState(prevState => ({
       ...prevState,
       plan: {
         ...prevState.plan,
-        value
+        name,
+        value,
+        price
       }
     }));
   }
@@ -18,7 +20,8 @@ const useAccountPlans = () =>
       plan: {
         name: '',
         value: 'free',
-        price: ''
+        price: '',
+        type: 'monthly'
       },
       billing: {
         creditCardNumber: '',
