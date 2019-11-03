@@ -13,6 +13,7 @@ const Text = memo(({ text = '', color = 'inherit', customStyle = {} }) => {
         {`
           span {
             font-size: 14px;
+            line-height: 20px;
             color: ${fontColor};
           }
         `}

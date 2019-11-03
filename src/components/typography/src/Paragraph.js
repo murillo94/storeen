@@ -13,7 +13,7 @@ const Paragraph = memo(({ text = '', color = 'inherit', customStyle = {} }) => {
         {`
           p {
             font-size: 14px;
-            line-height: 1.4;
+            line-height: 20px;
             color: ${fontColor};
             margin: 0 0 10px;
           }
