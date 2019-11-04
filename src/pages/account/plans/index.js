@@ -19,10 +19,6 @@ import useAccountPlans from 'containers/useAccountPlans';
 import useLayout from 'hooks/layout/useLayout';
 
 const headers = ['Plano', 'Produtos', 'Preço'];
-const typePayment = {
-  monthly: 'mês',
-  anualy: 'anual'
-};
 const items = [
   {
     name: 'Grátis',
@@ -81,7 +77,7 @@ const PlansAccountSettings = () => {
               <TextTableCell text={item.products} />
             </TableBodyCell>
             <TableBodyCell>
-              <TextTableCell text={item.price} />
+              <TextTableCell text={`${item.price}/mês`} />
             </TableBodyCell>
           </TableRow>
         ))}
@@ -89,9 +85,7 @@ const PlansAccountSettings = () => {
       {plan.value && plan.value !== 'free' && (
         <Container title="Informações de faturamento" isForm>
           <Alert
-            title={`Seu plano: ${plan.name} - ${plan.price}/${
-              typePayment[plan.type]
-            }`}
+            title={`Seu plano: ${plan.name} - ${plan.price}/mês`}
             description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
           />
           <Input
