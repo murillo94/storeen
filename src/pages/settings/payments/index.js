@@ -2,6 +2,7 @@ import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
 import { ImageDescription } from 'components/image';
+import Switch from 'components/switch';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -26,7 +27,7 @@ const PaymentsSettings = () => (
           width="32px"
           height="32px"
         />
-        todo
+        <Switch />
       </Container>
       <Container
         orientation="horizontal"
@@ -41,7 +42,7 @@ const PaymentsSettings = () => (
           width="32px"
           height="32px"
         />
-        todo
+        <Switch />
       </Container>
       <Container
         orientation="horizontal"
@@ -56,7 +57,7 @@ const PaymentsSettings = () => (
           width="32px"
           height="32px"
         />
-        todo
+        <Switch />
       </Container>
       <Container
         orientation="horizontal"
@@ -71,7 +72,7 @@ const PaymentsSettings = () => (
           width="32px"
           height="32px"
         />
-        todo
+        <Switch />
       </Container>
     </Container>
     <Footer>
