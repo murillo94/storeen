@@ -17,7 +17,7 @@ const Table = ({
     <>
       <Container
         title={title}
-        padding="normal"
+        padding="0px"
         hasBoxShadow={hasBoxShadow}
         hasBorder={hasBorder}
       >
