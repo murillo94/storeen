@@ -14,13 +14,14 @@ const Container = ({
   subTitle = '',
   orientation = '',
   align = '',
-  padding = 'default',
+  padding = '20px',
+  margin = '0 0 45px',
   hasBoxShadow = true,
   hasBorder = false,
   isForm = false
 }) => (
   <>
-    <section className={`${orientation} ${align} ${padding}`}>
+    <section className={`${orientation} ${align}`} style={{ padding, margin }}>
       {title && (
         <header>
           <Heading is="h2" text={title} />
@@ -44,7 +45,6 @@ const Container = ({
             '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
           border: ${hasBorder && `1px solid ${mono100}`};
           border-radius: ${radius600};
-          margin-bottom: 45px;
           width: 100%;
           overflow: hidden;
         }
@@ -78,16 +78,8 @@ const Container = ({
           justify-content: space-between;
         }
 
-        .default {
-          padding: 20px;
-        }
-
-        .normal {
-          padding: 0;
-        }
-
         header {
-          padding: ${padding === 'normal' && '20px'};
+          padding: ${padding === '0px' && '20px'};
           padding-bottom: 20px;
         }
       `}
