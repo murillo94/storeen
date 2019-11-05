@@ -48,7 +48,7 @@ const Switch = ({
           span {
             background-color: ${mono200};
             border-radius: 20px;
-            width: 46px;
+            width: 44px;
             height: 22px;
             transition: all 0.12s ease-in-out 0s;
             display: flex;
@@ -78,7 +78,7 @@ const Switch = ({
 
           input:checked + span:before {
             background-color: ${mono0};
-            margin-left: 7px;
+            margin-left: 5px;
             transform: translateX(100%);
           }
         `}
