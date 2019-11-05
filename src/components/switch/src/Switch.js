@@ -10,6 +10,8 @@ const Switch = ({
   id = null,
   name = '',
   value = '',
+  leftText = '',
+  rightText = '',
   checked = false,
   onChange = null
 }) => {
@@ -18,6 +20,7 @@ const Switch = ({
   return (
     <>
       <div>
+        {leftText}
         <Label id={`${id}-switch-label`} htmlFor={id}>
           <input
             type="checkbox"
@@ -28,13 +31,21 @@ const Switch = ({
             aria-checked={checked}
             onChange={onChange}
           />
-          <span className="slider round" />
+          <span />
         </Label>
+        {rightText}
       </div>
       <style jsx>
         {`
+          div {
+            display: flex;
+            align-items: center;
+          }
+
           div :global(label) {
             margin: 0;
+            margin-left: ${leftText && '5px'};
+            margin-right: ${rightText && '5px'};
             position: relative;
             cursor: pointer;
           }
@@ -50,7 +61,7 @@ const Switch = ({
             border-radius: 20px;
             width: 44px;
             height: 22px;
-            transition: all 0.12s ease-in-out 0s;
+            transition: background-color 0.12s ease-in-out 0s;
             display: flex;
             align-items: center;
             user-select: none;
