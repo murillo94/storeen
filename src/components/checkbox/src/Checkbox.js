@@ -30,7 +30,11 @@ const Checkbox = ({
         className={`input-check input-form ${description &&
           'with-description'}`}
       >
-        <Label htmlFor={id} customStyle={labelStyle}>
+        <Label
+          id={`${id}-checkbox-label`}
+          htmlFor={id}
+          customStyle={labelStyle}
+        >
           <input
             type="checkbox"
             id={id}
@@ -66,10 +70,10 @@ const Checkbox = ({
           }
 
           input {
-            opacity: 0;
             margin: 0;
-            height: 18px;
             width: 18px;
+            height: 18px;
+            opacity: 0;
           }
 
           span {

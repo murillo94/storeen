@@ -21,7 +21,7 @@ const Select = ({
     <>
       <div className="input-normal input-form">
         {labelText && (
-          <Label id={`${id}-label`} htmlFor={id}>
+          <Label id={`${id}-select-label`} htmlFor={id}>
             {labelText}
           </Label>
         )}

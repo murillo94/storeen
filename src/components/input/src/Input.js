@@ -22,7 +22,7 @@ const Input = memo(
   }) => (
     <div className="input-normal input-form">
       {labelText && (
-        <Label id={`${id}-label`} htmlFor={id}>
+        <Label id={`${id}-input-label`} htmlFor={id}>
           {labelText}
         </Label>
       )}

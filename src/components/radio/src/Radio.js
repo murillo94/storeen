@@ -30,7 +30,7 @@ const Radio = ({
         className={`input-check input-form ${description &&
           'with-description'}`}
       >
-        <Label htmlFor={id} customStyle={labelStyle}>
+        <Label id={`${id}-radio-label`} htmlFor={id} customStyle={labelStyle}>
           <input
             type="radio"
             id={id}
@@ -66,10 +66,10 @@ const Radio = ({
           }
 
           input {
-            opacity: 0;
             margin: 0;
-            height: 18px;
             width: 18px;
+            height: 18px;
+            opacity: 0;
           }
 
           span {
