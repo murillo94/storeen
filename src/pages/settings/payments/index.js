@@ -25,6 +25,8 @@ const PaymentsSettings = () => {
         <Container
           orientation="horizontal"
           align="between"
+          padding="15px"
+          margin="0 0 20px"
           hasBoxShadow={false}
           hasBorder
         >
@@ -45,6 +47,8 @@ const PaymentsSettings = () => {
         <Container
           orientation="horizontal"
           align="between"
+          padding="15px"
+          margin="0 0 20px"
           hasBoxShadow={false}
           hasBorder
         >
@@ -65,6 +69,8 @@ const PaymentsSettings = () => {
         <Container
           orientation="horizontal"
           align="between"
+          padding="15px"
+          margin="0 0 20px"
           hasBoxShadow={false}
           hasBorder
         >
@@ -85,6 +91,8 @@ const PaymentsSettings = () => {
         <Container
           orientation="horizontal"
           align="between"
+          padding="15px"
+          margin="0"
           hasBoxShadow={false}
           hasBorder
         >
