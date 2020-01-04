@@ -1,4 +1,4 @@
-import { Label } from 'components/typography';
+import { Text, Label } from 'components/typography';
 
 import useTheme from 'hooks/theme/useTheme';
 
@@ -12,6 +12,7 @@ const Switch = ({
   value = '',
   leftText = '',
   rightText = '',
+  colorText = 'muted',
   checked = false,
   onChange = null
 }) => {
@@ -20,7 +21,7 @@ const Switch = ({
   return (
     <>
       <div>
-        {leftText}
+        <Text text={leftText} color={colorText} />
         <Label id={`${id}-switch-label`} htmlFor={id}>
           <input
             type="checkbox"
@@ -33,7 +34,7 @@ const Switch = ({
           />
           <span />
         </Label>
-        {rightText}
+        <Text text={rightText} color={colorText} />
       </div>
       <style jsx>
         {`
@@ -44,8 +45,8 @@ const Switch = ({
 
           div :global(label) {
             margin: 0;
-            margin-left: ${leftText && '5px'};
-            margin-right: ${rightText && '5px'};
+            margin-left: ${leftText && '7px'};
+            margin-right: ${rightText && '7px'};
             position: relative;
             cursor: pointer;
           }
