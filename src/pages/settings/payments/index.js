@@ -2,6 +2,7 @@ import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
 import { ImageDescription } from 'components/image';
+import Collapse from 'components/collapse';
 import Switch from 'components/switch';
 import Footer from 'components/footer';
 import Button from 'components/button';
@@ -9,6 +10,22 @@ import Button from 'components/button';
 import useSettingsPayments from 'containers/useSettingsPayments';
 
 import useLayout from 'hooks/layout/useLayout';
+
+const ContainerPayment = ({ children, collapse }) => (
+  <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
+    <Container
+      orientation="horizontal"
+      align="between"
+      padding="0"
+      margin="0"
+      hasBoxShadow={false}
+      hasBorder={false}
+    >
+      {children}
+    </Container>
+    {collapse}
+  </Container>
+);
 
 const PaymentsSettings = () => {
   const {
@@ -22,13 +39,10 @@ const PaymentsSettings = () => {
         title="Meios de pagamento"
         subTitle="Selecione um meio de pagamento para receber os pagamentos."
       >
-        <Container
-          orientation="horizontal"
-          align="between"
-          padding="15px"
-          margin="0 0 20px"
-          hasBoxShadow={false}
-          hasBorder
+        <ContainerPayment
+          collapse={
+            <Collapse isOpen={mercadoPago.active}>todo mercadoPago</Collapse>
+          }
         >
           <ImageDescription
             src={require('images/payments/mercadopago.svg')}
@@ -43,14 +57,9 @@ const PaymentsSettings = () => {
             checked={mercadoPago.active}
             onChange={onChange}
           />
-        </Container>
-        <Container
-          orientation="horizontal"
-          align="between"
-          padding="15px"
-          margin="0 0 20px"
-          hasBoxShadow={false}
-          hasBorder
+        </ContainerPayment>
+        <ContainerPayment
+          collapse={<Collapse isOpen={wirecard.active}>todo wirecard</Collapse>}
         >
           <ImageDescription
             src={require('images/payments/wirecard.svg')}
@@ -65,14 +74,11 @@ const PaymentsSettings = () => {
             checked={wirecard.active}
             onChange={onChange}
           />
-        </Container>
-        <Container
-          orientation="horizontal"
-          align="between"
-          padding="15px"
-          margin="0 0 20px"
-          hasBoxShadow={false}
-          hasBorder
+        </ContainerPayment>
+        <ContainerPayment
+          collapse={
+            <Collapse isOpen={pagSeguro.active}>todo pagSeguro</Collapse>
+          }
         >
           <ImageDescription
             src={require('images/payments/pagseguro.svg')}
@@ -87,14 +93,9 @@ const PaymentsSettings = () => {
             checked={pagSeguro.active}
             onChange={onChange}
           />
-        </Container>
-        <Container
-          orientation="horizontal"
-          align="between"
-          padding="15px"
-          margin="0"
-          hasBoxShadow={false}
-          hasBorder
+        </ContainerPayment>
+        <ContainerPayment
+          collapse={<Collapse isOpen={paypal.active}>todo paypal</Collapse>}
         >
           <ImageDescription
             src={require('images/payments/paypal.svg')}
@@ -109,7 +110,7 @@ const PaymentsSettings = () => {
             checked={paypal.active}
             onChange={onChange}
           />
-        </Container>
+        </ContainerPayment>
       </Container>
       <Footer>
         <Button text="Salvar" />
