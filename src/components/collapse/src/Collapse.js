@@ -3,6 +3,7 @@ import { useRef, useEffect, cloneElement } from 'react';
 const Collapse = ({
   children,
   content,
+  isOpen = false,
   hasMarginBottom = false,
   action = 'onClick'
 }) => {
@@ -13,20 +14,32 @@ const Collapse = ({
   };
 
   useEffect(() => {
-    const { checked, value } = content.props;
-    if (checked || value) {
-      handleCollapse();
+    if (content) {
+      const { checked, value } = content.props;
+
+      if (checked || value) {
+        handleCollapse();
+      }
     }
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      collapseRef.current.classList.add('visible');
+    } else {
+      collapseRef.current.classList.remove('visible');
+    }
+  }, [isOpen]);
+
   return (
     <div className="collapse">
-      {cloneElement(content, {
-        [action]: e => {
-          if (content.props[action]) content.props[action](e);
-          handleCollapse();
-        }
-      })}
+      {content &&
+        cloneElement(content, {
+          [action]: e => {
+            if (content.props[action]) content.props[action](e);
+            handleCollapse();
+          }
+        })}
       <div ref={collapseRef} className="hidden">
         {children}
       </div>
