@@ -11,6 +11,7 @@ const subTitleStyle = {
 const Container = ({
   children,
   title = '',
+  optionsTitle,
   subTitle = '',
   orientation = '',
   align = '',
@@ -24,7 +25,10 @@ const Container = ({
     <section className={`${orientation} ${align}`} style={{ padding, margin }}>
       {title && (
         <header>
-          <Heading is="h2" text={title} />
+          <div>
+            <Heading is="h2" text={title} />
+            {optionsTitle}
+          </div>
           {subTitle && (
             <Paragraph
               text={subTitle}
@@ -81,6 +85,11 @@ const Container = ({
         header {
           padding: ${padding === '0px' && '20px'};
           padding-bottom: 20px;
+        }
+
+        header > div {
+          display: flex;
+          justify-content: space-between;
         }
       `}
     </style>
