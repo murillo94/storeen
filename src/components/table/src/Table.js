@@ -6,6 +6,7 @@ import TableBody from './TableBody';
 const Table = ({
   children,
   title = '',
+  optionsTitle,
   optionsHeader,
   headers = [],
   hasBoxShadow = true,
@@ -17,6 +18,7 @@ const Table = ({
     <>
       <Container
         title={title}
+        optionsTitle={optionsTitle}
         padding="0px"
         hasBoxShadow={hasBoxShadow}
         hasBorder={hasBorder}
