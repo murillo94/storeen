@@ -20,7 +20,8 @@ const useAccountPlans = () =>
       plan: {
         name: '',
         value: 'free',
-        price: ''
+        price: '',
+        isAnnually: false
       },
       billing: {
         creditCardNumber: '',

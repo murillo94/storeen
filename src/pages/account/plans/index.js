@@ -6,6 +6,7 @@ import {
   TableBodyCell,
   TextTableCell
 } from 'components/table';
+import Switch from 'components/switch';
 import Radio from 'components/radio';
 import Container from 'components/container';
 import Input from 'components/input';
@@ -24,33 +25,53 @@ const items = [
     name: 'Grátis',
     value: 'free',
     products: '2 produtos',
-    price: 'R$0'
+    price: {
+      monthly: 'R$0',
+      annually: 'R$0'
+    }
   },
   {
     name: 'Iniciante',
     value: 'starter',
     products: '5 produtos',
-    price: 'R$15'
+    price: {
+      monthly: 'R$15',
+      annually: 'R$7.5'
+    }
   },
   {
     name: 'Pequeno',
     value: 'small',
     products: '15 produtos',
-    price: 'R$35'
+    price: {
+      monthly: 'R$35',
+      annually: 'R$17.5'
+    }
   },
   {
     name: 'Médio',
     value: 'medium',
     products: '20 produtos',
-    price: 'R$50'
+    price: {
+      monthly: 'R$50',
+      annually: 'R$25'
+    }
   },
   {
     name: 'Grande',
     value: 'platinum',
     products: 'Ilimitado',
-    price: 'R$109'
+    price: {
+      monthly: 'R$109',
+      annually: 'R$54.5'
+    }
   }
 ];
+
+const typePlan = {
+  false: 'monthly',
+  true: 'annually'
+};
 
 const PlansAccountSettings = () => {
   const {
@@ -58,9 +79,26 @@ const PlansAccountSettings = () => {
     actions: { onChange, onClickPlanRow }
   } = useAccountPlans();
 
+  const selectedTypePlan = typePlan[plan.isAnnually];
+  const nameSelectedTypePlan = selectedTypePlan === 'annually' ? 'ano' : 'mês';
+
   return (
     <>
-      <Table title="Planos de cobrança" headers={headers}>
+      <Table
+        title="Planos de cobrança"
+        headers={headers}
+        optionsTitle={
+          <Switch
+            id="type"
+            name="plan.isAnnually"
+            value="plan.isAnnually"
+            leftText="mensal"
+            rightText="anual"
+            checked={plan.isAnnually}
+            onChange={onChange}
+          />
+        }
+      >
         {items.map(item => (
           <TableRow key={item.name} onClick={() => onClickPlanRow(item)}>
             <TableBodyCell>
@@ -77,7 +115,9 @@ const PlansAccountSettings = () => {
               <TextTableCell text={item.products} />
             </TableBodyCell>
             <TableBodyCell>
-              <TextTableCell text={`${item.price}/mês`} />
+              <TextTableCell
+                text={`${item.price[selectedTypePlan]}/${nameSelectedTypePlan}`}
+              />
             </TableBodyCell>
           </TableRow>
         ))}
@@ -85,8 +125,8 @@ const PlansAccountSettings = () => {
       {plan.value && plan.value !== 'free' && (
         <Container title="Informações de faturamento" isForm>
           <Alert
-            title={`Seu plano: ${plan.name} - ${plan.price}/mês`}
-            description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
+            title={`Seu plano: ${plan.name} - ${plan.price[selectedTypePlan]}/${nameSelectedTypePlan}`}
+            description={`Cobraremos em seu cartão ${plan.price[selectedTypePlan]}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
           />
           <Input
             labelText="Número do cartão de crédito"
