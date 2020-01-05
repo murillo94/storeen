@@ -15,71 +15,19 @@ import Alert from 'components/alert';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
-import useAccountPlans from 'containers/useAccountPlans';
+import useAccountPlans, { TYPE, PLANS } from 'containers/useAccountPlans';
 
 import useLayout from 'hooks/layout/useLayout';
 
 const headers = ['Plano', 'Produtos', 'Preço'];
-const items = [
-  {
-    name: 'Grátis',
-    value: 'free',
-    products: '2 produtos',
-    price: {
-      monthly: 'R$0',
-      annually: 'R$0'
-    }
-  },
-  {
-    name: 'Iniciante',
-    value: 'starter',
-    products: '5 produtos',
-    price: {
-      monthly: 'R$15',
-      annually: 'R$7.5'
-    }
-  },
-  {
-    name: 'Pequeno',
-    value: 'small',
-    products: '15 produtos',
-    price: {
-      monthly: 'R$35',
-      annually: 'R$17.5'
-    }
-  },
-  {
-    name: 'Médio',
-    value: 'medium',
-    products: '20 produtos',
-    price: {
-      monthly: 'R$50',
-      annually: 'R$25'
-    }
-  },
-  {
-    name: 'Grande',
-    value: 'platinum',
-    products: 'Ilimitado',
-    price: {
-      monthly: 'R$109',
-      annually: 'R$54.5'
-    }
-  }
-];
-
-const typePlan = {
-  false: 'monthly',
-  true: 'annually'
-};
 
 const PlansAccountSettings = () => {
   const {
-    state: { plan, billing },
-    actions: { onChange, onClickPlanRow }
+    state: { plan, billing, isAnnually },
+    actions: { onChange, onClickTypePlan, onClickPlanRow }
   } = useAccountPlans();
 
-  const selectedTypePlan = typePlan[plan.isAnnually];
+  const selectedTypePlan = TYPE[isAnnually];
   const nameSelectedTypePlan = selectedTypePlan === 'annually' ? 'ano' : 'mês';
 
   return (
@@ -90,16 +38,16 @@ const PlansAccountSettings = () => {
         optionsTitle={
           <Switch
             id="type"
-            name="plan.isAnnually"
-            value="plan.isAnnually"
+            name="isAnnually"
+            value="isAnnually"
             leftText="mensal"
             rightText="anual"
-            checked={plan.isAnnually}
-            onChange={onChange}
+            checked={isAnnually}
+            onChange={onClickTypePlan}
           />
         }
       >
-        {items.map(item => (
+        {PLANS.map(item => (
           <TableRow key={item.name} onClick={() => onClickPlanRow(item)}>
             <TableBodyCell>
               <Radio
@@ -122,11 +70,11 @@ const PlansAccountSettings = () => {
           </TableRow>
         ))}
       </Table>
-      {plan.value && plan.value !== 'free' && (
+      {plan.value && plan.value !== PLANS[0].value && (
         <Container title="Informações de faturamento" isForm>
           <Alert
-            title={`Seu plano: ${plan.name} - ${plan.price[selectedTypePlan]}/${nameSelectedTypePlan}`}
-            description={`Cobraremos em seu cartão ${plan.price[selectedTypePlan]}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
+            title={`Seu plano: ${plan.name} - ${plan.price}/${nameSelectedTypePlan}`}
+            description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
           />
           <Input
             labelText="Número do cartão de crédito"
