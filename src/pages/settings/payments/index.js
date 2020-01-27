@@ -3,6 +3,8 @@ import Page from 'layouts/adminSettingsContent/store';
 import Container from 'components/container';
 import { ImageDescription } from 'components/image';
 import Collapse from 'components/collapse';
+import { Paragraph } from 'components/typography';
+import Input from 'components/input';
 import Switch from 'components/switch';
 import Footer from 'components/footer';
 import Button from 'components/button';
@@ -10,6 +12,10 @@ import Button from 'components/button';
 import useSettingsPayments from 'containers/useSettingsPayments';
 
 import useLayout from 'hooks/layout/useLayout';
+
+const subTitleStyle = {
+  marginTop: '0'
+};
 
 const ContainerPayment = ({ children, collapse }) => (
   <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
@@ -41,7 +47,21 @@ const PaymentsSettings = () => {
       >
         <ContainerPayment
           collapse={
-            <Collapse isOpen={mercadoPago.active}>todo mercadoPago</Collapse>
+            <Collapse isOpen={mercadoPago.active}>
+              <Paragraph
+                text="Informe o endereço de e-mail que você usou para criar sua conta do Mercado Pago. Mais informações sobre como conectar o Mercado Pago podem ser encontradas aqui."
+                color="muted"
+                customStyle={subTitleStyle}
+              />
+              <Input
+                type="email"
+                labelText="Email"
+                id="mercado-pago-email"
+                name="mercadoPago.email"
+                value={mercadoPago.email}
+                onChange={onChange}
+              />
+            </Collapse>
           }
         >
           <ImageDescription
@@ -59,7 +79,23 @@ const PaymentsSettings = () => {
           />
         </ContainerPayment>
         <ContainerPayment
-          collapse={<Collapse isOpen={wirecard.active}>todo wirecard</Collapse>}
+          collapse={
+            <Collapse isOpen={wirecard.active}>
+              <Paragraph
+                text="Informe o endereço de e-mail que você usou para criar sua conta da Wirecard. Mais informações sobre como conectar o Wirecard podem ser encontradas aqui."
+                color="muted"
+                customStyle={subTitleStyle}
+              />
+              <Input
+                type="email"
+                labelText="Email"
+                id="wirecard-email"
+                name="wirecard.email"
+                value={wirecard.email}
+                onChange={onChange}
+              />
+            </Collapse>
+          }
         >
           <ImageDescription
             src={require('images/payments/wirecard.svg')}
@@ -77,7 +113,21 @@ const PaymentsSettings = () => {
         </ContainerPayment>
         <ContainerPayment
           collapse={
-            <Collapse isOpen={pagSeguro.active}>todo pagSeguro</Collapse>
+            <Collapse isOpen={pagSeguro.active}>
+              <Paragraph
+                text="Informe o endereço de e-mail que você usou para criar sua conta da PagSeguro. Mais informações sobre como conectar o PagSeguro podem ser encontradas aqui."
+                color="muted"
+                customStyle={subTitleStyle}
+              />
+              <Input
+                type="email"
+                labelText="Email"
+                id="pag-seguro-email"
+                name="pagSeguro.email"
+                value={pagSeguro.email}
+                onChange={onChange}
+              />
+            </Collapse>
           }
         >
           <ImageDescription
@@ -95,7 +145,23 @@ const PaymentsSettings = () => {
           />
         </ContainerPayment>
         <ContainerPayment
-          collapse={<Collapse isOpen={paypal.active}>todo paypal</Collapse>}
+          collapse={
+            <Collapse isOpen={paypal.active}>
+              <Paragraph
+                text="Informe o endereço de e-mail que você usou para criar sua conta da PayPal. Mais informações sobre como conectar o PayPal podem ser encontradas aqui."
+                color="muted"
+                customStyle={subTitleStyle}
+              />
+              <Input
+                type="email"
+                labelText="Email"
+                id="paypal-email"
+                name="paypal.email"
+                value={paypal.email}
+                onChange={onChange}
+              />
+            </Collapse>
+          }
         >
           <ImageDescription
             src={require('images/payments/paypal.svg')}

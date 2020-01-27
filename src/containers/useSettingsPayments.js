@@ -3,16 +3,20 @@ import useForm from 'hooks/form/useForm';
 const useSettingsPayments = () =>
   useForm({
     mercadoPago: {
-      active: false
+      active: false,
+      email: ''
     },
     wirecard: {
-      active: false
+      active: false,
+      email: ''
     },
     pagSeguro: {
-      active: false
+      active: false,
+      email: ''
     },
     paypal: {
-      active: false
+      active: false,
+      email: ''
     }
   });
 
