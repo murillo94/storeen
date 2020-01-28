@@ -9,7 +9,7 @@ const labelStyle = {
 };
 
 const descriptionStyle = {
-  margin: '0'
+  margin: '5px 0 0'
 };
 
 const Checkbox = ({
@@ -47,13 +47,11 @@ const Checkbox = ({
           <span>{text}</span>
         </Label>
         {description && (
-          <div className="description">
-            <Paragraph
-              text={description}
-              color="muted"
-              customStyle={descriptionStyle}
-            />
-          </div>
+          <Paragraph
+            text={description}
+            color="muted"
+            customStyle={descriptionStyle}
+          />
         )}
       </div>
 
@@ -126,10 +124,6 @@ const Checkbox = ({
 
           input:checked + span::after {
             transform: rotate(45deg) scale(1);
-          }
-
-          .description {
-            margin-top: 5px;
           }
         `}
       </style>
