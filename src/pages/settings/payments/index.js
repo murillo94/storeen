@@ -18,19 +18,22 @@ const descriptionStyle = {
 };
 
 const ContainerPayment = ({ children, collapse }) => (
-  <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
-    <Container
-      orientation="horizontal"
-      align="between"
-      padding="0"
-      margin="0"
-      hasBoxShadow={false}
-      hasBorder={false}
-    >
-      {children}
+  <>
+    <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
+      <div>{children}</div>
+      {collapse}
     </Container>
-    {collapse}
-  </Container>
+
+    <style jsx>
+      {`
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      `}
+    </style>
+  </>
 );
 
 const PaymentsSettings = () => {
