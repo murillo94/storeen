@@ -65,6 +65,14 @@
     "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.(png|ico)$": "<rootDir>/config/jest/fileTransformer.js"
+    },
+    "moduleNameMapper": {
+      "^components(.*)$": "<rootDir>/src/components$1",
+      "^containers(.*)$": "<rootDir>/src/containers$1",
+      "^layouts(.*)$": "<rootDir>/src/layouts$1",
+      "^hooks(.*)$": "<rootDir>/src/hooks$1",
+      "^utils(.*)$": "<rootDir>/src/utils$1",
+      "^images(.*)$": "<rootDir>/src/images$1"
     }
   },
   "babel": {

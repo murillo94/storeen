@@ -55,11 +55,11 @@ const H3 = ({ text, color, customStyle }) => (
 
 const H4 = ({ text, color, customStyle }) => (
   <>
-    <h3 style={{ ...customStyle }}>{text}</h3>
+    <h4 style={{ ...customStyle }}>{text}</h4>
 
     <style jsx>
       {`
-        h3 {
+        h4 {
           font-size: 14px;
           font-weight: 600;
           color: ${color};
