@@ -34,7 +34,7 @@ describe('Anchor', () => {
 
     const button = getByRole('button');
 
-    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent(content);
 
     fireEvent.click(button);
 

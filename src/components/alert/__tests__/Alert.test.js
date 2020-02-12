@@ -25,14 +25,14 @@ describe('Anchor', () => {
   });
 
   test('should have title and description', () => {
-    const { getByText } = render(
+    const { getByRole, getByText } = render(
       <Alert title="im title" description="im description" />
     );
 
-    const title = getByText('im title');
+    const title = getByRole('heading');
     const description = getByText('im description');
 
-    expect(title).toBeInTheDocument();
+    expect(title).toHaveTextContent('im title');
     expect(description).toBeInTheDocument();
   });
 
