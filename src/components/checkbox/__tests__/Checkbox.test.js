@@ -8,4 +8,13 @@ describe('Anchor', () => {
 
     expect(container).toBeInTheDocument();
   });
+
+  // appearance
+  // id
+  // name
+  // value
+  // text
+  // description
+  // checked
+  // onChange
 });
