@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import Checkbox from '../index';
 
-describe('Anchor', () => {
+describe('Checkbox', () => {
   test('should render', () => {
     const { container } = render(<Checkbox />);
 
