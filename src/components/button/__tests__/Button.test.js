@@ -54,9 +54,9 @@ describe('Anchor', () => {
       >
         <svg
           class="feather feather-plus "
-          fill="#ffffff"
+          fill="none"
           height="17"
-          stroke="currentColor"
+          stroke="#ffffff"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
