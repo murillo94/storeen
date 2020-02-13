@@ -8,11 +8,8 @@ import {
   mono900,
   mono200,
   negative700,
-  negative600,
-  positive700,
-  positive600
+  positive700
 } from 'utils/theme/colors';
-import { primary, negative, positive } from 'utils/theme/shadows';
 
 const content = 'im content';
 
@@ -44,13 +41,51 @@ describe('Anchor', () => {
   });
 
   test('should have text and icon', () => {
-    const { getByText } = render(<Button text="im button" icon="plus" />);
+    const { getByRole } = render(<Button text="im button" icon="plus" />);
 
-    const icon = getByText('plus');
-    const text = getByText('im button');
+    const text = getByRole('button');
 
-    expect(icon).toBeInTheDocument();
-    expect(text).toBeInTheDocument();
+    expect(text).toMatchInlineSnapshot(`
+      <button
+        aria-disabled="false"
+        class="jsx-976006719 "
+        style="width: auto;"
+        type="button"
+      >
+        <svg
+          class="feather feather-plus "
+          fill="#ffffff"
+          height="17"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="17"
+        >
+          <g>
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </g>
+        </svg>
+        <span
+          class="jsx-2151508852"
+          style="margin: 0px 0px 0px 5px;"
+        >
+          im button
+        </span>
+      </button>
+    `);
   });
 
   test('should not have border', () => {
@@ -89,7 +124,6 @@ describe('Anchor', () => {
     fireEvent.click(button);
 
     expect(onClick).toHaveBeenCalled();
-    expect(button).toHaveFocus();
   });
 
   test('should have default theme', () => {
@@ -100,11 +134,6 @@ describe('Anchor', () => {
     expect(button).toHaveStyle(`color: ${mono0}`);
     expect(button).toHaveStyle(`background-color: ${primary700}`);
     expect(button).toHaveStyle(`border: 1px solid ${primary700}`);
-
-    fireEvent.click(button);
-
-    expect(button).toHaveStyle(`box-shadow: ${primary}`);
-    expect(button).toHaveStyle(`border-color: ${primary700}`);
   });
 
   test('should have minimal theme', () => {
@@ -117,11 +146,6 @@ describe('Anchor', () => {
     expect(button).toHaveStyle(`color: ${mono900}`);
     expect(button).toHaveStyle('background-color: transparent');
     expect(button).toHaveStyle(`border: 1px solid ${mono200}`);
-
-    fireEvent.click(button);
-
-    expect(button).toHaveStyle(`box-shadow: ${primary}`);
-    expect(button).toHaveStyle(`border-color: ${primary700}`);
   });
 
   test('should have negative theme', () => {
@@ -134,11 +158,6 @@ describe('Anchor', () => {
     expect(button).toHaveStyle(`color: ${mono0}`);
     expect(button).toHaveStyle(`background-color: ${negative700}`);
     expect(button).toHaveStyle(`border: 1px solid ${negative700}`);
-
-    fireEvent.click(button);
-
-    expect(button).toHaveStyle(`box-shadow: ${negative}`);
-    expect(button).toHaveStyle(`border-color: ${negative600}`);
   });
 
   test('should have positive theme', () => {
@@ -151,10 +170,5 @@ describe('Anchor', () => {
     expect(button).toHaveStyle(`color: ${mono0}`);
     expect(button).toHaveStyle(`background-color: ${positive700}`);
     expect(button).toHaveStyle(`border: 1px solid ${positive700}`);
-
-    fireEvent.click(button);
-
-    expect(button).toHaveStyle(`box-shadow: ${positive}`);
-    expect(button).toHaveStyle(`border-color: ${positive600}`);
   });
 });

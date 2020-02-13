@@ -4178,6 +4178,11 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+feather-icons-react@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/feather-icons-react/-/feather-icons-react-0.4.1.tgz#d2333ec7e87c8a54c6879181f7df09d598a38302"
+  integrity sha512-rrnLdXpko9NKBdu2dAL3cdn4XXg6VualIqGH7WaDTZnE/Hz1bKWktQPmSsgDSO83Pj4H3uaPzY73zgecqOjDYQ==
+
 figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -8283,13 +8288,6 @@ react-error-overlay@5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
-
-react-feather@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-2.0.3.tgz#1453ff5d8c242f72b8c02846118fbd2d406375ad"
-  integrity sha512-XVjtxIyMxb2RFlqC2APoB/IZvXKDW9uLN1c264XEeZNYe8jIxjQVQpeTo3nxtHiLTgMfgf0ZYxJC6HwmY8+9BA==
-  dependencies:
-    prop-types "^15.7.2"
 
 react-is@16.8.6, react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.6"
