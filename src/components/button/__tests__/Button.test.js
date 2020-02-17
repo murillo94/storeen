@@ -121,6 +121,7 @@ describe('Anchor', () => {
     const { getByRole } = render(<Button onClick={onClick}>{content}</Button>);
 
     const button = getByRole('button');
+
     fireEvent.click(button);
 
     expect(onClick).toHaveBeenCalled();
