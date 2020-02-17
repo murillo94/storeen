@@ -4,7 +4,7 @@ import { FormGroup } from '../index';
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('FormGroup', () => {
   test('should render', () => {
     const { container } = render(<FormGroup />);
 

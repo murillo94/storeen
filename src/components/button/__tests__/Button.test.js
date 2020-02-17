@@ -13,7 +13,7 @@ import {
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('Button', () => {
   test('should render', () => {
     const { getByRole } = render(<Button />);
 

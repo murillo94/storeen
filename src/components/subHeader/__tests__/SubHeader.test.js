@@ -4,7 +4,7 @@ import SubHeader from '../index';
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('SubHeader', () => {
   test('should render', () => {
     const { container } = render(<SubHeader />);
 
@@ -59,7 +59,7 @@ describe('Anchor', () => {
             />
           </g>
         </svg>
-        
+
       </button>
     `);
 

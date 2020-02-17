@@ -4,7 +4,7 @@ import { ImageDescription } from '../index';
 
 const content = 'im alt';
 
-describe('Anchor', () => {
+describe('ImageDescription', () => {
   test('should render', () => {
     const { getByRole } = render(<ImageDescription />);
 

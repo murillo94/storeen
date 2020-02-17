@@ -4,7 +4,7 @@ import Footer from '../index';
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('Footer', () => {
   test('should render', () => {
     const { container } = render(<Footer />);
 

@@ -11,7 +11,7 @@ import {
 
 const content = 'im text';
 
-describe('Anchor', () => {
+describe('Badge', () => {
   test('should render', () => {
     const { container } = render(<Badge />);
 

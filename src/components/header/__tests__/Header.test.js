@@ -4,7 +4,7 @@ import Header from '../index';
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('Header', () => {
   test('should render', () => {
     const { container } = render(<Header />);
 

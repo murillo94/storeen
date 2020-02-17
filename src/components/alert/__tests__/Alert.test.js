@@ -11,7 +11,7 @@ import {
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('Alert', () => {
   test('should render', () => {
     const { container } = render(<Alert />);
 

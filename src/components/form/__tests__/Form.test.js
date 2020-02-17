@@ -4,7 +4,7 @@ import { Form } from '../index';
 
 const content = 'im content';
 
-describe('Anchor', () => {
+describe('Form', () => {
   test('should render', () => {
     const { container } = render(<Form />);
 
