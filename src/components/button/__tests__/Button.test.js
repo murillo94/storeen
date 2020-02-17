@@ -15,9 +15,9 @@ const content = 'im content';
 
 describe('Anchor', () => {
   test('should render', () => {
-    const { container } = render(<Button />);
+    const { getByRole } = render(<Button />);
 
-    expect(container).toBeInTheDocument();
+    expect(getByRole('button')).toBeInTheDocument();
   });
 
   test('should have children and default values', () => {

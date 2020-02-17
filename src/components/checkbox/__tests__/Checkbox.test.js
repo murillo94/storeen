@@ -5,9 +5,9 @@ import Checkbox from '../index';
 
 describe('Checkbox', () => {
   test('should render', () => {
-    const { container } = render(<Checkbox />);
+    const { getByRole } = render(<Checkbox />);
 
-    expect(container).toBeInTheDocument();
+    expect(getByRole('checkbox')).toBeInTheDocument();
   });
 
   test('should have text and description', () => {
