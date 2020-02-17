@@ -6,9 +6,9 @@ const content = 'im content';
 
 describe('SubHeader', () => {
   test('should render', () => {
-    const { container } = render(<SubHeader />);
+    const { getByRole } = render(<SubHeader />);
 
-    expect(container).toBeInTheDocument();
+    expect(getByRole('heading')).toBeInTheDocument();
   });
 
   test('should have children', () => {
@@ -59,7 +59,7 @@ describe('SubHeader', () => {
             />
           </g>
         </svg>
-
+        
       </button>
     `);
 
