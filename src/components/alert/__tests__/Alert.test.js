@@ -62,7 +62,7 @@ describe('Alert', () => {
     expect(text).toHaveStyle(`border-left: 4px solid ${negative700}`);
   });
 
-  test('should have positive theme', () => {
+  test('should have default as positive theme', () => {
     const { getByText } = render(<Alert>{content}</Alert>);
 
     const text = getByText(content);
