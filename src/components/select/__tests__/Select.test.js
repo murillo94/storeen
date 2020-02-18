@@ -3,6 +3,13 @@ import { render, fireEvent } from '@testing-library/react';
 
 import Select from '../index';
 
+import {
+  primary700,
+  mono200,
+  negative700,
+  positive700
+} from 'utils/theme/colors';
+
 const content = 'im content';
 const options = [
   {
@@ -84,6 +91,39 @@ describe('Select', () => {
     expect(onChange).toBeCalledWith(options[1].value);
   });
 
-  // appearance
-  // keyDown (https://stackoverflow.com/questions/55575843/how-to-test-react-select-with-react-testing-library)
+  test('should have default theme', () => {
+    const { getByRole } = render(
+      <Select appearance="default">{content}</Select>
+    );
+
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${primary700}`
+    );
+  });
+
+  test('should have default as minimal theme', () => {
+    const { getByRole } = render(<Select>{content}</Select>);
+
+    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${mono200}`);
+  });
+
+  test('should have negative theme', () => {
+    const { getByRole } = render(
+      <Select appearance="negative">{content}</Select>
+    );
+
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${negative700}`
+    );
+  });
+
+  test('should have positive theme', () => {
+    const { getByRole } = render(
+      <Select appearance="positive">{content}</Select>
+    );
+
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${positive700}`
+    );
+  });
 });
