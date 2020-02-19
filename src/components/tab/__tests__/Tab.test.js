@@ -1,9 +1,20 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 import { Tab } from '../index';
 
-import { primary700, negative700, positive700 } from 'utils/theme/colors';
+import {
+  primary700,
+  primary600,
+  mono100,
+  negative700,
+  negative600,
+  positive700,
+  positive600
+} from 'utils/theme/colors';
 import { radius600 } from 'utils/theme/radius';
+
+const content = 'im content';
+const icon = 'plus';
 
 describe('Tab', () => {
   test('should render', () => {
@@ -12,49 +23,142 @@ describe('Tab', () => {
     expect(getByRole('tab')).toBeInTheDocument();
   });
 
-  test('should have text and icon', () => {});
+  test('should have text and icon', () => {
+    const { getByRole } = render(<Tab text={content} icon={icon} />);
 
-  test('should have link', () => {});
+    expect(getByRole('button')).toMatchInlineSnapshot(`
+      <button
+        aria-disabled="false"
+        class="jsx-774241038 "
+        style="width: 100%;"
+        type="button"
+      >
+        <svg
+          class="feather feather-plus "
+          fill="none"
+          height="20"
+          stroke="#727272"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <g>
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </g>
+        </svg>
+        <span
+          class="jsx-2151508852"
+          style="margin: 0px 0px 0px 10px; font-weight: 500;"
+        >
+          im content
+        </span>
+      </button>
+    `);
+  });
 
-  test('should have button', () => {});
+  test('should have link', () => {
+    const { getByRole } = render(<Tab text={content} href="href.com.br" />);
 
-  test('should have selected', () => {});
+    const link = getByRole('link');
 
-  test('should have selected with href', () => {});
+    expect(link).toHaveAttribute('href', 'href.com.br');
+    expect(link).toHaveTextContent(content);
+  });
+
+  test('should have button', () => {
+    const onClick = jest.fn();
+    const { getByRole } = render(<Tab text={content} onClick={onClick} />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveTextContent(content);
+    expect(onClick).not.toBeCalled();
+
+    fireEvent.click(button);
+
+    expect(onClick).toBeCalled();
+  });
+
+  test('should have selected', () => {
+    const { getByRole } = render(<Tab selected />);
+
+    const tab = getByRole('tab');
+
+    expect(tab).toHaveStyle(`background-color: ${mono100}`);
+    expect(tab).toHaveStyle('opacity: 1 !important;');
+  });
+
+  test('should have selected with href', () => {
+    const { getByRole } = render(<Tab href="mocked-path" />);
+
+    const tab = getByRole('tab');
+
+    expect(tab).toHaveStyle(`background-color: ${mono100}`);
+    expect(tab).toHaveStyle('opacity: 1 !important;');
+  });
 
   test('should have default theme', () => {
-    const { getByRole } = render(<Tab appearance="default" />);
+    const { getByRole, rerender } = render(<Tab appearance="default" />);
 
-    const item = getByRole('tab');
+    const tab = getByRole('tab');
 
-    expect(item).toHaveStyle(`background-color: ${primary700}`);
-    expect(item).toHaveStyle(`border-radius: ${radius600}`);
+    expect(tab).toHaveStyle(`background-color: ${primary700}`);
+    expect(tab).toHaveStyle(`border-radius: ${radius600}`);
+
+    rerender(<Tab appearance="default" selected />);
+
+    expect(tab).toHaveStyle(`background-color: ${primary600}`);
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole } = render(<Tab />);
+    const { getByRole, rerender } = render(<Tab />);
 
-    const item = getByRole('tab');
+    const tab = getByRole('tab');
 
-    expect(item).toHaveStyle('background-color: transparent');
-    expect(item).toHaveStyle(`border-radius: ${radius600}`);
+    expect(tab).toHaveStyle('background-color: transparent');
+    expect(tab).toHaveStyle(`border-radius: ${radius600}`);
+
+    rerender(<Tab selected />);
+
+    expect(tab).toHaveStyle(`background-color: ${mono100}`);
   });
 
   test('should have negative theme', () => {
-    const { getByRole } = render(<Tab appearance="negative" />);
+    const { getByRole, rerender } = render(<Tab appearance="negative" />);
 
-    const item = getByRole('tab');
+    const tab = getByRole('tab');
 
-    expect(item).toHaveStyle(`background-color: ${negative700}`);
-    expect(item).toHaveStyle(`border-radius: ${radius600}`);
+    expect(tab).toHaveStyle(`background-color: ${negative700}`);
+    expect(tab).toHaveStyle(`border-radius: ${radius600}`);
+
+    rerender(<Tab appearance="negative" selected />);
+
+    expect(tab).toHaveStyle(`background-color: ${negative600}`);
   });
 
   test('should have positive theme', () => {
-    const { getByRole } = render(<Tab appearance="positive" />);
+    const { getByRole, rerender } = render(<Tab appearance="positive" />);
 
-    const item = getByRole('tab');
+    const tab = getByRole('tab');
 
-    expect(item).toHaveStyle(`background-color: ${positive700}`);
-    expect(item).toHaveStyle(`border-radius: ${radius600}`);
+    expect(tab).toHaveStyle(`background-color: ${positive700}`);
+    expect(tab).toHaveStyle(`border-radius: ${radius600}`);
+
+    rerender(<Tab appearance="positive" selected />);
+
+    expect(tab).toHaveStyle(`background-color: ${positive600}`);
   });
 });
