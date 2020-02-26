@@ -15,9 +15,9 @@ describe('Heading', () => {
     test('should be H1 with text', () => {
       const { getByRole } = render(<Heading text="im h1" />);
 
-      const h1 = getByRole('heading');
-
-      expect(h1).toContainHTML('<h1 class="jsx-674499530">im h1</h1>');
+      expect(getByRole('heading')).toContainHTML(
+        '<h1 class="jsx-674499530">im h1</h1>'
+      );
     });
 
     test('should have inherit color', () => {
@@ -57,9 +57,9 @@ describe('Heading', () => {
     test('should be H2 with text', () => {
       const { getByRole } = render(<Heading is="h2" text="im h2" />);
 
-      const h2 = getByRole('heading');
-
-      expect(h2).toContainHTML('<h2 class="jsx-2742373254">im h2</h2>');
+      expect(getByRole('heading')).toContainHTML(
+        '<h2 class="jsx-2742373254">im h2</h2>'
+      );
     });
 
     test('should have inherit color', () => {
@@ -99,9 +99,9 @@ describe('Heading', () => {
     test('should be H3 with text', () => {
       const { getByRole } = render(<Heading is="h3" text="im h3" />);
 
-      const h3 = getByRole('heading');
-
-      expect(h3).toContainHTML('<h3 class="jsx-1645660008">im h3</h3>');
+      expect(getByRole('heading')).toContainHTML(
+        '<h3 class="jsx-1645660008">im h3</h3>'
+      );
     });
 
     test('should have inherit color', () => {
@@ -141,9 +141,9 @@ describe('Heading', () => {
     test('should be H4 with text', () => {
       const { getByRole } = render(<Heading is="h4" text="im h4" />);
 
-      const h4 = getByRole('heading');
-
-      expect(h4).toContainHTML('<h4 class="jsx-3226038624">im h4</h4>');
+      expect(getByRole('heading')).toContainHTML(
+        '<h4 class="jsx-3226038624">im h4</h4>'
+      );
     });
 
     test('should have inherit color', () => {
