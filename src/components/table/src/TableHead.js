@@ -6,7 +6,7 @@ const textHeaderStyle = {
   fontWeight: '500'
 };
 
-const TableHead = ({ headers }) => (
+const TableHead = ({ headers = [] }) => (
   <thead>
     <TableRow isBody={false} hover={false}>
       {headers.map(title => (
