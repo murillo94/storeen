@@ -18,7 +18,6 @@ describe('Footer', () => {
 
     expect(text).toHaveClass('left');
     expect(text).toHaveStyle('justify-content: flex-start');
-    expect(text).toBeInTheDocument();
   });
 
   test('should have type', () => {

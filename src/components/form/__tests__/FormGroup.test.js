@@ -18,7 +18,6 @@ describe('FormGroup', () => {
 
     expect(text).toHaveClass('form-group');
     expect(text).toHaveStyle('flex-direction: row');
-    expect(text).toBeInTheDocument();
   });
 
   test('should have type', () => {

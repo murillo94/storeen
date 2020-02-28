@@ -13,7 +13,7 @@ describe('Tab', () => {
     const { getByRole } = render(<TabList />);
 
     const list = getByRole('tablist');
-    expect(list).toBeInTheDocument();
+
     expect(list).toHaveAttribute('role', 'tablist');
     expect(list).toHaveAttribute('aria-orientation', 'vertical');
     expect(list).toHaveAttribute('aria-label', 'Menu lateral');

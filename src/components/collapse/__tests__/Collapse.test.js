@@ -34,7 +34,6 @@ describe('Collapse', () => {
 
     const customChildren = getByText(children);
 
-    expect(customChildren).toBeInTheDocument();
     expect(customChildren).toBeVisible();
   });
 
