@@ -2,8 +2,6 @@ import { render } from '@testing-library/react';
 
 import { Form } from '../index';
 
-const content = 'im content';
-
 describe('Form', () => {
   test('should render', () => {
     const { container } = render(<Form />);
@@ -12,6 +10,7 @@ describe('Form', () => {
   });
 
   test('should have children', () => {
+    const content = 'im content';
     const { getByText } = render(<Form>{content}</Form>);
 
     expect(getByText(content)).toBeInTheDocument();

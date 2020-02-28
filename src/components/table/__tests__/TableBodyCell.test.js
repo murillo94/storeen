@@ -2,10 +2,9 @@ import { render } from '@testing-library/react';
 
 import { TableBodyCell } from '../index';
 
-const content = 'im content';
-
 describe('TableBodyCell', () => {
   test('should render', () => {
+    const content = 'im content';
     const { getByRole } = render(<TableBodyCell>{content}</TableBodyCell>);
 
     expect(getByRole('cell')).toContainHTML(

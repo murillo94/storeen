@@ -14,7 +14,6 @@ import {
 import { radius600 } from 'utils/theme/radius';
 
 const content = 'im content';
-const icon = 'plus';
 
 describe('Tab', () => {
   test('should render', () => {
@@ -24,7 +23,7 @@ describe('Tab', () => {
   });
 
   test('should have text and icon', () => {
-    const { getByRole } = render(<Tab text={content} icon={icon} />);
+    const { getByRole } = render(<Tab text={content} icon="plus" />);
 
     expect(getByRole('button')).toMatchInlineSnapshot(`
       <button

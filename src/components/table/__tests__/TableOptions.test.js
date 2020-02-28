@@ -2,8 +2,6 @@ import { render } from '@testing-library/react';
 
 import { TableOptions } from '../index';
 
-const content = 'content';
-
 describe('TableOptions', () => {
   test('should render', () => {
     const { container } = render(<TableOptions />);
@@ -12,6 +10,7 @@ describe('TableOptions', () => {
   });
 
   test('should have children and default values', () => {
+    const content = 'im content';
     const { getByText } = render(<TableOptions>{content}</TableOptions>);
 
     expect(getByText(content)).toBeInTheDocument();

@@ -2,8 +2,6 @@ import { render, fireEvent } from '@testing-library/react';
 
 import SubHeader from '../index';
 
-const content = 'im content';
-
 describe('SubHeader', () => {
   test('should render', () => {
     const { getByRole } = render(<SubHeader />);
@@ -12,6 +10,7 @@ describe('SubHeader', () => {
   });
 
   test('should have children', () => {
+    const content = 'im content';
     const { getByText } = render(<SubHeader>{content}</SubHeader>);
 
     expect(getByText(content)).toBeInTheDocument();
