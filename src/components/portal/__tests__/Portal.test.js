@@ -12,8 +12,8 @@ describe('Portal', () => {
   });
 
   test('should have children and id', () => {
-    const { getByText } = render(<Portal id="test">{content}</Portal>);
+    const { getByText } = render(<Portal id="id-test">{content}</Portal>);
 
-    expect(getByText(content).parentNode).toHaveAttribute('id', 'test');
+    expect(getByText(content).parentNode).toHaveAttribute('id', 'id-test');
   });
 });
