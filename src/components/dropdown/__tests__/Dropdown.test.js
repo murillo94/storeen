@@ -2,7 +2,14 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Dropdown } from '../index';
 
-import { mono200 } from 'utils/theme/colors';
+import {
+  primary700,
+  mono0,
+  mono900,
+  mono200,
+  negative700,
+  positive700
+} from 'utils/theme/colors';
 
 const content = 'im content';
 
@@ -74,7 +81,7 @@ describe('Dropdown', () => {
   });
 
   test('should have visible', () => {
-    const { getByRole } = render(<Dropdown visible>{content}</Dropdown>);
+    const { getByRole } = render(<Dropdown visible />);
 
     expect(getByRole('button')).toHaveAttribute('aria-expanded', 'true');
   });
@@ -94,5 +101,41 @@ describe('Dropdown', () => {
     fireEvent.click(button);
 
     expect(onClick).toHaveBeenCalled();
+  });
+
+  test('should have default theme', () => {
+    const { getByRole } = render(<Dropdown appearance="default" />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveStyle(`color: ${mono0}`);
+    expect(button).toHaveStyle(`background-color: ${primary700}`);
+  });
+
+  test('should have default as minimal theme', () => {
+    const { getByRole } = render(<Dropdown />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveStyle(`color: ${mono900}`);
+    expect(button).toHaveStyle('background-color: transparent');
+  });
+
+  test('should have negative theme', () => {
+    const { getByRole } = render(<Dropdown appearance="negative" />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveStyle(`color: ${mono0}`);
+    expect(button).toHaveStyle(`background-color: ${negative700}`);
+  });
+
+  test('should have positive theme', () => {
+    const { getByRole } = render(<Dropdown appearance="positive" />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveStyle(`color: ${mono0}`);
+    expect(button).toHaveStyle(`background-color: ${positive700}`);
   });
 });
