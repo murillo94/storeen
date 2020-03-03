@@ -3,6 +3,13 @@ import { render, fireEvent } from '@testing-library/react';
 
 import Input from '../index';
 
+import {
+  primary700,
+  mono200,
+  negative700,
+  positive700
+} from 'utils/theme/colors';
+
 describe('Input', () => {
   test('should render', () => {
     const { getByRole } = render(<Input />);
@@ -81,5 +88,37 @@ describe('Input', () => {
     const { container } = render(<Input icon="plus" onCick={onClick} />);
 
     expect(container).toBeInTheDocument();
+  });
+
+  test('should have default theme', () => {
+    const { getByRole } = render(<Input appearance="default" />);
+
+    const input = getByRole('textbox');
+
+    expect(input).toHaveStyle(`border: 1px solid ${primary700};`);
+  });
+
+  test('should have default as minimal theme', () => {
+    const { getByRole } = render(<Input />);
+
+    const input = getByRole('textbox');
+
+    expect(input).toHaveStyle(`border: 1px solid ${mono200};`);
+  });
+
+  test('should have negative theme', () => {
+    const { getByRole } = render(<Input appearance="negative" />);
+
+    const input = getByRole('textbox');
+
+    expect(input).toHaveStyle(`border: 1px solid ${negative700};`);
+  });
+
+  test('should have positive theme', () => {
+    const { getByRole } = render(<Input appearance="positive" />);
+
+    const input = getByRole('textbox');
+
+    expect(input).toHaveStyle(`border: 1px solid ${positive700};`);
   });
 });
