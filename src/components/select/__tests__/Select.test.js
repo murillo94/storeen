@@ -97,14 +97,14 @@ describe('Select', () => {
     );
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${primary700}`
+      `border: 1px solid ${primary700};`
     );
   });
 
   test('should have default as minimal theme', () => {
     const { getByRole } = render(<Select>{content}</Select>);
 
-    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${mono200}`);
+    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${mono200};`);
   });
 
   test('should have negative theme', () => {
@@ -113,7 +113,7 @@ describe('Select', () => {
     );
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${negative700}`
+      `border: 1px solid ${negative700};`
     );
   });
 
@@ -123,7 +123,7 @@ describe('Select', () => {
     );
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${positive700}`
+      `border: 1px solid ${positive700};`
     );
   });
 });

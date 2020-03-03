@@ -24,25 +24,25 @@ describe('Paragraph', () => {
   test('should have inherit color', () => {
     const { getByText } = render(<ParagraphCustom />);
 
-    expect(getByText('im p')).toHaveStyle('color: inherit');
+    expect(getByText('im p')).toHaveStyle('color: inherit;');
   });
 
   test('should have default color', () => {
     const { getByText } = render(<ParagraphCustom color="default" />);
 
-    expect(getByText('im p')).toHaveStyle(`color: ${mono900}`);
+    expect(getByText('im p')).toHaveStyle(`color: ${mono900};`);
   });
 
   test('should have muted color', () => {
     const { getByText } = render(<ParagraphCustom color="muted" />);
 
-    expect(getByText('im p')).toHaveStyle(`color: ${mono700}`);
+    expect(getByText('im p')).toHaveStyle(`color: ${mono700};`);
   });
 
   test('should have primary color', () => {
     const { getByText } = render(<ParagraphCustom color="primary" />);
 
-    expect(getByText('im p')).toHaveStyle(`color: ${primary700}`);
+    expect(getByText('im p')).toHaveStyle(`color: ${primary700};`);
   });
 
   test('should have custom style', () => {
@@ -50,6 +50,6 @@ describe('Paragraph', () => {
       <ParagraphCustom customStyle={{ padding: '10px' }} />
     );
 
-    expect(getByText('im p')).toHaveStyle('padding: 10px');
+    expect(getByText('im p')).toHaveStyle('padding: 10px;');
   });
 });

@@ -24,25 +24,25 @@ describe('Text', () => {
   test('should have inherit color', () => {
     const { getByText } = render(<SpanCustom />);
 
-    expect(getByText('im span')).toHaveStyle('color: inherit');
+    expect(getByText('im span')).toHaveStyle('color: inherit;');
   });
 
   test('should have default color', () => {
     const { getByText } = render(<SpanCustom color="default" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${mono900}`);
+    expect(getByText('im span')).toHaveStyle(`color: ${mono900};`);
   });
 
   test('should have muted color', () => {
     const { getByText } = render(<SpanCustom color="muted" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${mono700}`);
+    expect(getByText('im span')).toHaveStyle(`color: ${mono700};`);
   });
 
   test('should have primary color', () => {
     const { getByText } = render(<SpanCustom color="primary" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${primary700}`);
+    expect(getByText('im span')).toHaveStyle(`color: ${primary700};`);
   });
 
   test('should have custom style', () => {
@@ -50,6 +50,6 @@ describe('Text', () => {
       <SpanCustom customStyle={{ padding: '10px' }} />
     );
 
-    expect(getByText('im span')).toHaveStyle('padding: 10px');
+    expect(getByText('im span')).toHaveStyle('padding: 10px;');
   });
 });

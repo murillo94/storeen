@@ -28,24 +28,24 @@ describe('Anchor', () => {
   test('should have inherit color', () => {
     const { getByRole } = render(<Anchor {...props} />);
 
-    expect(getByRole('link')).toHaveStyle('color: inherit');
+    expect(getByRole('link')).toHaveStyle('color: inherit;');
   });
 
   test('should have default color', () => {
     const { getByRole } = render(<Anchor {...props} color="default" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${mono900}`);
+    expect(getByRole('link')).toHaveStyle(`color: ${mono900};`);
   });
 
   test('should have muted color', () => {
     const { getByRole } = render(<Anchor {...props} color="muted" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${mono700}`);
+    expect(getByRole('link')).toHaveStyle(`color: ${mono700};`);
   });
 
   test('should have primary color', () => {
     const { getByRole } = render(<Anchor {...props} color="primary" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${primary700}`);
+    expect(getByRole('link')).toHaveStyle(`color: ${primary700};`);
   });
 });

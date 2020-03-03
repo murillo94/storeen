@@ -89,7 +89,7 @@ describe('Dropdown', () => {
   test('should have border', () => {
     const { getByRole } = render(<Dropdown hasBorder />);
 
-    expect(getByRole('button')).toHaveStyle(`border: 1px solid ${mono200}`);
+    expect(getByRole('button')).toHaveStyle(`border: 1px solid ${mono200};`);
   });
 
   test('should have click', () => {
@@ -108,8 +108,8 @@ describe('Dropdown', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0}`);
-    expect(button).toHaveStyle(`background-color: ${primary700}`);
+    expect(button).toHaveStyle(`color: ${mono0};`);
+    expect(button).toHaveStyle(`background-color: ${primary700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -117,8 +117,8 @@ describe('Dropdown', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono900}`);
-    expect(button).toHaveStyle('background-color: transparent');
+    expect(button).toHaveStyle(`color: ${mono900};`);
+    expect(button).toHaveStyle('background-color: transparent;');
   });
 
   test('should have negative theme', () => {
@@ -126,8 +126,8 @@ describe('Dropdown', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0}`);
-    expect(button).toHaveStyle(`background-color: ${negative700}`);
+    expect(button).toHaveStyle(`color: ${mono0};`);
+    expect(button).toHaveStyle(`background-color: ${negative700};`);
   });
 
   test('should have positive theme', () => {
@@ -135,7 +135,7 @@ describe('Dropdown', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0}`);
-    expect(button).toHaveStyle(`background-color: ${positive700}`);
+    expect(button).toHaveStyle(`color: ${mono0};`);
+    expect(button).toHaveStyle(`background-color: ${positive700};`);
   });
 });

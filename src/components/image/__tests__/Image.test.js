@@ -46,6 +46,6 @@ describe('Image', () => {
       <Image alt={content} customStyle={{ margin: '10px' }} />
     );
 
-    expect(getByAltText(content)).toHaveStyle('margin: 10px');
+    expect(getByAltText(content)).toHaveStyle('margin: 10px;');
   });
 });

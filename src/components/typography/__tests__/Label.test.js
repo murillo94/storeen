@@ -36,25 +36,25 @@ describe('Label', () => {
   test('should have inherit color', () => {
     const { getByText } = render(<LabelCustom />);
 
-    expect(getByText('content')).toHaveStyle('color: inherit');
+    expect(getByText('content')).toHaveStyle('color: inherit;');
   });
 
   test('should have default color', () => {
     const { getByText } = render(<LabelCustom color="default" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${mono900}`);
+    expect(getByText('content')).toHaveStyle(`color: ${mono900};`);
   });
 
   test('should have muted color', () => {
     const { getByText } = render(<LabelCustom color="muted" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${mono700}`);
+    expect(getByText('content')).toHaveStyle(`color: ${mono700};`);
   });
 
   test('should have primary color', () => {
     const { getByText } = render(<LabelCustom color="primary" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${primary700}`);
+    expect(getByText('content')).toHaveStyle(`color: ${primary700};`);
   });
 
   test('should have custom style', () => {
@@ -62,6 +62,6 @@ describe('Label', () => {
       <LabelCustom customStyle={{ padding: '10px' }} />
     );
 
-    expect(getByText('content')).toHaveStyle('padding: 10px');
+    expect(getByText('content')).toHaveStyle('padding: 10px;');
   });
 });

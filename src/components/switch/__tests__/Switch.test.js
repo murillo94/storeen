@@ -42,8 +42,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${mono700}`);
-    expect(rightText).toHaveStyle(`color: ${mono700}`);
+    expect(leftText).toHaveStyle(`color: ${mono700};`);
+    expect(rightText).toHaveStyle(`color: ${mono700};`);
   });
 
   test('should have default color text', () => {
@@ -58,8 +58,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${mono900}`);
-    expect(rightText).toHaveStyle(`color: ${mono900}`);
+    expect(leftText).toHaveStyle(`color: ${mono900};`);
+    expect(rightText).toHaveStyle(`color: ${mono900};`);
   });
 
   test('should have primary color text', () => {
@@ -74,8 +74,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${primary700}`);
-    expect(rightText).toHaveStyle(`color: ${primary700}`);
+    expect(leftText).toHaveStyle(`color: ${primary700};`);
+    expect(rightText).toHaveStyle(`color: ${primary700};`);
   });
 
   test('should have change with checked', () => {

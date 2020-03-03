@@ -42,7 +42,7 @@ describe('DropdownGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${primary700}`);
+    expect(menu).toHaveStyle(`border: 1px solid ${primary700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -50,7 +50,7 @@ describe('DropdownGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${mono200}`);
+    expect(menu).toHaveStyle(`border: 1px solid ${mono200};`);
   });
 
   test('should have negative theme', () => {
@@ -60,7 +60,7 @@ describe('DropdownGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${negative700}`);
+    expect(menu).toHaveStyle(`border: 1px solid ${negative700};`);
   });
 
   test('should have positive theme', () => {
@@ -70,6 +70,6 @@ describe('DropdownGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${positive700}`);
+    expect(menu).toHaveStyle(`border: 1px solid ${positive700};`);
   });
 });

@@ -17,7 +17,7 @@ describe('FormGroup', () => {
     const text = getByText(content);
 
     expect(text).toHaveClass('form-group');
-    expect(text).toHaveStyle('flex-direction: row');
+    expect(text).toHaveStyle('flex-direction: row;');
   });
 
   test('should have type', () => {
@@ -25,6 +25,6 @@ describe('FormGroup', () => {
       <FormGroup type="column">{content}</FormGroup>
     );
 
-    expect(getByText(content)).toHaveStyle('flex-direction: column');
+    expect(getByText(content)).toHaveStyle('flex-direction: column;');
   });
 });

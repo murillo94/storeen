@@ -17,7 +17,7 @@ describe('Footer', () => {
     const text = getByText(content);
 
     expect(text).toHaveClass('left');
-    expect(text).toHaveStyle('justify-content: flex-start');
+    expect(text).toHaveStyle('justify-content: flex-start;');
   });
 
   test('should have type', () => {
@@ -26,6 +26,6 @@ describe('Footer', () => {
     const text = getByText(content);
 
     expect(text).toHaveClass('right');
-    expect(text).toHaveStyle('justify-content: flex-end');
+    expect(text).toHaveStyle('justify-content: flex-end;');
   });
 });

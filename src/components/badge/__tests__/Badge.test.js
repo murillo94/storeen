@@ -46,8 +46,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${primary700}`);
-    expect(text).toHaveStyle(`border: 1px solid ${primary700}`);
+    expect(text).toHaveStyle(`color: ${primary700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${primary700};`);
   });
 
   test('should have minimal theme', () => {
@@ -55,8 +55,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${mono200}`);
-    expect(text).toHaveStyle(`border: 1px solid ${mono200}`);
+    expect(text).toHaveStyle(`color: ${mono200};`);
+    expect(text).toHaveStyle(`border: 1px solid ${mono200};`);
   });
 
   test('should have negative theme', () => {
@@ -66,8 +66,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${negative700}`);
-    expect(text).toHaveStyle(`border: 1px solid ${negative700}`);
+    expect(text).toHaveStyle(`color: ${negative700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${negative700};`);
   });
 
   test('should have positive theme', () => {
@@ -77,7 +77,7 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${positive700}`);
-    expect(text).toHaveStyle(`border: 1px solid ${positive700}`);
+    expect(text).toHaveStyle(`color: ${positive700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${positive700};`);
   });
 });

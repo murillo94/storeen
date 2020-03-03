@@ -41,7 +41,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${primary700}`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${primary700};`);
   });
 
   test('should have minimal theme', () => {
@@ -49,7 +49,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${mono200}`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${mono200};`);
   });
 
   test('should have negative theme', () => {
@@ -59,7 +59,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${negative700}`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${negative700};`);
   });
 
   test('should have default as positive theme', () => {
@@ -67,6 +67,6 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${positive700}`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${positive700};`);
   });
 });

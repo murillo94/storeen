@@ -17,7 +17,7 @@ describe('Container', () => {
     const { getByText } = render(<Container>{content}</Container>);
 
     expect(getByText(content)).toHaveStyle(
-      'padding: 20px; margin: 0 0 45px; box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'
+      'padding: 20px; margin: 0 0 45px; box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15);'
     );
   });
 
@@ -88,12 +88,12 @@ describe('Container', () => {
       <Container hasBoxShadow={false}>{content}</Container>
     );
 
-    expect(getByText(content)).toHaveStyle('box-shadow: false');
+    expect(getByText(content)).toHaveStyle('box-shadow: false;');
   });
 
   test('should have border', () => {
     const { getByText } = render(<Container hasBorder>{content}</Container>);
 
-    expect(getByText(content)).toHaveStyle(`border: 1px solid ${mono100}`);
+    expect(getByText(content)).toHaveStyle(`border: 1px solid ${mono100};`);
   });
 });

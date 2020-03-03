@@ -57,7 +57,7 @@ describe('Table', () => {
     expect(children).not.toHaveStyle(
       'box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15);'
     );
-    expect(children).toHaveStyle(`border: 1px solid ${mono100}`);
+    expect(children).toHaveStyle(`border: 1px solid ${mono100};`);
   });
 
   test('should have input search', () => {
