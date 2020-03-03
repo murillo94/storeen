@@ -89,7 +89,7 @@ describe('Button', () => {
   });
 
   test('should not have border', () => {
-    const { getByRole } = render(<Button>{content}</Button>);
+    const { getByRole } = render(<Button hasBorder={false}>{content}</Button>);
 
     const button = getByRole('button');
 

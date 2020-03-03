@@ -96,8 +96,7 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${mono100};`);
-    expect(tab).toHaveStyle('opacity: 1 !important;');
+    expect(tab).toHaveStyle(`background-color: ${mono100}; opacity: 1;`);
   });
 
   test('should have selected with href', () => {
@@ -105,8 +104,7 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${mono100};`);
-    expect(tab).toHaveStyle('opacity: 1 !important;');
+    expect(tab).toHaveStyle(`background-color: ${mono100}; opacity: 1;`);
   });
 
   test('should have default theme', () => {
