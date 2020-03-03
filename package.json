@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "feather-icons-react": "^0.4.1",
-    "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "next": "^9.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-text-mask": "^5.4.3",
     "set-value": "^3.0.1",
     "text-mask-addons": "^3.8.0"
