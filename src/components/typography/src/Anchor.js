@@ -8,7 +8,7 @@ import { primary } from 'utils/theme/shadows';
 import { primary700 } from 'utils/theme/colors';
 
 const Anchor = memo(
-  ({ href = null, text = '', color = 'inherit', hover = true }) => {
+  ({ href = '', text = '', color = 'inherit', hover = true }) => {
     const fontColor = useFont(color);
 
     return (
