@@ -34,7 +34,7 @@ const SideSheet = ({
           top: 0;
           left: 0;
           transform: ${visible
-            ? 'transform: translate3d(0, 0, 0);'
+            ? 'translate3d(0, 0, 0)'
             : 'translate3d(-125px, 0, 0)'};
           will-change: transform;
           z-index: 2;
