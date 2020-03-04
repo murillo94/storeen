@@ -1,6 +1,10 @@
+import { useState } from 'react';
+
 import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
+import Badge from 'components/badge';
+import Dialog from 'components/dialog';
 import { ImageDescription } from 'components/image';
 import Collapse from 'components/collapse';
 import { Paragraph } from 'components/typography';
@@ -17,11 +21,12 @@ const descriptionStyle = {
   margin: '0 0 20px'
 };
 
-const ContainerPayment = ({ children, collapse }) => (
+const ContainerPayment = ({ children, collapse, onClick }) => (
   <>
     <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
       <div>{children}</div>
       {collapse}
+      <Badge text="todo" onClick={onClick} />
     </Container>
 
     <style jsx>
@@ -37,10 +42,15 @@ const ContainerPayment = ({ children, collapse }) => (
 );
 
 const PaymentsSettings = () => {
+  const [visibleDialog, setVisibleDialog] = useState(false);
   const {
     state: { mercadoPago, wirecard, pagSeguro, paypal },
     actions: { onChange }
   } = useSettingsPayments();
+
+  const handleClickDialog = () => {
+    setVisibleDialog(!visibleDialog);
+  };
 
   return (
     <>
@@ -66,6 +76,7 @@ const PaymentsSettings = () => {
               />
             </Collapse>
           }
+          onClick={handleClickDialog}
         >
           <ImageDescription
             src={require('images/payments/mercadopago.svg')}
@@ -99,6 +110,7 @@ const PaymentsSettings = () => {
               />
             </Collapse>
           }
+          onClick={handleClickDialog}
         >
           <ImageDescription
             src={require('images/payments/wirecard.svg')}
@@ -132,6 +144,7 @@ const PaymentsSettings = () => {
               />
             </Collapse>
           }
+          onClick={handleClickDialog}
         >
           <ImageDescription
             src={require('images/payments/pagseguro.svg')}
@@ -165,6 +178,7 @@ const PaymentsSettings = () => {
               />
             </Collapse>
           }
+          onClick={handleClickDialog}
         >
           <ImageDescription
             src={require('images/payments/paypal.svg')}
@@ -184,6 +198,9 @@ const PaymentsSettings = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
+      <Dialog visible={visibleDialog} onClick={handleClickDialog}>
+        teste123
+      </Dialog>
     </>
   );
 };
