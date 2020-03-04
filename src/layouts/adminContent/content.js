@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Image } from 'components/image';
 import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
-import Overlay from 'components/overlay';
+import SideSheet from 'components/sideSheet';
 import { TabList, Tab } from 'components/tab';
 import Header from 'components/header';
 import Button from 'components/button';
@@ -59,6 +59,25 @@ const Logo = () => (
   </>
 );
 
+const Menu = () => (
+  <>
+    <div>
+      <Logo />
+      <TabList>
+        <Tab text="Início" icon="home" href="/home" />
+        <Tab text="Relatórios" icon="bar-chart" href="/reports" />
+        <Tab text="Pedidos" icon="clipboard" href="/orders" />
+        <Tab text="Produtos" icon="box" href="/products" />
+        <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
+        <Tab text="Categorias" icon="tag" href="/categories" />
+      </TabList>
+    </div>
+    <TabList>
+      <Tab text="Configurações" icon="settings" href="/settings" />
+    </TabList>
+  </>
+);
+
 const UserInfo = () => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
 
@@ -91,30 +110,9 @@ const Content = ({ children, padding }) => {
   return (
     <>
       <div className="container">
-        <Overlay
-          id="sidebar"
-          visible={visibleSidebar}
-          showChildren
-          removeBodyScroll
-          onClick={handleClickMenu}
-        >
-          <nav>
-            <div>
-              <Logo />
-              <TabList>
-                <Tab text="Início" icon="home" href="/home" />
-                <Tab text="Relatórios" icon="bar-chart" href="/reports" />
-                <Tab text="Pedidos" icon="clipboard" href="/orders" />
-                <Tab text="Produtos" icon="box" href="/products" />
-                <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
-                <Tab text="Categorias" icon="tag" href="/categories" />
-              </TabList>
-            </div>
-            <TabList>
-              <Tab text="Configurações" icon="settings" href="/settings" />
-            </TabList>
-          </nav>
-        </Overlay>
+        <nav className="side-sheet">
+          <Menu />
+        </nav>
         <main>
           <Header>
             <div className="nav-button">
@@ -137,6 +135,13 @@ const Content = ({ children, padding }) => {
             <div className="main-children">{children}</div>
           </div>
         </main>
+        <SideSheet
+          visible={visibleSidebar}
+          width="125px"
+          onClick={handleClickMenu}
+        >
+          <Menu />
+        </SideSheet>
       </div>
 
       <style jsx>
@@ -144,6 +149,8 @@ const Content = ({ children, padding }) => {
           .container {
             width: 100%;
             min-height: 100%;
+            display: flex;
+            flex-grow: 1;
           }
 
           nav {
@@ -190,16 +197,20 @@ const Content = ({ children, padding }) => {
               width: 125px;
             }
 
-            nav :global(ul) :global(li) {
+            :global(.side-sheet) :global(ul) :global(li) {
               border-radius: ${radius800};
               margin: 10px;
             }
 
-            nav :global(ul) :global(li) :global(a) {
+            :global(.side-sheet) :global(ul) :global(li) :global(a) {
               flex-direction: column;
             }
 
-            nav :global(ul) :global(li) :global(a) :global(span) {
+            :global(.side-sheet)
+              :global(ul)
+              :global(li)
+              :global(a)
+              :global(span) {
               margin: 10px 0 0 0 !important;
             }
 
@@ -215,13 +226,7 @@ const Content = ({ children, padding }) => {
 
           @media (max-width: 746px) {
             nav {
-              height: 100%;
-              position: fixed;
-              transform: ${visibleSidebar
-                ? 'transform: translate3d(0, 0, 0);'
-                : 'translate3d(-125px, 0, 0)'};
-              will-change: transform;
-              z-index: 2;
+              display: none;
             }
 
             .nav-button {
@@ -230,13 +235,6 @@ const Content = ({ children, padding }) => {
 
             .main-container {
               padding: 40px 30px;
-            }
-          }
-
-          @media (min-width: 746px) {
-            .container {
-              display: flex;
-              flex-grow: 1;
             }
           }
         `}
