@@ -21,7 +21,11 @@ const Switch = ({
   return (
     <>
       <div>
-        <Text text={leftText} color={colorText} />
+        <Text
+          text={leftText}
+          color={colorText}
+          customStyle={{ marginRight: leftText && '7px' }}
+        />
         <Label id={`${id}-switch-label`} htmlFor={id}>
           <input
             type="checkbox"
@@ -34,7 +38,11 @@ const Switch = ({
           />
           <span />
         </Label>
-        <Text text={rightText} color={colorText} />
+        <Text
+          text={rightText}
+          color={colorText}
+          customStyle={{ marginLeft: rightText && '7px' }}
+        />
       </div>
       <style jsx>
         {`
@@ -45,8 +53,6 @@ const Switch = ({
 
           div :global(label) {
             margin: 0;
-            margin-left: ${leftText && '7px'};
-            margin-right: ${rightText && '7px'};
             position: relative;
             cursor: pointer;
           }
