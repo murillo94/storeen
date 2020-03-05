@@ -24,8 +24,8 @@ const Logo = () => (
       <Image
         src={require('images/logo-icon.svg')}
         alt="Storeen logo icone"
-        width="40%"
-        height="100%"
+        width="34px"
+        height="34px"
       />
     </div>
 
@@ -137,7 +137,7 @@ const Content = ({ children, padding }) => {
         </main>
         <SideSheet
           visible={visibleSidebar}
-          width="125px"
+          width="180px"
           onClick={handleClickMenu}
         >
           <Menu />
