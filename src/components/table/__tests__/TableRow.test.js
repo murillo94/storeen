@@ -4,21 +4,41 @@ import { TableRow } from '../index';
 
 describe('TableRow', () => {
   test('should render', () => {
-    const { getByRole } = render(<TableRow />);
+    const { getByRole } = render(
+      <table>
+        <thead>
+          <TableRow />
+        </thead>
+      </table>
+    );
 
     expect(getByRole('row')).toBeInTheDocument();
   });
 
   test('should have children ', () => {
     const content = 'im content';
-    const { getByRole } = render(<TableRow>{content}</TableRow>);
+    const { getByRole } = render(
+      <table>
+        <thead>
+          <TableRow>
+            <th>{content}</th>
+          </TableRow>
+        </thead>
+      </table>
+    );
 
     expect(getByRole('row')).toHaveTextContent(content);
   });
 
   test('should have click', () => {
     const onClick = jest.fn();
-    const { getByRole } = render(<TableRow onClick={onClick} />);
+    const { getByRole } = render(
+      <table>
+        <thead>
+          <TableRow onClick={onClick} />
+        </thead>
+      </table>
+    );
 
     const row = getByRole('row');
 

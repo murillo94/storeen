@@ -14,7 +14,13 @@ describe('Table', () => {
   });
 
   test('should have children and default values', () => {
-    const { getByText } = render(<Table>{content}</Table>);
+    const { getByText } = render(
+      <Table>
+        <tr>
+          <td>{content}</td>
+        </tr>
+      </Table>
+    );
 
     const children = getByText(content);
 
@@ -48,7 +54,9 @@ describe('Table', () => {
   test('should have style props', () => {
     const { getByText } = render(
       <Table hasBoxShadow={false} hasBorder>
-        {content}
+        <tr>
+          <td>{content}</td>
+        </tr>
       </Table>
     );
 
