@@ -6,14 +6,14 @@ const SideSheet = ({
   children,
   visible = false,
   width = '620px',
-  onClick = null
+  onClose = null
 }) => (
   <>
     <Overlay
       id="side-sheet"
       visible={visible}
       removeBodyScroll
-      onClick={onClick}
+      onClose={onClose}
     >
       <nav className="side-sheet">{children}</nav>
     </Overlay>

@@ -40,9 +40,9 @@ describe('Overlay', () => {
   });
 
   test('should have click', () => {
-    const onClick = jest.fn();
+    const onClose = jest.fn();
     const { getByText } = render(
-      <Overlay visible onClick={onClick}>
+      <Overlay visible onClose={onClose}>
         {content}
       </Overlay>
     );
@@ -53,6 +53,6 @@ describe('Overlay', () => {
 
     fireEvent.click(children.firstElementChild);
 
-    expect(onClick).toHaveBeenCalled();
+    expect(onClose).toHaveBeenCalled();
   });
 });

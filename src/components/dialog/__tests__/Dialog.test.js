@@ -37,9 +37,9 @@ describe('Dialog', () => {
   });
 
   test('should have click', () => {
-    const onClick = jest.fn();
+    const onClose = jest.fn();
     const { getByText } = render(
-      <Dialog visible onClick={onClick}>
+      <Dialog visible onClose={onClose}>
         {content}
       </Dialog>
     );
@@ -50,6 +50,6 @@ describe('Dialog', () => {
 
     fireEvent.click(children.nextElementSibling);
 
-    expect(onClick).toHaveBeenCalled();
+    expect(onClose).toHaveBeenCalled();
   });
 });

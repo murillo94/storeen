@@ -198,8 +198,8 @@ const PaymentsSettings = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-      <Dialog visible={visibleDialog} onClick={handleClickDialog}>
-        teste123
+      <Dialog visible={visibleDialog} onClose={handleClickDialog}>
+        todo
       </Dialog>
     </>
   );

@@ -11,7 +11,7 @@ const Overlay = ({
   id = null,
   visible = false,
   removeBodyScroll = false,
-  onClick = null
+  onClose = null
 }) => {
   const handleBodyScroll = preventScroll => {
     if (removeBodyScroll && visible) {
@@ -33,7 +33,7 @@ const Overlay = ({
         <>
           <Portal id={id}>
             {children}
-            <div onClick={onClick} />
+            <div onClick={onClose} />
           </Portal>
 
           <style jsx>

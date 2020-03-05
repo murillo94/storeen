@@ -37,9 +37,9 @@ describe('SideSheet', () => {
   });
 
   test('should have click', () => {
-    const onClick = jest.fn();
+    const onClose = jest.fn();
     const { getByText } = render(
-      <SideSheet visible onClick={onClick}>
+      <SideSheet visible onClose={onClose}>
         {content}
       </SideSheet>
     );
@@ -50,6 +50,6 @@ describe('SideSheet', () => {
 
     fireEvent.click(children.nextElementSibling);
 
-    expect(onClick).toHaveBeenCalled();
+    expect(onClose).toHaveBeenCalled();
   });
 });

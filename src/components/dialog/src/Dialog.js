@@ -7,10 +7,10 @@ const Dialog = ({
   children,
   visible = false,
   width = '560px',
-  onClick = null
+  onClose = null
 }) => (
   <>
-    <Overlay id="dialog" visible={visible} removeBodyScroll onClick={onClick}>
+    <Overlay id="dialog" visible={visible} removeBodyScroll onClose={onClose}>
       <div role="dialog" className="dialog">
         {children}
       </div>

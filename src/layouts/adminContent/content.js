@@ -138,7 +138,7 @@ const Content = ({ children, padding }) => {
         <SideSheet
           visible={visibleSidebar}
           width="180px"
-          onClick={handleClickMenu}
+          onClose={handleClickMenu}
         >
           <Menu />
         </SideSheet>
