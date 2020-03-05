@@ -5,7 +5,7 @@ import { mono0, mono200 } from 'utils/theme/colors';
 const SideSheet = ({
   children,
   visible = false,
-  width = '180px',
+  width = '620px',
   onClick = null
 }) => (
   <>
@@ -25,7 +25,7 @@ const SideSheet = ({
           border-right: 1px solid ${mono200};
           text-align: center;
           padding: 20px 0 10px;
-          width: ${width};
+          max-width: ${width};
           height: 100vh;
           overflow: auto;
           -webkit-overflow-scrolling: touch;
