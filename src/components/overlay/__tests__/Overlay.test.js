@@ -39,16 +39,6 @@ describe('Overlay', () => {
     );
   });
 
-  test('should be visible without portal', () => {
-    const { getByText } = render(
-      <Overlay id="id-test" showChildren>
-        {content}
-      </Overlay>
-    );
-
-    expect(getByText(content).parentNode).not.toHaveAttribute('id', 'id-test');
-  });
-
   test('should have click', () => {
     const onClick = jest.fn();
     const { getByText } = render(
