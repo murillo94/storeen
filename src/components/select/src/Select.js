@@ -13,7 +13,7 @@ const Select = ({
   value = '',
   labelText = '',
   options = [],
-  onChange = null
+  onChange = () => null
 }) => {
   const theme = useTheme(appearance);
 

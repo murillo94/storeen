@@ -20,7 +20,7 @@ const Checkbox = ({
   text = '',
   description = '',
   checked = false,
-  onChange = null
+  onChange = () => null
 }) => {
   const theme = useTheme(appearance);
 

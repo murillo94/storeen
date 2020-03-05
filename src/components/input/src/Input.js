@@ -17,8 +17,8 @@ const Input = memo(
     placeholder = '',
     icon = '',
     mask = '',
-    onChange = null,
-    onClick = null
+    onChange = () => null,
+    onClick = () => null
   }) => (
     <div className="input-normal input-form">
       {labelText && (

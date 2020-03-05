@@ -14,7 +14,7 @@ const Switch = ({
   rightText = '',
   colorText = 'muted',
   checked = false,
-  onChange = null
+  onChange = () => null
 }) => {
   const theme = useTheme(appearance);
 
