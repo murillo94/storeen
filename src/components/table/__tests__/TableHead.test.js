@@ -6,9 +6,7 @@ describe('TableHead', () => {
   test('should render', () => {
     const { getByRole } = render(<TableHead />);
 
-    expect(getByRole('rowgroup')).toContainHTML(
-      '<thead><tr class="jsx-1311368395" /></thead>'
-    );
+    expect(getByRole('rowgroup')).toBeInTheDocument();
   });
 
   test('should have headers', () => {

@@ -33,7 +33,7 @@ describe('SideSheet', () => {
       </SideSheet>
     );
 
-    expect(getByText(content)).toHaveStyle('width: 100px;');
+    expect(getByText(content)).toHaveStyle('max-width: 100px;');
   });
 
   test('should have click', () => {

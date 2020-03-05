@@ -13,25 +13,19 @@ describe('Switch', () => {
   });
 
   test('should have left text', () => {
-    const { getByText, getByRole } = render(<Switch leftText="im left text" />);
+    const { getByText } = render(<Switch leftText="im left text" />);
 
     const text = getByText('im left text');
-    const checkbox = getByRole('checkbox').parentNode;
 
-    expect(text).toBeInTheDocument();
-    expect(checkbox).toHaveStyle('margin-left: 7px;');
+    expect(text).toHaveStyle('margin-right: 7px;');
   });
 
   test('should have right text', () => {
-    const { getByText, getByRole } = render(
-      <Switch rightText="im right text" />
-    );
+    const { getByText } = render(<Switch rightText="im right text" />);
 
     const text = getByText('im right text');
-    const checkbox = getByRole('checkbox').parentNode;
 
-    expect(text).toBeInTheDocument();
-    expect(checkbox).toHaveStyle('margin-right: 7px;');
+    expect(text).toHaveStyle('margin-left: 7px;');
   });
 
   test('should have default as muted color text', () => {

@@ -4,11 +4,15 @@ import { TableHeadCell } from '../index';
 
 describe('TableHeadCell', () => {
   test('should render', () => {
+    const { getByRole } = render(<TableHeadCell />);
+
+    expect(getByRole('columnheader')).toBeInTheDocument();
+  });
+
+  test('should have children', () => {
     const content = 'im content';
     const { getByRole } = render(<TableHeadCell>{content}</TableHeadCell>);
 
-    expect(getByRole('columnheader')).toContainHTML(
-      '<th class="jsx-2397789973">im content</th>'
-    );
+    expect(getByRole('columnheader')).toHaveTextContent(content);
   });
 });
