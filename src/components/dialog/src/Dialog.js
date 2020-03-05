@@ -1,6 +1,7 @@
 import Overlay from 'components/overlay';
 
 import { mono0, mono200 } from 'utils/theme/colors';
+import { radius600 } from 'utils/theme/radius';
 
 const Dialog = ({
   children,
@@ -19,8 +20,8 @@ const Dialog = ({
       {`
         div {
           background-color: ${mono0};
-          border-right: 1px solid ${mono200};
-          text-align: center;
+          border: 1px solid ${mono200};
+          border-radius: ${radius600};
           padding: 20px;
           width: ${width};
           max-height: calc(100vh - 56px);

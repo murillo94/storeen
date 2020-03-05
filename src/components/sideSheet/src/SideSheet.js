@@ -23,7 +23,6 @@ const SideSheet = ({
         nav {
           background-color: ${mono0};
           border-right: 1px solid ${mono200};
-          text-align: center;
           padding: 20px 0 10px;
           max-width: ${width};
           height: 100vh;
