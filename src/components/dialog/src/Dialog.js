@@ -21,20 +21,28 @@ const Dialog = ({
           background-color: ${mono0};
           border-right: 1px solid ${mono200};
           text-align: center;
-          padding: 20px 0 10px;
+          padding: 20px;
           width: ${width};
           max-height: calc(100vh - 56px);
           overflow: auto;
           -webkit-overflow-scrolling: touch;
           -ms-overflow-style: -ms-autohiding-scrollbar;
-          position: fixed;
-          top: 0;
-          left: 0;
           z-index: 2;
           display: ${visible ? 'flex' : 'none'};
           flex-direction: column;
           justify-content: space-between;
-          flex-shrink: 0;
+        }
+
+        :global(#dialog) > :global(div) {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       `}
     </style>
