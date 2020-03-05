@@ -149,8 +149,6 @@ const Content = ({ children, padding }) => {
           .container {
             width: 100%;
             min-height: 100%;
-            display: flex;
-            flex-grow: 1;
           }
 
           nav {
@@ -235,6 +233,13 @@ const Content = ({ children, padding }) => {
 
             .main-container {
               padding: 40px 30px;
+            }
+          }
+
+          @media (min-width: 746px) {
+            .container {
+              display: flex;
+              flex-grow: 1;
             }
           }
         `}
