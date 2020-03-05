@@ -47,13 +47,7 @@ const Overlay = ({
                 left: 0;
                 transition: background-color 0.2s;
                 z-index: 1;
-                display: none;
-              }
-
-              @media (max-width: 746px) {
-                div {
-                  display: block;
-                }
+                display: ${visible ? 'block' : 'none'};
               }
             `}
           </style>
