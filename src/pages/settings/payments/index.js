@@ -6,7 +6,7 @@ import Container from 'components/container';
 import Badge from 'components/badge';
 import Dialog from 'components/dialog';
 import { ImageDescription } from 'components/image';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import { Paragraph } from 'components/typography';
 import Input from 'components/input';
 import Switch from 'components/switch';
@@ -21,11 +21,11 @@ const descriptionStyle = {
   margin: '0 0 20px'
 };
 
-const ContainerPayment = ({ children, collapse, onClick }) => (
+const ContainerPayment = ({ children, disclosure, onClick }) => (
   <>
     <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
       <div>{children}</div>
-      {collapse}
+      {disclosure}
       <Badge text="todo" onClick={onClick} />
     </Container>
 
@@ -59,8 +59,8 @@ const PaymentsSettings = () => {
         subTitle="Selecione um meio de pagamento para receber os pagamentos."
       >
         <ContainerPayment
-          collapse={
-            <Collapse isOpen={mercadoPago.active}>
+          disclosure={
+            <Disclosure isOpen={mercadoPago.active}>
               <Paragraph
                 text="Informe o endereço de e-mail que você usou para criar sua conta do Mercado Pago. Mais informações sobre como conectar o Mercado Pago podem ser encontradas aqui."
                 color="muted"
@@ -74,7 +74,7 @@ const PaymentsSettings = () => {
                 value={mercadoPago.email}
                 onChange={onChange}
               />
-            </Collapse>
+            </Disclosure>
           }
           onClick={handleClickDialog}
         >
@@ -93,8 +93,8 @@ const PaymentsSettings = () => {
           />
         </ContainerPayment>
         <ContainerPayment
-          collapse={
-            <Collapse isOpen={wirecard.active}>
+          disclosure={
+            <Disclosure isOpen={wirecard.active}>
               <Paragraph
                 text="Informe o endereço de e-mail que você usou para criar sua conta da Wirecard. Mais informações sobre como conectar o Wirecard podem ser encontradas aqui."
                 color="muted"
@@ -108,7 +108,7 @@ const PaymentsSettings = () => {
                 value={wirecard.email}
                 onChange={onChange}
               />
-            </Collapse>
+            </Disclosure>
           }
           onClick={handleClickDialog}
         >
@@ -127,8 +127,8 @@ const PaymentsSettings = () => {
           />
         </ContainerPayment>
         <ContainerPayment
-          collapse={
-            <Collapse isOpen={pagSeguro.active}>
+          disclosure={
+            <Disclosure isOpen={pagSeguro.active}>
               <Paragraph
                 text="Informe o endereço de e-mail que você usou para criar sua conta da PagSeguro. Mais informações sobre como conectar o PagSeguro podem ser encontradas aqui."
                 color="muted"
@@ -142,7 +142,7 @@ const PaymentsSettings = () => {
                 value={pagSeguro.email}
                 onChange={onChange}
               />
-            </Collapse>
+            </Disclosure>
           }
           onClick={handleClickDialog}
         >
@@ -161,8 +161,8 @@ const PaymentsSettings = () => {
           />
         </ContainerPayment>
         <ContainerPayment
-          collapse={
-            <Collapse isOpen={paypal.active}>
+          disclosure={
+            <Disclosure isOpen={paypal.active}>
               <Paragraph
                 text="Informe o endereço de e-mail que você usou para criar sua conta da PayPal. Mais informações sobre como conectar o PayPal podem ser encontradas aqui."
                 color="muted"
@@ -176,7 +176,7 @@ const PaymentsSettings = () => {
                 value={paypal.email}
                 onChange={onChange}
               />
-            </Collapse>
+            </Disclosure>
           }
           onClick={handleClickDialog}
         >

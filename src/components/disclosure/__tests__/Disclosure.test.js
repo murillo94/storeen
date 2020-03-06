@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import Collapse from '../index';
+import Disclosure from '../index';
 
 const children = 'im children';
 
-describe('Collapse', () => {
+describe('Disclosure', () => {
   test('should render', () => {
-    const { container } = render(<Collapse />);
+    const { container } = render(<Disclosure />);
 
     expect(container).toBeInTheDocument();
   });
 
   test('should have children and default values', () => {
     const { getByRole, getByText } = render(
-      <Collapse content={<button>im content</button>}>{children}</Collapse>
+      <Disclosure content={<button>im content</button>}>{children}</Disclosure>
     );
 
     const customChildren = getByText(children);
@@ -36,7 +36,7 @@ describe('Collapse', () => {
   });
 
   test('should have children isOpen is true', () => {
-    const { getByText } = render(<Collapse isOpen>{children}</Collapse>);
+    const { getByText } = render(<Disclosure isOpen>{children}</Disclosure>);
 
     const customChildren = getByText(children);
 
@@ -45,7 +45,7 @@ describe('Collapse', () => {
 
   test('should have margin bottom', () => {
     const { getByText } = render(
-      <Collapse hasMarginBottom>{children}</Collapse>
+      <Disclosure hasMarginBottom>{children}</Disclosure>
     );
 
     const customChildren = getByText(children);
@@ -69,7 +69,7 @@ describe('Collapse', () => {
     };
 
     const { getByText } = render(
-      <Collapse content={<Test />}>{children}</Collapse>
+      <Disclosure content={<Test />}>{children}</Disclosure>
     );
     const content0 = getByText('0');
 

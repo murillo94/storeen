@@ -20,10 +20,10 @@ const Form = ({ children }) => (
           margin-bottom: 20px;
         }
 
-        div :global(.collapse) > :global(.input-normal),
-        div :global(.collapse) > :global(.input-check),
-        div :global(.collapse) > :global(.with-description),
-        div :global(.collapse) > :global(button) {
+        div :global(.disclosure) > :global(.input-normal),
+        div :global(.disclosure) > :global(.input-check),
+        div :global(.disclosure) > :global(.with-description),
+        div :global(.disclosure) > :global(button) {
           margin: 0;
         }
       `}

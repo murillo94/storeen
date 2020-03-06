@@ -8,7 +8,7 @@ import Input from 'components/input';
 import Select from 'components/select';
 import Radio from 'components/radio';
 import Checkbox from 'components/checkbox';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -125,7 +125,7 @@ const AddPromotion = () => {
         />
       </Container>
       <Container title="Código promocional" isForm>
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="code"
@@ -151,10 +151,10 @@ const AddPromotion = () => {
             checked={promotional.uniqueCode}
             onChange={onChange}
           />
-        </Collapse>
+        </Disclosure>
       </Container>
       <Container title="Agendar" isForm>
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="schedule-has-schedule"
@@ -167,7 +167,7 @@ const AddPromotion = () => {
           action="onChange"
         >
           todo
-        </Collapse>
+        </Disclosure>
       </Container>
       <Footer>
         <Button text="Salvar" />

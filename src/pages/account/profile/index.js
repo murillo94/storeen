@@ -2,7 +2,7 @@ import Page from 'layouts/adminSettingsContent/account';
 
 import Container from 'components/container';
 import Input from 'components/input';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -53,7 +53,7 @@ const AccountSettings = () => {
         subTitle="Caso seja necessário a alteração da sua senha, clique no botão abaixo."
         isForm
       >
-        <Collapse
+        <Disclosure
           content={<Button appearance="minimal" text="Alterar senha" />}
         >
           <Input
@@ -80,7 +80,7 @@ const AccountSettings = () => {
             value={password.newConfirmPassword}
             onChange={onChange}
           />
-        </Collapse>
+        </Disclosure>
       </Container>
       <Footer>
         <Button text="Salvar" />

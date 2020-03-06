@@ -1,7 +1,7 @@
 import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import { Paragraph } from 'components/typography';
 import { Form } from 'components/form';
 import Input from 'components/input';
@@ -17,11 +17,11 @@ const descriptionStyle = {
   margin: '0 0 20px'
 };
 
-const ContainerShipping = ({ children, collapse }) => (
+const ContainerShipping = ({ children, disclosure }) => (
   <>
     <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
       <div>{children}</div>
-      {collapse}
+      {disclosure}
     </Container>
 
     <style jsx>
@@ -49,8 +49,8 @@ const ShippingSettings = () => {
         subTitle="Escolha as maneiras de levar seus produtos até seus clientes."
       >
         <ContainerShipping
-          collapse={
-            <Collapse isOpen={local.active}>
+          disclosure={
+            <Disclosure isOpen={local.active}>
               <Paragraph
                 text="Insira aqui as instruções que seus clientes devem seguir caso queiram retirar o produto pessoalmente."
                 color="muted"
@@ -63,7 +63,7 @@ const ShippingSettings = () => {
                 value={local.orientation}
                 onChange={onChange}
               />
-            </Collapse>
+            </Disclosure>
           }
         >
           Habilitar Retirar Pessoalmente?
@@ -75,8 +75,8 @@ const ShippingSettings = () => {
           />
         </ContainerShipping>
         <ContainerShipping
-          collapse={
-            <Collapse isOpen={postOffice.active}>
+          disclosure={
+            <Disclosure isOpen={postOffice.active}>
               <Paragraph
                 text="Exclusivo para lojistas que possuem contrato com os Correios."
                 color="muted"
@@ -105,7 +105,7 @@ const ShippingSettings = () => {
                   onChange={onChange}
                 />
               </Form>
-            </Collapse>
+            </Disclosure>
           }
         >
           Contrato Correios

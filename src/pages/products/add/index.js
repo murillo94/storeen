@@ -7,7 +7,7 @@ import Container from 'components/container';
 import { FormGroup } from 'components/form';
 import Input from 'components/input';
 import Checkbox from 'components/checkbox';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import Footer from 'components/footer';
 import Button from 'components/button';
 
@@ -71,7 +71,7 @@ const AddProduct = () => {
         </FormGroup>
       </Container>
       <Container title="Fretes" isForm>
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="shipping"
@@ -117,10 +117,10 @@ const AddProduct = () => {
               onChange={onChange}
             />
           </FormGroup>
-        </Collapse>
+        </Disclosure>
       </Container>
       <Container title="Estoque" isForm>
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="stock"
@@ -140,10 +140,10 @@ const AddProduct = () => {
             mask="number"
             onChange={onChange}
           />
-        </Collapse>
+        </Disclosure>
       </Container>
       <Container title="Variações" isForm>
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="variations"
@@ -156,7 +156,7 @@ const AddProduct = () => {
           action="onChange"
         >
           todo
-        </Collapse>
+        </Disclosure>
       </Container>
       <Footer>
         <Button text="Salvar" />

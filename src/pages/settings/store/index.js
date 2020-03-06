@@ -2,7 +2,7 @@ import Page from 'layouts/adminSettingsContent/store';
 
 import Container from 'components/container';
 import Input from 'components/input';
-import Collapse from 'components/collapse';
+import Disclosure from 'components/disclosure';
 import Checkbox from 'components/checkbox';
 import { Heading } from 'components/typography';
 import Footer from 'components/footer';
@@ -82,7 +82,7 @@ const StoreSettings = () => {
         }
         isForm
       >
-        <Collapse
+        <Disclosure
           content={
             <Checkbox
               id="company-has-legal-person"
@@ -133,7 +133,7 @@ const StoreSettings = () => {
             value={company.municipalTax}
             onChange={onChange}
           />
-        </Collapse>
+        </Disclosure>
         {company.hasLegalPerson && (
           <Heading
             is="h3"

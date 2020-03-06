@@ -1,16 +1,16 @@
 import { useRef, useEffect, cloneElement } from 'react';
 
-const Collapse = ({
+const Disclosure = ({
   children,
   content,
   isOpen = false,
   hasMarginBottom = false,
   action = 'onClick'
 }) => {
-  const collapseRef = useRef(null);
+  const disclosureRef = useRef(null);
 
-  const handleCollapse = e => {
-    collapseRef.current.toggleAttribute('hidden');
+  const handleDisclosure = e => {
+    disclosureRef.current.toggleAttribute('hidden');
 
     if (e && e.currentTarget) {
       const isExpanded =
@@ -24,28 +24,28 @@ const Collapse = ({
       const { checked, value } = content.props;
 
       if (checked || value) {
-        handleCollapse();
+        handleDisclosure();
       }
     }
   }, []);
 
   return (
-    <div className="collapse">
+    <div className="disclosure">
       {content &&
         cloneElement(content, {
           [action]: e => {
             if (content.props[action]) content.props[action](e);
-            handleCollapse(e);
+            handleDisclosure(e);
           },
           'aria-expanded':
             content.props.checked || content.props.value || isOpen
         })}
-      <div ref={collapseRef} role="region" hidden={!isOpen}>
+      <div ref={disclosureRef} role="region" hidden={!isOpen}>
         {children}
       </div>
       <style jsx>
         {`
-          .collapse {
+          .disclosure {
             margin-bottom: ${hasMarginBottom && '20px'};
           }
 
@@ -58,4 +58,4 @@ const Collapse = ({
   );
 };
 
-export default Collapse;
+export default Disclosure;
