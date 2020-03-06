@@ -13,9 +13,9 @@ const content = 'im content';
 
 describe('Alert', () => {
   test('should render', () => {
-    const { container } = render(<Alert />);
+    const { getByRole } = render(<Alert />);
 
-    expect(container).toBeInTheDocument();
+    expect(getByRole('alert')).toBeInTheDocument();
   });
 
   test('should have children', () => {

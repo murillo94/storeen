@@ -19,7 +19,7 @@ const Alert = ({
 
   return (
     <>
-      <div className="container">
+      <div role="alert" className="container">
         {title && <Heading is="h4" text={title} />}
         {description && (
           <div className="description">
