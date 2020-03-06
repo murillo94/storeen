@@ -30,12 +30,13 @@ describe('Table', () => {
   });
 
   test('should have title', () => {
-    const { getByText } = render(
+    const { getByText, getByRole } = render(
       <Table title={content} optionsTitle="im options title" />
     );
 
     expect(getByText(content)).toBeInTheDocument();
     expect(getByText('im options title')).toBeInTheDocument();
+    expect(getByRole('table')).toHaveAttribute('aria-label', content);
   });
 
   test('should have headers', () => {

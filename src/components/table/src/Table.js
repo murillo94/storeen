@@ -33,7 +33,7 @@ const Table = ({
           </TableOptions>
         )}
         <div>
-          <table aria-label={ariaLabel}>
+          <table aria-label={title || ariaLabel}>
             <TableHead headers={headers} />
             <TableBody>{children}</TableBody>
           </table>
