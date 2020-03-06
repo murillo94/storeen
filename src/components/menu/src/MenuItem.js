@@ -14,7 +14,7 @@ const buttonStyle = {
   width: '100%'
 };
 
-const DropdownItemLink = ({ children, href }) => (
+const MenuItemLink = ({ children, href }) => (
   <>
     <Link href={href}>
       <a>{children}</a>
@@ -41,7 +41,7 @@ const DropdownItemLink = ({ children, href }) => (
   </>
 );
 
-const DropdownItemButton = ({ children, appearance, onClick }) => (
+const MenuItemButton = ({ children, appearance, onClick }) => (
   <Button
     appearance={appearance}
     hasBorder={false}
@@ -52,7 +52,7 @@ const DropdownItemButton = ({ children, appearance, onClick }) => (
   </Button>
 );
 
-const DropdownItem = ({
+const MenuItem = ({
   children,
   appearance = 'minimal',
   href = '',
@@ -64,11 +64,11 @@ const DropdownItem = ({
     <>
       <li role="menuitem">
         {href ? (
-          <DropdownItemLink href={href}>{children}</DropdownItemLink>
+          <MenuItemLink href={href}>{children}</MenuItemLink>
         ) : (
-          <DropdownItemButton appearance={appearance} onClick={onClick}>
+          <MenuItemButton appearance={appearance} onClick={onClick}>
             {children}
-          </DropdownItemButton>
+          </MenuItemButton>
         )}
       </li>
 
@@ -93,4 +93,4 @@ const DropdownItem = ({
   );
 };
 
-export default DropdownItem;
+export default MenuItem;

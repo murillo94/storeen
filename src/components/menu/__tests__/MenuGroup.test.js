@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { DropdownGroup } from '../index';
+import { MenuGroup } from '../index';
 
 import {
   primary700,
@@ -11,15 +11,15 @@ import {
 
 const content = 'im content';
 
-describe('DropdownGroup', () => {
+describe('MenuGroup', () => {
   test('should render', () => {
-    const { getByRole } = render(<DropdownGroup hidden={false} />);
+    const { getByRole } = render(<MenuGroup hidden={false} />);
 
     expect(getByRole('menu')).toBeInTheDocument();
   });
 
   test('should have children and default values', () => {
-    const { getByText } = render(<DropdownGroup>{content}</DropdownGroup>);
+    const { getByText } = render(<MenuGroup>{content}</MenuGroup>);
 
     const menu = getByText(content);
 
@@ -28,16 +28,14 @@ describe('DropdownGroup', () => {
   });
 
   test('should have id', () => {
-    const { getByText } = render(
-      <DropdownGroup id="id-test">{content}</DropdownGroup>
-    );
+    const { getByText } = render(<MenuGroup id="id-test">{content}</MenuGroup>);
 
     expect(getByText(content)).toHaveAttribute('id', 'id-test');
   });
 
   test('should have default theme', () => {
     const { getByRole } = render(
-      <DropdownGroup appearance="default" hidden={false} />
+      <MenuGroup appearance="default" hidden={false} />
     );
 
     const menu = getByRole('menu');
@@ -46,7 +44,7 @@ describe('DropdownGroup', () => {
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole } = render(<DropdownGroup hidden={false} />);
+    const { getByRole } = render(<MenuGroup hidden={false} />);
 
     const menu = getByRole('menu');
 
@@ -55,7 +53,7 @@ describe('DropdownGroup', () => {
 
   test('should have negative theme', () => {
     const { getByRole } = render(
-      <DropdownGroup appearance="negative" hidden={false} />
+      <MenuGroup appearance="negative" hidden={false} />
     );
 
     const menu = getByRole('menu');
@@ -65,7 +63,7 @@ describe('DropdownGroup', () => {
 
   test('should have positive theme', () => {
     const { getByRole } = render(
-      <DropdownGroup appearance="positive" hidden={false} />
+      <MenuGroup appearance="positive" hidden={false} />
     );
 
     const menu = getByRole('menu');

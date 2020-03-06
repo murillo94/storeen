@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Image } from 'components/image';
-import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
+import { Menu, MenuGroup, MenuItem } from 'components/menu';
 import SideSheet from 'components/sideSheet';
 import { TabList, Tab } from 'components/tab';
 import Header from 'components/header';
@@ -59,7 +59,7 @@ const Logo = () => (
   </>
 );
 
-const Menu = () => (
+const Nav = () => (
   <>
     <div>
       <Logo />
@@ -86,17 +86,17 @@ const UserInfo = () => {
   };
 
   return (
-    <Dropdown
+    <Menu
       id="user-info"
       visible={visibleUserInfo}
       text="Minha conta"
       onClick={handleClickUserInfo}
     >
-      <DropdownGroup id="user-info" hidden={!visibleUserInfo}>
-        <DropdownItem href="/account">Meus dados</DropdownItem>
-        <DropdownItem href="/">Sair</DropdownItem>
-      </DropdownGroup>
-    </Dropdown>
+      <MenuGroup id="user-info" hidden={!visibleUserInfo}>
+        <MenuItem href="/account">Meus dados</MenuItem>
+        <MenuItem href="/">Sair</MenuItem>
+      </MenuGroup>
+    </Menu>
   );
 };
 
@@ -111,7 +111,7 @@ const Content = ({ children, padding }) => {
     <>
       <div className="container">
         <nav className="side-sheet">
-          <Menu />
+          <Nav />
         </nav>
         <main>
           <Header>
@@ -140,7 +140,7 @@ const Content = ({ children, padding }) => {
           width="180px"
           onClose={handleClickMenu}
         >
-          <Menu />
+          <Nav />
         </SideSheet>
       </div>
 

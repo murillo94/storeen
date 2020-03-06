@@ -1,25 +1,25 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import { DropdownItem } from '../index';
+import { MenuItem } from '../index';
 
 const content = 'im content';
 
-describe('DropdownItem', () => {
+describe('MenuItem', () => {
   test('should render', () => {
-    const { getByRole } = render(<DropdownItem />);
+    const { getByRole } = render(<MenuItem />);
 
     expect(getByRole('menuitem')).toBeInTheDocument();
   });
 
   test('should have children', () => {
-    const { getByText } = render(<DropdownItem>{content}</DropdownItem>);
+    const { getByText } = render(<MenuItem>{content}</MenuItem>);
 
     expect(getByText(content)).toBeInTheDocument();
   });
 
   test('should have href', () => {
     const { getByRole } = render(
-      <DropdownItem href="https://www.href.com.br">{content}</DropdownItem>
+      <MenuItem href="https://www.href.com.br">{content}</MenuItem>
     );
 
     const link = getByRole('link');
@@ -31,7 +31,7 @@ describe('DropdownItem', () => {
   test('should have button', () => {
     const onClick = jest.fn();
     const { getByRole } = render(
-      <DropdownItem onClick={onClick}>{content}</DropdownItem>
+      <MenuItem onClick={onClick}>{content}</MenuItem>
     );
 
     const button = getByRole('button');

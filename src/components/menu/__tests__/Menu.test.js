@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import { Dropdown } from '../index';
+import { Menu } from '../index';
 
 import {
   primary700,
@@ -13,27 +13,27 @@ import {
 
 const content = 'im content';
 
-describe('Dropdown', () => {
+describe('Menu', () => {
   test('should render', () => {
-    const { getByRole } = render(<Dropdown />);
+    const { getByRole } = render(<Menu />);
 
     expect(getByRole('button')).toBeInTheDocument();
   });
 
   test('should have children', () => {
-    const { getByText } = render(<Dropdown>{content}</Dropdown>);
+    const { getByText } = render(<Menu>{content}</Menu>);
 
     expect(getByText(content)).toBeInTheDocument();
   });
 
   test('should have id', () => {
-    const { getByRole } = render(<Dropdown id="id-test" />);
+    const { getByRole } = render(<Menu id="id-test" />);
 
     expect(getByRole('button')).toHaveAttribute('aria-controls', 'id-test');
   });
 
   test('should have icon and text', () => {
-    const { getByRole } = render(<Dropdown icon="plus" text="im text" />);
+    const { getByRole } = render(<Menu icon="plus" text="im text" />);
 
     expect(getByRole('button')).toMatchInlineSnapshot(`
       <button
@@ -82,20 +82,20 @@ describe('Dropdown', () => {
   });
 
   test('should have visible', () => {
-    const { getByRole } = render(<Dropdown visible />);
+    const { getByRole } = render(<Menu visible />);
 
     expect(getByRole('button')).toHaveAttribute('aria-expanded', 'true');
   });
 
   test('should have border', () => {
-    const { getByRole } = render(<Dropdown hasBorder />);
+    const { getByRole } = render(<Menu hasBorder />);
 
     expect(getByRole('button')).toHaveStyle(`border: 1px solid ${mono200};`);
   });
 
   test('should have click', () => {
     const onClick = jest.fn();
-    const { getByRole } = render(<Dropdown onClick={onClick} />);
+    const { getByRole } = render(<Menu onClick={onClick} />);
 
     const button = getByRole('button');
 
@@ -105,7 +105,7 @@ describe('Dropdown', () => {
   });
 
   test('should have default theme', () => {
-    const { getByRole } = render(<Dropdown appearance="default" />);
+    const { getByRole } = render(<Menu appearance="default" />);
 
     const button = getByRole('button');
 
@@ -114,7 +114,7 @@ describe('Dropdown', () => {
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole } = render(<Dropdown />);
+    const { getByRole } = render(<Menu />);
 
     const button = getByRole('button');
 
@@ -123,7 +123,7 @@ describe('Dropdown', () => {
   });
 
   test('should have negative theme', () => {
-    const { getByRole } = render(<Dropdown appearance="negative" />);
+    const { getByRole } = render(<Menu appearance="negative" />);
 
     const button = getByRole('button');
 
@@ -132,7 +132,7 @@ describe('Dropdown', () => {
   });
 
   test('should have positive theme', () => {
-    const { getByRole } = render(<Dropdown appearance="positive" />);
+    const { getByRole } = render(<Menu appearance="positive" />);
 
     const button = getByRole('button');
 

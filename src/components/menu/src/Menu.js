@@ -4,7 +4,7 @@ import Button from 'components/button';
 
 import { mono0 } from 'utils/theme/colors';
 
-const Dropdown = ({
+const Menu = ({
   children,
   appearance = 'minimal',
   id = null,
@@ -57,4 +57,4 @@ const Dropdown = ({
   );
 };
 
-export default Dropdown;
+export default Menu;

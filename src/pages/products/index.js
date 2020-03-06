@@ -3,7 +3,7 @@ import Router from 'next/router';
 
 import Page from 'layouts/adminContent';
 
-import { Dropdown, DropdownGroup, DropdownItem } from 'components/dropdown';
+import { Menu, MenuGroup, MenuItem } from 'components/menu';
 import SubHeader from 'components/subHeader';
 import Button from 'components/button';
 import {
@@ -54,7 +54,7 @@ const Filter = () => {
   };
 
   return (
-    <Dropdown
+    <Menu
       id="filter"
       visible={visibleFilter}
       hasBorder
@@ -63,11 +63,11 @@ const Filter = () => {
       text="Filtrar"
       onClick={handleClickFilter}
     >
-      <DropdownGroup id="filter" hidden={!visibleFilter}>
-        <DropdownItem>teste1</DropdownItem>
-        <DropdownItem>teste2</DropdownItem>
-      </DropdownGroup>
-    </Dropdown>
+      <MenuGroup id="filter" hidden={!visibleFilter}>
+        <MenuItem>todo</MenuItem>
+        <MenuItem>todo</MenuItem>
+      </MenuGroup>
+    </Menu>
   );
 };
 

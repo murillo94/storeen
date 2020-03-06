@@ -3,7 +3,7 @@ import useTheme from 'hooks/theme/useTheme';
 import { mono0 } from 'utils/theme/colors';
 import { radius500 } from 'utils/theme/radius';
 
-const DropdownGroup = ({
+const MenuGroup = ({
   children,
   appearance = 'minimal',
   id = null,
@@ -38,4 +38,4 @@ const DropdownGroup = ({
   );
 };
 
-export default DropdownGroup;
+export default MenuGroup;
