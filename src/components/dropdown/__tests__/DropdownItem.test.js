@@ -19,12 +19,12 @@ describe('DropdownItem', () => {
 
   test('should have href', () => {
     const { getByRole } = render(
-      <DropdownItem href="https://www.google.com">{content}</DropdownItem>
+      <DropdownItem href="https://www.href.com.br">{content}</DropdownItem>
     );
 
     const link = getByRole('link');
 
-    expect(link).toHaveAttribute('href', 'https://www.google.com');
+    expect(link).toHaveAttribute('href', 'https://www.href.com.br');
     expect(link).toHaveTextContent(content);
   });
 
