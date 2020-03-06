@@ -12,6 +12,7 @@ const Table = ({
   hasBoxShadow = true,
   hasBorder = false,
   hasSearch = false,
+  ariaLabel = null,
   placeholderSearchSuffix = ''
 }) => {
   return (
@@ -32,7 +33,7 @@ const Table = ({
           </TableOptions>
         )}
         <div>
-          <table>
+          <table aria-label={ariaLabel}>
             <TableHead headers={headers} />
             <TableBody>{children}</TableBody>
           </table>

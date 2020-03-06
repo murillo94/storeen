@@ -68,6 +68,12 @@ describe('Table', () => {
     expect(children).toHaveStyle(`border: 1px solid ${mono100};`);
   });
 
+  test('should have aria label', () => {
+    const { getByRole } = render(<Table ariaLabel="im aria label" />);
+
+    expect(getByRole('table')).toHaveAttribute('aria-label', 'im aria label');
+  });
+
   test('should have input search', () => {
     const { getByPlaceholderText } = render(
       <Table hasSearch placeholderSearchSuffix="suffix test" />
