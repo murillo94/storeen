@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import Switch from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 describe('Switch', () => {
   test('should render', () => {
@@ -36,8 +36,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${mono700};`);
-    expect(rightText).toHaveStyle(`color: ${mono700};`);
+    expect(leftText).toHaveStyle(`color: ${mono800};`);
+    expect(rightText).toHaveStyle(`color: ${mono800};`);
   });
 
   test('should have default color text', () => {

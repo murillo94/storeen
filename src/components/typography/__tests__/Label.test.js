@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Label } from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 describe('Label', () => {
   const LabelCustom = props => (
@@ -48,7 +48,7 @@ describe('Label', () => {
   test('should have muted color', () => {
     const { getByText } = render(<LabelCustom color="muted" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${mono700};`);
+    expect(getByText('content')).toHaveStyle(`color: ${mono800};`);
   });
 
   test('should have primary color', () => {

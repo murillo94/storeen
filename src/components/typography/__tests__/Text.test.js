@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Text } from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 describe('Text', () => {
   const SpanCustom = props => <Text text="im span" {...props} />;
@@ -36,7 +36,7 @@ describe('Text', () => {
   test('should have muted color', () => {
     const { getByText } = render(<SpanCustom color="muted" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${mono700};`);
+    expect(getByText('im span')).toHaveStyle(`color: ${mono800};`);
   });
 
   test('should have primary color', () => {

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Heading } from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 describe('Heading', () => {
   test('should render', () => {
@@ -35,7 +35,7 @@ describe('Heading', () => {
     test('should have muted color', () => {
       const { getByRole } = render(<Heading color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
     });
 
     test('should have primary color', () => {
@@ -77,7 +77,7 @@ describe('Heading', () => {
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h2" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
     });
 
     test('should have primary color', () => {
@@ -119,7 +119,7 @@ describe('Heading', () => {
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h3" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
     });
 
     test('should have primary color', () => {
@@ -161,7 +161,7 @@ describe('Heading', () => {
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h4" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
     });
 
     test('should have primary color', () => {

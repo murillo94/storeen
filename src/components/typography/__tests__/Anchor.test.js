@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Anchor } from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 const props = {
   href: 'https://www.google.com',
@@ -40,7 +40,7 @@ describe('Anchor', () => {
   test('should have muted color', () => {
     const { getByRole } = render(<Anchor {...props} color="muted" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${mono700};`);
+    expect(getByRole('link')).toHaveStyle(`color: ${mono800};`);
   });
 
   test('should have primary color', () => {

@@ -32,5 +32,5 @@ export const mono400 = '#bebebe';
 export const mono500 = '#b5b5b5';
 export const mono600 = '#acacac';
 export const mono700 = '#a3a3a3';
-export const mono800 = '#727272';
+export const mono800 = '#717171';
 export const mono900 = '#333333';

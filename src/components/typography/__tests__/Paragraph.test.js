@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Paragraph } from '../index';
 
-import { mono900, mono700, primary700 } from 'utils/theme/colors';
+import { mono900, mono800, primary700 } from 'utils/theme/colors';
 
 describe('Paragraph', () => {
   const ParagraphCustom = props => <Paragraph text="im p" {...props} />;
@@ -36,7 +36,7 @@ describe('Paragraph', () => {
   test('should have muted color', () => {
     const { getByText } = render(<ParagraphCustom color="muted" />);
 
-    expect(getByText('im p')).toHaveStyle(`color: ${mono700};`);
+    expect(getByText('im p')).toHaveStyle(`color: ${mono800};`);
   });
 
   test('should have primary color', () => {
