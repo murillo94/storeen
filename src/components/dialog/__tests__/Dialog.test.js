@@ -16,6 +16,12 @@ describe('Dialog', () => {
     expect(container).toMatchInlineSnapshot(`<div />`);
   });
 
+  test('should have different role', () => {
+    const { getByRole } = render(<Dialog role="alertdialog" visible />);
+
+    expect(getByRole('alertdialog')).toBeInTheDocument();
+  });
+
   test('should have children', () => {
     const { getByRole } = render(<Dialog visible>{content}</Dialog>);
 

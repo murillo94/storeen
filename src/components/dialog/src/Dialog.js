@@ -5,13 +5,14 @@ import { radius600 } from 'utils/theme/radius';
 
 const Dialog = ({
   children,
+  role = 'dialog',
   visible = false,
   width = '560px',
   onClose = null
 }) => (
   <>
     <Overlay id="dialog" visible={visible} removeBodyScroll onClose={onClose}>
-      <div role="dialog" aria-modal="true" className="dialog">
+      <div role={role} aria-modal="true" className="dialog">
         {children}
       </div>
     </Overlay>
