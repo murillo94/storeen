@@ -83,6 +83,7 @@ const Products = () => {
         headers={headers}
         optionsHeader={<Filter />}
         hasSearch
+        ariaLabel="Produtos"
         placeholderSearchSuffix="produtos"
       >
         {items.map(item => (

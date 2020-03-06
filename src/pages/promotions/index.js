@@ -45,7 +45,12 @@ const Promotions = () => {
       <SubHeader title="Promoções">
         <Button text="Nova promoção" onClick={handleAddPromotion} />
       </SubHeader>
-      <Table headers={headers} hasSearch placeholderSearchSuffix="promoções">
+      <Table
+        headers={headers}
+        hasSearch
+        ariaLabel="Promoções"
+        placeholderSearchSuffix="promoções"
+      >
         {items.map(item => (
           <TableRow key={item.name}>
             <TableBodyCell>
