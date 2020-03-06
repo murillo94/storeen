@@ -11,7 +11,7 @@ const Dialog = ({
 }) => (
   <>
     <Overlay id="dialog" visible={visible} removeBodyScroll onClose={onClose}>
-      <div role="dialog" className="dialog">
+      <div role="dialog" aria-modal="true" className="dialog">
         {children}
       </div>
     </Overlay>

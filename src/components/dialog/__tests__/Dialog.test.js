@@ -22,6 +22,7 @@ describe('Dialog', () => {
     const dialog = getByRole('dialog');
 
     expect(dialog).toHaveTextContent(content);
+    expect(dialog).toHaveAttribute('aria-modal', 'true');
     expect(dialog).toHaveClass('dialog');
     expect(dialog).toBeVisible();
   });
