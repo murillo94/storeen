@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import Collapse from '../index';
 
-const children = 'children';
+const children = 'im children';
 
 describe('Collapse', () => {
   test('should render', () => {
@@ -13,20 +13,26 @@ describe('Collapse', () => {
   });
 
   test('should have children and default values', () => {
-    const { getByText } = render(
-      <Collapse content={<button>content</button>}>{children}</Collapse>
+    const { getByRole, getByText } = render(
+      <Collapse content={<button>im content</button>}>{children}</Collapse>
     );
 
     const customChildren = getByText(children);
 
     expect(customChildren).not.toBeVisible();
 
-    const content = getByText('content');
+    const content = getByText('im content');
+
+    expect(content).toHaveAttribute('aria-expanded', 'false');
 
     fireEvent.click(content);
 
-    expect(customChildren).toBeVisible();
-    expect(customChildren.parentNode).not.toHaveStyle('margin-bottom: 20px;');
+    const region = getByRole('region');
+
+    expect(content).toHaveAttribute('aria-expanded', 'true');
+
+    expect(region).toBeVisible();
+    expect(region.parentNode).not.toHaveStyle('margin-bottom: 20px;');
   });
 
   test('should have children isOpen is true', () => {

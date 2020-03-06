@@ -9,8 +9,14 @@ const Collapse = ({
 }) => {
   const collapseRef = useRef(null);
 
-  const handleCollapse = () => {
-    collapseRef.current.classList.toggle('visible');
+  const handleCollapse = e => {
+    collapseRef.current.toggleAttribute('hidden');
+
+    if (e && e.currentTarget) {
+      const isExpanded =
+        e.currentTarget.getAttribute('aria-expanded') === 'true';
+      e.currentTarget.setAttribute('aria-expanded', !isExpanded);
+    }
   };
 
   useEffect(() => {
@@ -23,24 +29,18 @@ const Collapse = ({
     }
   }, []);
 
-  useEffect(() => {
-    if (isOpen) {
-      collapseRef.current.classList.add('visible');
-    } else {
-      collapseRef.current.classList.remove('visible');
-    }
-  }, [isOpen]);
-
   return (
     <div className="collapse">
       {content &&
         cloneElement(content, {
           [action]: e => {
             if (content.props[action]) content.props[action](e);
-            handleCollapse();
-          }
+            handleCollapse(e);
+          },
+          'aria-expanded':
+            content.props.checked || content.props.value || isOpen
         })}
-      <div ref={collapseRef} className="hidden">
+      <div ref={collapseRef} role="region" hidden={!isOpen}>
         {children}
       </div>
       <style jsx>
@@ -49,12 +49,7 @@ const Collapse = ({
             margin-bottom: ${hasMarginBottom && '20px'};
           }
 
-          .hidden {
-            display: none;
-          }
-
-          .visible {
-            display: block;
+          div[role='region']:not([hidden='true']) {
             margin-top: 20px;
           }
         `}
