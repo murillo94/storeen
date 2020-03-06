@@ -9,7 +9,7 @@ describe('Switch', () => {
   test('should render', () => {
     const { getByRole } = render(<Switch />);
 
-    expect(getByRole('checkbox')).toBeInTheDocument();
+    expect(getByRole('switch')).toBeInTheDocument();
   });
 
   test('should have left text', () => {
@@ -88,19 +88,25 @@ describe('Switch', () => {
     };
 
     const { getByRole } = render(<Test />);
-    const checkbox = getByRole('checkbox');
+    const switchRole = getByRole('switch');
 
-    expect(checkbox.checked).toBe(false);
+    expect(switchRole.checked).toBe(false);
     expect(onChange).not.toBeCalled();
 
-    fireEvent.click(checkbox);
+    fireEvent.click(switchRole);
 
-    expect(checkbox.checked).toBe(true);
+    expect(switchRole.checked).toBe(true);
     expect(onChange).toBeCalledWith(true);
 
-    fireEvent.click(checkbox);
+    fireEvent.click(switchRole);
 
-    expect(checkbox.checked).toBe(false);
+    expect(switchRole.checked).toBe(false);
     expect(onChange).toBeCalledWith(false);
+  });
+
+  test('should have custom props', () => {
+    const { getByRole } = render(<Switch aria-expanded="true" />);
+
+    expect(getByRole('switch')).toHaveAttribute('aria-expanded', 'true');
   });
 });

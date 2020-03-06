@@ -14,7 +14,8 @@ const Switch = ({
   rightText = '',
   colorText = 'muted',
   checked = false,
-  onChange = () => null
+  onChange = () => null,
+  ...props
 }) => {
   const theme = useTheme(appearance);
 
@@ -29,6 +30,7 @@ const Switch = ({
         <Label id={`${id}-switch-label`} htmlFor={id}>
           <input
             type="checkbox"
+            role="switch"
             id={id}
             name={name}
             value={value || checked}
@@ -36,6 +38,7 @@ const Switch = ({
             aria-checked={checked}
             aria-label={`${id}-switch-label`}
             onChange={onChange}
+            {...props}
           />
           <span />
         </Label>
