@@ -40,6 +40,7 @@ describe('Dropdown', () => {
         aria-disabled="false"
         aria-expanded="false"
         aria-haspopup="menu"
+        aria-label="im text"
         class="jsx-405694134 "
         style="width: auto;"
         type="button"

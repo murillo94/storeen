@@ -37,6 +37,7 @@ describe('SubHeader', () => {
     expect(button).toMatchInlineSnapshot(`
       <button
         aria-disabled="false"
+        aria-label="chevron-left"
         class="jsx-405694134 "
         style="width: auto;"
         type="button"

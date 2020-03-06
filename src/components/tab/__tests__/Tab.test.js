@@ -28,6 +28,7 @@ describe('Tab', () => {
     expect(getByRole('button')).toMatchInlineSnapshot(`
       <button
         aria-disabled="false"
+        aria-label=""
         class="jsx-774241038 "
         style="width: 100%;"
         type="button"
