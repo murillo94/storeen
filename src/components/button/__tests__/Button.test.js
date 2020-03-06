@@ -48,6 +48,7 @@ describe('Button', () => {
     expect(text).toMatchInlineSnapshot(`
       <button
         aria-disabled="false"
+        aria-label="im button"
         class="jsx-976006719 "
         style="width: auto;"
         type="button"

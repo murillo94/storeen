@@ -29,6 +29,7 @@ const Button = ({
         type={type}
         disabled={disabled}
         aria-disabled={disabled}
+        aria-label={text || icon}
         style={{ ...defaultStyle, ...customStyle }}
         onClick={onClick}
         {...props}

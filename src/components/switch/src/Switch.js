@@ -34,6 +34,7 @@ const Switch = ({
             value={value || checked}
             checked={checked}
             aria-checked={checked}
+            aria-label={`${id}-switch-label`}
             onChange={onChange}
           />
           <span />

@@ -42,6 +42,7 @@ const Checkbox = ({
             value={value || checked}
             checked={checked}
             aria-checked={checked}
+            aria-label={`${id}-checkbox-label`}
             onChange={onChange}
           />
           <span>{text}</span>
