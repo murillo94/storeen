@@ -11,7 +11,7 @@ class CustomDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
           <meta
