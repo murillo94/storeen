@@ -75,4 +75,10 @@ describe('Radio', () => {
     expect(radioOne.checked).toBe(false);
     expect(onChange).toBeCalledWith('two');
   });
+
+  test('should have custom props', () => {
+    const { getByRole } = render(<Radio aria-expanded="true" />);
+
+    expect(getByRole('radio')).toHaveAttribute('aria-expanded', 'true');
+  });
 });

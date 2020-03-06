@@ -55,4 +55,10 @@ describe('Checkbox', () => {
     expect(checkbox.checked).toBe(false);
     expect(onChange).toBeCalledWith(false);
   });
+
+  test('should have custom props', () => {
+    const { getByRole } = render(<Checkbox aria-expanded="true" />);
+
+    expect(getByRole('checkbox')).toHaveAttribute('aria-expanded', 'true');
+  });
 });

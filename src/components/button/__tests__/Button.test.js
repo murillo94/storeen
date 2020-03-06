@@ -173,4 +173,10 @@ describe('Button', () => {
     expect(button).toHaveStyle(`background-color: ${positive700};`);
     expect(button).toHaveStyle(`border: 1px solid ${positive700};`);
   });
+
+  test('should have custom props', () => {
+    const { getByRole } = render(<Button aria-expanded="true" />);
+
+    expect(getByRole('button')).toHaveAttribute('aria-expanded', 'true');
+  });
 });
