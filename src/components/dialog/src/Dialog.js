@@ -7,12 +7,18 @@ const Dialog = ({
   children,
   role = 'dialog',
   visible = false,
+  ariaLabel = null,
   width = '560px',
   onClose = null
 }) => (
   <>
     <Overlay id="dialog" visible={visible} removeBodyScroll onClose={onClose}>
-      <div role={role} aria-modal="true" className="dialog">
+      <div
+        role={role}
+        className="dialog"
+        aria-modal="true"
+        aria-label={ariaLabel}
+      >
         {children}
       </div>
     </Overlay>

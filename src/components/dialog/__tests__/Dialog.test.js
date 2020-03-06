@@ -17,9 +17,14 @@ describe('Dialog', () => {
   });
 
   test('should have different role', () => {
-    const { getByRole } = render(<Dialog role="alertdialog" visible />);
+    const { getByRole } = render(
+      <Dialog role="alertdialog" visible ariaLabel="im aria label" />
+    );
 
-    expect(getByRole('alertdialog')).toBeInTheDocument();
+    expect(getByRole('alertdialog')).toHaveAttribute(
+      'aria-label',
+      'im aria label'
+    );
   });
 
   test('should have children', () => {
