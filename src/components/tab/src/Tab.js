@@ -21,10 +21,10 @@ const TabButton = ({ children, onClick }) => (
   </Button>
 );
 
-const TabLink = ({ children, href }) => (
+const TabLink = ({ children, href, text }) => (
   <>
     <Link href={href}>
-      <a>{children}</a>
+      <a aria-label={text}>{children}</a>
     </Link>
 
     <style jsx>
@@ -75,7 +75,7 @@ const Tab = withRouter(
       <>
         <li role="tab" aria-selected={href ? !!isActive : selected}>
           {href ? (
-            <TabLink href={href}>
+            <TabLink href={href} text={text}>
               <Content text={text} icon={icon} />
             </TabLink>
           ) : (

@@ -14,7 +14,7 @@ const Anchor = memo(
     return (
       <>
         <Link href={href}>
-          <a>{text}</a>
+          <a aria-label={text}>{text}</a>
         </Link>
 
         <style jsx>

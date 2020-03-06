@@ -22,6 +22,7 @@ describe('Anchor', () => {
     const link = getByRole('link');
 
     expect(link).toHaveAttribute('href', props.href);
+    expect(link).toHaveAttribute('aria-label', props.text);
     expect(link).toHaveTextContent(props.text);
   });
 

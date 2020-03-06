@@ -22,7 +22,7 @@ describe('Tab', () => {
     expect(getByRole('tab')).toBeInTheDocument();
   });
 
-  test('should have text and icon', () => {
+  test('should have text and icon when button', () => {
     const { getByRole } = render(<Tab text={content} icon="plus" />);
 
     expect(getByRole('button')).toMatchInlineSnapshot(`
@@ -69,12 +69,61 @@ describe('Tab', () => {
     `);
   });
 
+  test('should have text and icon when link', () => {
+    const { getByRole } = render(
+      <Tab text={content} icon="plus" href="https://www.href.com.br" />
+    );
+
+    expect(getByRole('link')).toMatchInlineSnapshot(`
+<a
+  aria-label="im content"
+  class="jsx-2031944086"
+  href="https://www.href.com.br"
+>
+  <svg
+    class="feather feather-plus "
+    fill="none"
+    height="20"
+    stroke="#717171"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+  >
+    <g>
+      <line
+        x1="12"
+        x2="12"
+        y1="5"
+        y2="19"
+      />
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+    </g>
+  </svg>
+  <span
+    class="jsx-2151508852"
+    style="margin: 0px 0px 0px 10px; font-weight: 500;"
+  >
+    im content
+  </span>
+</a>
+`);
+  });
+
   test('should have link', () => {
-    const { getByRole } = render(<Tab text={content} href="href.com.br" />);
+    const { getByRole } = render(
+      <Tab text={content} href="https://www.href.com.br" />
+    );
 
     const link = getByRole('link');
 
-    expect(link).toHaveAttribute('href', 'href.com.br');
+    expect(link).toHaveAttribute('href', 'https://www.href.com.br');
     expect(link).toHaveTextContent(content);
   });
 
