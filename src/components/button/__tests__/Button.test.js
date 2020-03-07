@@ -54,9 +54,12 @@ describe('Button', () => {
         type="button"
       >
         <svg
+          alt="plus"
+          aria-label="plus"
           class="feather feather-plus "
           fill="none"
           height="17"
+          role="img"
           stroke="#ffffff"
           stroke-linecap="round"
           stroke-linejoin="round"

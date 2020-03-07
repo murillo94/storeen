@@ -15,9 +15,12 @@ describe('Icon', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <svg
+          alt="help-circle"
+          aria-label="help-circle"
           class="feather feather-help-circle "
           fill="none"
           height="18"
+          role="img"
           stroke="#717171"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -52,9 +55,12 @@ describe('Icon', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <svg
+          alt="plus"
+          aria-label="plus"
           class="feather feather-plus "
           fill="none"
           height="20"
+          role="img"
           stroke="red"
           stroke-linecap="round"
           stroke-linejoin="round"

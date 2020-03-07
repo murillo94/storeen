@@ -46,9 +46,12 @@ describe('Menu', () => {
         type="button"
       >
         <svg
+          alt="plus"
+          aria-label="plus"
           class="feather feather-plus "
           fill="none"
           height="17"
+          role="img"
           stroke="#333333"
           stroke-linecap="round"
           stroke-linejoin="round"

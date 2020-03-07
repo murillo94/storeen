@@ -34,9 +34,12 @@ describe('Tab', () => {
         type="button"
       >
         <svg
+          alt="plus"
+          aria-label="plus"
           class="feather feather-plus "
           fill="none"
           height="20"
+          role="img"
           stroke="#717171"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -75,45 +78,48 @@ describe('Tab', () => {
     );
 
     expect(getByRole('link')).toMatchInlineSnapshot(`
-<a
-  aria-label="im content"
-  class="jsx-2031944086"
-  href="https://www.href.com.br"
->
-  <svg
-    class="feather feather-plus "
-    fill="none"
-    height="20"
-    stroke="#717171"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    viewBox="0 0 24 24"
-    width="20"
-  >
-    <g>
-      <line
-        x1="12"
-        x2="12"
-        y1="5"
-        y2="19"
-      />
-      <line
-        x1="5"
-        x2="19"
-        y1="12"
-        y2="12"
-      />
-    </g>
-  </svg>
-  <span
-    class="jsx-2151508852"
-    style="margin: 0px 0px 0px 10px; font-weight: 500;"
-  >
-    im content
-  </span>
-</a>
-`);
+      <a
+        aria-label="im content"
+        class="jsx-2031944086"
+        href="https://www.href.com.br"
+      >
+        <svg
+          alt="plus"
+          aria-label="plus"
+          class="feather feather-plus "
+          fill="none"
+          height="20"
+          role="img"
+          stroke="#717171"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <g>
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </g>
+        </svg>
+        <span
+          class="jsx-2151508852"
+          style="margin: 0px 0px 0px 10px; font-weight: 500;"
+        >
+          im content
+        </span>
+      </a>
+    `);
   });
 
   test('should have link', () => {

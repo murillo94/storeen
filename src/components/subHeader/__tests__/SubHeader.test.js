@@ -43,9 +43,12 @@ describe('SubHeader', () => {
         type="button"
       >
         <svg
+          alt="chevron-left"
+          aria-label="chevron-left"
           class="feather feather-chevron-left "
           fill="none"
           height="17"
+          role="img"
           stroke="#333333"
           stroke-linecap="round"
           stroke-linejoin="round"
