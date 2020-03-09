@@ -12,7 +12,7 @@ const Disclosure = ({
   const handleDisclosure = e => {
     disclosureRef.current.toggleAttribute('hidden');
 
-    if (e && e.currentTarget) {
+    if (e && e.currentTarget && e.currentTarget.getAttribute('aria-expanded')) {
       const isExpanded =
         e.currentTarget.getAttribute('aria-expanded') === 'true';
       e.currentTarget.setAttribute('aria-expanded', !isExpanded);
@@ -37,8 +37,10 @@ const Disclosure = ({
             if (content.props[action]) content.props[action](e);
             handleDisclosure(e);
           },
-          'aria-expanded':
-            content.props.checked || content.props.value || isOpen
+          ...(action !== 'onChange' && {
+            'aria-expanded':
+              content.props.checked || content.props.value || isOpen
+          })
         })}
       <div ref={disclosureRef} role="region" hidden={!isOpen}>
         {children}
