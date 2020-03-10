@@ -1,7 +1,7 @@
 {
-  "name": "storeen-frontend",
+  "name": "storeen",
   "private": true,
-  "repository": "git@github.com:murillo94/storeen-frontend.git",
+  "repository": "git@github.com:murillo94/storeen.git",
   "author": "Murillo de Miranda Pereira <murillobeta0@hotmail.com>",
   "devDependencies": {
     "@babel/preset-env": "^7.8.7",

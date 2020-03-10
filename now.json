@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "storeen-frontend",
-  "alias": "storeen-frontend",
+  "name": "storeen",
+  "alias": "storeen",
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
     {
