@@ -1,11 +1,13 @@
 <div align="center">
     <br>
-    <a href="https://storeen-frontend.now.sh">
-        <img src="https://github.com/murillo94/storeen-frontend/blob/master/src/public/static/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
+    <a href="https://storeen.now.sh">
+        <img src="https://github.com/murillo94/storeen/blob/master/src/public/static/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
     </a>
 </div>
 
-## Running
+**Storeen** is a admin application with your own design system and component library in a monorepo comprised of modern, responsive, living components. The storeen frontend structure was designed to try implents all the pages application within design system in the same repo.
+
+## Usage
 
 ```
 $ yarn install
@@ -14,39 +16,10 @@ $ yarn dev
 $ yarn dev -p <custom_port>
 ```
 
-## Coding standards
+## Design System
 
-### Adding new libs
+The [core](./src) of all components theme-based style props for building all the components inside **storeen**.
 
-Avoid add libs to the project, all the ui components/logics must have to be create expect in specifics cases where adding a new lib is the best thing to do.
+## Component Library
 
-### Custom style inline
-
-Only add custom style inline when is needed a condition to determine the style if not needed a condition create a object with the style outside the context.
-
-### Ordering imports
-
-```
-import React from 'react' -> if needed
-import 3rd libs
-
-# space
-
-import storeen layouts
-
-# space
-
-import storeen components
-
-# space
-
-import storeen hooks
-
-# space
-
-import storeen containers
-
-# space
-
-import storeen utils
-```
+[UI components](./src) built on top of storeen design system.
