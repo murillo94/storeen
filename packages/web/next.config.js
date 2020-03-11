@@ -28,17 +28,4 @@ const plugins = [
   [withTranspileModules]
 ];
 
-const nextConfig = {
-  webpack: config => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      containers: path.join(__dirname, 'src/containers'),
-      layouts: path.join(__dirname, 'src/layouts'),
-      images: path.join(__dirname, 'src/public/static/images')
-    };
-
-    return config;
-  }
-};
-
-module.exports = withPlugins(plugins, nextConfig);
+module.exports = withPlugins(plugins, {});
