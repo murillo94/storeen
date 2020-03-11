@@ -11,3 +11,4 @@ coverage
 jest.*
 __tests__
 __mocks__
+config
