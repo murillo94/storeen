@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 
 import { Button } from '../../button';
 
-import { mono0 } from '@storeen/system';
+import { gray0 } from '@storeen/system';
 
 export const Menu = ({
   children,
@@ -47,7 +47,7 @@ export const Menu = ({
       <style jsx>
         {`
           div {
-            background-color: ${mono0};
+            background-color: ${gray0};
             position: relative;
             z-index: 1;
           }

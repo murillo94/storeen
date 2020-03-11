@@ -4,7 +4,7 @@ import { InputIcon } from './InputIcon';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono600 } from '@storeen/system';
+import { gray0, gray600 } from '@storeen/system';
 
 export const InputPassword = ({
   appearance,
@@ -42,7 +42,7 @@ export const InputPassword = ({
       <style jsx>
         {`
           :global(.input-normal) :global(div) :global(button[type='submit']) {
-            background-color: ${mono0};
+            background-color: ${gray0};
             border-color: ${theme.borderColor};
           }
 
@@ -51,7 +51,7 @@ export const InputPassword = ({
             + :global(button)
             :global(svg)
             :global(path) {
-            stroke: ${mono600};
+            stroke: ${gray600};
             fill: ${theme.hover.borderColor};
           }
 
@@ -60,8 +60,8 @@ export const InputPassword = ({
             + :global(button)
             :global(svg)
             :global(circle) {
-            stroke: ${mono600};
-            fill: ${mono0};
+            stroke: ${gray600};
+            fill: ${gray0};
           }
         `}
       </style>

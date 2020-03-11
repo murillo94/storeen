@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { MenuGroup } from '../index';
 
-import { primary700, mono200, negative700, positive700 } from '@storeen/system';
+import { purple700, gray200, red700, green700 } from '@storeen/system';
 
 const content = 'im content';
 
@@ -35,7 +35,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${primary700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${purple700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -43,7 +43,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${mono200};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -53,7 +53,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${negative700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${red700};`);
   });
 
   test('should have positive theme', () => {
@@ -63,6 +63,6 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${positive700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${green700};`);
   });
 });

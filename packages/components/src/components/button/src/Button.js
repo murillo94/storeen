@@ -3,7 +3,12 @@ import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius600 } from '@storeen/system';
+import {
+  fontSize14,
+  fontWeight500,
+  borderRadius6,
+  fontWeight400
+} from '@storeen/system';
 
 const defaultStyle = {
   width: 'auto'
@@ -52,12 +57,14 @@ export const Button = ({
       <style jsx>
         {`
           button {
-            font-size: 14px;
-            font-weight: ${appearance !== 'minimal' ? 500 : 400};
+            font-size: ${fontSize14};
+            font-weight: ${appearance !== 'minimal'
+              ? fontWeight500
+              : fontWeight400};
             color: ${theme.color};
             background-color: ${theme.backgroundColor};
             border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
-            border-radius: ${radius600};
+            border-radius: ${borderRadius6};
             padding: 10px;
             outline: 0;
             cursor: pointer;

@@ -1,7 +1,7 @@
 import { Input } from '../../input';
 import { FormGroup } from '../../form';
 
-import { mono75 } from '@storeen/system';
+import { gray75 } from '@storeen/system';
 
 export const TableOptions = ({
   children,
@@ -36,8 +36,8 @@ export const TableOptions = ({
 
         div :global(input),
         div :global(button[type='submit']) {
-          background-color: ${mono75};
-          border-color: ${mono75};
+          background-color: ${gray75};
+          border-color: ${gray75};
         }
 
         @media (max-width: 746px) {

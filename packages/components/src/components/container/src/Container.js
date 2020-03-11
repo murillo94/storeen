@@ -1,7 +1,7 @@
 import { Form } from '../../form';
 import { Heading, Paragraph } from '../../typography';
 
-import { mono0, mono100, radius600 } from '@storeen/system';
+import { gray0, gray100, borderRadius6 } from '@storeen/system';
 
 const subTitleStyle = {
   marginTop: '6px'
@@ -43,11 +43,11 @@ export const Container = ({
     <style jsx>
       {`
         section {
-          background-color: ${mono0};
+          background-color: ${gray0};
           box-shadow: ${hasBoxShadow &&
             '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
-          border: ${hasBorder && `1px solid ${mono100}`};
-          border-radius: ${radius600};
+          border: ${hasBorder && `1px solid ${gray100}`};
+          border-radius: ${borderRadius6};
           width: 100%;
           overflow: hidden;
         }

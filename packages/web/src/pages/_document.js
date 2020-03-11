@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import { primary700, mono0, mono75, mono900 } from '@storeen/system';
+import { fontSize14, purple700, gray0, gray75, gray900 } from '@storeen/system';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -30,12 +30,12 @@ class CustomDocument extends Document {
                   font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-                  font-size: 14px;
+                  font-size: ${fontSize14};
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;
-                  background-color: ${mono75};
-                  color: ${mono900};
+                  background-color: ${gray75};
+                  color: ${gray900};
                   margin: 0;
                 }
 
@@ -44,8 +44,8 @@ class CustomDocument extends Document {
                 }
 
                 ::selection {
-                  background-color: ${primary700};
-                  color: ${mono0};
+                  background-color: ${purple700};
+                  color: ${gray0};
                 }
               `
             }}

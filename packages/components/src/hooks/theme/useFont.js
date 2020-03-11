@@ -1,9 +1,9 @@
-import { mono900, mono800, primary700 } from '@storeen/system';
+import { gray900, gray800, purple700 } from '@storeen/system';
 
 const fonts = {
-  default: mono900,
-  muted: mono800,
-  primary: primary700
+  default: gray900,
+  muted: gray800,
+  primary: purple700
 };
 
 const useFont = color => fonts[color] || color;

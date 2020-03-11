@@ -2,7 +2,7 @@ import { Label, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius500 } from '@storeen/system';
+import { borderRadius5 } from '@storeen/system';
 
 const labelStyle = {
   display: 'inline-flex'
@@ -95,7 +95,7 @@ export const Radio = ({
           span::after {
             content: '';
             border: 5px solid ${theme.focus.borderColor};
-            border-radius: ${radius500};
+            border-radius: ${borderRadius5};
             position: absolute;
             top: 5px;
             left: 4px;

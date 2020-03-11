@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Switch } from '../index';
 
-import { mono900, mono800, primary700 } from '@storeen/system';
+import { gray900, gray800, purple700 } from '@storeen/system';
 
 describe('Switch', () => {
   test('should render', () => {
@@ -36,8 +36,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${mono800};`);
-    expect(rightText).toHaveStyle(`color: ${mono800};`);
+    expect(leftText).toHaveStyle(`color: ${gray800};`);
+    expect(rightText).toHaveStyle(`color: ${gray800};`);
   });
 
   test('should have default color text', () => {
@@ -52,8 +52,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${mono900};`);
-    expect(rightText).toHaveStyle(`color: ${mono900};`);
+    expect(leftText).toHaveStyle(`color: ${gray900};`);
+    expect(rightText).toHaveStyle(`color: ${gray900};`);
   });
 
   test('should have primary color text', () => {
@@ -68,8 +68,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${primary700};`);
-    expect(rightText).toHaveStyle(`color: ${primary700};`);
+    expect(leftText).toHaveStyle(`color: ${purple700};`);
+    expect(rightText).toHaveStyle(`color: ${purple700};`);
   });
 
   test('should have change with checked', () => {

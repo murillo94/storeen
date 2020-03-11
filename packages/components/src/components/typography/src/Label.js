@@ -2,6 +2,8 @@ import { memo } from 'react';
 
 import useFont from '../../../hooks/theme/useFont';
 
+import { fontSize14 } from '@storeen/system';
+
 export const Label = memo(
   ({
     children,
@@ -21,7 +23,7 @@ export const Label = memo(
         <style jsx>
           {`
             label {
-              font-size: 14px;
+              font-size: ${fontSize14};
               color: ${fontColor};
               text-align: left;
               margin-bottom: 5px;

@@ -3,12 +3,12 @@ import { render, fireEvent } from '@testing-library/react';
 import { Menu } from '../index';
 
 import {
-  primary700,
-  mono0,
-  mono900,
-  mono200,
-  negative700,
-  positive700
+  purple700,
+  gray0,
+  gray900,
+  gray200,
+  red700,
+  green700
 } from '@storeen/system';
 
 const content = 'im content';
@@ -93,7 +93,7 @@ describe('Menu', () => {
   test('should have border', () => {
     const { getByRole } = render(<Menu hasBorder />);
 
-    expect(getByRole('button')).toHaveStyle(`border: 1px solid ${mono200};`);
+    expect(getByRole('button')).toHaveStyle(`border: 1px solid ${gray200};`);
   });
 
   test('should have click', () => {
@@ -112,8 +112,8 @@ describe('Menu', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0};`);
-    expect(button).toHaveStyle(`background-color: ${primary700};`);
+    expect(button).toHaveStyle(`color: ${gray0};`);
+    expect(button).toHaveStyle(`background-color: ${purple700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -121,7 +121,7 @@ describe('Menu', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono900};`);
+    expect(button).toHaveStyle(`color: ${gray900};`);
     expect(button).toHaveStyle('background-color: transparent;');
   });
 
@@ -130,8 +130,8 @@ describe('Menu', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0};`);
-    expect(button).toHaveStyle(`background-color: ${negative700};`);
+    expect(button).toHaveStyle(`color: ${gray0};`);
+    expect(button).toHaveStyle(`background-color: ${red700};`);
   });
 
   test('should have positive theme', () => {
@@ -139,7 +139,7 @@ describe('Menu', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${mono0};`);
-    expect(button).toHaveStyle(`background-color: ${positive700};`);
+    expect(button).toHaveStyle(`color: ${gray0};`);
+    expect(button).toHaveStyle(`background-color: ${green700};`);
   });
 });

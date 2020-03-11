@@ -2,6 +2,8 @@ import { memo } from 'react';
 
 import useFont from '../../../hooks/theme/useFont';
 
+import { fontSize14 } from '@storeen/system';
+
 export const Paragraph = memo(
   ({ text = '', color = 'inherit', customStyle = {} }) => {
     const fontColor = useFont(color);
@@ -13,7 +15,7 @@ export const Paragraph = memo(
         <style jsx>
           {`
             p {
-              font-size: 14px;
+              font-size: ${fontSize14};
               line-height: 20px;
               color: ${fontColor};
               margin: 0 0 10px;

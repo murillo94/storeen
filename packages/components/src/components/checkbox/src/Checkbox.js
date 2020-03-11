@@ -2,7 +2,7 @@ import { Label, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius400 } from '@storeen/system';
+import { borderRadius4 } from '@storeen/system';
 
 const labelStyle = {
   display: 'inline-flex'
@@ -85,7 +85,7 @@ export const Checkbox = ({
 
           span::before {
             content: '';
-            border-radius: ${radius400};
+            border-radius: ${borderRadius4};
             border: 1px solid ${theme.borderColor};
             width: 18px;
             height: 18px;

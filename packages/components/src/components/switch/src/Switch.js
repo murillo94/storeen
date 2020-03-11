@@ -2,7 +2,7 @@ import { Text, Label } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono200, primary } from '@storeen/system';
+import { gray0, gray200, primary } from '@storeen/system';
 
 export const Switch = ({
   appearance = 'minimal',
@@ -67,7 +67,7 @@ export const Switch = ({
           }
 
           span {
-            background-color: ${mono200};
+            background-color: ${gray200};
             border-radius: 20px;
             width: 44px;
             height: 22px;
@@ -79,7 +79,7 @@ export const Switch = ({
 
           span:before {
             content: '';
-            background-color: ${mono0};
+            background-color: ${gray0};
             border-radius: 50%;
             margin-left: 3px;
             width: 18px;
@@ -98,7 +98,7 @@ export const Switch = ({
           }
 
           input:checked + span:before {
-            background-color: ${mono0};
+            background-color: ${gray0};
             margin-left: 5px;
             transform: translateX(100%);
           }

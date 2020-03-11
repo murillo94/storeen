@@ -1,6 +1,6 @@
 import { Overlay } from '../../overlay';
 
-import { mono0, mono200 } from '@storeen/system';
+import { gray0, gray200 } from '@storeen/system';
 
 export const SideSheet = ({
   children,
@@ -21,8 +21,8 @@ export const SideSheet = ({
     <style jsx>
       {`
         nav {
-          background-color: ${mono0};
-          border-right: 1px solid ${mono200};
+          background-color: ${gray0};
+          border-right: 1px solid ${gray200};
           padding: 20px 0 10px;
           max-width: ${width};
           height: 100vh;

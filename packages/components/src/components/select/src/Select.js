@@ -3,7 +3,7 @@ import { Icon } from '../../icon';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono600, radius600 } from '@storeen/system';
+import { fontSize14, gray0, gray600, borderRadius6 } from '@storeen/system';
 
 export const Select = ({
   appearance = 'minimal',
@@ -37,7 +37,7 @@ export const Select = ({
               </option>
             ))}
           </select>
-          <Icon name="chevron-down" size={18} color={mono600} />
+          <Icon name="chevron-down" size={18} color={gray600} />
         </div>
       </div>
 
@@ -58,11 +58,11 @@ export const Select = ({
           }
 
           select {
-            font-size: 14px;
-            background-color: ${mono0};
+            font-size: ${fontSize14};
+            background-color: ${gray0};
             background-clip: padding-box;
             border: 1px solid ${theme.borderColor};
-            border-radius: ${radius600};
+            border-radius: ${borderRadius6};
             padding: 10px 30px 10px 10px;
             outline: 0;
             appearance: none;

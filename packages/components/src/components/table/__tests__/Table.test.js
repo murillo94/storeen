@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Table } from '../index';
 
-import { mono100 } from '@storeen/system';
+import { gray100 } from '@storeen/system';
 
 const content = 'im content';
 
@@ -66,7 +66,7 @@ describe('Table', () => {
     expect(children).not.toHaveStyle(
       'box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15);'
     );
-    expect(children).toHaveStyle(`border: 1px solid ${mono100};`);
+    expect(children).toHaveStyle(`border: 1px solid ${gray100};`);
   });
 
   test('should have aria label', () => {

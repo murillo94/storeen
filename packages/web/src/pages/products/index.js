@@ -18,7 +18,7 @@ import {
 
 import useLayout from '../../hooks/layout/useLayout';
 
-import { positive700, negative700 } from '@storeen/system';
+import { green700, red700 } from '@storeen/system';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [
@@ -101,10 +101,7 @@ const Products = () => {
             </TableBodyCell>
             <TableBodyCell>
               <TextTableCell>
-                <Icon
-                  name="eye"
-                  color={item.visible ? positive700 : negative700}
-                />
+                <Icon name="eye" color={item.visible ? green700 : red700} />
               </TextTableCell>
             </TableBodyCell>
           </TableRow>

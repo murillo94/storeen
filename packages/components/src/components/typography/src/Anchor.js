@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import useFont from '../../../hooks/theme/useFont';
 
-import { primary700, primary } from '@storeen/system';
+import { fontSize14, purple700, primary } from '@storeen/system';
 
 export const Anchor = memo(
   ({ href = '', text = '', color = 'inherit', hover = true }) => {
@@ -19,7 +19,7 @@ export const Anchor = memo(
         <style jsx>
           {`
             a {
-              font-size: 14px;
+              font-size: ${fontSize14};
               color: ${fontColor};
               text-decoration: none;
               outline: 0;
@@ -31,7 +31,7 @@ export const Anchor = memo(
 
             :focus {
               box-shadow: ${primary};
-              border-color: ${primary700};
+              border-color: ${purple700};
             }
           `}
         </style>

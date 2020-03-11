@@ -1,4 +1,4 @@
-import { mono0, mono75, mono100 } from '@storeen/system';
+import { gray0, gray75, gray100 } from '@storeen/system';
 
 export const TableRow = ({
   children,
@@ -12,8 +12,8 @@ export const TableRow = ({
     <style jsx>
       {`
         tr {
-          background-color: ${mono0};
-          border-bottom: 1px solid ${mono100};
+          background-color: ${gray0};
+          border-bottom: 1px solid ${gray100};
           height: 64px;
           cursor: ${onClick ? 'pointer' : 'default'};
         }
@@ -23,7 +23,7 @@ export const TableRow = ({
         }
 
         :hover {
-          background-color: ${hover && mono75};
+          background-color: ${hover && gray75};
         }
       `}
     </style>

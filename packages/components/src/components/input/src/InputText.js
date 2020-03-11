@@ -2,7 +2,7 @@ import MaskedInput from 'react-text-mask';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono500, radius600 } from '@storeen/system';
+import { fontSize14, gray500, borderRadius6 } from '@storeen/system';
 
 import { MASKS } from '../utils/mask';
 
@@ -38,10 +38,10 @@ const Input = ({
       <style jsx>
         {`
           input {
-            font-size: 14px;
+            font-size: ${fontSize14};
             background-clip: padding-box;
             border: 1px solid ${theme.borderColor};
-            border-radius: ${radius600};
+            border-radius: ${borderRadius6};
             padding: 10px;
             outline: 0;
             width: 100%;
@@ -63,7 +63,7 @@ const Input = ({
           }
 
           ::placeholder {
-            color: ${mono500};
+            color: ${gray500};
           }
         `}
       </style>

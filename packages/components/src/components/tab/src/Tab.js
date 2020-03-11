@@ -7,7 +7,12 @@ import { Button } from '../../button';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { primary700, radius600, primary } from '@storeen/system';
+import {
+  purple700,
+  borderRadius6,
+  primary,
+  fontWeight500
+} from '@storeen/system';
 
 const buttonStyle = {
   width: '100%'
@@ -39,7 +44,7 @@ const TabLink = ({ children, href, text }) => (
 
         :focus {
           box-shadow: ${primary};
-          border-color: ${primary700};
+          border-color: ${purple700};
         }
       `}
     </style>
@@ -51,7 +56,7 @@ const Content = ({ text, icon }) => (
     {icon && <Icon name={icon} size={20} />}
     <Text
       text={text}
-      customStyle={{ margin: icon && '0 0 0 10px', fontWeight: 500 }}
+      customStyle={{ margin: icon && '0 0 0 10px', fontWeight: fontWeight500 }}
     />
   </>
 );
@@ -88,7 +93,7 @@ export const Tab = withRouter(
             li {
               background-color: ${theme.backgroundColor};
               color: inherit;
-              border-radius: ${radius600};
+              border-radius: ${borderRadius6};
               text-align: left;
               white-space: nowrap;
               margin: 6px 10px;

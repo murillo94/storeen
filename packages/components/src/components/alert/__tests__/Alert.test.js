@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Alert } from '../index';
 
-import { primary700, mono200, negative700, positive700 } from '@storeen/system';
+import { purple700, gray200, red700, green700 } from '@storeen/system';
 
 const content = 'im content';
 
@@ -36,7 +36,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${primary700};`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${purple700};`);
   });
 
   test('should have minimal theme', () => {
@@ -44,7 +44,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${mono200};`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -54,7 +54,7 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${negative700};`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${red700};`);
   });
 
   test('should have default as positive theme', () => {
@@ -62,6 +62,6 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${positive700};`);
+    expect(text).toHaveStyle(`border-left: 4px solid ${green700};`);
   });
 });

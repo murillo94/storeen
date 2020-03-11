@@ -4,7 +4,7 @@ import { Button } from '../../button';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, primary700, radius500, primary } from '@storeen/system';
+import { gray0, purple700, borderRadius5, primary } from '@storeen/system';
 
 const buttonStyle = {
   padding: '5px 8px',
@@ -32,7 +32,7 @@ const MenuItemLink = ({ children, href }) => (
 
         :focus {
           box-shadow: ${primary};
-          border-color: ${primary700};
+          border-color: ${purple700};
         }
       `}
     </style>
@@ -73,8 +73,8 @@ export const MenuItem = ({
       <style jsx>
         {`
           li {
-            background-color: ${mono0};
-            border-radius: ${radius500};
+            background-color: ${gray0};
+            border-radius: ${borderRadius5};
             margin: 3px 0;
             cursor: pointer;
             display: flex;

@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Input } from '../index';
 
-import { primary700, mono200, negative700, positive700 } from '@storeen/system';
+import { purple700, gray200, red700, green700 } from '@storeen/system';
 
 describe('Input', () => {
   test('should render', () => {
@@ -92,7 +92,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${primary700};`);
+    expect(input).toHaveStyle(`border: 1px solid ${purple700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -100,7 +100,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${mono200};`);
+    expect(input).toHaveStyle(`border: 1px solid ${gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -108,7 +108,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${negative700};`);
+    expect(input).toHaveStyle(`border: 1px solid ${red700};`);
   });
 
   test('should have positive theme', () => {
@@ -116,6 +116,6 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${positive700};`);
+    expect(input).toHaveStyle(`border: 1px solid ${green700};`);
   });
 });

@@ -1,6 +1,6 @@
 import { Overlay } from '../../overlay';
 
-import { mono0, mono200, radius600 } from '@storeen/system';
+import { gray0, gray200, borderRadius6 } from '@storeen/system';
 
 export const Dialog = ({
   children,
@@ -25,9 +25,9 @@ export const Dialog = ({
     <style jsx>
       {`
         div {
-          background-color: ${mono0};
-          border: 1px solid ${mono200};
-          border-radius: ${radius600};
+          background-color: ${gray0};
+          border: 1px solid ${gray200};
+          border-radius: ${borderRadius6};
           padding: 20px;
           width: ${width};
           max-height: calc(100vh - 56px);

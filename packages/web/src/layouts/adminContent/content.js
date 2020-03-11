@@ -12,7 +12,7 @@ import {
   Button
 } from '@storeen/components';
 
-import { mono0, mono200, radius800 } from '@storeen/system';
+import { gray0, gray200, borderRadius8 } from '@storeen/system';
 
 const Logo = () => (
   <>
@@ -156,8 +156,8 @@ const Content = ({ children, padding }) => {
           }
 
           nav {
-            background-color: ${mono0};
-            border-right: 1px solid ${mono200};
+            background-color: ${gray0};
+            border-right: 1px solid ${gray200};
             text-align: center;
             padding: 20px 0 10px;
             width: 180px;
@@ -200,7 +200,7 @@ const Content = ({ children, padding }) => {
             }
 
             :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${radius800};
+              border-radius: ${borderRadius8};
               margin: 10px;
             }
 

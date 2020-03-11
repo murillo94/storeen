@@ -2,6 +2,14 @@ import { memo } from 'react';
 
 import useFont from '../../../hooks/theme/useFont';
 
+import {
+  fontSize14,
+  fontSize15,
+  fontSize18,
+  fontSize28,
+  fontWeight600
+} from '@storeen/system';
+
 const H1 = ({ text, color, customStyle }) => (
   <>
     <h1 style={{ ...customStyle }}>{text}</h1>
@@ -9,8 +17,8 @@ const H1 = ({ text, color, customStyle }) => (
     <style jsx>
       {`
         h1 {
-          font-size: 28px;
-          font-weight: 600;
+          font-size: ${fontSize28};
+          font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
         }
@@ -26,8 +34,8 @@ const H2 = ({ text, color, customStyle }) => (
     <style jsx>
       {`
         h2 {
-          font-size: 18px;
-          font-weight: 600;
+          font-size: ${fontSize18};
+          font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
         }
@@ -43,8 +51,8 @@ const H3 = ({ text, color, customStyle }) => (
     <style jsx>
       {`
         h3 {
-          font-size: 15px;
-          font-weight: 600;
+          font-size: ${fontSize15};
+          font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
         }
@@ -60,8 +68,8 @@ const H4 = ({ text, color, customStyle }) => (
     <style jsx>
       {`
         h4 {
-          font-size: 14px;
-          font-weight: 600;
+          font-size: ${fontSize14};
+          font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
         }

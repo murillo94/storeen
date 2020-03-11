@@ -1,4 +1,4 @@
-import { mono0, mono200 } from '@storeen/system';
+import { gray0, gray200 } from '@storeen/system';
 
 export const Header = ({ children }) => (
   <>
@@ -7,8 +7,8 @@ export const Header = ({ children }) => (
     <style jsx>
       {`
         header {
-          background-color: ${mono0};
-          border-bottom: 1px solid ${mono200};
+          background-color: ${gray0};
+          border-bottom: 1px solid ${gray200};
           padding: 10px;
           position: sticky;
           top: 0;

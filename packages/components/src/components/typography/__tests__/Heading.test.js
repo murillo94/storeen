@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Heading } from '../index';
 
-import { mono900, mono800, primary700 } from '@storeen/system';
+import { gray900, gray800, purple700 } from '@storeen/system';
 
 describe('Heading', () => {
   test('should render', () => {
@@ -29,19 +29,19 @@ describe('Heading', () => {
     test('should have default color', () => {
       const { getByRole } = render(<Heading color="default" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono900};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray900};`);
     });
 
     test('should have muted color', () => {
       const { getByRole } = render(<Heading color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray800};`);
     });
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading color="primary" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${primary700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${purple700};`);
     });
 
     test('should have custom style', () => {
@@ -71,19 +71,19 @@ describe('Heading', () => {
     test('should have default color', () => {
       const { getByRole } = render(<Heading is="h2" color="default" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono900};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray900};`);
     });
 
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h2" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray800};`);
     });
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h2" color="primary" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${primary700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${purple700};`);
     });
 
     test('should have custom style', () => {
@@ -113,19 +113,19 @@ describe('Heading', () => {
     test('should have default color', () => {
       const { getByRole } = render(<Heading is="h3" color="default" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono900};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray900};`);
     });
 
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h3" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray800};`);
     });
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h3" color="primary" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${primary700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${purple700};`);
     });
 
     test('should have custom style', () => {
@@ -155,19 +155,19 @@ describe('Heading', () => {
     test('should have default color', () => {
       const { getByRole } = render(<Heading is="h4" color="default" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono900};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray900};`);
     });
 
     test('should have muted color', () => {
       const { getByRole } = render(<Heading is="h4" color="muted" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${mono800};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${gray800};`);
     });
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h4" color="primary" />);
 
-      expect(getByRole('heading')).toHaveStyle(`color: ${primary700};`);
+      expect(getByRole('heading')).toHaveStyle(`color: ${purple700};`);
     });
 
     test('should have custom style', () => {

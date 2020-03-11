@@ -2,7 +2,7 @@ import { Heading, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono100, radius600 } from '@storeen/system';
+import { gray0, gray100, borderRadius6 } from '@storeen/system';
 
 const descriptionStyle = {
   margin: '0'
@@ -35,10 +35,10 @@ export const Alert = ({
       <style jsx>
         {`
           .container {
-            background-color: ${mono0};
-            border: 1px solid ${mono100};
+            background-color: ${gray0};
+            border: 1px solid ${gray100};
             border-left: 4px solid ${theme.borderColor};
-            border-radius: ${radius600};
+            border-radius: ${borderRadius6};
             padding: 15px;
             margin-bottom: 20px;
           }
