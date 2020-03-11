@@ -65,19 +65,5 @@
         }
       }
     ]
-  },
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["components", "./src/components"],
-          ["containers", "./src/containers"],
-          ["layouts", "./src/layouts"],
-          ["hooks", "./src/hooks"],
-          ["utils", "./src/utils"],
-          ["images", "./src/public/static/images"]
-        ]
-      }
-    }
   }
 }
