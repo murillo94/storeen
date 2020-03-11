@@ -21,8 +21,8 @@ $ yarn dev -p <custom_port>
 
 ## Design System
 
-The [core](./packages/system) of all components theme-based style props for building all the components inside **storeen**.
+The [@storeen/system](./packages/system) is the core of all components theme-based style props for building all the components inside **storeen**.
 
 ## Component Library
 
-[UI components](./packages/components) built on top of **storeen** design system.
+The [@storeen/components](./packages/components) is the UI components built on top of **storeen** design system.
