@@ -2,16 +2,18 @@
   "version": 2,
   "name": "storeen",
   "alias": "storeen",
-  "builds": [{ "src": "packages/web/next.config.js", "use": "@now/next" }],
+  "builds": [{ "src": "packages/web/package.json", "use": "@now/next" }],
   "routes": [
     {
-      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
-      "dest": "/packages/web/_next/static/$1",
-      "headers": { "cache-control": "immutable,max-age=31536000" }
+      "src": "/",
+      "dest": "/packages/web/index"
     },
     {
       "src": "/(.*)",
-      "dest": "/packages/web/$1"
+      "dest": "/packages/web/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
     }
   ]
 }
