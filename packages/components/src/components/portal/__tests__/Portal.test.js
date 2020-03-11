@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Portal from '../index';
+import { Portal } from '../index';
 
 const content = 'im portal';
 

@@ -1,12 +1,14 @@
 import Page from '../../../layouts/adminSettingsContent/store';
 
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import Disclosure from '@storeen/components/src/components/disclosure';
-import Checkbox from '@storeen/components/src/components/checkbox';
-import { Heading } from '@storeen/components/src/components/typography';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  Container,
+  Input,
+  Disclosure,
+  Checkbox,
+  Heading,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useSettingsStore from '../../../containers/useSettingsStore';
 

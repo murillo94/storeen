@@ -1,9 +1,13 @@
-import Input from '../../input';
+import { Input } from '../../input';
 import { FormGroup } from '../../form';
 
 import { mono75 } from '@storeen/system/src/utils/theme/colors';
 
-const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
+export const TableOptions = ({
+  children,
+  hasSearch,
+  placeholderSearchSuffix
+}) => (
   <>
     <div>
       {hasSearch && (
@@ -54,5 +58,3 @@ const TableOptions = ({ children, hasSearch, placeholderSearchSuffix }) => (
     </style>
   </>
 );
-
-export default TableOptions;

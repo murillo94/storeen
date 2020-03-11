@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react';
 
-import Button from '../../button';
+import { Button } from '../../button';
 
 import { mono0 } from '@storeen/system/src/utils/theme/colors';
 
-const Menu = ({
+export const Menu = ({
   children,
   appearance = 'minimal',
   id = null,
@@ -56,5 +56,3 @@ const Menu = ({
     </>
   );
 };
-
-export default Menu;

@@ -1,7 +1,7 @@
 import { render, fireEvent } from '@testing-library/react';
 import preloadAll from 'jest-next-dynamic';
 
-import SideSheet from '../index';
+import { SideSheet } from '../index';
 
 const content = 'im content';
 

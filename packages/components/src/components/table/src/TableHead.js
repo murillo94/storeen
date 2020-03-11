@@ -1,12 +1,12 @@
-import TableRow from './TableRow';
-import TableHeadCell from './TableHeadCell';
-import TextTableCell from './TextTableCell';
+import { TableRow } from './TableRow';
+import { TableHeadCell } from './TableHeadCell';
+import { TextTableCell } from './TextTableCell';
 
 const textHeaderStyle = {
   fontWeight: '500'
 };
 
-const TableHead = ({ headers = [] }) => (
+export const TableHead = ({ headers = [] }) => (
   <thead>
     <TableRow isBody={false} hover={false}>
       {headers.map(title => (
@@ -17,5 +17,3 @@ const TableHead = ({ headers = [] }) => (
     </TableRow>
   </thead>
 );
-
-export default TableHead;

@@ -1,7 +1,7 @@
 import { render, fireEvent } from '@testing-library/react';
 import preloadAll from 'jest-next-dynamic';
 
-import Dialog from '../index';
+import { Dialog } from '../index';
 
 const content = 'im content';
 

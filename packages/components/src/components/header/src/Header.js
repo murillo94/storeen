@@ -1,6 +1,6 @@
 import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
 
-const Header = ({ children }) => (
+export const Header = ({ children }) => (
   <>
     <header>{children}</header>
 
@@ -22,5 +22,3 @@ const Header = ({ children }) => (
     </style>
   </>
 );
-
-export default Header;

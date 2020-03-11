@@ -1,14 +1,14 @@
-export { default as Table } from './src/Table';
+export { Table } from './src/Table';
 
 // Table head
 
-export { default as TableOptions } from './src/TableOptions';
-export { default as TableHead } from './src/TableHead';
-export { default as TableHeadCell } from './src/TableHeadCell';
+export { TableOptions } from './src/TableOptions';
+export { TableHead } from './src/TableHead';
+export { TableHeadCell } from './src/TableHeadCell';
 
 // Table body and contents
 
-export { default as TableBody } from './src/TableBody';
-export { default as TableRow } from './src/TableRow';
-export { default as TableBodyCell } from './src/TableBodyCell';
-export { default as TextTableCell } from './src/TextTableCell';
+export { TableBody } from './src/TableBody';
+export { TableRow } from './src/TableRow';
+export { TableBodyCell } from './src/TableBodyCell';
+export { TextTableCell } from './src/TextTableCell';

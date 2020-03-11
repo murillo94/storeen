@@ -4,9 +4,9 @@ import {
   Table,
   TableRow,
   TableBodyCell,
-  TextTableCell
-} from '@storeen/components/src/components/table';
-import Button from '@storeen/components/src/components/button';
+  TextTableCell,
+  Button
+} from '@storeen/components';
 
 import useLayout from '@storeen/system/src/hooks/layout/useLayout';
 

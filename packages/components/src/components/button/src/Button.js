@@ -1,4 +1,4 @@
-import Icon from '../../icon';
+import { Icon } from '../../icon';
 import { Text } from '../../typography';
 
 import useTheme from '@storeen/system/src/hooks/theme/useTheme';
@@ -9,7 +9,7 @@ const defaultStyle = {
   width: 'auto'
 };
 
-const Button = ({
+export const Button = ({
   children,
   appearance = 'default',
   type = 'button',
@@ -82,5 +82,3 @@ const Button = ({
     </>
   );
 };
-
-export default Button;

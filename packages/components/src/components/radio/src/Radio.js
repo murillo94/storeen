@@ -12,7 +12,7 @@ const descriptionStyle = {
   margin: '5px 0 0'
 };
 
-const Radio = ({
+export const Radio = ({
   appearance = 'minimal',
   id = null,
   name = '',
@@ -125,5 +125,3 @@ const Radio = ({
     </>
   );
 };
-
-export default Radio;

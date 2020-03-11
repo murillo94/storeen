@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import Button from '../index';
+import { Button } from '../index';
 
 import {
   primary700,
@@ -83,7 +83,7 @@ describe('Button', () => {
           </g>
         </svg>
         <span
-          class="jsx-2151508852"
+          class="jsx-3533282834"
           style="margin: 0px 0px 0px 5px;"
         >
           im button

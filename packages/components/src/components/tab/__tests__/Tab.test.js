@@ -63,7 +63,7 @@ describe('Tab', () => {
           </g>
         </svg>
         <span
-          class="jsx-2151508852"
+          class="jsx-3533282834"
           style="margin: 0px 0px 0px 10px; font-weight: 500;"
         >
           im content
@@ -113,7 +113,7 @@ describe('Tab', () => {
           </g>
         </svg>
         <span
-          class="jsx-2151508852"
+          class="jsx-3533282834"
           style="margin: 0px 0px 0px 10px; font-weight: 500;"
         >
           im content

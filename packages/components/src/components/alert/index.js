@@ -1,1 +1,1 @@
-export { default } from './src/Alert';
+export { Alert } from './src/Alert';

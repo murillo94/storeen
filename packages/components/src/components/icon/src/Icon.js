@@ -2,7 +2,7 @@ import FeatherIcon from 'feather-icons-react';
 
 import { mono800 } from '@storeen/system/src/utils/theme/colors';
 
-const Icon = ({ name = 'help-circle', size = 18, color = mono800 }) => (
+export const Icon = ({ name = 'help-circle', size = 18, color = mono800 }) => (
   <FeatherIcon
     role="img"
     icon={name}
@@ -12,5 +12,3 @@ const Icon = ({ name = 'help-circle', size = 18, color = mono800 }) => (
     aria-label={name}
   />
 );
-
-export default Icon;

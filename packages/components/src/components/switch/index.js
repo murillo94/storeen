@@ -1,1 +1,1 @@
-export { default } from './src/Switch';
+export { Switch } from './src/Switch';

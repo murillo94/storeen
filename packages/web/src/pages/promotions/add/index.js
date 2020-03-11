@@ -2,15 +2,17 @@ import Router from 'next/router';
 
 import Page from '../../../layouts/adminContent';
 
-import SubHeader from '@storeen/components/src/components/subHeader';
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import Select from '@storeen/components/src/components/select';
-import Radio from '@storeen/components/src/components/radio';
-import Checkbox from '@storeen/components/src/components/checkbox';
-import Disclosure from '@storeen/components/src/components/disclosure';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  SubHeader,
+  Container,
+  Input,
+  Select,
+  Radio,
+  Checkbox,
+  Disclosure,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import usePromotionsAdd from '../../../containers/usePromotionsAdd';
 

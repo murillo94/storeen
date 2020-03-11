@@ -1,1 +1,1 @@
-export { default } from './src/Input';
+export { Input } from './src/Input';

@@ -1,4 +1,4 @@
-const FormGroup = ({ children, type = 'row' }) => (
+export const FormGroup = ({ children, type = 'row' }) => (
   <>
     <div className="form-group">{children}</div>
 
@@ -39,5 +39,3 @@ const FormGroup = ({ children, type = 'row' }) => (
     </style>
   </>
 );
-
-export default FormGroup;

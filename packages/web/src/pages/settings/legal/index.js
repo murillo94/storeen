@@ -1,9 +1,6 @@
 import Page from '../../../layouts/adminSettingsContent/store';
 
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import { Container, Input, Footer, Button } from '@storeen/components';
 
 import useSettingsLegal from '../../../containers/useSettingsLegal';
 

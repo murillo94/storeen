@@ -1,1 +1,1 @@
-export { default } from './src/Select';
+export { Select } from './src/Select';

@@ -2,12 +2,14 @@ import Router from 'next/router';
 
 import Page from '../../../layouts/adminContent';
 
-import SubHeader from '@storeen/components/src/components/subHeader';
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import Radio from '@storeen/components/src/components/radio';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  SubHeader,
+  Container,
+  Input,
+  Radio,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useCategoriesAdd from '../../../containers/useCategoriesAdd';
 

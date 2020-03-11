@@ -1,9 +1,9 @@
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 
-import Icon from '../../icon';
+import { Icon } from '../../icon';
 import { Text } from '../../typography';
-import Button from '../../button';
+import { Button } from '../../button';
 
 import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 
@@ -58,7 +58,7 @@ const Content = ({ text, icon }) => (
   </>
 );
 
-const Tab = withRouter(
+export const Tab = withRouter(
   ({
     appearance = 'minimal',
     text = '',
@@ -114,5 +114,3 @@ const Tab = withRouter(
     );
   }
 );
-
-export default Tab;

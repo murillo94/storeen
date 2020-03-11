@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Button from '../../button';
+import { Button } from '../../button';
 
 import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 
@@ -52,7 +52,7 @@ const MenuItemButton = ({ children, appearance, onClick }) => (
   </Button>
 );
 
-const MenuItem = ({
+export const MenuItem = ({
   children,
   appearance = 'minimal',
   href = '',
@@ -92,5 +92,3 @@ const MenuItem = ({
     </>
   );
 };
-
-export default MenuItem;

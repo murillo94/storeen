@@ -1,3 +1,1 @@
-const TableBody = ({ children }) => <tbody>{children}</tbody>;
-
-export default TableBody;
+export const TableBody = ({ children }) => <tbody>{children}</tbody>;

@@ -8,7 +8,7 @@ const subTitleStyle = {
   marginTop: '6px'
 };
 
-const Container = ({
+export const Container = ({
   children,
   title = '',
   optionsTitle,
@@ -95,5 +95,3 @@ const Container = ({
     </style>
   </>
 );
-
-export default Container;

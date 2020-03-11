@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Footer from '../index';
+import { Footer } from '../index';
 
 const content = 'im content';
 

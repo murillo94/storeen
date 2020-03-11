@@ -1,4 +1,4 @@
-import Button from '../../button';
+import { Button } from '../../button';
 import { Text } from '../../typography';
 
 import useTheme from '@storeen/system/src/hooks/theme/useTheme';
@@ -6,7 +6,11 @@ import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 import { radius600 } from '@storeen/system/src/utils/theme/radius';
 import { mono0 } from '@storeen/system/src/utils/theme/colors';
 
-const Badge = ({ appearance = 'default', text = '', onClick = null }) => {
+export const Badge = ({
+  appearance = 'default',
+  text = '',
+  onClick = null
+}) => {
   const theme = useTheme(appearance);
   const badgeStyle = {
     color: theme.borderColor,
@@ -31,5 +35,3 @@ const Badge = ({ appearance = 'default', text = '', onClick = null }) => {
     </>
   );
 };
-
-export default Badge;

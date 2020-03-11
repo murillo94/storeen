@@ -1,9 +1,6 @@
 import Page from '../../../layouts/login';
 
-import { Image } from '@storeen/components/src/components/image';
-import { Heading } from '@storeen/components/src/components/typography';
-import Input from '@storeen/components/src/components/input';
-import Button from '@storeen/components/src/components/button';
+import { Image, Heading, Input, Button } from '@storeen/components';
 
 import usePasswordChange from '../../../containers/usePasswordChange';
 

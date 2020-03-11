@@ -5,7 +5,7 @@ import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 import { primary } from '@storeen/system/src/utils/theme/shadows';
 import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
 
-const Switch = ({
+export const Switch = ({
   appearance = 'minimal',
   id = null,
   name = '',
@@ -108,5 +108,3 @@ const Switch = ({
     </>
   );
 };
-
-export default Switch;

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Header from '../index';
+import { Header } from '../index';
 
 describe('Header', () => {
   test('should render', () => {

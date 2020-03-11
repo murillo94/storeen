@@ -1,9 +1,9 @@
-import Container from '../../container';
-import TableOptions from './TableOptions';
-import TableHead from './TableHead';
-import TableBody from './TableBody';
+import { Container } from '../../container';
+import { TableOptions } from './TableOptions';
+import { TableHead } from './TableHead';
+import { TableBody } from './TableBody';
 
-const Table = ({
+export const Table = ({
   children,
   title = '',
   optionsTitle,
@@ -57,5 +57,3 @@ const Table = ({
     </>
   );
 };
-
-export default Table;

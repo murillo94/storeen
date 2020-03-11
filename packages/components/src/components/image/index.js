@@ -1,2 +1,2 @@
-export { default as Image } from './src/Image';
-export { default as ImageDescription } from './src/ImageDescription';
+export { Image } from './src/Image';
+export { ImageDescription } from './src/ImageDescription';

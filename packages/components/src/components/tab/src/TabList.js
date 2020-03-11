@@ -1,4 +1,4 @@
-const TabList = ({
+export const TabList = ({
   children,
   ariaLabel = 'Menu lateral',
   customStyle = {}
@@ -25,5 +25,3 @@ const TabList = ({
     </style>
   </>
 );
-
-export default TabList;

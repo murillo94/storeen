@@ -6,17 +6,15 @@ import Page from '../../layouts/adminContent';
 import {
   Menu,
   MenuGroup,
-  MenuItem
-} from '@storeen/components/src/components/menu';
-import SubHeader from '@storeen/components/src/components/subHeader';
-import Button from '@storeen/components/src/components/button';
-import {
+  MenuItem,
+  SubHeader,
+  Button,
   Table,
   TableRow,
   TableBodyCell,
-  TextTableCell
-} from '@storeen/components/src/components/table';
-import Icon from '@storeen/components/src/components/icon';
+  TextTableCell,
+  Icon
+} from '@storeen/components';
 
 import useLayout from '@storeen/system/src/hooks/layout/useLayout';
 

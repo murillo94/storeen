@@ -22,7 +22,7 @@ describe('Paragraph', () => {
 
     const p = getByText('im p');
 
-    expect(p).toContainHTML('<p class="jsx-3910169380">im p</p>');
+    expect(p).toContainHTML('<p class="jsx-3584975969">im p</p>');
   });
 
   test('should have inherit color', () => {

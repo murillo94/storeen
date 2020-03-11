@@ -1,4 +1,4 @@
-const Image = ({
+export const Image = ({
   src = null,
   alt = null,
   width = 0,
@@ -13,5 +13,3 @@ const Image = ({
     style={{ ...customStyle }}
   />
 );
-
-export default Image;

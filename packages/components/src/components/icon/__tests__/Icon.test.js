@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Icon from '../index';
+import { Icon } from '../index';
 
 describe('Icon', () => {
   test('should render', () => {

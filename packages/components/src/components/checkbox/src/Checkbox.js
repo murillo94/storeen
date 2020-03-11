@@ -12,7 +12,7 @@ const descriptionStyle = {
   margin: '5px 0 0'
 };
 
-const Checkbox = ({
+export const Checkbox = ({
   appearance = 'minimal',
   id = null,
   name = '',
@@ -133,5 +133,3 @@ const Checkbox = ({
     </>
   );
 };
-
-export default Checkbox;

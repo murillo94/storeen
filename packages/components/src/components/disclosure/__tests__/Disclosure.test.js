@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import Disclosure from '../index';
+import { Disclosure } from '../index';
 
 const children = 'im children';
 

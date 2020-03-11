@@ -2,16 +2,18 @@ import { useState } from 'react';
 
 import Page from '../../../layouts/adminSettingsContent/store';
 
-import Container from '@storeen/components/src/components/container';
-import Badge from '@storeen/components/src/components/badge';
-import Dialog from '@storeen/components/src/components/dialog';
-import { ImageDescription } from '@storeen/components/src/components/image';
-import Disclosure from '@storeen/components/src/components/disclosure';
-import { Paragraph } from '@storeen/components/src/components/typography';
-import Input from '@storeen/components/src/components/input';
-import Switch from '@storeen/components/src/components/switch';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  Container,
+  Badge,
+  Dialog,
+  ImageDescription,
+  Disclosure,
+  Paragraph,
+  Input,
+  Switch,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useSettingsPayments from '../../../containers/useSettingsPayments';
 

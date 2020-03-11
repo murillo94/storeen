@@ -1,8 +1,8 @@
-import Overlay from '../../overlay';
+import { Overlay } from '../../overlay';
 
 import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
 
-const SideSheet = ({
+export const SideSheet = ({
   children,
   visible = false,
   width = '620px',
@@ -46,5 +46,3 @@ const SideSheet = ({
     </style>
   </>
 );
-
-export default SideSheet;

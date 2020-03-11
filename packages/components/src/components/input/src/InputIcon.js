@@ -1,11 +1,11 @@
-import Button from '../../button';
-import InputText from './InputText';
+import { Button } from '../../button';
+import { InputText } from './InputText';
 
 const buttonStyle = {
   borderLeft: 0
 };
 
-const InputIcon = ({
+export const InputIcon = ({
   appearance,
   type,
   id,
@@ -76,5 +76,3 @@ const InputIcon = ({
     </style>
   </>
 );
-
-export default InputIcon;

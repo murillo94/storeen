@@ -1,6 +1,6 @@
 import { mono0, mono75, mono100 } from '@storeen/system/src/utils/theme/colors';
 
-const TableRow = ({
+export const TableRow = ({
   children,
   isBody = true,
   hover = true,
@@ -29,5 +29,3 @@ const TableRow = ({
     </style>
   </>
 );
-
-export default TableRow;

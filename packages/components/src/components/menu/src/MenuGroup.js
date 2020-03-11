@@ -3,7 +3,7 @@ import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 import { mono0 } from '@storeen/system/src/utils/theme/colors';
 import { radius500 } from '@storeen/system/src/utils/theme/radius';
 
-const MenuGroup = ({
+export const MenuGroup = ({
   children,
   appearance = 'minimal',
   id = null,
@@ -37,5 +37,3 @@ const MenuGroup = ({
     </>
   );
 };
-
-export default MenuGroup;

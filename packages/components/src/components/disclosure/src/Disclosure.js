@@ -1,6 +1,6 @@
 import { useRef, useEffect, cloneElement } from 'react';
 
-const Disclosure = ({
+export const Disclosure = ({
   children,
   content,
   isOpen = false,
@@ -59,5 +59,3 @@ const Disclosure = ({
     </div>
   );
 };
-
-export default Disclosure;

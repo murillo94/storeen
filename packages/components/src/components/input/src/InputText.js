@@ -72,7 +72,7 @@ const Input = ({
   );
 };
 
-const InputText = ({ mask, ...props }) => {
+export const InputText = ({ mask, ...props }) => {
   const validMask = MASKS[mask];
 
   return (
@@ -91,5 +91,3 @@ const InputText = ({ mask, ...props }) => {
     </>
   );
 };
-
-export default InputText;

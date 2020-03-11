@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import Select from '../index';
+import { Select } from '../index';
 
 import {
   primary700,

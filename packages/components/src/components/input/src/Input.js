@@ -1,11 +1,11 @@
 import { memo } from 'react';
 
 import { Label } from '../../typography';
-import InputText from './InputText';
-import InputPassword from './InputPassword';
-import InputIcon from './InputIcon';
+import { InputText } from './InputText';
+import { InputPassword } from './InputPassword';
+import { InputIcon } from './InputIcon';
 
-const Input = memo(
+export const Input = memo(
   ({
     appearance = 'minimal',
     type = 'text',
@@ -72,5 +72,3 @@ const Input = memo(
   ),
   (prevProps, nextProps) => prevProps.value === nextProps.value
 );
-
-export default Input;

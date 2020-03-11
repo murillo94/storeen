@@ -70,7 +70,7 @@ const H4 = ({ text, color, customStyle }) => (
   </>
 );
 
-const Heading = memo(
+export const Heading = memo(
   ({ is = 'h1', text = '', color = 'inherit', customStyle = {} }) => {
     const fontColor = useFont(color);
 
@@ -92,5 +92,3 @@ const Heading = memo(
     );
   }
 );
-
-export default Heading;

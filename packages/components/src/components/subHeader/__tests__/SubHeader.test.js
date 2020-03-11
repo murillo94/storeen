@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import SubHeader from '../index';
+import { SubHeader } from '../index';
 
 describe('SubHeader', () => {
   test('should render', () => {

@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import Badge from '../index';
+import { Badge } from '../index';
 
 import {
   primary700,

@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import useFont from '@storeen/system/src/hooks/theme/useFont';
 
-const Label = memo(
+export const Label = memo(
   ({
     children,
     id = null,
@@ -33,5 +33,3 @@ const Label = memo(
     );
   }
 );
-
-export default Label;

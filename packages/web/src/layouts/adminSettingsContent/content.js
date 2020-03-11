@@ -1,6 +1,6 @@
 import AdminPage from '../adminContent';
 
-import { TabList, Tab } from '@storeen/components/src/components/tab';
+import { TabList, Tab } from '@storeen/components';
 
 const Content = ({ children, options, padding, customStyle }) => (
   <>

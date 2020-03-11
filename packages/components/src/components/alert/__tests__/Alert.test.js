@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Alert from '../index';
+import { Alert } from '../index';
 
 import {
   primary700,

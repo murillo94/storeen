@@ -1,9 +1,9 @@
-import Overlay from '../../overlay';
+import { Overlay } from '../../overlay';
 
 import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
 import { radius600 } from '@storeen/system/src/utils/theme/radius';
 
-const Dialog = ({
+export const Dialog = ({
   children,
   role = 'dialog',
   visible = false,
@@ -56,5 +56,3 @@ const Dialog = ({
     </style>
   </>
 );
-
-export default Dialog;

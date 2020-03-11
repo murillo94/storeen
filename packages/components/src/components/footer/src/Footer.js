@@ -1,4 +1,4 @@
-const Footer = ({ children, align = 'left' }) => (
+export const Footer = ({ children, align = 'left' }) => (
   <>
     <footer className={align}>{children}</footer>
 
@@ -24,5 +24,3 @@ const Footer = ({ children, align = 'left' }) => (
     </style>
   </>
 );
-
-export default Footer;

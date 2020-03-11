@@ -1,4 +1,4 @@
-const Form = ({ children }) => (
+export const Form = ({ children }) => (
   <>
     <div>{children}</div>
 
@@ -30,5 +30,3 @@ const Form = ({ children }) => (
     </style>
   </>
 );
-
-export default Form;

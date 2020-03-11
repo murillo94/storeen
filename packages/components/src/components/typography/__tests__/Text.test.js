@@ -22,7 +22,7 @@ describe('Text', () => {
 
     const span = getByText('im span');
 
-    expect(span).toContainHTML('<span class="jsx-2151508852">im span</span>');
+    expect(span).toContainHTML('<span class="jsx-3533282834">im span</span>');
   });
 
   test('should have inherit color', () => {

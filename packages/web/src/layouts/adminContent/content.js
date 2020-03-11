@@ -1,15 +1,16 @@
 import { useState } from 'react';
 
-import { Image } from '@storeen/components/src/components/image';
 import {
+  Image,
   Menu,
   MenuGroup,
-  MenuItem
-} from '@storeen/components/src/components/menu';
-import SideSheet from '@storeen/components/src/components/sideSheet';
-import { TabList, Tab } from '@storeen/components/src/components/tab';
-import Header from '@storeen/components/src/components/header';
-import Button from '@storeen/components/src/components/button';
+  MenuItem,
+  SideSheet,
+  TabList,
+  Tab,
+  Header,
+  Button
+} from '@storeen/components';
 
 import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
 import { radius800 } from '@storeen/system/src/utils/theme/radius';

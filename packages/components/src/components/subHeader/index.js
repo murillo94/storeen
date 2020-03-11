@@ -1,1 +1,1 @@
-export { default } from './src/SubHeader';
+export { SubHeader } from './src/SubHeader';

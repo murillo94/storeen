@@ -2,14 +2,16 @@ import Router from 'next/router';
 
 import Page from '../../../layouts/adminContent';
 
-import SubHeader from '@storeen/components/src/components/subHeader';
-import Container from '@storeen/components/src/components/container';
-import { FormGroup } from '@storeen/components/src/components/form';
-import Input from '@storeen/components/src/components/input';
-import Checkbox from '@storeen/components/src/components/checkbox';
-import Disclosure from '@storeen/components/src/components/disclosure';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  SubHeader,
+  Container,
+  FormGroup,
+  Input,
+  Checkbox,
+  Disclosure,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useProductsAdd from '../../../containers/useProductsAdd';
 

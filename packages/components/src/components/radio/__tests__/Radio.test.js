@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import Radio from '../index';
+import { Radio } from '../index';
 
 describe('Radio', () => {
   test('should render', () => {

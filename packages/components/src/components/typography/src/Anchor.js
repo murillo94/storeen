@@ -7,7 +7,7 @@ import useFont from '@storeen/system/src/hooks/theme/useFont';
 import { primary } from '@storeen/system/src/utils/theme/shadows';
 import { primary700 } from '@storeen/system/src/utils/theme/colors';
 
-const Anchor = memo(
+export const Anchor = memo(
   ({ href = '', text = '', color = 'inherit', hover = true }) => {
     const fontColor = useFont(color);
 
@@ -40,5 +40,3 @@ const Anchor = memo(
     );
   }
 );
-
-export default Anchor;

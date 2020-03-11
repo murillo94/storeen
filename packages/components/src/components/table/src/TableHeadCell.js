@@ -1,4 +1,4 @@
-const TableHeadCell = ({ children }) => (
+export const TableHeadCell = ({ children }) => (
   <>
     <th>{children}</th>
 
@@ -26,5 +26,3 @@ const TableHeadCell = ({ children }) => (
     </style>
   </>
 );
-
-export default TableHeadCell;

@@ -1,7 +1,7 @@
 import { useState, createRef } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import Input from '../index';
+import { Input } from '../index';
 
 import {
   primary700,

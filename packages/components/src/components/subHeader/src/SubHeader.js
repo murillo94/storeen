@@ -1,7 +1,7 @@
-import Button from '../../button';
+import { Button } from '../../button';
 import { Heading } from '../../typography';
 
-const SubHeader = ({
+export const SubHeader = ({
   children,
   title = '',
   hasBack = false,
@@ -45,5 +45,3 @@ const SubHeader = ({
     </style>
   </>
 );
-
-export default SubHeader;

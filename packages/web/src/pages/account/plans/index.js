@@ -4,16 +4,16 @@ import {
   Table,
   TableRow,
   TableBodyCell,
-  TextTableCell
-} from '@storeen/components/src/components/table';
-import Switch from '@storeen/components/src/components/switch';
-import Radio from '@storeen/components/src/components/radio';
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import { FormGroup } from '@storeen/components/src/components/form';
-import Alert from '@storeen/components/src/components/alert';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+  TextTableCell,
+  Switch,
+  Radio,
+  Container,
+  Input,
+  FormGroup,
+  Alert,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useAccountPlans, {
   TYPE,

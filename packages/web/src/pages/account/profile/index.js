@@ -1,10 +1,12 @@
 import Page from '../../../layouts/adminSettingsContent/account';
 
-import Container from '@storeen/components/src/components/container';
-import Input from '@storeen/components/src/components/input';
-import Disclosure from '@storeen/components/src/components/disclosure';
-import Footer from '@storeen/components/src/components/footer';
-import Button from '@storeen/components/src/components/button';
+import {
+  Container,
+  Input,
+  Disclosure,
+  Footer,
+  Button
+} from '@storeen/components';
 
 import useAccountProfile from '../../../containers/useAccountProfile';
 

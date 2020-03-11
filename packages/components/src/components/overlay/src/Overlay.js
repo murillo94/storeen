@@ -4,9 +4,11 @@ import dynamic from 'next/dynamic';
 
 import preventBodyScroll from '../utils/preventBodyScroll';
 
-const Portal = dynamic(() => import('../../portal'), { ssr: false });
+const Portal = dynamic(() => import('../../portal').then(mod => mod.Portal), {
+  ssr: false
+});
 
-const Overlay = ({
+export const Overlay = ({
   children,
   id = null,
   visible = false,
@@ -56,5 +58,3 @@ const Overlay = ({
     </>
   );
 };
-
-export default Overlay;

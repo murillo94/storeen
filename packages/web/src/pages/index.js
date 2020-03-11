@@ -2,15 +2,15 @@ import Router from 'next/router';
 
 import Page from '../layouts/login';
 
-import { Image } from '@storeen/components/src/components/image';
 import {
+  Image,
   Heading,
   Paragraph,
-  Anchor
-} from '@storeen/components/src/components/typography';
-import { Form } from '@storeen/components/src/components/form';
-import Input from '@storeen/components/src/components/input';
-import Button from '@storeen/components/src/components/button';
+  Anchor,
+  Form,
+  Input,
+  Button
+} from '@storeen/components';
 
 import useLogin from '../containers/useLogin';
 

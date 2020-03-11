@@ -1,2 +1,2 @@
-export { default as Tab } from './src/Tab';
-export { default as TabList } from './src/TabList';
+export { Tab } from './src/Tab';
+export { TabList } from './src/TabList';

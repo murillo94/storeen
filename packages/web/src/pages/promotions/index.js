@@ -2,14 +2,14 @@ import Router from 'next/router';
 
 import Page from '../../layouts/adminContent';
 
-import SubHeader from '@storeen/components/src/components/subHeader';
-import Button from '@storeen/components/src/components/button';
 import {
+  SubHeader,
+  Button,
   Table,
   TableRow,
   TableBodyCell,
   TextTableCell
-} from '@storeen/components/src/components/table';
+} from '@storeen/components';
 
 import useLayout from '@storeen/system/src/hooks/layout/useLayout';
 

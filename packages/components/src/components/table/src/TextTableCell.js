@@ -1,6 +1,6 @@
 import { Text } from '../../typography';
 
-const TextTableCell = ({ children, text = '', textCustomStyle }) => (
+export const TextTableCell = ({ children, text = '', textCustomStyle }) => (
   <>
     <div>
       {text && <Text text={text} customStyle={textCustomStyle} />}
@@ -24,5 +24,3 @@ const TextTableCell = ({ children, text = '', textCustomStyle }) => (
     </style>
   </>
 );
-
-export default TextTableCell;

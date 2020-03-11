@@ -9,7 +9,7 @@ const descriptionStyle = {
   margin: '0'
 };
 
-const Alert = ({
+export const Alert = ({
   children,
   appearance = 'positive',
   title = '',
@@ -52,5 +52,3 @@ const Alert = ({
     </>
   );
 };
-
-export default Alert;

@@ -1,1 +1,1 @@
-export { default } from './src/Disclosure';
+export { Disclosure } from './src/Disclosure';

@@ -1,11 +1,11 @@
 import { Text } from '../../typography';
-import Image from './Image';
+import { Image } from './Image';
 
 const textStyle = {
   marginLeft: '8px'
 };
 
-const ImageDescription = ({ src, alt, description, width, height }) => (
+export const ImageDescription = ({ src, alt, description, width, height }) => (
   <>
     <div>
       <Image src={src} alt={alt} width={width} height={height} />
@@ -22,5 +22,3 @@ const ImageDescription = ({ src, alt, description, width, height }) => (
     </style>
   </>
 );
-
-export default ImageDescription;

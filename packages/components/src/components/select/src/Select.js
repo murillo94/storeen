@@ -1,12 +1,12 @@
 import { Label } from '../../typography';
-import Icon from '../../icon';
+import { Icon } from '../../icon';
 
 import useTheme from '@storeen/system/src/hooks/theme/useTheme';
 
 import { mono0, mono600 } from '@storeen/system/src/utils/theme/colors';
 import { radius600 } from '@storeen/system/src/utils/theme/radius';
 
-const Select = ({
+export const Select = ({
   appearance = 'minimal',
   id = null,
   name = '',
@@ -80,5 +80,3 @@ const Select = ({
     </>
   );
 };
-
-export default Select;
