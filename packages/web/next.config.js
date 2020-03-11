@@ -29,7 +29,6 @@ const plugins = [
 ];
 
 const nextConfig = {
-  target: 'serverless',
   webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
