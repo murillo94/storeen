@@ -1,19 +1,15 @@
 {
-  "name": "storeen",
+  "name": "@storeen/web",
   "version": "1.0.0",
   "private": true,
-  "repository": "git@github.com:murillo94/storeen.git",
-  "author": "Murillo de Miranda Pereira <murillobeta0@hotmail.com>",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": []
-  },
   "devDependencies": {
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
+    "@storeen/system": "*",
+    "@storeen/components": "*",
     "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.5.0",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -23,14 +19,30 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-svgo": "^7.1.0",
     "jest": "^25.1.0",
+    "jest-next-dynamic": "^1.0.1",
     "lint-staged": "^10.0.8",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.5",
+    "next-plugin-custom-babel-config": "^1.0.2",
+    "next-transpile-modules": "^3.1.0",
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "next": "^9.3.0"
+    "feather-icons-react": "^0.4.1",
+    "next": "^9.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-text-mask": "^5.4.3",
+    "set-value": "^3.0.1",
+    "text-mask-addons": "^3.8.0"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -58,6 +70,11 @@
     "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.(png|ico)$": "<rootDir>/config/jest/fileTransformer.js"
+    },
+    "moduleNameMapper": {
+      "^containers(.*)$": "<rootDir>/src/containers$1",
+      "^layouts(.*)$": "<rootDir>/src/layouts$1",
+      "^images(.*)$": "<rootDir>/src/public/static/images$1"
     }
   }
 }

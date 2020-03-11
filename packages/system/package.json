@@ -1,0 +1,10 @@
+{
+  "name": "@storeen/system",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "set-value": "^3.0.1"
+  }
+}
