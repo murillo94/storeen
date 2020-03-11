@@ -6,6 +6,7 @@
   "routes": [
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "dest": "/packages/web/_next/static/$1",
       "headers": { "cache-control": "immutable,max-age=31536000" }
     },
     {
