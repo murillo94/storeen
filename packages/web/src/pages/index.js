@@ -14,7 +14,7 @@ import {
 
 import useLogin from '../containers/useLogin';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../hooks/layout/useLayout';
 
 const imageStyle = {
   margin: '30px 0'

@@ -2,11 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Paragraph } from '../index';
 
-import {
-  mono900,
-  mono800,
-  primary700
-} from '@storeen/system/src/utils/theme/colors';
+import { mono900, mono800, primary700 } from '@storeen/system';
 
 describe('Paragraph', () => {
   const ParagraphCustom = props => <Paragraph text="im p" {...props} />;

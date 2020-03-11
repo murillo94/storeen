@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useFont from '@storeen/system/src/hooks/theme/useFont';
+import useFont from '../../../hooks/theme/useFont';
 
 const H1 = ({ text, color, customStyle }) => (
   <>

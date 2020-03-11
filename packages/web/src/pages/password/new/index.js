@@ -4,7 +4,7 @@ import { Image, Heading, Input, Button } from '@storeen/components';
 
 import usePasswordNew from '../../../containers/usePasswordNew';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const buttonStyle = {
   width: '100%',

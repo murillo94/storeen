@@ -1,9 +1,8 @@
 import MaskedInput from 'react-text-mask';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono500 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { mono500, radius600 } from '@storeen/system';
 
 import { MASKS } from '../utils/mask';
 

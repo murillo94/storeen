@@ -1,4 +1,4 @@
-import { mono0, mono75, mono100 } from '@storeen/system/src/utils/theme/colors';
+import { mono0, mono75, mono100 } from '@storeen/system';
 
 export const TableRow = ({
   children,

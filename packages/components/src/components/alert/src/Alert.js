@@ -1,9 +1,8 @@
 import { Heading, Paragraph } from '../../typography';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono100 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, mono100, radius600 } from '@storeen/system';
 
 const descriptionStyle = {
   margin: '0'

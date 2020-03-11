@@ -2,11 +2,9 @@ import Link from 'next/link';
 
 import { Button } from '../../button';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, primary700 } from '@storeen/system/src/utils/theme/colors';
-import { radius500 } from '@storeen/system/src/utils/theme/radius';
-import { primary } from '@storeen/system/src/utils/theme/shadows';
+import { mono0, primary700, radius500, primary } from '@storeen/system';
 
 const buttonStyle = {
   padding: '5px 8px',

@@ -13,7 +13,7 @@ import {
 
 import useCategoriesAdd from '../../../containers/useCategoriesAdd';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const AddCategorie = () => {
   const {

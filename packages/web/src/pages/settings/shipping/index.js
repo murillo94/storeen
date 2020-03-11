@@ -13,7 +13,7 @@ import {
 
 import useSettingsShipping from '../../../containers/useSettingsShipping';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const descriptionStyle = {
   margin: '0 0 20px'

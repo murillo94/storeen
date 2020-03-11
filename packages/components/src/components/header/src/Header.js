@@ -1,4 +1,4 @@
-import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
+import { mono0, mono200 } from '@storeen/system';
 
 export const Header = ({ children }) => (
   <>

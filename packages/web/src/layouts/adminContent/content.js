@@ -12,8 +12,7 @@ import {
   Button
 } from '@storeen/components';
 
-import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
-import { radius800 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, mono200, radius800 } from '@storeen/system';
 
 const Logo = () => (
   <>

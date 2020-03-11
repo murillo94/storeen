@@ -1,10 +1,9 @@
 import { Button } from '../../button';
 import { Text } from '../../typography';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
-import { mono0 } from '@storeen/system/src/utils/theme/colors';
+import { mono0, radius600 } from '@storeen/system';
 
 export const Badge = ({
   appearance = 'default',

@@ -1,9 +1,8 @@
 import { Text, Label } from '../../typography';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { primary } from '@storeen/system/src/utils/theme/shadows';
-import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
+import { mono0, mono200, primary } from '@storeen/system';
 
 export const Switch = ({
   appearance = 'minimal',

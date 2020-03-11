@@ -1,4 +1,4 @@
-import useForm from '@storeen/system/src/hooks/form/useForm';
+import useForm from '../hooks/form/useForm';
 
 const useSettingsPayments = () =>
   useForm({

@@ -1,9 +1,9 @@
 import { Icon } from '../../icon';
 import { Text } from '../../typography';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { radius600 } from '@storeen/system';
 
 const defaultStyle = {
   width: 'auto'

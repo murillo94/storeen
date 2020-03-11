@@ -1,4 +1,4 @@
-import { mono900, mono800, primary700 } from '../../utils/theme/colors';
+import { mono900, mono800, primary700 } from '@storeen/system';
 
 const fonts = {
   default: mono900,

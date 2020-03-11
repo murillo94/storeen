@@ -1,7 +1,7 @@
 import { Input } from '../../input';
 import { FormGroup } from '../../form';
 
-import { mono75 } from '@storeen/system/src/utils/theme/colors';
+import { mono75 } from '@storeen/system';
 
 export const TableOptions = ({
   children,

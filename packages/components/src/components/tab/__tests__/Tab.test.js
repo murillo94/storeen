@@ -9,9 +9,9 @@ import {
   negative700,
   negative600,
   positive700,
-  positive600
-} from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+  positive600,
+  radius600
+} from '@storeen/system';
 
 const content = 'im content';
 

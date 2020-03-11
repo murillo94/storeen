@@ -12,7 +12,7 @@ import {
 
 import useSettingsStore from '../../../containers/useSettingsStore';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const headingCompanyStyle = {
   marginBottom: '20px'

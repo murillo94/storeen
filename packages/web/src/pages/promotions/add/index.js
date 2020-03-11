@@ -16,7 +16,7 @@ import {
 
 import usePromotionsAdd from '../../../containers/usePromotionsAdd';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const promotionTypeOptions = [
   {

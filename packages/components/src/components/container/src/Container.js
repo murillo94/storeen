@@ -1,8 +1,7 @@
 import { Form } from '../../form';
 import { Heading, Paragraph } from '../../typography';
 
-import { mono0, mono100 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, mono100, radius600 } from '@storeen/system';
 
 const subTitleStyle = {
   marginTop: '6px'

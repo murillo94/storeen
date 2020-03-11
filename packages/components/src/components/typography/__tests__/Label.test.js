@@ -2,11 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Label } from '../index';
 
-import {
-  mono900,
-  mono800,
-  primary700
-} from '@storeen/system/src/utils/theme/colors';
+import { mono900, mono800, primary700 } from '@storeen/system';
 
 describe('Label', () => {
   const LabelCustom = props => (

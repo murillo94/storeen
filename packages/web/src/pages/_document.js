@@ -1,12 +1,7 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import {
-  primary700,
-  mono0,
-  mono75,
-  mono900
-} from '@storeen/system/src/utils/theme/colors';
+import { primary700, mono0, mono75, mono900 } from '@storeen/system';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {

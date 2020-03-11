@@ -4,7 +4,7 @@ import { Container, Input, Footer, Button } from '@storeen/components';
 
 import useSettingsLegal from '../../../containers/useSettingsLegal';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const LegalSettings = () => {
   const {

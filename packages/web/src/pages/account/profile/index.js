@@ -10,7 +10,7 @@ import {
 
 import useAccountProfile from '../../../containers/useAccountProfile';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const AccountSettings = () => {
   const {

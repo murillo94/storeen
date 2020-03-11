@@ -8,9 +8,11 @@ import {
   negative700,
   negative600,
   positive700,
-  positive600
-} from '../../utils/theme/colors';
-import { primary, negative, positive } from '../../utils/theme/shadows';
+  positive600,
+  primary,
+  negative,
+  positive
+} from '@storeen/system';
 
 const theme = {
   default: {

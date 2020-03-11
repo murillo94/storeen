@@ -5,11 +5,9 @@ import { Icon } from '../../icon';
 import { Text } from '../../typography';
 import { Button } from '../../button';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { primary700 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
-import { primary } from '@storeen/system/src/utils/theme/shadows';
+import { primary700, radius600, primary } from '@storeen/system';
 
 const buttonStyle = {
   width: '100%'

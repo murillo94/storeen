@@ -1,7 +1,6 @@
 import { Overlay } from '../../overlay';
 
-import { mono0, mono200 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, mono200, radius600 } from '@storeen/system';
 
 export const Dialog = ({
   children,

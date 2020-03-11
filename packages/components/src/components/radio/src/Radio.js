@@ -1,8 +1,8 @@
 import { Label, Paragraph } from '../../typography';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { radius500 } from '@storeen/system/src/utils/theme/radius';
+import { radius500 } from '@storeen/system';
 
 const labelStyle = {
   display: 'inline-flex'

@@ -1,10 +1,9 @@
 import { Label } from '../../typography';
 import { Icon } from '../../icon';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono600 } from '@storeen/system/src/utils/theme/colors';
-import { radius600 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, mono600, radius600 } from '@storeen/system';
 
 export const Select = ({
   appearance = 'minimal',

@@ -2,9 +2,9 @@ import { useRef } from 'react';
 
 import { InputIcon } from './InputIcon';
 
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0, mono600 } from '@storeen/system/src/utils/theme/colors';
+import { mono0, mono600 } from '@storeen/system';
 
 export const InputPassword = ({
   appearance,

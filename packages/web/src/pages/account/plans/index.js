@@ -20,7 +20,7 @@ import useAccountPlans, {
   PLANS
 } from '../../../containers/useAccountPlans';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const headers = ['Plano', 'Produtos', 'Preço'];
 

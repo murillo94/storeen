@@ -1,7 +1,6 @@
-import useTheme from '@storeen/system/src/hooks/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
-import { mono0 } from '@storeen/system/src/utils/theme/colors';
-import { radius500 } from '@storeen/system/src/utils/theme/radius';
+import { mono0, radius500 } from '@storeen/system';
 
 export const MenuGroup = ({
   children,

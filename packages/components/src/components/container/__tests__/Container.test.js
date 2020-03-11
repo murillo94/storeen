@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Container } from '../index';
 
-import { mono100 } from '@storeen/system/src/utils/theme/colors';
+import { mono100 } from '@storeen/system';
 
 const content = 'im content';
 

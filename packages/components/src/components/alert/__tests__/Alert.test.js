@@ -2,12 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Alert } from '../index';
 
-import {
-  primary700,
-  mono200,
-  negative700,
-  positive700
-} from '@storeen/system/src/utils/theme/colors';
+import { primary700, mono200, negative700, positive700 } from '@storeen/system';
 
 const content = 'im content';
 

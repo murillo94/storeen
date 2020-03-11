@@ -4,7 +4,7 @@ import Page from '../../layouts/adminContent';
 
 import { SubHeader, Button } from '@storeen/components';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../hooks/layout/useLayout';
 
 const Categories = () => {
   const handleAddCategorie = () => Router.push('/categories/add');

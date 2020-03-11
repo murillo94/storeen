@@ -9,7 +9,7 @@ import {
   mono200,
   negative700,
   positive700
-} from '@storeen/system/src/utils/theme/colors';
+} from '@storeen/system';
 
 const content = 'im content';
 

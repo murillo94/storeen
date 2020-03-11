@@ -16,12 +16,9 @@ import {
   Icon
 } from '@storeen/components';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../hooks/layout/useLayout';
 
-import {
-  positive700,
-  negative700
-} from '@storeen/system/src/utils/theme/colors';
+import { positive700, negative700 } from '@storeen/system';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [

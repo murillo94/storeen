@@ -8,7 +8,7 @@ import {
   Button
 } from '@storeen/components';
 
-import useLayout from '@storeen/system/src/hooks/layout/useLayout';
+import useLayout from '../../../hooks/layout/useLayout';
 
 const headers = ['Data do pagamento', 'Plano', 'Valor', 'Recibo'];
 const items = [

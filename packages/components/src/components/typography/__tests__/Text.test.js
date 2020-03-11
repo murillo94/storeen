@@ -2,11 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Text } from '../index';
 
-import {
-  mono900,
-  mono800,
-  primary700
-} from '@storeen/system/src/utils/theme/colors';
+import { mono900, mono800, primary700 } from '@storeen/system';
 
 describe('Text', () => {
   const SpanCustom = props => <Text text="im span" {...props} />;

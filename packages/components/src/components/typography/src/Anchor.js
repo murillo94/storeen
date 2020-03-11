@@ -2,10 +2,9 @@ import { memo } from 'react';
 
 import Link from 'next/link';
 
-import useFont from '@storeen/system/src/hooks/theme/useFont';
+import useFont from '../../../hooks/theme/useFont';
 
-import { primary } from '@storeen/system/src/utils/theme/shadows';
-import { primary700 } from '@storeen/system/src/utils/theme/colors';
+import { primary700, primary } from '@storeen/system';
 
 export const Anchor = memo(
   ({ href = '', text = '', color = 'inherit', hover = true }) => {
