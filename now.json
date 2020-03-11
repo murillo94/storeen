@@ -2,7 +2,7 @@
   "version": 2,
   "name": "storeen",
   "alias": "storeen",
-  "builds": [{ "src": "packages/web/next.config.js", "use": "@now/next" }],
+  "builds": [{ "src": "packages/web/package.json", "use": "@now/next" }],
   "routes": [
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
