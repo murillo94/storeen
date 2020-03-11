@@ -28,6 +28,9 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
+    "dev": "yarn --cwd packages/web dev",
+    "build": "yarn --cwd packages/web build",
+    "start": "yarn --cwd packages/web start",
     "lint": "eslint .",
     "test": "jest"
   },
