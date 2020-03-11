@@ -56,25 +56,5 @@
       "eslint --fix",
       "prettier --write"
     ]
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest.setup.js"
-    ],
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.(png|ico)$": "<rootDir>/config/jest/fileTransformer.js"
-    },
-    "moduleNameMapper": {
-      "^containers(.*)$": "<rootDir>/src/containers$1",
-      "^layouts(.*)$": "<rootDir>/src/layouts$1",
-      "^images(.*)$": "<rootDir>/src/public/static/images$1"
-    }
   }
 }
