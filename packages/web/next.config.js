@@ -3,7 +3,10 @@ const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const withCustomBabelConfig = require('next-plugin-custom-babel-config');
 const withOptimizedImages = require('next-optimized-images');
-const withTranspileModules = require('next-transpile-modules')(['@storeen']);
+const withTranspileModules = require('next-transpile-modules')([
+  '@storeen/components',
+  '@storeen/system'
+]);
 
 const plugins = [
   [
@@ -18,11 +21,11 @@ const plugins = [
       }
     }
   ],
-  [withTranspileModules],
   [
     withCustomBabelConfig,
     { babelConfigFile: path.resolve('../../babel.config.js') }
-  ]
+  ],
+  [withTranspileModules]
 ];
 
 const nextConfig = {
