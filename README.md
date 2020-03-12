@@ -6,9 +6,9 @@
 
 > WIP
 
-**Storeen** is a admin application with your own design system and component library in a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) comprised of modern, responsive, living components.
+**Storeen** is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) real application with your own design system and component library in comprised of modern, responsive, living components.
 
-The storeen frontend structure was designed to try implents all the pages application within design system in the same repo.
+The storeen frontend structure was designed to try use shared code in all the application pages taking the design system into consideration.
 
 ## Usage
 
@@ -26,3 +26,7 @@ The [@storeen/system](./packages/system) is the core of all components theme-bas
 ## Component Library
 
 The [@storeen/components](./packages/components) is the UI components built on top of **storeen** design system.
+
+## Styleguide
+
+> WIP
