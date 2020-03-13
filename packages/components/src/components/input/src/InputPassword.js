@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import { InputIcon } from './InputIcon';
 
-import useTheme from '../../../hooks/theme/useTheme';
+import useTheme from '../../../utils/theme/useTheme';
 
 import { gray0, gray600 } from '@storeen/system';
 

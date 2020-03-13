@@ -1,6 +1,6 @@
 import { Heading, Paragraph } from '../../typography';
 
-import useTheme from '../../../hooks/theme/useTheme';
+import useTheme from '../../../utils/theme/useTheme';
 
 import { gray0, gray100, borderRadius6 } from '@storeen/system';
 

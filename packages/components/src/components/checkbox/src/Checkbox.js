@@ -1,6 +1,6 @@
 import { Label, Paragraph } from '../../typography';
 
-import useTheme from '../../../hooks/theme/useTheme';
+import useTheme from '../../../utils/theme/useTheme';
 
 import { borderRadius4 } from '@storeen/system';
 

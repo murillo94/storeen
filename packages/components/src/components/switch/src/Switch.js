@@ -1,6 +1,6 @@
 import { Text, Label } from '../../typography';
 
-import useTheme from '../../../hooks/theme/useTheme';
+import useTheme from '../../../utils/theme/useTheme';
 
 import { gray0, gray200, primary } from '@storeen/system';
 

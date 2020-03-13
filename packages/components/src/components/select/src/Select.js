@@ -1,7 +1,7 @@
 import { Label } from '../../typography';
 import { Icon } from '../../icon';
 
-import useTheme from '../../../hooks/theme/useTheme';
+import useTheme from '../../../utils/theme/useTheme';
 
 import { fontSize14, gray0, gray600, borderRadius6 } from '@storeen/system';
 
