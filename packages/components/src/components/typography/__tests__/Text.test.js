@@ -5,7 +5,7 @@ import { Text } from '../index';
 import { gray900, gray800, purple700 } from '@storeen/system';
 
 describe('Text', () => {
-  const SpanCustom = props => <Text text="im span" {...props} />;
+  const TextCustom = props => <Text text="im span" {...props} />;
 
   test('should render', () => {
     const { container } = render(<Text />);
@@ -13,41 +13,41 @@ describe('Text', () => {
     expect(container).toBeInTheDocument();
   });
 
-  test('should be p with text', () => {
-    const { getByText } = render(<SpanCustom />);
+  test('should be span with text', () => {
+    const { container } = render(<TextCustom />);
 
-    const span = getByText('im span');
+    const span = container.querySelector('span');
 
-    expect(span).toContainHTML('<span class="jsx-3533282834">im span</span>');
+    expect(span).toHaveTextContent('im span');
   });
 
   test('should have inherit color', () => {
-    const { getByText } = render(<SpanCustom />);
+    const { getByText } = render(<TextCustom />);
 
     expect(getByText('im span')).toHaveStyle('color: inherit;');
   });
 
   test('should have default color', () => {
-    const { getByText } = render(<SpanCustom color="default" />);
+    const { getByText } = render(<TextCustom color="default" />);
 
     expect(getByText('im span')).toHaveStyle(`color: ${gray900};`);
   });
 
   test('should have muted color', () => {
-    const { getByText } = render(<SpanCustom color="muted" />);
+    const { getByText } = render(<TextCustom color="muted" />);
 
     expect(getByText('im span')).toHaveStyle(`color: ${gray800};`);
   });
 
   test('should have primary color', () => {
-    const { getByText } = render(<SpanCustom color="primary" />);
+    const { getByText } = render(<TextCustom color="primary" />);
 
     expect(getByText('im span')).toHaveStyle(`color: ${purple700};`);
   });
 
   test('should have custom style', () => {
     const { getByText } = render(
-      <SpanCustom customStyle={{ padding: '10px' }} />
+      <TextCustom customStyle={{ padding: '10px' }} />
     );
 
     expect(getByText('im span')).toHaveStyle('padding: 10px;');

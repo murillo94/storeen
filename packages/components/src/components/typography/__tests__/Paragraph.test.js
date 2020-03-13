@@ -14,11 +14,11 @@ describe('Paragraph', () => {
   });
 
   test('should be p with text', () => {
-    const { getByText } = render(<ParagraphCustom />);
+    const { container } = render(<ParagraphCustom />);
 
-    const p = getByText('im p');
+    const paragraph = container.querySelector('p');
 
-    expect(p).toContainHTML('<p class="jsx-3584975969">im p</p>');
+    expect(paragraph).toHaveTextContent('im p');
   });
 
   test('should have inherit color', () => {

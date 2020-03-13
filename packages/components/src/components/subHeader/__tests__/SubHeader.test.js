@@ -19,9 +19,7 @@ describe('SubHeader', () => {
   test('should have title', () => {
     const { getByRole } = render(<SubHeader title="im title" />);
 
-    const title = getByRole('heading');
-
-    expect(title).toHaveTextContent('im title');
+    expect(getByRole('heading')).toHaveTextContent('im title');
   });
 
   test('should have click back button and style back button', () => {
@@ -30,41 +28,11 @@ describe('SubHeader', () => {
       <SubHeader title="im title" hasBack onClick={onClick} />
     );
 
-    const title = getByText('im title');
     const button = getByRole('button');
 
-    expect(title).toHaveStyle('margin: 0 0 0 5px;');
-    expect(button).toMatchInlineSnapshot(`
-      <button
-        aria-disabled="false"
-        aria-label="chevron-left"
-        class="jsx-405694134 "
-        style="width: auto;"
-        type="button"
-      >
-        <svg
-          alt="chevron-left"
-          aria-label="chevron-left"
-          class="feather feather-chevron-left "
-          fill="none"
-          height="17"
-          role="img"
-          stroke="#333333"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="17"
-        >
-          <g>
-            <polyline
-              points="15 18 9 12 15 6"
-            />
-          </g>
-        </svg>
-        
-      </button>
-    `);
+    expect(button).toHaveAttribute('aria-label', 'chevron-left');
+    expect(getByText('im title')).toHaveStyle('margin: 0 0 0 5px;');
+    expect(getByRole('img')).toHaveAttribute('aria-label', 'chevron-left');
 
     fireEvent.click(button);
 

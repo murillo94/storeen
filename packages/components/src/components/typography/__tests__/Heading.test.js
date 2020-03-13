@@ -13,11 +13,11 @@ describe('Heading', () => {
 
   describe('H1', () => {
     test('should be H1 with text', () => {
-      const { getByRole } = render(<Heading text="im h1" />);
+      const { container } = render(<Heading text="im h1" />);
 
-      expect(getByRole('heading')).toContainHTML(
-        '<h1 class="jsx-674499530">im h1</h1>'
-      );
+      const h1 = container.querySelector('h1');
+
+      expect(h1).toHaveTextContent('im h1');
     });
 
     test('should have inherit color', () => {
@@ -55,11 +55,11 @@ describe('Heading', () => {
 
   describe('H2', () => {
     test('should be H2 with text', () => {
-      const { getByRole } = render(<Heading is="h2" text="im h2" />);
+      const { container } = render(<Heading is="h2" text="im h2" />);
 
-      expect(getByRole('heading')).toContainHTML(
-        '<h2 class="jsx-2742373254">im h2</h2>'
-      );
+      const h2 = container.querySelector('h2');
+
+      expect(h2).toHaveTextContent('im h2');
     });
 
     test('should have inherit color', () => {
@@ -97,11 +97,11 @@ describe('Heading', () => {
 
   describe('H3', () => {
     test('should be H3 with text', () => {
-      const { getByRole } = render(<Heading is="h3" text="im h3" />);
+      const { container } = render(<Heading is="h3" text="im h3" />);
 
-      expect(getByRole('heading')).toContainHTML(
-        '<h3 class="jsx-1645660008">im h3</h3>'
-      );
+      const h3 = container.querySelector('h3');
+
+      expect(h3).toHaveTextContent('im h3');
     });
 
     test('should have inherit color', () => {
@@ -139,11 +139,11 @@ describe('Heading', () => {
 
   describe('H4', () => {
     test('should be H4 with text', () => {
-      const { getByRole } = render(<Heading is="h4" text="im h4" />);
+      const { container } = render(<Heading is="h4" text="im h4" />);
 
-      expect(getByRole('heading')).toContainHTML(
-        '<h4 class="jsx-3226038624">im h4</h4>'
-      );
+      const h4 = container.querySelector('h4');
+
+      expect(h4).toHaveTextContent('im h4');
     });
 
     test('should have inherit color', () => {

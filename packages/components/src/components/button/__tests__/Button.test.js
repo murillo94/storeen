@@ -40,56 +40,14 @@ describe('Button', () => {
     expect(button).toHaveAttribute('type', 'submit');
   });
 
-  test('should have text and icon', () => {
+  test('should have aria, icon and text', () => {
     const { getByRole } = render(<Button text="im button" icon="plus" />);
 
-    const text = getByRole('button');
+    const button = getByRole('button');
 
-    expect(text).toMatchInlineSnapshot(`
-      <button
-        aria-disabled="false"
-        aria-label="im button"
-        class="jsx-976006719 "
-        style="width: auto;"
-        type="button"
-      >
-        <svg
-          alt="plus"
-          aria-label="plus"
-          class="feather feather-plus "
-          fill="none"
-          height="17"
-          role="img"
-          stroke="#ffffff"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="17"
-        >
-          <g>
-            <line
-              x1="12"
-              x2="12"
-              y1="5"
-              y2="19"
-            />
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
-            />
-          </g>
-        </svg>
-        <span
-          class="jsx-3533282834"
-          style="margin: 0px 0px 0px 5px;"
-        >
-          im button
-        </span>
-      </button>
-    `);
+    expect(button).toHaveAttribute('aria-label', 'im button');
+    expect(button).toHaveTextContent('im button');
+    expect(getByRole('img')).toHaveAttribute('aria-label', 'plus');
   });
 
   test('should not have border', () => {

@@ -32,56 +32,15 @@ describe('Menu', () => {
     expect(getByRole('button')).toHaveAttribute('aria-controls', 'id-test');
   });
 
-  test('should have icon and text', () => {
+  test('should have aria, icon and text', () => {
     const { getByRole } = render(<Menu icon="plus" text="im text" />);
 
-    expect(getByRole('button')).toMatchInlineSnapshot(`
-      <button
-        aria-disabled="false"
-        aria-expanded="false"
-        aria-haspopup="menu"
-        aria-label="im text"
-        class="jsx-405694134 "
-        style="width: auto;"
-        type="button"
-      >
-        <svg
-          alt="plus"
-          aria-label="plus"
-          class="feather feather-plus "
-          fill="none"
-          height="17"
-          role="img"
-          stroke="#333333"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="17"
-        >
-          <g>
-            <line
-              x1="12"
-              x2="12"
-              y1="5"
-              y2="19"
-            />
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
-            />
-          </g>
-        </svg>
-        <span
-          class="jsx-3533282834"
-          style="margin: 0px 0px 0px 5px;"
-        >
-          im text
-        </span>
-      </button>
-    `);
+    const button = getByRole('button');
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'menu');
+    expect(button).toHaveAttribute('aria-label', 'im text');
+    expect(getByRole('img')).toHaveAttribute('aria-label', 'plus');
   });
 
   test('should have visible', () => {
