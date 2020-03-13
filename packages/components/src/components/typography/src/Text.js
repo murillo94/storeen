@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useFont from '../../../hooks/theme/useFont';
+import useFont from '../utils/useFont';
 
 import { fontSize14 } from '@storeen/system';
 

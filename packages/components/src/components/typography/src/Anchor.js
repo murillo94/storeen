@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import Link from 'next/link';
 
-import useFont from '../../../hooks/theme/useFont';
+import useFont from '../utils/useFont';
 
 import { fontSize14, purple700, primary } from '@storeen/system';
 
