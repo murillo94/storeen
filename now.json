@@ -2,11 +2,18 @@
   "version": 2,
   "name": "storeen",
   "alias": "storeen",
-  "builds": [{ "src": "packages/web/package.json", "use": "@now/next" }],
+  "builds": [
+    { "src": "packages/web/package.json", "use": "@now/next" },
+    { "src": "packages/styleguide/package.json", "use": "@now/next" }
+  ],
   "routes": [
     {
       "src": "/",
       "dest": "/packages/web/index"
+    },
+    {
+      "src": "/styleguide/",
+      "dest": "/packages/styleguide/index"
     },
     {
       "src": "/(.*)",
