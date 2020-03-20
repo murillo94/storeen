@@ -29,6 +29,6 @@ The [@storeen/components](./packages/components) is the UI components built on t
 
 ## Styleguide
 
-The [styleguide](./packages/styleguide) is our design system, the home for all our reusable/principles patterns, components and assets.
+The [@storeen/styleguide](./packages/styleguide) is our design system, the home for all our reusable/principles patterns, components and assets.
 
 Check out our [styleguide](https://storeen.now.sh/styleguide) documentation for more details.
