@@ -1,7 +1,6 @@
 {
   "name": "@storeen/styleguide",
   "version": "1.0.0",
-  "private": true,
   "devDependencies": {
     "@storeen/system": "*",
     "@storeen/components": "*"
