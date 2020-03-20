@@ -1,7 +1,10 @@
 {
   "name": "@storeen/components",
   "version": "1.0.0",
-  "private": true,
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-next-dynamic": "^1.0.1"
+  },
   "dependencies": {
     "@storeen/system": "*",
     "feather-icons-react": "^0.4.1",
@@ -10,5 +13,8 @@
     "react-dom": "^16.13.0",
     "react-text-mask": "^5.4.3",
     "text-mask-addons": "^3.8.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

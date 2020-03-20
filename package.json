@@ -14,6 +14,8 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.5.0",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -22,7 +24,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
-    "jest": "^25.1.0",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
   },
@@ -30,6 +31,7 @@
     "dev": "yarn --cwd packages/web dev",
     "build": "yarn --cwd packages/web build",
     "start": "yarn --cwd packages/web start",
+    "styleguide": "yarn --cwd packages/styleguide dev",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -43,20 +45,5 @@
       "eslint --fix",
       "prettier --write"
     ]
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest.setup.js"
-    ],
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.(png|ico)$": "<rootDir>/config/jest/fileTransformer.js"
-    }
   }
 }

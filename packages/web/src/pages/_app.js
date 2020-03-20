@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const CustomApp = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }) => (
   <>
     <Head>
       <title>Storeen</title>
@@ -9,4 +9,4 @@ const CustomApp = ({ Component, pageProps }) => (
   </>
 );
 
-export default CustomApp;
+export default App;
