@@ -8,11 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/packages/web/index"
-    },
-    {
-      "src": "/styleguide/",
+      "src": "/styleguide/(.*)",
       "dest": "/packages/styleguide/index"
     },
     {
