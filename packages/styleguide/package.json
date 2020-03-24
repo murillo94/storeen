@@ -17,10 +17,5 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
-  },
-  "babel": {
-    "plugins": [
-      "import-glob-array"
-    ]
   }
 }
