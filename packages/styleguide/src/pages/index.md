@@ -1,1 +1,0 @@
-storeen's design system

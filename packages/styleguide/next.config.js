@@ -1,9 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const withPlugins = require('next-compose-plugins');
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/
-});
+const withMdxEnhanced = require('next-mdx-enhanced');
 const withCustomBabelConfig = require('next-plugin-custom-babel-config');
 const withOptimizedImages = require('next-optimized-images');
 const withTranspileModules = require('next-transpile-modules')([
@@ -13,10 +11,16 @@ const withTranspileModules = require('next-transpile-modules')([
 
 const plugins = [
   [
-    withMDX,
-    {
+    withMdxEnhanced({
+      layoutPath: 'layouts',
+      defaultLayout: true,
+      fileExtensions: ['mdx'],
+      extendFrontMatter: {
+        phase: 'prebuild|loader|both'
+      }
+    })({
       pageExtensions: ['js', 'jsx', 'md', 'mdx']
-    }
+    })
   ],
   [
     withOptimizedImages,
