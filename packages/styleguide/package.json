@@ -2,7 +2,9 @@
   "name": "@storeen/styleguide",
   "version": "1.0.0",
   "devDependencies": {
-    "babel-plugin-import-glob-array": "^0.2.0"
+    "babel-plugin-import-glob-array": "^0.2.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-svgo": "^7.1.0"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.7",
