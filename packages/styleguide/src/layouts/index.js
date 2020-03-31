@@ -1,10 +1,12 @@
+import App from '../pages';
+
 export default frontMatter => {
   return ({ children: content }) => {
     return (
-      <div>
+      <App>
         <h1>{frontMatter.title}</h1>
         {content}
-      </div>
+      </App>
     );
   };
 };
