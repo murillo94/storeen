@@ -1,14 +1,38 @@
 /* eslint-disable import/no-unresolved */
-import { TabList, Tab, Header } from '@storeen/components';
+import { Image, TabList, Tab } from '@storeen/components';
 
 import { gray0, gray200, borderRadius8 } from '@storeen/system';
 
 import { frontMatter as docsPages } from './docs/*.mdx';
 
+const Logo = () => (
+  <>
+    <div className="desktop-logo">
+      <Image
+        src={require('../public/logo-all-horizontal.svg')}
+        alt="Storeen logo com nome horizontal"
+        width="120px"
+        height="100%"
+      />
+    </div>
+
+    <style jsx>
+      {`
+        div {
+          text-align: left;
+          margin: 0 20px 40px;
+          display: block;
+        }
+      `}
+    </style>
+  </>
+);
+
 const App = ({ children }) => (
   <>
     <div className="container">
       <nav className="side-sheet">
+        <Logo />
         <TabList>
           {docsPages.map(page => (
             <Tab key={page.href} text={page.title} href={page.href} />
@@ -16,9 +40,6 @@ const App = ({ children }) => (
         </TabList>
       </nav>
       <main>
-        <Header>
-          <h1>Storeen&apos;s design system</h1>
-        </Header>
         <div className="main-container">
           <div className="main-children">{children}</div>
         </div>
@@ -37,7 +58,7 @@ const App = ({ children }) => (
           border-right: 1px solid ${gray200};
           text-align: center;
           padding: 20px 0 10px;
-          width: 180px;
+          width: 220px;
           height: 100vh;
           overflow: auto;
           -webkit-overflow-scrolling: touch;
@@ -68,25 +89,8 @@ const App = ({ children }) => (
         }
 
         @media (max-width: 1124px) {
-          nav {
-            width: 125px;
-          }
-
           :global(.side-sheet) :global(ul) :global(li) {
             border-radius: ${borderRadius8};
-            margin: 10px;
-          }
-
-          :global(.side-sheet) :global(ul) :global(li) :global(a) {
-            flex-direction: column;
-          }
-
-          :global(.side-sheet)
-            :global(ul)
-            :global(li)
-            :global(a)
-            :global(span) {
-            margin: 10px 0 0 0 !important;
           }
 
           .main-container {
