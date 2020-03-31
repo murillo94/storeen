@@ -33,7 +33,7 @@ const plugins = [
   [
     withOptimizedImages,
     {
-      handleImages: ['png'],
+      handleImages: ['png', 'svg'],
       pngquant: {
         speed: 10
       },
