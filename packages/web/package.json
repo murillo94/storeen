@@ -14,7 +14,7 @@
     "@storeen/system": "*",
     "@storeen/components": "*",
     "feather-icons-react": "^0.4.1",
-    "next": "^9.3.0",
+    "next": "^9.3.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-text-mask": "^5.4.3",
