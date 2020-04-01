@@ -1,10 +1,23 @@
 import App from '../pages';
 
+import { Heading } from '@storeen/components';
+
+const descriptionStyle = {
+  fontWeight: 'normal',
+  margin: '5px 0'
+};
+
 export default frontMatter => {
   return ({ children: content }) => {
     return (
       <App>
-        <h1>{frontMatter.title}</h1>
+        <Heading text={frontMatter.title} />
+        <Heading
+          is="h2"
+          text={frontMatter.description}
+          color="muted"
+          customStyle={descriptionStyle}
+        />
         {content}
       </App>
     );
