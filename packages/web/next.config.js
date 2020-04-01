@@ -1,7 +1,5 @@
 /* eslint-disable no-param-reassign */
-const path = require('path');
 const withPlugins = require('next-compose-plugins');
-const withCustomBabelConfig = require('next-plugin-custom-babel-config');
 const withOptimizedImages = require('next-optimized-images');
 const withTranspileModules = require('next-transpile-modules')([
   '@storeen/components',
@@ -20,10 +18,6 @@ const plugins = [
         plugins: [{ removeComments: true, cleanupAttrs: true }]
       }
     }
-  ],
-  [
-    withCustomBabelConfig,
-    { babelConfigFile: path.resolve('../../babel.config.js') }
   ],
   [withTranspileModules]
 ];
