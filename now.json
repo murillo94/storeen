@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/styleguide",
-      "dest": "/packages/styleguide/index"
+      "dest": "/packages/styleguide/getting-started"
     },
     {
       "src": "/styleguide/(.*)",
