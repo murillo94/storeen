@@ -4,7 +4,7 @@ import { Heading } from '@storeen/components';
 
 const descriptionStyle = {
   fontWeight: 'normal',
-  margin: '5px 0'
+  margin: '7px 0'
 };
 
 export default frontMatter => {
