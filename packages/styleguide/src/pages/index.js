@@ -1,9 +1,15 @@
 /* eslint-disable import/no-unresolved */
-import { Image, TabList, Tab } from '@storeen/components';
+import { Image, Heading, TabList, Tab } from '@storeen/components';
 
-import { gray0, gray200, borderRadius8 } from '@storeen/system';
+import { gray0, gray100, gray200, borderRadius8 } from '@storeen/system';
 
 import { frontMatter as docsPages } from './docs/*.mdx';
+
+const headingStyle = {
+  fontSize: '16px',
+  textAlign: 'left',
+  margin: '15px 16px 8px'
+};
 
 const Logo = () => (
   <>
@@ -20,7 +26,7 @@ const Logo = () => (
       {`
         div {
           text-align: left;
-          margin: 0 20px 40px;
+          padding: 0 20px 20px;
           display: block;
         }
       `}
@@ -28,100 +34,151 @@ const Logo = () => (
   </>
 );
 
-const App = ({ children }) => (
-  <>
-    <div className="container">
-      <nav className="side-sheet">
-        <Logo />
-        <TabList>
-          {docsPages.map(page => (
-            <Tab key={page.href} text={page.title} href={page.href} />
-          ))}
-        </TabList>
-      </nav>
-      <main>
-        <div className="main-container">
-          <div className="main-children">{children}</div>
-        </div>
-      </main>
-    </div>
+const App = ({ children }) => {
+  const pinnedPages = docsPages
+    .sort((a, b) => a.order - b.order)
+    .filter(page => page.pinned);
 
-    <style jsx>
-      {`
-        .container {
-          width: 100%;
-          min-height: 100%;
-        }
+  const componentPages = docsPages.filter(page => page.component);
 
-        nav {
-          background-color: ${gray0};
-          border-right: 1px solid ${gray200};
-          text-align: center;
-          padding: 20px 0 10px;
-          width: 220px;
-          height: 100vh;
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
-          -ms-overflow-style: -ms-autohiding-scrollbar;
-          position: sticky;
-          top: 0;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          flex-shrink: 0;
-        }
+  return (
+    <>
+      <div className="container">
+        <nav className="side-sheet">
+          <Logo />
+          <Heading text="Overview" customStyle={headingStyle} />
+          <TabList>
+            {pinnedPages.map(page => (
+              <Tab key={page.href} text={page.title} href={page.href} />
+            ))}
+          </TabList>
+          <hr />
+          <Heading text="Components" customStyle={headingStyle} />
+          <TabList>
+            {componentPages.map(page => (
+              <Tab key={page.href} text={page.title} href={page.href} />
+            ))}
+          </TabList>
+          <hr />
+          <Heading text="Github links" customStyle={headingStyle} />
+          <TabList>
+            <Tab
+              key="components"
+              text="Storeen components"
+              href="https://github.com/murillo94/storeen/tree/master/packages/components"
+              isExternal
+            />
+            <Tab
+              key="styleguide"
+              text="Storeen styleguide"
+              href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
+              isExternal
+            />
+            <Tab
+              key="system"
+              text="Storeen system"
+              href="https://github.com/murillo94/storeen/tree/master/packages/system"
+              isExternal
+            />
+            <Tab
+              key="web"
+              text="Storeen web"
+              href="https://github.com/murillo94/storeen/tree/master/packages/web"
+              isExternal
+            />
+          </TabList>
+        </nav>
+        <main>
+          <div className="main-container">
+            <div className="main-children">{children}</div>
+          </div>
+        </main>
+      </div>
 
-        main {
-          flex: 1;
-        }
+      <style jsx>
+        {`
+          .container {
+            width: 100%;
+            min-height: 100%;
+          }
 
-        .main-container {
-          padding: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-        }
+          nav {
+            background-color: ${gray0};
+            border-right: 1px solid ${gray200};
+            text-align: center;
+            padding: 20px 0 10px;
+            width: 220px;
+            height: 100vh;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            position: sticky;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+          }
 
-        .main-children {
-          margin: 20px auto 0;
-          width: 800px;
-        }
+          hr {
+            width: 100%;
+            border: none;
+            border-top: 1px solid ${gray100};
+            margin: 0px 0px 5px;
+          }
 
-        @media (max-width: 1124px) {
-          :global(.side-sheet) :global(ul) :global(li) {
-            border-radius: ${borderRadius8};
+          main {
+            flex: 1;
           }
 
           .main-container {
-            padding: 40px 50px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
           }
 
           .main-children {
-            width: 100%;
-            margin: 0 auto;
-          }
-        }
-
-        @media (max-width: 746px) {
-          nav {
-            display: none;
+            margin: 20px auto 0;
+            width: 800px;
           }
 
-          .main-container {
-            padding: 40px 30px;
-          }
-        }
+          @media (max-width: 1124px) {
+            :global(.side-sheet) :global(ul) :global(li) {
+              border-radius: ${borderRadius8};
+            }
 
-        @media (min-width: 746px) {
-          .container {
-            display: flex;
-            flex-grow: 1;
+            .main-container {
+              padding: 40px 50px;
+            }
+
+            .main-children {
+              width: 100%;
+              margin: 0 auto;
+            }
           }
-        }
-      `}
-    </style>
-  </>
-);
+
+          @media (max-width: 746px) {
+            nav {
+              display: none;
+            }
+
+            .main-container {
+              padding: 40px 30px;
+            }
+          }
+
+          @media (min-width: 746px) {
+            .container {
+              display: flex;
+              flex-grow: 1;
+            }
+          }
+        `}
+      </style>
+    </>
+  );
+};
 
 export default App;
