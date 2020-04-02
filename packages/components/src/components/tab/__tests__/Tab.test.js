@@ -30,6 +30,8 @@ describe('Tab', () => {
     const link = getByRole('link');
 
     expect(link).toHaveAttribute('href', 'https://www.href.com.br');
+    expect(link).not.toHaveAttribute('target', '_blank');
+    expect(link).not.toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveTextContent(content);
     expect(getByRole('img')).toHaveAttribute('alt', 'plus');
   });
