@@ -24,32 +24,41 @@ const TabButton = ({ children, onClick }) => (
   </Button>
 );
 
-const TabLink = ({ children, href, text }) => (
-  <>
-    <Link href={href}>
-      <a aria-label={text}>{children}</a>
-    </Link>
+const TabLink = ({ children, href, text, isExternal }) => {
+  const defaultExternal = isExternal && {
+    target: '_blank',
+    rel: 'noopener noreferrer'
+  };
 
-    <style jsx>
-      {`
-        a {
-          color: inherit;
-          text-decoration: none;
-          padding: 8px 6px;
-          outline: 0;
-          width: 100%;
-          display: flex;
-          align-items: center;
-        }
+  return (
+    <>
+      <Link href={href}>
+        <a aria-label={text} {...defaultExternal}>
+          {children}
+        </a>
+      </Link>
 
-        :focus {
-          box-shadow: ${primary};
-          border-color: ${purple700};
-        }
-      `}
-    </style>
-  </>
-);
+      <style jsx>
+        {`
+          a {
+            color: inherit;
+            text-decoration: none;
+            padding: 8px 6px;
+            outline: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+          }
+
+          :focus {
+            box-shadow: ${primary};
+            border-color: ${purple700};
+          }
+        `}
+      </style>
+    </>
+  );
+};
 
 const Content = ({ text, icon }) => (
   <>
@@ -69,6 +78,7 @@ export const Tab = withRouter(
     href = '',
     onClick = null,
     selected = false,
+    isExternal = false,
     router
   }) => {
     const theme = useTheme(appearance);
@@ -78,7 +88,7 @@ export const Tab = withRouter(
       <>
         <li role="tab" aria-selected={href ? !!isActive : selected}>
           {href ? (
-            <TabLink href={href} text={text}>
+            <TabLink href={href} text={text} isExternal={isExternal}>
               <Content text={text} icon={icon} />
             </TabLink>
           ) : (

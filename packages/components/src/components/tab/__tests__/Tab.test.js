@@ -34,6 +34,25 @@ describe('Tab', () => {
     expect(getByRole('img')).toHaveAttribute('alt', 'plus');
   });
 
+  test('should have link external', () => {
+    const { getByRole } = render(
+      <Tab
+        text={content}
+        icon="plus"
+        href="https://www.href.com.br"
+        isExternal
+      />
+    );
+
+    const link = getByRole('link');
+
+    expect(link).toHaveAttribute('href', 'https://www.href.com.br');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(link).toHaveTextContent(content);
+    expect(getByRole('img')).toHaveAttribute('alt', 'plus');
+  });
+
   test('should have button', () => {
     const onClick = jest.fn();
     const { getByRole } = render(
