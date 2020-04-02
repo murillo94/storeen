@@ -28,8 +28,9 @@ export const Radio = ({
   return (
     <>
       <div
-        className={`input-check input-form ${description &&
-          'with-description'}`}
+        className={`input-check input-form ${
+          description && 'with-description'
+        }`}
       >
         <Label id={`${id}-radio-label`} htmlFor={id} customStyle={labelStyle}>
           <input

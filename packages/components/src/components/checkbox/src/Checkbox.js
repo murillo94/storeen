@@ -28,8 +28,9 @@ export const Checkbox = ({
   return (
     <>
       <div
-        className={`input-check input-form ${description &&
-          'with-description'}`}
+        className={`input-check input-form ${
+          description && 'with-description'
+        }`}
       >
         <Label
           id={`${id}-checkbox-label`}

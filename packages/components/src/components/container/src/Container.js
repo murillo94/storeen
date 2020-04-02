@@ -45,7 +45,7 @@ export const Container = ({
         section {
           background-color: ${gray0};
           box-shadow: ${hasBoxShadow &&
-            '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
+          '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
           border: ${hasBorder && `1px solid ${gray100}`};
           border-radius: ${borderRadius6};
           width: 100%;
