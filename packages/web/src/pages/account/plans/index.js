@@ -57,10 +57,11 @@ const PlansAccountSettings = () => {
                 id={item.value}
                 name="plan.value"
                 value={item.value}
-                text={item.name}
                 checked={plan.value === item.value}
                 onChange={onChange}
-              />
+              >
+                {item.name}
+              </Radio>
             </TableBodyCell>
             <TableBodyCell>
               <TextTableCell text={item.products} />

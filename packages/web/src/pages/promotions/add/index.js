@@ -77,54 +77,60 @@ const AddPromotion = () => {
         <Checkbox
           id="promotion-active"
           name="promotion.active"
-          text="Ativar promoção?"
           checked={promotion.active}
           onChange={onChange}
-        />
+        >
+          Ativar promoção?
+        </Checkbox>
       </Container>
       <Container title="Aplicável" isForm>
         <Radio
           id="all"
           name="applicable"
           value="all"
-          text="Todo o pedido"
           checked={applicable === 'all'}
           onChange={onChange}
-        />
+        >
+          Todo o pedido
+        </Radio>
         <Radio
           id="categorie-specific"
           name="applicable"
           value="categorie-specific"
-          text="Categorias específicas"
           checked={applicable === 'categorie-specific'}
           onChange={onChange}
-        />
+        >
+          Categorias específicas
+        </Radio>
         <Radio
           id="product-specific"
           name="applicable"
           value="product-specific"
-          text="Produtos específicas"
           checked={applicable === 'product-specific'}
           onChange={onChange}
-        />
+        >
+          Produtos específicas
+        </Radio>
       </Container>
       <Container title="Requisitos mínimos" isForm>
         <Radio
           id="total-value-minimum"
           name="minimumRequirements"
           value="total-value-minimum"
-          text="Valor total do pedido mínimo"
           checked={minimumRequirements === 'total-value-minimum'}
           onChange={onChange}
-        />
+        >
+          Valor total do pedido mínimo
+        </Radio>
         <Radio
           id="quantity-itens-minimum"
           name="minimumRequirements"
           value="quantity-itens-minimum"
-          text="Quantidade de itens do pedido mínimo"
           checked={minimumRequirements === 'quantity-itens-minimum'}
           onChange={onChange}
-        />
+        >
+          Quantidade de itens do pedido mínimo
+        </Radio>
       </Container>
       <Container title="Código promocional" isForm>
         <Disclosure
@@ -132,10 +138,11 @@ const AddPromotion = () => {
             <Checkbox
               id="code"
               name="promotional.hasPromotional"
-              text="Habilitar código promocional?"
               checked={promotional.hasPromotional}
               onChange={onChange}
-            />
+            >
+              Habilitar código promocional?
+            </Checkbox>
           }
           action="onChange"
         >
@@ -149,10 +156,11 @@ const AddPromotion = () => {
           <Checkbox
             id="promotional-unique-code"
             name="promotional.uniqueCode"
-            text="Cupom de uso único por CPF?"
             checked={promotional.uniqueCode}
             onChange={onChange}
-          />
+          >
+            Cupom de uso único por CPF?
+          </Checkbox>
         </Disclosure>
       </Container>
       <Container title="Agendar" isForm>
@@ -161,10 +169,11 @@ const AddPromotion = () => {
             <Checkbox
               id="schedule-has-schedule"
               name="schedule.hasSchedule"
-              text="Agendar promoção?"
               checked={schedule.hasSchedule}
               onChange={onChange}
-            />
+            >
+              Agendar promoção?
+            </Checkbox>
           }
           action="onChange"
         >

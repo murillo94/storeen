@@ -47,20 +47,22 @@ const AddCategorie = () => {
           id="manual"
           name="type"
           value="manual"
-          text="Manual"
           description="Escolha os produtos manualmente para essa coleção."
           checked={type === 'manual'}
           onChange={onChange}
-        />
+        >
+          Manual
+        </Radio>
         <Radio
           id="automated"
           name="type"
           value="automated"
-          text="Automatizada"
           description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
           checked={type === 'automated'}
           onChange={onChange}
-        />
+        >
+          Automatizada
+        </Radio>
       </Container>
       <Footer>
         <Button text="Salvar" />

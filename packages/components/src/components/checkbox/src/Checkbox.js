@@ -13,11 +13,11 @@ const descriptionStyle = {
 };
 
 export const Checkbox = ({
+  children,
   appearance = 'minimal',
   id = null,
   name = '',
   value = '',
-  text = '',
   description = '',
   checked = false,
   onChange = () => null,
@@ -48,7 +48,7 @@ export const Checkbox = ({
             onChange={onChange}
             {...props}
           />
-          <span>{text}</span>
+          <span>{children}</span>
         </Label>
         {description && (
           <Paragraph color="muted" customStyle={descriptionStyle}>

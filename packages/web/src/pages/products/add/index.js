@@ -78,10 +78,11 @@ const AddProduct = () => {
             <Checkbox
               id="shipping"
               name="shipping.hasShipping"
-              text="Este produto necessita de frete?"
               checked={shipping.hasShipping}
               onChange={onChange}
-            />
+            >
+              Este produto necessita de frete?
+            </Checkbox>
           }
           action="onChange"
         >
@@ -127,10 +128,11 @@ const AddProduct = () => {
             <Checkbox
               id="stock"
               name="stock.hasStock"
-              text="Controlar estoque do produto?"
               checked={stock.hasStock}
               onChange={onChange}
-            />
+            >
+              Controlar estoque do produto?
+            </Checkbox>
           }
           action="onChange"
         >
@@ -150,10 +152,11 @@ const AddProduct = () => {
             <Checkbox
               id="variations"
               name="variations.hasVariations"
-              text="Este produto possui variações?"
               checked={variations.hasVariations}
               onChange={onChange}
-            />
+            >
+              Este produto possui variações?
+            </Checkbox>
           }
           action="onChange"
         >

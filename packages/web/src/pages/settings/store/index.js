@@ -89,11 +89,12 @@ const StoreSettings = () => {
             <Checkbox
               id="company-has-legal-person"
               name="company.hasLegalPerson"
-              text="Exibir dados de pessoa jurídica?"
               description="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
               checked={company.hasLegalPerson}
               onChange={onChange}
-            />
+            >
+              Exibir dados de pessoa jurídica?
+            </Checkbox>
           }
           hasMarginBottom
           action="onChange"

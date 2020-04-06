@@ -3,6 +3,8 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Checkbox } from '../index';
 
+const content = 'im content';
+
 describe('Checkbox', () => {
   test('should render', () => {
     const { getByRole } = render(<Checkbox />);
@@ -12,10 +14,10 @@ describe('Checkbox', () => {
 
   test('should have text and description', () => {
     const { getByLabelText, getByText } = render(
-      <Checkbox text="im text" description="im description" />
+      <Checkbox description="im description">{content}</Checkbox>
     );
 
-    const text = getByLabelText('im text');
+    const text = getByLabelText(content);
     const description = getByText('im description');
 
     expect(text.closest('label')).toHaveStyle('display: inline-flex;');
@@ -30,17 +32,18 @@ describe('Checkbox', () => {
       return (
         <Checkbox
           checked={checked}
-          text="im text"
           onChange={({ target }) => {
             setChecked(target.checked);
             onChange(target.checked);
           }}
-        />
+        >
+          {content}
+        </Checkbox>
       );
     };
 
     const { getByLabelText } = render(<Test />);
-    const checkbox = getByLabelText('im text');
+    const checkbox = getByLabelText(content);
 
     expect(checkbox.checked).toBe(false);
     expect(onChange).not.toBeCalled();

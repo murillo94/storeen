@@ -3,6 +3,8 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Radio } from '../index';
 
+const content = 'im content';
+
 describe('Radio', () => {
   test('should render', () => {
     const { getByRole } = render(<Radio />);
@@ -12,10 +14,10 @@ describe('Radio', () => {
 
   test('should have text and description', () => {
     const { getByLabelText, getByText } = render(
-      <Radio text="im text" description="im description" />
+      <Radio description="im description">{content}</Radio>
     );
 
-    const text = getByLabelText('im text');
+    const text = getByLabelText(content);
     const description = getByText('im description');
 
     expect(text.closest('label')).toHaveStyle('display: inline-flex;');
@@ -33,24 +35,26 @@ describe('Radio', () => {
             id="one"
             name="type"
             value="one"
-            text="im text one"
             checked={checked === 'one'}
             onChange={({ target }) => {
               setChecked(target.value);
               onChange(target.value);
             }}
-          />
+          >
+            im text one
+          </Radio>
           <Radio
             id="two"
             name="type"
             value="two"
-            text="im text two"
             checked={checked === 'two'}
             onChange={({ target }) => {
               setChecked(target.value);
               onChange(target.value);
             }}
-          />
+          >
+            im text two
+          </Radio>
         </>
       );
     };
