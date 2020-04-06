@@ -22,10 +22,11 @@ export const Switch = ({
     <>
       <div>
         <Text
-          text={leftText}
           color={colorText}
           customStyle={{ marginRight: leftText && '7px' }}
-        />
+        >
+          {leftText}
+        </Text>
         <Label id={`${id}-switch-label`} htmlFor={id}>
           <input
             type="checkbox"
@@ -42,10 +43,11 @@ export const Switch = ({
           <span />
         </Label>
         <Text
-          text={rightText}
           color={colorText}
           customStyle={{ marginLeft: rightText && '7px' }}
-        />
+        >
+          {rightText}
+        </Text>
       </div>
       <style jsx>
         {`

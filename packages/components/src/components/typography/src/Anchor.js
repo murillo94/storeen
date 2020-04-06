@@ -7,13 +7,19 @@ import useFont from '../utils/useFont';
 import { fontSize14, purple700, primary } from '@storeen/system';
 
 export const Anchor = memo(
-  ({ href = '', text = '', color = 'inherit', hover = true }) => {
+  ({
+    children,
+    href = '',
+    color = 'inherit',
+    ariaLabel = null,
+    hover = true
+  }) => {
     const fontColor = useFont(color);
 
     return (
       <>
         <Link href={href}>
-          <a aria-label={text}>{text}</a>
+          <a aria-label={ariaLabel}>{children}</a>
         </Link>
 
         <style jsx>

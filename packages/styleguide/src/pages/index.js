@@ -46,21 +46,21 @@ const App = ({ children }) => {
       <div className="container">
         <nav className="side-sheet">
           <Logo />
-          <Heading text="Overview" customStyle={headingStyle} />
+          <Heading customStyle={headingStyle}>Overview</Heading>
           <TabList>
             {pinnedPages.map(page => (
               <Tab key={page.href} text={page.title} href={page.href} />
             ))}
           </TabList>
           <hr />
-          <Heading text="Components" customStyle={headingStyle} />
+          <Heading customStyle={headingStyle}>Components</Heading>
           <TabList>
             {componentPages.map(page => (
               <Tab key={page.href} text={page.title} href={page.href} />
             ))}
           </TabList>
           <hr />
-          <Heading text="Github links" customStyle={headingStyle} />
+          <Heading customStyle={headingStyle}>Github links</Heading>
           <TabList>
             <Tab
               key="components"

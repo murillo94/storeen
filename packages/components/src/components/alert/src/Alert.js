@@ -19,14 +19,12 @@ export const Alert = ({
   return (
     <>
       <div role="alert" className="container">
-        {title && <Heading is="h4" text={title} />}
+        {title && <Heading is="h4">{title}</Heading>}
         {description && (
           <div className="description">
-            <Paragraph
-              text={description}
-              color="muted"
-              customStyle={descriptionStyle}
-            />
+            <Paragraph color="muted" customStyle={descriptionStyle}>
+              {description}
+            </Paragraph>
           </div>
         )}
         {children}

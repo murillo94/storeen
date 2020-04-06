@@ -5,7 +5,7 @@ import { Text } from '../index';
 import { gray900, gray800, purple700 } from '@storeen/system';
 
 describe('Text', () => {
-  const TextCustom = props => <Text text="im span" {...props} />;
+  const TextCustom = props => <Text {...props}>im span</Text>;
 
   test('should render', () => {
     const { container } = render(<Text />);

@@ -64,9 +64,10 @@ const Content = ({ text, icon }) => (
   <>
     {icon && <Icon name={icon} size={20} />}
     <Text
-      text={text}
       customStyle={{ margin: icon && '0 0 0 10px', fontWeight: fontWeight500 }}
-    />
+    >
+      {text}
+    </Text>
   </>
 );
 

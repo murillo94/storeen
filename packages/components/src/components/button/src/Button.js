@@ -45,10 +45,9 @@ export const Button = ({
           <>
             {icon && <Icon name={icon} size={17} color={theme.color} />}
             {text && (
-              <Text
-                text={text}
-                customStyle={{ margin: icon ? '0 0 0 5px' : 0 }}
-              />
+              <Text customStyle={{ margin: icon ? '0 0 0 5px' : 0 }}>
+                {text}
+              </Text>
             )}
           </>
         )}

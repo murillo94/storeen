@@ -47,11 +47,9 @@ export const Radio = ({
           <span>{text}</span>
         </Label>
         {description && (
-          <Paragraph
-            text={description}
-            color="muted"
-            customStyle={descriptionStyle}
-          />
+          <Paragraph color="muted" customStyle={descriptionStyle}>
+            {description}
+          </Paragraph>
         )}
       </div>
 

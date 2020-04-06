@@ -99,11 +99,9 @@ const StoreSettings = () => {
           action="onChange"
         >
           {company.hasLegalPerson && (
-            <Heading
-              is="h3"
-              text="Dados da empresa"
-              customStyle={headingCompanyStyle}
-            />
+            <Heading is="h3" customStyle={headingCompanyStyle}>
+              Dados da empresa
+            </Heading>
           )}
           <Input
             labelText="Razão Social"
@@ -137,11 +135,9 @@ const StoreSettings = () => {
           />
         </Disclosure>
         {company.hasLegalPerson && (
-          <Heading
-            is="h3"
-            text="Dados do responsável"
-            customStyle={headingCompanyStyle}
-          />
+          <Heading is="h3" customStyle={headingCompanyStyle}>
+            Dados do responsável
+          </Heading>
         )}
         <Input
           labelText="Nome"

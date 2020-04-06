@@ -5,12 +5,12 @@ import useFont from '../utils/useFont';
 import { fontSize14 } from '@storeen/system';
 
 export const Paragraph = memo(
-  ({ text = '', color = 'inherit', customStyle = {} }) => {
+  ({ children, color = 'inherit', customStyle = {} }) => {
     const fontColor = useFont(color);
 
     return (
       <>
-        <p style={{ ...customStyle }}>{text}</p>
+        <p style={{ ...customStyle }}>{children}</p>
 
         <style jsx>
           {`

@@ -10,9 +10,9 @@ import {
   fontWeight600
 } from '@storeen/system';
 
-const H1 = ({ text, color, customStyle }) => (
+const H1 = ({ children, color, customStyle }) => (
   <>
-    <h1 style={{ ...customStyle }}>{text}</h1>
+    <h1 style={{ ...customStyle }}>{children}</h1>
 
     <style jsx>
       {`
@@ -27,9 +27,9 @@ const H1 = ({ text, color, customStyle }) => (
   </>
 );
 
-const H2 = ({ text, color, customStyle }) => (
+const H2 = ({ children, color, customStyle }) => (
   <>
-    <h2 style={{ ...customStyle }}>{text}</h2>
+    <h2 style={{ ...customStyle }}>{children}</h2>
 
     <style jsx>
       {`
@@ -44,9 +44,9 @@ const H2 = ({ text, color, customStyle }) => (
   </>
 );
 
-const H3 = ({ text, color, customStyle }) => (
+const H3 = ({ children, color, customStyle }) => (
   <>
-    <h3 style={{ ...customStyle }}>{text}</h3>
+    <h3 style={{ ...customStyle }}>{children}</h3>
 
     <style jsx>
       {`
@@ -61,9 +61,9 @@ const H3 = ({ text, color, customStyle }) => (
   </>
 );
 
-const H4 = ({ text, color, customStyle }) => (
+const H4 = ({ children, color, customStyle }) => (
   <>
-    <h4 style={{ ...customStyle }}>{text}</h4>
+    <h4 style={{ ...customStyle }}>{children}</h4>
 
     <style jsx>
       {`
@@ -79,22 +79,30 @@ const H4 = ({ text, color, customStyle }) => (
 );
 
 export const Heading = memo(
-  ({ is = 'h1', text = '', color = 'inherit', customStyle = {} }) => {
+  ({ children, is = 'h1', color = 'inherit', customStyle = {} }) => {
     const fontColor = useFont(color);
 
     return (
       <>
         {is === 'h1' && (
-          <H1 text={text} color={fontColor} customStyle={customStyle} />
+          <H1 color={fontColor} customStyle={customStyle}>
+            {children}
+          </H1>
         )}
         {is === 'h2' && (
-          <H2 text={text} color={fontColor} customStyle={customStyle} />
+          <H2 color={fontColor} customStyle={customStyle}>
+            {children}
+          </H2>
         )}
         {is === 'h3' && (
-          <H3 text={text} color={fontColor} customStyle={customStyle} />
+          <H3 color={fontColor} customStyle={customStyle}>
+            {children}
+          </H3>
         )}
         {is === 'h4' && (
-          <H4 text={text} color={fontColor} customStyle={customStyle} />
+          <H4 color={fontColor} customStyle={customStyle}>
+            {children}
+          </H4>
         )}
       </>
     );

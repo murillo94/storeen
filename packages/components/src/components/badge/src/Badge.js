@@ -29,7 +29,7 @@ export const Badge = ({
           customStyle={badgeStyle}
         />
       ) : (
-        <Text text={text} customStyle={badgeStyle} />
+        <Text customStyle={badgeStyle}>{text}</Text>
       )}
     </>
   );

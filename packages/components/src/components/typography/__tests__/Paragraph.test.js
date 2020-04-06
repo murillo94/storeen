@@ -5,7 +5,7 @@ import { Paragraph } from '../index';
 import { gray900, gray800, purple700 } from '@storeen/system';
 
 describe('Paragraph', () => {
-  const ParagraphCustom = props => <Paragraph text="im p" {...props} />;
+  const ParagraphCustom = props => <Paragraph {...props}>im p</Paragraph>;
 
   test('should render', () => {
     const { container } = render(<Paragraph />);

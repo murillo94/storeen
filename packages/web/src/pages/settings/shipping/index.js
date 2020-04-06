@@ -53,11 +53,10 @@ const ShippingSettings = () => {
         <ContainerShipping
           disclosure={
             <Disclosure isOpen={local.active}>
-              <Paragraph
-                text="Insira aqui as instruções que seus clientes devem seguir caso queiram retirar o produto pessoalmente."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Insira aqui as instruções que seus clientes devem seguir caso
+                queiram retirar o produto pessoalmente.
+              </Paragraph>
               <Input
                 labelText="Orientação para retirar pessoalmente"
                 id="local-orientation"
@@ -79,11 +78,9 @@ const ShippingSettings = () => {
         <ContainerShipping
           disclosure={
             <Disclosure isOpen={postOffice.active}>
-              <Paragraph
-                text="Exclusivo para lojistas que possuem contrato com os Correios."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Exclusivo para lojistas que possuem contrato com os Correios.
+              </Paragraph>
               <Form>
                 <Input
                   labelText="Código administrativo do contrato"

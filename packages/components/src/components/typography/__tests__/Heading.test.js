@@ -13,7 +13,7 @@ describe('Heading', () => {
 
   describe('H1', () => {
     test('should be H1 with text', () => {
-      const { container } = render(<Heading text="im h1" />);
+      const { container } = render(<Heading>im h1</Heading>);
 
       const h1 = container.querySelector('h1');
 
@@ -55,7 +55,7 @@ describe('Heading', () => {
 
   describe('H2', () => {
     test('should be H2 with text', () => {
-      const { container } = render(<Heading is="h2" text="im h2" />);
+      const { container } = render(<Heading is="h2">im h2</Heading>);
 
       const h2 = container.querySelector('h2');
 
@@ -97,7 +97,7 @@ describe('Heading', () => {
 
   describe('H3', () => {
     test('should be H3 with text', () => {
-      const { container } = render(<Heading is="h3" text="im h3" />);
+      const { container } = render(<Heading is="h3">im h3</Heading>);
 
       const h3 = container.querySelector('h3');
 
@@ -139,7 +139,7 @@ describe('Heading', () => {
 
   describe('H4', () => {
     test('should be H4 with text', () => {
-      const { container } = render(<Heading is="h4" text="im h4" />);
+      const { container } = render(<Heading is="h4">im h4</Heading>);
 
       const h4 = container.querySelector('h4');
 

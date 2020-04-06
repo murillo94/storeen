@@ -4,20 +4,20 @@ import { MDXProvider } from '@mdx-js/react';
 import { Heading, Paragraph, Anchor } from '@storeen/components';
 
 const customComponents = {
-  h1: ({ children }) => (
-    <Heading text={children} is="h1" customStyle={{ margin: '65px 0 25px' }} />
+  h1: props => (
+    <Heading {...props} is="h1" customStyle={{ margin: '65px 0 25px' }} />
   ),
-  h2: ({ children }) => (
-    <Heading text={children} is="h2" customStyle={{ margin: '65px 0 25px' }} />
+  h2: props => (
+    <Heading {...props} is="h2" customStyle={{ margin: '65px 0 25px' }} />
   ),
-  h3: ({ children }) => (
-    <Heading text={children} is="h3" customStyle={{ margin: '65px 0 25px' }} />
+  h3: props => (
+    <Heading {...props} is="h3" customStyle={{ margin: '65px 0 25px' }} />
   ),
-  h4: ({ children }) => (
-    <Heading text={children} is="h4" customStyle={{ margin: '65px 0 25px' }} />
+  h4: props => (
+    <Heading {...props} is="h4" customStyle={{ margin: '65px 0 25px' }} />
   ),
-  p: ({ children }) => <Paragraph text={children} />,
-  a: ({ children }) => <Anchor text={children} />
+  p: props => <Paragraph {...props} />,
+  a: props => <Anchor {...props} />
 };
 
 const App = ({ Component, pageProps }) => (

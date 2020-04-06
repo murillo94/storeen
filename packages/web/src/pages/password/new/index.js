@@ -35,7 +35,7 @@ const New = () => {
 
   return (
     <>
-      <Heading text="Redefinir sua senha" />
+      <Heading>Redefinir sua senha</Heading>
       <Logo />
       <Input
         type="email"

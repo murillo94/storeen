@@ -6,7 +6,7 @@ import { gray900, gray800, purple700 } from '@storeen/system';
 
 const props = {
   href: 'https://www.google.com',
-  text: 'google'
+  ariaLabel: 'im aria label'
 };
 
 describe('Anchor', () => {
@@ -17,13 +17,13 @@ describe('Anchor', () => {
   });
 
   test('should have href and text', () => {
-    const { getByRole } = render(<Anchor {...props} />);
+    const { getByRole } = render(<Anchor {...props}>im anchor</Anchor>);
 
     const link = getByRole('link');
 
     expect(link).toHaveAttribute('href', props.href);
-    expect(link).toHaveAttribute('aria-label', props.text);
-    expect(link).toHaveTextContent(props.text);
+    expect(link).toHaveAttribute('aria-label', props.ariaLabel);
+    expect(link).toHaveTextContent('im anchor');
   });
 
   test('should have inherit color', () => {

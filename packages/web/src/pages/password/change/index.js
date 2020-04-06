@@ -35,7 +35,7 @@ const Change = () => {
 
   return (
     <>
-      <Heading text="Nova senha" />
+      <Heading>Nova senha</Heading>
       <Logo />
       <Input
         type="password"

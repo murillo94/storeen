@@ -25,15 +25,13 @@ export const Container = ({
       {title && (
         <header>
           <div>
-            <Heading is="h2" text={title} />
+            <Heading is="h2">{title}</Heading>
             {optionsTitle}
           </div>
           {subTitle && (
-            <Paragraph
-              text={subTitle}
-              color="muted"
-              customStyle={subTitleStyle}
-            />
+            <Paragraph color="muted" customStyle={subTitleStyle}>
+              {subTitle}
+            </Paragraph>
           )}
         </header>
       )}

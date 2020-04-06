@@ -9,7 +9,7 @@ export const ImageDescription = ({ src, alt, description, width, height }) => (
   <>
     <div>
       <Image src={src} alt={alt} width={width} height={height} />
-      <Text text={description} customStyle={textStyle} />
+      <Text customStyle={textStyle}>{description}</Text>
     </div>
 
     <style jsx>

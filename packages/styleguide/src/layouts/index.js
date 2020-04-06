@@ -8,17 +8,14 @@ const descriptionStyle = {
 };
 
 export default frontMatter => {
-  return ({ children: content }) => {
+  return ({ children }) => {
     return (
       <App>
-        <Heading text={frontMatter.title} />
-        <Heading
-          is="h2"
-          text={frontMatter.description}
-          color="muted"
-          customStyle={descriptionStyle}
-        />
-        {content}
+        <Heading>{frontMatter.title}</Heading>
+        <Heading is="h2" color="muted" customStyle={descriptionStyle}>
+          {frontMatter.description}
+        </Heading>
+        {children}
       </App>
     );
   };

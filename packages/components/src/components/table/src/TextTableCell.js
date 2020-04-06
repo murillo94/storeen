@@ -3,7 +3,7 @@ import { Text } from '../../typography';
 export const TextTableCell = ({ children, text = '', textCustomStyle }) => (
   <>
     <div>
-      {text && <Text text={text} customStyle={textCustomStyle} />}
+      {text && <Text customStyle={textCustomStyle}>{text}</Text>}
       {children}
     </div>
 

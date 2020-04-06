@@ -63,11 +63,11 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isOpen={mercadoPago.active}>
-              <Paragraph
-                text="Informe o endereço de e-mail que você usou para criar sua conta do Mercado Pago. Mais informações sobre como conectar o Mercado Pago podem ser encontradas aqui."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Informe o endereço de e-mail que você usou para criar sua conta
+                do Mercado Pago. Mais informações sobre como conectar o Mercado
+                Pago podem ser encontradas aqui.
+              </Paragraph>
               <Input
                 type="email"
                 labelText="Email"
@@ -97,11 +97,11 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isOpen={wirecard.active}>
-              <Paragraph
-                text="Informe o endereço de e-mail que você usou para criar sua conta da Wirecard. Mais informações sobre como conectar o Wirecard podem ser encontradas aqui."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Informe o endereço de e-mail que você usou para criar sua conta
+                da Wirecard. Mais informações sobre como conectar o Wirecard
+                podem ser encontradas aqui.
+              </Paragraph>
               <Input
                 type="email"
                 labelText="Email"
@@ -131,11 +131,11 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isOpen={pagSeguro.active}>
-              <Paragraph
-                text="Informe o endereço de e-mail que você usou para criar sua conta da PagSeguro. Mais informações sobre como conectar o PagSeguro podem ser encontradas aqui."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Informe o endereço de e-mail que você usou para criar sua conta
+                da PagSeguro. Mais informações sobre como conectar o PagSeguro
+                podem ser encontradas aqui.
+              </Paragraph>
               <Input
                 type="email"
                 labelText="Email"
@@ -165,11 +165,11 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isOpen={paypal.active}>
-              <Paragraph
-                text="Informe o endereço de e-mail que você usou para criar sua conta da PayPal. Mais informações sobre como conectar o PayPal podem ser encontradas aqui."
-                color="muted"
-                customStyle={descriptionStyle}
-              />
+              <Paragraph color="muted" customStyle={descriptionStyle}>
+                Informe o endereço de e-mail que você usou para criar sua conta
+                da PayPal. Mais informações sobre como conectar o PayPal podem
+                ser encontradas aqui.
+              </Paragraph>
               <Input
                 type="email"
                 labelText="Email"
