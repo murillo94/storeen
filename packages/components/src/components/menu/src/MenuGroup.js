@@ -6,13 +6,13 @@ export const MenuGroup = ({
   children,
   appearance = 'minimal',
   id = null,
-  hidden = true
+  isVisible = true
 }) => {
   const theme = useTheme(appearance);
 
   return (
     <>
-      <ul role="menu" id={id} aria-orientation="vertical" hidden={hidden}>
+      <ul role="menu" id={id} aria-orientation="vertical" hidden={isVisible}>
         {children}
       </ul>
 

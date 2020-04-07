@@ -3,7 +3,7 @@ import { useRef, useEffect, cloneElement } from 'react';
 export const Disclosure = ({
   children,
   content,
-  isOpen = false,
+  isVisible = false,
   hasMarginBottom = false,
   action = 'onClick'
 }) => {
@@ -39,10 +39,10 @@ export const Disclosure = ({
           },
           ...(action !== 'onChange' && {
             'aria-expanded':
-              content.props.checked || content.props.value || isOpen
+              content.props.checked || content.props.value || isVisible
           })
         })}
-      <div ref={disclosureRef} role="region" hidden={!isOpen}>
+      <div ref={disclosureRef} role="region" hidden={!isVisible}>
         {children}
       </div>
       <style jsx>

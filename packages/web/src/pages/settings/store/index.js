@@ -90,7 +90,7 @@ const StoreSettings = () => {
               id="company-has-legal-person"
               name="company.hasLegalPerson"
               description="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
-              checked={company.hasLegalPerson}
+              isChecked={company.hasLegalPerson}
               onChange={onChange}
             >
               Exibir dados de pessoa jurídica?

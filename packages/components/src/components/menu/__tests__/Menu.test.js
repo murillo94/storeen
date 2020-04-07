@@ -44,7 +44,7 @@ describe('Menu', () => {
   });
 
   test('should have visible', () => {
-    const { getByRole } = render(<Menu visible />);
+    const { getByRole } = render(<Menu isVisible />);
 
     expect(getByRole('button')).toHaveAttribute('aria-expanded', 'true');
   });

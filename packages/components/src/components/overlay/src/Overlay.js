@@ -11,12 +11,12 @@ const Portal = dynamic(() => import('../../portal').then(mod => mod.Portal), {
 export const Overlay = ({
   children,
   id = null,
-  visible = false,
-  removeBodyScroll = false,
+  isVisible = false,
+  shouldRemoveBodyScroll = false,
   onClose = null
 }) => {
   const handleBodyScroll = preventScroll => {
-    if (removeBodyScroll && visible) {
+    if (shouldRemoveBodyScroll && isVisible) {
       preventBodyScroll(preventScroll);
     }
   };
@@ -27,11 +27,11 @@ export const Overlay = ({
     return () => {
       handleBodyScroll(false);
     };
-  }, [visible]);
+  }, [isVisible]);
 
   return (
     <>
-      {visible && (
+      {isVisible && (
         <>
           <Portal id={id}>
             {children}
@@ -49,7 +49,7 @@ export const Overlay = ({
                 left: 0;
                 transition: background-color 0.2s;
                 z-index: 1;
-                display: ${visible ? 'block' : 'none'};
+                display: ${isVisible ? 'block' : 'none'};
               }
             `}
           </style>

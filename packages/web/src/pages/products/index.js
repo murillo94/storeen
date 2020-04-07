@@ -58,14 +58,14 @@ const Filter = () => {
   return (
     <Menu
       id="filter"
-      visible={visibleFilter}
+      isVisible={visibleFilter}
       hasBorder
       appearance="minimal"
       icon="filter"
       text="Filtrar"
       onClick={handleClickFilter}
     >
-      <MenuGroup id="filter" hidden={!visibleFilter}>
+      <MenuGroup id="filter" isVisible={!visibleFilter}>
         <MenuItem>todo</MenuItem>
         <MenuItem>todo</MenuItem>
       </MenuGroup>

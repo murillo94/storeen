@@ -21,7 +21,7 @@ export const Button = ({
   text = '',
   icon = '',
   hasBorder = true,
-  disabled = false,
+  isDisabled = false,
   customStyle = {},
   onClick = null,
   ...props
@@ -32,8 +32,8 @@ export const Button = ({
     <>
       <button
         type={type}
-        disabled={disabled}
-        aria-disabled={disabled}
+        disabled={isDisabled}
+        aria-disabled={isDisabled}
         aria-label={text || icon}
         style={{ ...defaultStyle, ...customStyle }}
         onClick={onClick}

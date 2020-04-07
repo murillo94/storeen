@@ -17,7 +17,7 @@ describe('SideSheet', () => {
   });
 
   test('should have children', () => {
-    const { getByRole } = render(<SideSheet visible>{content}</SideSheet>);
+    const { getByRole } = render(<SideSheet isVisible>{content}</SideSheet>);
 
     const nav = getByRole('navigation');
 
@@ -28,7 +28,7 @@ describe('SideSheet', () => {
 
   test('should have width', () => {
     const { getByText } = render(
-      <SideSheet visible width="100px">
+      <SideSheet isVisible width="100px">
         {content}
       </SideSheet>
     );
@@ -39,7 +39,7 @@ describe('SideSheet', () => {
   test('should have click', () => {
     const onClose = jest.fn();
     const { getByText } = render(
-      <SideSheet visible onClose={onClose}>
+      <SideSheet isVisible onClose={onClose}>
         {content}
       </SideSheet>
     );

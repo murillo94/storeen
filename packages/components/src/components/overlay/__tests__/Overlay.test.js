@@ -18,7 +18,7 @@ describe('Overlay', () => {
 
   test('should be visible with portal', () => {
     const { getByText } = render(
-      <Overlay id="id-test" visible>
+      <Overlay id="id-test" isVisible>
         {content}
       </Overlay>
     );
@@ -28,7 +28,7 @@ describe('Overlay', () => {
 
   test('should be visible with portal and prevent sroll', () => {
     const { getByText } = render(
-      <Overlay id="id-test" visible removeBodyScroll>
+      <Overlay id="id-test" isVisible shouldRemoveBodyScroll>
         {content}
       </Overlay>
     );
@@ -42,7 +42,7 @@ describe('Overlay', () => {
   test('should have click', () => {
     const onClose = jest.fn();
     const { getByText } = render(
-      <Overlay visible onClose={onClose}>
+      <Overlay isVisible onClose={onClose}>
         {content}
       </Overlay>
     );

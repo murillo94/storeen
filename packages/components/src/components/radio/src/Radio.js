@@ -19,7 +19,7 @@ export const Radio = ({
   name = '',
   value = '',
   description = '',
-  checked = false,
+  isChecked = false,
   onChange = () => null,
   ...props
 }) => {
@@ -38,9 +38,9 @@ export const Radio = ({
             id={id}
             name={name}
             value={value}
-            aria-checked={checked}
+            checked={isChecked}
+            aria-checked={isChecked}
             aria-label={`${id}-radio-label`}
-            checked={checked}
             onChange={onChange}
             {...props}
           />

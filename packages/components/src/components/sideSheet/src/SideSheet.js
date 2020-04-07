@@ -4,15 +4,15 @@ import { gray0, gray200 } from '@storeen/system';
 
 export const SideSheet = ({
   children,
-  visible = false,
+  isVisible = false,
   width = '620px',
   onClose = null
 }) => (
   <>
     <Overlay
       id="side-sheet"
-      visible={visible}
-      removeBodyScroll
+      isVisible={isVisible}
+      shouldRemoveBodyScroll
       onClose={onClose}
     >
       <nav className="side-sheet">{children}</nav>
@@ -32,7 +32,7 @@ export const SideSheet = ({
           position: fixed;
           top: 0;
           left: 0;
-          transform: ${visible
+          transform: ${isVisible
             ? 'translate3d(0, 0, 0)'
             : 'translate3d(-125px, 0, 0)'};
           will-change: transform;

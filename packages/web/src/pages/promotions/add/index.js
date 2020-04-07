@@ -77,7 +77,7 @@ const AddPromotion = () => {
         <Checkbox
           id="promotion-active"
           name="promotion.active"
-          checked={promotion.active}
+          isChecked={promotion.active}
           onChange={onChange}
         >
           Ativar promoção?
@@ -88,7 +88,7 @@ const AddPromotion = () => {
           id="all"
           name="applicable"
           value="all"
-          checked={applicable === 'all'}
+          isChecked={applicable === 'all'}
           onChange={onChange}
         >
           Todo o pedido
@@ -97,7 +97,7 @@ const AddPromotion = () => {
           id="categorie-specific"
           name="applicable"
           value="categorie-specific"
-          checked={applicable === 'categorie-specific'}
+          isChecked={applicable === 'categorie-specific'}
           onChange={onChange}
         >
           Categorias específicas
@@ -106,7 +106,7 @@ const AddPromotion = () => {
           id="product-specific"
           name="applicable"
           value="product-specific"
-          checked={applicable === 'product-specific'}
+          isChecked={applicable === 'product-specific'}
           onChange={onChange}
         >
           Produtos específicas
@@ -117,7 +117,7 @@ const AddPromotion = () => {
           id="total-value-minimum"
           name="minimumRequirements"
           value="total-value-minimum"
-          checked={minimumRequirements === 'total-value-minimum'}
+          isChecked={minimumRequirements === 'total-value-minimum'}
           onChange={onChange}
         >
           Valor total do pedido mínimo
@@ -126,7 +126,7 @@ const AddPromotion = () => {
           id="quantity-itens-minimum"
           name="minimumRequirements"
           value="quantity-itens-minimum"
-          checked={minimumRequirements === 'quantity-itens-minimum'}
+          isChecked={minimumRequirements === 'quantity-itens-minimum'}
           onChange={onChange}
         >
           Quantidade de itens do pedido mínimo
@@ -138,7 +138,7 @@ const AddPromotion = () => {
             <Checkbox
               id="code"
               name="promotional.hasPromotional"
-              checked={promotional.hasPromotional}
+              isChecked={promotional.hasPromotional}
               onChange={onChange}
             >
               Habilitar código promocional?
@@ -156,7 +156,7 @@ const AddPromotion = () => {
           <Checkbox
             id="promotional-unique-code"
             name="promotional.uniqueCode"
-            checked={promotional.uniqueCode}
+            isChecked={promotional.uniqueCode}
             onChange={onChange}
           >
             Cupom de uso único por CPF?
@@ -169,7 +169,7 @@ const AddPromotion = () => {
             <Checkbox
               id="schedule-has-schedule"
               name="schedule.hasSchedule"
-              checked={schedule.hasSchedule}
+              isChecked={schedule.hasSchedule}
               onChange={onChange}
             >
               Agendar promoção?

@@ -28,12 +28,12 @@ describe('Checkbox', () => {
   test('should have change with checked', () => {
     const onChange = jest.fn();
     const Test = () => {
-      const [checked, setChecked] = useState(false);
+      const [isChecked, setIsChecked] = useState(false);
       return (
         <Checkbox
-          checked={checked}
+          isChecked={isChecked}
           onChange={({ target }) => {
-            setChecked(target.checked);
+            setIsChecked(target.checked);
             onChange(target.checked);
           }}
         >

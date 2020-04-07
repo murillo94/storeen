@@ -48,7 +48,7 @@ const AddCategorie = () => {
           name="type"
           value="manual"
           description="Escolha os produtos manualmente para essa coleção."
-          checked={type === 'manual'}
+          isChecked={type === 'manual'}
           onChange={onChange}
         >
           Manual
@@ -58,7 +58,7 @@ const AddCategorie = () => {
           name="type"
           value="automated"
           description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
-          checked={type === 'automated'}
+          isChecked={type === 'automated'}
           onChange={onChange}
         >
           Automatizada

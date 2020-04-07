@@ -5,13 +5,18 @@ import { gray0, gray200, borderRadius6 } from '@storeen/system';
 export const Dialog = ({
   children,
   role = 'dialog',
-  visible = false,
+  isVisible = false,
   ariaLabel = null,
   width = '560px',
   onClose = null
 }) => (
   <>
-    <Overlay id="dialog" visible={visible} removeBodyScroll onClose={onClose}>
+    <Overlay
+      id="dialog"
+      isVisible={isVisible}
+      shouldRemoveBodyScroll
+      onClose={onClose}
+    >
       <div
         role={role}
         className="dialog"
@@ -35,7 +40,7 @@ export const Dialog = ({
           -webkit-overflow-scrolling: touch;
           -ms-overflow-style: -ms-autohiding-scrollbar;
           z-index: 2;
-          display: ${visible ? 'flex' : 'none'};
+          display: ${isVisible ? 'flex' : 'none'};
           flex-direction: column;
           justify-content: space-between;
         }

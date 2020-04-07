@@ -7,13 +7,7 @@ import useFont from '../utils/useFont';
 import { fontSize14, purple700, primary } from '@storeen/system';
 
 export const Anchor = memo(
-  ({
-    children,
-    href = '',
-    color = 'inherit',
-    ariaLabel = null,
-    hover = true
-  }) => {
+  ({ children, href = '', color = 'inherit', ariaLabel = null }) => {
     const fontColor = useFont(color);
 
     return (
@@ -29,10 +23,6 @@ export const Anchor = memo(
               color: ${fontColor};
               text-decoration: none;
               outline: 0;
-            }
-
-            :hover {
-              text-decoration: ${hover && 'underline'};
             }
 
             :focus {

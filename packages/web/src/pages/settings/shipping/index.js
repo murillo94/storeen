@@ -52,7 +52,7 @@ const ShippingSettings = () => {
       >
         <ContainerShipping
           disclosure={
-            <Disclosure isOpen={local.active}>
+            <Disclosure isVisible={local.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Insira aqui as instruções que seus clientes devem seguir caso
                 queiram retirar o produto pessoalmente.
@@ -71,13 +71,13 @@ const ShippingSettings = () => {
           <Switch
             id="local"
             name="local.active"
-            checked={local.active}
+            isChecked={local.active}
             onChange={onChange}
           />
         </ContainerShipping>
         <ContainerShipping
           disclosure={
-            <Disclosure isOpen={postOffice.active}>
+            <Disclosure isVisible={postOffice.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Exclusivo para lojistas que possuem contrato com os Correios.
               </Paragraph>
@@ -111,7 +111,7 @@ const ShippingSettings = () => {
           <Switch
             id="post-office"
             name="postOffice.active"
-            checked={postOffice.active}
+            isChecked={postOffice.active}
             onChange={onChange}
           />
         </ContainerShipping>

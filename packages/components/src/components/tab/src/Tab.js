@@ -78,7 +78,7 @@ export const Tab = withRouter(
     icon = '',
     href = '',
     onClick = null,
-    selected = false,
+    isSelected = false,
     isExternal = false,
     router
   }) => {
@@ -87,7 +87,7 @@ export const Tab = withRouter(
 
     return (
       <>
-        <li role="tab" aria-selected={href ? !!isActive : selected}>
+        <li role="tab" aria-selected={href ? !!isActive : isSelected}>
           {href ? (
             <TabLink href={href} text={text} isExternal={isExternal}>
               <Content text={text} icon={icon} />

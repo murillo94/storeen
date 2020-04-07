@@ -62,7 +62,7 @@ const PaymentsSettings = () => {
       >
         <ContainerPayment
           disclosure={
-            <Disclosure isOpen={mercadoPago.active}>
+            <Disclosure isVisible={mercadoPago.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 do Mercado Pago. Mais informações sobre como conectar o Mercado
@@ -90,13 +90,13 @@ const PaymentsSettings = () => {
           <Switch
             id="mercado-pago"
             name="mercadoPago.active"
-            checked={mercadoPago.active}
+            isChecked={mercadoPago.active}
             onChange={onChange}
           />
         </ContainerPayment>
         <ContainerPayment
           disclosure={
-            <Disclosure isOpen={wirecard.active}>
+            <Disclosure isVisible={wirecard.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da Wirecard. Mais informações sobre como conectar o Wirecard
@@ -124,13 +124,13 @@ const PaymentsSettings = () => {
           <Switch
             id="wirecard"
             name="wirecard.active"
-            checked={wirecard.active}
+            isChecked={wirecard.active}
             onChange={onChange}
           />
         </ContainerPayment>
         <ContainerPayment
           disclosure={
-            <Disclosure isOpen={pagSeguro.active}>
+            <Disclosure isVisible={pagSeguro.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da PagSeguro. Mais informações sobre como conectar o PagSeguro
@@ -158,13 +158,13 @@ const PaymentsSettings = () => {
           <Switch
             id="pag-seguro"
             name="pagSeguro.active"
-            checked={pagSeguro.active}
+            isChecked={pagSeguro.active}
             onChange={onChange}
           />
         </ContainerPayment>
         <ContainerPayment
           disclosure={
-            <Disclosure isOpen={paypal.active}>
+            <Disclosure isVisible={paypal.active}>
               <Paragraph color="muted" customStyle={descriptionStyle}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da PayPal. Mais informações sobre como conectar o PayPal podem
@@ -192,7 +192,7 @@ const PaymentsSettings = () => {
           <Switch
             id="paypal"
             name="paypal.active"
-            checked={paypal.active}
+            isChecked={paypal.active}
             onChange={onChange}
           />
         </ContainerPayment>
@@ -200,7 +200,7 @@ const PaymentsSettings = () => {
       <Footer>
         <Button text="Salvar" />
       </Footer>
-      <Dialog visible={visibleDialog} onClose={handleClickDialog}>
+      <Dialog isVisible={visibleDialog} onClose={handleClickDialog}>
         todo
       </Dialog>
     </>

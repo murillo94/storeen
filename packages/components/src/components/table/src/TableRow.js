@@ -3,7 +3,7 @@ import { gray0, gray75, gray100 } from '@storeen/system';
 export const TableRow = ({
   children,
   isBody = true,
-  hover = true,
+  isHover = true,
   onClick = null
 }) => (
   <>
@@ -23,7 +23,7 @@ export const TableRow = ({
         }
 
         :hover {
-          background-color: ${hover && gray75};
+          background-color: ${isHover && gray75};
         }
       `}
     </style>

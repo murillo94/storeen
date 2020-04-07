@@ -8,7 +8,7 @@ const content = 'im content';
 
 describe('MenuGroup', () => {
   test('should render', () => {
-    const { getByRole } = render(<MenuGroup hidden={false} />);
+    const { getByRole } = render(<MenuGroup isVisible={false} />);
 
     expect(getByRole('menu')).toBeInTheDocument();
   });
@@ -30,7 +30,7 @@ describe('MenuGroup', () => {
 
   test('should have default theme', () => {
     const { getByRole } = render(
-      <MenuGroup appearance="default" hidden={false} />
+      <MenuGroup appearance="default" isVisible={false} />
     );
 
     const menu = getByRole('menu');
@@ -39,7 +39,7 @@ describe('MenuGroup', () => {
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole } = render(<MenuGroup hidden={false} />);
+    const { getByRole } = render(<MenuGroup isVisible={false} />);
 
     const menu = getByRole('menu');
 
@@ -48,7 +48,7 @@ describe('MenuGroup', () => {
 
   test('should have negative theme', () => {
     const { getByRole } = render(
-      <MenuGroup appearance="negative" hidden={false} />
+      <MenuGroup appearance="negative" isVisible={false} />
     );
 
     const menu = getByRole('menu');
@@ -58,7 +58,7 @@ describe('MenuGroup', () => {
 
   test('should have positive theme', () => {
     const { getByRole } = render(
-      <MenuGroup appearance="positive" hidden={false} />
+      <MenuGroup appearance="positive" isVisible={false} />
     );
 
     const menu = getByRole('menu');

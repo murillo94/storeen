@@ -18,7 +18,7 @@ describe('Dialog', () => {
 
   test('should have different role', () => {
     const { getByRole } = render(
-      <Dialog role="alertdialog" visible ariaLabel="im aria label" />
+      <Dialog role="alertdialog" isVisible ariaLabel="im aria label" />
     );
 
     expect(getByRole('alertdialog')).toHaveAttribute(
@@ -28,7 +28,7 @@ describe('Dialog', () => {
   });
 
   test('should have children', () => {
-    const { getByRole } = render(<Dialog visible>{content}</Dialog>);
+    const { getByRole } = render(<Dialog isVisible>{content}</Dialog>);
 
     const dialog = getByRole('dialog');
 
@@ -40,7 +40,7 @@ describe('Dialog', () => {
 
   test('should have width', () => {
     const { getByText } = render(
-      <Dialog visible width="100px">
+      <Dialog isVisible width="100px">
         {content}
       </Dialog>
     );
@@ -51,7 +51,7 @@ describe('Dialog', () => {
   test('should have click', () => {
     const onClose = jest.fn();
     const { getByText } = render(
-      <Dialog visible onClose={onClose}>
+      <Dialog isVisible onClose={onClose}>
         {content}
       </Dialog>
     );

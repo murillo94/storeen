@@ -45,7 +45,7 @@ const PlansAccountSettings = () => {
             value="isAnnually"
             leftText="mensal"
             rightText="anual"
-            checked={isAnnually}
+            isChecked={isAnnually}
             onChange={onClickTypePlan}
           />
         }
@@ -57,7 +57,7 @@ const PlansAccountSettings = () => {
                 id={item.value}
                 name="plan.value"
                 value={item.value}
-                checked={plan.value === item.value}
+                isChecked={plan.value === item.value}
                 onChange={onChange}
               >
                 {item.name}

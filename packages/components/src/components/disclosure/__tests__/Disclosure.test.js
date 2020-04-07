@@ -35,8 +35,8 @@ describe('Disclosure', () => {
     expect(region.parentNode).not.toHaveStyle('margin-bottom: 20px;');
   });
 
-  test('should have children isOpen is true', () => {
-    const { getByText } = render(<Disclosure isOpen>{children}</Disclosure>);
+  test('should have children isVisible is true', () => {
+    const { getByText } = render(<Disclosure isVisible>{children}</Disclosure>);
 
     const customChildren = getByText(children);
 

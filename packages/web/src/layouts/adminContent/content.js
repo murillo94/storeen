@@ -92,11 +92,11 @@ const UserInfo = () => {
   return (
     <Menu
       id="user-info"
-      visible={visibleUserInfo}
+      isVisible={visibleUserInfo}
       text="Minha conta"
       onClick={handleClickUserInfo}
     >
-      <MenuGroup id="user-info" hidden={!visibleUserInfo}>
+      <MenuGroup id="user-info" isVisible={!visibleUserInfo}>
         <MenuItem href="/account">Meus dados</MenuItem>
         <MenuItem href="/">Sair</MenuItem>
       </MenuGroup>
@@ -140,7 +140,7 @@ const Content = ({ children, padding }) => {
           </div>
         </main>
         <SideSheet
-          visible={visibleSidebar}
+          isVisible={visibleSidebar}
           width="180px"
           onClose={handleClickMenu}
         >

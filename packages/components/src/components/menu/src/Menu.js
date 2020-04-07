@@ -10,7 +10,7 @@ export const Menu = ({
   id = null,
   icon = '',
   text = '',
-  visible = false,
+  isVisible = false,
   hasBorder = false,
   onClick = null
 }) => {
@@ -18,7 +18,7 @@ export const Menu = ({
 
   const handleClick = e => {
     if (node.current.contains(e.target)) return;
-    if (visible) onClick();
+    if (isVisible) onClick();
   };
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export const Menu = ({
     return () => {
       document.removeEventListener('mousedown', handleClick);
     };
-  }, [visible]);
+  }, [isVisible]);
 
   return (
     <>
@@ -36,7 +36,7 @@ export const Menu = ({
           icon={icon}
           text={text}
           aria-controls={id}
-          aria-expanded={visible}
+          aria-expanded={isVisible}
           aria-haspopup="menu"
           hasBorder={hasBorder}
           onClick={onClick}

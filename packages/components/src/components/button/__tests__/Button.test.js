@@ -59,7 +59,7 @@ describe('Button', () => {
   });
 
   test('should be disabled', () => {
-    const { getByRole } = render(<Button disabled>{content}</Button>);
+    const { getByRole } = render(<Button isDisabled>{content}</Button>);
 
     const button = getByRole('button');
 

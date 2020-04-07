@@ -28,16 +28,16 @@ describe('Radio', () => {
   test('should have change with checked', () => {
     const onChange = jest.fn();
     const Test = () => {
-      const [checked, setChecked] = useState();
+      const [isChecked, setIsChecked] = useState(false);
       return (
         <>
           <Radio
             id="one"
             name="type"
             value="one"
-            checked={checked === 'one'}
+            isChecked={isChecked === 'one'}
             onChange={({ target }) => {
-              setChecked(target.value);
+              setIsChecked(target.value);
               onChange(target.value);
             }}
           >
@@ -47,9 +47,9 @@ describe('Radio', () => {
             id="two"
             name="type"
             value="two"
-            checked={checked === 'two'}
+            isChecked={isChecked === 'two'}
             onChange={({ target }) => {
-              setChecked(target.value);
+              setIsChecked(target.value);
               onChange(target.value);
             }}
           >

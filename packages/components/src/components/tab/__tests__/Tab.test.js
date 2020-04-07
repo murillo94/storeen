@@ -73,7 +73,7 @@ describe('Tab', () => {
   });
 
   test('should have selected', () => {
-    const { getByRole } = render(<Tab selected />);
+    const { getByRole } = render(<Tab isSelected />);
 
     const tab = getByRole('tab');
 
@@ -96,7 +96,7 @@ describe('Tab', () => {
     expect(tab).toHaveStyle(`background-color: ${purple700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
-    rerender(<Tab appearance="default" selected />);
+    rerender(<Tab appearance="default" isSelected />);
 
     expect(tab).toHaveStyle(`background-color: ${purple600};`);
   });
@@ -109,7 +109,7 @@ describe('Tab', () => {
     expect(tab).toHaveStyle('background-color: transparent');
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
-    rerender(<Tab selected />);
+    rerender(<Tab isSelected />);
 
     expect(tab).toHaveStyle(`background-color: ${gray100};`);
   });
@@ -122,7 +122,7 @@ describe('Tab', () => {
     expect(tab).toHaveStyle(`background-color: ${red700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
-    rerender(<Tab appearance="negative" selected />);
+    rerender(<Tab appearance="negative" isSelected />);
 
     expect(tab).toHaveStyle(`background-color: ${red600};`);
   });
@@ -135,7 +135,7 @@ describe('Tab', () => {
     expect(tab).toHaveStyle(`background-color: ${green700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
-    rerender(<Tab appearance="positive" selected />);
+    rerender(<Tab appearance="positive" isSelected />);
 
     expect(tab).toHaveStyle(`background-color: ${green600};`);
   });

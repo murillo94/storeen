@@ -19,7 +19,7 @@ export const Checkbox = ({
   name = '',
   value = '',
   description = '',
-  checked = false,
+  isChecked = false,
   onChange = () => null,
   ...props
 }) => {
@@ -41,9 +41,9 @@ export const Checkbox = ({
             type="checkbox"
             id={id}
             name={name}
-            value={value || checked}
-            checked={checked}
-            aria-checked={checked}
+            value={value || isChecked}
+            checked={isChecked}
+            aria-checked={isChecked}
             aria-label={`${id}-checkbox-label`}
             onChange={onChange}
             {...props}

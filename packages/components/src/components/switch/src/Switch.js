@@ -12,7 +12,7 @@ export const Switch = ({
   leftText = '',
   rightText = '',
   colorText = 'muted',
-  checked = false,
+  isChecked = false,
   onChange = () => null,
   ...props
 }) => {
@@ -33,9 +33,9 @@ export const Switch = ({
             role="switch"
             id={id}
             name={name}
-            value={value || checked}
-            checked={checked}
-            aria-checked={checked}
+            value={value || isChecked}
+            checked={isChecked}
+            aria-checked={isChecked}
             aria-label={`${id}-switch-label`}
             onChange={onChange}
             {...props}
