@@ -1,7 +1,18 @@
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Heading, Paragraph, Anchor } from '@storeen/components';
+import {
+  Heading,
+  Paragraph,
+  Anchor,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableHeadCell,
+  TableBodyCell
+} from '@storeen/components';
+import { PropsTable } from '../components/PropsTable';
 
 const customComponents = {
   h1: props => (
@@ -17,7 +28,14 @@ const customComponents = {
     <Heading {...props} is="h4" customStyle={{ margin: '65px 0 25px' }} />
   ),
   p: props => <Paragraph {...props} />,
-  a: props => <Anchor {...props} />
+  a: props => <Anchor {...props} />,
+  table: Table,
+  thead: TableHead,
+  tbody: TableBody,
+  tr: TableRow,
+  th: TableHeadCell,
+  td: TableBodyCell,
+  PropsTable
 };
 
 const App = ({ Component, pageProps }) => (
