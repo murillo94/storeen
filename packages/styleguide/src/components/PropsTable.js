@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { Heading, Table, TableRow, TableBodyCell } from '@storeen/components';
+import { Code } from './Code';
 
-export function PropsTable({ data = {} }) {
+export const PropsTable = ({ data = {} }) => {
   const hasProps = Object.keys(data).length > 0;
 
   return (
@@ -14,8 +15,12 @@ export function PropsTable({ data = {} }) {
         <Table headers={['Prop', 'Type', 'Description']}>
           {Object.entries(data).map(([key, value]) => (
             <TableRow key={key}>
-              <TableBodyCell>{key}</TableBodyCell>
-              <TableBodyCell>{value.type}</TableBodyCell>
+              <TableBodyCell>
+                <Code variant="fade">{key}</Code>
+              </TableBodyCell>
+              <TableBodyCell>
+                <Code>{value.type}</Code>
+              </TableBodyCell>
               <TableBodyCell>{value.description}</TableBodyCell>
             </TableRow>
           ))}
@@ -23,4 +28,4 @@ export function PropsTable({ data = {} }) {
       )}
     </>
   );
-}
+};
