@@ -9,11 +9,11 @@ export const Table = ({
   optionsTitle,
   optionsHeader,
   headers = [],
+  placeholderSearchSuffix = '',
+  ariaLabel = null,
   hasBoxShadow = true,
   hasBorder = false,
-  hasSearch = false,
-  ariaLabel = null,
-  placeholderSearchSuffix = ''
+  hasSearch = false
 }) => {
   return (
     <>

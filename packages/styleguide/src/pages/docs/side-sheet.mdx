@@ -6,8 +6,27 @@ description: 'Useful for overlaying the screen on one side. It is used to show m
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    width: {
+      type: 'String',
+      description: 'The width of the side sheet'
+    },
+    isVisible: {
+      type: 'Boolean',
+      description: 'Whether it is visible or not'
+    },
+    onClose: {
+      type: 'Function',
+      description: 'A function to be called when on close'
+    }
+  }}
+/>
 
 ## Examples
+
 todo

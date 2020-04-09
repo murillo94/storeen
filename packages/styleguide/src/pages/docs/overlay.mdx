@@ -6,8 +6,31 @@ description: 'Useful for overlaying all the screen or a content.'
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    id: {
+      type: 'String',
+      description: 'The id of the overlay'
+    },
+    isVisible: {
+      type: 'Boolean',
+      description: 'Whether it is visible or not'
+    },
+    shouldRemoveBodyScroll: {
+      type: 'Boolean',
+      description: 'Whether it should remove body scroll or not'
+    },
+    onClose: {
+      type: 'Function',
+      description: 'A function to be called when on close'
+    }
+  }}
+/>
 
 ## Examples
+
 todo

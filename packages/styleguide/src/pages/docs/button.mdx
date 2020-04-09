@@ -6,8 +6,47 @@ description: 'Useful to communicate actions to your users.'
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
+    },
+    type: {
+      type: '*',
+      description: 'The type attribute specifies the type of button'
+    },
+    text: {
+      type: 'String',
+      description: 'A text of the button'
+    },
+    icon: {
+      type: 'String',
+      description: 'A icon of the button'
+    },
+    hasBorder: {
+      type: 'Boolean',
+      description: 'Whether it should have border or not'
+    },
+    isDisabled: {
+      type: 'Boolean',
+      description: 'Whether it is disable or not'
+    },
+    customStyle: {
+      type: 'Object',
+      description: 'The custom style to apply'
+    },
+    onClick: {
+      type: 'Function',
+      description: 'A function to be called when on click'
+    }
+  }}
+/>
 
 ## Examples
+
 todo

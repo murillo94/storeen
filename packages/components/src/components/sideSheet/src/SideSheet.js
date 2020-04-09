@@ -4,8 +4,8 @@ import { gray0, gray200 } from '@storeen/system';
 
 export const SideSheet = ({
   children,
-  isVisible = false,
   width = '620px',
+  isVisible = false,
   onClose = null
 }) => (
   <>

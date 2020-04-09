@@ -5,9 +5,9 @@ import { gray0, gray200, borderRadius6 } from '@storeen/system';
 export const Dialog = ({
   children,
   role = 'dialog',
-  isVisible = false,
-  ariaLabel = null,
   width = '560px',
+  ariaLabel = null,
+  isVisible = false,
   onClose = null
 }) => (
   <>

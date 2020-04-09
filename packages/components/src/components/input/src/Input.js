@@ -9,8 +9,8 @@ export const Input = memo(
   ({
     appearance = 'minimal',
     type = 'text',
-    id = null,
     innerRef = null,
+    id = null,
     name = '',
     value = '',
     labelText = '',

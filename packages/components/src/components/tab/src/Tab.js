@@ -77,9 +77,9 @@ export const Tab = withRouter(
     text = '',
     icon = '',
     href = '',
-    onClick = null,
     isSelected = false,
     isExternal = false,
+    onClick = null,
     router
   }) => {
     const theme = useTheme(appearance);

@@ -6,8 +6,31 @@ description: "Useful for creating regions of content that can expand/collapse. I
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    content: {
+      type: 'ReactNode',
+      description: 'The action content to render'
+    },
+    isVisible: {
+      type: 'Boolean',
+      description: 'Whether it is visible or not'
+    },
+    hasMarginBottom: {
+      type: 'Boolean',
+      description: 'Whether it should have margin bottom or not'
+    },
+    action: {
+      type: 'onClick | onChange',
+      description: 'A function to be called when on action'
+    }
+  }}
+/>
 
 ## Examples
+
 todo

@@ -6,8 +6,39 @@ description: 'Useful for displaying one panel of content at a time.'
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
+    },
+    text: {
+      type: 'String',
+      description: 'The text of the tab'
+    },
+    icon: {
+      type: 'String',
+      description: 'The icon of the tab'
+    },
+    href: {
+      type: 'String',
+      description: 'The href of the tab'
+    },
+    isSelected: {
+      type: 'Boolean',
+      description: 'Whether it is selected or not'
+    },
+    isExternal: {
+      type: 'Boolean',
+      description: 'Whether it is url external or not'
+    },
+    onClick: {
+      type: 'Function',
+      description: 'A function to be called when on click'
+    }
+  }}
+/>
 
 ## Examples
+
 todo

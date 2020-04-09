@@ -6,8 +6,43 @@ description: 'Useful for allowing users to select only one option from a set.'
 
 todo
 
-## Props
-todo
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
+    },
+    id: {
+      type: 'String',
+      description: 'The id of the radio'
+    },
+    name: {
+      type: 'String',
+      description: 'The name of the radio'
+    },
+    value: {
+      type: 'String',
+      description: 'The value of the radio'
+    },
+    description: {
+      type: 'String',
+      description: 'A text description of the radio'
+    },
+    isChecked: {
+      type: 'Boolean',
+      description: 'Whether it is checked or not'
+    },
+    onChange: {
+      type: 'Function',
+      description: 'A function to be called when the value changes'
+    }
+  }}
+/>
 
 ## Examples
+
 todo
