@@ -5,6 +5,7 @@ export const purple400 = '#8fabff';
 export const purple500 = '#7e9fff';
 export const purple600 = '#6f93ff';
 export const purple700 = '#5f87ff';
+export const purple800 = '#5579e5';
 
 export const red100 = '#f4b6af';
 export const red200 = '#f2a49b';
