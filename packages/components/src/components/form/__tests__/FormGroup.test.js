@@ -22,7 +22,7 @@ describe('FormGroup', () => {
 
   test('should have type', () => {
     const { getByText } = render(
-      <FormGroup type="column">{content}</FormGroup>
+      <FormGroup orientation="column">{content}</FormGroup>
     );
 
     expect(getByText(content)).toHaveStyle('flex-direction: column;');

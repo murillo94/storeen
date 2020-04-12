@@ -1,4 +1,4 @@
-export const FormGroup = ({ children, type = 'row' }) => (
+export const FormGroup = ({ children, orientation = 'row' }) => (
   <>
     <div className="form-group">{children}</div>
 
@@ -6,7 +6,7 @@ export const FormGroup = ({ children, type = 'row' }) => (
       {`
         div {
           display: flex;
-          flex-direction: ${type};
+          flex-direction: ${orientation};
           flex-wrap: wrap;
         }
 
