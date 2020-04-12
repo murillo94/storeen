@@ -43,6 +43,52 @@ todo
   }}
 />
 
+# MenuGroup
+
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
+    },
+    id: {
+      type: 'String',
+      description: 'The id of the menu group'
+    },
+    isVisible: {
+      type: 'Boolean',
+      description: 'Whether it is visible or not'
+    }
+  }}
+/>
+
+# MenuItem
+
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
+    },
+    href: {
+      type: 'String',
+      description: 'The href of the menu item'
+    },
+    onClick: {
+      type: 'Function',
+      description: 'A function to be called when on click'
+    }
+  }}
+/>
+
 ## Examples
 
 todo
