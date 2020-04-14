@@ -1,4 +1,4 @@
-import useTheme from '../../../utils/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
 import { gray0, borderRadius5 } from '@storeen/system';
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { Button } from '../../button';
 
-import useTheme from '../../../utils/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
 import { gray0, purple700, borderRadius5, primary } from '@storeen/system';
 

@@ -5,7 +5,7 @@ import { Icon } from '../../icon';
 import { Text } from '../../typography';
 import { Button } from '../../button';
 
-import useTheme from '../../../utils/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
 import {
   purple700,

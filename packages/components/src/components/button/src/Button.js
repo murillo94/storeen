@@ -1,7 +1,7 @@
 import { Icon } from '../../icon';
 import { Text } from '../../typography';
 
-import useTheme from '../../../utils/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
 import {
   fontSize14,

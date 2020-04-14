@@ -1,7 +1,7 @@
 import { Button } from '../../button';
 import { Text } from '../../typography';
 
-import useTheme from '../../../utils/theme/useTheme';
+import useTheme from '../../../hooks/theme/useTheme';
 
 import { gray0, borderRadius6 } from '@storeen/system';
 
