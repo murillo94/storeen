@@ -10,7 +10,8 @@ import {
   TableBody,
   TableRow,
   TableHeadCell,
-  TableBodyCell
+  TableBodyCell,
+  ThemeProvider
 } from '@storeen/components';
 import { PropsTable } from '../components/PropsTable';
 
@@ -39,12 +40,14 @@ const customComponents = {
 };
 
 const App = ({ Component, pageProps }) => (
-  <MDXProvider components={customComponents}>
-    <Head>
-      <title>Storeen&apos;s design system</title>
-    </Head>
-    <Component {...pageProps} />
-  </MDXProvider>
+  <ThemeProvider>
+    <MDXProvider components={customComponents}>
+      <Head>
+        <title>Storeen&apos;s design system</title>
+      </Head>
+      <Component {...pageProps} />
+    </MDXProvider>
+  </ThemeProvider>
 );
 
 export default App;
