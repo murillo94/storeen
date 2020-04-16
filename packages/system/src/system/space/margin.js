@@ -1,6 +1,6 @@
 import { system } from '@styled-system/core';
 
-import getNegativeSpace from '../../utils/getNegativeSpace';
+import { getNegativeSpace } from '../../utils/getNegativeSpace';
 
 const config = {
   margin: {
