@@ -1,4 +1,7 @@
 {
   "name": "@storeen/system",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "@styled-system/core": "^5.1.2"
+  }
 }
