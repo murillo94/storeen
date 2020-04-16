@@ -22,3 +22,4 @@ export * from './src/components/switch';
 export * from './src/components/tab';
 export * from './src/components/table';
 export * from './src/components/typography';
+export * from './src/theme/ThemeProvider';
