@@ -2,6 +2,7 @@
   "name": "@storeen/system",
   "version": "1.0.0",
   "dependencies": {
-    "@styled-system/core": "^5.1.2"
+    "@styled-system/core": "^5.1.2",
+    "@styled-system/css": "^5.1.5"
   }
 }
