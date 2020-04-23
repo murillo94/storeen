@@ -4,10 +4,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { gray0, gray100, borderRadius6 } from '@storeen/system';
 
-const descriptionStyle = {
-  margin: '0'
-};
-
 export const Alert = ({
   children,
   appearance = 'positive',
@@ -22,7 +18,7 @@ export const Alert = ({
         {title && <Heading is="h4">{title}</Heading>}
         {description && (
           <div className="description">
-            <Paragraph color="muted" customStyle={descriptionStyle}>
+            <Paragraph color="muted" margin={0}>
               {description}
             </Paragraph>
           </div>

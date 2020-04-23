@@ -56,7 +56,7 @@ const AccountSettings = () => {
         isForm
       >
         <Disclosure
-          content={<Button appearance="minimal" text="Alterar senha" />}
+          content={<Button appearance="minimal">Alterar senha</Button>}
         >
           <Input
             type="password"
@@ -85,7 +85,7 @@ const AccountSettings = () => {
         </Disclosure>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

@@ -47,7 +47,7 @@ describe('Text', () => {
 
   test('should have custom style', () => {
     const { getByText } = render(
-      <TextCustom customStyle={{ padding: '10px' }} />
+      <TextCustom sx={{ padding: '10px' }} />
     );
 
     expect(getByText('im span')).toHaveStyle('padding: 10px;');

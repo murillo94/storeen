@@ -3,10 +3,6 @@ import { Heading, Paragraph } from '../../typography';
 
 import { gray0, gray100, borderRadius6 } from '@storeen/system';
 
-const subTitleStyle = {
-  marginTop: '6px'
-};
-
 export const Container = ({
   children,
   title = '',
@@ -29,7 +25,7 @@ export const Container = ({
             {optionsTitle}
           </div>
           {subTitle && (
-            <Paragraph color="muted" customStyle={subTitleStyle}>
+            <Paragraph color="muted" marginTop={1} marginBottom={2}>
               {subTitle}
             </Paragraph>
           )}

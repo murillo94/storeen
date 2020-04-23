@@ -7,30 +7,19 @@ import { frontMatter as docsPages } from './docs/*.mdx';
 
 const headingStyle = {
   fontSize: '16px',
-  textAlign: 'left',
-  margin: '15px 16px 8px'
+  textAlign: 'left'
 };
 
 const Logo = () => (
   <>
-    <div className="desktop-logo">
-      <Image
-        src={require('../public/logo-all-horizontal.svg')}
-        alt="Storeen logo com nome horizontal"
-        width="120px"
-        height="100%"
-      />
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          text-align: left;
-          padding: 0 20px 20px;
-          display: block;
-        }
-      `}
-    </style>
+    <Image
+      src={require('../public/logo-all-horizontal.svg')}
+      alt="Storeen logo com nome horizontal"
+      width="120px"
+      height="auto"
+      marginBottom={4}
+      marginX={4}
+    />
   </>
 );
 
@@ -46,21 +35,27 @@ const App = ({ children }) => {
       <div className="container">
         <nav className="side-sheet">
           <Logo />
-          <Heading customStyle={headingStyle}>Overview</Heading>
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Overview
+          </Heading>
           <TabList>
             {pinnedPages.map(page => (
               <Tab key={page.href} text={page.title} href={page.href} />
             ))}
           </TabList>
           <hr />
-          <Heading customStyle={headingStyle}>Components</Heading>
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Components
+          </Heading>
           <TabList>
             {componentPages.map(page => (
               <Tab key={page.href} text={page.title} href={page.href} />
             ))}
           </TabList>
           <hr />
-          <Heading customStyle={headingStyle}>Github links</Heading>
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Github links
+          </Heading>
           <TabList>
             <Tab
               key="components"
@@ -144,7 +139,7 @@ const App = ({ children }) => {
             width: 800px;
           }
 
-          @media (max-width: 1124px) {
+          @media (max-width: 64em) {
             :global(.side-sheet) :global(ul) :global(li) {
               border-radius: ${borderRadius8};
             }
@@ -159,7 +154,7 @@ const App = ({ children }) => {
             }
           }
 
-          @media (max-width: 746px) {
+          @media (max-width: 40em) {
             nav {
               display: none;
             }
@@ -169,7 +164,7 @@ const App = ({ children }) => {
             }
           }
 
-          @media (min-width: 746px) {
+          @media (min-width: 40em) {
             .container {
               display: flex;
               flex-grow: 1;

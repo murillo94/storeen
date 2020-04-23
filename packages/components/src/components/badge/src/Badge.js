@@ -15,8 +15,7 @@ export const Badge = ({
     color: theme.borderColor,
     backgroundColor: gray0,
     border: `1px solid ${theme.borderColor}`,
-    borderRadius: borderRadius6,
-    padding: '1px 6px'
+    borderRadius: borderRadius6
   };
 
   return (
@@ -24,12 +23,17 @@ export const Badge = ({
       {onClick ? (
         <Button
           appearance={appearance}
-          text={text}
           onClick={onClick}
-          customStyle={badgeStyle}
-        />
+          paddingY={0}
+          paddingX={1}
+          sx={badgeStyle}
+        >
+          {text}
+        </Button>
       ) : (
-        <Text customStyle={badgeStyle}>{text}</Text>
+        <Text paddingY={0} paddingX={1} sx={badgeStyle}>
+          {text}
+        </Text>
       )}
     </>
   );

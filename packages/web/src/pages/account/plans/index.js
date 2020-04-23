@@ -116,7 +116,7 @@ const PlansAccountSettings = () => {
         </Container>
       )}
       <Footer>
-        <Button text="Atualizar plano" />
+        <Button>Atualizar plano</Button>
       </Footer>
     </>
   );

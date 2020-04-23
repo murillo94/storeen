@@ -26,7 +26,7 @@ describe('Tab', () => {
   });
 
   test('should have custom style', () => {
-    const { getByRole } = render(<TabList customStyle={{ margin: '10px' }} />);
+    const { getByRole } = render(<TabList sx={{ margin: '10px' }} />);
 
     expect(getByRole('tablist')).toHaveStyle('margin: 10px;');
   });

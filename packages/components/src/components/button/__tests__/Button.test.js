@@ -41,7 +41,7 @@ describe('Button', () => {
   });
 
   test('should have aria, icon and text', () => {
-    const { getByRole } = render(<Button text="im button" icon="plus" />);
+    const { getByRole } = render(<Button icon="plus">im button</Button>);
 
     const button = getByRole('button');
 
@@ -68,7 +68,7 @@ describe('Button', () => {
 
   test('should have custom style', () => {
     const { getByRole } = render(
-      <Button customStyle={{ margin: '10px', backgroundColor: 'red' }}>
+      <Button sx={{ margin: '10px', backgroundColor: 'red' }}>
         {content}
       </Button>
     );

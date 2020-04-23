@@ -16,21 +16,8 @@ import useLogin from '../containers/useLogin';
 
 import useLayout from '../hooks/layout/useLayout';
 
-const imageStyle = {
-  margin: '30px 0'
-};
-
-const headingStyle = {
-  margin: '0 0 30px'
-};
-
-const paragraphStyle = {
-  margin: '0 0 5px'
-};
-
 const buttonStyle = {
-  width: '100%',
-  margin: '20px 0 25px'
+  width: '100%'
 };
 
 const Logo = () => (
@@ -40,7 +27,7 @@ const Logo = () => (
       alt="Storeen logo icone"
       width="57px"
       height="57px"
-      customStyle={imageStyle}
+      marginY={6}
     />
   </div>
 );
@@ -55,8 +42,8 @@ const Home = () => {
 
   return (
     <>
-      <Heading customStyle={headingStyle}>Entrar</Heading>
-      <Paragraph color="muted" customStyle={paragraphStyle}>
+      <Heading marginBottom={6}>Entrar</Heading>
+      <Paragraph color="muted" marginBottom={1}>
         Não tem uma conta ainda?
       </Paragraph>
       <Anchor href="/" color="primary" ariaLabel="Crie a sua loja de graça!">
@@ -82,10 +69,13 @@ const Home = () => {
         />
       </Form>
       <Button
-        text="Entrar"
-        customStyle={buttonStyle}
+        marginTop={4}
+        marginBottom={5}
+        sx={buttonStyle}
         onClick={handleClickSignIn}
-      />
+      >
+        Entrar
+      </Button>
       <Anchor
         href="/password/new"
         color="primary"

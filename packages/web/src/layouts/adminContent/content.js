@@ -16,50 +16,29 @@ import { gray0, gray200, borderRadius8 } from '@storeen/system';
 
 const Logo = () => (
   <>
-    <div className="desktop-logo">
-      <Image
-        src={require('../../public/static/images/logo-all-horizontal.svg')}
-        alt="Storeen logo com nome horizontal"
-        width="120px"
-        height="100%"
-      />
-    </div>
-    <div className="mobile-logo">
-      <Image
-        src={require('../../public/static/images/logo-icon.svg')}
-        alt="Storeen logo icone"
-        width="34px"
-        height="34px"
-      />
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          margin: 0 20px 40px;
-        }
-
-        .desktop-logo {
-          text-align: left;
-          display: block;
-        }
-
-        .mobile-logo {
-          text-align: center;
-          display: none;
-        }
-
-        @media (max-width: 1124px) {
-          .mobile-logo {
-            display: block;
-          }
-
-          .desktop-logo {
-            display: none;
-          }
-        }
-      `}
-    </style>
+    <Image
+      src={require('../../public/static/images/logo-all-horizontal.svg')}
+      alt="Storeen logo com nome horizontal"
+      width="120px"
+      height="auto"
+      marginBottom={9}
+      marginX={4}
+      sx={{
+        textAlign: 'left',
+        display: ['none', 'none', 'none', 'block']
+      }}
+    />
+    <Image
+      src={require('../../public/static/images/logo-icon.svg')}
+      alt="Storeen logo icone"
+      width="34px"
+      height="34px"
+      marginBottom={9}
+      marginX="auto"
+      sx={{
+        display: ['block', 'block', 'block', 'none']
+      }}
+    />
   </>
 );
 
@@ -127,12 +106,9 @@ const Content = ({ children, padding }) => {
                 onClick={handleClickMenu}
               />
             </div>
-            <Button
-              appearance="minimal"
-              icon="external-link"
-              text="ver minha loja"
-              hasBorder={false}
-            />
+            <Button appearance="minimal" icon="external-link" hasBorder={false}>
+              ver minha loja
+            </Button>
             <UserInfo />
           </Header>
           <div className="main-container">
@@ -194,7 +170,7 @@ const Content = ({ children, padding }) => {
             width: 800px;
           }
 
-          @media (max-width: 1124px) {
+          @media (max-width: 64em) {
             nav {
               width: 125px;
             }
@@ -226,7 +202,7 @@ const Content = ({ children, padding }) => {
             }
           }
 
-          @media (max-width: 746px) {
+          @media (max-width: 40em) {
             nav {
               display: none;
             }
@@ -240,7 +216,7 @@ const Content = ({ children, padding }) => {
             }
           }
 
-          @media (min-width: 746px) {
+          @media (min-width: 40em) {
             .container {
               display: flex;
               flex-grow: 1;

@@ -2,6 +2,8 @@ import { memo } from 'react';
 
 import useFont from '../utils/useFont';
 
+import useStyle from '../../../hooks/theme/useStyle';
+
 import {
   fontSize14,
   fontSize15,
@@ -10,13 +12,13 @@ import {
   fontWeight600
 } from '@storeen/system';
 
-const H1 = ({ children, color, customStyle }) => (
-  <>
-    <h1 style={{ ...customStyle }}>{children}</h1>
+const H1 = ({ children, className, styles, color }) => (
+  <h1 className={className}>
+    {children}
 
     <style jsx>
       {`
-        h1 {
+         {
           font-size: ${fontSize28};
           font-weight: ${fontWeight600};
           color: ${color};
@@ -24,16 +26,17 @@ const H1 = ({ children, color, customStyle }) => (
         }
       `}
     </style>
-  </>
+    {styles}
+  </h1>
 );
 
-const H2 = ({ children, color, customStyle }) => (
-  <>
-    <h2 style={{ ...customStyle }}>{children}</h2>
+const H2 = ({ children, className, styles, color }) => (
+  <h2 className={className}>
+    {children}
 
     <style jsx>
       {`
-        h2 {
+         {
           font-size: ${fontSize18};
           font-weight: ${fontWeight600};
           color: ${color};
@@ -41,16 +44,17 @@ const H2 = ({ children, color, customStyle }) => (
         }
       `}
     </style>
-  </>
+    {styles}
+  </h2>
 );
 
-const H3 = ({ children, color, customStyle }) => (
-  <>
-    <h3 style={{ ...customStyle }}>{children}</h3>
+const H3 = ({ children, className, styles, color }) => (
+  <h3 className={className}>
+    {children}
 
     <style jsx>
       {`
-        h3 {
+         {
           font-size: ${fontSize15};
           font-weight: ${fontWeight600};
           color: ${color};
@@ -58,16 +62,17 @@ const H3 = ({ children, color, customStyle }) => (
         }
       `}
     </style>
-  </>
+    {styles}
+  </h3>
 );
 
-const H4 = ({ children, color, customStyle }) => (
-  <>
-    <h4 style={{ ...customStyle }}>{children}</h4>
+const H4 = ({ children, className, styles, color }) => (
+  <h4 className={className}>
+    {children}
 
     <style jsx>
       {`
-        h4 {
+         {
           font-size: ${fontSize14};
           font-weight: ${fontWeight600};
           color: ${color};
@@ -75,36 +80,37 @@ const H4 = ({ children, color, customStyle }) => (
         }
       `}
     </style>
-  </>
+    {styles}
+  </h4>
 );
 
-export const Heading = memo(
-  ({ children, is = 'h1', color = 'inherit', customStyle = {} }) => {
+export const Heading = useStyle(
+  memo(({ children, className, styles, is = 'h1', color = 'inherit' }) => {
     const fontColor = useFont(color);
 
     return (
       <>
         {is === 'h1' && (
-          <H1 color={fontColor} customStyle={customStyle}>
+          <H1 className={className} styles={styles} color={fontColor}>
             {children}
           </H1>
         )}
         {is === 'h2' && (
-          <H2 color={fontColor} customStyle={customStyle}>
+          <H2 className={className} styles={styles} color={fontColor}>
             {children}
           </H2>
         )}
         {is === 'h3' && (
-          <H3 color={fontColor} customStyle={customStyle}>
+          <H3 className={className} styles={styles} color={fontColor}>
             {children}
           </H3>
         )}
         {is === 'h4' && (
-          <H4 color={fontColor} customStyle={customStyle}>
+          <H4 className={className} styles={styles} color={fontColor}>
             {children}
           </H4>
         )}
       </>
     );
-  }
+  })
 );

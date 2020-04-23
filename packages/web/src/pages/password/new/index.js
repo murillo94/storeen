@@ -7,12 +7,7 @@ import usePasswordNew from '../../../containers/usePasswordNew';
 import useLayout from '../../../hooks/layout/useLayout';
 
 const buttonStyle = {
-  width: '100%',
-  margin: '20px 0'
-};
-
-const imageStyle = {
-  margin: '30px 0'
+  width: '100%'
 };
 
 const Logo = () => (
@@ -22,7 +17,7 @@ const Logo = () => (
       alt="Storeen logo icone"
       width="57px"
       height="57px"
-      customStyle={imageStyle}
+      marginY={6}
     />
   </div>
 );
@@ -45,7 +40,9 @@ const New = () => {
         value={email}
         onChange={onChange}
       />
-      <Button text="Redefinir senha" customStyle={buttonStyle} />
+      <Button marginY={4} marginX={0} sx={buttonStyle}>
+        Redefinir senha
+      </Button>
     </>
   );
 };

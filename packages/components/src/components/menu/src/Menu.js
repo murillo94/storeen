@@ -34,13 +34,14 @@ export const Menu = ({
         <Button
           appearance={appearance}
           icon={icon}
-          text={text}
           aria-controls={id}
           aria-expanded={isVisible}
           aria-haspopup="menu"
           hasBorder={hasBorder}
           onClick={onClick}
-        />
+        >
+          {text}
+        </Button>
         {children}
       </div>
 

@@ -164,7 +164,7 @@ const AddProduct = () => {
         </Disclosure>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

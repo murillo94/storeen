@@ -2,6 +2,7 @@ import { Icon } from '../../icon';
 import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
+import useStyle from '../../../hooks/theme/useStyle';
 
 import {
   fontSize14,
@@ -10,81 +11,73 @@ import {
   fontWeight400
 } from '@storeen/system';
 
-const defaultStyle = {
-  width: 'auto'
-};
+export const Button = useStyle(
+  ({
+    children,
+    className,
+    styles,
+    appearance = 'default',
+    type = 'button',
+    icon = '',
+    hasBorder = true,
+    isDisabled = false,
+    onClick = null,
+    ...props
+  }) => {
+    const theme = useTheme(appearance);
 
-export const Button = ({
-  children,
-  appearance = 'default',
-  type = 'button',
-  text = '',
-  icon = '',
-  hasBorder = true,
-  isDisabled = false,
-  customStyle = {},
-  onClick = null,
-  ...props
-}) => {
-  const theme = useTheme(appearance);
-
-  return (
-    <>
+    return (
       <button
+        className={className}
         type={type}
         disabled={isDisabled}
         aria-disabled={isDisabled}
-        aria-label={text || icon}
-        style={{ ...defaultStyle, ...customStyle }}
+        aria-label={children || icon}
         onClick={onClick}
         {...props}
       >
-        {children ? (
-          <>{children}</>
-        ) : (
-          <>
-            {icon && <Icon name={icon} size={17} color={theme.color} />}
-            {text && (
-              <Text customStyle={{ margin: icon ? '0 0 0 5px' : 0 }}>
-                {text}
-              </Text>
-            )}
-          </>
-        )}
+        <>
+          {icon && <Icon name={icon} size={17} color={theme.color} />}
+          {children && (
+            <Text sx={{ margin: icon ? '0 0 0 5px' : 0 }}>{children}</Text>
+          )}
+        </>
+
+        <style jsx>
+          {`
+             {
+              font-size: ${fontSize14};
+              font-weight: ${appearance !== 'minimal'
+                ? fontWeight500
+                : fontWeight400};
+              color: ${theme.color};
+              background-color: ${theme.backgroundColor};
+              border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
+              border-radius: ${borderRadius6};
+              padding: 10px;
+              width: auto;
+              outline: 0;
+              cursor: pointer;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              vertical-align: middle;
+            }
+
+            :hover {
+              color: ${theme.hover.color};
+              background-color: ${theme.hover.backgroundColor};
+              border-color: ${theme.hover.borderColor};
+            }
+
+            :focus {
+              box-shadow: ${theme.focus.boxShadow};
+              border-color: ${theme.focus.borderColor};
+            }
+          `}
+        </style>
+        {styles}
       </button>
-
-      <style jsx>
-        {`
-          button {
-            font-size: ${fontSize14};
-            font-weight: ${appearance !== 'minimal'
-              ? fontWeight500
-              : fontWeight400};
-            color: ${theme.color};
-            background-color: ${theme.backgroundColor};
-            border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
-            border-radius: ${borderRadius6};
-            padding: 10px;
-            outline: 0;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            vertical-align: middle;
-          }
-
-          :hover {
-            color: ${theme.hover.color};
-            background-color: ${theme.hover.backgroundColor};
-            border-color: ${theme.hover.borderColor};
-          }
-
-          :focus {
-            box-shadow: ${theme.focus.boxShadow};
-            border-color: ${theme.focus.borderColor};
-          }
-        `}
-      </style>
-    </>
-  );
-};
+    );
+  }
+);

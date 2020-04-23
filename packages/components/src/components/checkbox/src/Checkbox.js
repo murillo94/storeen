@@ -8,10 +8,6 @@ const labelStyle = {
   display: 'inline-flex'
 };
 
-const descriptionStyle = {
-  margin: '5px 0 0'
-};
-
 export const Checkbox = ({
   children,
   appearance = 'minimal',
@@ -32,11 +28,7 @@ export const Checkbox = ({
           description && 'with-description'
         }`}
       >
-        <Label
-          id={`${id}-checkbox-label`}
-          htmlFor={id}
-          customStyle={labelStyle}
-        >
+        <Label id={`${id}-checkbox-label`} htmlFor={id} sx={labelStyle}>
           <input
             type="checkbox"
             id={id}
@@ -51,7 +43,7 @@ export const Checkbox = ({
           <span>{children}</span>
         </Label>
         {description && (
-          <Paragraph color="muted" customStyle={descriptionStyle}>
+          <Paragraph color="muted" marginTop={1}>
             {description}
           </Paragraph>
         )}

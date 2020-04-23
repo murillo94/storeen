@@ -40,11 +40,11 @@ export const TableOptions = ({
           border-color: ${gray75};
         }
 
-        div :global(.form-group) :global(div) :global(button) {
+        div :global(.form-group) :global(div) > :global(button) {
           padding: 8.5px;
         }
 
-        @media (max-width: 746px) {
+        @media (max-width: 40em) {
           div {
             flex-direction: column;
           }

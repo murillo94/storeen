@@ -19,7 +19,7 @@ const buttonStyle = {
 };
 
 const TabButton = ({ children, onClick }) => (
-  <Button hasBorder={false} customStyle={buttonStyle} onClick={onClick}>
+  <Button hasBorder={false} sx={buttonStyle} onClick={onClick}>
     {children}
   </Button>
 );
@@ -63,9 +63,7 @@ const TabLink = ({ children, href, text, isExternal }) => {
 const Content = ({ text, icon }) => (
   <>
     {icon && <Icon name={icon} size={20} />}
-    <Text
-      customStyle={{ margin: icon && '0 0 0 10px', fontWeight: fontWeight500 }}
-    >
+    <Text sx={{ margin: icon && '0 0 0 10px', fontWeight: fontWeight500 }}>
       {text}
     </Text>
   </>

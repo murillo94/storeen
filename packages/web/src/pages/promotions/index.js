@@ -43,7 +43,7 @@ const Promotions = () => {
   return (
     <>
       <SubHeader title="Promoções">
-        <Button text="Nova promoção" onClick={handleAddPromotion} />
+        <Button onClick={handleAddPromotion}>Nova promoção</Button>
       </SubHeader>
       <Table
         headers={headers}

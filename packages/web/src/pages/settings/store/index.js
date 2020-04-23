@@ -14,10 +14,6 @@ import useSettingsStore from '../../../containers/useSettingsStore';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const headingCompanyStyle = {
-  marginBottom: '20px'
-};
-
 const StoreSettings = () => {
   const {
     state: { store, help, company, responsible, address },
@@ -100,7 +96,7 @@ const StoreSettings = () => {
           action="onChange"
         >
           {company.hasLegalPerson && (
-            <Heading is="h3" customStyle={headingCompanyStyle}>
+            <Heading is="h3" marginBottom={4}>
               Dados da empresa
             </Heading>
           )}
@@ -136,7 +132,7 @@ const StoreSettings = () => {
           />
         </Disclosure>
         {company.hasLegalPerson && (
-          <Heading is="h3" customStyle={headingCompanyStyle}>
+          <Heading is="h3" marginBottom={4}>
             Dados do responsável
           </Heading>
         )}
@@ -248,7 +244,7 @@ const StoreSettings = () => {
         />
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

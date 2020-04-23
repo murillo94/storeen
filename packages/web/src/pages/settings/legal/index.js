@@ -28,9 +28,10 @@ const LegalSettings = () => {
         />
         <Button
           appearance="minimal"
-          text="Copiar modelo"
           onClick={() => handleClickCopyModel('refund')}
-        />
+        >
+          Copiar modelo
+        </Button>
       </Container>
       <Container
         title="Política de privacidade"
@@ -46,9 +47,10 @@ const LegalSettings = () => {
         />
         <Button
           appearance="minimal"
-          text="Copiar modelo"
           onClick={() => handleClickCopyModel('privacy')}
-        />
+        >
+          Copiar modelo
+        </Button>
       </Container>
       <Container
         title="Termos de serviço"
@@ -64,9 +66,10 @@ const LegalSettings = () => {
         />
         <Button
           appearance="minimal"
-          text="Copiar modelo"
           onClick={() => handleClickCopyModel('service')}
-        />
+        >
+          Copiar modelo
+        </Button>
       </Container>
       <Container
         title="Política de envio"
@@ -82,12 +85,13 @@ const LegalSettings = () => {
         />
         <Button
           appearance="minimal"
-          text="Copiar modelo"
           onClick={() => handleClickCopyModel('shipping')}
-        />
+        >
+          Copiar modelo
+        </Button>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

@@ -7,7 +7,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 import { gray0, purple700, borderRadius5, primary } from '@storeen/system';
 
 const buttonStyle = {
-  padding: '5px 8px',
   justifyContent: 'flex-start',
   width: '100%'
 };
@@ -43,7 +42,9 @@ const MenuItemButton = ({ children, appearance, onClick }) => (
   <Button
     appearance={appearance}
     hasBorder={false}
-    customStyle={buttonStyle}
+    paddingY={1}
+    paddingX={2}
+    sx={buttonStyle}
     onClick={onClick}
   >
     {children}

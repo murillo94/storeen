@@ -14,13 +14,13 @@ export const FormGroup = ({ children, orientation = 'row' }) => (
           margin-bottom: 20px;
         }
 
-        @media (max-width: 746px) {
+        @media (max-width: 40em) {
           div {
             flex-direction: column;
           }
         }
 
-        @media (min-width: 746px) {
+        @media (min-width: 40em) {
           div :global(.input-form) {
             margin-bottom: 0px !important;
             flex: 0.5;

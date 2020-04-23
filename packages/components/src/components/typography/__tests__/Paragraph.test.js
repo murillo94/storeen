@@ -47,7 +47,7 @@ describe('Paragraph', () => {
 
   test('should have custom style', () => {
     const { getByText } = render(
-      <ParagraphCustom customStyle={{ padding: '10px' }} />
+      <ParagraphCustom sx={{ padding: '10px' }} />
     );
 
     expect(getByText('im p')).toHaveStyle('padding: 10px;');

@@ -35,7 +35,7 @@ export const InputIcon = ({
         appearance={appearance}
         type="submit"
         icon={icon}
-        customStyle={buttonStyle}
+        sx={buttonStyle}
         onClick={onClick}
       />
     </div>

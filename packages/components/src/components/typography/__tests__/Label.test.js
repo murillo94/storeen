@@ -59,7 +59,7 @@ describe('Label', () => {
 
   test('should have custom style', () => {
     const { getByText } = render(
-      <LabelCustom customStyle={{ padding: '10px' }} />
+      <LabelCustom sx={{ padding: '10px' }} />
     );
 
     expect(getByText('content')).toHaveStyle('padding: 10px;');

@@ -181,7 +181,7 @@ const AddPromotion = () => {
         </Disclosure>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

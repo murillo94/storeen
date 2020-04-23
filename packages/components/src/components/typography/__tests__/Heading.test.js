@@ -46,7 +46,7 @@ describe('Heading', () => {
 
     test('should have custom style', () => {
       const { getByRole } = render(
-        <Heading customStyle={{ padding: '10px' }} />
+        <Heading sx={{ padding: '10px' }} />
       );
 
       expect(getByRole('heading')).toHaveStyle('padding: 10px');
@@ -88,7 +88,7 @@ describe('Heading', () => {
 
     test('should have custom style', () => {
       const { getByRole } = render(
-        <Heading is="h2" customStyle={{ padding: '10px' }} />
+        <Heading is="h2" sx={{ padding: '10px' }} />
       );
 
       expect(getByRole('heading')).toHaveStyle('padding: 10px');
@@ -130,7 +130,7 @@ describe('Heading', () => {
 
     test('should have custom style', () => {
       const { getByRole } = render(
-        <Heading is="h3" customStyle={{ padding: '10px' }} />
+        <Heading is="h3" sx={{ padding: '10px' }} />
       );
 
       expect(getByRole('heading')).toHaveStyle('padding: 10px;');
@@ -172,7 +172,7 @@ describe('Heading', () => {
 
     test('should have custom style', () => {
       const { getByRole } = render(
-        <Heading is="h4" customStyle={{ padding: '10px' }} />
+        <Heading is="h4" sx={{ padding: '10px' }} />
       );
 
       expect(getByRole('heading')).toHaveStyle('padding: 10px');

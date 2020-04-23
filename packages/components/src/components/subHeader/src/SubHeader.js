@@ -18,9 +18,7 @@ export const SubHeader = ({
             onClick={onClick}
           />
         )}
-        <Heading customStyle={{ margin: hasBack ? '0 0 0 5px' : 0 }}>
-          {title}
-        </Heading>
+        <Heading marginLeft={hasBack ? 1 : 0}>{title}</Heading>
       </div>
       {children && <div>{children}</div>}
     </header>

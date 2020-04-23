@@ -3,8 +3,7 @@ import App from '../pages';
 import { Heading } from '@storeen/components';
 
 const descriptionStyle = {
-  fontWeight: 'normal',
-  margin: '7px 0 45px'
+  fontWeight: 'normal'
 };
 
 export default frontMatter => {
@@ -12,7 +11,13 @@ export default frontMatter => {
     return (
       <App>
         <Heading>{frontMatter.title}</Heading>
-        <Heading is="h2" color="muted" customStyle={descriptionStyle}>
+        <Heading
+          is="h2"
+          color="muted"
+          marginTop={2}
+          marginBottom={8}
+          sx={descriptionStyle}
+        >
           {frontMatter.description}
         </Heading>
         {children}

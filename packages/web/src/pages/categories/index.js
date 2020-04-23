@@ -11,7 +11,7 @@ const Categories = () => {
 
   return (
     <SubHeader title="Categorias">
-      <Button text="Nova categoria" onClick={handleAddCategorie} />
+      <Button onClick={handleAddCategorie}>Nova categoria</Button>
     </SubHeader>
   );
 };

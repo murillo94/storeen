@@ -23,7 +23,7 @@ export const Switch = ({
       <div>
         <Text
           color={colorText}
-          customStyle={{ marginRight: leftText && '7px' }}
+          sx={{ marginRight: leftText && '7px' }}
         >
           {leftText}
         </Text>
@@ -44,7 +44,7 @@ export const Switch = ({
         </Label>
         <Text
           color={colorText}
-          customStyle={{ marginLeft: rightText && '7px' }}
+          sx={{ marginLeft: rightText && '7px' }}
         >
           {rightText}
         </Text>

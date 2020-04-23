@@ -6,7 +6,9 @@ export const theming = {
     '15px',
     '20px',
     '25px',
+    '30px',
     '35px',
+    '40px',
     '45px',
     '65px',
     '80px'

@@ -8,10 +8,6 @@ const labelStyle = {
   display: 'inline-flex'
 };
 
-const descriptionStyle = {
-  margin: '5px 0 0'
-};
-
 export const Radio = ({
   children,
   appearance = 'minimal',
@@ -32,7 +28,7 @@ export const Radio = ({
           description && 'with-description'
         }`}
       >
-        <Label id={`${id}-radio-label`} htmlFor={id} customStyle={labelStyle}>
+        <Label id={`${id}-radio-label`} htmlFor={id} sx={labelStyle}>
           <input
             type="radio"
             id={id}
@@ -47,7 +43,7 @@ export const Radio = ({
           <span>{children}</span>
         </Label>
         {description && (
-          <Paragraph color="muted" customStyle={descriptionStyle}>
+          <Paragraph color="muted" marginTop={1}>
             {description}
           </Paragraph>
         )}

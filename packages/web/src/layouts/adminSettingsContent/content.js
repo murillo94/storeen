@@ -2,11 +2,15 @@ import AdminPage from '../adminContent';
 
 import { TabList, Tab } from '@storeen/components';
 
-const Content = ({ children, options, padding, customStyle }) => (
+const sidebarStyle = {
+  width: '225px'
+};
+
+const Content = ({ children, options, padding }) => (
   <>
     <AdminPage padding={padding}>
       <div className="sidebar">
-        <TabList customStyle={customStyle}>
+        <TabList marginRight={6} sx={sidebarStyle}>
           {options.map(item => (
             <Tab
               key={item.name}
@@ -30,7 +34,7 @@ const Content = ({ children, options, padding, customStyle }) => (
           width: 100%;
         }
 
-        @media (max-width: 746px) {
+        @media (max-width: 40em) {
           .sidebar {
             flex-direction: column;
           }

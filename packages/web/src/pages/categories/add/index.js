@@ -65,7 +65,7 @@ const AddCategorie = () => {
         </Radio>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

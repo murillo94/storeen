@@ -19,10 +19,6 @@ import useSettingsPayments from '../../../containers/useSettingsPayments';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const descriptionStyle = {
-  margin: '0 0 20px'
-};
-
 const ContainerPayment = ({ children, disclosure, onClick }) => (
   <>
     <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
@@ -63,7 +59,7 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isVisible={mercadoPago.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 do Mercado Pago. Mais informações sobre como conectar o Mercado
                 Pago podem ser encontradas aqui.
@@ -97,7 +93,7 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isVisible={wirecard.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da Wirecard. Mais informações sobre como conectar o Wirecard
                 podem ser encontradas aqui.
@@ -131,7 +127,7 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isVisible={pagSeguro.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da PagSeguro. Mais informações sobre como conectar o PagSeguro
                 podem ser encontradas aqui.
@@ -165,7 +161,7 @@ const PaymentsSettings = () => {
         <ContainerPayment
           disclosure={
             <Disclosure isVisible={paypal.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Informe o endereço de e-mail que você usou para criar sua conta
                 da PayPal. Mais informações sobre como conectar o PayPal podem
                 ser encontradas aqui.
@@ -198,7 +194,7 @@ const PaymentsSettings = () => {
         </ContainerPayment>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
       <Dialog isVisible={visibleDialog} onClose={handleClickDialog}>
         todo
