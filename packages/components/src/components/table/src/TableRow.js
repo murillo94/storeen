@@ -1,4 +1,4 @@
-import { gray0, gray75, gray100 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 export const TableRow = ({
   children,
@@ -12,8 +12,8 @@ export const TableRow = ({
     <style jsx>
       {`
         tr {
-          background-color: ${gray0};
-          border-bottom: 1px solid ${gray100};
+          background-color: ${theming.colors.gray0};
+          border-bottom: 1px solid ${theming.colors.gray100};
           height: 64px;
           cursor: ${onClick ? 'pointer' : 'default'};
         }
@@ -23,7 +23,7 @@ export const TableRow = ({
         }
 
         :hover {
-          background-color: ${isHover && gray75};
+          background-color: ${isHover && theming.colors.gray75};
         }
       `}
     </style>

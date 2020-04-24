@@ -1,6 +1,8 @@
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, borderRadius5 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius5 } from '@storeen/system';
 
 export const MenuGroup = ({
   children,
@@ -19,7 +21,7 @@ export const MenuGroup = ({
       <style jsx>
         {`
           ul {
-            background-color: ${gray0};
+            background-color: ${theming.colors.gray0};
             border: 1px solid ${theme.borderColor};
             border-radius: ${borderRadius5};
             list-style: none;

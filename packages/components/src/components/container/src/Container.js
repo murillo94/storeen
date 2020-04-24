@@ -1,7 +1,9 @@
 import { Form } from '../../form';
 import { Heading, Paragraph } from '../../typography';
 
-import { gray0, gray100, borderRadius6 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius6 } from '@storeen/system';
 
 export const Container = ({
   children,
@@ -37,10 +39,10 @@ export const Container = ({
     <style jsx>
       {`
         section {
-          background-color: ${gray0};
+          background-color: ${theming.colors.gray0};
           box-shadow: ${hasBoxShadow &&
           '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
-          border: ${hasBorder && `1px solid ${gray100}`};
+          border: ${hasBorder && `1px solid ${theming.colors.gray100}`};
           border-radius: ${borderRadius6};
           width: 100%;
           overflow: hidden;

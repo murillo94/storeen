@@ -1,4 +1,4 @@
-import { purple100, purple800, gray100, gray800 } from '@storeen/system';
+import { theming } from '@storeen/components';
 
 export const Code = ({ children, variant = 'normal' }) => (
   <>
@@ -12,13 +12,13 @@ export const Code = ({ children, variant = 'normal' }) => (
         }
 
         .normal {
-          background-color: ${purple100};
-          color: ${purple800};
+          background-color: ${theming.colors.purple100};
+          color: ${theming.colors.purple800};
         }
 
         .fade {
-          background-color: ${gray100};
-          color: ${gray800};
+          background-color: ${theming.colors.gray100};
+          color: theming};
         }
       `}
     </style>

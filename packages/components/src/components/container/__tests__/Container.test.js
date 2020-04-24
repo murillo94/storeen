@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Container } from '../index';
 
-import { gray100 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im content';
 
@@ -94,6 +94,8 @@ describe('Container', () => {
   test('should have border', () => {
     const { getByText } = render(<Container hasBorder>{content}</Container>);
 
-    expect(getByText(content)).toHaveStyle(`border: 1px solid ${gray100};`);
+    expect(getByText(content)).toHaveStyle(
+      `border: 1px solid ${theming.colors.gray100};`
+    );
   });
 });

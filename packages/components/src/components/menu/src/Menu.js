@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 
 import { Button } from '../../button';
 
-import { gray0 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 export const Menu = ({
   children,
@@ -48,7 +48,7 @@ export const Menu = ({
       <style jsx>
         {`
           div {
-            background-color: ${gray0};
+            background-color: ${theming.colors.gray0};
             position: relative;
             z-index: 1;
           }

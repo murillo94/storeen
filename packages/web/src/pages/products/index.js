@@ -13,12 +13,11 @@ import {
   TableRow,
   TableBodyCell,
   TextTableCell,
-  Icon
+  Icon,
+  theming
 } from '@storeen/components';
 
 import useLayout from '../../hooks/layout/useLayout';
-
-import { green700, red700 } from '@storeen/system';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [
@@ -101,7 +100,14 @@ const Products = () => {
             </TableBodyCell>
             <TableBodyCell>
               <TextTableCell>
-                <Icon name="eye" color={item.visible ? green700 : red700} />
+                <Icon
+                  name="eye"
+                  color={
+                    item.visible
+                      ? theming.colors.green700
+                      : theming.colors.red700
+                  }
+                />
               </TextTableCell>
             </TableBodyCell>
           </TableRow>

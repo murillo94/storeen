@@ -3,7 +3,9 @@ import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, borderRadius6 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius6 } from '@storeen/system';
 
 export const Badge = ({
   appearance = 'default',
@@ -13,7 +15,7 @@ export const Badge = ({
   const theme = useTheme(appearance);
   const badgeStyle = {
     color: theme.borderColor,
-    backgroundColor: gray0,
+    backgroundColor: theming.colors.gray0,
     border: `1px solid ${theme.borderColor}`,
     borderRadius: borderRadius6
   };

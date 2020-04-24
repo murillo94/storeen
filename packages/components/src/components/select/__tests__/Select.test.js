@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Select } from '../index';
 
-import { purple700, gray200, red700, green700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im content';
 const options = [
@@ -92,14 +92,16 @@ describe('Select', () => {
     );
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${purple700};`
+      `border: 1px solid ${theming.colors.purple700};`
     );
   });
 
   test('should have default as minimal theme', () => {
     const { getByRole } = render(<Select>{content}</Select>);
 
-    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${gray200};`);
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${theming.colors.gray200};`
+    );
   });
 
   test('should have negative theme', () => {
@@ -107,14 +109,14 @@ describe('Select', () => {
       <Select appearance="negative">{content}</Select>
     );
 
-    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${red700};`);
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${theming.colors.red700};`
+    );
   });
 
   test('should have positive theme', () => {
     const { getByRole } = render(
       <Select appearance="positive">{content}</Select>
     );
-
-    expect(getByRole('combobox')).toHaveStyle(`border: 1px solid ${green700};`);
   });
 });

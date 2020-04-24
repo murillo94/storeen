@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Badge } from '../index';
 
-import { purple700, gray200, red700, green700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im text';
 
@@ -41,8 +41,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${purple700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${purple700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.purple700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
   });
 
   test('should have minimal theme', () => {
@@ -50,8 +50,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${gray200};`);
-    expect(text).toHaveStyle(`border: 1px solid ${gray200};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.gray200};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -61,8 +61,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${red700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${red700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.red700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.red700};`);
   });
 
   test('should have positive theme', () => {
@@ -71,8 +71,5 @@ describe('Badge', () => {
     );
 
     const text = getByText(content);
-
-    expect(text).toHaveStyle(`color: ${green700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${green700};`);
   });
 });

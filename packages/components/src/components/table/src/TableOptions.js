@@ -1,7 +1,7 @@
 import { Input } from '../../input';
 import { FormGroup } from '../../form';
 
-import { gray75 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 export const TableOptions = ({
   children,
@@ -36,8 +36,8 @@ export const TableOptions = ({
 
         div :global(input),
         div :global(button[type='submit']) {
-          background-color: ${gray75};
-          border-color: ${gray75};
+          background-color: ${theming.colors.gray75};
+          border-color: ${theming.colors.gray75};
         }
 
         div :global(.form-group) :global(div) > :global(button) {

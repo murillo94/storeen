@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import { Image, Heading, TabList, Tab } from '@storeen/components';
+import { Image, Heading, TabList, Tab, theming } from '@storeen/components';
 
-import { gray0, gray100, gray200, borderRadius8 } from '@storeen/system';
+import { borderRadius8 } from '@storeen/system';
 
 import { frontMatter as docsPages } from './docs/*.mdx';
 
@@ -98,8 +98,8 @@ const App = ({ children }) => {
           }
 
           nav {
-            background-color: ${gray0};
-            border-right: 1px solid ${gray200};
+            background-color: ${theming.colors.gray0};
+            border-right: 1px solid ${theming.colors.gray200};
             text-align: center;
             padding: 20px 0 10px;
             width: 220px;
@@ -119,7 +119,7 @@ const App = ({ children }) => {
           hr {
             width: 100%;
             border: none;
-            border-top: 1px solid ${gray100};
+            border-top: 1px solid ${theming.colors.gray100};
             margin: 0px 0px 5px;
           }
 

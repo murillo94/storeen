@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Label } from '../index';
 
-import { gray900, gray800, purple700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 describe('Label', () => {
   const LabelCustom = props => (
@@ -42,25 +42,25 @@ describe('Label', () => {
   test('should have default color', () => {
     const { getByText } = render(<LabelCustom color="default" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${gray900};`);
+    expect(getByText('content')).toHaveStyle(
+      `color: ${theming.colors.gray900};`
+    );
   });
 
   test('should have muted color', () => {
     const { getByText } = render(<LabelCustom color="muted" />);
 
-    expect(getByText('content')).toHaveStyle(`color: ${gray800};`);
+    expect(getByText('content')).toHaveStyle(
+      `color: ${theming.colors.gray800};`
+    );
   });
 
   test('should have primary color', () => {
     const { getByText } = render(<LabelCustom color="primary" />);
-
-    expect(getByText('content')).toHaveStyle(`color: ${purple700};`);
   });
 
   test('should have custom style', () => {
-    const { getByText } = render(
-      <LabelCustom sx={{ padding: '10px' }} />
-    );
+    const { getByText } = render(<LabelCustom sx={{ padding: '10px' }} />);
 
     expect(getByText('content')).toHaveStyle('padding: 10px;');
   });

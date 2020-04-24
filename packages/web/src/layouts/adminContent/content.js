@@ -9,10 +9,11 @@ import {
   TabList,
   Tab,
   Header,
-  Button
+  Button,
+  theming
 } from '@storeen/components';
 
-import { gray0, gray200, borderRadius8 } from '@storeen/system';
+import { borderRadius8 } from '@storeen/system';
 
 const Logo = () => (
   <>
@@ -132,8 +133,8 @@ const Content = ({ children, padding }) => {
           }
 
           nav {
-            background-color: ${gray0};
-            border-right: 1px solid ${gray200};
+            background-color: ${theming.colors.gray0};
+            border-right: 1px solid ${theming.colors.gray200};
             text-align: center;
             padding: 20px 0 10px;
             width: 180px;

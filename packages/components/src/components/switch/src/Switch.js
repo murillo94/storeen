@@ -2,7 +2,9 @@ import { Text, Label } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, gray200, primary } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { primary } from '@storeen/system';
 
 export const Switch = ({
   appearance = 'minimal',
@@ -21,10 +23,7 @@ export const Switch = ({
   return (
     <>
       <div>
-        <Text
-          color={colorText}
-          sx={{ marginRight: leftText && '7px' }}
-        >
+        <Text color={colorText} sx={{ marginRight: leftText && '7px' }}>
           {leftText}
         </Text>
         <Label id={`${id}-switch-label`} htmlFor={id}>
@@ -42,10 +41,7 @@ export const Switch = ({
           />
           <span />
         </Label>
-        <Text
-          color={colorText}
-          sx={{ marginLeft: rightText && '7px' }}
-        >
+        <Text color={colorText} sx={{ marginLeft: rightText && '7px' }}>
           {rightText}
         </Text>
       </div>
@@ -69,7 +65,7 @@ export const Switch = ({
           }
 
           span {
-            background-color: ${gray200};
+            background-color: ${theming.colors.gray200};
             border-radius: 20px;
             width: 44px;
             height: 22px;
@@ -81,7 +77,7 @@ export const Switch = ({
 
           span:before {
             content: '';
-            background-color: ${gray0};
+            background-color: ${theming.colors.gray0};
             border-radius: 50%;
             margin-left: 3px;
             width: 18px;
@@ -100,7 +96,7 @@ export const Switch = ({
           }
 
           input:checked + span:before {
-            background-color: ${gray0};
+            background-color: ${theming.colors.gray0};
             margin-left: 5px;
             transform: translateX(100%);
           }

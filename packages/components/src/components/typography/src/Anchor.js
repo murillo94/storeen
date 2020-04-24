@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 import useFont from '../utils/useFont';
 
-import { fontSize14, purple700, primary } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { fontSize14, primary } from '@storeen/system';
 
 export const Anchor = memo(
   ({ children, href = '', color = 'inherit', ariaLabel = null }) => {
@@ -27,7 +29,7 @@ export const Anchor = memo(
 
             :focus {
               box-shadow: ${primary};
-              border-color: ${purple700};
+              border-color: ${theming.colors.purple700};
             }
           `}
         </style>

@@ -1,7 +1,9 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import { fontSize14, purple700, gray0, gray75, gray900 } from '@storeen/system';
+import { theming } from '@storeen/components';
+
+import { fontSize14 } from '@storeen/system';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -34,8 +36,8 @@ class CustomDocument extends Document {
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;
-                  background-color: ${gray75};
-                  color: ${gray900};
+                  background-color: ${theming.colors.gray75};
+                  color: ${theming.colors.gray900};
                   margin: 0;
                 }
 
@@ -44,8 +46,8 @@ class CustomDocument extends Document {
                 }
 
                 ::selection {
-                  background-color: ${purple700};
-                  color: ${gray0};
+                  background-color: ${theming.colors.purple700};
+                  color: ${theming.colors.gray0};
                 }
               `
             }}

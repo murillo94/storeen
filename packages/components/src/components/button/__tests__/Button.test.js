@@ -2,14 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Button } from '../index';
 
-import {
-  purple700,
-  gray0,
-  gray900,
-  gray200,
-  red700,
-  green700
-} from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im content';
 
@@ -27,7 +20,9 @@ describe('Button', () => {
 
     expect(button).toHaveTextContent(content);
     expect(button).toHaveAttribute('type', 'button');
-    expect(button).toHaveStyle(`border: 1px solid ${purple700};`);
+    expect(button).toHaveStyle(
+      `border: 1px solid ${theming.colors.purple700};`
+    );
     expect(button).toHaveStyle('width: auto;');
     expect(button).not.toBeDisabled();
   });
@@ -68,9 +63,7 @@ describe('Button', () => {
 
   test('should have custom style', () => {
     const { getByRole } = render(
-      <Button sx={{ margin: '10px', backgroundColor: 'red' }}>
-        {content}
-      </Button>
+      <Button sx={{ margin: '10px', backgroundColor: 'red' }}>{content}</Button>
     );
 
     const button = getByRole('button');
@@ -94,9 +87,13 @@ describe('Button', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${gray0};`);
-    expect(button).toHaveStyle(`background-color: ${purple700};`);
-    expect(button).toHaveStyle(`border: 1px solid ${purple700};`);
+    expect(button).toHaveStyle(`color: ${theming.colors.gray0};`);
+    expect(button).toHaveStyle(
+      `background-color: ${theming.colors.purple700};`
+    );
+    expect(button).toHaveStyle(
+      `border: 1px solid ${theming.colors.purple700};`
+    );
   });
 
   test('should have minimal theme', () => {
@@ -106,9 +103,9 @@ describe('Button', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${gray900};`);
+    expect(button).toHaveStyle(`color: ${theming.colors.gray900};`);
     expect(button).toHaveStyle('background-color: transparent;');
-    expect(button).toHaveStyle(`border: 1px solid ${gray200};`);
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -118,9 +115,9 @@ describe('Button', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${gray0};`);
-    expect(button).toHaveStyle(`background-color: ${red700};`);
-    expect(button).toHaveStyle(`border: 1px solid ${red700};`);
+    expect(button).toHaveStyle(`color: ${theming.colors.gray0};`);
+    expect(button).toHaveStyle(`background-color: ${theming.colors.red700};`);
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.red700};`);
   });
 
   test('should have positive theme', () => {
@@ -130,9 +127,9 @@ describe('Button', () => {
 
     const button = getByRole('button');
 
-    expect(button).toHaveStyle(`color: ${gray0};`);
-    expect(button).toHaveStyle(`background-color: ${green700};`);
-    expect(button).toHaveStyle(`border: 1px solid ${green700};`);
+    expect(button).toHaveStyle(`color: ${theming.colors.gray0};`);
+    expect(button).toHaveStyle(`background-color: ${theming.colors.green700};`);
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.green700};`);
   });
 
   test('should have custom props', () => {

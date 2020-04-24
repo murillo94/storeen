@@ -4,7 +4,9 @@ import { Button } from '../../button';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, purple700, borderRadius5, primary } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius5, primary } from '@storeen/system';
 
 const buttonStyle = {
   justifyContent: 'flex-start',
@@ -31,7 +33,7 @@ const MenuItemLink = ({ children, href }) => (
 
         :focus {
           box-shadow: ${primary};
-          border-color: ${purple700};
+          border-color: ${theming.colors.purple700};
         }
       `}
     </style>
@@ -74,7 +76,7 @@ export const MenuItem = ({
       <style jsx>
         {`
           li {
-            background-color: ${gray0};
+            background-color: ${theming.colors.gray0};
             border-radius: ${borderRadius5};
             margin: 3px 0;
             cursor: pointer;

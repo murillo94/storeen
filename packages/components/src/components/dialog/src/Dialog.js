@@ -1,6 +1,8 @@
 import { Overlay } from '../../overlay';
 
-import { gray0, gray200, borderRadius6 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius6 } from '@storeen/system';
 
 export const Dialog = ({
   children,
@@ -30,8 +32,8 @@ export const Dialog = ({
     <style jsx>
       {`
         div {
-          background-color: ${gray0};
-          border: 1px solid ${gray200};
+          background-color: ${theming.colors.gray0};
+          border: 1px solid ${theming.colors.gray200};
           border-radius: ${borderRadius6};
           padding: 20px;
           width: ${width};

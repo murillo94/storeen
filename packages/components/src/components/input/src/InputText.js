@@ -2,7 +2,9 @@ import MaskedInput from 'react-text-mask';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { fontSize14, gray500, borderRadius6 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { fontSize14, borderRadius6 } from '@storeen/system';
 
 import { MASKS } from '../utils/mask';
 
@@ -63,7 +65,7 @@ const Input = ({
           }
 
           ::placeholder {
-            color: ${gray500};
+            color: ${theming.colors.gray500};
           }
         `}
       </style>

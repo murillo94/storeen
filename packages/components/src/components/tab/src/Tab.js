@@ -7,12 +7,9 @@ import { Button } from '../../button';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import {
-  purple700,
-  borderRadius6,
-  primary,
-  fontWeight500
-} from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius6, primary, fontWeight500 } from '@storeen/system';
 
 const buttonStyle = {
   width: '100%'
@@ -52,7 +49,7 @@ const TabLink = ({ children, href, text, isExternal }) => {
 
           :focus {
             box-shadow: ${primary};
-            border-color: ${purple700};
+            border-color: ${theming.colors.purple700};
           }
         `}
       </style>

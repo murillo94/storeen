@@ -2,16 +2,9 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Tab } from '../index';
 
-import {
-  purple700,
-  purple600,
-  gray100,
-  red700,
-  red600,
-  green700,
-  green600,
-  borderRadius6
-} from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { borderRadius6 } from '@storeen/system';
 
 const content = 'im content';
 
@@ -77,7 +70,9 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${gray100}; opacity: 1;`);
+    expect(tab).toHaveStyle(
+      `background-color: ${theming.colors.gray100}; opacity: 1;`
+    );
   });
 
   test('should have selected with href', () => {
@@ -85,7 +80,9 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${gray100}; opacity: 1;`);
+    expect(tab).toHaveStyle(
+      `background-color: ${theming.colors.gray100}; opacity: 1;`
+    );
   });
 
   test('should have default theme', () => {
@@ -93,12 +90,12 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${purple700};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.purple700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
     rerender(<Tab appearance="default" isSelected />);
 
-    expect(tab).toHaveStyle(`background-color: ${purple600};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.purple600};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -111,7 +108,7 @@ describe('Tab', () => {
 
     rerender(<Tab isSelected />);
 
-    expect(tab).toHaveStyle(`background-color: ${gray100};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.gray100};`);
   });
 
   test('should have negative theme', () => {
@@ -119,12 +116,12 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${red700};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.red700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
     rerender(<Tab appearance="negative" isSelected />);
 
-    expect(tab).toHaveStyle(`background-color: ${red600};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.red600};`);
   });
 
   test('should have positive theme', () => {
@@ -132,11 +129,11 @@ describe('Tab', () => {
 
     const tab = getByRole('tab');
 
-    expect(tab).toHaveStyle(`background-color: ${green700};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.green700};`);
     expect(tab).toHaveStyle(`border-radius: ${borderRadius6};`);
 
     rerender(<Tab appearance="positive" isSelected />);
 
-    expect(tab).toHaveStyle(`background-color: ${green600};`);
+    expect(tab).toHaveStyle(`background-color: ${theming.colors.green600};`);
   });
 });

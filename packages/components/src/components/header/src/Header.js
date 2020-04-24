@@ -1,4 +1,4 @@
-import { gray0, gray200 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 export const Header = ({ children }) => (
   <>
@@ -7,8 +7,8 @@ export const Header = ({ children }) => (
     <style jsx>
       {`
         header {
-          background-color: ${gray0};
-          border-bottom: 1px solid ${gray200};
+          background-color: ${theming.colors.gray0};
+          border-bottom: 1px solid ${theming.colors.gray200};
           padding: 10px;
           position: sticky;
           top: 0;
