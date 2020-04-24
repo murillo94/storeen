@@ -9,8 +9,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { primary } from '@storeen/system';
-
 const buttonStyle = {
   width: '100%'
 };
@@ -48,7 +46,7 @@ const TabLink = ({ children, href, text, isExternal }) => {
           }
 
           :focus {
-            box-shadow: ${primary};
+            box-shadow: ${theming.shadows[0]};
             border-color: ${theming.colors.purple700};
           }
         `}

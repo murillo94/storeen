@@ -4,8 +4,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { primary } from '@storeen/system';
-
 export const Switch = ({
   appearance = 'minimal',
   id = null,
@@ -88,7 +86,7 @@ export const Switch = ({
 
           input:focus + span {
             border: ${theme.focus.borderColor};
-            box-shadow: ${primary};
+            box-shadow: ${theming.shadows[0]};
           }
 
           input:checked + span {

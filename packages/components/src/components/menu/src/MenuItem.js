@@ -6,8 +6,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { primary } from '@storeen/system';
-
 const buttonStyle = {
   justifyContent: 'flex-start',
   width: '100%'
@@ -32,7 +30,7 @@ const MenuItemLink = ({ children, href }) => (
         }
 
         :focus {
-          box-shadow: ${primary};
+          box-shadow: ${theming.shadows[0]};
           border-color: ${theming.colors.purple700};
         }
       `}

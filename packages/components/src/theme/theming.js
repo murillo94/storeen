@@ -16,6 +16,11 @@ export const theming = {
     '80px'
   ],
   radii: ['0', '4px', '5px', '6px', '8px'],
+  shadows: [
+    '0 0 0 3px rgba(85, 121, 229, 0.25)',
+    '0 0 0 3px rgba(206,65,49, 0.25)',
+    '0 0 0 3px rgba(6,146,81, 0.25)'
+  ],
   colors: {
     purple100: '#bfcfff',
     purple200: '#afc3ff',

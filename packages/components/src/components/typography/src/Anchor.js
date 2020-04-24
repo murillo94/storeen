@@ -6,8 +6,6 @@ import { theming } from '../../../theme/theming';
 
 import useFont from '../utils/useFont';
 
-import { primary } from '@storeen/system';
-
 export const Anchor = memo(
   ({ children, href = '', color = 'inherit', ariaLabel = null }) => {
     const fontColor = useFont(color);
@@ -28,7 +26,7 @@ export const Anchor = memo(
             }
 
             :focus {
-              box-shadow: ${primary};
+              box-shadow: ${theming.shadows[0]};
               border-color: ${theming.colors.purple700};
             }
           `}

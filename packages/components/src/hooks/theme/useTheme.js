@@ -1,7 +1,5 @@
 import { theming } from '../../theme/theming';
 
-import { primary, negative, positive } from '@storeen/system';
-
 const theme = {
   default: {
     color: theming.colors.gray0,
@@ -13,7 +11,7 @@ const theme = {
       borderColor: theming.colors.purple600
     },
     focus: {
-      boxShadow: primary,
+      boxShadow: theming.shadows[0],
       borderColor: theming.colors.purple700
     }
   },
@@ -27,7 +25,7 @@ const theme = {
       borderColor: theming.colors.gray100
     },
     focus: {
-      boxShadow: primary,
+      boxShadow: theming.shadows[0],
       borderColor: theming.colors.purple700
     }
   },
@@ -41,7 +39,7 @@ const theme = {
       borderColor: theming.colors.red600
     },
     focus: {
-      boxShadow: negative,
+      boxShadow: theming.shadows[1],
       borderColor: theming.colors.red600
     }
   },
@@ -55,7 +53,7 @@ const theme = {
       borderColor: theming.colors.green600
     },
     focus: {
-      boxShadow: positive,
+      boxShadow: theming.shadows[2],
       borderColor: theming.colors.green600
     }
   }
