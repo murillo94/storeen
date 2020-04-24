@@ -6,7 +6,7 @@ import useStyle from '../../../hooks/theme/useStyle';
 
 import { theming } from '../../../theme/theming';
 
-import { fontWeight500, borderRadius6, fontWeight400 } from '@storeen/system';
+import { fontWeight500, fontWeight400 } from '@storeen/system';
 
 export const Button = useStyle(
   ({
@@ -50,7 +50,7 @@ export const Button = useStyle(
               color: ${theme.color};
               background-color: ${theme.backgroundColor};
               border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
-              border-radius: ${borderRadius6};
+              border-radius: ${theming.radii[3]};
               padding: 10px;
               width: auto;
               outline: 0;

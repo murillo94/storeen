@@ -2,8 +2,6 @@ import { Overlay } from '../../overlay';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 export const Dialog = ({
   children,
   role = 'dialog',
@@ -34,7 +32,7 @@ export const Dialog = ({
         div {
           background-color: ${theming.colors.gray0};
           border: 1px solid ${theming.colors.gray200};
-          border-radius: ${borderRadius6};
+          border-radius: ${theming.radii[3]};
           padding: 20px;
           width: ${width};
           max-height: calc(100vh - 56px);

@@ -4,8 +4,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 import { MASKS } from '../utils/mask';
 
 const Input = ({
@@ -43,7 +41,7 @@ const Input = ({
             font-size: ${theming.fontSizes[0]};
             background-clip: padding-box;
             border: 1px solid ${theme.borderColor};
-            border-radius: ${borderRadius6};
+            border-radius: ${theming.radii[3]};
             padding: 10px;
             outline: 0;
             width: 100%;

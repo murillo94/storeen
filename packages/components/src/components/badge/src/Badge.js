@@ -5,8 +5,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 export const Badge = ({
   appearance = 'default',
   text = '',
@@ -17,7 +15,7 @@ export const Badge = ({
     color: theme.borderColor,
     backgroundColor: theming.colors.gray0,
     border: `1px solid ${theme.borderColor}`,
-    borderRadius: borderRadius6
+    borderRadius: theming.radii[3]
   };
 
   return (

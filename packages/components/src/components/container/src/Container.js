@@ -3,8 +3,6 @@ import { Heading, Paragraph } from '../../typography';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 export const Container = ({
   children,
   title = '',
@@ -43,7 +41,7 @@ export const Container = ({
           box-shadow: ${hasBoxShadow &&
           '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
           border: ${hasBorder && `1px solid ${theming.colors.gray100}`};
-          border-radius: ${borderRadius6};
+          border-radius: ${theming.radii[3]};
           width: 100%;
           overflow: hidden;
         }

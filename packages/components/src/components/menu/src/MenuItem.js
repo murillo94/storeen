@@ -6,7 +6,7 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius5, primary } from '@storeen/system';
+import { primary } from '@storeen/system';
 
 const buttonStyle = {
   justifyContent: 'flex-start',
@@ -77,7 +77,7 @@ export const MenuItem = ({
         {`
           li {
             background-color: ${theming.colors.gray0};
-            border-radius: ${borderRadius5};
+            border-radius: ${theming.radii[2]};
             margin: 3px 0;
             cursor: pointer;
             display: flex;

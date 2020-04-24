@@ -13,8 +13,6 @@ import {
   theming
 } from '@storeen/components';
 
-import { borderRadius8 } from '@storeen/system';
-
 const Logo = () => (
   <>
     <Image
@@ -177,7 +175,7 @@ const Content = ({ children, padding }) => {
             }
 
             :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${borderRadius8};
+              border-radius: ${theming.radii[4]};
               margin: 10px;
             }
 

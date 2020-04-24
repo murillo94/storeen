@@ -5,8 +5,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 export const Select = ({
   appearance = 'minimal',
   id = null,
@@ -64,7 +62,7 @@ export const Select = ({
             background-color: ${theming.colors.gray0};
             background-clip: padding-box;
             border: 1px solid ${theme.borderColor};
-            border-radius: ${borderRadius6};
+
             padding: 10px 30px 10px 10px;
             outline: 0;
             appearance: none;

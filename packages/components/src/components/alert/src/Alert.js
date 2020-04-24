@@ -4,8 +4,6 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6 } from '@storeen/system';
-
 export const Alert = ({
   children,
   appearance = 'positive',
@@ -30,7 +28,7 @@ export const Alert = ({
             background-color: ${theming.colors.gray0};
             border: 1px solid ${theming.colors.gray100};
             border-left: 4px solid ${theme.borderColor};
-            border-radius: ${borderRadius6};
+            border-radius: ${theming.radii[3]};
             padding: 15px;
             margin-bottom: 20px;
           }

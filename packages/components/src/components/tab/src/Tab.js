@@ -9,7 +9,7 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { borderRadius6, primary, fontWeight500 } from '@storeen/system';
+import { primary, fontWeight500 } from '@storeen/system';
 
 const buttonStyle = {
   width: '100%'
@@ -99,7 +99,7 @@ export const Tab = withRouter(
             li {
               background-color: ${theme.backgroundColor};
               color: inherit;
-              border-radius: ${borderRadius6};
+              border-radius: ${theming.radii[3]};
               text-align: left;
               white-space: nowrap;
               margin: 6px 10px;

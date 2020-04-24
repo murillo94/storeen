@@ -14,6 +14,7 @@ export const theming = {
     '65px',
     '80px'
   ],
+  radii: ['0', '4px', '5px', '6px', '8px'],
   colors: {
     purple100: '#bfcfff',
     purple200: '#afc3ff',

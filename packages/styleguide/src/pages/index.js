@@ -1,8 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Image, Heading, TabList, Tab, theming } from '@storeen/components';
 
-import { borderRadius8 } from '@storeen/system';
-
 import { frontMatter as docsPages } from './docs/*.mdx';
 
 const headingStyle = {
@@ -141,7 +139,7 @@ const App = ({ children }) => {
 
           @media (max-width: 64em) {
             :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${borderRadius8};
+              border-radius: ${theming.radii[4]};
             }
 
             .main-container {
