@@ -1,5 +1,6 @@
 export const theming = {
   fontSizes: ['14px', '16px', '18px', '28px'],
+  fontWeights: ['400', '500', '600'],
   space: [
     '0',
     '5px',

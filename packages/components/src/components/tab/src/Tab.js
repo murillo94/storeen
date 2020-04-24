@@ -9,7 +9,7 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { primary, fontWeight500 } from '@storeen/system';
+import { primary } from '@storeen/system';
 
 const buttonStyle = {
   width: '100%'
@@ -60,7 +60,9 @@ const TabLink = ({ children, href, text, isExternal }) => {
 const Content = ({ text, icon }) => (
   <>
     {icon && <Icon name={icon} size={20} />}
-    <Text sx={{ margin: icon && '0 0 0 10px', fontWeight: fontWeight500 }}>
+    <Text
+      sx={{ margin: icon && '0 0 0 10px', fontWeight: theming.fontWeights[1] }}
+    >
       {text}
     </Text>
   </>

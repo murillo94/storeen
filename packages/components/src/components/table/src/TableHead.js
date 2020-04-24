@@ -2,10 +2,10 @@ import { TableRow } from './TableRow';
 import { TableHeadCell } from './TableHeadCell';
 import { TextTableCell } from './TextTableCell';
 
-import { fontWeight500 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const textHeaderStyle = {
-  fontWeight: fontWeight500
+  fontWeight: theming.fontWeights[1]
 };
 
 export const TableHead = ({ headers = [] }) => (

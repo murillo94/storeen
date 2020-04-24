@@ -6,8 +6,6 @@ import { theming } from '../../../theme/theming';
 
 import useFont from '../utils/useFont';
 
-import { fontWeight600 } from '@storeen/system';
-
 const H1 = ({ children, className, styles, color }) => (
   <h1 className={className}>
     {children}
@@ -16,7 +14,7 @@ const H1 = ({ children, className, styles, color }) => (
       {`
          {
           font-size: ${theming.fontSizes[3]};
-          font-weight: ${fontWeight600};
+          font-weight: ${theming.fontWeights[2]};
           color: ${color};
           margin: 0;
         }
@@ -34,7 +32,7 @@ const H2 = ({ children, className, styles, color }) => (
       {`
          {
           font-size: ${theming.fontSizes[2]};
-          font-weight: ${fontWeight600};
+          font-weight: ${theming.fontWeights[2]};
           color: ${color};
           margin: 0;
         }
@@ -52,7 +50,7 @@ const H3 = ({ children, className, styles, color }) => (
       {`
          {
           font-size: ${theming.fontSizes[1]};
-          font-weight: ${fontWeight600};
+          font-weight: ${theming.fontWeights[2]};
           color: ${color};
           margin: 0;
         }
@@ -70,7 +68,7 @@ const H4 = ({ children, className, styles, color }) => (
       {`
          {
           font-size: ${theming.fontSizes[0]};
-          font-weight: ${fontWeight600};
+          font-weight: ${theming.fontWeights[2]};
           color: ${color};
           margin: 0;
         }

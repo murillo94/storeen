@@ -6,8 +6,6 @@ import useStyle from '../../../hooks/theme/useStyle';
 
 import { theming } from '../../../theme/theming';
 
-import { fontWeight500, fontWeight400 } from '@storeen/system';
-
 export const Button = useStyle(
   ({
     children,
@@ -45,8 +43,8 @@ export const Button = useStyle(
              {
               font-size: ${theming.fontSizes[0]};
               font-weight: ${appearance !== 'minimal'
-                ? fontWeight500
-                : fontWeight400};
+                ? theming.fontWeights[1]
+                : theming.fontWeights[0]};
               color: ${theme.color};
               background-color: ${theme.backgroundColor};
               border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
