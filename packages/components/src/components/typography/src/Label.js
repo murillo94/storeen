@@ -1,10 +1,10 @@
 import { memo } from 'react';
 
-import useFont from '../utils/useFont';
-
 import useStyle from '../../../hooks/theme/useStyle';
 
-import { fontSize14 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import useFont from '../utils/useFont';
 
 export const Label = useStyle(
   memo(
@@ -25,7 +25,7 @@ export const Label = useStyle(
           <style jsx>
             {`
                {
-                font-size: ${fontSize14};
+                font-size: ${theming.fontSizes[0]};
                 color: ${fontColor};
                 text-align: left;
                 margin-bottom: 5px;

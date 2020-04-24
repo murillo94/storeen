@@ -5,7 +5,7 @@ import useTheme from '../../../hooks/theme/useTheme';
 
 import { theming } from '../../../theme/theming';
 
-import { fontSize14, borderRadius6 } from '@storeen/system';
+import { borderRadius6 } from '@storeen/system';
 
 export const Select = ({
   appearance = 'minimal',
@@ -60,7 +60,7 @@ export const Select = ({
           }
 
           select {
-            font-size: ${fontSize14};
+            font-size: ${theming.fontSizes[0]};
             background-color: ${theming.colors.gray0};
             background-clip: padding-box;
             border: 1px solid ${theme.borderColor};

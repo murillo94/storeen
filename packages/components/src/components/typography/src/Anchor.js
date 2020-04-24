@@ -2,11 +2,11 @@ import { memo } from 'react';
 
 import Link from 'next/link';
 
-import useFont from '../utils/useFont';
-
 import { theming } from '../../../theme/theming';
 
-import { fontSize14, primary } from '@storeen/system';
+import useFont from '../utils/useFont';
+
+import { primary } from '@storeen/system';
 
 export const Anchor = memo(
   ({ children, href = '', color = 'inherit', ariaLabel = null }) => {
@@ -21,7 +21,7 @@ export const Anchor = memo(
         <style jsx>
           {`
             a {
-              font-size: ${fontSize14};
+              font-size: ${theming.fontSizes[0]};
               color: ${fontColor};
               text-decoration: none;
               outline: 0;

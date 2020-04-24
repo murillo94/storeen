@@ -6,7 +6,7 @@ import { borderRadius8 } from '@storeen/system';
 import { frontMatter as docsPages } from './docs/*.mdx';
 
 const headingStyle = {
-  fontSize: '16px',
+  fontSize: theming.fontSizes[0],
   textAlign: 'left'
 };
 

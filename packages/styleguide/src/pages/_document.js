@@ -3,8 +3,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import { theming } from '@storeen/components';
 
-import { fontSize14 } from '@storeen/system';
-
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -32,7 +30,7 @@ class CustomDocument extends Document {
                   font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-                  font-size: ${fontSize14};
+                  font-size: ${theming.fontSizes[0]};
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;

@@ -1,16 +1,12 @@
 import { memo } from 'react';
 
-import useFont from '../utils/useFont';
-
 import useStyle from '../../../hooks/theme/useStyle';
 
-import {
-  fontSize14,
-  fontSize15,
-  fontSize18,
-  fontSize28,
-  fontWeight600
-} from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import useFont from '../utils/useFont';
+
+import { fontWeight600 } from '@storeen/system';
 
 const H1 = ({ children, className, styles, color }) => (
   <h1 className={className}>
@@ -19,7 +15,7 @@ const H1 = ({ children, className, styles, color }) => (
     <style jsx>
       {`
          {
-          font-size: ${fontSize28};
+          font-size: ${theming.fontSizes[3]};
           font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
@@ -37,7 +33,7 @@ const H2 = ({ children, className, styles, color }) => (
     <style jsx>
       {`
          {
-          font-size: ${fontSize18};
+          font-size: ${theming.fontSizes[2]};
           font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
@@ -55,7 +51,7 @@ const H3 = ({ children, className, styles, color }) => (
     <style jsx>
       {`
          {
-          font-size: ${fontSize15};
+          font-size: ${theming.fontSizes[1]};
           font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;
@@ -73,7 +69,7 @@ const H4 = ({ children, className, styles, color }) => (
     <style jsx>
       {`
          {
-          font-size: ${fontSize14};
+          font-size: ${theming.fontSizes[0]};
           font-weight: ${fontWeight600};
           color: ${color};
           margin: 0;

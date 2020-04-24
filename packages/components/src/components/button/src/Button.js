@@ -4,12 +4,9 @@ import { Text } from '../../typography';
 import useTheme from '../../../hooks/theme/useTheme';
 import useStyle from '../../../hooks/theme/useStyle';
 
-import {
-  fontSize14,
-  fontWeight500,
-  borderRadius6,
-  fontWeight400
-} from '@storeen/system';
+import { theming } from '../../../theme/theming';
+
+import { fontWeight500, borderRadius6, fontWeight400 } from '@storeen/system';
 
 export const Button = useStyle(
   ({
@@ -46,7 +43,7 @@ export const Button = useStyle(
         <style jsx>
           {`
              {
-              font-size: ${fontSize14};
+              font-size: ${theming.fontSizes[0]};
               font-weight: ${appearance !== 'minimal'
                 ? fontWeight500
                 : fontWeight400};
