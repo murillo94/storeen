@@ -23,8 +23,8 @@ const Logo = () => (
 
 const App = ({ children }) => {
   const pinnedPages = docsPages
-    .sort((a, b) => a.order - b.order)
-    .filter(page => page.pinned);
+    .filter(page => page.pinned)
+    .sort((a, b) => a.order - b.order);
 
   const componentPages = docsPages.filter(page => page.component);
 
