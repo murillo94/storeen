@@ -1,78 +1,69 @@
 import { Icon } from '../../icon';
 import { Text } from '../../typography';
+import { Box } from '../../box';
 
 import useTheme from '../../../hooks/theme/useTheme';
-import useStyle from '../../../hooks/theme/useStyle';
 
 import { theming } from '../../../theme/theming';
 
-export const Button = useStyle(
-  ({
-    children,
-    className,
-    styles,
-    appearance = 'default',
-    type = 'button',
-    icon = '',
-    hasBorder = true,
-    isDisabled = false,
-    onClick = null,
-    ...props
-  }) => {
-    const theme = useTheme(appearance);
+export const Button = ({
+  children,
+  appearance = 'default',
+  type = 'button',
+  icon = '',
+  hasBorder = true,
+  isDisabled = false,
+  onClick = null,
+  ...props
+}) => {
+  const theme = useTheme(appearance);
 
-    return (
-      <button
-        className={className}
-        type={type}
-        disabled={isDisabled}
-        aria-disabled={isDisabled}
-        aria-label={children || icon}
-        onClick={onClick}
-        {...props}
-      >
-        <>
-          {icon && <Icon name={icon} size={17} color={theme.color} />}
-          {children && (
-            <Text sx={{ margin: icon ? '0 0 0 5px' : 0 }}>{children}</Text>
-          )}
-        </>
-
-        <style jsx>
-          {`
-             {
-              font-size: ${theming.fontSizes[0]};
-              font-weight: ${appearance !== 'minimal'
-                ? theming.fontWeights[1]
-                : theming.fontWeights[0]};
-              color: ${theme.color};
-              background-color: ${theme.backgroundColor};
-              border: ${hasBorder ? `1px solid ${theme.borderColor}` : 'none'};
-              border-radius: ${theming.radii[3]};
-              padding: 10px;
-              width: auto;
-              outline: 0;
-              cursor: pointer;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              vertical-align: middle;
-            }
-
-            :hover {
-              color: ${theme.hover.color};
-              background-color: ${theme.hover.backgroundColor};
-              border-color: ${theme.hover.borderColor};
-            }
-
-            :focus {
-              box-shadow: ${theme.focus.boxShadow};
-              border-color: ${theme.focus.borderColor};
-            }
-          `}
-        </style>
-        {styles}
-      </button>
-    );
-  }
-);
+  return (
+    <Box
+      is="button"
+      type={type}
+      disabled={isDisabled}
+      aria-disabled={isDisabled}
+      aria-label={children || icon}
+      onClick={onClick}
+      styleConfig={{
+        fontSize: theming.fontSizes[0],
+        fontWeight:
+          appearance !== 'minimal'
+            ? theming.fontWeights[1]
+            : theming.fontWeights[0],
+        color: theme.color,
+        backgroundColor: theme.backgroundColor,
+        border: hasBorder ? `1px solid ${theme.borderColor}` : 'none',
+        borderRadius: theming.radii[3],
+        padding: theming.space[2],
+        width: 'auto',
+        outline: 0,
+        cursor: 'pointer',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        verticalAlign: 'middle',
+        '&:hover': {
+          color: theme.hover.color,
+          backgroundColor: theme.hover.backgroundColor,
+          borderColor: theme.hover.borderColor
+        },
+        '&:focus': {
+          boxShadow: theme.focus.boxShadow,
+          borderColor: theme.focus.borderColor
+        }
+      }}
+      {...props}
+    >
+      <>
+        {icon && <Icon name={icon} size={17} color={theme.color} />}
+        {children && (
+          <Text sx={{ marginLeft: icon ? theming.space[1] : theming.space[0] }}>
+            {children}
+          </Text>
+        )}
+      </>
+    </Box>
+  );
+};

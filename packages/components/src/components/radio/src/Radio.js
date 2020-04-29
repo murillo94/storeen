@@ -2,6 +2,8 @@ import { Label, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
+import { theming } from '../../../theme/theming';
+
 const labelStyle = {
   display: 'inline-flex'
 };

@@ -9504,10 +9504,10 @@ style-to-object@^0.2.1:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-jsx-with-system@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/styled-jsx-with-system/-/styled-jsx-with-system-0.0.9.tgz#c3adb1511e88e9f5bcce82cd57f5171a71521e17"
-  integrity sha512-UoAkCViVtdillru/b9G0CytFVLbkfyy8I3ima94BDbP9QbL9eArUKvy/Wa8SikU+PQHkuk+DDyG0eS6UnBxmxQ==
+styled-jsx-with-system@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/styled-jsx-with-system/-/styled-jsx-with-system-1.0.0.tgz#d7b0adfd938d2253367be0469ec412eef7fcc46f"
+  integrity sha512-biGKKAoEWA7s/DtuuwsBOEcbo6wdhrqhwNI+n515UStpaBwksFtMLI2xPKKnlzFUbJSX4oyPNsGc+4q2jqaPUA==
   dependencies:
     classnames "^2.2.6"
     objss "^1.0.3"
