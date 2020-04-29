@@ -20,7 +20,7 @@ export const Button = ({
 
   return (
     <Box
-      is="button"
+      as="button"
       type={type}
       disabled={isDisabled}
       aria-disabled={isDisabled}

@@ -33,7 +33,7 @@ describe('Box', () => {
   });
 
   test('should have button', () => {
-    const { getByRole } = render(<Box is="button">{content}</Box>);
+    const { getByRole } = render(<Box as="button">{content}</Box>);
 
     const button = getByRole('button');
 
