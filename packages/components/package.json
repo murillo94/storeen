@@ -17,6 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-text-mask": "^5.4.3",
+    "styled-components": "^5.1.0",
     "styled-jsx-with-system": "^1.0.0",
     "text-mask-addons": "^3.8.0"
   },
