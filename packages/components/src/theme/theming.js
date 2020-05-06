@@ -1,4 +1,13 @@
+const breakpoints = ['40em', '52em', '64em', '80em'];
+const [sm, md, lg, xl] = breakpoints;
+
+breakpoints.sm = sm;
+breakpoints.md = md;
+breakpoints.lg = lg;
+breakpoints.xl = xl;
+
 export const theming = {
+  breakpoints,
   fontSizes: ['14px', '16px', '18px', '28px'],
   fontWeights: ['400', '500', '600'],
   space: [
@@ -12,6 +21,7 @@ export const theming = {
     '35px',
     '40px',
     '45px',
+    '60px',
     '65px',
     '80px'
   ],
