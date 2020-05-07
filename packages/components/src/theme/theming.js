@@ -1,10 +1,10 @@
 const breakpoints = ['40em', '52em', '64em', '80em'];
-const [sm, md, lg, xl] = breakpoints;
+const [small, medium, large, xlarge] = breakpoints;
 
-breakpoints.sm = sm;
-breakpoints.md = md;
-breakpoints.lg = lg;
-breakpoints.xl = xl;
+breakpoints.small = small;
+breakpoints.medium = medium;
+breakpoints.large = large;
+breakpoints.xlarge = xlarge;
 
 export const theming = {
   breakpoints,
