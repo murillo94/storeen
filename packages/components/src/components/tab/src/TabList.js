@@ -1,26 +1,19 @@
-import useStyle from '../../../hooks/theme/useStyle';
+import { Box } from '../../box';
 
-export const TabList = useStyle(
-  ({ children, className, styles, ariaLabel = 'Menu lateral' }) => (
-    <ul
-      className={className}
-      role="tablist"
-      aria-orientation="vertical"
-      aria-label={ariaLabel}
-    >
-      {children}
-
-      <style jsx>
-        {`
-           {
-            background-color: transparent;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-          }
-        `}
-      </style>
-      {styles}
-    </ul>
-  )
+export const TabList = ({ children, ariaLabel = 'Menu lateral', ...props }) => (
+  <Box
+    as="ul"
+    role="tablist"
+    aria-orientation="vertical"
+    aria-label={ariaLabel}
+    padding={0}
+    margin={0}
+    styleConfig={{
+      backgroundColor: 'transparent',
+      listStyle: 'none'
+    }}
+    {...props}
+  >
+    {children}
+  </Box>
 );

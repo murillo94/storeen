@@ -17,7 +17,7 @@ import useLayout from '../../../hooks/layout/useLayout';
 
 const ContainerShipping = ({ children, disclosure }) => (
   <>
-    <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
+    <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
       <div>{children}</div>
       {disclosure}
     </Container>

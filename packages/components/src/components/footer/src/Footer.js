@@ -1,26 +1,22 @@
-export const Footer = ({ children, align = 'left' }) => (
+import { Box } from '../../box';
+
+export const Footer = ({ children, align = 'left', ...props }) => (
   <>
-    <footer className={align}>{children}</footer>
-
-    <style jsx>
-      {`
-        footer {
-          display: flex;
-          align-items: center;
+    <Box
+      as="footer"
+      className={align}
+      styleConfig={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: align === 'left' ? 'flex-start' : 'flex-end',
+        button: {
+          paddingY: 2,
+          paddingX: 4
         }
-
-        footer :global(button) {
-          padding: 10px 20px;
-        }
-
-        .right {
-          justify-content: flex-end;
-        }
-
-        .left {
-          justify-content: flex-start;
-        }
-      `}
-    </style>
+      }}
+      {...props}
+    >
+      {children}
+    </Box>
   </>
 );

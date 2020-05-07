@@ -23,7 +23,10 @@ describe('Overlay', () => {
       </Overlay>
     );
 
-    expect(getByText(content).parentNode).toHaveAttribute('id', 'id-test');
+    expect(getByText(content).parentNode.parentNode).toHaveAttribute(
+      'id',
+      'id-test'
+    );
   });
 
   test('should be visible with portal and prevent sroll', () => {
@@ -33,8 +36,11 @@ describe('Overlay', () => {
       </Overlay>
     );
 
-    expect(getByText(content).parentNode).toHaveAttribute('id', 'id-test');
-    expect(getByText(content).parentNode.parentNode).toHaveStyle(
+    expect(getByText(content).parentNode.parentNode).toHaveAttribute(
+      'id',
+      'id-test'
+    );
+    expect(getByText(content).parentNode.parentNode.parentNode).toHaveStyle(
       'overflow: hidden;'
     );
   });
@@ -51,7 +57,7 @@ describe('Overlay', () => {
 
     expect(children).toBeInTheDocument(content);
 
-    fireEvent.click(children.firstElementChild);
+    fireEvent.click(children);
 
     expect(onClose).toHaveBeenCalled();
   });

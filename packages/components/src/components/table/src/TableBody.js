@@ -1,1 +1,7 @@
-export const TableBody = ({ children }) => <tbody>{children}</tbody>;
+import { Box } from '../../box';
+
+export const TableBody = ({ children, ...props }) => (
+  <Box as="tbody" {...props}>
+    {children}
+  </Box>
+);

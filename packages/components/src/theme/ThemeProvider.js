@@ -1,4 +1,4 @@
-import { ThemeProvider as StyledThemeProvider } from 'styled-jsx-with-system';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import { theming as defaultTheme } from './theming';
 

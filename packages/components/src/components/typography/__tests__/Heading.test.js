@@ -44,6 +44,10 @@ describe('Heading', () => {
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading color="primary" />);
+
+      expect(getByRole('heading')).toHaveStyle(
+        `color: ${theming.colors.purple700};`
+      );
     });
 
     test('should have custom style', () => {
@@ -86,6 +90,10 @@ describe('Heading', () => {
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h2" color="primary" />);
+
+      expect(getByRole('heading')).toHaveStyle(
+        `color: ${theming.colors.purple700};`
+      );
     });
 
     test('should have custom style', () => {
@@ -130,6 +138,10 @@ describe('Heading', () => {
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h3" color="primary" />);
+
+      expect(getByRole('heading')).toHaveStyle(
+        `color: ${theming.colors.purple700};`
+      );
     });
 
     test('should have custom style', () => {
@@ -174,6 +186,10 @@ describe('Heading', () => {
 
     test('should have primary color', () => {
       const { getByRole } = render(<Heading is="h4" color="primary" />);
+
+      expect(getByRole('heading')).toHaveStyle(
+        `color: ${theming.colors.purple700};`
+      );
     });
 
     test('should have custom style', () => {

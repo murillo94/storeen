@@ -1,8 +1,7 @@
-import React from 'react';
+import styled from 'styled-components';
 
-import useStyle from '../../../hooks/theme/useStyle';
+import { margin, padding, sx } from '@storeen/system';
 
-export const Box = useStyle(
-  ({ as = 'div', className, styles, children, ...props }) =>
-    React.createElement(as, { className, ...props }, [children, ...styles])
-);
+import { theming } from '../../../theme/theming';
+
+export const Box = styled.div`${sx(theming)} ${margin} ${padding}`;

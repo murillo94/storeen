@@ -16,10 +16,10 @@ import {
 import { PropsTable } from '../components/PropsTable';
 
 const customComponents = {
-  h1: props => <Heading {...props} is="h1" sx={{ margin: '65px 0 25px' }} />,
-  h2: props => <Heading {...props} is="h2" sx={{ margin: '65px 0 25px' }} />,
-  h3: props => <Heading {...props} is="h3" sx={{ margin: '65px 0 25px' }} />,
-  h4: props => <Heading {...props} is="h4" sx={{ margin: '65px 0 25px' }} />,
+  h1: props => <Heading {...props} is="h1" marginTop={11} marginBottom={5} />,
+  h2: props => <Heading {...props} is="h2" marginTop={11} marginBottom={5} />,
+  h3: props => <Heading {...props} is="h3" marginTop={11} marginBottom={5} />,
+  h4: props => <Heading {...props} is="h4" marginTop={11} marginBottom={5} />,
   p: props => <Paragraph marginBottom={2} {...props} />,
   a: props => <Anchor {...props} />,
   table: Table,

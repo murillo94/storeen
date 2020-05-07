@@ -13,10 +13,15 @@ export const InputPassword = ({
   name,
   value,
   placeholder,
-  onChange
+  onChange,
+  ...props
 }) => {
   const inputPasswordRef = useRef(null);
   const theme = useTheme(appearance);
+  const defaultProps = {
+    ...props,
+    innerRef: inputPasswordRef
+  };
 
   const handleClickPassword = () => {
     const inputType = inputPasswordRef.current.type;
@@ -30,13 +35,13 @@ export const InputPassword = ({
         appearance={appearance}
         type={type}
         id={id}
-        innerRef={inputPasswordRef}
         name={name}
         value={value}
         placeholder={placeholder}
         icon="eye"
         onChange={onChange}
         onClick={handleClickPassword}
+        {...defaultProps}
       />
 
       <style jsx>

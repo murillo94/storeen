@@ -12,20 +12,20 @@ describe('Switch', () => {
     expect(getByRole('switch')).toBeInTheDocument();
   });
 
-  test('should have left text', () => {
+  test('should have only left text', () => {
     const { getByText } = render(<Switch leftText="im left text" />);
 
     const text = getByText('im left text');
 
-    expect(text).toHaveStyle('margin-right: 7px;');
+    expect(text).toBeInTheDocument();
   });
 
-  test('should have right text', () => {
+  test('should have only right text', () => {
     const { getByText } = render(<Switch rightText="im right text" />);
 
     const text = getByText('im right text');
 
-    expect(text).toHaveStyle('margin-left: 7px;');
+    expect(text).toBeInTheDocument();
   });
 
   test('should have default as muted color text', () => {
@@ -67,6 +67,9 @@ describe('Switch', () => {
 
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
+
+    expect(leftText).toHaveStyle(`color: ${theming.colors.purple700};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.purple700};`);
   });
 
   test('should have change with checked', () => {

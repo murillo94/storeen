@@ -1,5 +1,6 @@
 import { Container } from '../../container';
 import { TableOptions } from './TableOptions';
+import { Box } from '../../box';
 import { TableHead } from './TableHead';
 import { TableBody } from './TableBody';
 
@@ -13,47 +14,45 @@ export const Table = ({
   ariaLabel = null,
   hasBoxShadow = true,
   hasBorder = false,
-  hasSearch = false
+  hasSearch = false,
+  ...props
 }) => {
   return (
-    <>
-      <Container
-        title={title}
-        optionsTitle={optionsTitle}
-        padding="0px"
-        hasBoxShadow={hasBoxShadow}
-        hasBorder={hasBorder}
+    <Container
+      title={title}
+      optionsTitle={optionsTitle}
+      hasBoxShadow={hasBoxShadow}
+      hasBorder={hasBorder}
+      padding={0}
+    >
+      {(optionsHeader || hasSearch) && (
+        <TableOptions
+          hasSearch={hasSearch}
+          placeholderSearchSuffix={placeholderSearchSuffix}
+        >
+          {optionsHeader}
+        </TableOptions>
+      )}
+      <Box
+        styleConfig={{
+          overflowX: 'auto',
+          '-webkit-overflow-scrolling': 'touch',
+          '-ms-overflow-style': '-ms-autohiding-scrollbar'
+        }}
+        {...props}
       >
-        {(optionsHeader || hasSearch) && (
-          <TableOptions
-            hasSearch={hasSearch}
-            placeholderSearchSuffix={placeholderSearchSuffix}
-          >
-            {optionsHeader}
-          </TableOptions>
-        )}
-        <div>
-          <table aria-label={title || ariaLabel}>
-            <TableHead headers={headers} />
-            <TableBody>{children}</TableBody>
-          </table>
-        </div>
-      </Container>
-
-      <style jsx>
-        {`
-          div {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-          }
-
-          table {
-            border-collapse: collapse;
-            width: 100%;
-          }
-        `}
-      </style>
-    </>
+        <Box
+          as="table"
+          aria-label={title || ariaLabel}
+          styleConfig={{
+            borderCollapse: 'collapse',
+            width: '100%'
+          }}
+        >
+          <TableHead headers={headers} />
+          <TableBody>{children}</TableBody>
+        </Box>
+      </Box>
+    </Container>
   );
 };

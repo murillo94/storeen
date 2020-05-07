@@ -1,10 +1,8 @@
+import { Box } from '../../box';
 import { Icon } from '../../icon';
 import { Text } from '../../typography';
-import { Box } from '../../box';
 
 import useTheme from '../../../hooks/theme/useTheme';
-
-import { theming } from '../../../theme/theming';
 
 export const Button = ({
   children,
@@ -26,19 +24,16 @@ export const Button = ({
       aria-disabled={isDisabled}
       aria-label={children || icon}
       onClick={onClick}
+      padding={2}
       styleConfig={{
-        fontSize: theming.fontSizes[0],
-        fontWeight:
-          appearance !== 'minimal'
-            ? theming.fontWeights[1]
-            : theming.fontWeights[0],
+        fontSize: 0,
+        fontWeight: appearance !== 'minimal' ? 1 : 0,
         color: theme.color,
         backgroundColor: theme.backgroundColor,
         border: hasBorder ? `1px solid ${theme.borderColor}` : 'none',
-        borderRadius: theming.radii[3],
-        padding: theming.space[2],
+        borderRadius: 3,
         width: 'auto',
-        outline: 0,
+        outline: '0',
         cursor: 'pointer',
         display: 'inline-flex',
         alignItems: 'center',
@@ -58,11 +53,7 @@ export const Button = ({
     >
       <>
         {icon && <Icon name={icon} size={17} color={theme.color} />}
-        {children && (
-          <Text sx={{ marginLeft: icon ? theming.space[1] : theming.space[0] }}>
-            {children}
-          </Text>
-        )}
+        {children && <Text marginLeft={icon ? 1 : 0}>{children}</Text>}
       </>
     </Box>
   );

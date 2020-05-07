@@ -115,5 +115,7 @@ describe('Input', () => {
     const { getByRole } = render(<Input appearance="positive" />);
 
     const input = getByRole('textbox');
+
+    expect(input).toHaveStyle(`border: 1px solid ${theming.colors.green700};`);
   });
 });

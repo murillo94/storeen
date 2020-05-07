@@ -1,31 +1,31 @@
-import { theming } from '../../../theme/theming';
+import { Box } from '../../box';
 
 export const TableRow = ({
   children,
   isBody = true,
   isHover = true,
-  onClick = null
+  onClick = null,
+  ...props
 }) => (
-  <>
-    <tr onClick={onClick}>{children}</tr>
-
-    <style jsx>
-      {`
-        tr {
-          background-color: ${theming.colors.gray0};
-          border-bottom: 1px solid ${theming.colors.gray100};
-          height: 64px;
-          cursor: ${onClick ? 'pointer' : 'default'};
-        }
-
-        :last-child {
-          border-bottom: ${isBody && 'none'};
-        }
-
-        :hover {
-          background-color: ${isHover && theming.colors.gray75};
-        }
-      `}
-    </style>
-  </>
+  <Box
+    as="tr"
+    onClick={onClick}
+    styleConfig={{
+      backgroundColor: 'gray0',
+      borderBottomWidth: '1px',
+      borderBottomStyle: 'solid',
+      borderBottomColor: 'gray100',
+      height: '64px',
+      cursor: onClick ? 'pointer' : 'default',
+      '&:last-child': {
+        borderBottom: isBody && 'none'
+      },
+      '&:hover': {
+        backgroundColor: isHover && 'gray75'
+      }
+    }}
+    {...props}
+  >
+    {children}
+  </Box>
 );

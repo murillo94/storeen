@@ -1,9 +1,6 @@
+import { Box } from '../../box';
 import { Button } from '../../button';
 import { InputText } from './InputText';
-
-const buttonStyle = {
-  borderLeft: 0
-};
 
 export const InputIcon = ({
   appearance,
@@ -16,63 +13,46 @@ export const InputIcon = ({
   icon,
   mask,
   onChange,
-  onClick
+  onClick,
+  ...props
 }) => (
-  <>
-    <div>
-      <InputText
-        appearance={appearance}
-        mask={mask}
-        type={type}
-        id={id}
-        innerRef={innerRef}
-        name={name}
-        value={value}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
-      <Button
-        appearance={appearance}
-        type="submit"
-        icon={icon}
-        sx={buttonStyle}
-        onClick={onClick}
-      />
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: stretch;
-          width: 100%;
-        }
-
-        div :global(input) {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          border-right: none;
-          flex: 0.95;
-        }
-
-        div :global(button) {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          border-left: none;
-          flex: 0.05;
-        }
-
-        div :global(input):focus,
-        div :global(input):focus {
-          z-index: 1;
-        }
-
-        .icon {
-          text-align: center;
-          flex: 0.01;
-        }
-      `}
-    </style>
-  </>
+  <Box
+    styleConfig={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'stretch',
+      width: '100%'
+    }}
+  >
+    <InputText
+      appearance={appearance}
+      mask={mask}
+      type={type}
+      id={id}
+      innerRef={innerRef}
+      name={name}
+      value={value}
+      placeholder={placeholder}
+      sx={{
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 0,
+        borderRight: 'none',
+        flex: 0.95
+      }}
+      onChange={onChange}
+      {...props}
+    />
+    <Button
+      appearance={appearance}
+      type="submit"
+      icon={icon}
+      sx={{
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+        borderLeft: 0,
+        flex: 0.05
+      }}
+      onClick={onClick}
+    />
+  </Box>
 );

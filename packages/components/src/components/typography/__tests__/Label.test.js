@@ -57,6 +57,10 @@ describe('Label', () => {
 
   test('should have primary color', () => {
     const { getByText } = render(<LabelCustom color="primary" />);
+
+    expect(getByText('content')).toHaveStyle(
+      `color: ${theming.colors.purple700};`
+    );
   });
 
   test('should have custom style', () => {

@@ -41,6 +41,8 @@ describe('Paragraph', () => {
 
   test('should have primary color', () => {
     const { getByText } = render(<ParagraphCustom color="primary" />);
+
+    expect(getByText('im p')).toHaveStyle(`color: ${theming.colors.purple700};`);
   });
 
   test('should have custom style', () => {

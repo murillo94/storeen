@@ -62,5 +62,7 @@ describe('MenuGroup', () => {
     );
 
     const menu = getByRole('menu');
+
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.green700};`);
   });
 });

@@ -1,64 +1,47 @@
+import { Box } from '../../box';
 import { Input } from '../../input';
 import { FormGroup } from '../../form';
-
-import { theming } from '../../../theme/theming';
 
 export const TableOptions = ({
   children,
   hasSearch,
-  placeholderSearchSuffix
+  placeholderSearchSuffix,
+  ...props
 }) => (
-  <>
-    <div>
-      {hasSearch && (
-        <Input
-          id="search"
-          name="search"
-          icon="search"
-          placeholder={`Buscar ${placeholderSearchSuffix}`}
-        />
-      )}
-      <FormGroup>{children}</FormGroup>
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          padding: 20px 20px 30px;
-          display: flex;
-          justify-content: space-between;
-          align-itens: center;
+  <Box
+    paddingTop={4}
+    paddingBottom={6}
+    paddingX={4}
+    styleConfig={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItens: 'center',
+      flexDirection: ['column', 'row'],
+      input: {
+        width: '300px'
+      },
+      'input, button[type="submit"]': {
+        backgroundColor: 'gray75',
+        borderColor: 'gray75'
+      },
+      '.form-group': {
+        marginTop: [4, 0],
+        'div > button': {
+          padding: '8.5px',
+          width: ['100%', 'auto']
         }
-
-        div :global(input) {
-          width: 300px;
-        }
-
-        div :global(input),
-        div :global(button[type='submit']) {
-          background-color: ${theming.colors.gray75};
-          border-color: ${theming.colors.gray75};
-        }
-
-        div :global(.form-group) :global(div) > :global(button) {
-          padding: 8.5px;
-        }
-
-        @media (max-width: 40em) {
-          div {
-            flex-direction: column;
-          }
-
-          div :global(input),
-          div :global(button[type='button']) {
-            width: 100% !important;
-          }
-
-          div :global(.form-group) {
-            margin-top: 20px;
-          }
-        }
-      `}
-    </style>
-  </>
+      }
+    }}
+    {...props}
+  >
+    {hasSearch && (
+      <Input
+        id="search"
+        name="search"
+        icon="search"
+        placeholder={`Buscar ${placeholderSearchSuffix}`}
+      />
+    )}
+    <FormGroup>{children}</FormGroup>
+  </Box>
 );

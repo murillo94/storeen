@@ -18,7 +18,8 @@ export const Input = memo(
     icon = '',
     mask = '',
     onChange = () => null,
-    onClick = () => null
+    onClick = () => null,
+    ...props
   }) => (
     <div className="input-normal input-form">
       {labelText && (
@@ -39,6 +40,7 @@ export const Input = memo(
           mask={mask}
           onChange={onChange}
           onClick={onClick}
+          {...props}
         />
       ) : (
         <>
@@ -52,6 +54,7 @@ export const Input = memo(
               value={value}
               placeholder={placeholder}
               onChange={onChange}
+              {...props}
             />
           ) : (
             <InputText
@@ -64,6 +67,7 @@ export const Input = memo(
               placeholder={placeholder}
               mask={mask}
               onChange={onChange}
+              {...props}
             />
           )}
         </>

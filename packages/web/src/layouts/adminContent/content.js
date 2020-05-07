@@ -24,7 +24,7 @@ const Logo = () => (
       marginX={4}
       sx={{
         textAlign: 'left',
-        display: ['none', 'none', 'none', 'block']
+        display: ['none', '', '', 'block']
       }}
     />
     <Image
@@ -35,30 +35,85 @@ const Logo = () => (
       marginBottom={9}
       marginX="auto"
       sx={{
-        display: ['block', 'block', 'block', 'none']
+        display: ['block', '', '', 'none']
       }}
     />
   </>
 );
 
-const Nav = () => (
-  <>
-    <div>
-      <Logo />
+const Nav = () => {
+  const tabMarginY = { _: 2, large: 1 };
+  const tabStyle = {
+    a: {
+      flexDirection: ['column', '', '', 'row'],
+      span: {
+        marginTop: [2, '', '', 0],
+        marginLeft: [0, '', '', 2]
+      }
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <Logo />
+        <TabList>
+          <Tab
+            text="Início"
+            icon="home"
+            href="/home"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+          <Tab
+            text="Relatórios"
+            icon="bar-chart"
+            href="/reports"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+          <Tab
+            text="Pedidos"
+            icon="clipboard"
+            href="/orders"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+          <Tab
+            text="Produtos"
+            icon="box"
+            href="/products"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+          <Tab
+            text="Promoções"
+            icon="dollar-sign"
+            href="/promotions"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+          <Tab
+            text="Categorias"
+            icon="tag"
+            href="/categories"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          />
+        </TabList>
+      </div>
       <TabList>
-        <Tab text="Início" icon="home" href="/home" />
-        <Tab text="Relatórios" icon="bar-chart" href="/reports" />
-        <Tab text="Pedidos" icon="clipboard" href="/orders" />
-        <Tab text="Produtos" icon="box" href="/products" />
-        <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
-        <Tab text="Categorias" icon="tag" href="/categories" />
+        <Tab
+          text="Configurações"
+          icon="settings"
+          href="/settings"
+          marginY={tabMarginY}
+          sx={tabStyle}
+        />
       </TabList>
-    </div>
-    <TabList>
-      <Tab text="Configurações" icon="settings" href="/settings" />
-    </TabList>
-  </>
-);
+    </>
+  );
+};
 
 const UserInfo = () => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
@@ -172,23 +227,6 @@ const Content = ({ children, padding }) => {
           @media (max-width: 64em) {
             nav {
               width: 125px;
-            }
-
-            :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${theming.radii[4]};
-              margin: 10px;
-            }
-
-            :global(.side-sheet) :global(ul) :global(li) :global(a) {
-              flex-direction: column;
-            }
-
-            :global(.side-sheet)
-              :global(ul)
-              :global(li)
-              :global(a)
-              :global(span) {
-              margin: 10px 0 0 0 !important;
             }
 
             .main-container {

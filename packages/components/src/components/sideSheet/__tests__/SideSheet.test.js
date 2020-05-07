@@ -23,7 +23,7 @@ describe('SideSheet', () => {
 
     expect(nav).toHaveTextContent(content);
     expect(nav).toHaveClass('side-sheet');
-    expect(nav).toHaveStyle('transform: translate3d(0, 0, 0);');
+    expect(nav).toHaveStyle('transform: translate3d(0,0,0);');
   });
 
   test('should have width', () => {
@@ -48,7 +48,7 @@ describe('SideSheet', () => {
 
     expect(children).toBeInTheDocument(content);
 
-    fireEvent.click(children.nextElementSibling);
+    fireEvent.click(children.parentNode);
 
     expect(onClose).toHaveBeenCalled();
   });

@@ -16,10 +16,6 @@ import useLogin from '../containers/useLogin';
 
 import useLayout from '../hooks/layout/useLayout';
 
-const buttonStyle = {
-  width: '100%'
-};
-
 const Logo = () => (
   <div>
     <Image
@@ -71,7 +67,9 @@ const Home = () => {
       <Button
         marginTop={4}
         marginBottom={5}
-        sx={buttonStyle}
+        sx={{
+          width: '100%'
+        }}
         onClick={handleClickSignIn}
       >
         Entrar

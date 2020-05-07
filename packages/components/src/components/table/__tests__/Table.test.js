@@ -2,8 +2,6 @@ import { render } from '@testing-library/react';
 
 import { Table } from '../index';
 
-import { theming } from '../../../theme/theming';
-
 const content = 'im content';
 
 describe('Table', () => {
@@ -25,7 +23,7 @@ describe('Table', () => {
     const children = getByText(content);
 
     expect(children.closest('div').parentNode).toHaveStyle(
-      'box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15); border: false;'
+      'box-shadow: 0 0 0 1px rgba(63,63,68,0.04),0 1px 3px 0 rgba(63,63,68,0.15); border: false;'
     );
   });
 
@@ -64,10 +62,10 @@ describe('Table', () => {
     const children = getByText(content).closest('div').parentNode;
 
     expect(children).not.toHaveStyle(
-      'box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15);'
+      'box-shadow: 0 0 0 1px rgba(63,63,68,0.04),0 1px 3px 0 rgba(63,63,68,0.15);'
     );
     expect(children).toHaveStyle(
-      `border: 1px solid ${theming.colors.gray100};`
+      `border-width: 1px; border-style: solid; border-color: gray100;`
     );
   });
 

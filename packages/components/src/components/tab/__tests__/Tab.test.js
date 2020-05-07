@@ -89,7 +89,6 @@ describe('Tab', () => {
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.purple700};`);
-    expect(tab).toHaveStyle(`border-radius: ${theming.radii[3]};`);
 
     rerender(<Tab appearance="default" isSelected />);
 
@@ -102,7 +101,6 @@ describe('Tab', () => {
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle('background-color: transparent');
-    expect(tab).toHaveStyle(`border-radius: ${theming.radii[3]};`);
 
     rerender(<Tab isSelected />);
 
@@ -115,7 +113,6 @@ describe('Tab', () => {
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.red700};`);
-    expect(tab).toHaveStyle(`border-radius: ${theming.radii[3]};`);
 
     rerender(<Tab appearance="negative" isSelected />);
 
@@ -128,7 +125,6 @@ describe('Tab', () => {
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.green700};`);
-    expect(tab).toHaveStyle(`border-radius: ${theming.radii[3]};`);
 
     rerender(<Tab appearance="positive" isSelected />);
 

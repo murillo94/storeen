@@ -45,6 +45,10 @@ describe('Text', () => {
 
   test('should have primary color', () => {
     const { getByText } = render(<TextCustom color="primary" />);
+
+    expect(getByText('im span')).toHaveStyle(
+      `color: ${theming.colors.purple700};`
+    );
   });
 
   test('should have custom style', () => {

@@ -1,19 +1,34 @@
+import { Box } from '../../box';
 import { Heading, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
-
-import { theming } from '../../../theme/theming';
 
 export const Alert = ({
   children,
   appearance = 'positive',
   title = '',
-  description = ''
+  description = '',
+  ...props
 }) => {
   const theme = useTheme(appearance);
 
   return (
-    <div role="alert" className="container">
+    <Box
+      role="alert"
+      padding={4}
+      marginBottom={5}
+      styleConfig={{
+        backgroundColor: 'gray0',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'gray100',
+        borderLeftWidth: '4px',
+        borderLeftStyle: 'solid',
+        borderLeftColor: theme.borderColor,
+        borderRadius: 3
+      }}
+      {...props}
+    >
       {title && <Heading is="h4">{title}</Heading>}
       {description && (
         <Paragraph color="muted" marginTop={2}>
@@ -21,19 +36,6 @@ export const Alert = ({
         </Paragraph>
       )}
       {children}
-
-      <style jsx>
-        {`
-           {
-            background-color: ${theming.colors.gray0};
-            border: 1px solid ${theming.colors.gray100};
-            border-left: 4px solid ${theme.borderColor};
-            border-radius: ${theming.radii[3]};
-            padding: 15px;
-            margin-bottom: 20px;
-          }
-        `}
-      </style>
-    </div>
+    </Box>
   );
 };

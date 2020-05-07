@@ -118,5 +118,9 @@ describe('Select', () => {
     const { getByRole } = render(
       <Select appearance="positive">{content}</Select>
     );
+
+    expect(getByRole('combobox')).toHaveStyle(
+      `border: 1px solid ${theming.colors.green700};`
+    );
   });
 });

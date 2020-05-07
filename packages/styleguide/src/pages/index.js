@@ -4,7 +4,7 @@ import { Image, Heading, TabList, Tab, theming } from '@storeen/components';
 import { frontMatter as docsPages } from './docs/*.mdx';
 
 const headingStyle = {
-  fontSize: theming.fontSizes[0],
+  fontSize: 0,
   textAlign: 'left'
 };
 
@@ -138,10 +138,6 @@ const App = ({ children }) => {
           }
 
           @media (max-width: 64em) {
-            :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${theming.radii[4]};
-            }
-
             .main-container {
               padding: 40px 50px;
             }

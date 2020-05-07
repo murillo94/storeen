@@ -3,19 +3,18 @@ import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { theming } from '../../../theme/theming';
-
 export const Badge = ({
+  children,
   appearance = 'default',
-  text = '',
-  onClick = null
+  onClick = null,
+  ...props
 }) => {
   const theme = useTheme(appearance);
   const badgeStyle = {
     color: theme.borderColor,
-    backgroundColor: theming.colors.gray0,
+    backgroundColor: 'gray0',
     border: `1px solid ${theme.borderColor}`,
-    borderRadius: theming.radii[3]
+    borderRadius: 3
   };
 
   return (
@@ -27,12 +26,13 @@ export const Badge = ({
           paddingY={0}
           paddingX={1}
           sx={badgeStyle}
+          {...props}
         >
-          {text}
+          {children}
         </Button>
       ) : (
-        <Text paddingY={0} paddingX={1} sx={badgeStyle}>
-          {text}
+        <Text paddingY={0} paddingX={1} sx={badgeStyle} {...props}>
+          {children}
         </Text>
       )}
     </>

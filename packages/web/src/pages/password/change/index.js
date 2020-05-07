@@ -6,10 +6,6 @@ import usePasswordChange from '../../../containers/usePasswordChange';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const buttonStyle = {
-  width: '100%'
-};
-
 const Logo = () => (
   <div>
     <Image
@@ -40,7 +36,13 @@ const Change = () => {
         value={newPassword}
         onChange={onChange}
       />
-      <Button marginY={4} marginX={0} sx={buttonStyle}>
+      <Button
+        marginY={4}
+        marginX={0}
+        sx={{
+          width: '100%'
+        }}
+      >
         Alterar senha
       </Button>
     </>
