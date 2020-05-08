@@ -58,58 +58,50 @@ const Nav = () => {
       <div>
         <Logo />
         <TabList>
+          <Tab icon="home" href="/home" marginY={tabMarginY} sx={tabStyle}>
+            Início
+          </Tab>
           <Tab
-            text="Início"
-            icon="home"
-            href="/home"
-            marginY={tabMarginY}
-            sx={tabStyle}
-          />
-          <Tab
-            text="Relatórios"
             icon="bar-chart"
             href="/reports"
             marginY={tabMarginY}
             sx={tabStyle}
-          />
+          >
+            Relatórios
+          </Tab>
           <Tab
-            text="Pedidos"
             icon="clipboard"
             href="/orders"
             marginY={tabMarginY}
             sx={tabStyle}
-          />
+          >
+            Pedidos
+          </Tab>
+          <Tab icon="box" href="/products" marginY={tabMarginY} sx={tabStyle}>
+            Produtos
+          </Tab>
           <Tab
-            text="Produtos"
-            icon="box"
-            href="/products"
-            marginY={tabMarginY}
-            sx={tabStyle}
-          />
-          <Tab
-            text="Promoções"
             icon="dollar-sign"
             href="/promotions"
             marginY={tabMarginY}
             sx={tabStyle}
-          />
-          <Tab
-            text="Categorias"
-            icon="tag"
-            href="/categories"
-            marginY={tabMarginY}
-            sx={tabStyle}
-          />
+          >
+            Promoções
+          </Tab>
+          <Tab icon="tag" href="/categories" marginY={tabMarginY} sx={tabStyle}>
+            Categorias
+          </Tab>
         </TabList>
       </div>
       <TabList>
         <Tab
-          text="Configurações"
           icon="settings"
           href="/settings"
           marginY={tabMarginY}
           sx={tabStyle}
-        />
+        >
+          Configurações
+        </Tab>
       </TabList>
     </>
   );

@@ -20,11 +20,12 @@ const Content = ({ children, options, padding }) => (
           {options.map(item => (
             <Tab
               key={item.name}
-              text={item.name}
               icon={item.icon}
               href={item.href}
               marginLeft={0}
-            />
+            >
+              {item.name}
+            </Tab>
           ))}
         </TabList>
         <div className="children">{children}</div>

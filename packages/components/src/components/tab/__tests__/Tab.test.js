@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { Tab } from '../index';
 
@@ -15,7 +15,9 @@ describe('Tab', () => {
 
   test('should have link', () => {
     const { getByRole } = render(
-      <Tab text={content} icon="plus" href="https://www.href.com.br" />
+      <Tab icon="plus" href="https://www.href.com.br">
+        {content}
+      </Tab>
     );
 
     const link = getByRole('link');
@@ -29,12 +31,9 @@ describe('Tab', () => {
 
   test('should have link external', () => {
     const { getByRole } = render(
-      <Tab
-        text={content}
-        icon="plus"
-        href="https://www.href.com.br"
-        isExternal
-      />
+      <Tab icon="plus" href="https://www.href.com.br" isExternal>
+        {content}
+      </Tab>
     );
 
     const link = getByRole('link');
@@ -46,34 +45,7 @@ describe('Tab', () => {
     expect(getByRole('img')).toHaveAttribute('alt', 'plus');
   });
 
-  test('should have button', () => {
-    const onClick = jest.fn();
-    const { getByRole } = render(
-      <Tab text={content} icon="plus" onClick={onClick} />
-    );
-
-    const button = getByRole('button');
-
-    expect(button).toHaveTextContent(content);
-    expect(onClick).not.toBeCalled();
-
-    fireEvent.click(button);
-
-    expect(onClick).toBeCalled();
-    expect(getByRole('img')).toHaveAttribute('alt', 'plus');
-  });
-
   test('should have selected', () => {
-    const { getByRole } = render(<Tab isSelected />);
-
-    const tab = getByRole('tab');
-
-    expect(tab).toHaveStyle(
-      `background-color: ${theming.colors.gray100}; opacity: 1;`
-    );
-  });
-
-  test('should have selected with href', () => {
     const { getByRole } = render(<Tab href="mocked-path" />);
 
     const tab = getByRole('tab');
@@ -84,49 +56,55 @@ describe('Tab', () => {
   });
 
   test('should have default theme', () => {
-    const { getByRole, rerender } = render(<Tab appearance="default" />);
+    const { getByRole, rerender } = render(
+      <Tab appearance="default" href="test-href" />
+    );
 
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.purple700};`);
 
-    rerender(<Tab appearance="default" isSelected />);
+    rerender(<Tab appearance="default" href="mocked-path" />);
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.purple600};`);
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole, rerender } = render(<Tab />);
+    const { getByRole, rerender } = render(<Tab href="test-href" />);
 
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle('background-color: transparent');
 
-    rerender(<Tab isSelected />);
+    rerender(<Tab href="mocked-path" />);
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.gray100};`);
   });
 
   test('should have negative theme', () => {
-    const { getByRole, rerender } = render(<Tab appearance="negative" />);
+    const { getByRole, rerender } = render(
+      <Tab appearance="negative" href="test-href" />
+    );
 
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.red700};`);
 
-    rerender(<Tab appearance="negative" isSelected />);
+    rerender(<Tab appearance="negative" href="mocked-path" />);
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.red600};`);
   });
 
   test('should have positive theme', () => {
-    const { getByRole, rerender } = render(<Tab appearance="positive" />);
+    const { getByRole, rerender } = render(
+      <Tab appearance="positive" href="test-href" />
+    );
 
     const tab = getByRole('tab');
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.green700};`);
 
-    rerender(<Tab appearance="positive" isSelected />);
+    rerender(<Tab appearance="positive" href="mocked-path" />);
 
     expect(tab).toHaveStyle(`background-color: ${theming.colors.green600};`);
   });

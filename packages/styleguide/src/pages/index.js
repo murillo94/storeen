@@ -38,7 +38,9 @@ const App = ({ children }) => {
           </Heading>
           <TabList>
             {pinnedPages.map(page => (
-              <Tab key={page.href} text={page.title} href={page.href} />
+              <Tab key={page.href} href={page.href}>
+                {page.title}
+              </Tab>
             ))}
           </TabList>
           <hr />
@@ -47,7 +49,9 @@ const App = ({ children }) => {
           </Heading>
           <TabList>
             {componentPages.map(page => (
-              <Tab key={page.href} text={page.title} href={page.href} />
+              <Tab key={page.href} href={page.href}>
+                {page.title}
+              </Tab>
             ))}
           </TabList>
           <hr />
@@ -57,28 +61,32 @@ const App = ({ children }) => {
           <TabList>
             <Tab
               key="components"
-              text="Storeen components"
               href="https://github.com/murillo94/storeen/tree/master/packages/components"
               isExternal
-            />
+            >
+              Storeen components
+            </Tab>
             <Tab
               key="styleguide"
-              text="Storeen styleguide"
               href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
               isExternal
-            />
+            >
+              Storeen styleguide
+            </Tab>
             <Tab
               key="system"
-              text="Storeen system"
               href="https://github.com/murillo94/storeen/tree/master/packages/system"
               isExternal
-            />
+            >
+              Storeen system
+            </Tab>
             <Tab
               key="web"
-              text="Storeen web"
               href="https://github.com/murillo94/storeen/tree/master/packages/web"
               isExternal
-            />
+            >
+              Storeen web
+            </Tab>
           </TabList>
         </nav>
         <main>
