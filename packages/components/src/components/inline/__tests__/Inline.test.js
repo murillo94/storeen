@@ -19,12 +19,4 @@ describe('Inline', () => {
     expect(text).toHaveClass('form-group');
     expect(text).toHaveStyle('flex-direction: column;');
   });
-
-  test('should have type', () => {
-    const { getByText } = render(
-      <Inline orientation="column">{content}</Inline>
-    );
-
-    expect(getByText(content)).toHaveStyle('flex-direction: column;');
-  });
 });

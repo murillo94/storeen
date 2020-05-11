@@ -1,11 +1,11 @@
 import { Box } from '../../box';
 
-export const Inline = ({ children, orientation = 'row' }) => (
+export const Inline = ({ children, ...props }) => (
   <Box
     className="form-group"
     styleConfig={{
       display: 'flex',
-      flexDirection: ['column', orientation],
+      flexDirection: ['column', 'row'],
       flexWrap: 'wrap',
       '> div': {
         flex: ['0.5', '1'],
@@ -18,6 +18,7 @@ export const Inline = ({ children, orientation = 'row' }) => (
         marginBottom: [4, 0]
       }
     }}
+    {...props}
   >
     {children}
   </Box>
