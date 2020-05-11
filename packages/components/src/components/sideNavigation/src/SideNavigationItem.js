@@ -7,7 +7,7 @@ import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-export const Tab = withRouter(
+export const SideNavigationItem = withRouter(
   ({
     children,
     appearance = 'minimal',
@@ -27,7 +27,6 @@ export const Tab = withRouter(
     return (
       <Box
         as="li"
-        role="tab"
         aria-selected={isActive}
         marginY={1}
         marginX={2}

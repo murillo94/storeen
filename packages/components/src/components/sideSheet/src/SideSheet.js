@@ -1,5 +1,5 @@
-import { Box } from '../../box';
 import { Overlay } from '../../overlay';
+import { SideNavigation } from '../../sideNavigation';
 
 export const SideSheet = ({
   children,
@@ -15,8 +15,7 @@ export const SideSheet = ({
       shouldRemoveBodyScroll
       onClose={onClose}
     >
-      <Box
-        as="nav"
+      <SideNavigation
         className="side-sheet"
         paddingTop={4}
         paddingBottom={2}
@@ -28,9 +27,6 @@ export const SideSheet = ({
           borderRightColor: 'gray200',
           maxWidth: width,
           height: '100vh',
-          overflow: 'auto',
-          '-webkit-overflow-scrolling': 'touch',
-          '-ms-overflow-style': '-ms-autohiding-scrollbar',
           position: 'fixed',
           top: '0',
           left: '0',
@@ -47,7 +43,7 @@ export const SideSheet = ({
         {...props}
       >
         {children}
-      </Box>
+      </SideNavigation>
     </Overlay>
   </>
 );

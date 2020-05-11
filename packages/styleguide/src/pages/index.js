@@ -1,5 +1,11 @@
 /* eslint-disable import/no-unresolved */
-import { Image, Heading, TabList, Tab, theming } from '@storeen/components';
+import {
+  Image,
+  Heading,
+  SideNavigationGroup,
+  SideNavigationItem,
+  theming
+} from '@storeen/components';
 
 import { frontMatter as docsPages } from './docs/*.mdx';
 
@@ -36,58 +42,58 @@ const App = ({ children }) => {
           <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
             Overview
           </Heading>
-          <TabList>
+          <SideNavigationGroup>
             {pinnedPages.map(page => (
-              <Tab key={page.href} href={page.href}>
+              <SideNavigationItem key={page.href} href={page.href}>
                 {page.title}
-              </Tab>
+              </SideNavigationItem>
             ))}
-          </TabList>
+          </SideNavigationGroup>
           <hr />
           <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
             Components
           </Heading>
-          <TabList>
+          <SideNavigationGroup>
             {componentPages.map(page => (
-              <Tab key={page.href} href={page.href}>
+              <SideNavigationItem key={page.href} href={page.href}>
                 {page.title}
-              </Tab>
+              </SideNavigationItem>
             ))}
-          </TabList>
+          </SideNavigationGroup>
           <hr />
           <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
             Github links
           </Heading>
-          <TabList>
-            <Tab
+          <SideNavigationGroup>
+            <SideNavigationItem
               key="components"
               href="https://github.com/murillo94/storeen/tree/master/packages/components"
               isExternal
             >
               Storeen components
-            </Tab>
-            <Tab
+            </SideNavigationItem>
+            <SideNavigationItem
               key="styleguide"
               href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
               isExternal
             >
               Storeen styleguide
-            </Tab>
-            <Tab
+            </SideNavigationItem>
+            <SideNavigationItem
               key="system"
               href="https://github.com/murillo94/storeen/tree/master/packages/system"
               isExternal
             >
               Storeen system
-            </Tab>
-            <Tab
+            </SideNavigationItem>
+            <SideNavigationItem
               key="web"
               href="https://github.com/murillo94/storeen/tree/master/packages/web"
               isExternal
             >
               Storeen web
-            </Tab>
-          </TabList>
+            </SideNavigationItem>
+          </SideNavigationGroup>
         </nav>
         <main>
           <div className="main-container">
