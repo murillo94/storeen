@@ -1,5 +1,6 @@
 export * from './src/components/alert';
 export * from './src/components/badge';
+export * from './src/components/box';
 export * from './src/components/button';
 export * from './src/components/checkbox';
 export * from './src/components/container';
@@ -19,7 +20,7 @@ export * from './src/components/select';
 export * from './src/components/sideSheet';
 export * from './src/components/subHeader';
 export * from './src/components/switch';
-export * from './src/components/tab';
+export * from './src/components/sideNavigation';
 export * from './src/components/table';
 export * from './src/components/typography';
 export * from './src/theme/ThemeProvider';
