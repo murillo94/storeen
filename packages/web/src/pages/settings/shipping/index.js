@@ -5,7 +5,7 @@ import {
   Box,
   Disclosure,
   Paragraph,
-  Form,
+  Stack,
   Input,
   Switch,
   Footer,
@@ -74,7 +74,7 @@ const ShippingSettings = () => {
               <Paragraph color="muted" marginBottom={4}>
                 Exclusivo para lojistas que possuem contrato com os Correios.
               </Paragraph>
-              <Form>
+              <Stack>
                 <Input
                   labelText="Código administrativo do contrato"
                   id="post-office-code-admin"
@@ -96,7 +96,7 @@ const ShippingSettings = () => {
                   value={postOffice.codeServices}
                   onChange={onChange}
                 />
-              </Form>
+              </Stack>
             </Disclosure>
           }
         >

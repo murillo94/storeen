@@ -18,7 +18,6 @@ export const Checkbox = ({
 
   return (
     <Box
-      className={`input-check input-form ${description && 'with-description'}`}
       styleConfig={{
         display: 'flex',
         flexDirection: 'column'

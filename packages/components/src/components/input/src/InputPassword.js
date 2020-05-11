@@ -46,12 +46,12 @@ export const InputPassword = ({
 
       <style jsx>
         {`
-          :global(.input-normal) :global(div) :global(button[type='submit']) {
+          :global(.input-form) :global(div) :global(button[type='submit']) {
             background-color: ${theming.colors.gray0};
             border-color: ${theme.borderColor};
           }
 
-          :global(.input-normal)
+          :global(.input-form)
             :global(input[type='text'])
             + :global(button)
             :global(svg)
@@ -59,7 +59,7 @@ export const InputPassword = ({
             fill: ${theme.hover.borderColor};
           }
 
-          :global(.input-normal)
+          :global(.input-form)
             :global(input[type='text'])
             + :global(button)
             :global(svg)

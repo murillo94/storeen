@@ -1,28 +1,28 @@
 import { render } from '@testing-library/react';
 
-import { FormGroup } from '../index';
+import { Inline } from '../index';
 
 const content = 'im content';
 
-describe('FormGroup', () => {
+describe('Inline', () => {
   test('should render', () => {
-    const { container } = render(<FormGroup />);
+    const { container } = render(<Inline />);
 
     expect(container).toBeInTheDocument();
   });
 
   test('should have children and default values', () => {
-    const { getByText } = render(<FormGroup>{content}</FormGroup>);
+    const { getByText } = render(<Inline>{content}</Inline>);
 
     const text = getByText(content);
 
     expect(text).toHaveClass('form-group');
-    expect(text).toHaveStyle('flex-direction: row;');
+    expect(text).toHaveStyle('flex-direction: column;');
   });
 
   test('should have type', () => {
     const { getByText } = render(
-      <FormGroup orientation="column">{content}</FormGroup>
+      <Inline orientation="column">{content}</Inline>
     );
 
     expect(getByText(content)).toHaveStyle('flex-direction: column;');

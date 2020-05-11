@@ -1,17 +1,17 @@
 import { render } from '@testing-library/react';
 
-import { Form } from '../index';
+import { Stack } from '../index';
 
-describe('Form', () => {
+describe('Stack', () => {
   test('should render', () => {
-    const { container } = render(<Form />);
+    const { container } = render(<Stack />);
 
     expect(container).toBeInTheDocument();
   });
 
   test('should have children', () => {
     const content = 'im content';
-    const { getByText } = render(<Form>{content}</Form>);
+    const { getByText } = render(<Stack>{content}</Stack>);
 
     expect(getByText(content)).toBeInTheDocument();
   });

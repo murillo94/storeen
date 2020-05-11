@@ -5,6 +5,7 @@ import Page from '../../../layouts/adminContent';
 import {
   SubHeader,
   Container,
+  Stack,
   Input,
   Select,
   Radio,
@@ -50,89 +51,95 @@ const AddPromotion = () => {
   return (
     <>
       <SubHeader title="Nova Promoção" hasBack onClick={handleBack} />
-      <Container title="Geral" isForm>
-        <Input
-          labelText="Título da promoção"
-          id="promotion-title"
-          name="promotion.title"
-          value={promotion.title}
-          onChange={onChange}
-        />
-        <Select
-          labelText="Tipo"
-          id="promotion-type"
-          name="promotion.type"
-          options={promotionTypeOptions}
-          value={promotion.type}
-          onChange={onChange}
-        />
-        <Input
-          labelText="Valor do desconto"
-          id="promotion-value"
-          name="promotion.value"
-          value={promotion.value}
-          mask="money"
-          onChange={onChange}
-        />
-        <Checkbox
-          id="promotion-active"
-          name="promotion.active"
-          isChecked={promotion.active}
-          onChange={onChange}
-        >
-          Ativar promoção?
-        </Checkbox>
+      <Container title="Geral">
+        <Stack>
+          <Input
+            labelText="Título da promoção"
+            id="promotion-title"
+            name="promotion.title"
+            value={promotion.title}
+            onChange={onChange}
+          />
+          <Select
+            labelText="Tipo"
+            id="promotion-type"
+            name="promotion.type"
+            options={promotionTypeOptions}
+            value={promotion.type}
+            onChange={onChange}
+          />
+          <Input
+            labelText="Valor do desconto"
+            id="promotion-value"
+            name="promotion.value"
+            value={promotion.value}
+            mask="money"
+            onChange={onChange}
+          />
+          <Checkbox
+            id="promotion-active"
+            name="promotion.active"
+            isChecked={promotion.active}
+            onChange={onChange}
+          >
+            Ativar promoção?
+          </Checkbox>
+        </Stack>
       </Container>
-      <Container title="Aplicável" isForm>
-        <Radio
-          id="all"
-          name="applicable"
-          value="all"
-          isChecked={applicable === 'all'}
-          onChange={onChange}
-        >
-          Todo o pedido
-        </Radio>
-        <Radio
-          id="categorie-specific"
-          name="applicable"
-          value="categorie-specific"
-          isChecked={applicable === 'categorie-specific'}
-          onChange={onChange}
-        >
-          Categorias específicas
-        </Radio>
-        <Radio
-          id="product-specific"
-          name="applicable"
-          value="product-specific"
-          isChecked={applicable === 'product-specific'}
-          onChange={onChange}
-        >
-          Produtos específicas
-        </Radio>
+      <Container title="Aplicável">
+        <Stack space="small">
+          <Radio
+            id="all"
+            name="applicable"
+            value="all"
+            isChecked={applicable === 'all'}
+            onChange={onChange}
+          >
+            Todo o pedido
+          </Radio>
+          <Radio
+            id="categorie-specific"
+            name="applicable"
+            value="categorie-specific"
+            isChecked={applicable === 'categorie-specific'}
+            onChange={onChange}
+          >
+            Categorias específicas
+          </Radio>
+          <Radio
+            id="product-specific"
+            name="applicable"
+            value="product-specific"
+            isChecked={applicable === 'product-specific'}
+            onChange={onChange}
+          >
+            Produtos específicas
+          </Radio>
+        </Stack>
       </Container>
-      <Container title="Requisitos mínimos" isForm>
-        <Radio
-          id="total-value-minimum"
-          name="minimumRequirements"
-          value="total-value-minimum"
-          isChecked={minimumRequirements === 'total-value-minimum'}
-          onChange={onChange}
-        >
-          Valor total do pedido mínimo
-        </Radio>
-        <Radio
-          id="quantity-itens-minimum"
-          name="minimumRequirements"
-          value="quantity-itens-minimum"
-          isChecked={minimumRequirements === 'quantity-itens-minimum'}
-          onChange={onChange}
-        >
-          Quantidade de itens do pedido mínimo
-        </Radio>
+      <Container title="Requisitos mínimos">
+        <Stack space="small">
+          <Radio
+            id="total-value-minimum"
+            name="minimumRequirements"
+            value="total-value-minimum"
+            isChecked={minimumRequirements === 'total-value-minimum'}
+            onChange={onChange}
+          >
+            Valor total do pedido mínimo
+          </Radio>
+          <Radio
+            id="quantity-itens-minimum"
+            name="minimumRequirements"
+            value="quantity-itens-minimum"
+            isChecked={minimumRequirements === 'quantity-itens-minimum'}
+            onChange={onChange}
+          >
+            Quantidade de itens do pedido mínimo
+          </Radio>
+        </Stack>
       </Container>
-      <Container title="Código promocional" isForm>
+      <Container title="Código promocional">
         <Disclosure
           content={
             <Checkbox
@@ -146,24 +153,26 @@ const AddPromotion = () => {
           }
           action="onChange"
         >
-          <Input
-            labelText="Código da promoção"
-            id="promotional-code"
-            name="promotional.code"
-            value={promotional.code}
-            onChange={onChange}
-          />
-          <Checkbox
-            id="promotional-unique-code"
-            name="promotional.uniqueCode"
-            isChecked={promotional.uniqueCode}
-            onChange={onChange}
-          >
-            Cupom de uso único por CPF?
-          </Checkbox>
+          <Stack>
+            <Input
+              labelText="Código da promoção"
+              id="promotional-code"
+              name="promotional.code"
+              value={promotional.code}
+              onChange={onChange}
+            />
+            <Checkbox
+              id="promotional-unique-code"
+              name="promotional.uniqueCode"
+              isChecked={promotional.uniqueCode}
+              onChange={onChange}
+            >
+              Cupom de uso único por CPF?
+            </Checkbox>
+          </Stack>
         </Disclosure>
       </Container>
-      <Container title="Agendar" isForm>
+      <Container title="Agendar">
         <Disclosure
           content={
             <Checkbox
@@ -177,7 +186,7 @@ const AddPromotion = () => {
           }
           action="onChange"
         >
-          todo
+          <Stack>todo</Stack>
         </Disclosure>
       </Container>
       <Footer>

@@ -21,7 +21,7 @@ export const Input = memo(
     onClick = () => null,
     ...props
   }) => (
-    <div className="input-normal input-form">
+    <div className="input-form">
       {labelText && (
         <Label id={`${id}-input-label`} htmlFor={id}>
           {labelText}

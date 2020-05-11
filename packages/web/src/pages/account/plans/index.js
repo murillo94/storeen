@@ -8,8 +8,9 @@ import {
   Switch,
   Radio,
   Container,
+  Stack,
   Input,
-  FormGroup,
+  Inline,
   Alert,
   Footer,
   Button
@@ -75,44 +76,46 @@ const PlansAccountSettings = () => {
         ))}
       </Table>
       {plan.value && plan.value !== PLANS[0].value && (
-        <Container title="Informações de faturamento" isForm>
-          <Alert
-            title={`Seu plano: ${plan.name} - ${plan.price}/${nameSelectedTypePlan}`}
-            description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
-          />
-          <Input
-            labelText="Número do cartão de crédito"
-            id="creditCardNumber"
-            name="billing.creditCardNumber"
-            value={billing.creditCardNumber}
-            mask="creditCardNumber"
-            onChange={onChange}
-          />
-          <FormGroup>
-            <Input
-              labelText="Data de validade"
-              id="expirationDate"
-              name="billing.expirationDate"
-              value={billing.expirationDate}
-              mask="expirationDate"
-              onChange={onChange}
+        <Container title="Informações de faturamento">
+          <Stack>
+            <Alert
+              title={`Seu plano: ${plan.name} - ${plan.price}/${nameSelectedTypePlan}`}
+              description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
             />
             <Input
-              labelText="CVC"
-              id="cvc"
-              name="billing.cvc"
-              value={billing.cvc}
-              mask="cvc"
+              labelText="Número do cartão de crédito"
+              id="creditCardNumber"
+              name="billing.creditCardNumber"
+              value={billing.creditCardNumber}
+              mask="creditCardNumber"
               onChange={onChange}
             />
-          </FormGroup>
-          <Input
-            labelText="Nome no cartão"
-            id="name"
-            name="billing.name"
-            value={billing.name}
-            onChange={onChange}
-          />
+            <Inline>
+              <Input
+                labelText="Data de validade"
+                id="expirationDate"
+                name="billing.expirationDate"
+                value={billing.expirationDate}
+                mask="expirationDate"
+                onChange={onChange}
+              />
+              <Input
+                labelText="CVC"
+                id="cvc"
+                name="billing.cvc"
+                value={billing.cvc}
+                mask="cvc"
+                onChange={onChange}
+              />
+            </Inline>
+            <Input
+              labelText="Nome no cartão"
+              id="name"
+              name="billing.name"
+              value={billing.name}
+              onChange={onChange}
+            />
+          </Stack>
         </Container>
       )}
       <Footer>

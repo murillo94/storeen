@@ -5,7 +5,8 @@ import Page from '../../../layouts/adminContent';
 import {
   SubHeader,
   Container,
-  FormGroup,
+  Stack,
+  Inline,
   Input,
   Checkbox,
   Disclosure,
@@ -28,32 +29,34 @@ const AddProduct = () => {
   return (
     <>
       <SubHeader title="Novo Produto" hasBack onClick={handleBack} />
-      <Container title="Geral" isForm>
-        <Input
-          labelText="Título do produto"
-          id="product-title"
-          name="product.title"
-          value={product.title}
-          onChange={onChange}
-        />
-        <Input
-          labelText="Descrição"
-          id="product-description"
-          name="product.description"
-          value={product.description}
-          onChange={onChange}
-        />
-        <Input
-          labelText="Código do produto"
-          id="product-code"
-          name="product.code"
-          value={product.code}
-          onChange={onChange}
-        />
+      <Container title="Geral">
+        <Stack>
+          <Input
+            labelText="Título do produto"
+            id="product-title"
+            name="product.title"
+            value={product.title}
+            onChange={onChange}
+          />
+          <Input
+            labelText="Descrição"
+            id="product-description"
+            name="product.description"
+            value={product.description}
+            onChange={onChange}
+          />
+          <Input
+            labelText="Código do produto"
+            id="product-code"
+            name="product.code"
+            value={product.code}
+            onChange={onChange}
+          />
+        </Stack>
       </Container>
       <Container title="Imagens">todo</Container>
-      <Container title="Preços" isForm>
-        <FormGroup>
+      <Container title="Preços">
+        <Inline>
           <Input
             labelText="Preço"
             id="price-actual"
@@ -70,9 +73,9 @@ const AddProduct = () => {
             mask="money"
             onChange={onChange}
           />
-        </FormGroup>
+        </Inline>
       </Container>
-      <Container title="Fretes" isForm>
+      <Container title="Fretes">
         <Disclosure
           content={
             <Checkbox
@@ -86,7 +89,7 @@ const AddProduct = () => {
           }
           action="onChange"
         >
-          <FormGroup>
+          <Inline>
             <Input
               labelText="Peso (kg)"
               id="shipping-weight"
@@ -119,10 +122,10 @@ const AddProduct = () => {
               mask="number"
               onChange={onChange}
             />
-          </FormGroup>
+          </Inline>
         </Disclosure>
       </Container>
-      <Container title="Estoque" isForm>
+      <Container title="Estoque">
         <Disclosure
           content={
             <Checkbox
@@ -136,17 +139,19 @@ const AddProduct = () => {
           }
           action="onChange"
         >
-          <Input
-            labelText="Quantidade"
-            id="product-quantity"
-            name="stock.quantity"
-            value={stock.quantity}
-            mask="number"
-            onChange={onChange}
-          />
+          <Stack>
+            <Input
+              labelText="Quantidade"
+              id="product-quantity"
+              name="stock.quantity"
+              value={stock.quantity}
+              mask="number"
+              onChange={onChange}
+            />
+          </Stack>
         </Disclosure>
       </Container>
-      <Container title="Variações" isForm>
+      <Container title="Variações">
         <Disclosure
           content={
             <Checkbox
@@ -160,7 +165,7 @@ const AddProduct = () => {
           }
           action="onChange"
         >
-          todo
+          <Stack>todo</Stack>
         </Disclosure>
       </Container>
       <Footer>

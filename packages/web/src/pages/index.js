@@ -7,7 +7,7 @@ import {
   Heading,
   Paragraph,
   Anchor,
-  Form,
+  Stack,
   Input,
   Button
 } from '@storeen/components';
@@ -46,7 +46,7 @@ const Home = () => {
         Crie sua loja, é grátis!
       </Anchor>
       <Logo />
-      <Form>
+      <Stack>
         <Input
           type="email"
           labelText="Email"
@@ -63,7 +63,7 @@ const Home = () => {
           value={password}
           onChange={onChange}
         />
-      </Form>
+      </Stack>
       <Button
         marginTop={4}
         marginBottom={5}

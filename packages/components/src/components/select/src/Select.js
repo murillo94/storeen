@@ -19,7 +19,7 @@ export const Select = ({
   const theme = useTheme(appearance);
 
   return (
-    <Box className="input-normal input-form">
+    <Box>
       {labelText && (
         <Label id={`${id}-select-label`} htmlFor={id}>
           {labelText}

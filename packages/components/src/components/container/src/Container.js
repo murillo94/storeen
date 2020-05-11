@@ -1,5 +1,4 @@
 import { Box } from '../../box';
-import { Form } from '../../form';
 import { Heading, Paragraph } from '../../typography';
 
 export const Container = ({
@@ -11,7 +10,6 @@ export const Container = ({
   align = '',
   hasBoxShadow = true,
   hasBorder = false,
-  isForm = false,
   ...props
 }) => {
   const withBorder = hasBorder
@@ -64,7 +62,7 @@ export const Container = ({
             )}
           </Box>
         )}
-        {isForm ? <Form>{children}</Form> : children}
+        {children}
       </Box>
 
       <style jsx>

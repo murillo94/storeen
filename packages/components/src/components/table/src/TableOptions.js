@@ -1,6 +1,6 @@
 import { Box } from '../../box';
 import { Input } from '../../input';
-import { FormGroup } from '../../form';
+import { Inline } from '../../inline';
 
 export const TableOptions = ({
   children,
@@ -42,6 +42,6 @@ export const TableOptions = ({
         placeholder={`Buscar ${placeholderSearchSuffix}`}
       />
     )}
-    <FormGroup>{children}</FormGroup>
+    <Inline>{children}</Inline>
   </Box>
 );

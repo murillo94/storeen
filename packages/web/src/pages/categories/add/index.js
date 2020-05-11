@@ -5,6 +5,7 @@ import Page from '../../../layouts/adminContent';
 import {
   SubHeader,
   Container,
+  Stack,
   Input,
   Radio,
   Footer,
@@ -26,43 +27,47 @@ const AddCategorie = () => {
   return (
     <>
       <SubHeader title="Nova categoria" hasBack onClick={handleBack} />
-      <Container title="Geral" isForm>
-        <Input
-          labelText="Título da categoria"
-          id="categorie-title"
-          name="categorie.title"
-          value={categorie.title}
-          onChange={onChange}
-        />
-        <Input
-          labelText="Descrição"
-          id="categorie-description"
-          name="categorie.description"
-          value={categorie.description}
-          onChange={onChange}
-        />
+      <Container title="Geral">
+        <Stack>
+          <Input
+            labelText="Título da categoria"
+            id="categorie-title"
+            name="categorie.title"
+            value={categorie.title}
+            onChange={onChange}
+          />
+          <Input
+            labelText="Descrição"
+            id="categorie-description"
+            name="categorie.description"
+            value={categorie.description}
+            onChange={onChange}
+          />
+        </Stack>
       </Container>
-      <Container title="Tipo" isForm>
-        <Radio
-          id="manual"
-          name="type"
-          value="manual"
-          description="Escolha os produtos manualmente para essa coleção."
-          isChecked={type === 'manual'}
-          onChange={onChange}
-        >
-          Manual
-        </Radio>
-        <Radio
-          id="automated"
-          name="type"
-          value="automated"
-          description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
-          isChecked={type === 'automated'}
-          onChange={onChange}
-        >
-          Automatizada
-        </Radio>
+      <Container title="Tipo">
+        <Stack space="medium">
+          <Radio
+            id="manual"
+            name="type"
+            value="manual"
+            description="Escolha os produtos manualmente para essa coleção."
+            isChecked={type === 'manual'}
+            onChange={onChange}
+          >
+            Manual
+          </Radio>
+          <Radio
+            id="automated"
+            name="type"
+            value="automated"
+            description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
+            isChecked={type === 'automated'}
+            onChange={onChange}
+          >
+            Automatizada
+          </Radio>
+        </Stack>
       </Container>
       <Footer>
         <Button>Salvar</Button>

@@ -21,7 +21,7 @@ describe('Radio', () => {
     const description = getByText('im description');
 
     expect(text.closest('label')).toHaveStyle('display: inline-flex;');
-    expect(description.closest('div')).toHaveClass('with-description');
+    expect(description).toBeInTheDocument();
   });
 
   test('should have change with checked', () => {
