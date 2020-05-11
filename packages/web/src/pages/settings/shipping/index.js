@@ -2,6 +2,7 @@ import Page from '../../../layouts/adminSettingsContent/store';
 
 import {
   Container,
+  Box,
   Disclosure,
   Paragraph,
   Form,
@@ -16,22 +17,18 @@ import useSettingsShipping from '../../../containers/useSettingsShipping';
 import useLayout from '../../../hooks/layout/useLayout';
 
 const ContainerShipping = ({ children, disclosure }) => (
-  <>
-    <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
-      <div>{children}</div>
-      {disclosure}
-    </Container>
-
-    <style jsx>
-      {`
-        div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-      `}
-    </style>
-  </>
+  <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}
+    >
+      {children}
+    </Box>
+    {disclosure}
+  </Container>
 );
 
 const ShippingSettings = () => {

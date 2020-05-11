@@ -1,9 +1,7 @@
 import Content from './content';
 
-const Page = ({ children, options = [], padding = '30px' }) => (
-  <Content options={options} padding={padding}>
-    {children}
-  </Content>
+const Page = ({ children, options = [] }) => (
+  <Content options={options}>{children}</Content>
 );
 
 export default Page;

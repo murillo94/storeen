@@ -4,6 +4,7 @@ import Page from '../../../layouts/adminSettingsContent/store';
 
 import {
   Container,
+  Box,
   Badge,
   Dialog,
   ImageDescription,
@@ -20,23 +21,19 @@ import useSettingsPayments from '../../../containers/useSettingsPayments';
 import useLayout from '../../../hooks/layout/useLayout';
 
 const ContainerPayment = ({ children, disclosure, onClick }) => (
-  <>
-    <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
-      <div>{children}</div>
-      {disclosure}
-      <Badge onClick={onClick}>todo</Badge>
-    </Container>
-
-    <style jsx>
-      {`
-        div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-      `}
-    </style>
-  </>
+  <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}
+    >
+      {children}
+    </Box>
+    {disclosure}
+    <Badge onClick={onClick}>todo</Badge>
+  </Container>
 );
 
 const PaymentsSettings = () => {
