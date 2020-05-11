@@ -12,21 +12,21 @@ const Content = ({ children, options }) => (
     <Box
       sx={{
         display: 'flex',
-        flexDirection: ['column', 'row']
+        flexDirection: ['column', '', 'row']
       }}
     >
       <SideNavigation
-        marginRight={['-10px', 6]}
-        marginLeft={['-10px', 0]}
-        marginBottom={[4, 0]}
+        marginRight={['-10px', '', 6]}
+        marginLeft={['-10px', '', 0]}
+        marginBottom={[4, '', 0]}
         sx={{
-          width: ['100%', '225px']
+          width: ['100%', '', '225px']
         }}
       >
         <SideNavigationGroup
           sx={{
             display: 'flex',
-            flexDirection: ['row', 'column']
+            flexDirection: ['row', '', 'column']
           }}
         >
           {options.map(item => (
