@@ -45,12 +45,7 @@ export const Disclosure = ({
               content.props.checked || content.props.value || isVisible
           })
         })}
-      <Box
-        ref={disclosureRef}
-        role="region"
-        hidden={!isVisible}
-        marginTop={!isVisible ? 4 : 0}
-      >
+      <Box ref={disclosureRef} role="region" hidden={!isVisible} marginTop={4}>
         {children}
       </Box>
     </Box>
