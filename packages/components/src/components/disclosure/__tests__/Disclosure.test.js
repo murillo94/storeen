@@ -32,7 +32,6 @@ describe('Disclosure', () => {
     expect(content).toHaveAttribute('aria-expanded', 'true');
 
     expect(region).toBeVisible();
-    expect(region.parentNode).not.toHaveStyle('margin-bottom: 20px;');
   });
 
   test('should have children isVisible is true', () => {
@@ -49,7 +48,7 @@ describe('Disclosure', () => {
     );
 
     const customChildren = getByText(children);
-    expect(customChildren.parentNode).toHaveStyle('margin-bottom: 20px;');
+    expect(customChildren.parentNode).toHaveStyle('margin-bottom: 4px;');
   });
 
   test('should have default action click', () => {

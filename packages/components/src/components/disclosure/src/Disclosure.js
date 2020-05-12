@@ -1,11 +1,14 @@
 import { useRef, useEffect, cloneElement } from 'react';
 
+import { Box } from '../../box';
+
 export const Disclosure = ({
   children,
   content,
   isVisible = false,
   hasMarginBottom = false,
-  action = 'onClick'
+  action = 'onClick',
+  ...props
 }) => {
   const disclosureRef = useRef(null);
 
@@ -30,7 +33,7 @@ export const Disclosure = ({
   }, []);
 
   return (
-    <div className="disclosure">
+    <Box marginBottom={hasMarginBottom ? 4 : 0} {...props}>
       {content &&
         cloneElement(content, {
           [action]: e => {
@@ -42,20 +45,9 @@ export const Disclosure = ({
               content.props.checked || content.props.value || isVisible
           })
         })}
-      <div ref={disclosureRef} role="region" hidden={!isVisible}>
+      <Box ref={disclosureRef} role="region" hidden={!isVisible} marginTop={4}>
         {children}
-      </div>
-      <style jsx>
-        {`
-          .disclosure {
-            margin-bottom: ${hasMarginBottom && '20px'};
-          }
-
-          div[role='region']:not([hidden='true']) {
-            margin-top: 20px;
-          }
-        `}
-      </style>
-    </div>
+      </Box>
+    </Box>
   );
 };

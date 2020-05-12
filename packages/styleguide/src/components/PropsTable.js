@@ -3,13 +3,13 @@ import React from 'react';
 import { Heading, Table, TableRow, TableBodyCell } from '@storeen/components';
 import { Code } from './Code';
 
-export const PropsTable = ({ data = {} }) => {
+export const PropsTable = ({ title = 'Props', data = {} }) => {
   const hasProps = Object.keys(data).length > 0;
 
   return (
     <>
-      <Heading is="h2" customStyle={{ margin: '60px 0 25px' }}>
-        Props
+      <Heading is="h2" marginTop={10} marginBottom={5}>
+        {title}
       </Heading>
       {hasProps && (
         <Table headers={['Prop', 'Type', 'Description']}>

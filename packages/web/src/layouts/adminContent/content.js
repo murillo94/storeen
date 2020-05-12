@@ -2,85 +2,126 @@ import { useState } from 'react';
 
 import {
   Image,
+  SideNavigation,
+  SideNavigationGroup,
+  SideNavigationItem,
+  Box,
   Menu,
   MenuGroup,
   MenuItem,
   SideSheet,
-  TabList,
-  Tab,
   Header,
   Button
 } from '@storeen/components';
 
-import { gray0, gray200, borderRadius8 } from '@storeen/system';
-
 const Logo = () => (
   <>
-    <div className="desktop-logo">
-      <Image
-        src={require('../../public/static/images/logo-all-horizontal.svg')}
-        alt="Storeen logo com nome horizontal"
-        width="120px"
-        height="100%"
-      />
-    </div>
-    <div className="mobile-logo">
-      <Image
-        src={require('../../public/static/images/logo-icon.svg')}
-        alt="Storeen logo icone"
-        width="34px"
-        height="34px"
-      />
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          margin: 0 20px 40px;
-        }
-
-        .desktop-logo {
-          text-align: left;
-          display: block;
-        }
-
-        .mobile-logo {
-          text-align: center;
-          display: none;
-        }
-
-        @media (max-width: 1124px) {
-          .mobile-logo {
-            display: block;
-          }
-
-          .desktop-logo {
-            display: none;
-          }
-        }
-      `}
-    </style>
+    <Image
+      src={require('../../public/static/images/logo-all-horizontal.svg')}
+      alt="Storeen logo com nome horizontal"
+      width="120px"
+      height="auto"
+      marginBottom={9}
+      marginX={4}
+      sx={{
+        textAlign: 'left',
+        display: ['none', '', '', 'block']
+      }}
+    />
+    <Image
+      src={require('../../public/static/images/logo-icon.svg')}
+      alt="Storeen logo icone"
+      width="34px"
+      height="34px"
+      marginBottom={9}
+      marginX="auto"
+      sx={{
+        display: ['block', '', '', 'none']
+      }}
+    />
   </>
 );
 
-const Nav = () => (
-  <>
-    <div>
-      <Logo />
-      <TabList>
-        <Tab text="Início" icon="home" href="/home" />
-        <Tab text="Relatórios" icon="bar-chart" href="/reports" />
-        <Tab text="Pedidos" icon="clipboard" href="/orders" />
-        <Tab text="Produtos" icon="box" href="/products" />
-        <Tab text="Promoções" icon="dollar-sign" href="/promotions" />
-        <Tab text="Categorias" icon="tag" href="/categories" />
-      </TabList>
-    </div>
-    <TabList>
-      <Tab text="Configurações" icon="settings" href="/settings" />
-    </TabList>
-  </>
-);
+const Nav = () => {
+  const tabMarginY = { _: 2, large: 1 };
+  const tabStyle = {
+    a: {
+      flexDirection: ['column', '', '', 'row'],
+      span: {
+        marginTop: [2, '', '', 0],
+        marginLeft: [0, '', '', 2]
+      }
+    }
+  };
+
+  return (
+    <>
+      <Box>
+        <Logo />
+        <SideNavigationGroup>
+          <SideNavigationItem
+            icon="home"
+            href="/home"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Início
+          </SideNavigationItem>
+          <SideNavigationItem
+            icon="bar-chart"
+            href="/reports"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Relatórios
+          </SideNavigationItem>
+          <SideNavigationItem
+            icon="clipboard"
+            href="/orders"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Pedidos
+          </SideNavigationItem>
+          <SideNavigationItem
+            icon="box"
+            href="/products"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Produtos
+          </SideNavigationItem>
+          <SideNavigationItem
+            icon="dollar-sign"
+            href="/promotions"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Promoções
+          </SideNavigationItem>
+          <SideNavigationItem
+            icon="tag"
+            href="/categories"
+            marginY={tabMarginY}
+            sx={tabStyle}
+          >
+            Categorias
+          </SideNavigationItem>
+        </SideNavigationGroup>
+      </Box>
+      <SideNavigationGroup>
+        <SideNavigationItem
+          icon="settings"
+          href="/settings"
+          marginY={tabMarginY}
+          sx={tabStyle}
+        >
+          Configurações
+        </SideNavigationItem>
+      </SideNavigationGroup>
+    </>
+  );
+};
 
 const UserInfo = () => {
   const [visibleUserInfo, setVisibleUserInfo] = useState(false);
@@ -104,7 +145,7 @@ const UserInfo = () => {
   );
 };
 
-const Content = ({ children, padding }) => {
+const Content = ({ children }) => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   const handleClickMenu = () => {
@@ -112,143 +153,81 @@ const Content = ({ children, padding }) => {
   };
 
   return (
-    <>
-      <div className="container">
-        <nav className="side-sheet">
-          <Nav />
-        </nav>
-        <main>
-          <Header>
-            <div className="nav-button">
-              <Button
-                appearance="minimal"
-                icon="menu"
-                hasBorder={false}
-                onClick={handleClickMenu}
-              />
-            </div>
-            <Button
-              appearance="minimal"
-              icon="external-link"
-              text="ver minha loja"
-              hasBorder={false}
-            />
-            <UserInfo />
-          </Header>
-          <div className="main-container">
-            <div className="main-children">{children}</div>
-          </div>
-        </main>
-        <SideSheet
-          isVisible={visibleSidebar}
-          width="180px"
-          onClose={handleClickMenu}
+    <Box
+      sx={{
+        width: '100%',
+        minHeight: '100%',
+        display: ['block', 'flex'],
+        flexGrow: [0, 1]
+      }}
+    >
+      <SideNavigation
+        paddingTop={4}
+        paddingBottom={2}
+        sx={{
+          backgroundColor: 'gray0',
+          borderRightWidth: '1px',
+          borderRightStyle: 'solid',
+          borderRightColor: 'gray200',
+          textAlign: 'center',
+          width: ['125px', '', '', '180px'],
+          height: '100vh',
+          position: 'sticky',
+          top: 0,
+          left: 0,
+          display: ['none', '', 'flex'],
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          flexShrink: 0
+        }}
+      >
+        <Nav />
+      </SideNavigation>
+      <Box as="main" sx={{ flex: 1 }}>
+        <Header>
+          <Button
+            appearance="minimal"
+            icon="menu"
+            hasBorder={false}
+            onClick={handleClickMenu}
+            sx={{
+              display: ['inline-flex', '', 'none']
+            }}
+          />
+          <Button appearance="minimal" icon="external-link" hasBorder={false}>
+            ver minha loja
+          </Button>
+          <UserInfo />
+        </Header>
+        <Box
+          paddingY={{ _: 8, large: 6 }}
+          paddingX={{ _: 6, small: 9 }}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start'
+          }}
         >
-          <Nav />
-        </SideSheet>
-      </div>
-
-      <style jsx>
-        {`
-          .container {
-            width: 100%;
-            min-height: 100%;
-          }
-
-          nav {
-            background-color: ${gray0};
-            border-right: 1px solid ${gray200};
-            text-align: center;
-            padding: 20px 0 10px;
-            width: 180px;
-            height: 100vh;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-            position: sticky;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-shrink: 0;
-          }
-
-          main {
-            flex: 1;
-          }
-
-          .nav-button {
-            display: none;
-          }
-
-          .main-container {
-            padding: ${padding};
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-          }
-
-          .main-children {
-            margin: 20px auto 0;
-            width: 800px;
-          }
-
-          @media (max-width: 1124px) {
-            nav {
-              width: 125px;
-            }
-
-            :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${borderRadius8};
-              margin: 10px;
-            }
-
-            :global(.side-sheet) :global(ul) :global(li) :global(a) {
-              flex-direction: column;
-            }
-
-            :global(.side-sheet)
-              :global(ul)
-              :global(li)
-              :global(a)
-              :global(span) {
-              margin: 10px 0 0 0 !important;
-            }
-
-            .main-container {
-              padding: 40px 50px;
-            }
-
-            .main-children {
-              width: 100%;
-              margin: 0 auto;
-            }
-          }
-
-          @media (max-width: 746px) {
-            nav {
-              display: none;
-            }
-
-            .nav-button {
-              display: block;
-            }
-
-            .main-container {
-              padding: 40px 30px;
-            }
-          }
-
-          @media (min-width: 746px) {
-            .container {
-              display: flex;
-              flex-grow: 1;
-            }
-          }
-        `}
-      </style>
-    </>
+          <Box
+            marginTop={{ _: 0, large: 4 }}
+            marginBottom={0}
+            marginX="auto"
+            sx={{
+              width: ['100%', '', '', '760px', '800px']
+            }}
+          >
+            {children}
+          </Box>
+        </Box>
+      </Box>
+      <SideSheet
+        isVisible={visibleSidebar}
+        width="180px"
+        onClose={handleClickMenu}
+      >
+        <Nav />
+      </SideSheet>
+    </Box>
   );
 };
 

@@ -1,11 +1,5 @@
-import { Form } from '../../form';
+import { Box } from '../../box';
 import { Heading, Paragraph } from '../../typography';
-
-import { gray0, gray100, borderRadius6 } from '@storeen/system';
-
-const subTitleStyle = {
-  marginTop: '6px'
-};
 
 export const Container = ({
   children,
@@ -14,81 +8,91 @@ export const Container = ({
   subTitle = '',
   orientation = '',
   align = '',
-  padding = '20px',
-  margin = '0 0 45px',
   hasBoxShadow = true,
   hasBorder = false,
-  isForm = false
-}) => (
-  <>
-    <section className={`${orientation} ${align}`} style={{ padding, margin }}>
-      {title && (
-        <header>
-          <div>
-            <Heading is="h2">{title}</Heading>
-            {optionsTitle}
-          </div>
-          {subTitle && (
-            <Paragraph color="muted" customStyle={subTitleStyle}>
-              {subTitle}
-            </Paragraph>
-          )}
-        </header>
-      )}
-      {isForm ? <Form>{children}</Form> : children}
-    </section>
+  ...props
+}) => {
+  const withBorder = hasBorder
+    ? {
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'gray100'
+      }
+    : {};
 
-    <style jsx>
-      {`
-        section {
-          background-color: ${gray0};
-          box-shadow: ${hasBoxShadow &&
-          '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'};
-          border: ${hasBorder && `1px solid ${gray100}`};
-          border-radius: ${borderRadius6};
-          width: 100%;
-          overflow: hidden;
-        }
+  return (
+    <>
+      <Box
+        as="section"
+        className={`${orientation} ${align}`}
+        padding={4}
+        marginBottom={9}
+        styleConfig={{
+          backgroundColor: 'gray0',
+          boxShadow: `${
+            hasBoxShadow &&
+            '0 0 0 1px rgba(63, 63, 68, 0.04), 0 1px 3px 0 rgba(63, 63, 68, 0.15)'
+          }`,
+          ...withBorder,
+          borderRadius: 3,
+          width: '100%',
+          overflow: 'hidden',
+          '&:last-of-type': {
+            marginBottom: 6
+          }
+        }}
+        {...props}
+      >
+        {title && (
+          <Box
+            as="header"
+            padding={props.padding === 0 ? 4 : props.padding}
+            paddingBottom={4}
+          >
+            <Box
+              styleConfig={{ display: 'flex', justifyContent: 'space-between' }}
+            >
+              <Heading is="h2">{title}</Heading>
+              {optionsTitle}
+            </Box>
+            {subTitle && (
+              <Paragraph color="muted" marginTop={1} marginBottom={2}>
+                {subTitle}
+              </Paragraph>
+            )}
+          </Box>
+        )}
+        {children}
+      </Box>
 
-        section:last-of-type {
-          margin-bottom: 30px;
-        }
+      <style jsx>
+        {`
+          .vertical {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
 
-        .vertical {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        }
+          .horizontal {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
 
-        .horizontal {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
+          .right {
+            justify-content: flex-end;
+          }
 
-        .right {
-          justify-content: flex-end;
-        }
+          .left {
+            justify-content: flex-start;
+          }
 
-        .left {
-          justify-content: flex-start;
-        }
-
-        .between {
-          justify-content: space-between;
-        }
-
-        header {
-          padding: ${padding === '0px' && '20px'};
-          padding-bottom: 20px;
-        }
-
-        header > div {
-          display: flex;
-          justify-content: space-between;
-        }
-      `}
-    </style>
-  </>
-);
+          .between {
+            justify-content: space-between;
+          }
+        `}
+      </style>
+    </>
+  );
+};

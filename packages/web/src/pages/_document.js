@@ -1,12 +1,33 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-import { fontSize14, purple700, gray0, gray75, gray900 } from '@storeen/system';
+import { theming } from '@storeen/components';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   render() {
@@ -30,12 +51,12 @@ class CustomDocument extends Document {
                   font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-                  font-size: ${fontSize14};
+                  font-size: ${theming.fontSizes[0]};
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;
-                  background-color: ${gray75};
-                  color: ${gray900};
+                  background-color: ${theming.colors.gray75};
+                  color: ${theming.colors.gray900};
                   margin: 0;
                 }
 
@@ -44,8 +65,8 @@ class CustomDocument extends Document {
                 }
 
                 ::selection {
-                  background-color: ${purple700};
-                  color: ${gray0};
+                  background-color: ${theming.colors.purple700};
+                  color: ${theming.colors.gray0};
                 }
               `
             }}

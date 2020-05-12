@@ -1,15 +1,11 @@
+import { Box } from '../../box';
+
 export const Image = ({
   src = null,
   alt = null,
   width = 0,
   height = 0,
-  customStyle = {}
+  ...props
 }) => (
-  <img
-    src={src}
-    alt={alt}
-    width={width}
-    height={height}
-    style={{ ...customStyle }}
-  />
+  <Box as="img" src={src} alt={alt} width={width} height={height} {...props} />
 );

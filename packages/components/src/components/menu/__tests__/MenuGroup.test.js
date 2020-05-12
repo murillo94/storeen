@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { MenuGroup } from '../index';
 
-import { purple700, gray200, red700, green700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im content';
 
@@ -35,7 +35,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${purple700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
   });
 
   test('should have default as minimal theme', () => {
@@ -43,7 +43,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${gray200};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -53,7 +53,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${red700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.red700};`);
   });
 
   test('should have positive theme', () => {
@@ -63,6 +63,6 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${green700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.green700};`);
   });
 });

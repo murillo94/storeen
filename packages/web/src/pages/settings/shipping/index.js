@@ -2,9 +2,10 @@ import Page from '../../../layouts/adminSettingsContent/store';
 
 import {
   Container,
+  Box,
   Disclosure,
   Paragraph,
-  Form,
+  Stack,
   Input,
   Switch,
   Footer,
@@ -15,27 +16,19 @@ import useSettingsShipping from '../../../containers/useSettingsShipping';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const descriptionStyle = {
-  margin: '0 0 20px'
-};
-
 const ContainerShipping = ({ children, disclosure }) => (
-  <>
-    <Container padding="15px" margin="0 0 20px" hasBoxShadow={false} hasBorder>
-      <div>{children}</div>
-      {disclosure}
-    </Container>
-
-    <style jsx>
-      {`
-        div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-      `}
-    </style>
-  </>
+  <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}
+    >
+      {children}
+    </Box>
+    {disclosure}
+  </Container>
 );
 
 const ShippingSettings = () => {
@@ -53,7 +46,7 @@ const ShippingSettings = () => {
         <ContainerShipping
           disclosure={
             <Disclosure isVisible={local.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Insira aqui as instruções que seus clientes devem seguir caso
                 queiram retirar o produto pessoalmente.
               </Paragraph>
@@ -78,10 +71,10 @@ const ShippingSettings = () => {
         <ContainerShipping
           disclosure={
             <Disclosure isVisible={postOffice.active}>
-              <Paragraph color="muted" customStyle={descriptionStyle}>
+              <Paragraph color="muted" marginBottom={4}>
                 Exclusivo para lojistas que possuem contrato com os Correios.
               </Paragraph>
-              <Form>
+              <Stack>
                 <Input
                   labelText="Código administrativo do contrato"
                   id="post-office-code-admin"
@@ -103,7 +96,7 @@ const ShippingSettings = () => {
                   value={postOffice.codeServices}
                   onChange={onChange}
                 />
-              </Form>
+              </Stack>
             </Disclosure>
           }
         >
@@ -117,7 +110,7 @@ const ShippingSettings = () => {
         </ContainerShipping>
       </Container>
       <Footer>
-        <Button text="Salvar" />
+        <Button>Salvar</Button>
       </Footer>
     </>
   );

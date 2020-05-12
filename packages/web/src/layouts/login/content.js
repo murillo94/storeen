@@ -1,32 +1,21 @@
+import { Box } from '@storeen/components';
+
 const Page = ({ children }) => (
-  <>
-    <section>
-      <main>
-        <div>{children}</div>
-      </main>
-    </section>
-
-    <style jsx>
-      {`
-        section {
-          text-align: center;
-          min-height: 100vh;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 30px;
-        }
-
-        div {
-          width: 300px;
-        }
-      `}
-    </style>
-  </>
+  <Box
+    as="section"
+    sx={{
+      textAlign: 'center',
+      minHeight: '100vh',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}
+  >
+    <Box as="main" padding={6}>
+      <Box sx={{ width: '300px' }}>{children}</Box>
+    </Box>
+  </Box>
 );
 
 export default Page;

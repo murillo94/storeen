@@ -3,20 +3,18 @@ import { Text } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, borderRadius6 } from '@storeen/system';
-
 export const Badge = ({
+  children,
   appearance = 'default',
-  text = '',
-  onClick = null
+  onClick = null,
+  ...props
 }) => {
   const theme = useTheme(appearance);
   const badgeStyle = {
     color: theme.borderColor,
-    backgroundColor: gray0,
+    backgroundColor: 'gray0',
     border: `1px solid ${theme.borderColor}`,
-    borderRadius: borderRadius6,
-    padding: '1px 6px'
+    borderRadius: 3
   };
 
   return (
@@ -24,12 +22,18 @@ export const Badge = ({
       {onClick ? (
         <Button
           appearance={appearance}
-          text={text}
           onClick={onClick}
-          customStyle={badgeStyle}
-        />
+          paddingY={0}
+          paddingX={1}
+          sx={badgeStyle}
+          {...props}
+        >
+          {children}
+        </Button>
       ) : (
-        <Text customStyle={badgeStyle}>{text}</Text>
+        <Text paddingY={0} paddingX={1} sx={badgeStyle} {...props}>
+          {children}
+        </Text>
       )}
     </>
   );

@@ -22,16 +22,15 @@ describe('SubHeader', () => {
     expect(getByRole('heading')).toHaveTextContent('im title');
   });
 
-  test('should have click back button and style back button', () => {
+  test('should have click back button', () => {
     const onClick = jest.fn();
-    const { getByText, getByRole } = render(
+    const { getByRole } = render(
       <SubHeader title="im title" hasBack onClick={onClick} />
     );
 
     const button = getByRole('button');
 
     expect(button).toHaveAttribute('aria-label', 'chevron-left');
-    expect(getByText('im title')).toHaveStyle('margin: 0 0 0 5px;');
     expect(getByRole('img')).toHaveAttribute('aria-label', 'chevron-left');
 
     fireEvent.click(button);

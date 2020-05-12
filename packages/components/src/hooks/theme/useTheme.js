@@ -1,74 +1,60 @@
-import {
-  gray0,
-  gray100,
-  gray200,
-  gray900,
-  purple700,
-  purple600,
-  red700,
-  red600,
-  green700,
-  green600,
-  primary,
-  negative,
-  positive
-} from '@storeen/system';
+import { theming } from '../../theme/theming';
 
 const theme = {
   default: {
-    color: gray0,
-    backgroundColor: purple700,
-    borderColor: purple700,
+    color: theming.colors.gray0,
+    backgroundColor: theming.colors.purple700,
+    borderColor: theming.colors.purple700,
     hover: {
-      color: gray0,
-      backgroundColor: purple600,
-      borderColor: purple600
+      color: theming.colors.gray0,
+      backgroundColor: theming.colors.purple600,
+      borderColor: theming.colors.purple600
     },
     focus: {
-      boxShadow: primary,
-      borderColor: purple700
+      boxShadow: theming.shadows[0],
+      borderColor: theming.colors.purple700
     }
   },
   minimal: {
-    color: gray900,
+    color: theming.colors.gray900,
     backgroundColor: 'transparent',
-    borderColor: gray200,
+    borderColor: theming.colors.gray200,
     hover: {
-      color: gray900,
-      backgroundColor: gray100,
-      borderColor: gray100
+      color: theming.colors.gray900,
+      backgroundColor: theming.colors.gray100,
+      borderColor: theming.colors.gray100
     },
     focus: {
-      boxShadow: primary,
-      borderColor: purple700
+      boxShadow: theming.shadows[0],
+      borderColor: theming.colors.purple700
     }
   },
   negative: {
-    color: gray0,
-    backgroundColor: red700,
-    borderColor: red700,
+    color: theming.colors.gray0,
+    backgroundColor: theming.colors.red700,
+    borderColor: theming.colors.red700,
     hover: {
-      color: gray0,
-      backgroundColor: red600,
-      borderColor: red600
+      color: theming.colors.gray0,
+      backgroundColor: theming.colors.red600,
+      borderColor: theming.colors.red600
     },
     focus: {
-      boxShadow: negative,
-      borderColor: red600
+      boxShadow: theming.shadows[1],
+      borderColor: theming.colors.red600
     }
   },
   positive: {
-    color: gray0,
-    backgroundColor: green700,
-    borderColor: green700,
+    color: theming.colors.gray0,
+    backgroundColor: theming.colors.green700,
+    borderColor: theming.colors.green700,
     hover: {
-      color: gray0,
-      backgroundColor: green600,
-      borderColor: green600
+      color: theming.colors.gray0,
+      backgroundColor: theming.colors.green600,
+      borderColor: theming.colors.green600
     },
     focus: {
-      boxShadow: positive,
-      borderColor: green600
+      boxShadow: theming.shadows[2],
+      borderColor: theming.colors.green600
     }
   }
 };

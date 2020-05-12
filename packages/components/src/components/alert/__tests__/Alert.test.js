@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Alert } from '../index';
 
-import { purple700, gray200, red700, green700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im content';
 
@@ -36,7 +36,9 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${purple700};`);
+    expect(text).toHaveStyle('border-left-width: 4px;');
+    expect(text).toHaveStyle('border-left-style: solid;');
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.purple700};`);
   });
 
   test('should have minimal theme', () => {
@@ -44,7 +46,9 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${gray200};`);
+    expect(text).toHaveStyle('border-left-width: 4px;');
+    expect(text).toHaveStyle('border-left-style: solid;');
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.gray200};`);
   });
 
   test('should have negative theme', () => {
@@ -54,7 +58,9 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${red700};`);
+    expect(text).toHaveStyle('border-left-width: 4px;');
+    expect(text).toHaveStyle('border-left-style: solid;');
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.red700};`);
   });
 
   test('should have default as positive theme', () => {
@@ -62,6 +68,8 @@ describe('Alert', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`border-left: 4px solid ${green700};`);
+    expect(text).toHaveStyle('border-left-width: 4px;');
+    expect(text).toHaveStyle('border-left-style: solid;');
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.green700};`);
   });
 });

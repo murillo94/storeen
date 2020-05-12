@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Badge } from '../index';
 
-import { purple700, gray200, red700, green700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const content = 'im text';
 
@@ -14,7 +14,7 @@ describe('Badge', () => {
   });
 
   test('should have text', () => {
-    const { getByText, queryByRole } = render(<Badge text={content} />);
+    const { getByText, queryByRole } = render(<Badge>{content}</Badge>);
 
     const text = getByText(content);
     const button = queryByRole('button');
@@ -25,7 +25,7 @@ describe('Badge', () => {
 
   test('should have click', () => {
     const onClick = jest.fn();
-    const { getByRole } = render(<Badge text={content} onClick={onClick} />);
+    const { getByRole } = render(<Badge onClick={onClick}>{content}</Badge>);
 
     const button = getByRole('button');
 
@@ -37,42 +37,42 @@ describe('Badge', () => {
   });
 
   test('should have default theme', () => {
-    const { getByText } = render(<Badge text={content} />);
+    const { getByText } = render(<Badge>{content}</Badge>);
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${purple700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${purple700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.purple700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
   });
 
   test('should have minimal theme', () => {
-    const { getByText } = render(<Badge appearance="minimal" text={content} />);
+    const { getByText } = render(<Badge appearance="minimal">{content}</Badge>);
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${gray200};`);
-    expect(text).toHaveStyle(`border: 1px solid ${gray200};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.gray200};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
   });
 
   test('should have negative theme', () => {
     const { getByText } = render(
-      <Badge appearance="negative" text={content} />
+      <Badge appearance="negative">{content}</Badge>
     );
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${red700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${red700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.red700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.red700};`);
   });
 
   test('should have positive theme', () => {
     const { getByText } = render(
-      <Badge appearance="positive" text={content} />
+      <Badge appearance="positive">{content}</Badge>
     );
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${green700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${green700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.green700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.green700};`);
   });
 });

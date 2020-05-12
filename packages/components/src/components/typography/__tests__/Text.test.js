@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Text } from '../index';
 
-import { gray900, gray800, purple700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 describe('Text', () => {
   const TextCustom = props => <Text {...props}>im span</Text>;
@@ -30,25 +30,29 @@ describe('Text', () => {
   test('should have default color', () => {
     const { getByText } = render(<TextCustom color="default" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${gray900};`);
+    expect(getByText('im span')).toHaveStyle(
+      `color: ${theming.colors.gray900};`
+    );
   });
 
   test('should have muted color', () => {
     const { getByText } = render(<TextCustom color="muted" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${gray800};`);
+    expect(getByText('im span')).toHaveStyle(
+      `color: ${theming.colors.gray800};`
+    );
   });
 
   test('should have primary color', () => {
     const { getByText } = render(<TextCustom color="primary" />);
 
-    expect(getByText('im span')).toHaveStyle(`color: ${purple700};`);
+    expect(getByText('im span')).toHaveStyle(
+      `color: ${theming.colors.purple700};`
+    );
   });
 
   test('should have custom style', () => {
-    const { getByText } = render(
-      <TextCustom customStyle={{ padding: '10px' }} />
-    );
+    const { getByText } = render(<TextCustom sx={{ padding: '10px' }} />);
 
     expect(getByText('im span')).toHaveStyle('padding: 10px;');
   });

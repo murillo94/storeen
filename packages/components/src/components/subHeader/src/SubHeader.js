@@ -1,3 +1,4 @@
+import { Box } from '../../box';
 import { Button } from '../../button';
 import { Heading } from '../../typography';
 
@@ -5,11 +6,28 @@ export const SubHeader = ({
   children,
   title = '',
   hasBack = false,
-  onClick = null
+  onClick = null,
+  ...props
 }) => (
   <>
-    <header>
-      <div>
+    <Box
+      as="header"
+      marginBottom={8}
+      styleConfig={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        minHeight: '39px'
+      }}
+      {...props}
+    >
+      <Box
+        styleConfig={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         {hasBack && (
           <Button
             appearance="minimal"
@@ -18,29 +36,19 @@ export const SubHeader = ({
             onClick={onClick}
           />
         )}
-        <Heading customStyle={{ margin: hasBack ? '0 0 0 5px' : 0 }}>
-          {title}
-        </Heading>
-      </div>
-      {children && <div>{children}</div>}
-    </header>
-
-    <style jsx>
-      {`
-        header {
-          margin-bottom: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          min-height: 39px;
-        }
-
-        div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      `}
-    </style>
+        <Heading marginLeft={hasBack ? 1 : 0}>{title}</Heading>
+      </Box>
+      {children && (
+        <Box
+          styleConfig={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          {children}
+        </Box>
+      )}
+    </Box>
   </>
 );

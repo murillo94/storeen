@@ -21,8 +21,7 @@ describe('Checkbox', () => {
     const description = getByText('im description');
 
     expect(text.closest('label')).toHaveStyle('display: inline-flex;');
-    expect(description).toHaveStyle('margin: 5px 0 0;');
-    expect(description.closest('div')).toHaveClass('with-description');
+    expect(description).toBeInTheDocument();
   });
 
   test('should have change with checked', () => {

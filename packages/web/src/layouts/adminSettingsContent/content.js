@@ -1,56 +1,47 @@
 import AdminPage from '../adminContent';
 
-import { TabList, Tab } from '@storeen/components';
+import {
+  Box,
+  SideNavigation,
+  SideNavigationGroup,
+  SideNavigationItem
+} from '@storeen/components';
 
-const Content = ({ children, options, padding, customStyle }) => (
-  <>
-    <AdminPage padding={padding}>
-      <div className="sidebar">
-        <TabList customStyle={customStyle}>
+const Content = ({ children, options }) => (
+  <AdminPage>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: ['column', '', 'row']
+      }}
+    >
+      <SideNavigation
+        marginRight={['-10px', '', 6]}
+        marginLeft={['-10px', '', 0]}
+        marginBottom={[4, '', 0]}
+        sx={{
+          width: ['100%', '', '225px']
+        }}
+      >
+        <SideNavigationGroup
+          sx={{
+            display: ['flex', '', 'block']
+          }}
+        >
           {options.map(item => (
-            <Tab
+            <SideNavigationItem
               key={item.name}
-              text={item.name}
               icon={item.icon}
               href={item.href}
-            />
+            >
+              {item.name}
+            </SideNavigationItem>
           ))}
-        </TabList>
-        <div className="children">{children}</div>
-      </div>
-    </AdminPage>
-
-    <style jsx>
-      {`
-        .sidebar {
-          display: flex;
-        }
-
-        .children {
-          width: 100%;
-        }
-
-        @media (max-width: 746px) {
-          .sidebar {
-            flex-direction: column;
-          }
-
-          .sidebar :global(ul) {
-            margin: 0 0 20px !important;
-            width: 100% !important;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-            display: flex;
-          }
-
-          .sidebar :global(li) {
-            margin-left: 0 !important;
-          }
-        }
-      `}
-    </style>
-  </>
+        </SideNavigationGroup>
+      </SideNavigation>
+      <Box sx={{ width: '100%' }}>{children}</Box>
+    </Box>
+  </AdminPage>
 );
 
 export default Content;

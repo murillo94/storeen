@@ -6,15 +6,6 @@ import usePasswordChange from '../../../containers/usePasswordChange';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const buttonStyle = {
-  width: '100%',
-  margin: '20px 0'
-};
-
-const imageStyle = {
-  margin: '30px 0'
-};
-
 const Logo = () => (
   <div>
     <Image
@@ -22,7 +13,7 @@ const Logo = () => (
       alt="Storeen logo icone"
       width="57px"
       height="57px"
-      customStyle={imageStyle}
+      marginY={6}
     />
   </div>
 );
@@ -45,7 +36,15 @@ const Change = () => {
         value={newPassword}
         onChange={onChange}
       />
-      <Button text="Alterar senha" customStyle={buttonStyle} />
+      <Button
+        marginY={4}
+        marginX={0}
+        sx={{
+          width: '100%'
+        }}
+      >
+        Alterar senha
+      </Button>
     </>
   );
 };

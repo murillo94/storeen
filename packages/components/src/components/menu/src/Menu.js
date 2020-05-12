@@ -1,8 +1,7 @@
 import { useRef, useEffect } from 'react';
 
+import { Box } from '../../box';
 import { Button } from '../../button';
-
-import { gray0 } from '@storeen/system';
 
 export const Menu = ({
   children,
@@ -12,7 +11,8 @@ export const Menu = ({
   text = '',
   isVisible = false,
   hasBorder = false,
-  onClick = null
+  onClick = null,
+  ...props
 }) => {
   const node = useRef();
 
@@ -29,30 +29,27 @@ export const Menu = ({
   }, [isVisible]);
 
   return (
-    <>
-      <div ref={node}>
-        <Button
-          appearance={appearance}
-          icon={icon}
-          text={text}
-          aria-controls={id}
-          aria-expanded={isVisible}
-          aria-haspopup="menu"
-          hasBorder={hasBorder}
-          onClick={onClick}
-        />
-        {children}
-      </div>
-
-      <style jsx>
-        {`
-          div {
-            background-color: ${gray0};
-            position: relative;
-            z-index: 1;
-          }
-        `}
-      </style>
-    </>
+    <Box
+      ref={node}
+      styleConfig={{
+        backgroundColor: 'gray0',
+        position: 'relative',
+        zIndex: '1'
+      }}
+    >
+      <Button
+        appearance={appearance}
+        icon={icon}
+        aria-controls={id}
+        aria-expanded={isVisible}
+        aria-haspopup="menu"
+        hasBorder={hasBorder}
+        onClick={onClick}
+        {...props}
+      >
+        {text}
+      </Button>
+      {children}
+    </Box>
   );
 };

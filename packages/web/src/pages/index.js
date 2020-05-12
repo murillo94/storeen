@@ -7,7 +7,7 @@ import {
   Heading,
   Paragraph,
   Anchor,
-  Form,
+  Stack,
   Input,
   Button
 } from '@storeen/components';
@@ -16,23 +16,6 @@ import useLogin from '../containers/useLogin';
 
 import useLayout from '../hooks/layout/useLayout';
 
-const imageStyle = {
-  margin: '30px 0'
-};
-
-const headingStyle = {
-  margin: '0 0 30px'
-};
-
-const paragraphStyle = {
-  margin: '0 0 5px'
-};
-
-const buttonStyle = {
-  width: '100%',
-  margin: '20px 0 25px'
-};
-
 const Logo = () => (
   <div>
     <Image
@@ -40,7 +23,7 @@ const Logo = () => (
       alt="Storeen logo icone"
       width="57px"
       height="57px"
-      customStyle={imageStyle}
+      marginY={6}
     />
   </div>
 );
@@ -55,15 +38,15 @@ const Home = () => {
 
   return (
     <>
-      <Heading customStyle={headingStyle}>Entrar</Heading>
-      <Paragraph color="muted" customStyle={paragraphStyle}>
+      <Heading marginBottom={6}>Entrar</Heading>
+      <Paragraph color="muted" marginBottom={1}>
         Não tem uma conta ainda?
       </Paragraph>
       <Anchor href="/" color="primary" ariaLabel="Crie a sua loja de graça!">
         Crie sua loja, é grátis!
       </Anchor>
       <Logo />
-      <Form>
+      <Stack>
         <Input
           type="email"
           labelText="Email"
@@ -80,12 +63,17 @@ const Home = () => {
           value={password}
           onChange={onChange}
         />
-      </Form>
+      </Stack>
       <Button
-        text="Entrar"
-        customStyle={buttonStyle}
+        marginTop={4}
+        marginBottom={5}
+        sx={{
+          width: '100%'
+        }}
         onClick={handleClickSignIn}
-      />
+      >
+        Entrar
+      </Button>
       <Anchor
         href="/password/new"
         color="primary"

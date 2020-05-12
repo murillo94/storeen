@@ -1,27 +1,23 @@
 import { memo } from 'react';
 
+import { Box } from '../../box';
+
 import useFont from '../utils/useFont';
 
-import { fontSize14 } from '@storeen/system';
+export const Text = memo(({ children, color = 'inherit', ...props }) => {
+  const fontColor = useFont(color);
 
-export const Text = memo(
-  ({ children, color = 'inherit', customStyle = {} }) => {
-    const fontColor = useFont(color);
-
-    return (
-      <>
-        <span style={{ ...customStyle }}>{children}</span>
-
-        <style jsx>
-          {`
-            span {
-              font-size: ${fontSize14};
-              line-height: 20px;
-              color: ${fontColor};
-            }
-          `}
-        </style>
-      </>
-    );
-  }
-);
+  return (
+    <Box
+      as="span"
+      styleConfig={{
+        fontSize: 0,
+        lineHeight: '20px',
+        color: fontColor
+      }}
+      {...props}
+    >
+      {children}
+    </Box>
+  );
+});

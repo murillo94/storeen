@@ -1,8 +1,12 @@
 import FeatherIcon from 'feather-icons-react';
 
-import { gray800 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
-export const Icon = ({ name = 'help-circle', size = 18, color = gray800 }) => (
+export const Icon = ({
+  name = 'help-circle',
+  size = 18,
+  color = theming.colors.gray800
+}) => (
   <FeatherIcon
     role="img"
     icon={name}

@@ -1,31 +1,31 @@
-import { gray0, gray75, gray100 } from '@storeen/system';
+import { Box } from '../../box';
 
 export const TableRow = ({
   children,
   isBody = true,
   isHover = true,
-  onClick = null
+  onClick = null,
+  ...props
 }) => (
-  <>
-    <tr onClick={onClick}>{children}</tr>
-
-    <style jsx>
-      {`
-        tr {
-          background-color: ${gray0};
-          border-bottom: 1px solid ${gray100};
-          height: 64px;
-          cursor: ${onClick ? 'pointer' : 'default'};
-        }
-
-        :last-child {
-          border-bottom: ${isBody && 'none'};
-        }
-
-        :hover {
-          background-color: ${isHover && gray75};
-        }
-      `}
-    </style>
-  </>
+  <Box
+    as="tr"
+    onClick={onClick}
+    styleConfig={{
+      backgroundColor: 'gray0',
+      borderBottomWidth: '1px',
+      borderBottomStyle: 'solid',
+      borderBottomColor: 'gray100',
+      height: '64px',
+      cursor: onClick ? 'pointer' : 'default',
+      '&:last-child': {
+        borderBottom: isBody && 'none'
+      },
+      '&:hover': {
+        backgroundColor: isHover && 'gray75'
+      }
+    }}
+    {...props}
+  >
+    {children}
+  </Box>
 );

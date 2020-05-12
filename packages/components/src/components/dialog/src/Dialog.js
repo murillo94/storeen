@@ -1,6 +1,5 @@
+import { Box } from '../../box';
 import { Overlay } from '../../overlay';
-
-import { gray0, gray200, borderRadius6 } from '@storeen/system';
 
 export const Dialog = ({
   children,
@@ -8,55 +7,39 @@ export const Dialog = ({
   width = '560px',
   ariaLabel = null,
   isVisible = false,
-  onClose = null
+  onClose = null,
+  ...props
 }) => (
-  <>
-    <Overlay
-      id="dialog"
-      isVisible={isVisible}
-      shouldRemoveBodyScroll
-      onClose={onClose}
+  <Overlay
+    id="dialog"
+    isVisible={isVisible}
+    shouldRemoveBodyScroll
+    onClose={onClose}
+  >
+    <Box
+      role={role}
+      aria-modal="true"
+      aria-label={ariaLabel}
+      padding={4}
+      styleConfig={{
+        backgroundColor: 'gray0',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'gray200',
+        borderRadius: 3,
+        width,
+        maxHeight: 'calc(100vh - 56px)',
+        overflow: 'auto',
+        '-webkit-overflow-scrolling': 'touch',
+        '-ms-overflow-style': '-ms-autohiding-scrollbar',
+        zIndex: 2,
+        display: `${isVisible ? 'flex' : 'none'}`,
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+      {...props}
     >
-      <div
-        role={role}
-        className="dialog"
-        aria-modal="true"
-        aria-label={ariaLabel}
-      >
-        {children}
-      </div>
-    </Overlay>
-
-    <style jsx>
-      {`
-        div {
-          background-color: ${gray0};
-          border: 1px solid ${gray200};
-          border-radius: ${borderRadius6};
-          padding: 20px;
-          width: ${width};
-          max-height: calc(100vh - 56px);
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
-          -ms-overflow-style: -ms-autohiding-scrollbar;
-          z-index: 2;
-          display: ${isVisible ? 'flex' : 'none'};
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-        :global(#dialog) > :global(div) {
-          width: 100%;
-          height: 100%;
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          z-index: 2;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      `}
-    </style>
-  </>
+      {children}
+    </Box>
+  </Overlay>
 );

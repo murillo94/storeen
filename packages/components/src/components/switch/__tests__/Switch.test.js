@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Switch } from '../index';
 
-import { gray900, gray800, purple700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 describe('Switch', () => {
   test('should render', () => {
@@ -12,20 +12,20 @@ describe('Switch', () => {
     expect(getByRole('switch')).toBeInTheDocument();
   });
 
-  test('should have left text', () => {
+  test('should have only left text', () => {
     const { getByText } = render(<Switch leftText="im left text" />);
 
     const text = getByText('im left text');
 
-    expect(text).toHaveStyle('margin-right: 7px;');
+    expect(text).toBeInTheDocument();
   });
 
-  test('should have right text', () => {
+  test('should have only right text', () => {
     const { getByText } = render(<Switch rightText="im right text" />);
 
     const text = getByText('im right text');
 
-    expect(text).toHaveStyle('margin-left: 7px;');
+    expect(text).toBeInTheDocument();
   });
 
   test('should have default as muted color text', () => {
@@ -36,8 +36,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${gray800};`);
-    expect(rightText).toHaveStyle(`color: ${gray800};`);
+    expect(leftText).toHaveStyle(`color: ${theming.colors.gray800};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.gray800};`);
   });
 
   test('should have default color text', () => {
@@ -52,8 +52,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${gray900};`);
-    expect(rightText).toHaveStyle(`color: ${gray900};`);
+    expect(leftText).toHaveStyle(`color: ${theming.colors.gray900};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.gray900};`);
   });
 
   test('should have primary color text', () => {
@@ -68,8 +68,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${purple700};`);
-    expect(rightText).toHaveStyle(`color: ${purple700};`);
+    expect(leftText).toHaveStyle(`color: ${theming.colors.purple700};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.purple700};`);
   });
 
   test('should have change with checked', () => {

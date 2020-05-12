@@ -4,7 +4,7 @@ import { InputIcon } from './InputIcon';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, gray600 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 export const InputPassword = ({
   appearance,
@@ -13,10 +13,15 @@ export const InputPassword = ({
   name,
   value,
   placeholder,
-  onChange
+  onChange,
+  ...props
 }) => {
   const inputPasswordRef = useRef(null);
   const theme = useTheme(appearance);
+  const defaultProps = {
+    ...props,
+    innerRef: inputPasswordRef
+  };
 
   const handleClickPassword = () => {
     const inputType = inputPasswordRef.current.type;
@@ -30,38 +35,36 @@ export const InputPassword = ({
         appearance={appearance}
         type={type}
         id={id}
-        innerRef={inputPasswordRef}
         name={name}
         value={value}
         placeholder={placeholder}
         icon="eye"
         onChange={onChange}
         onClick={handleClickPassword}
+        {...defaultProps}
       />
 
       <style jsx>
         {`
-          :global(.input-normal) :global(div) :global(button[type='submit']) {
-            background-color: ${gray0};
+          :global(.input-form) :global(div) :global(button[type='submit']) {
+            background-color: ${theming.colors.gray0};
             border-color: ${theme.borderColor};
           }
 
-          :global(.input-normal)
+          :global(.input-form)
             :global(input[type='text'])
             + :global(button)
             :global(svg)
             :global(path) {
-            stroke: ${gray600};
             fill: ${theme.hover.borderColor};
           }
 
-          :global(.input-normal)
+          :global(.input-form)
             :global(input[type='text'])
             + :global(button)
             :global(svg)
             :global(circle) {
-            stroke: ${gray600};
-            fill: ${gray0};
+            fill: ${theming.colors.gray0};
           }
         `}
       </style>

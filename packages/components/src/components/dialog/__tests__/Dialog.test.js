@@ -34,7 +34,6 @@ describe('Dialog', () => {
 
     expect(dialog).toHaveTextContent(content);
     expect(dialog).toHaveAttribute('aria-modal', 'true');
-    expect(dialog).toHaveClass('dialog');
     expect(dialog).toBeVisible();
   });
 
@@ -60,7 +59,7 @@ describe('Dialog', () => {
 
     expect(children).toBeInTheDocument(content);
 
-    fireEvent.click(children.nextElementSibling);
+    fireEvent.click(children.parentNode);
 
     expect(onClose).toHaveBeenCalled();
   });

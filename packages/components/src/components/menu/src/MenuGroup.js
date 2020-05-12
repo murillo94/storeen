@@ -1,38 +1,42 @@
-import useTheme from '../../../hooks/theme/useTheme';
+import { Box } from '../../box';
 
-import { gray0, borderRadius5 } from '@storeen/system';
+import useTheme from '../../../hooks/theme/useTheme';
 
 export const MenuGroup = ({
   children,
   appearance = 'minimal',
   id = null,
-  isVisible = true
+  isVisible = true,
+  ...props
 }) => {
   const theme = useTheme(appearance);
 
   return (
     <>
-      <ul role="menu" id={id} aria-orientation="vertical" hidden={isVisible}>
+      <Box
+        as="ul"
+        role="menu"
+        id={id}
+        aria-orientation="vertical"
+        hidden={isVisible}
+        padding={1}
+        marginTop={1}
+        marginBottom={0}
+        styleConfig={{
+          backgroundColor: 'gray0',
+          border: `1px solid ${theme.borderColor}`,
+          borderRadius: 2,
+          listStyle: 'none',
+          minWidth: '120px',
+          width: '100%',
+          position: 'absolute',
+          right: '0',
+          left: 'auto'
+        }}
+        {...props}
+      >
         {children}
-      </ul>
-
-      <style jsx>
-        {`
-          ul {
-            background-color: ${gray0};
-            border: 1px solid ${theme.borderColor};
-            border-radius: ${borderRadius5};
-            list-style: none;
-            padding: 5px;
-            margin: 5px 0 0;
-            min-width: 110px;
-            width: 100%;
-            position: absolute;
-            right: 0;
-            left: auto;
-          }
-        `}
-      </style>
+      </Box>
     </>
   );
 };

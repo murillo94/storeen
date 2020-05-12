@@ -1,51 +1,41 @@
+import { Box } from '../../box';
 import { Heading, Paragraph } from '../../typography';
 
 import useTheme from '../../../hooks/theme/useTheme';
-
-import { gray0, gray100, borderRadius6 } from '@storeen/system';
-
-const descriptionStyle = {
-  margin: '0'
-};
 
 export const Alert = ({
   children,
   appearance = 'positive',
   title = '',
-  description = ''
+  description = '',
+  ...props
 }) => {
   const theme = useTheme(appearance);
 
   return (
-    <>
-      <div role="alert" className="container">
-        {title && <Heading is="h4">{title}</Heading>}
-        {description && (
-          <div className="description">
-            <Paragraph color="muted" customStyle={descriptionStyle}>
-              {description}
-            </Paragraph>
-          </div>
-        )}
-        {children}
-      </div>
-
-      <style jsx>
-        {`
-          .container {
-            background-color: ${gray0};
-            border: 1px solid ${gray100};
-            border-left: 4px solid ${theme.borderColor};
-            border-radius: ${borderRadius6};
-            padding: 15px;
-            margin-bottom: 20px;
-          }
-
-          .description {
-            margin-top: 10px;
-          }
-        `}
-      </style>
-    </>
+    <Box
+      role="alert"
+      padding={4}
+      marginBottom={5}
+      styleConfig={{
+        backgroundColor: 'gray0',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'gray100',
+        borderLeftWidth: '4px',
+        borderLeftStyle: 'solid',
+        borderLeftColor: theme.borderColor,
+        borderRadius: 3
+      }}
+      {...props}
+    >
+      {title && <Heading is="h4">{title}</Heading>}
+      {description && (
+        <Paragraph color="muted" marginTop={2}>
+          {description}
+        </Paragraph>
+      )}
+      {children}
+    </Box>
   );
 };

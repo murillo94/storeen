@@ -1,13 +1,7 @@
-export const TableBodyCell = ({ children }) => (
-  <>
-    <td>{children}</td>
+import { Box } from '../../box';
 
-    <style jsx>
-      {`
-        td {
-          padding: 0 21px;
-        }
-      `}
-    </style>
-  </>
+export const TableBodyCell = ({ children, ...props }) => (
+  <Box as="td" padding={4} {...props}>
+    {children}
+  </Box>
 );

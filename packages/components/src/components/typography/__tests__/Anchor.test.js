@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Anchor } from '../index';
 
-import { gray900, gray800, purple700 } from '@storeen/system';
+import { theming } from '../../../theme/theming';
 
 const props = {
   href: 'https://www.google.com',
@@ -35,18 +35,18 @@ describe('Anchor', () => {
   test('should have default color', () => {
     const { getByRole } = render(<Anchor {...props} color="default" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${gray900};`);
+    expect(getByRole('link')).toHaveStyle(`color: ${theming.colors.gray900};`);
   });
 
   test('should have muted color', () => {
     const { getByRole } = render(<Anchor {...props} color="muted" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${gray800};`);
+    expect(getByRole('link')).toHaveStyle(`color: ${theming.colors.gray800};`);
   });
 
   test('should have primary color', () => {
     const { getByRole } = render(<Anchor {...props} color="primary" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${purple700};`);
+    expect(getByRole('link')).toHaveStyle(`color: ${theming.colors.purple700};`);
   });
 });

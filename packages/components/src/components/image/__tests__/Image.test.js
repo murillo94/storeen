@@ -16,12 +16,8 @@ describe('Image', () => {
 
     const image = getByRole('img');
 
-    expect(image).toMatchInlineSnapshot(`
-      <img
-        height="0"
-        width="0"
-      />
-    `);
+    expect(image).toHaveAttribute('width', '0');
+    expect(image).toHaveAttribute('height', '0');
   });
 
   test('should have src', () => {
@@ -43,7 +39,7 @@ describe('Image', () => {
 
   test('should have custom style', () => {
     const { getByAltText } = render(
-      <Image alt={content} customStyle={{ margin: '10px' }} />
+      <Image alt={content} sx={{ margin: '10px' }} />
     );
 
     expect(getByAltText(content)).toHaveStyle('margin: 10px;');

@@ -2,6 +2,8 @@
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
+import { Box } from '../../box';
+
 import preventBodyScroll from '../utils/preventBodyScroll';
 
 const Portal = dynamic(() => import('../../portal').then(mod => mod.Portal), {
@@ -13,7 +15,8 @@ export const Overlay = ({
   id = null,
   isVisible = false,
   shouldRemoveBodyScroll = false,
-  onClose = null
+  onClose = null,
+  ...props
 }) => {
   const handleBodyScroll = preventScroll => {
     if (shouldRemoveBodyScroll && isVisible) {
@@ -32,28 +35,27 @@ export const Overlay = ({
   return (
     <>
       {isVisible && (
-        <>
-          <Portal id={id}>
+        <Portal id={id}>
+          <Box
+            onClick={onClose}
+            teste="lala"
+            styleConfig={{
+              backgroundColor: 'rgba(51, 51, 51, 0.3)',
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+              zIndex: 1,
+              display: `${isVisible ? 'flex' : 'none'}`,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+            {...props}
+          >
             {children}
-            <div onClick={onClose} />
-          </Portal>
-
-          <style jsx>
-            {`
-              div {
-                background-color: rgba(51, 51, 51, 0.3);
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                transition: background-color 0.2s;
-                z-index: 1;
-                display: ${isVisible ? 'block' : 'none'};
-              }
-            `}
-          </style>
-        </>
+          </Box>
+        </Portal>
       )}
     </>
   );

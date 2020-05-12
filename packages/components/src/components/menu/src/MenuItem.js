@@ -1,49 +1,41 @@
 import Link from 'next/link';
 
+import { Box } from '../../box';
 import { Button } from '../../button';
 
 import useTheme from '../../../hooks/theme/useTheme';
 
-import { gray0, purple700, borderRadius5, primary } from '@storeen/system';
-
-const buttonStyle = {
-  padding: '5px 8px',
-  justifyContent: 'flex-start',
-  width: '100%'
-};
-
 const MenuItemLink = ({ children, href }) => (
-  <>
-    <Link href={href}>
-      <a>{children}</a>
-    </Link>
-
-    <style jsx>
-      {`
-        a {
-          color: inherit;
-          text-decoration: none;
-          padding: 5px 8px;
-          outline: 0;
-          width: 100%;
-          display: flex;
-          align-items: center;
+  <Link href={href} passHref>
+    <Box
+      as="a"
+      paddingY={1}
+      paddingX={2}
+      styleConfig={{
+        color: 'inherit',
+        textDecoration: 'none',
+        outline: 0,
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        '&:focus': {
+          boxShadow: 0,
+          borderColor: 'purple700'
         }
-
-        :focus {
-          box-shadow: ${primary};
-          border-color: ${purple700};
-        }
-      `}
-    </style>
-  </>
+      }}
+    >
+      {children}
+    </Box>
+  </Link>
 );
 
 const MenuItemButton = ({ children, appearance, onClick }) => (
   <Button
     appearance={appearance}
     hasBorder={false}
-    customStyle={buttonStyle}
+    paddingY={1}
+    paddingX={2}
+    sx={{ width: '100%', justifyContent: 'flex-start' }}
     onClick={onClick}
   >
     {children}
@@ -54,13 +46,31 @@ export const MenuItem = ({
   children,
   appearance = 'minimal',
   href = '',
-  onClick = null
+  onClick = null,
+  ...props
 }) => {
   const theme = useTheme(appearance);
 
   return (
     <>
-      <li role="menuitem">
+      <Box
+        as="li"
+        role="menuitem"
+        marginY={1}
+        marginX={0}
+        styleConfig={{
+          backgroundColor: 'gray0',
+          borderRadius: 2,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          '&:hover': {
+            backgroundColor: theme.hover.backgroundColor,
+            color: theme.hover.color
+          }
+        }}
+        {...props}
+      >
         {href ? (
           <MenuItemLink href={href}>{children}</MenuItemLink>
         ) : (
@@ -68,25 +78,7 @@ export const MenuItem = ({
             {children}
           </MenuItemButton>
         )}
-      </li>
-
-      <style jsx>
-        {`
-          li {
-            background-color: ${gray0};
-            border-radius: ${borderRadius5};
-            margin: 3px 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-          }
-
-          :hover {
-            background-color: ${theme.hover.backgroundColor};
-            color: ${theme.hover.color};
-          }
-        `}
-      </style>
+      </Box>
     </>
   );
 };

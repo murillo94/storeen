@@ -1,43 +1,36 @@
 /* eslint-disable import/no-unresolved */
-import { Image, Heading, TabList, Tab } from '@storeen/components';
-
-import { gray0, gray100, gray200, borderRadius8 } from '@storeen/system';
+import {
+  Image,
+  Heading,
+  SideNavigationGroup,
+  SideNavigationItem,
+  theming
+} from '@storeen/components';
 
 import { frontMatter as docsPages } from './docs/*.mdx';
 
 const headingStyle = {
-  fontSize: '16px',
-  textAlign: 'left',
-  margin: '15px 16px 8px'
+  fontSize: 0,
+  textAlign: 'left'
 };
 
 const Logo = () => (
   <>
-    <div className="desktop-logo">
-      <Image
-        src={require('../public/logo-all-horizontal.svg')}
-        alt="Storeen logo com nome horizontal"
-        width="120px"
-        height="100%"
-      />
-    </div>
-
-    <style jsx>
-      {`
-        div {
-          text-align: left;
-          padding: 0 20px 20px;
-          display: block;
-        }
-      `}
-    </style>
+    <Image
+      src={require('../public/logo-all-horizontal.svg')}
+      alt="Storeen logo com nome horizontal"
+      width="120px"
+      height="auto"
+      marginBottom={4}
+      marginX={4}
+    />
   </>
 );
 
 const App = ({ children }) => {
   const pinnedPages = docsPages
-    .sort((a, b) => a.order - b.order)
-    .filter(page => page.pinned);
+    .filter(page => page.pinned)
+    .sort((a, b) => a.order - b.order);
 
   const componentPages = docsPages.filter(page => page.component);
 
@@ -46,47 +39,61 @@ const App = ({ children }) => {
       <div className="container">
         <nav className="side-sheet">
           <Logo />
-          <Heading customStyle={headingStyle}>Overview</Heading>
-          <TabList>
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Overview
+          </Heading>
+          <SideNavigationGroup>
             {pinnedPages.map(page => (
-              <Tab key={page.href} text={page.title} href={page.href} />
+              <SideNavigationItem key={page.href} href={page.href}>
+                {page.title}
+              </SideNavigationItem>
             ))}
-          </TabList>
+          </SideNavigationGroup>
           <hr />
-          <Heading customStyle={headingStyle}>Components</Heading>
-          <TabList>
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Components
+          </Heading>
+          <SideNavigationGroup>
             {componentPages.map(page => (
-              <Tab key={page.href} text={page.title} href={page.href} />
+              <SideNavigationItem key={page.href} href={page.href}>
+                {page.title}
+              </SideNavigationItem>
             ))}
-          </TabList>
+          </SideNavigationGroup>
           <hr />
-          <Heading customStyle={headingStyle}>Github links</Heading>
-          <TabList>
-            <Tab
+          <Heading marginTop={3} marginBottom={2} marginX={3} sx={headingStyle}>
+            Github links
+          </Heading>
+          <SideNavigationGroup>
+            <SideNavigationItem
               key="components"
-              text="Storeen components"
               href="https://github.com/murillo94/storeen/tree/master/packages/components"
               isExternal
-            />
-            <Tab
+            >
+              Storeen components
+            </SideNavigationItem>
+            <SideNavigationItem
               key="styleguide"
-              text="Storeen styleguide"
               href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
               isExternal
-            />
-            <Tab
+            >
+              Storeen styleguide
+            </SideNavigationItem>
+            <SideNavigationItem
               key="system"
-              text="Storeen system"
               href="https://github.com/murillo94/storeen/tree/master/packages/system"
               isExternal
-            />
-            <Tab
+            >
+              Storeen system
+            </SideNavigationItem>
+            <SideNavigationItem
               key="web"
-              text="Storeen web"
               href="https://github.com/murillo94/storeen/tree/master/packages/web"
               isExternal
-            />
-          </TabList>
+            >
+              Storeen web
+            </SideNavigationItem>
+          </SideNavigationGroup>
         </nav>
         <main>
           <div className="main-container">
@@ -103,8 +110,8 @@ const App = ({ children }) => {
           }
 
           nav {
-            background-color: ${gray0};
-            border-right: 1px solid ${gray200};
+            background-color: ${theming.colors.gray0};
+            border-right: 1px solid ${theming.colors.gray200};
             text-align: center;
             padding: 20px 0 10px;
             width: 220px;
@@ -124,7 +131,7 @@ const App = ({ children }) => {
           hr {
             width: 100%;
             border: none;
-            border-top: 1px solid ${gray100};
+            border-top: 1px solid ${theming.colors.gray100};
             margin: 0px 0px 5px;
           }
 
@@ -144,11 +151,7 @@ const App = ({ children }) => {
             width: 800px;
           }
 
-          @media (max-width: 1124px) {
-            :global(.side-sheet) :global(ul) :global(li) {
-              border-radius: ${borderRadius8};
-            }
-
+          @media (max-width: 64em) {
             .main-container {
               padding: 40px 50px;
             }
@@ -159,7 +162,7 @@ const App = ({ children }) => {
             }
           }
 
-          @media (max-width: 746px) {
+          @media (max-width: 40em) {
             nav {
               display: none;
             }
@@ -169,7 +172,7 @@ const App = ({ children }) => {
             }
           }
 
-          @media (min-width: 746px) {
+          @media (min-width: 40em) {
             .container {
               display: flex;
               flex-grow: 1;
