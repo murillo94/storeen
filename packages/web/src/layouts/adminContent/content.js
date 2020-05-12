@@ -213,7 +213,7 @@ const Content = ({ children }) => {
             marginBottom={0}
             marginX="auto"
             sx={{
-              width: ['100%', '', '', '800px']
+              width: ['100%', '', '', '760px', '800px']
             }}
           >
             {children}
