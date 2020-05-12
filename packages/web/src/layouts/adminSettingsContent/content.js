@@ -25,8 +25,7 @@ const Content = ({ children, options }) => (
       >
         <SideNavigationGroup
           sx={{
-            display: 'flex',
-            flexDirection: ['row', '', 'column']
+            display: ['flex', '', 'block']
           }}
         >
           {options.map(item => (
