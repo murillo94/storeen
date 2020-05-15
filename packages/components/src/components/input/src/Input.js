@@ -12,7 +12,7 @@ export const Input = memo(
     innerRef = null,
     id = null,
     name = '',
-    value = '',
+    value,
     labelText = '',
     placeholder = '',
     icon = '',

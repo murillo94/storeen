@@ -11,7 +11,7 @@ export const Switch = ({
   leftText = '',
   rightText = '',
   colorText = 'muted',
-  isChecked = false,
+  isChecked,
   onChange = () => null,
   ...props
 }) => {

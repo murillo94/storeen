@@ -10,7 +10,7 @@ export const Radio = ({
   name = '',
   value = '',
   description = '',
-  isChecked = false,
+  isChecked,
   onChange = () => null,
   ...props
 }) => {
