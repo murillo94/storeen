@@ -2,6 +2,8 @@ import { render } from '@testing-library/react';
 
 import { Box } from '../index';
 
+import { ThemeProvider } from '../../../theme/ThemeProvider';
+
 const content = 'im content';
 
 describe('Box', () => {
@@ -38,5 +40,39 @@ describe('Box', () => {
     const button = getByRole('button');
 
     expect(button).toBeInTheDocument();
+  });
+
+  test('should have props theme provider', () => {
+    const Test = props => (
+      <ThemeProvider>
+        <Box
+          as="button"
+          margin={1}
+          padding={2}
+          styleConfig={{
+            variants: {
+              variant: {
+                negative: {
+                  backgroundColor: 'red100'
+                },
+                positive: {
+                  backgroundColor: 'green100'
+                }
+              }
+            }
+          }}
+          {...props}
+        >
+          {content}
+        </Box>
+      </ThemeProvider>
+    );
+    const { getByRole } = render(<Test variant="negative" />);
+
+    const button = getByRole('button');
+
+    expect(button).toHaveStyle(
+      'margin: 5px; padding: 10px; background-color: #f4b6af;'
+    );
   });
 });
