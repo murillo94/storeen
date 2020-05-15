@@ -13,7 +13,7 @@
   "dependencies": {
     "@storeen/system": "*",
     "feather-icons-react": "^0.4.1",
-    "next": "^9.4.0",
+    "next": "9.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-text-mask": "^5.4.3",
