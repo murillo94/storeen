@@ -1,10 +1,19 @@
 ---
 title: 'Side Navigation'
 component: 'SideNavigation'
-description: 'Useful for displaying one panel of content at a time.'
+description: 'Useful for displaying one panel of content with link at a time.'
 ---
 
-todo
+<SideNavigation>
+  <SideNavigationGroup>
+    <SideNavigationItem key={1} href="/">
+      im side navigation item 1
+    </SideNavigationItem>
+    <SideNavigationItem key={2} href="/">
+      im side navigation item 2
+    </SideNavigationItem>
+  </SideNavigationGroup>
+</SideNavigation>
 
 <PropsTable
   data={{
