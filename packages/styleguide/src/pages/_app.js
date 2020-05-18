@@ -3,9 +3,11 @@ import { MDXProvider } from '@mdx-js/react';
 
 import * as SC from '@storeen/components';
 import { PropsTable } from '../components/PropsTable';
+import { CodeBlock } from '../components/CodeBlock';
 
 const customComponents = {
   ...SC,
+  code: CodeBlock,
   h1: props => (
     <SC.Heading {...props} is="h1" marginTop={11} marginBottom={5} />
   ),

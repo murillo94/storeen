@@ -148,7 +148,7 @@ const App = ({ children }) => {
 
           .main-children {
             margin: 20px auto 0;
-            width: 800px;
+            width: 685px;
           }
 
           @media (max-width: 64em) {

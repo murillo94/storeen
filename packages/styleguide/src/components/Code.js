@@ -18,7 +18,7 @@ export const Code = ({ children, variant = 'normal' }) => (
 
         .fade {
           background-color: ${theming.colors.gray100};
-          color: theming};
+          color: ${theming.colors.gray800};
         }
       `}
     </style>
