@@ -2,8 +2,9 @@ import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 
 import * as SC from '@storeen/components';
-import { PropsTable } from '../components/PropsTable';
 import { CodeBlock } from '../components/CodeBlock';
+import { PropsTable } from '../components/PropsTable';
+import { ThemeSection } from '../components/ThemeSection';
 
 const customComponents = {
   ...SC,
@@ -29,7 +30,8 @@ const customComponents = {
   tr: SC.TableRow,
   th: SC.TableHeadCell,
   td: SC.TableBodyCell,
-  PropsTable
+  PropsTable,
+  ThemeSection
 };
 
 const App = ({ Component, pageProps }) => (
