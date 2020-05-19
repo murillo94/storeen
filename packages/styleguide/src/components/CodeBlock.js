@@ -26,7 +26,7 @@ const theme = {
     {
       types: ['string', 'attr-value'],
       style: {
-        color: 'hsl(330, 75%, 45%)'
+        color: theming.colors.red500
       }
     },
     {
@@ -49,25 +49,25 @@ const theme = {
         'inserted'
       ],
       style: {
-        color: 'hsl(180, 55%, 35%)'
+        color: theming.colors.green700
       }
     },
     {
       types: ['atrule', 'keyword', 'attr-name', 'selector'],
       style: {
-        color: 'hsl(195, 90%, 35%)'
+        color: theming.colors.green500
       }
     },
     {
       types: ['function', 'deleted', 'tag'],
       style: {
-        color: 'hsl(330, 75%, 45%)'
+        color: theming.colors.red700
       }
     },
     {
       types: ['function-variable'],
       style: {
-        color: 'hsl(180, 50%, 35%)'
+        color: theming.colors.purple700
       }
     },
     {
