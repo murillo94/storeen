@@ -26,7 +26,12 @@ const AddCategorie = () => {
 
   return (
     <>
-      <SubHeader title="Nova categoria" hasBack onClick={handleBack} />
+      <SubHeader
+        title="Nova categoria"
+        hasBack
+        onClick={handleBack}
+        marginBottom={8}
+      />
       <Container title="Geral">
         <Stack>
           <Input

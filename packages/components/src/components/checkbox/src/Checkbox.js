@@ -26,6 +26,7 @@ export const Checkbox = ({
       <Label
         id={`${id}-checkbox-label`}
         htmlFor={id}
+        marginBottom={1}
         sx={{ display: 'inline-flex', position: 'relative', cursor: 'pointer' }}
       >
         <Box

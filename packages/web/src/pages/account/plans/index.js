@@ -81,6 +81,7 @@ const PlansAccountSettings = () => {
             <Alert
               title={`Seu plano: ${plan.name} - ${plan.price}/${nameSelectedTypePlan}`}
               description={`Cobraremos em seu cartão ${plan.price}. Enviaremos um recibo por e-mail sempre que cobrarmos. Você pode alterar seu plano ou cancelar a qualquer momento.`}
+              marginBottom={5}
             />
             <Input
               labelText="Número do cartão de crédito"

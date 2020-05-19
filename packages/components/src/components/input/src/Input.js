@@ -23,7 +23,7 @@ export const Input = memo(
   }) => (
     <div className="input-form">
       {labelText && (
-        <Label id={`${id}-input-label`} htmlFor={id}>
+        <Label id={`${id}-input-label`} htmlFor={id} marginBottom={1}>
           {labelText}
         </Label>
       )}

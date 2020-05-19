@@ -12,7 +12,6 @@ export const SubHeader = ({
   <>
     <Box
       as="header"
-      marginBottom={8}
       styleConfig={{
         display: 'flex',
         alignItems: 'center',

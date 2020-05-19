@@ -10,7 +10,7 @@ const Categories = () => {
   const handleAddCategorie = () => Router.push('/categories/add');
 
   return (
-    <SubHeader title="Categorias">
+    <SubHeader title="Categorias" marginBottom={8}>
       <Button onClick={handleAddCategorie}>Nova categoria</Button>
     </SubHeader>
   );

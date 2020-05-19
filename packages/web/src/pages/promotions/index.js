@@ -42,7 +42,7 @@ const Promotions = () => {
 
   return (
     <>
-      <SubHeader title="Promoções">
+      <SubHeader title="Promoções" marginBottom={8}>
         <Button onClick={handleAddPromotion}>Nova promoção</Button>
       </SubHeader>
       <Table

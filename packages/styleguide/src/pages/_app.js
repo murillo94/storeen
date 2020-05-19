@@ -7,6 +7,7 @@ import { CodeBlock } from '../components/CodeBlock';
 
 const customComponents = {
   ...SC,
+  pre: props => <div {...props} />,
   code: CodeBlock,
   h1: props => (
     <SC.Heading {...props} is="h1" marginTop={11} marginBottom={5} />

@@ -77,7 +77,7 @@ const Products = () => {
 
   return (
     <>
-      <SubHeader title="Produtos">
+      <SubHeader title="Produtos" marginBottom={8}>
         <Button onClick={handleAddProduct}>Novo produto</Button>
       </SubHeader>
       <Table

@@ -82,13 +82,14 @@ const theme = {
 export const CodeBlock = ({ children }) => {
   const components = useMDXComponents();
 
+  const liveProviderProps = {
+    transformCode: code => `<>${code}</>`,
+    scope: { mdx, ...components }
+  };
+
   return (
     <Box marginTop={4}>
-      <LiveProvider
-        code={children.trim()}
-        scope={{ mdx, ...components }}
-        theme={theme}
-      >
+      <LiveProvider code={children.trim()} {...liveProviderProps} theme={theme}>
         <LivePreview
           style={{
             border: `1px solid ${theming.colors.gray100}`,
@@ -101,7 +102,7 @@ export const CodeBlock = ({ children }) => {
           padding={theming.space[3]}
           style={{
             fontSize: theming.fontSizes[1],
-            fontWeight: 400,
+            fontWeight: theming.fontWeights[0],
             lineHeight: 1.5,
             border: `1px solid ${theming.colors.gray100}`,
             borderBottomLeftRadius: theming.radii[2],

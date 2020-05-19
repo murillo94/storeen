@@ -16,7 +16,6 @@ export const Alert = ({
     <Box
       role="alert"
       padding={4}
-      marginBottom={5}
       styleConfig={{
         backgroundColor: 'gray0',
         borderWidth: '1px',

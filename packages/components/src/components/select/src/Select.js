@@ -21,7 +21,7 @@ export const Select = ({
   return (
     <Box>
       {labelText && (
-        <Label id={`${id}-select-label`} htmlFor={id}>
+        <Label id={`${id}-select-label`} htmlFor={id} marginBottom={1}>
           {labelText}
         </Label>
       )}

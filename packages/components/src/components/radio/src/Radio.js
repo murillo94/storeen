@@ -26,6 +26,7 @@ export const Radio = ({
       <Label
         id={`${id}-radio-label`}
         htmlFor={id}
+        marginBottom={1}
         sx={{
           display: 'inline-flex',
           position: 'relative',

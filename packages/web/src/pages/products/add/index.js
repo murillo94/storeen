@@ -28,7 +28,12 @@ const AddProduct = () => {
 
   return (
     <>
-      <SubHeader title="Novo Produto" hasBack onClick={handleBack} />
+      <SubHeader
+        title="Novo Produto"
+        hasBack
+        onClick={handleBack}
+        marginBottom={8}
+      />
       <Container title="Geral">
         <Stack>
           <Input

@@ -13,7 +13,6 @@ export const Label = memo(
         as="label"
         id={id}
         htmlFor={htmlFor}
-        marginBottom={1}
         styleConfig={{
           fontSize: 0,
           color: fontColor,

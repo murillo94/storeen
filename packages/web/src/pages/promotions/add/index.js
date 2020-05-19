@@ -50,7 +50,12 @@ const AddPromotion = () => {
 
   return (
     <>
-      <SubHeader title="Nova Promoção" hasBack onClick={handleBack} />
+      <SubHeader
+        title="Nova Promoção"
+        hasBack
+        onClick={handleBack}
+        marginBottom={8}
+      />
       <Container title="Geral">
         <Stack>
           <Input
