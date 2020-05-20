@@ -21,8 +21,8 @@ export const TableOptions = ({
         width: '300px'
       },
       'input, button[type="submit"]': {
-        backgroundColor: 'gray75',
-        borderColor: 'gray75'
+        backgroundColor: 'gray200',
+        borderColor: 'gray200'
       },
       '.form-group': {
         marginTop: [4, 0],

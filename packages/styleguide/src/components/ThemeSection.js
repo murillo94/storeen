@@ -12,12 +12,13 @@ const Heading = props => (
   <StoreenHeading is="h2" marginTop={8} marginBottom={4} {...props} />
 );
 
-const SectionTitle = props => (
+const SectionTitle = ({ textTransform = 'capitalize', ...props }) => (
   <Text
     marginY={0}
     sx={{
       color: 'gray700',
-      textTransform: 'capitalize'
+      textTransform,
+      display: 'block'
     }}
     {...props}
   />
@@ -29,7 +30,7 @@ const Divider = () => (
       border: 'none',
       borderTopWidth: '1px',
       borderTopStyle: 'solid',
-      borderTopColor: theming.colors.gray100,
+      borderTopColor: theming.colors.gray300,
       margin: '25px 0',
       width: '100%'
     }}
@@ -55,7 +56,7 @@ const ColorCard = ({ color, name, props }) => (
           backgroundColor: color,
           borderWidth: '1px',
           borderStyle: 'solid',
-          borderColor: 'gray100',
+          borderColor: 'gray300',
           borderRadius: 2,
           height: '100px',
           width: '100px'
@@ -65,11 +66,9 @@ const ColorCard = ({ color, name, props }) => (
         <StoreenHeading is="h4" marginTop={2} marginBottom={1}>
           <Text sx={{ textTransform: 'capitalize' }}>{name}</Text>
         </StoreenHeading>
-        <Text marginBottom={2} sx={{ color: 'gray700' }}>
-          <Text sx={{ textTransform: 'uppercase' }}>
-            {color.replace(/\(|\)/g, ' ').replace('.', '0.')}
-          </Text>
-        </Text>
+        <SectionTitle marginBottom={2} textTransform="uppercase">
+          {color.replace(/\(|\)/g, ' ').replace('.', '0.')}
+        </SectionTitle>
       </Box>
     </Box>
   </Box>

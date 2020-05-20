@@ -55,7 +55,7 @@ class CustomDocument extends Document {
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;
-                  background-color: ${theming.colors.gray75};
+                  background-color: ${theming.colors.gray100};
                   color: ${theming.colors.gray900};
                   margin: 0;
                 }
@@ -65,7 +65,7 @@ class CustomDocument extends Document {
                 }
 
                 ::selection {
-                  background-color: ${theming.colors.purple700};
+                  background-color: ${theming.colors.blue700};
                   color: ${theming.colors.gray0};
                 }
               `

@@ -20,7 +20,7 @@ export const Alert = ({
         backgroundColor: 'gray0',
         borderWidth: '1px',
         borderStyle: 'solid',
-        borderColor: 'gray100',
+        borderColor: 'gray300',
         borderLeftWidth: '4px',
         borderLeftStyle: 'solid',
         borderLeftColor: theme.borderColor,

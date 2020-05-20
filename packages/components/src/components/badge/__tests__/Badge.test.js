@@ -41,8 +41,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${theming.colors.purple700};`);
-    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.blue700};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.blue700};`);
   });
 
   test('should have minimal theme', () => {

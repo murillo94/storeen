@@ -65,7 +65,7 @@ describe('Table', () => {
       'box-shadow: 0 0 0 1px rgba(63,63,68,0.04),0 1px 3px 0 rgba(63,63,68,0.15);'
     );
     expect(children).toHaveStyle(
-      `border-width: 1px; border-style: solid; border-color: gray100;`
+      `border-width: 1px; border-style: solid; border-color: gray300;`
     );
   });
 

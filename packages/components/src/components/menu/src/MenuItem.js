@@ -20,7 +20,7 @@ const MenuItemLink = ({ children, href }) => (
         alignItems: 'center',
         '&:focus': {
           boxShadow: 0,
-          borderColor: 'purple700'
+          borderColor: 'blue700'
         }
       }}
     >

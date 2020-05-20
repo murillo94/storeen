@@ -92,7 +92,7 @@ describe('Select', () => {
     );
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${theming.colors.purple700};`
+      `border: 1px solid ${theming.colors.blue700};`
     );
   });
 

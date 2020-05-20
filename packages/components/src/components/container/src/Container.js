@@ -16,7 +16,7 @@ export const Container = ({
     ? {
         borderWidth: '1px',
         borderStyle: 'solid',
-        borderColor: 'gray100'
+        borderColor: 'gray300'
       }
     : {};
 

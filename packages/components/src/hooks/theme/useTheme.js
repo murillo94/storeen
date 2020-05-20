@@ -3,30 +3,30 @@ import { theming } from '../../theme/theming';
 const theme = {
   default: {
     color: theming.colors.gray0,
-    backgroundColor: theming.colors.purple700,
-    borderColor: theming.colors.purple700,
+    backgroundColor: theming.colors.blue700,
+    borderColor: theming.colors.blue700,
     hover: {
       color: theming.colors.gray0,
-      backgroundColor: theming.colors.purple600,
-      borderColor: theming.colors.purple600
+      backgroundColor: theming.colors.blue600,
+      borderColor: theming.colors.blue600
     },
     focus: {
       boxShadow: theming.shadows[0],
-      borderColor: theming.colors.purple700
+      borderColor: theming.colors.blue700
     }
   },
   minimal: {
     color: theming.colors.gray900,
     backgroundColor: 'transparent',
-    borderColor: theming.colors.gray200,
+    borderColor: theming.colors.gray400,
     hover: {
       color: theming.colors.gray900,
-      backgroundColor: theming.colors.gray100,
-      borderColor: theming.colors.gray100
+      backgroundColor: theming.colors.gray300,
+      borderColor: theming.colors.gray300
     },
     focus: {
       boxShadow: theming.shadows[0],
-      borderColor: theming.colors.purple700
+      borderColor: theming.colors.blue700
     }
   },
   negative: {

@@ -35,7 +35,7 @@ describe('MenuGroup', () => {
 
     const menu = getByRole('menu');
 
-    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
+    expect(menu).toHaveStyle(`border: 1px solid ${theming.colors.blue700};`);
   });
 
   test('should have default as minimal theme', () => {

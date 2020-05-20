@@ -63,7 +63,7 @@ class CustomDocument extends Document {
                   box-sizing: border-box;
                 }
                 ::selection {
-                  background-color: ${theming.colors.purple700};
+                  background-color: ${theming.colors.blue700};
                   color: ${theming.colors.gray0};
                 }
               `

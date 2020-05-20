@@ -20,9 +20,7 @@ describe('Button', () => {
 
     expect(button).toHaveTextContent(content);
     expect(button).toHaveAttribute('type', 'button');
-    expect(button).toHaveStyle(
-      `border: 1px solid ${theming.colors.purple700};`
-    );
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.blue700};`);
     expect(button).toHaveStyle('width: auto;');
     expect(button).not.toBeDisabled();
   });
@@ -88,12 +86,8 @@ describe('Button', () => {
     const button = getByRole('button');
 
     expect(button).toHaveStyle(`color: ${theming.colors.gray0};`);
-    expect(button).toHaveStyle(
-      `background-color: ${theming.colors.purple700};`
-    );
-    expect(button).toHaveStyle(
-      `border: 1px solid ${theming.colors.purple700};`
-    );
+    expect(button).toHaveStyle(`background-color: ${theming.colors.blue700};`);
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.blue700};`);
   });
 
   test('should have minimal theme', () => {

@@ -51,7 +51,7 @@ describe('SideNavigationItem', () => {
     const listitem = getByRole('listitem');
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.gray100}; opacity: 1;`
+      `background-color: ${theming.colors.gray300}; opacity: 1;`
     );
   });
 
@@ -63,13 +63,13 @@ describe('SideNavigationItem', () => {
     const listitem = getByRole('listitem');
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.purple700};`
+      `background-color: ${theming.colors.blue700};`
     );
 
     rerender(<SideNavigationItem appearance="default" href="mocked-path" />);
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.purple600};`
+      `background-color: ${theming.colors.blue600};`
     );
   });
 
@@ -85,7 +85,7 @@ describe('SideNavigationItem', () => {
     rerender(<SideNavigationItem href="mocked-path" />);
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.gray100};`
+      `background-color: ${theming.colors.gray300};`
     );
   });
 

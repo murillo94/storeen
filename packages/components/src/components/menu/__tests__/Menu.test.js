@@ -67,9 +67,7 @@ describe('Menu', () => {
     const button = getByRole('button');
 
     expect(button).toHaveStyle(`color: ${theming.colors.gray0};`);
-    expect(button).toHaveStyle(
-      `background-color: ${theming.colors.purple700};`
-    );
+    expect(button).toHaveStyle(`background-color: ${theming.colors.blue700};`);
   });
 
   test('should have default as minimal theme', () => {

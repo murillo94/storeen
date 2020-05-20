@@ -66,7 +66,7 @@ export const Switch = ({
         <Box
           as="span"
           styleConfig={{
-            backgroundColor: 'gray200',
+            backgroundColor: 'gray400',
             borderRadius: '20px',
             width: '44px',
             height: '22px',

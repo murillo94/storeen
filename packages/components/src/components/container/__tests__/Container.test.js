@@ -83,7 +83,7 @@ describe('Container', () => {
     const { getByText } = render(<Container hasBorder>{content}</Container>);
 
     expect(getByText(content)).toHaveStyle(
-      `border-width: 1px; border-style: solid; border-color: gray100;`
+      `border-width: 1px; border-style: solid; border-color: gray300;`
     );
   });
 });

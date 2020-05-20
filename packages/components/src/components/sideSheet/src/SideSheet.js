@@ -24,7 +24,7 @@ export const SideSheet = ({
           backgroundColor: 'gray0',
           borderRightWidth: '1px',
           borderRightStyle: 'solid',
-          borderRightColor: 'gray200',
+          borderRightColor: 'gray400',
           maxWidth: width,
           height: '100vh',
           position: 'fixed',

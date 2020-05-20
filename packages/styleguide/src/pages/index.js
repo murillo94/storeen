@@ -111,7 +111,7 @@ const App = ({ children }) => {
 
           nav {
             background-color: ${theming.colors.gray0};
-            border-right: 1px solid ${theming.colors.gray200};
+            border-right: 1px solid ${theming.colors.gray400};
             text-align: center;
             padding: 20px 0 10px;
             width: 220px;
@@ -131,7 +131,7 @@ const App = ({ children }) => {
           hr {
             width: 100%;
             border: none;
-            border-top: 1px solid ${theming.colors.gray100};
+            border-top: 1px solid ${theming.colors.gray300};
             margin: 0px 0px 5px;
           }
 

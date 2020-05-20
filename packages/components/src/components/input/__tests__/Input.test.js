@@ -92,7 +92,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${theming.colors.purple700};`);
+    expect(input).toHaveStyle(`border: 1px solid ${theming.colors.blue700};`);
   });
 
   test('should have default as minimal theme', () => {

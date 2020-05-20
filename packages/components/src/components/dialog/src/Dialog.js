@@ -25,7 +25,7 @@ export const Dialog = ({
         backgroundColor: 'gray0',
         borderWidth: '1px',
         borderStyle: 'solid',
-        borderColor: 'gray200',
+        borderColor: 'gray400',
         borderRadius: 3,
         width,
         maxHeight: 'calc(100vh - 56px)',

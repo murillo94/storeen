@@ -46,7 +46,7 @@ describe('Heading', () => {
       const { getByRole } = render(<Heading color="primary" />);
 
       expect(getByRole('heading')).toHaveStyle(
-        `color: ${theming.colors.purple700};`
+        `color: ${theming.colors.blue700};`
       );
     });
 
@@ -92,7 +92,7 @@ describe('Heading', () => {
       const { getByRole } = render(<Heading is="h2" color="primary" />);
 
       expect(getByRole('heading')).toHaveStyle(
-        `color: ${theming.colors.purple700};`
+        `color: ${theming.colors.blue700};`
       );
     });
 
@@ -140,7 +140,7 @@ describe('Heading', () => {
       const { getByRole } = render(<Heading is="h3" color="primary" />);
 
       expect(getByRole('heading')).toHaveStyle(
-        `color: ${theming.colors.purple700};`
+        `color: ${theming.colors.blue700};`
       );
     });
 
@@ -188,7 +188,7 @@ describe('Heading', () => {
       const { getByRole } = render(<Heading is="h4" color="primary" />);
 
       expect(getByRole('heading')).toHaveStyle(
-        `color: ${theming.colors.purple700};`
+        `color: ${theming.colors.blue700};`
       );
     });
 

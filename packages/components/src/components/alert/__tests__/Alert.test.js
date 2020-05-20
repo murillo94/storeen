@@ -38,7 +38,7 @@ describe('Alert', () => {
 
     expect(text).toHaveStyle('border-left-width: 4px;');
     expect(text).toHaveStyle('border-left-style: solid;');
-    expect(text).toHaveStyle(`border-left-color: ${theming.colors.purple700};`);
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.blue700};`);
   });
 
   test('should have minimal theme', () => {

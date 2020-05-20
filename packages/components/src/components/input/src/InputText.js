@@ -52,7 +52,7 @@ const Input = ({
           zIndex: 1
         },
         '&::placeholder': {
-          color: 'gray500'
+          color: 'gray700'
         }
       }}
       {...props}

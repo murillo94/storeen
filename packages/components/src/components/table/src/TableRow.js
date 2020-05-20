@@ -14,14 +14,14 @@ export const TableRow = ({
       backgroundColor: 'gray0',
       borderBottomWidth: '1px',
       borderBottomStyle: 'solid',
-      borderBottomColor: 'gray100',
+      borderBottomColor: 'gray300',
       height: '64px',
       cursor: onClick ? 'pointer' : 'default',
       '&:last-child': {
         borderBottom: isBody && 'none'
       },
       '&:hover': {
-        backgroundColor: isHover && 'gray75'
+        backgroundColor: isHover && 'gray200'
       }
     }}
     {...props}

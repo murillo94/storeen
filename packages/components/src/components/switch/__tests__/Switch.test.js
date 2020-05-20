@@ -68,8 +68,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${theming.colors.purple700};`);
-    expect(rightText).toHaveStyle(`color: ${theming.colors.purple700};`);
+    expect(leftText).toHaveStyle(`color: ${theming.colors.blue700};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.blue700};`);
   });
 
   test('should have change with checked', () => {

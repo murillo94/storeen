@@ -8,7 +8,7 @@ export const Header = ({ children, ...props }) => (
       backgroundColor: 'gray0',
       borderBottomWidth: '1px',
       borderBottomStyle: 'solid',
-      borderBottomColor: 'gray200',
+      borderBottomColor: 'gray400',
       position: 'sticky',
       top: '0',
       left: '0',

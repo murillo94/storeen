@@ -13,7 +13,7 @@ const theme = {
     {
       types: ['comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: theming.colors.gray500,
+        color: theming.colors.gray700,
         fontStyle: 'italic'
       }
     },
@@ -32,7 +32,7 @@ const theme = {
     {
       types: ['punctuation', 'operator'],
       style: {
-        color: theming.colors.gray600
+        color: theming.colors.gray800
       }
     },
     {
@@ -67,13 +67,13 @@ const theme = {
     {
       types: ['function-variable'],
       style: {
-        color: theming.colors.purple700
+        color: theming.colors.blue700
       }
     },
     {
       types: ['tag', 'selector', 'keyword'],
       style: {
-        color: theming.colors.purple500
+        color: theming.colors.blue500
       }
     }
   ]
@@ -92,7 +92,7 @@ export const CodeBlock = ({ children }) => {
       <LiveProvider code={children.trim()} {...liveProviderProps} theme={theme}>
         <LivePreview
           style={{
-            border: `1px solid ${theming.colors.gray100}`,
+            border: `1px solid ${theming.colors.gray300}`,
             borderTopLeftRadius: theming.radii[2],
             borderTopRightRadius: theming.radii[2],
             padding: theming.space[3]
@@ -104,7 +104,7 @@ export const CodeBlock = ({ children }) => {
             fontSize: theming.fontSizes[1],
             fontWeight: theming.fontWeights[0],
             lineHeight: 1.5,
-            border: `1px solid ${theming.colors.gray100}`,
+            border: `1px solid ${theming.colors.gray300}`,
             borderBottomLeftRadius: theming.radii[2],
             borderBottomRightRadius: theming.radii[2],
             borderTop: 'none'

@@ -168,7 +168,7 @@ const Content = ({ children }) => {
           backgroundColor: 'gray0',
           borderRightWidth: '1px',
           borderRightStyle: 'solid',
-          borderRightColor: 'gray200',
+          borderRightColor: 'gray400',
           textAlign: 'center',
           width: ['125px', '', '', '180px'],
           height: '100vh',

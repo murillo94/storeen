@@ -76,7 +76,7 @@ export const Select = ({
             </option>
           ))}
         </Box>
-        <Icon name="chevron-down" size={18} color={theming.colors.gray600} />
+        <Icon name="chevron-down" size={18} color={theming.colors.gray700} />
       </Box>
     </Box>
   );

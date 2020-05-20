@@ -12,13 +12,13 @@ export const Code = ({ children, variant = 'normal' }) => (
         }
 
         .normal {
-          background-color: ${theming.colors.purple100};
-          color: ${theming.colors.purple800};
+          background-color: ${theming.colors.blue100};
+          color: ${theming.colors.blue700};
         }
 
         .fade {
-          background-color: ${theming.colors.gray100};
-          color: ${theming.colors.gray800};
+          background-color: ${theming.colors.gray200};
+          color: ${theming.colors.gray700};
         }
       `}
     </style>

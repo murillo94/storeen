@@ -21,7 +21,7 @@ export const Anchor = memo(
             outline: 0,
             '&:focus': {
               boxShadow: 0,
-              borderColor: 'purple700'
+              borderColor: 'blue700'
             }
           }}
           {...props}
