@@ -14,9 +14,7 @@ describe('Container', () => {
   test('should have children and default values', () => {
     const { getByText } = render(<Container>{content}</Container>);
 
-    expect(getByText(content)).toHaveStyle(
-      'box-shadow: 0 0 0 1px rgba(63,63,68,0.04),0 1px 3px 0 rgba(63,63,68,0.15);'
-    );
+    expect(getByText(content)).toBeInTheDocument();
   });
 
   test('should have title, optionsTitle and subTitle', () => {
@@ -69,21 +67,5 @@ describe('Container', () => {
     );
 
     expect(getByText(content)).toHaveClass('between');
-  });
-
-  test('should not have box shadow', () => {
-    const { getByText } = render(
-      <Container hasBoxShadow={false}>{content}</Container>
-    );
-
-    expect(getByText(content)).toHaveStyle('box-shadow: false;');
-  });
-
-  test('should have border', () => {
-    const { getByText } = render(<Container hasBorder>{content}</Container>);
-
-    expect(getByText(content)).toHaveStyle(
-      `border-width: 1px; border-style: solid; border-color: gray300;`
-    );
   });
 });

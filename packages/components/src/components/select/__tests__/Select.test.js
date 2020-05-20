@@ -100,7 +100,7 @@ describe('Select', () => {
     const { getByRole } = render(<Select>{content}</Select>);
 
     expect(getByRole('combobox')).toHaveStyle(
-      `border: 1px solid ${theming.colors.gray200};`
+      `border: 1px solid ${theming.colors.gray300};`
     );
   });
 

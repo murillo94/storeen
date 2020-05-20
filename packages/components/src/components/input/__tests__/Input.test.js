@@ -100,7 +100,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
 
-    expect(input).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
+    expect(input).toHaveStyle(`border: 1px solid ${theming.colors.gray300};`);
   });
 
   test('should have negative theme', () => {

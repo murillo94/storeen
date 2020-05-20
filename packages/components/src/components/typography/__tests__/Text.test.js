@@ -39,7 +39,7 @@ describe('Text', () => {
     const { getByText } = render(<TextCustom color="muted" />);
 
     expect(getByText('im span')).toHaveStyle(
-      `color: ${theming.colors.gray800};`
+      `color: ${theming.colors.gray700};`
     );
   });
 

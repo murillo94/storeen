@@ -51,7 +51,7 @@ describe('Label', () => {
     const { getByText } = render(<LabelCustom color="muted" />);
 
     expect(getByText('content')).toHaveStyle(
-      `color: ${theming.colors.gray800};`
+      `color: ${theming.colors.gray700};`
     );
   });
 

@@ -50,8 +50,8 @@ describe('Badge', () => {
 
     const text = getByText(content);
 
-    expect(text).toHaveStyle(`color: ${theming.colors.gray200};`);
-    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
+    expect(text).toHaveStyle(`color: ${theming.colors.gray300};`);
+    expect(text).toHaveStyle(`border: 1px solid ${theming.colors.gray300};`);
   });
 
   test('should have negative theme', () => {

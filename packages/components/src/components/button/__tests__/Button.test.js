@@ -99,7 +99,7 @@ describe('Button', () => {
 
     expect(button).toHaveStyle(`color: ${theming.colors.gray900};`);
     expect(button).toHaveStyle('background-color: transparent;');
-    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.gray200};`);
+    expect(button).toHaveStyle(`border: 1px solid ${theming.colors.gray300};`);
   });
 
   test('should have negative theme', () => {

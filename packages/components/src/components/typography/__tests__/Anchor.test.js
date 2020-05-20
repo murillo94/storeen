@@ -41,7 +41,7 @@ describe('Anchor', () => {
   test('should have muted color', () => {
     const { getByRole } = render(<Anchor {...props} color="muted" />);
 
-    expect(getByRole('link')).toHaveStyle(`color: ${theming.colors.gray800};`);
+    expect(getByRole('link')).toHaveStyle(`color: ${theming.colors.gray700};`);
   });
 
   test('should have primary color', () => {

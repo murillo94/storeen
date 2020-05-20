@@ -22,9 +22,7 @@ describe('Table', () => {
 
     const children = getByText(content);
 
-    expect(children.closest('div').parentNode).toHaveStyle(
-      'box-shadow: 0 0 0 1px rgba(63,63,68,0.04),0 1px 3px 0 rgba(63,63,68,0.15); border: false;'
-    );
+    expect(children).toBeInTheDocument();
   });
 
   test('should have title', () => {

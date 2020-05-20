@@ -72,7 +72,7 @@ describe('Box', () => {
     const button = getByRole('button');
 
     expect(button).toHaveStyle(
-      'margin: 5px; padding: 10px; background-color: #f4b6af;'
+      'margin: 5px; padding: 10px; background-color: #ffe8e8;'
     );
   });
 });

@@ -36,8 +36,8 @@ describe('Switch', () => {
     const leftText = getByText('im left text');
     const rightText = getByText('im right text');
 
-    expect(leftText).toHaveStyle(`color: ${theming.colors.gray800};`);
-    expect(rightText).toHaveStyle(`color: ${theming.colors.gray800};`);
+    expect(leftText).toHaveStyle(`color: ${theming.colors.gray700};`);
+    expect(rightText).toHaveStyle(`color: ${theming.colors.gray700};`);
   });
 
   test('should have default color text', () => {

@@ -36,7 +36,7 @@ describe('Paragraph', () => {
   test('should have muted color', () => {
     const { getByText } = render(<ParagraphCustom color="muted" />);
 
-    expect(getByText('im p')).toHaveStyle(`color: ${theming.colors.gray800};`);
+    expect(getByText('im p')).toHaveStyle(`color: ${theming.colors.gray700};`);
   });
 
   test('should have primary color', () => {

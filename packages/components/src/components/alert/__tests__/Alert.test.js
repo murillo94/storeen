@@ -48,7 +48,7 @@ describe('Alert', () => {
 
     expect(text).toHaveStyle('border-left-width: 4px;');
     expect(text).toHaveStyle('border-left-style: solid;');
-    expect(text).toHaveStyle(`border-left-color: ${theming.colors.gray200};`);
+    expect(text).toHaveStyle(`border-left-color: ${theming.colors.gray300};`);
   });
 
   test('should have negative theme', () => {

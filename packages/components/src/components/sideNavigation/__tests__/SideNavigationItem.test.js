@@ -51,7 +51,7 @@ describe('SideNavigationItem', () => {
     const listitem = getByRole('listitem');
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.gray300}; opacity: 1;`
+      `background-color: ${theming.colors.gray200}; opacity: 1;`
     );
   });
 
@@ -85,7 +85,7 @@ describe('SideNavigationItem', () => {
     rerender(<SideNavigationItem href="mocked-path" />);
 
     expect(listitem).toHaveStyle(
-      `background-color: ${theming.colors.gray300};`
+      `background-color: ${theming.colors.gray200};`
     );
   });
 

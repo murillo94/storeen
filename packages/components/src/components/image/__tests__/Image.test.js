@@ -16,8 +16,8 @@ describe('Image', () => {
 
     const image = getByRole('img');
 
-    expect(image).toHaveAttribute('width', '0');
-    expect(image).toHaveAttribute('height', '0');
+    expect(image).not.toHaveAttribute('width');
+    expect(image).not.toHaveAttribute('height');
   });
 
   test('should have src', () => {

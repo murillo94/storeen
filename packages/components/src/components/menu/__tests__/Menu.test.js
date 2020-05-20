@@ -46,7 +46,7 @@ describe('Menu', () => {
     const { getByRole } = render(<Menu hasBorder />);
 
     expect(getByRole('button')).toHaveStyle(
-      `border: 1px solid ${theming.colors.gray200};`
+      `border: 1px solid ${theming.colors.gray300};`
     );
   });
 
