@@ -104,8 +104,8 @@ const Products = () => {
                   name="eye"
                   color={
                     item.visible
-                      ? theming.colors.green700
-                      : theming.colors.red700
+                      ? theming.colors.green600
+                      : theming.colors.red600
                   }
                 />
               </TextTableCell>
