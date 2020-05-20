@@ -2,7 +2,7 @@ import { theming } from '../../../theme/theming';
 
 const fonts = {
   default: theming.colors.gray900,
-  muted: theming.colors.gray800,
+  muted: theming.colors.gray700,
   primary: theming.colors.blue700
 };
 

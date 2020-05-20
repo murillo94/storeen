@@ -8,8 +8,8 @@ export const Container = ({
   subTitle = '',
   orientation = '',
   align = '',
-  hasBoxShadow = true,
-  hasBorder = false,
+  hasBoxShadow = false,
+  hasBorder = true,
   ...props
 }) => {
   const withBorder = hasBorder

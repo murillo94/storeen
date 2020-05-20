@@ -17,7 +17,7 @@ import useSettingsShipping from '../../../containers/useSettingsShipping';
 import useLayout from '../../../hooks/layout/useLayout';
 
 const ContainerShipping = ({ children, disclosure }) => (
-  <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
+  <Container padding={3} marginBottom={4}>
     <Box
       sx={{
         display: 'flex',

@@ -6,7 +6,7 @@ import { Box, theming } from '@storeen/components';
 
 const theme = {
   plain: {
-    color: theming.colors.gray800,
+    color: theming.colors.gray700,
     backgroundColor: theming.colors.gray100
   },
   styles: [
@@ -32,7 +32,7 @@ const theme = {
     {
       types: ['punctuation', 'operator'],
       style: {
-        color: theming.colors.gray800
+        color: theming.colors.gray700
       }
     },
     {

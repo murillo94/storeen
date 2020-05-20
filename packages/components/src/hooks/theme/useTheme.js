@@ -18,11 +18,11 @@ const theme = {
   minimal: {
     color: theming.colors.gray900,
     backgroundColor: 'transparent',
-    borderColor: theming.colors.gray400,
+    borderColor: theming.colors.gray300,
     hover: {
       color: theming.colors.gray900,
-      backgroundColor: theming.colors.gray300,
-      borderColor: theming.colors.gray300
+      backgroundColor: theming.colors.gray200,
+      borderColor: theming.colors.gray200
     },
     focus: {
       boxShadow: theming.shadows[0],

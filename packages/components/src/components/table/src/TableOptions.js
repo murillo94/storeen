@@ -20,10 +20,6 @@ export const TableOptions = ({
       input: {
         width: '300px'
       },
-      'input, button[type="submit"]': {
-        backgroundColor: 'gray200',
-        borderColor: 'gray200'
-      },
       '.form-group': {
         marginTop: [4, 0],
         'div > button': {

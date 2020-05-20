@@ -21,7 +21,7 @@ import useSettingsPayments from '../../../containers/useSettingsPayments';
 import useLayout from '../../../hooks/layout/useLayout';
 
 const ContainerPayment = ({ children, disclosure, onClick }) => (
-  <Container padding={3} marginBottom={4} hasBoxShadow={false} hasBorder>
+  <Container padding={3} marginBottom={4}>
     <Box
       sx={{
         display: 'flex',

@@ -5,7 +5,7 @@ import { theming } from '../../../theme/theming';
 export const Icon = ({
   name = 'help-circle',
   size = 18,
-  color = theming.colors.gray800
+  color = theming.colors.gray700
 }) => (
   <FeatherIcon
     role="img"

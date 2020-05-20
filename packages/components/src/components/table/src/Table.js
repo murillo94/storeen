@@ -12,19 +12,11 @@ export const Table = ({
   headers = [],
   placeholderSearchSuffix = '',
   ariaLabel = null,
-  hasBoxShadow = true,
-  hasBorder = false,
   hasSearch = false,
   ...props
 }) => {
   return (
-    <Container
-      title={title}
-      optionsTitle={optionsTitle}
-      hasBoxShadow={hasBoxShadow}
-      hasBorder={hasBorder}
-      padding={0}
-    >
+    <Container title={title} optionsTitle={optionsTitle} padding={0}>
       {(optionsHeader || hasSearch) && (
         <TableOptions
           hasSearch={hasSearch}
