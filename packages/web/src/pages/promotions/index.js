@@ -6,8 +6,10 @@ import {
   SubHeader,
   Button,
   Table,
-  TableRow,
-  TableBodyCell,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
   TextTableCell
 } from '@storeen/components';
 
@@ -51,21 +53,24 @@ const Promotions = () => {
         ariaLabel="Promoções"
         placeholderSearchSuffix="promoções"
       >
-        {items.map(item => (
-          <TableRow key={item.name}>
-            <TableBodyCell>
-              <TextTableCell text={item.name} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell text={item.discount} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell
-                text={item.date_expire ? item.date_expire : 'Não expira'}
-              />
-            </TableBodyCell>
-          </TableRow>
-        ))}
+        <Thead headers={headers} />
+        <Tbody>
+          {items.map(item => (
+            <Tr key={item.name}>
+              <Td>
+                <TextTableCell text={item.name} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.discount} />
+              </Td>
+              <Td>
+                <TextTableCell
+                  text={item.date_expire ? item.date_expire : 'Não expira'}
+                />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
       </Table>
     </>
   );

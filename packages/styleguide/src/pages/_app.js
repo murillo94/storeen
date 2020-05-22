@@ -25,11 +25,11 @@ const customComponents = {
   p: props => <SC.Paragraph marginBottom={2} {...props} />,
   a: props => <SC.Anchor {...props} />,
   table: SC.Table,
-  thead: SC.TableHead,
-  tbody: SC.TableBody,
-  tr: SC.TableRow,
-  th: SC.TableHeadCell,
-  td: SC.TableBodyCell,
+  thead: SC.Thead,
+  tbody: SC.Tbody,
+  tr: SC.Tr,
+  th: SC.Th,
+  td: SC.Td,
   PropsTable,
   ThemeSection
 };

@@ -2,8 +2,10 @@ import Page from '../../../layouts/adminSettingsContent/account';
 
 import {
   Table,
-  TableRow,
-  TableBodyCell,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
   TextTableCell,
   Switch,
   Radio,
@@ -38,7 +40,6 @@ const PlansAccountSettings = () => {
     <>
       <Table
         title="Planos de cobrança"
-        headers={headers}
         optionsTitle={
           <Switch
             id="type"
@@ -51,29 +52,32 @@ const PlansAccountSettings = () => {
           />
         }
       >
-        {PLANS.map(item => (
-          <TableRow key={item.name} onClick={() => onClickPlanRow(item)}>
-            <TableBodyCell>
-              <Radio
-                id={item.value}
-                name="plan.value"
-                value={item.value}
-                isChecked={plan.value === item.value}
-                onChange={onChange}
-              >
-                {item.name}
-              </Radio>
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell text={item.products} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell
-                text={`${item.price[selectedTypePlan]}/${nameSelectedTypePlan}`}
-              />
-            </TableBodyCell>
-          </TableRow>
-        ))}
+        <Thead headers={headers} />
+        <Tbody>
+          {PLANS.map(item => (
+            <Tr key={item.name} onClick={() => onClickPlanRow(item)}>
+              <Td>
+                <Radio
+                  id={item.value}
+                  name="plan.value"
+                  value={item.value}
+                  isChecked={plan.value === item.value}
+                  onChange={onChange}
+                >
+                  {item.name}
+                </Radio>
+              </Td>
+              <Td>
+                <TextTableCell text={item.products} />
+              </Td>
+              <Td>
+                <TextTableCell
+                  text={`${item.price[selectedTypePlan]}/${nameSelectedTypePlan}`}
+                />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
       </Table>
       {plan.value && plan.value !== PLANS[0].value && (
         <Container title="Informações de faturamento">

@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react';
 
-import { TableBody } from '../index';
+import { Tbody } from '../index';
 
-describe('TableBody', () => {
+describe('Tbody', () => {
   test('should render', () => {
     const { getByRole } = render(
       <table>
-        <TableBody />
+        <Tbody />
       </table>
     );
 
@@ -17,11 +17,11 @@ describe('TableBody', () => {
     const content = 'im content';
     const { getByRole } = render(
       <table>
-        <TableBody>
+        <Tbody>
           <tr>
             <td>{content}</td>
           </tr>
-        </TableBody>
+        </Tbody>
       </table>
     );
 

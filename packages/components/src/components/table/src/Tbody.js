@@ -1,6 +1,6 @@
 import { Box } from '../../box';
 
-export const TableBody = ({ children, ...props }) => (
+export const Tbody = ({ children, ...props }) => (
   <Box as="tbody" {...props}>
     {children}
   </Box>

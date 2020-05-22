@@ -1,15 +1,12 @@
 import { Container } from '../../container';
 import { TableOptions } from './TableOptions';
 import { Box } from '../../box';
-import { TableHead } from './TableHead';
-import { TableBody } from './TableBody';
 
 export const Table = ({
   children,
   title = '',
   optionsTitle,
   optionsHeader,
-  headers = [],
   placeholderSearchSuffix = '',
   ariaLabel = null,
   hasSearch = false,
@@ -41,8 +38,7 @@ export const Table = ({
             width: '100%'
           }}
         >
-          <TableHead headers={headers} />
-          <TableBody>{children}</TableBody>
+          {children}
         </Box>
       </Box>
     </Container>

@@ -3,12 +3,12 @@ export { Table } from './src/Table';
 // Table head
 
 export { TableOptions } from './src/TableOptions';
-export { TableHead } from './src/TableHead';
-export { TableHeadCell } from './src/TableHeadCell';
+export { Thead } from './src/Thead';
+export { Th } from './src/Th';
 
 // Table body and contents
 
-export { TableBody } from './src/TableBody';
-export { TableRow } from './src/TableRow';
-export { TableBodyCell } from './src/TableBodyCell';
+export { Tbody } from './src/Tbody';
+export { Tr } from './src/Tr';
+export { Td } from './src/Td';
 export { TextTableCell } from './src/TextTableCell';

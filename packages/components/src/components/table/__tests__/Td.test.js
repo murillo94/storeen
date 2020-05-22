@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
 
-import { TableBodyCell } from '../index';
+import { Td } from '../index';
 
-describe('TableBodyCell', () => {
+describe('Td', () => {
   test('should render', () => {
     const { getByRole } = render(
       <table>
         <tbody>
           <tr>
-            <TableBodyCell />
+            <Td />
           </tr>
         </tbody>
       </table>
@@ -23,7 +23,7 @@ describe('TableBodyCell', () => {
       <table>
         <tbody>
           <tr>
-            <TableBodyCell>{content}</TableBodyCell>
+            <Td>{content}</Td>
           </tr>
         </tbody>
       </table>

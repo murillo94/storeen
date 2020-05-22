@@ -1,6 +1,6 @@
 import { Box } from '../../box';
 
-export const TableBodyCell = ({ children, ...props }) => (
+export const Td = ({ children, ...props }) => (
   <Box as="td" padding={4} {...props}>
     {children}
   </Box>

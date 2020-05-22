@@ -1,12 +1,6 @@
 import { Box } from '../../box';
 
-export const TableRow = ({
-  children,
-  isBody = true,
-  isHover = true,
-  onClick = null,
-  ...props
-}) => (
+export const Tr = ({ children, hasHover = true, onClick = null, ...props }) => (
   <Box
     as="tr"
     onClick={onClick}
@@ -17,11 +11,11 @@ export const TableRow = ({
       borderBottomColor: 'gray200',
       height: '64px',
       cursor: onClick ? 'pointer' : 'default',
-      '&:last-child': {
-        borderBottom: isBody && 'none'
-      },
       '&:hover': {
-        backgroundColor: isHover && 'gray100'
+        backgroundColor: hasHover && 'gray100'
+      },
+      '&:last-child': {
+        borderBottom: 'none'
       }
     }}
     {...props}

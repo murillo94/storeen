@@ -1,13 +1,13 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import { TableRow } from '../index';
+import { Tr } from '../index';
 
-describe('TableRow', () => {
+describe('Tr', () => {
   test('should render', () => {
     const { getByRole } = render(
       <table>
         <thead>
-          <TableRow />
+          <Tr />
         </thead>
       </table>
     );
@@ -20,9 +20,9 @@ describe('TableRow', () => {
     const { getByRole } = render(
       <table>
         <thead>
-          <TableRow>
+          <Tr>
             <th>{content}</th>
-          </TableRow>
+          </Tr>
         </thead>
       </table>
     );
@@ -35,7 +35,7 @@ describe('TableRow', () => {
     const { getByRole } = render(
       <table>
         <thead>
-          <TableRow onClick={onClick} />
+          <Tr onClick={onClick} />
         </thead>
       </table>
     );

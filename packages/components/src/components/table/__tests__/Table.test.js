@@ -14,9 +14,11 @@ describe('Table', () => {
   test('should have children and default values', () => {
     const { getByText } = render(
       <Table>
-        <tr>
-          <td>{content}</td>
-        </tr>
+        <thead>
+          <tr>
+            <td>{content}</td>
+          </tr>
+        </thead>
       </Table>
     );
 
@@ -35,25 +37,20 @@ describe('Table', () => {
     expect(getByRole('table')).toHaveAttribute('aria-label', content);
   });
 
-  test('should have headers', () => {
-    const { getByText } = render(
-      <Table
-        headers={['im header1', 'im header2']}
-        optionsHeader="im options header"
-      />
-    );
+  test('should have options', () => {
+    const { getByText } = render(<Table optionsHeader="im options header" />);
 
-    expect(getByText('im header1')).toBeInTheDocument();
-    expect(getByText('im header2')).toBeInTheDocument();
     expect(getByText('im options header')).toBeInTheDocument();
   });
 
   test('should have style props', () => {
     const { getByText } = render(
       <Table hasBoxShadow={false} hasBorder>
-        <tr>
-          <td>{content}</td>
-        </tr>
+        <thead>
+          <tr>
+            <td>{content}</td>
+          </tr>
+        </thead>
       </Table>
     );
 

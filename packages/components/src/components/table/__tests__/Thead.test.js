@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react';
 
-import { TableHead } from '../index';
+import { Thead } from '../index';
 
-describe('TableHead', () => {
+describe('Thead', () => {
   test('should render', () => {
     const { getByRole } = render(
       <table>
-        <TableHead />
+        <Thead />
       </table>
     );
 
@@ -16,7 +16,7 @@ describe('TableHead', () => {
   test('should have headers', () => {
     const { getByRole } = render(
       <table>
-        <TableHead headers={['im header1']} />
+        <Thead headers={['im header1']} />
       </table>
     );
 

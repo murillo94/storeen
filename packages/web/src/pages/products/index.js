@@ -10,8 +10,10 @@ import {
   SubHeader,
   Button,
   Table,
-  TableRow,
-  TableBodyCell,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
   TextTableCell,
   Icon,
   theming
@@ -81,37 +83,39 @@ const Products = () => {
         <Button onClick={handleAddProduct}>Novo produto</Button>
       </SubHeader>
       <Table
-        headers={headers}
         optionsHeader={<Filter />}
         hasSearch
         ariaLabel="Produtos"
         placeholderSearchSuffix="produtos"
       >
-        {items.map(item => (
-          <TableRow key={item.name}>
-            <TableBodyCell>
-              <TextTableCell text={item.name} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell text={item.price} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell text={item.stock} />
-            </TableBodyCell>
-            <TableBodyCell>
-              <TextTableCell>
-                <Icon
-                  name="eye"
-                  color={
-                    item.visible
-                      ? theming.colors.green600
-                      : theming.colors.red600
-                  }
-                />
-              </TextTableCell>
-            </TableBodyCell>
-          </TableRow>
-        ))}
+        <Thead headers={headers} />
+        <Tbody>
+          {items.map(item => (
+            <Tr key={item.name}>
+              <Td>
+                <TextTableCell text={item.name} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.price} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.stock} />
+              </Td>
+              <Td>
+                <TextTableCell>
+                  <Icon
+                    name="eye"
+                    color={
+                      item.visible
+                        ? theming.colors.green600
+                        : theming.colors.red600
+                    }
+                  />
+                </TextTableCell>
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
       </Table>
     </>
   );

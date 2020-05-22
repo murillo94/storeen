@@ -2,8 +2,10 @@ import Page from '../../../layouts/adminSettingsContent/account';
 
 import {
   Table,
-  TableRow,
-  TableBodyCell,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
   TextTableCell,
   Button
 } from '@storeen/components';
@@ -35,23 +37,26 @@ const items = [
 ];
 
 const PaymentsAccountSettings = () => (
-  <Table title="Histórico de pagamentos" headers={headers}>
-    {items.map(item => (
-      <TableRow key={item.name}>
-        <TableBodyCell>
-          <TextTableCell text={item.date} />
-        </TableBodyCell>
-        <TableBodyCell>
-          <TextTableCell text={item.name} />
-        </TableBodyCell>
-        <TableBodyCell>
-          <TextTableCell text={item.price} />
-        </TableBodyCell>
-        <TableBodyCell>
-          <Button appearance="minimal" icon="download" hasBorder={false} />
-        </TableBodyCell>
-      </TableRow>
-    ))}
+  <Table title="Histórico de pagamentos">
+    <Thead headers={headers} />
+    <Tbody>
+      {items.map(item => (
+        <Tr key={item.name}>
+          <Td>
+            <TextTableCell text={item.date} />
+          </Td>
+          <Td>
+            <TextTableCell text={item.name} />
+          </Td>
+          <Td>
+            <TextTableCell text={item.price} />
+          </Td>
+          <Td>
+            <Button appearance="minimal" icon="download" hasBorder={false} />
+          </Td>
+        </Tr>
+      ))}
+    </Tbody>
   </Table>
 );
 

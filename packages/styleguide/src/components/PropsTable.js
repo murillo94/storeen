@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Table, TableRow, TableBodyCell } from '@storeen/components';
+import { Heading, Table, Thead, Tbody, Tr, Td } from '@storeen/components';
 import { Code } from './Code';
 
 export const PropsTable = ({ title = 'Props', data = {} }) => {
@@ -12,18 +12,21 @@ export const PropsTable = ({ title = 'Props', data = {} }) => {
         {title}
       </Heading>
       {hasProps && (
-        <Table headers={['Prop', 'Type', 'Description']}>
-          {Object.entries(data).map(([key, value]) => (
-            <TableRow key={key}>
-              <TableBodyCell>
-                <Code variant="fade">{key}</Code>
-              </TableBodyCell>
-              <TableBodyCell>
-                <Code>{value.type}</Code>
-              </TableBodyCell>
-              <TableBodyCell>{value.description}</TableBodyCell>
-            </TableRow>
-          ))}
+        <Table>
+          <Thead headers={['Prop', 'Type', 'Description']} />
+          <Tbody>
+            {Object.entries(data).map(([key, value]) => (
+              <Tr key={key}>
+                <Td>
+                  <Code variant="fade">{key}</Code>
+                </Td>
+                <Td>
+                  <Code>{value.type}</Code>
+                </Td>
+                <Td>{value.description}</Td>
+              </Tr>
+            ))}
+          </Tbody>
         </Table>
       )}
     </>
