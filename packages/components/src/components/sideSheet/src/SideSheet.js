@@ -20,7 +20,7 @@ export const SideSheet = ({
         paddingTop={4}
         paddingBottom={2}
         paddingX={0}
-        styleConfig={{
+        sx={{
           backgroundColor: 'gray0',
           borderRightWidth: '1px',
           borderRightStyle: 'solid',
