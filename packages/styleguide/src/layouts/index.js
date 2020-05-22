@@ -1,11 +1,9 @@
-import App from '../pages';
-
 import { Heading } from '@storeen/components';
 
 export default frontMatter => {
   return ({ children }) => {
     return (
-      <App>
+      <>
         <Heading>{frontMatter.title}</Heading>
         <Heading
           is="h2"
@@ -19,7 +17,7 @@ export default frontMatter => {
           {frontMatter.description}
         </Heading>
         {children}
-      </App>
+      </>
     );
   };
 };

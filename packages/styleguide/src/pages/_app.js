@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 
+import Wrapper from '../layouts/wrapper';
+
 import * as SC from '@storeen/components';
 import { CodeBlock } from '../components/CodeBlock';
 import { PropsTable } from '../components/PropsTable';
@@ -40,7 +42,9 @@ const App = ({ Component, pageProps }) => (
       <Head>
         <title>Storeen&apos;s design system</title>
       </Head>
-      <Component {...pageProps} />
+      <Wrapper>
+        <Component {...pageProps} />
+      </Wrapper>
     </MDXProvider>
   </SC.ThemeProvider>
 );
