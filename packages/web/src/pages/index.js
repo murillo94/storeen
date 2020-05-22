@@ -19,7 +19,7 @@ import useLayout from '../hooks/layout/useLayout';
 const Logo = () => (
   <div>
     <Image
-      src={require('../public/static/images/logo-icon.svg')}
+      src={require('../public/images/logo-icon.svg')}
       alt="Storeen logo icone"
       width="57px"
       height="57px"

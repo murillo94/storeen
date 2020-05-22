@@ -74,7 +74,7 @@ const PaymentsSettings = () => {
           onClick={handleClickDialog}
         >
           <ImageDescription
-            src={require('../../../public/static/images/payments/mercadopago.svg')}
+            src={require('../../../public/images/payments/mercadopago.svg')}
             alt="Mercado Pago logo"
             description="Mercado Pago"
             width="32px"
@@ -108,7 +108,7 @@ const PaymentsSettings = () => {
           onClick={handleClickDialog}
         >
           <ImageDescription
-            src={require('../../../public/static/images/payments/wirecard.svg')}
+            src={require('../../../public/images/payments/wirecard.svg')}
             alt="Wirecard logo"
             description="Wirecard"
             width="32px"
@@ -142,7 +142,7 @@ const PaymentsSettings = () => {
           onClick={handleClickDialog}
         >
           <ImageDescription
-            src={require('../../../public/static/images/payments/pagseguro.svg')}
+            src={require('../../../public/images/payments/pagseguro.svg')}
             alt="PagSeguro logo"
             description="PagSeguro"
             width="32px"
@@ -176,7 +176,7 @@ const PaymentsSettings = () => {
           onClick={handleClickDialog}
         >
           <ImageDescription
-            src={require('../../../public/static/images/payments/paypal.svg')}
+            src={require('../../../public/images/payments/paypal.svg')}
             alt="PayPal logo"
             description="PayPal"
             width="32px"

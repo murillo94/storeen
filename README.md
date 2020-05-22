@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://storeen.now.sh">
-    <img src="https://github.com/murillo94/storeen/blob/master/packages/web/src/public/static/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
+    <img src="https://github.com/murillo94/storeen/blob/master/packages/web/src/public/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
   </a>
 </p>
 

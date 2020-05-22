@@ -42,7 +42,7 @@ class CustomDocument extends Document {
           <link
             rel="icon"
             type="image/png"
-            href={require('../public/static/images/favicon.png')}
+            href={require('../public/images/favicon.png')}
           />
           <style
             dangerouslySetInnerHTML={{

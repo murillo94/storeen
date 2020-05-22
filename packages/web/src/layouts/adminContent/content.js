@@ -17,7 +17,7 @@ import {
 const Logo = () => (
   <>
     <Image
-      src={require('../../public/static/images/logo-all-horizontal.svg')}
+      src={require('../../public/images/logo-all-horizontal.svg')}
       alt="Storeen logo com nome horizontal"
       width="120px"
       height="auto"
@@ -29,7 +29,7 @@ const Logo = () => (
       }}
     />
     <Image
-      src={require('../../public/static/images/logo-icon.svg')}
+      src={require('../../public/images/logo-icon.svg')}
       alt="Storeen logo icone"
       width="34px"
       height="34px"

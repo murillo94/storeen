@@ -17,7 +17,7 @@ const headingStyle = {
 const Logo = () => (
   <>
     <Image
-      src={require('../public/logo-all-horizontal.svg')}
+      src={require('../public/images/logo-all-horizontal.svg')}
       alt="Storeen logo com nome horizontal"
       width="120px"
       height="auto"

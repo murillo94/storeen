@@ -42,7 +42,7 @@ class CustomDocument extends Document {
           <link
             rel="icon"
             type="image/png"
-            href={require('../public/favicon.png')}
+            href={require('../public/images/favicon.png')}
           />
           <style
             dangerouslySetInnerHTML={{
@@ -59,9 +59,11 @@ class CustomDocument extends Document {
                   color: ${theming.colors.gray900};
                   margin: 0;
                 }
+
                 *, :after, :before {
                   box-sizing: border-box;
                 }
+
                 ::selection {
                   background-color: ${theming.colors.blue700};
                   color: ${theming.colors.gray0};
