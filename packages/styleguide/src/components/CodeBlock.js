@@ -79,11 +79,11 @@ const theme = {
   ]
 };
 
-export const CodeBlock = ({ children }) => {
+export const CodeBlock = ({ children, removeFragment = false }) => {
   const components = useMDXComponents();
 
   const liveProviderProps = {
-    transformCode: code => `<>${code}</>`,
+    transformCode: code => (removeFragment ? code : `<>${code}</>`),
     scope: { mdx, ...components }
   };
 
