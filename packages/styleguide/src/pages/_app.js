@@ -13,18 +13,18 @@ const customComponents = {
   pre: props => <div {...props} />,
   code: CodeBlock,
   h1: props => (
-    <SC.Heading {...props} is="h1" marginTop={11} marginBottom={5} />
+    <SC.Heading {...props} is="h1" marginTop={11} marginBottom={1} />
   ),
   h2: props => (
-    <SC.Heading {...props} is="h2" marginTop={11} marginBottom={5} />
+    <SC.Heading {...props} is="h2" marginTop={11} marginBottom={1} />
   ),
   h3: props => (
-    <SC.Heading {...props} is="h3" marginTop={11} marginBottom={5} />
+    <SC.Heading {...props} is="h3" marginTop={11} marginBottom={1} />
   ),
   h4: props => (
-    <SC.Heading {...props} is="h4" marginTop={11} marginBottom={5} />
+    <SC.Heading {...props} is="h4" marginTop={11} marginBottom={1} />
   ),
-  p: props => <SC.Paragraph marginBottom={2} {...props} />,
+  p: props => <SC.Paragraph color="muted" marginY={2} {...props} />,
   a: props => <SC.Anchor {...props} />,
   table: SC.Table,
   thead: SC.Thead,

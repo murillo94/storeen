@@ -15,8 +15,8 @@ const Heading = props => (
 const SectionTitle = ({ textTransform = 'capitalize', ...props }) => (
   <Text
     marginY={0}
+    color="muted"
     sx={{
-      color: 'gray700',
       textTransform,
       display: 'block'
     }}
@@ -75,7 +75,7 @@ const ColorCard = ({ color, name, props }) => (
 );
 
 export const ThemeSection = () => (
-  <>
+  <Box marginTop={11}>
     <Heading marginY={4}>Font sizes</Heading>
     <Box sx={{ display: 'flex' }}>
       {Object.entries(theming.fontSizes)
@@ -152,5 +152,5 @@ export const ThemeSection = () => (
         );
       })}
     </ColorGrid>
-  </>
+  </Box>
 );
