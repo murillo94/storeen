@@ -54,6 +54,7 @@ export const Select = ({
             backgroundColor: 'gray0',
             backgroundClip: 'padding-box',
             border: `1px solid ${theme.borderColor}`,
+            borderRadius: 3,
             outline: 0,
             appearance: 'none',
             width: '100%',
