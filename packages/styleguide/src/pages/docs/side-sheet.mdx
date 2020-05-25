@@ -4,7 +4,20 @@ component: 'SideSheet'
 description: 'Useful for overlaying the screen on one side. It is used to show more details about a certain content.'
 ---
 
-todo
+```js removeFragment
+() => {
+  const [isVisible, setVisible] = React.useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>open side sheet</Button>
+      <SideSheet isVisible={isVisible} onClose={() => setVisible(false)}>
+        im side sheet
+      </SideSheet>
+    </>
+  );
+};
+```
 
 <PropsTable
   data={{

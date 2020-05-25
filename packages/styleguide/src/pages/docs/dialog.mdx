@@ -4,7 +4,20 @@ component: 'Dialog'
 description: 'useful for helping users make decisions and to display critical information.'
 ---
 
-todo
+```js removeFragment
+() => {
+  const [isVisible, setVisible] = React.useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>open dialog</Button>
+      <Dialog isVisible={isVisible} onClose={() => setVisible(false)}>
+        im dialog
+      </Dialog>
+    </>
+  );
+};
+```
 
 <PropsTable
   data={{

@@ -4,7 +4,28 @@ component: 'Table'
 description: 'Useful to display tabular data in row format.'
 ---
 
-todo
+```js
+<Table>
+  <Thead headers={['Name', 'City', 'Age']} />
+  <Tbody>
+    <Tr>
+      <Td>Murillo</Td>
+      <Td>Paris</Td>
+      <Td>21</Td>
+    </Tr>
+    <Tr>
+      <Td>Laura</Td>
+      <Td>London</Td>
+      <Td>24</Td>
+    </Tr>
+    <Tr>
+      <Td>Marie</Td>
+      <Td>Austin</Td>
+      <Td>40</Td>
+    </Tr>
+  </Tbody>
+</Table>
+```
 
 <PropsTable
   data={{

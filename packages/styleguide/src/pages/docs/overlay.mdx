@@ -4,7 +4,20 @@ component: 'Overlay'
 description: 'Useful for overlaying all the screen or a content.'
 ---
 
-todo
+```js removeFragment
+() => {
+  const [isVisible, setVisible] = React.useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>open overlay</Button>
+      <Overlay isVisible={isVisible} onClose={() => setVisible(false)}>
+        im overlay
+      </Overlay>
+    </>
+  );
+};
+```
 
 <PropsTable
   data={{
