@@ -79,7 +79,11 @@ const theme = {
   ]
 };
 
-export const CodeBlock = ({ children, removeFragment = false }) => {
+export const CodeBlock = ({
+  children,
+  removeFragment = false,
+  live = false
+}) => {
   const components = useMDXComponents();
 
   const liveProviderProps = {
@@ -88,16 +92,18 @@ export const CodeBlock = ({ children, removeFragment = false }) => {
   };
 
   return (
-    <Box marginTop={4}>
+    <Box marginY={4}>
       <LiveProvider code={children.trim()} {...liveProviderProps} theme={theme}>
-        <LivePreview
-          style={{
-            border: `1px solid ${theming.colors.gray300}`,
-            borderTopLeftRadius: theming.radii[2],
-            borderTopRightRadius: theming.radii[2],
-            padding: theming.space[3]
-          }}
-        />
+        {live && (
+          <LivePreview
+            style={{
+              border: `1px solid ${theming.colors.gray300}`,
+              borderTopLeftRadius: theming.radii[2],
+              borderTopRightRadius: theming.radii[2],
+              padding: theming.space[3]
+            }}
+          />
+        )}
         <LiveEditor
           padding={theming.space[3]}
           style={{
@@ -107,8 +113,11 @@ export const CodeBlock = ({ children, removeFragment = false }) => {
             border: `1px solid ${theming.colors.gray300}`,
             borderBottomLeftRadius: theming.radii[2],
             borderBottomRightRadius: theming.radii[2],
-            borderTop: 'none'
+            borderTopLeftRadius: live ? theming.radii[0] : theming.radii[2],
+            borderTopRightRadius: live ? theming.radii[0] : theming.radii[2],
+            borderTopWidth: live ? '0' : '1'
           }}
+          disabled={!live}
         />
         <LiveError />
       </LiveProvider>
