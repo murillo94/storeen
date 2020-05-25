@@ -5,4 +5,34 @@ description: 'Design system built for Storeen.'
 order: 1
 ---
 
-getting started
+## Installing
+
+(WIP) Currently under heavy development, but will be installed soon by running either of these commands:
+
+```
+npm install @storeen/components
+```
+
+or
+
+```
+yarn add @storeen/components
+```
+
+## Provider
+
+Make sure to wrap your app in ThemeProvider to get the default theme:
+
+```js removePreview
+import { ThemeProvider } from '@storeen/components';
+
+const App = () => <ThemeProvider>Hi 😀</ThemeProvider>;
+```
+
+## Importing components
+
+All components can be imported directly:
+
+```js removePreview
+import { Heading, Button } from '@storeen/components';
+```
