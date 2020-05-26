@@ -1,14 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 import { useEffect } from 'react';
-import dynamic from 'next/dynamic';
 
 import { Box } from '../../box';
+import { Portal } from '../../portal';
 
 import preventBodyScroll from '../utils/preventBodyScroll';
-
-const Portal = dynamic(() => import('../../portal').then(mod => mod.Portal), {
-  ssr: false
-});
 
 export const Overlay = ({
   children,
