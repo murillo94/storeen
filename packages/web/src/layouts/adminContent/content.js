@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import {
   Image,
@@ -9,10 +12,16 @@ import {
   Menu,
   MenuGroup,
   MenuItem,
-  SideSheet,
+  MenuItemLink,
   Header,
-  Button
+  Button,
+  SideNavigationItemLink
 } from '@storeen/components';
+
+const SideSheet = dynamic(
+  () => import('@storeen/components').then(mod => mod.SideSheet),
+  { ssr: false }
+);
 
 const Logo = () => (
   <>
@@ -43,6 +52,8 @@ const Logo = () => (
 );
 
 const Nav = () => {
+  const { pathname } = useRouter();
+
   const tabMarginY = { _: 2, large: 1 };
   const tabStyle = {
     a: {
@@ -60,63 +71,84 @@ const Nav = () => {
         <Logo />
         <SideNavigationGroup>
           <SideNavigationItem
-            icon="home"
-            href="/home"
+            isActive={!!pathname.match('/home')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Início
+            <Link href="/home" passHref>
+              <SideNavigationItemLink icon="home">
+                Início
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            icon="bar-chart"
-            href="/reports"
+            isActive={!!pathname.match('/reports')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Relatórios
+            <Link href="/reports" passHref>
+              <SideNavigationItemLink icon="bar-chart">
+                Relatórios
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            icon="clipboard"
-            href="/orders"
+            isActive={!!pathname.match('/orders')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Pedidos
+            <Link href="/orders" passHref>
+              <SideNavigationItemLink icon="clipboard">
+                Pedidos
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            icon="box"
-            href="/products"
+            isActive={!!pathname.match('/products')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Produtos
+            <Link href="/products" passHref>
+              <SideNavigationItemLink icon="box">
+                Produtos
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            icon="dollar-sign"
-            href="/promotions"
+            isActive={!!pathname.match('/promotions')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Promoções
+            <Link href="/promotions" passHref>
+              <SideNavigationItemLink icon="dollar-sign">
+                Promoções
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            icon="tag"
-            href="/categories"
+            isActive={!!pathname.match('/categories')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
-            Categorias
+            <Link href="/categories" passHref>
+              <SideNavigationItemLink icon="tag">
+                Categorias
+              </SideNavigationItemLink>
+            </Link>
           </SideNavigationItem>
         </SideNavigationGroup>
       </Box>
       <SideNavigationGroup>
         <SideNavigationItem
-          icon="settings"
-          href="/settings"
+          isActive={!!pathname.match('/settings')}
           marginY={tabMarginY}
           sx={tabStyle}
         >
-          Configurações
+          <Link href="/settings" passHref>
+            <SideNavigationItemLink icon="settings">
+              Configurações
+            </SideNavigationItemLink>
+          </Link>
         </SideNavigationItem>
       </SideNavigationGroup>
     </>
@@ -138,8 +170,16 @@ const UserInfo = () => {
       onClick={handleClickUserInfo}
     >
       <MenuGroup id="user-info" isVisible={!visibleUserInfo}>
-        <MenuItem href="/account">Meus dados</MenuItem>
-        <MenuItem href="/">Sair</MenuItem>
+        <MenuItem>
+          <Link href="/account" passHref>
+            <MenuItemLink>Meus dados</MenuItemLink>
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="/" passHref>
+            <MenuItemLink>Sair</MenuItemLink>
+          </Link>
+        </MenuItem>
       </MenuGroup>
     </Menu>
   );

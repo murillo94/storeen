@@ -7,7 +7,9 @@ description: 'Useful for displaying a list of contextual actions on left click.'
 ```js live
 <Menu text="im menu">
   <MenuGroup>
-    <MenuItem>im item</MenuItem>
+    <MenuItem>
+      <MenuItemButton>im item</MenuItemButton>
+    </MenuItem>
   </MenuGroup>
 </Menu>
 ```
@@ -83,10 +85,36 @@ description: 'Useful for displaying a list of contextual actions on left click.'
     appearance: {
       type: 'default | minimal | negative | positive',
       description: 'The theming to apply'
+    }
+  }}
+/>
+
+# MenuItemLink
+
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
     },
     href: {
       type: 'String',
       description: 'The href of the menu item'
+    }
+  }}
+/>
+
+# MenuItemButton
+
+<PropsTable
+  data={{
+    children: {
+      type: 'ReactNode',
+      description: 'The content to render'
+    },
+    appearance: {
+      type: 'default | minimal | negative | positive',
+      description: 'The theming to apply'
     },
     onClick: {
       type: 'Function',

@@ -1,47 +1,58 @@
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 import AdminPage from '../adminContent';
 
 import {
   Box,
   SideNavigation,
   SideNavigationGroup,
-  SideNavigationItem
+  SideNavigationItem,
+  SideNavigationItemLink
 } from '@storeen/components';
 
-const Content = ({ children, options }) => (
-  <AdminPage>
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: ['column', '', 'row']
-      }}
-    >
-      <SideNavigation
-        marginRight={['-10px', '', 6]}
-        marginLeft={['-10px', '', 0]}
-        marginBottom={[4, '', 0]}
+const Content = ({ children, options }) => {
+  const { pathname } = useRouter();
+
+  return (
+    <AdminPage>
+      <Box
         sx={{
-          width: ['100%', '', '225px']
+          display: 'flex',
+          flexDirection: ['column', '', 'row']
         }}
       >
-        <SideNavigationGroup
+        <SideNavigation
+          marginRight={['-10px', '', 6]}
+          marginLeft={['-10px', '', 0]}
+          marginBottom={[4, '', 0]}
           sx={{
-            display: ['flex', '', 'block']
+            width: ['100%', '', '225px']
           }}
         >
-          {options.map(item => (
-            <SideNavigationItem
-              key={item.name}
-              icon={item.icon}
-              href={item.href}
-            >
-              {item.name}
-            </SideNavigationItem>
-          ))}
-        </SideNavigationGroup>
-      </SideNavigation>
-      <Box sx={{ width: '100%' }}>{children}</Box>
-    </Box>
-  </AdminPage>
-);
+          <SideNavigationGroup
+            sx={{
+              display: ['flex', '', 'block']
+            }}
+          >
+            {options.map(item => (
+              <SideNavigationItem
+                key={item.name}
+                isActive={pathname === item.href}
+              >
+                <Link href={item.href} passHref>
+                  <SideNavigationItemLink icon={item.icon}>
+                    {item.name}
+                  </SideNavigationItemLink>
+                </Link>
+              </SideNavigationItem>
+            ))}
+          </SideNavigationGroup>
+        </SideNavigation>
+        <Box sx={{ width: '100%' }}>{children}</Box>
+      </Box>
+    </AdminPage>
+  );
+};
 
 export default Content;

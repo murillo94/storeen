@@ -1,4 +1,5 @@
 import Router from 'next/router';
+import Link from 'next/link';
 
 import Page from '../layouts/login';
 
@@ -42,9 +43,11 @@ const Home = () => {
       <Paragraph color="muted" marginBottom={1}>
         Não tem uma conta ainda?
       </Paragraph>
-      <Anchor href="/" color="primary" ariaLabel="Crie a sua loja de graça!">
-        Crie sua loja, é grátis!
-      </Anchor>
+      <Link href="/" passHref>
+        <Anchor color="primary" ariaLabel="Crie a sua loja de graça!">
+          Crie sua loja, é grátis!
+        </Anchor>
+      </Link>
       <Logo />
       <Stack>
         <Input
@@ -74,13 +77,11 @@ const Home = () => {
       >
         Entrar
       </Button>
-      <Anchor
-        href="/password/new"
-        color="primary"
-        ariaLabel="Altere a sua senha"
-      >
-        Esqueceu sua senha?
-      </Anchor>
+      <Link href="/password/new" passHref>
+        <Anchor color="primary" ariaLabel="Altere a sua senha">
+          Esqueceu sua senha?
+        </Anchor>
+      </Link>
     </>
   );
 };

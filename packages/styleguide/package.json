@@ -2,6 +2,7 @@
   "name": "@storeen/styleguide",
   "version": "1.0.0",
   "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
     "babel-plugin-import-glob-array": "^0.2.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.1.0",

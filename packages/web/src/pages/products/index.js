@@ -7,6 +7,7 @@ import {
   Menu,
   MenuGroup,
   MenuItem,
+  MenuItemButton,
   SubHeader,
   Button,
   Table,
@@ -67,8 +68,12 @@ const Filter = () => {
       onClick={handleClickFilter}
     >
       <MenuGroup id="filter" isVisible={!visibleFilter}>
-        <MenuItem>todo</MenuItem>
-        <MenuItem>todo</MenuItem>
+        <MenuItem>
+          <MenuItemButton>todo</MenuItemButton>
+        </MenuItem>
+        <MenuItem>
+          <MenuItemButton>todo</MenuItemButton>
+        </MenuItem>
       </MenuGroup>
     </Menu>
   );

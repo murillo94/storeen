@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import Page from '../../../layouts/adminSettingsContent/store';
 
@@ -6,7 +7,6 @@ import {
   Container,
   Box,
   Badge,
-  Dialog,
   ImageDescription,
   Disclosure,
   Paragraph,
@@ -19,6 +19,11 @@ import {
 import useSettingsPayments from '../../../containers/useSettingsPayments';
 
 import useLayout from '../../../hooks/layout/useLayout';
+
+const Dialog = dynamic(
+  () => import('@storeen/components').then(mod => mod.Dialog),
+  { ssr: false }
+);
 
 const ContainerPayment = ({ children, disclosure, onClick }) => (
   <Container padding={3} marginBottom={4}>

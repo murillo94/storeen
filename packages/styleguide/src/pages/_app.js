@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -8,8 +9,26 @@ import { CodeBlock } from '../components/CodeBlock';
 import { PropsTable } from '../components/PropsTable';
 import { ThemeSection } from '../components/ThemeSection';
 
+const SideSheet = dynamic(
+  () => import('@storeen/components').then(mod => mod.SideSheet),
+  { ssr: false }
+);
+
+const Dialog = dynamic(
+  () => import('@storeen/components').then(mod => mod.Dialog),
+  { ssr: false }
+);
+
+const Portal = dynamic(
+  () => import('@storeen/components').then(mod => mod.Portal),
+  { ssr: false }
+);
+
 const customComponents = {
   ...SC,
+  SideSheet,
+  Dialog,
+  Portal,
   pre: props => <div {...props} />,
   code: CodeBlock,
   h1: props => (

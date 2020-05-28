@@ -1,9 +1,13 @@
 /* eslint-disable import/no-unresolved */
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 import {
   Image,
   Heading,
   SideNavigationGroup,
   SideNavigationItem,
+  SideNavigationItemLink,
   theming
 } from '@storeen/components';
 
@@ -28,6 +32,8 @@ const Logo = () => (
 );
 
 const Wrapper = ({ children }) => {
+  const { pathname } = useRouter();
+
   const pinnedPages = docsPages
     .filter(page => page.pinned)
     .sort((a, b) => a.order - b.order);
@@ -44,8 +50,13 @@ const Wrapper = ({ children }) => {
           </Heading>
           <SideNavigationGroup>
             {pinnedPages.map(page => (
-              <SideNavigationItem key={page.href} href={page.href}>
-                {page.title}
+              <SideNavigationItem
+                key={page.href}
+                isActive={pathname === page.href}
+              >
+                <Link href={page.href} passHref>
+                  <SideNavigationItemLink>{page.title}</SideNavigationItemLink>
+                </Link>
               </SideNavigationItem>
             ))}
           </SideNavigationGroup>
@@ -55,8 +66,13 @@ const Wrapper = ({ children }) => {
           </Heading>
           <SideNavigationGroup>
             {componentPages.map(page => (
-              <SideNavigationItem key={page.href} href={page.href}>
-                {page.title}
+              <SideNavigationItem
+                key={page.href}
+                isActive={pathname === page.href}
+              >
+                <Link href={page.href} passHref>
+                  <SideNavigationItemLink>{page.title}</SideNavigationItemLink>
+                </Link>
               </SideNavigationItem>
             ))}
           </SideNavigationGroup>
@@ -65,33 +81,37 @@ const Wrapper = ({ children }) => {
             Github links
           </Heading>
           <SideNavigationGroup>
-            <SideNavigationItem
-              key="components"
-              href="https://github.com/murillo94/storeen/tree/master/packages/components"
-              isExternal
-            >
-              Storeen components
+            <SideNavigationItem>
+              <SideNavigationItemLink
+                href="https://github.com/murillo94/storeen/tree/master/packages/components"
+                isExternal
+              >
+                Storeen components
+              </SideNavigationItemLink>
             </SideNavigationItem>
-            <SideNavigationItem
-              key="styleguide"
-              href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
-              isExternal
-            >
-              Storeen styleguide
+            <SideNavigationItem>
+              <SideNavigationItemLink
+                href="https://github.com/murillo94/storeen/tree/master/packages/styleguide"
+                isExternal
+              >
+                Storeen styleguide
+              </SideNavigationItemLink>
             </SideNavigationItem>
-            <SideNavigationItem
-              key="system"
-              href="https://github.com/murillo94/storeen/tree/master/packages/system"
-              isExternal
-            >
-              Storeen system
+            <SideNavigationItem>
+              <SideNavigationItemLink
+                href="https://github.com/murillo94/storeen/tree/master/packages/system"
+                isExternal
+              >
+                Storeen system
+              </SideNavigationItemLink>
             </SideNavigationItem>
-            <SideNavigationItem
-              key="web"
-              href="https://github.com/murillo94/storeen/tree/master/packages/web"
-              isExternal
-            >
-              Storeen web
+            <SideNavigationItem>
+              <SideNavigationItemLink
+                href="https://github.com/murillo94/storeen/tree/master/packages/web"
+                isExternal
+              >
+                Storeen web
+              </SideNavigationItemLink>
             </SideNavigationItem>
           </SideNavigationGroup>
         </nav>
