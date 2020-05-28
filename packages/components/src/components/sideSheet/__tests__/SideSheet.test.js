@@ -1,15 +1,10 @@
 import { render, fireEvent } from '@testing-library/react';
-import preloadAll from 'jest-next-dynamic';
 
 import { SideSheet } from '../index';
 
 const content = 'im content';
 
 describe('SideSheet', () => {
-  beforeAll(async () => {
-    await preloadAll();
-  });
-
   test('should render', () => {
     const { container } = render(<SideSheet />);
 

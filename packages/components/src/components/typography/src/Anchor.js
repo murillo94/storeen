@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import Link from 'next/link';
 
 import { Box } from '../../box';
 
@@ -10,25 +9,24 @@ export const Anchor = memo(
     const fontColor = useFont(color);
 
     return (
-      <Link href={href} passHref>
-        <Box
-          as="a"
-          aria-label={ariaLabel}
-          styleConfig={{
-            fontSize: 0,
-            color: fontColor,
-            textDecoration: 'none',
-            outline: 0,
-            '&:focus': {
-              boxShadow: 0,
-              borderColor: 'blue700'
-            }
-          }}
-          {...props}
-        >
-          {children}
-        </Box>
-      </Link>
+      <Box
+        as="a"
+        href={href}
+        aria-label={ariaLabel}
+        styleConfig={{
+          fontSize: 0,
+          color: fontColor,
+          textDecoration: 'none',
+          outline: 0,
+          '&:focus': {
+            boxShadow: 0,
+            borderColor: 'blue700'
+          }
+        }}
+        {...props}
+      >
+        {children}
+      </Box>
     );
   }
 );

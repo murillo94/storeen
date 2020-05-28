@@ -1,10 +1,9 @@
-import dynamic from 'next/dynamic';
+import { createPortal } from 'react-dom';
 
-const PortalSsr = dynamic(
-  () => import('./PortalSsr').then(mod => mod.PortalSsr),
-  {
-    ssr: false
-  }
-);
+import usePortal from '../utils/usePortal';
 
-export const Portal = props => <PortalSsr {...props} />;
+export const Portal = ({ children, id }) => {
+  const target = usePortal(id);
+
+  return createPortal(children, target);
+};
