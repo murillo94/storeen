@@ -5,12 +5,6 @@ import { MenuItemLink } from '../index';
 const content = 'im content';
 
 describe('MenuItemLink', () => {
-  test('should render', () => {
-    const { getByRole } = render(<MenuItemLink />);
-
-    expect(getByRole('link')).toBeInTheDocument();
-  });
-
   test('should have children', () => {
     const { getByText } = render(<MenuItemLink>{content}</MenuItemLink>);
 

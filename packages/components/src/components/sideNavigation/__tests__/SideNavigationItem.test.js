@@ -12,7 +12,7 @@ describe('SideNavigationItem', () => {
   });
 
   test('should have selected', () => {
-    const { getByRole } = render(<SideNavigationItem href="mocked-path" />);
+    const { getByRole } = render(<SideNavigationItem isActive />);
 
     const listitem = getByRole('listitem');
 
@@ -23,7 +23,7 @@ describe('SideNavigationItem', () => {
 
   test('should have default theme', () => {
     const { getByRole, rerender } = render(
-      <SideNavigationItem appearance="default" href="test-href" />
+      <SideNavigationItem appearance="default" />
     );
 
     const listitem = getByRole('listitem');
@@ -32,7 +32,7 @@ describe('SideNavigationItem', () => {
       `background-color: ${theming.colors.blue700};`
     );
 
-    rerender(<SideNavigationItem appearance="default" href="mocked-path" />);
+    rerender(<SideNavigationItem appearance="default" isActive />);
 
     expect(listitem).toHaveStyle(
       `background-color: ${theming.colors.blue600};`
@@ -40,15 +40,13 @@ describe('SideNavigationItem', () => {
   });
 
   test('should have default as minimal theme', () => {
-    const { getByRole, rerender } = render(
-      <SideNavigationItem href="test-href" />
-    );
+    const { getByRole, rerender } = render(<SideNavigationItem />);
 
     const listitem = getByRole('listitem');
 
     expect(listitem).toHaveStyle('background-color: transparent');
 
-    rerender(<SideNavigationItem href="mocked-path" />);
+    rerender(<SideNavigationItem isActive />);
 
     expect(listitem).toHaveStyle(
       `background-color: ${theming.colors.gray200};`
@@ -57,21 +55,21 @@ describe('SideNavigationItem', () => {
 
   test('should have negative theme', () => {
     const { getByRole, rerender } = render(
-      <SideNavigationItem appearance="negative" href="test-href" />
+      <SideNavigationItem appearance="negative" />
     );
 
     const listitem = getByRole('listitem');
 
     expect(listitem).toHaveStyle(`background-color: ${theming.colors.red700};`);
 
-    rerender(<SideNavigationItem appearance="negative" href="mocked-path" />);
+    rerender(<SideNavigationItem appearance="negative" isActive />);
 
     expect(listitem).toHaveStyle(`background-color: ${theming.colors.red600};`);
   });
 
   test('should have positive theme', () => {
     const { getByRole, rerender } = render(
-      <SideNavigationItem appearance="positive" href="test-href" />
+      <SideNavigationItem appearance="positive" />
     );
 
     const listitem = getByRole('listitem');
@@ -80,7 +78,7 @@ describe('SideNavigationItem', () => {
       `background-color: ${theming.colors.green700};`
     );
 
-    rerender(<SideNavigationItem appearance="positive" href="mocked-path" />);
+    rerender(<SideNavigationItem appearance="positive" isActive />);
 
     expect(listitem).toHaveStyle(
       `background-color: ${theming.colors.green600};`
