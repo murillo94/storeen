@@ -4,9 +4,13 @@
   "alias": "storeen",
   "builds": [
     { "src": "packages/web/package.json", "use": "@now/next" },
-    { "src": "packages/styleguide/package.json", "use": "@now/next" }
+    { "src": "packages/styleguide/package.json", "use": "@now/static-build" }
   ],
   "routes": [
+    {
+      "src": "/styleguide",
+      "dest": "/packages/styleguide/index"
+    },
     {
       "src": "/styleguide/(.*)",
       "dest": "/packages/styleguide/$1"
