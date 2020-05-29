@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Page from '../layouts/login';
 
 import {
+  Box,
   Image,
   Heading,
   Paragraph,
@@ -18,7 +19,7 @@ import useLogin from '../containers/useLogin';
 import useLayout from '../hooks/layout/useLayout';
 
 const Logo = () => (
-  <div>
+  <Box>
     <Image
       src={require('../public/images/logo-icon.svg')}
       alt="Storeen logo icone"
@@ -26,7 +27,7 @@ const Logo = () => (
       height="57px"
       marginY={6}
     />
-  </div>
+  </Box>
 );
 
 const Home = () => {

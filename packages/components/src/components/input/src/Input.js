@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { Box } from '../../box';
 import { Label } from '../../typography';
 import { InputText } from './InputText';
 import { InputPassword } from './InputPassword';
@@ -21,7 +22,7 @@ export const Input = memo(
     onClick = () => null,
     ...props
   }) => (
-    <div className="input-form">
+    <Box className="input-form">
       {labelText && (
         <Label id={`${id}-input-label`} htmlFor={id} marginBottom={1}>
           {labelText}
@@ -72,7 +73,7 @@ export const Input = memo(
           )}
         </>
       )}
-    </div>
+    </Box>
   ),
   (prevProps, nextProps) => prevProps.value === nextProps.value
 );
