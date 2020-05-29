@@ -8,20 +8,20 @@
   ],
   "routes": [
     {
-      "src": "/styleguide",
-      "dest": "/packages/styleguide/index"
-    },
-    {
-      "src": "/styleguide/(.*)",
-      "dest": "/packages/styleguide/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/packages/web/$1",
       "continue": true,
       "headers": {
         "x-request-path": "$1"
       }
+    },
+    {
+      "src": "/styleguide",
+      "dest": "/packages/styleguide/index"
+    },
+    {
+      "src": "/styleguide/(.*)",
+      "dest": "/packages/styleguide/$1"
     }
   ]
 }
