@@ -3,8 +3,8 @@
   "name": "storeen",
   "alias": "storeen",
   "builds": [
-    { "src": "packages/web/package.json", "use": "@now/next" },
-    { "src": "packages/styleguide/package.json", "use": "@now/static-build" }
+    { "src": "packages/web/package.json" },
+    { "src": "packages/styleguide/package.json" }
   ],
   "routes": [
     {
