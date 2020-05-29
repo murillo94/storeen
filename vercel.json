@@ -8,6 +8,13 @@
   ],
   "routes": [
     {
+      "src": "/styleguide",
+      "dest": "/packages/styleguide/index",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    },
+    {
       "src": "/styleguide/(.*)",
       "dest": "/packages/styleguide/$1",
       "headers": {
