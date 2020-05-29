@@ -3,17 +3,16 @@
   "name": "storeen",
   "alias": "storeen",
   "builds": [
-    { "src": "packages/web/package.json" },
-    { "src": "packages/styleguide/package.json" }
+    { "src": "packages/web/package.json", "use": "@now/next" },
+    { "src": "packages/styleguide/package.json", "use": "@now/next" }
   ],
   "routes": [
     {
-      "src": "/styleguide",
-      "dest": "/packages/styleguide/index"
-    },
-    {
       "src": "/styleguide/(.*)",
-      "dest": "/packages/styleguide/$1"
+      "dest": "/packages/styleguide/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
     },
     {
       "src": "/(.*)",
