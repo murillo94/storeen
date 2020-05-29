@@ -15,10 +15,10 @@
       "src": "/styleguide/(.*)",
       "dest": "/packages/styleguide/$1"
     },
-    { "handle": "filesystem" },
     {
       "src": "/(.*)",
       "dest": "/packages/web/$1",
+      "continue": true,
       "headers": {
         "x-request-path": "$1"
       }
