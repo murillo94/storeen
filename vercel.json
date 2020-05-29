@@ -9,11 +9,19 @@
   "routes": [
     {
       "src": "/styleguide",
-      "dest": "/packages/styleguide/index"
+      "dest": "/packages/styleguide/index",
+      "continue": true
     },
     {
       "src": "/styleguide/(.*)",
       "dest": "/packages/styleguide/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/packages/web/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
     }
   ]
 }
