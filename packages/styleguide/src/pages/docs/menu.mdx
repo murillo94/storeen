@@ -4,14 +4,27 @@ component: 'Menu'
 description: 'Useful for displaying a list of contextual actions on left click.'
 ---
 
-```js live
-<Menu text="im menu">
-  <MenuGroup>
-    <MenuItem>
-      <MenuItemButton>im item</MenuItemButton>
-    </MenuItem>
-  </MenuGroup>
-</Menu>
+```js live removeFragment
+() => {
+  const [isVisible, setVisible] = React.useState(false);
+
+  return (
+    <>
+      <Menu
+        text="open menu"
+        id="id-test"
+        isVisible={isVisible}
+        onClick={() => setVisible(!isVisible)}
+      >
+        <MenuGroup id="id-test" isVisible={!isVisible}>
+          <MenuItem>
+            <MenuItemButton>im item</MenuItemButton>
+          </MenuItem>
+        </MenuGroup>
+      </Menu>
+    </>
+  );
+};
 ```
 
 <PropsTable
