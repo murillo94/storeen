@@ -8,7 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/styleguide",
+      "src": "/styleguide.*",
       "dest": "/packages/styleguide/index",
       "continue": true
     },
