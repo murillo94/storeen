@@ -1,11 +1,11 @@
 ---
-title: 'Getting Started'
+title: 'Get Started'
 pinned: 'true'
 description: 'Design system built for Storeen.'
 order: 1
 ---
 
-## Installing
+## Installation
 
 (WIP) Currently under heavy development, but will be installed soon by running either of these commands:
 
@@ -19,20 +19,16 @@ or
 yarn add @storeen/components
 ```
 
-## Provider
+## Usage
 
 Make sure to wrap your app in ThemeProvider to get the default theme:
 
 ```js removePreview
-import { ThemeProvider } from '@storeen/components';
+import { ThemeProvider, Button } from '@storeen/components';
 
-const App = () => <ThemeProvider>Hi 😀</ThemeProvider>;
-```
-
-## Importing components
-
-All components can be imported directly:
-
-```js removePreview
-import { Heading, Button } from '@storeen/components';
+const App = () => (
+  <ThemeProvider>
+    <Button>Hi 😀</Button>
+  </ThemeProvider>
+);
 ```

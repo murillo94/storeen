@@ -1,0 +1,23 @@
+---
+title: 'Bundle size'
+pinned: 'true'
+description: "You can use the library completely or only some of its modules according to your needs. Either way, your final bundle will include only the parts you're using."
+order: 5
+---
+
+## Tree shaking
+
+If you're using modern tooling, such as webpack, create-react-app and similars, you already have tree shaking set up.
+
+```js removePreview
+import { Button, Anchor } from '@storeen/components';
+```
+
+## Separate files
+
+(WIP) @storeen/components also exposes separate files for each module. If you can't do tree shaking, you should import files directly:
+
+```js removePreview
+import { Button } from '@storeen/components/Button';
+import { Anchor } from '@storeen/components/Anchor';
+```
