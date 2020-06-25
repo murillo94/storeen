@@ -16,6 +16,7 @@ export * from './src/components/menu';
 export * from './src/components/overlay';
 export * from './src/components/portal';
 export * from './src/components/radio';
+export * from './src/components/rover';
 export * from './src/components/select';
 export * from './src/components/sideSheet';
 export * from './src/components/stack';
