@@ -7,13 +7,16 @@ import {
   Container,
   Box,
   Badge,
+  Icon,
   ImageDescription,
   Disclosure,
   Paragraph,
   Input,
   Switch,
   Footer,
-  Button
+  Button,
+  Inline,
+  theming
 } from '@storeen/components';
 
 import useSettingsPayments from '../../../containers/useSettingsPayments';
@@ -25,7 +28,7 @@ const Dialog = dynamic(
   { ssr: false }
 );
 
-const ContainerPayment = ({ children, disclosure, onClick }) => (
+const ContainerPayment = ({ children, disclosure }) => (
   <Container padding={3} marginBottom={4}>
     <Box
       sx={{
@@ -37,19 +40,25 @@ const ContainerPayment = ({ children, disclosure, onClick }) => (
       {children}
     </Box>
     {disclosure}
-    <Badge onClick={onClick}>todo</Badge>
   </Container>
+);
+
+const Info = ({ onClick }) => (
+  <Badge appearance="minimal" onClick={onClick} marginLeft={[0, 2]}>
+    <Icon name="help-circle" color={theming.colors.gray600} />
+  </Badge>
 );
 
 const PaymentsSettings = () => {
   const [visibleDialog, setVisibleDialog] = useState(false);
   const {
-    state: { mercadoPago, wirecard, pagSeguro, paypal },
-    actions: { onChange }
+    state: { info, mercadoPago, wirecard, pagSeguro, paypal },
+    actions: { onChange, handleClickInfo }
   } = useSettingsPayments();
 
-  const handleClickDialog = () => {
+  const handleClickDialog = payment => {
     setVisibleDialog(!visibleDialog);
+    handleClickInfo(payment);
   };
 
   return (
@@ -76,15 +85,17 @@ const PaymentsSettings = () => {
               />
             </Disclosure>
           }
-          onClick={handleClickDialog}
         >
-          <ImageDescription
-            src={require('../../../public/images/payments/mercadopago.svg')}
-            alt="Mercado Pago logo"
-            description="Mercado Pago"
-            width="32px"
-            height="32px"
-          />
+          <Inline>
+            <ImageDescription
+              src={require('../../../public/images/payments/mercadopago.svg')}
+              alt="Mercado Pago logo"
+              description="Mercado Pago"
+              width="32px"
+              height="32px"
+            />
+            <Info onClick={() => handleClickDialog('mercadoPago')} />
+          </Inline>
           <Switch
             id="mercado-pago"
             name="mercadoPago.active"
@@ -112,13 +123,16 @@ const PaymentsSettings = () => {
           }
           onClick={handleClickDialog}
         >
-          <ImageDescription
-            src={require('../../../public/images/payments/wirecard.svg')}
-            alt="Wirecard logo"
-            description="Wirecard"
-            width="32px"
-            height="32px"
-          />
+          <Inline>
+            <ImageDescription
+              src={require('../../../public/images/payments/wirecard.svg')}
+              alt="Wirecard logo"
+              description="Wirecard"
+              width="32px"
+              height="32px"
+            />
+            <Info onClick={() => handleClickDialog('wirecard')} />
+          </Inline>
           <Switch
             id="wirecard"
             name="wirecard.active"
@@ -146,13 +160,16 @@ const PaymentsSettings = () => {
           }
           onClick={handleClickDialog}
         >
-          <ImageDescription
-            src={require('../../../public/images/payments/pagseguro.svg')}
-            alt="PagSeguro logo"
-            description="PagSeguro"
-            width="32px"
-            height="32px"
-          />
+          <Inline>
+            <ImageDescription
+              src={require('../../../public/images/payments/pagseguro.svg')}
+              alt="PagSeguro logo"
+              description="PagSeguro"
+              width="32px"
+              height="32px"
+            />
+            <Info onClick={() => handleClickDialog('pagSeguro')} />
+          </Inline>
           <Switch
             id="pag-seguro"
             name="pagSeguro.active"
@@ -180,13 +197,16 @@ const PaymentsSettings = () => {
           }
           onClick={handleClickDialog}
         >
-          <ImageDescription
-            src={require('../../../public/images/payments/paypal.svg')}
-            alt="PayPal logo"
-            description="PayPal"
-            width="32px"
-            height="32px"
-          />
+          <Inline>
+            <ImageDescription
+              src={require('../../../public/images/payments/paypal.svg')}
+              alt="PayPal logo"
+              description="PayPal"
+              width="32px"
+              height="32px"
+            />
+            <Info onClick={() => handleClickDialog('paypal')} />
+          </Inline>
           <Switch
             id="paypal"
             name="paypal.active"
@@ -199,7 +219,7 @@ const PaymentsSettings = () => {
         <Button>Salvar</Button>
       </Footer>
       <Dialog isVisible={visibleDialog} onClose={handleClickDialog}>
-        todo
+        {info}
       </Dialog>
     </>
   );
