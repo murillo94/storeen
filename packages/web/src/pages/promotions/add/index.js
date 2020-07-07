@@ -84,6 +84,7 @@ const AddPromotion = () => {
           <Checkbox
             id="promotion-active"
             name="promotion.active"
+            value="active"
             isChecked={promotion.active}
             onChange={onChange}
           >
@@ -150,6 +151,7 @@ const AddPromotion = () => {
             <Checkbox
               id="code"
               name="promotional.hasPromotional"
+              value="hasPromotional"
               isChecked={promotional.hasPromotional}
               onChange={onChange}
             >
@@ -169,6 +171,7 @@ const AddPromotion = () => {
             <Checkbox
               id="promotional-unique-code"
               name="promotional.uniqueCode"
+              value="uniqueCode"
               isChecked={promotional.uniqueCode}
               onChange={onChange}
             >
@@ -183,6 +186,7 @@ const AddPromotion = () => {
             <Checkbox
               id="schedule-has-schedule"
               name="schedule.hasSchedule"
+              value="hasSchedule"
               isChecked={schedule.hasSchedule}
               onChange={onChange}
             >

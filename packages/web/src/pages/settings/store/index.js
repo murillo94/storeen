@@ -88,6 +88,7 @@ const StoreSettings = () => {
               <Checkbox
                 id="company-has-legal-person"
                 name="company.hasLegalPerson"
+                value="hasLegalPerson"
                 description="Caso você seja uma empresa, aconselhamos que seu cadastro seja feito com dados financeiros de pessoa jurídica, de acordo com leis vigentes, de forma regularizada."
                 isChecked={company.hasLegalPerson}
                 onChange={onChange}

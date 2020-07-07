@@ -39,7 +39,6 @@ export const Radio = ({
           id={id}
           name={name}
           value={value}
-          checked={isChecked}
           aria-checked={isChecked}
           aria-label={`${id}-radio-label`}
           onChange={onChange}

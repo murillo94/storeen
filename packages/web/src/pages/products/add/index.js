@@ -86,6 +86,7 @@ const AddProduct = () => {
             <Checkbox
               id="shipping"
               name="shipping.hasShipping"
+              value="hasShipping"
               isChecked={shipping.hasShipping}
               onChange={onChange}
             >
@@ -136,6 +137,7 @@ const AddProduct = () => {
             <Checkbox
               id="stock"
               name="stock.hasStock"
+              value="hasStock"
               isChecked={stock.hasStock}
               onChange={onChange}
             >
@@ -162,6 +164,7 @@ const AddProduct = () => {
             <Checkbox
               id="variations"
               name="variations.hasVariations"
+              value="hasVariations"
               isChecked={variations.hasVariations}
               onChange={onChange}
             >
