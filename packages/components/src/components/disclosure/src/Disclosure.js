@@ -1,4 +1,4 @@
-import { useRef, useEffect, cloneElement } from 'react';
+import { useRef, useEffect, cloneElement, useCallback } from 'react';
 
 import { Box } from '../../box';
 
@@ -12,7 +12,7 @@ export const Disclosure = ({
 }) => {
   const disclosureRef = useRef(null);
 
-  const handleDisclosure = e => {
+  const handleDisclosure = useCallback(e => {
     disclosureRef.current.toggleAttribute('hidden');
 
     if (e && e.currentTarget && e.currentTarget.getAttribute('aria-expanded')) {
@@ -20,13 +20,17 @@ export const Disclosure = ({
         e.currentTarget.getAttribute('aria-expanded') === 'true';
       e.currentTarget.setAttribute('aria-expanded', !isExpanded);
     }
-  };
+  });
 
   useEffect(() => {
     if (content) {
-      const { checked, value } = content.props;
+      const { isCheked, value } = content.props;
 
-      if (checked || value) {
+      if (action === 'onChange' && isCheked) {
+        handleDisclosure();
+      }
+
+      if (action !== 'onChange' && value) {
         handleDisclosure();
       }
     }
@@ -40,10 +44,7 @@ export const Disclosure = ({
             if (content.props[action]) content.props[action](e);
             handleDisclosure(e);
           },
-          ...(action !== 'onChange' && {
-            'aria-expanded':
-              content.props.checked || content.props.value || isVisible
-          })
+          'aria-expanded': content.props.isCheked || isVisible
         })}
       <Box ref={disclosureRef} role="region" hidden={!isVisible} marginTop={4}>
         {children}
