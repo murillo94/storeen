@@ -79,6 +79,15 @@ describe('Radio', () => {
     expect(onChange).toBeCalledWith('two');
   });
 
+  test('should have initial checked', () => {
+    const { getByLabelText } = render(<Radio isChecked>{content}</Radio>);
+
+    const checkbox = getByLabelText(content);
+
+    expect(checkbox.checked).toBe(true);
+    expect(checkbox).toHaveAttribute('checked', '');
+  });
+
   test('should have custom props', () => {
     const { getByRole } = render(<Radio aria-expanded="true" />);
 

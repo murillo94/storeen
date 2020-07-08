@@ -58,6 +58,15 @@ describe('Checkbox', () => {
     expect(onChange).toBeCalledWith(false);
   });
 
+  test('should have initial checked', () => {
+    const { getByLabelText } = render(<Checkbox isChecked>{content}</Checkbox>);
+
+    const checkbox = getByLabelText(content);
+
+    expect(checkbox.checked).toBe(true);
+    expect(checkbox).toHaveAttribute('checked', '');
+  });
+
   test('should have custom props', () => {
     const { getByRole } = render(<Checkbox aria-expanded="true" />);
 
