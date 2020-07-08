@@ -59,7 +59,7 @@ export const Select = ({
             appearance: 'none',
             width: '100%',
             display: 'block',
-            focus: {
+            '&:focus': {
               boxShadow: theme.focus.boxShadow,
               borderColor: theme.focus.borderColor
             }
