@@ -5,7 +5,7 @@ description: "Useful for creating regions of content that can expand/collapse. I
 ---
 
 ```js live
-<Disclosure content={<Button>im disclosure</Button>}>im hide/show</Disclosure>
+<Disclosure as={<Button>im disclosure</Button>}>im hide/show</Disclosure>
 ```
 
 <PropsTable
@@ -14,7 +14,7 @@ description: "Useful for creating regions of content that can expand/collapse. I
       type: 'ReactNode',
       description: 'The content to render'
     },
-    content: {
+    as: {
       type: 'ReactNode',
       description: 'The action content to render'
     },
@@ -25,10 +25,6 @@ description: "Useful for creating regions of content that can expand/collapse. I
     hasMarginBottom: {
       type: 'Boolean',
       description: 'Whether it should have margin bottom or not'
-    },
-    action: {
-      type: 'onClick | onChange',
-      description: 'A function to be called when on action'
     }
   }}
 />
