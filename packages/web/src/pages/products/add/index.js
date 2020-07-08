@@ -84,7 +84,7 @@ const AddProduct = () => {
         <Disclosure
           as={
             <Checkbox
-              id="shipping"
+              id="shipping-has-shipping"
               name="shipping.hasShipping"
               value="hasShipping"
               isChecked={shipping.hasShipping}
@@ -134,7 +134,7 @@ const AddProduct = () => {
         <Disclosure
           as={
             <Checkbox
-              id="stock"
+              id="stock-has-stock"
               name="stock.hasStock"
               value="hasStock"
               isChecked={stock.hasStock}
@@ -147,7 +147,7 @@ const AddProduct = () => {
           <Stack>
             <Input
               labelText="Quantidade"
-              id="product-quantity"
+              id="stock-quantity"
               name="stock.quantity"
               value={stock.quantity}
               mask="number"
@@ -160,7 +160,7 @@ const AddProduct = () => {
         <Disclosure
           as={
             <Checkbox
-              id="variations"
+              id="variations-has-variations"
               name="variations.hasVariations"
               value="hasVariations"
               isChecked={variations.hasVariations}

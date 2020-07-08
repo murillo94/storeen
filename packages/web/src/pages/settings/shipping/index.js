@@ -62,7 +62,7 @@ const ShippingSettings = () => {
         >
           Habilitar Retirar Pessoalmente?
           <Switch
-            id="local"
+            id="local-active"
             name="local.active"
             isChecked={local.active}
             onChange={onChange}

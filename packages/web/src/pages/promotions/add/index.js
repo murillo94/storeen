@@ -95,7 +95,7 @@ const AddPromotion = () => {
       <Container title="Aplicável">
         <Stack space="small">
           <Radio
-            id="all"
+            id="applicable-all"
             name="applicable"
             value="all"
             isChecked={applicable === 'all'}
@@ -104,7 +104,7 @@ const AddPromotion = () => {
             Todo o pedido
           </Radio>
           <Radio
-            id="categorie-specific"
+            id="applicable-categorie-specific"
             name="applicable"
             value="categorie-specific"
             isChecked={applicable === 'categorie-specific'}
@@ -113,7 +113,7 @@ const AddPromotion = () => {
             Categorias específicas
           </Radio>
           <Radio
-            id="product-specific"
+            id="applicable-product-specific"
             name="applicable"
             value="product-specific"
             isChecked={applicable === 'product-specific'}
@@ -126,7 +126,7 @@ const AddPromotion = () => {
       <Container title="Requisitos mínimos">
         <Stack space="small">
           <Radio
-            id="total-value-minimum"
+            id="minimum-requirements-total-value-minimum"
             name="minimumRequirements"
             value="total-value-minimum"
             isChecked={minimumRequirements === 'total-value-minimum'}
@@ -135,7 +135,7 @@ const AddPromotion = () => {
             Valor total do pedido mínimo
           </Radio>
           <Radio
-            id="quantity-itens-minimum"
+            id="minimum-requirements-quantity-itens-minimum"
             name="minimumRequirements"
             value="quantity-itens-minimum"
             isChecked={minimumRequirements === 'quantity-itens-minimum'}
@@ -149,7 +149,7 @@ const AddPromotion = () => {
         <Disclosure
           as={
             <Checkbox
-              id="code"
+              id="promotional-has-promotional"
               name="promotional.hasPromotional"
               value="hasPromotional"
               isChecked={promotional.hasPromotional}

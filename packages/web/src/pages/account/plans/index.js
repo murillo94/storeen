@@ -89,7 +89,7 @@ const PlansAccountSettings = () => {
             />
             <Input
               labelText="Número do cartão de crédito"
-              id="creditCardNumber"
+              id="billing-credit-card-number"
               name="billing.creditCardNumber"
               value={billing.creditCardNumber}
               mask="creditCardNumber"
@@ -98,7 +98,7 @@ const PlansAccountSettings = () => {
             <Inline>
               <Input
                 labelText="Data de validade"
-                id="expirationDate"
+                id="billing-expiration-date"
                 name="billing.expirationDate"
                 value={billing.expirationDate}
                 mask="expirationDate"
@@ -106,7 +106,7 @@ const PlansAccountSettings = () => {
               />
               <Input
                 labelText="CVC"
-                id="cvc"
+                id="billing-cvc"
                 name="billing.cvc"
                 value={billing.cvc}
                 mask="cvc"
@@ -115,7 +115,7 @@ const PlansAccountSettings = () => {
             </Inline>
             <Input
               labelText="Nome no cartão"
-              id="name"
+              id="billing-name"
               name="billing.name"
               value={billing.name}
               onChange={onChange}

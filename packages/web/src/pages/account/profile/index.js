@@ -28,7 +28,7 @@ const AccountSettings = () => {
         <Stack>
           <Input
             labelText="Nome"
-            id="name"
+            id="personal-name"
             name="personal.name"
             value={personal.name}
             onChange={onChange}
@@ -36,7 +36,7 @@ const AccountSettings = () => {
           <Input
             type="email"
             labelText="Email"
-            id="email"
+            id="personal-email"
             name="personal.email"
             value={personal.email}
             onChange={onChange}
@@ -44,7 +44,7 @@ const AccountSettings = () => {
           <Input
             type="tel"
             labelText="Telefone"
-            id="phone"
+            id="personal-phone"
             name="personal.phone"
             value={personal.phone}
             mask="phone"
@@ -61,7 +61,7 @@ const AccountSettings = () => {
             <Input
               type="password"
               labelText="Senha atual"
-              id="actual-password"
+              id="password-actual-password"
               name="password.actualPassword"
               value={password.actualPassword}
               onChange={onChange}
@@ -69,7 +69,7 @@ const AccountSettings = () => {
             <Input
               type="password"
               labelText="Nova senha"
-              id="new-password"
+              id="password-new-password"
               name="password.newPassword"
               value={password.newPassword}
               onChange={onChange}
@@ -77,7 +77,7 @@ const AccountSettings = () => {
             <Input
               type="password"
               labelText="Confirmação da nova senha"
-              id="new-confirm-password"
+              id="password-new-confirm-password"
               name="password.newConfirmPassword"
               value={password.newConfirmPassword}
               onChange={onChange}

@@ -97,7 +97,7 @@ const PaymentsSettings = () => {
             <Info onClick={() => handleClickDialog('mercadoPago')} />
           </Inline>
           <Switch
-            id="mercado-pago"
+            id="mercado-pago-active"
             name="mercadoPago.active"
             isChecked={mercadoPago.active}
             onChange={onChange}
@@ -134,7 +134,7 @@ const PaymentsSettings = () => {
             <Info onClick={() => handleClickDialog('wirecard')} />
           </Inline>
           <Switch
-            id="wirecard"
+            id="wirecard-active"
             name="wirecard.active"
             isChecked={wirecard.active}
             onChange={onChange}
@@ -171,7 +171,7 @@ const PaymentsSettings = () => {
             <Info onClick={() => handleClickDialog('pagSeguro')} />
           </Inline>
           <Switch
-            id="pag-seguro"
+            id="pag-seguro-active"
             name="pagSeguro.active"
             isChecked={pagSeguro.active}
             onChange={onChange}
@@ -208,7 +208,7 @@ const PaymentsSettings = () => {
             <Info onClick={() => handleClickDialog('paypal')} />
           </Inline>
           <Switch
-            id="paypal"
+            id="paypal-active"
             name="paypal.active"
             isChecked={paypal.active}
             onChange={onChange}
