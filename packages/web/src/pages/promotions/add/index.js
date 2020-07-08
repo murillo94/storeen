@@ -147,7 +147,7 @@ const AddPromotion = () => {
       </Container>
       <Container title="Código promocional">
         <Disclosure
-          content={
+          as={
             <Checkbox
               id="code"
               name="promotional.hasPromotional"
@@ -158,7 +158,6 @@ const AddPromotion = () => {
               Habilitar código promocional?
             </Checkbox>
           }
-          action="onChange"
         >
           <Stack>
             <Input
@@ -182,7 +181,7 @@ const AddPromotion = () => {
       </Container>
       <Container title="Agendar">
         <Disclosure
-          content={
+          as={
             <Checkbox
               id="schedule-has-schedule"
               name="schedule.hasSchedule"
@@ -193,7 +192,6 @@ const AddPromotion = () => {
               Agendar promoção?
             </Checkbox>
           }
-          action="onChange"
         >
           <Stack>todo</Stack>
         </Disclosure>

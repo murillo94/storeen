@@ -56,9 +56,7 @@ const AccountSettings = () => {
         title="Senha"
         subTitle="Caso seja necessário a alteração da sua senha, clique no botão abaixo."
       >
-        <Disclosure
-          content={<Button appearance="minimal">Alterar senha</Button>}
-        >
+        <Disclosure as={<Button appearance="minimal">Alterar senha</Button>}>
           <Stack>
             <Input
               type="password"

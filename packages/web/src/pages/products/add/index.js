@@ -82,7 +82,7 @@ const AddProduct = () => {
       </Container>
       <Container title="Fretes">
         <Disclosure
-          content={
+          as={
             <Checkbox
               id="shipping"
               name="shipping.hasShipping"
@@ -93,7 +93,6 @@ const AddProduct = () => {
               Este produto necessita de frete?
             </Checkbox>
           }
-          action="onChange"
         >
           <Inline>
             <Input
@@ -133,7 +132,7 @@ const AddProduct = () => {
       </Container>
       <Container title="Estoque">
         <Disclosure
-          content={
+          as={
             <Checkbox
               id="stock"
               name="stock.hasStock"
@@ -144,7 +143,6 @@ const AddProduct = () => {
               Controlar estoque do produto?
             </Checkbox>
           }
-          action="onChange"
         >
           <Stack>
             <Input
@@ -160,7 +158,7 @@ const AddProduct = () => {
       </Container>
       <Container title="Variações">
         <Disclosure
-          content={
+          as={
             <Checkbox
               id="variations"
               name="variations.hasVariations"
@@ -171,7 +169,6 @@ const AddProduct = () => {
               Este produto possui variações?
             </Checkbox>
           }
-          action="onChange"
         >
           <Stack>todo</Stack>
         </Disclosure>

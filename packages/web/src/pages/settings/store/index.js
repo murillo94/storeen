@@ -84,7 +84,7 @@ const StoreSettings = () => {
       >
         <Stack>
           <Disclosure
-            content={
+            as={
               <Checkbox
                 id="company-has-legal-person"
                 name="company.hasLegalPerson"
@@ -97,7 +97,6 @@ const StoreSettings = () => {
               </Checkbox>
             }
             hasMarginBottom
-            action="onChange"
           >
             <Stack>
               {company.hasLegalPerson && (
