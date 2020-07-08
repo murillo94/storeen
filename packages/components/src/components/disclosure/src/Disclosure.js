@@ -4,13 +4,13 @@ import { Box } from '../../box';
 
 export const Disclosure = ({
   children,
-  content,
+  as,
   isVisible = false,
   hasMarginBottom = false,
-  action = 'onClick',
   ...props
 }) => {
   const disclosureRef = useRef(null);
+  const mainAction = as?.props?.onChange?.name || 'onClick';
 
   const handleDisclosure = useCallback(e => {
     disclosureRef.current.toggleAttribute('hidden');
@@ -23,14 +23,10 @@ export const Disclosure = ({
   });
 
   useEffect(() => {
-    if (content) {
-      const { isCheked, value } = content.props;
+    if (as) {
+      const { isChecked } = as.props;
 
-      if (action === 'onChange' && isCheked) {
-        handleDisclosure();
-      }
-
-      if (action !== 'onChange' && value) {
+      if (isChecked) {
         handleDisclosure();
       }
     }
@@ -38,13 +34,13 @@ export const Disclosure = ({
 
   return (
     <Box marginBottom={hasMarginBottom ? 4 : 0} {...props}>
-      {content &&
-        cloneElement(content, {
-          [action]: e => {
-            if (content.props[action]) content.props[action](e);
+      {as &&
+        cloneElement(as, {
+          [mainAction]: e => {
+            if (as.props[mainAction]) as.props[mainAction](e);
             handleDisclosure(e);
           },
-          'aria-expanded': content.props.isCheked || isVisible
+          'aria-expanded': as.props.isChecked || isVisible
         })}
       <Box ref={disclosureRef} role="region" hidden={!isVisible} marginTop={4}>
         {children}

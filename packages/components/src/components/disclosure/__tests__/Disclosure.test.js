@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
 import { Disclosure } from '../index';
+import { Checkbox } from '../../checkbox';
 
 const children = 'im children';
 
@@ -14,7 +15,7 @@ describe('Disclosure', () => {
 
   test('should have children and default values', () => {
     const { getByRole, getByText } = render(
-      <Disclosure content={<button>im content</button>}>{children}</Disclosure>
+      <Disclosure as={<button>im content</button>}>{children}</Disclosure>
     );
 
     const customChildren = getByText(children);
@@ -30,11 +31,35 @@ describe('Disclosure', () => {
     const region = getByRole('region');
 
     expect(content).toHaveAttribute('aria-expanded', 'true');
-
     expect(region).toBeVisible();
   });
 
-  test('should have children isVisible is true', () => {
+  test('should have children visible when isChecked as component is true', () => {
+    const onChange = jest.fn();
+    const { getByText } = render(
+      <Disclosure
+        as={
+          <Checkbox
+            id="code"
+            name="promotional.hasPromotional"
+            value="hasPromotional"
+            isChecked
+            onChange={onChange}
+          >
+            im checkbox
+          </Checkbox>
+        }
+      >
+        {children}
+      </Disclosure>
+    );
+
+    const customChildren = getByText(children);
+
+    expect(customChildren).toBeVisible();
+  });
+
+  test('should have children visible when isVisible is true', () => {
     const { getByText } = render(<Disclosure isVisible>{children}</Disclosure>);
 
     const customChildren = getByText(children);
@@ -68,7 +93,7 @@ describe('Disclosure', () => {
     };
 
     const { getByText } = render(
-      <Disclosure content={<Test />}>{children}</Disclosure>
+      <Disclosure as={<Test />}>{children}</Disclosure>
     );
     const content0 = getByText('0');
 
