@@ -1,16 +1,15 @@
 import { Box } from '../../box';
 
-export const Inline = ({ children, ...props }) => (
+export const Inline = ({ children, isProportional = true, ...props }) => (
   <Box
     className="form-group"
     styleConfig={{
       display: 'flex',
       flexDirection: ['column', 'row'],
       flexWrap: 'wrap',
-      '> div': {
-        flex: ['0.5', '1'],
-        minWidth: ['175px', 'auto'],
-        '+ div': {
+      '> *': {
+        flexGrow: isProportional ? '1' : '0',
+        '+ *': {
           marginLeft: [0, 4]
         }
       },
