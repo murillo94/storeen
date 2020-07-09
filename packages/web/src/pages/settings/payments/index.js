@@ -53,12 +53,12 @@ const PaymentsSettings = () => {
   const [visibleDialog, setVisibleDialog] = useState(false);
   const {
     state: { info, mercadoPago, wirecard, pagSeguro, paypal },
-    actions: { onChange, handleClickInfo }
+    actions: { onChange, onClickInfo }
   } = useSettingsPayments();
 
   const handleClickDialog = payment => {
     setVisibleDialog(!visibleDialog);
-    handleClickInfo(payment);
+    onClickInfo(payment);
   };
 
   return (

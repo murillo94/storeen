@@ -54,7 +54,7 @@ export const PLANS = [
 ];
 
 const customActions = setState => ({
-  onClickTypePlan: () => {
+  onClickType: () => {
     setState(prevState => ({
       ...prevState,
       plan: {
@@ -66,7 +66,7 @@ const customActions = setState => ({
       isAnnually: !prevState.isAnnually
     }));
   },
-  onClickPlanRow: ({ name, value, price }) => {
+  onClickPlan: ({ name, value, price }) => {
     setState(prevState => ({
       ...prevState,
       plan: {

@@ -30,7 +30,7 @@ const headers = ['Plano', 'Produtos', 'Preço'];
 const PlansAccountSettings = () => {
   const {
     state: { plan, billing, isAnnually },
-    actions: { onChange, onClickTypePlan, onClickPlanRow }
+    actions: { onChange, onClickType, onClickPlan }
   } = useAccountPlans();
 
   const selectedTypePlan = TYPE[isAnnually];
@@ -48,14 +48,14 @@ const PlansAccountSettings = () => {
             leftText="mensal"
             rightText="anual"
             isChecked={isAnnually}
-            onChange={onClickTypePlan}
+            onChange={onClickType}
           />
         }
       >
         <Thead headers={headers} />
         <Tbody>
           {PLANS.map(item => (
-            <Tr key={item.name} onClick={() => onClickPlanRow(item)}>
+            <Tr key={item.name} onClick={() => onClickPlan(item)}>
               <Td>
                 <Radio
                   id={item.value}

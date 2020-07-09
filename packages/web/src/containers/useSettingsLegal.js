@@ -8,7 +8,7 @@ const models = {
 };
 
 const customActions = setState => ({
-  handleClickCopyModel: model => {
+  onClickCopyModel: model => {
     setState(prevState => ({
       ...prevState,
       [model]: { ...prevState[model], description: models[model] }

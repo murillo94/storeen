@@ -9,7 +9,7 @@ import useLayout from '../../../hooks/layout/useLayout';
 const LegalSettings = () => {
   const {
     state: { refund, privacy, service, shipping },
-    actions: { onChange, handleClickCopyModel }
+    actions: { onChange, onClickCopyModel }
   } = useSettingsLegal();
 
   return (
@@ -28,7 +28,7 @@ const LegalSettings = () => {
           />
           <Button
             appearance="minimal"
-            onClick={() => handleClickCopyModel('refund')}
+            onClick={() => onClickCopyModel('refund')}
           >
             Copiar modelo
           </Button>
@@ -48,7 +48,7 @@ const LegalSettings = () => {
           />
           <Button
             appearance="minimal"
-            onClick={() => handleClickCopyModel('privacy')}
+            onClick={() => onClickCopyModel('privacy')}
           >
             Copiar modelo
           </Button>
@@ -68,7 +68,7 @@ const LegalSettings = () => {
           />
           <Button
             appearance="minimal"
-            onClick={() => handleClickCopyModel('service')}
+            onClick={() => onClickCopyModel('service')}
           >
             Copiar modelo
           </Button>
@@ -88,7 +88,7 @@ const LegalSettings = () => {
           />
           <Button
             appearance="minimal"
-            onClick={() => handleClickCopyModel('shipping')}
+            onClick={() => onClickCopyModel('shipping')}
           >
             Copiar modelo
           </Button>

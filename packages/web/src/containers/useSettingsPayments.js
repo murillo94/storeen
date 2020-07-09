@@ -8,7 +8,7 @@ const infos = {
 };
 
 const customActions = setState => ({
-  handleClickInfo: payment => {
+  onClickInfo: payment => {
     setState(prevState => ({
       ...prevState,
       info: infos[payment]
