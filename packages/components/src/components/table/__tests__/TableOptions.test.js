@@ -17,13 +17,13 @@ describe('TableOptions', () => {
   });
 
   test('should have input search', () => {
-    const { getByPlaceholderText } = render(
+    const { getByLabelText } = render(
       <TableOptions hasSearch placeholderSearchSuffix="suffix test" />
     );
 
-    expect(getByPlaceholderText('Buscar suffix test')).toHaveAttribute(
-      'type',
-      'text'
-    );
+    const input = getByLabelText('Buscar suffix test');
+
+    expect(input).toHaveAttribute('type', 'text');
+    expect(input).toHaveAttribute('placeholder', 'Buscar suffix test');
   });
 });

@@ -25,6 +25,14 @@ describe('Select', () => {
     expect(getByRole('combobox')).toBeInTheDocument();
   });
 
+  test('should have aria label', () => {
+    const { getByLabelText } = render(
+      <Select options={options} ariaLabel="im aria label" />
+    );
+
+    expect(getByLabelText('im aria label')).toBeInTheDocument();
+  });
+
   test('should have change with only select', () => {
     const onChange = jest.fn();
     const Test = () => {

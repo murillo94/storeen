@@ -46,9 +46,15 @@ describe('Input', () => {
   });
 
   test('should have mask', () => {
-    const { container } = render(<Input />);
+    const { getByRole } = render(<Input mask="phone" value="99999999999" />);
 
-    expect(container).toBeInTheDocument();
+    expect(getByRole('textbox')).toHaveValue('(99) 99999-9999');
+  });
+
+  test('should have aria label', () => {
+    const { getByLabelText } = render(<Input ariaLabel="im aria label" />);
+
+    expect(getByLabelText('im aria label')).toBeInTheDocument();
   });
 
   test('should have change', () => {

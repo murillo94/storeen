@@ -13,6 +13,7 @@ export const Select = ({
   value = '',
   labelText = '',
   options = [],
+  ariaLabel = null,
   onChange = () => null,
   ...props
 }) => {
@@ -45,6 +46,7 @@ export const Select = ({
           id={id}
           name={name}
           value={value}
+          aria-label={ariaLabel}
           onChange={onChange}
           paddingLeft={2}
           paddingRight={6}

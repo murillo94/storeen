@@ -18,6 +18,7 @@ export const Input = memo(
     placeholder = '',
     icon = '',
     mask = '',
+    ariaLabel = null,
     onChange = () => null,
     onClick = () => null,
     ...props
@@ -39,6 +40,7 @@ export const Input = memo(
           placeholder={placeholder}
           icon={icon}
           mask={mask}
+          aria-label={ariaLabel}
           onChange={onChange}
           onClick={onClick}
           {...props}
@@ -54,6 +56,7 @@ export const Input = memo(
               name={name}
               value={value}
               placeholder={placeholder}
+              aria-label={ariaLabel}
               onChange={onChange}
               {...props}
             />
@@ -67,6 +70,7 @@ export const Input = memo(
               value={value}
               placeholder={placeholder}
               mask={mask}
+              aria-label={ariaLabel}
               onChange={onChange}
               {...props}
             />

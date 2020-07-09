@@ -32,6 +32,7 @@ export const TableOptions = ({
   >
     {hasSearch && (
       <Input
+        ariaLabel={`Buscar ${placeholderSearchSuffix}`}
         id="search"
         name="search"
         icon="search"
