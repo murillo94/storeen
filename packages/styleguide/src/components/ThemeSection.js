@@ -147,7 +147,7 @@ export const ThemeSection = () => (
       {Object.entries(theming.colors).map(([key, value]) => {
         return (
           !Array.isArray(value) && (
-            <ColorCard color={value} name={key} key={key} />
+            <ColorCard key={key} color={value} name={key} />
           )
         );
       })}
