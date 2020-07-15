@@ -8,6 +8,11 @@ import {
   Stack,
   Input,
   Radio,
+  Disclosure,
+  Heading,
+  Inline,
+  Text,
+  Select,
   Footer,
   Button
 } from '@storeen/components';
@@ -16,11 +21,120 @@ import useCategoriesAdd from '../../../containers/useCategoriesAdd';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
+const ruleValueOptions = [
+  {
+    value: 'Título do produto',
+    key: 'product_title',
+    match: [
+      'is_equal_to',
+      'is_not_equal_to',
+      'starts_with',
+      'ends_with',
+      'contains',
+      'does_not_contain'
+    ]
+  },
+  {
+    value: 'Tipo do produto',
+    key: 'product_type',
+    match: [
+      'is_equal_to',
+      'is_not_equal_to',
+      'starts_with',
+      'ends_with',
+      'contains',
+      'does_not_contain'
+    ]
+  },
+  {
+    value: 'Fornecedor do produto',
+    key: 'product_vendor',
+    match: [
+      'is_equal_to',
+      'is_not_equal_to',
+      'starts_with',
+      'ends_with',
+      'contains',
+      'does_not_contain'
+    ]
+  },
+  {
+    value: 'Preço do produto',
+    key: 'product_price',
+    match: ['is_equal_to', 'is_not_equal_to', 'is_grether_then', 'is_less_then']
+  },
+  {
+    value: 'Etiqueta do produto',
+    key: 'product_tag',
+    match: ['is_equal_to']
+  },
+  {
+    value: 'Comparar no preço',
+    key: 'compare_at_price',
+    match: ['is_equal_to', 'is_not_equal_to', 'is_grether_then', 'is_less_then']
+  },
+  {
+    value: 'Peso',
+    key: 'weight',
+    match: ['is_equal_to', 'is_not_equal_to', 'is_grether_then', 'is_less_then']
+  },
+  {
+    value: 'Quantidade em estoque',
+    key: 'stock_quantity',
+    match: ['is_equal_to', 'is_grether_then', 'is_less_then']
+  }
+];
+
+const ruleMatchOptions = [
+  {
+    value: 'é igual a',
+    key: 'is_equal_to'
+  },
+  {
+    value: 'não é igual a',
+    key: 'is_not_equal_to'
+  },
+  {
+    value: 'é maior que',
+    key: 'is_grether_then'
+  },
+  {
+    value: 'é menor que',
+    key: 'is_less_then'
+  },
+  {
+    value: 'começa com',
+    key: 'starts_with'
+  },
+  {
+    value: 'termina com',
+    key: 'ends_with'
+  },
+  {
+    value: 'contém',
+    key: 'contains'
+  },
+  {
+    value: 'não contém',
+    key: 'not_contains'
+  },
+  {
+    value: 'Sim',
+    key: 'yes'
+  },
+  {
+    value: 'Não',
+    key: 'no'
+  }
+];
+
 const AddCategorie = () => {
   const {
     state: { categorie, type },
-    actions: { onChange }
+    actions: { onChange, onClickAddCondition, onClickRemoveCondition }
   } = useCategoriesAdd();
+
+  const hasMultipleRules = type.rules.length > 1;
 
   const handleBack = () => Router.push('/categories');
 
@@ -53,25 +167,95 @@ const AddCategorie = () => {
       <Container title="Tipo">
         <Stack space="medium">
           <Radio
-            id="manual"
-            name="type"
+            id="type-mode-manual"
+            name="type.mode"
             value="manual"
             description="Escolha os produtos manualmente para essa coleção."
-            isChecked={type === 'manual'}
+            isChecked={type.mode === 'manual'}
             onChange={onChange}
           >
             Manual
           </Radio>
-          <Radio
-            id="automated"
-            name="type"
-            value="automated"
-            description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
-            isChecked={type === 'automated'}
-            onChange={onChange}
+          <Disclosure
+            as={
+              <Radio
+                id="type-mode-automated"
+                name="type.mode"
+                value="automated"
+                description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
+                isChecked={type.mode === 'automated'}
+                onChange={onChange}
+              >
+                Automatizada
+              </Radio>
+            }
+            isVisible={type.mode === 'automated'}
           >
-            Automatizada
-          </Radio>
+            <Stack>
+              <Heading is="h3">Condições</Heading>
+              <Inline isProportional={false}>
+                <Text>Produtos devem ter:</Text>
+                <Radio
+                  id="type-condition-all"
+                  name="type.condition"
+                  value="all"
+                  isChecked={type.condition === 'all'}
+                  onChange={onChange}
+                >
+                  Todas condições
+                </Radio>
+                <Radio
+                  id="type-condition-any"
+                  name="type.condition"
+                  value="any"
+                  isChecked={type.condition === 'any'}
+                  onChange={onChange}
+                >
+                  Qualquer condição
+                </Radio>
+              </Inline>
+              {type.rules.map((rule, index) => (
+                <Inline key={index}>
+                  <Select
+                    ariaLabel="condição"
+                    id={`type.rules.${index}.match`}
+                    name={`type.rules.${index}.match`}
+                    options={ruleValueOptions}
+                    value={rule.match}
+                    placeholder="condição"
+                    onChange={onChange}
+                  />
+                  <Select
+                    ariaLabel="operador"
+                    id={`type.rules.${index}.operator`}
+                    name={`type.rules.${index}.operator`}
+                    options={ruleMatchOptions}
+                    value={rule.operator}
+                    placeholder="operador"
+                    onChange={onChange}
+                  />
+                  <Input
+                    ariaLabel="valor"
+                    id={`type.rules.${index}.value`}
+                    name={`type.rules.${index}.value`}
+                    value={rule.value}
+                    placeholder="valor"
+                    onChange={onChange}
+                  />
+                  {hasMultipleRules && (
+                    <Button
+                      appearance="minimal"
+                      icon="trash"
+                      onClick={() => onClickRemoveCondition(index)}
+                    />
+                  )}
+                </Inline>
+              ))}
+              <Button appearance="minimal" onClick={onClickAddCondition}>
+                Adicionar outra condição
+              </Button>
+            </Stack>
+          </Disclosure>
         </Stack>
       </Container>
       <Footer>
