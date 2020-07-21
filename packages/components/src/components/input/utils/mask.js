@@ -70,7 +70,8 @@ export const MASKS = {
     /\d/,
     /\d/
   ],
-  birthdate: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
+  date: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
+  time: [/\d/, /\d/, ':', /\d/, /\d/],
   creditCardNumber: [
     /\d/,
     /\d/,
