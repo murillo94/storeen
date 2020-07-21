@@ -12,6 +12,7 @@ import {
   Checkbox,
   Disclosure,
   Footer,
+  Inline,
   Button
 } from '@storeen/components';
 
@@ -95,54 +96,121 @@ const AddPromotion = () => {
       <Container title="Aplicável">
         <Stack space="small">
           <Radio
-            id="applicable-all"
-            name="applicable"
+            id="applicable-mode-all"
+            name="applicable.mode"
             value="all"
-            isChecked={applicable === 'all'}
+            isChecked={applicable.mode === 'all'}
             onChange={onChange}
           >
             Todo o pedido
           </Radio>
-          <Radio
-            id="applicable-categorie-specific"
-            name="applicable"
-            value="categorie-specific"
-            isChecked={applicable === 'categorie-specific'}
-            onChange={onChange}
+          <Disclosure
+            as={
+              <Radio
+                id="applicable-mode-categorie-specific"
+                name="applicable.mode"
+                value="categorie-specific"
+                isChecked={applicable.mode === 'categorie-specific'}
+                onChange={onChange}
+              >
+                Categorias específicas
+              </Radio>
+            }
+            isVisible={applicable.mode === 'categorie-specific'}
+            hasMarginBottom
           >
-            Categorias específicas
-          </Radio>
-          <Radio
-            id="applicable-product-specific"
-            name="applicable"
-            value="product-specific"
-            isChecked={applicable === 'product-specific'}
-            onChange={onChange}
+            <Input
+              ariaLabel="Buscar categorias"
+              id="search-categories"
+              name="search-categories"
+              icon="search"
+              placeholder="Buscar categorias"
+            />
+          </Disclosure>
+          <Disclosure
+            as={
+              <Radio
+                id="applicable-mode-product-specific"
+                name="applicable.mode"
+                value="product-specific"
+                isChecked={applicable.mode === 'product-specific'}
+                onChange={onChange}
+              >
+                Produtos específicas
+              </Radio>
+            }
+            isVisible={applicable.mode === 'product-specific'}
           >
-            Produtos específicas
-          </Radio>
+            <Input
+              ariaLabel="Buscar produtos"
+              id="search-products"
+              name="search-products"
+              icon="search"
+              placeholder="Buscar produtos"
+            />
+          </Disclosure>
         </Stack>
       </Container>
       <Container title="Requisitos mínimos">
         <Stack space="small">
           <Radio
-            id="minimum-requirements-total-value-minimum"
-            name="minimumRequirements"
-            value="total-value-minimum"
-            isChecked={minimumRequirements === 'total-value-minimum'}
+            id="minimum-requirements-mode-none"
+            name="minimumRequirements.mode"
+            value="none"
+            isChecked={minimumRequirements.mode === 'none'}
             onChange={onChange}
           >
-            Valor total do pedido mínimo
+            Nenhum
           </Radio>
-          <Radio
-            id="minimum-requirements-quantity-itens-minimum"
-            name="minimumRequirements"
-            value="quantity-itens-minimum"
-            isChecked={minimumRequirements === 'quantity-itens-minimum'}
-            onChange={onChange}
+          <Disclosure
+            as={
+              <Radio
+                id="minimum-requirements-mode-total-value-minimum"
+                name="minimumRequirements.mode"
+                value="total-value-minimum"
+                isChecked={minimumRequirements.mode === 'total-value-minimum'}
+                onChange={onChange}
+              >
+                Valor total do pedido mínimo
+              </Radio>
+            }
+            isVisible={minimumRequirements.mode === 'total-value-minimum'}
+            hasMarginBottom
           >
-            Quantidade de itens do pedido mínimo
-          </Radio>
+            <Input
+              ariaLabel="Preço"
+              id="minimum-requirements-value-total-value-minimum"
+              name="minimumRequirements.value"
+              value={minimumRequirements.value}
+              mask="money"
+              onChange={onChange}
+            />
+          </Disclosure>
+          <Disclosure
+            as={
+              <Radio
+                id="minimum-requirements-mode-quantity-itens-minimum"
+                name="minimumRequirements.mode"
+                value="quantity-itens-minimum"
+                isChecked={
+                  minimumRequirements.mode === 'quantity-itens-minimum'
+                }
+                onChange={onChange}
+              >
+                Quantidade de itens do pedido mínimo
+              </Radio>
+            }
+            isVisible={minimumRequirements.mode === 'quantity-itens-minimum'}
+          >
+            <Input
+              ariaLabel="Quantidade"
+              id="minimum-requirements-value-quantity-itens-minimum"
+              name="minimumRequirements.value"
+              value={minimumRequirements.value}
+              mask="number"
+              onChange={onChange}
+            />
+          </Disclosure>
         </Stack>
       </Container>
       <Container title="Código promocional">
@@ -193,7 +261,58 @@ const AddPromotion = () => {
             </Checkbox>
           }
         >
-          <Stack>todo</Stack>
+          <Stack>
+            <Inline>
+              <Input
+                labelText="Data inicial"
+                id="schedule-start-date"
+                name="schedule.startDate"
+                value={schedule.startDate}
+                mask="date"
+                onChange={onChange}
+              />
+              <Input
+                labelText="Horário inicial"
+                id="schedule-start-time"
+                name="schedule.startTime"
+                value={schedule.startTime}
+                mask="time"
+                onChange={onChange}
+              />
+            </Inline>
+            <Disclosure
+              as={
+                <Checkbox
+                  id="schedule-has-final-date"
+                  name="schedule.hasFinalDate"
+                  value="hasFinalDate"
+                  isChecked={schedule.hasFinalDate}
+                  onChange={onChange}
+                >
+                  Habilitar data final
+                </Checkbox>
+              }
+            >
+              <Inline>
+                <Input
+                  labelText="Data final"
+                  id="schedule-final-date"
+                  name="schedule.finalDate"
+                  value={schedule.finalDate}
+                  mask="date"
+                  onChange={onChange}
+                />
+                <Input
+                  labelText="Horário final"
+                  id="schedule-final-time"
+                  name="schedule.finalTime"
+                  value={schedule.finalTime}
+                  mask="time"
+                  onChange={onChange}
+                />
+              </Inline>
+            </Disclosure>
+          </Stack>
         </Disclosure>
       </Container>
       <Footer>

@@ -8,15 +8,26 @@ const usePromotionsAdd = () =>
       value: '',
       active: false
     },
-    applicable: 'all',
-    minimumRequirements: 'total-value-minimum',
+    applicable: {
+      mode: 'all',
+      value: ''
+    },
+    minimumRequirements: {
+      mode: 'none',
+      value: ''
+    },
     promotional: {
       hasPromotional: false,
       code: '',
       uniqueCode: false
     },
     schedule: {
-      hasSchedule: false
+      hasSchedule: false,
+      startDate: '',
+      startTime: '',
+      hasFinalDate: false,
+      finalDate: '',
+      finalTime: ''
     }
   });
 
