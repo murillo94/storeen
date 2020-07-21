@@ -178,7 +178,7 @@ const StoreSettings = () => {
             id="responsible-birthdate"
             name="responsible.birthdate"
             value={responsible.birthdate}
-            mask="birthdate"
+            mask="date"
             onChange={onChange}
           />
           <Input
