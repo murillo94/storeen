@@ -33,7 +33,7 @@ export const Disclosure = ({
   }, []);
 
   return (
-    <Box marginBottom={hasMarginBottom ? 4 : 0} {...props}>
+    <Box>
       {as &&
         cloneElement(as, {
           [mainAction]: e => {
@@ -42,7 +42,14 @@ export const Disclosure = ({
           },
           'aria-expanded': as.props.isChecked || isVisible
         })}
-      <Box ref={disclosureRef} role="region" hidden={!isVisible} marginTop={4}>
+      <Box
+        ref={disclosureRef}
+        role="region"
+        hidden={!isVisible}
+        marginTop={4}
+        marginBottom={hasMarginBottom ? 4 : 0}
+        {...props}
+      >
         {children}
       </Box>
     </Box>

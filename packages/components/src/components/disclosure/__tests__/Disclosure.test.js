@@ -68,12 +68,15 @@ describe('Disclosure', () => {
   });
 
   test('should have margin bottom', () => {
-    const { getByText } = render(
-      <Disclosure hasMarginBottom>{children}</Disclosure>
+    const { getByRole } = render(
+      <Disclosure isVisible hasMarginBottom>
+        {children}
+      </Disclosure>
     );
 
-    const customChildren = getByText(children);
-    expect(customChildren.parentNode).toHaveStyle('margin-bottom: 4px;');
+    const region = getByRole('region');
+
+    expect(region).toHaveStyle('margin-bottom: 4px;');
   });
 
   test('should have default action click', () => {
