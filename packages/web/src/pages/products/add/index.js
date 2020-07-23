@@ -10,6 +10,8 @@ import {
   Input,
   Checkbox,
   Disclosure,
+  Heading,
+  Select,
   Footer,
   Button
 } from '@storeen/components';
@@ -18,11 +20,36 @@ import useProductsAdd from '../../../containers/useProductsAdd';
 
 import useLayout from '../../../hooks/layout/useLayout';
 
+const variationValueOptions = [
+  {
+    value: 'Tamanho',
+    key: 'product_size'
+  },
+  {
+    value: 'Cor',
+    key: 'product_color'
+  },
+  {
+    value: 'Material',
+    key: 'product_material'
+  },
+  {
+    value: 'Estilo',
+    key: 'product_style'
+  },
+  {
+    value: 'Título',
+    key: 'product_title'
+  }
+];
+
 const AddProduct = () => {
   const {
     state: { product, price, shipping, stock, variations },
-    actions: { onChange }
+    actions: { onChange, onClickAddVariation, onClickRemoveVariation }
   } = useProductsAdd();
+
+  const hasMultipleVariations = variations.options.length > 1;
 
   const handleBack = () => Router.push('/products');
 
@@ -166,11 +193,44 @@ const AddProduct = () => {
               isChecked={variations.hasVariations}
               onChange={onChange}
             >
-              Este produto possui variações?
+              Este produto possui variações, como diferentes tamanhos ou cores?
             </Checkbox>
           }
         >
-          <Stack>todo</Stack>
+          <Stack>
+            <Heading is="h3">Opções</Heading>
+            {variations.options.map((option, index) => (
+              <Inline key={index}>
+                <Select
+                  ariaLabel="Opção"
+                  id={`variations.options.${index}.type`}
+                  name={`variations.options.${index}.type`}
+                  options={variationValueOptions}
+                  value={option.type}
+                  placeholder="Opção"
+                  onChange={onChange}
+                />
+                <Input
+                  ariaLabel="Separe valores com vírgula"
+                  id={`variations.options.${index}.value`}
+                  name={`variations.options.${index}.value`}
+                  value={option.value}
+                  placeholder="Separe valores com vírgula"
+                  onChange={onChange}
+                />
+                {hasMultipleVariations && (
+                  <Button
+                    appearance="minimal"
+                    icon="trash"
+                    onClick={() => onClickRemoveVariation(index)}
+                  />
+                )}
+              </Inline>
+            ))}
+            <Button appearance="minimal" onClick={onClickAddVariation}>
+              Adicionar outra variação
+            </Button>
+          </Stack>
         </Disclosure>
       </Container>
       <Footer>
