@@ -134,7 +134,7 @@ const AddCategorie = () => {
     actions: { onChange, onClickAddCondition, onClickRemoveCondition }
   } = useCategoriesAdd();
 
-  const hasMultipleRules = type.rules.length > 1;
+  const hasMultipleConditions = type.rules.length > 1;
 
   const handleBack = () => Router.push('/categories');
 
@@ -217,32 +217,32 @@ const AddCategorie = () => {
               {type.rules.map((rule, index) => (
                 <Inline key={index}>
                   <Select
-                    ariaLabel="condição"
+                    ariaLabel="Condição"
                     id={`type.rules.${index}.match`}
                     name={`type.rules.${index}.match`}
                     options={ruleValueOptions}
                     value={rule.match}
-                    placeholder="condição"
+                    placeholder="Condição"
                     onChange={onChange}
                   />
                   <Select
-                    ariaLabel="operador"
+                    ariaLabel="Operador"
                     id={`type.rules.${index}.operator`}
                     name={`type.rules.${index}.operator`}
                     options={ruleMatchOptions}
                     value={rule.operator}
-                    placeholder="operador"
+                    placeholder="Operador"
                     onChange={onChange}
                   />
                   <Input
-                    ariaLabel="valor"
+                    ariaLabel="Valor"
                     id={`type.rules.${index}.value`}
                     name={`type.rules.${index}.value`}
                     value={rule.value}
-                    placeholder="valor"
+                    placeholder="Valor"
                     onChange={onChange}
                   />
-                  {hasMultipleRules && (
+                  {hasMultipleConditions && (
                     <Button
                       appearance="minimal"
                       icon="trash"
