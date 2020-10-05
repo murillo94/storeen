@@ -2,18 +2,18 @@
   "name": "@storeen/web",
   "version": "1.0.0",
   "devDependencies": {
-    "imagemin-pngquant": "^8.0.0",
-    "imagemin-svgo": "^7.1.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.0",
-    "next-transpile-modules": "^3.3.0"
+    "next-transpile-modules": "^4.1.0"
   },
   "dependencies": {
     "@storeen/components": "*",
     "@storeen/system": "*",
     "babel-plugin-styled-components": "^1.10.7",
     "feather-icons-react": "^0.4.1",
-    "next": "9.3.6",
+    "next": "9.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-text-mask": "^5.4.3",
