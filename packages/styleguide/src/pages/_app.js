@@ -59,6 +59,10 @@ const App = ({ Component, pageProps }) => (
   <SC.ThemeProvider>
     <MDXProvider components={customComponents}>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <title>Storeen&apos;s design system</title>
       </Head>
       <Wrapper>
