@@ -12,10 +12,8 @@ const getHref = resourcePath => {
   const partsLength = parts.length;
   const fileName = parts[partsLength - 1];
   const pathName = parts[partsLength - 2];
-  const rootPath =
-    process.env.NODE_ENV === 'development' ? '/' : '/styleguide/';
 
-  return `${rootPath}${pathName}/${fileName.replace(/\.mdx$/, '')}`;
+  return `/${pathName}/${fileName.replace(/\.mdx$/, '')}`;
 };
 
 const plugins = [
