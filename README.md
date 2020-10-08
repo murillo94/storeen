@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://storeen.now.sh">
+  <a href="https://storeen.vercel.app">
     <img src="https://github.com/murillo94/storeen/blob/master/packages/web/src/public/images/logo-all-horizontal.svg" alt="Storeen" width="250px">
   </a>
 </p>
@@ -31,4 +31,4 @@ The [@storeen/components](./packages/components) is the UI components built on t
 
 The [@storeen/styleguide](./packages/styleguide) is our design system, the home for all our reusable/principles patterns, components and assets.
 
-Check out our [styleguide](https://storeen.now.sh/styleguide) documentation for more details.
+Check out our [styleguide](https://storeen-styleguide.vercel.app) documentation for more details.
