@@ -12,25 +12,27 @@ import {
 
 import useLayout from '../../../hooks/layout/useLayout';
 
+import { formatDateToString } from '../../../utils/date';
+
 const headers = ['Data', 'Plano', 'Valor', 'Recibo'];
 const items = [
   {
-    date: 'Qui, 10 Jul 2019',
+    date: formatDateToString('2020-10-15T06:34:00+0000'),
     name: 'Iniciante',
     price: 'R$15'
   },
   {
-    date: 'Seg, 15 Ago 2019',
+    date: formatDateToString('2020-09-20T07:24:03+0000'),
     name: 'Iniciante',
     price: 'R$15'
   },
   {
-    date: 'Sex, 06 Set 2019',
+    date: formatDateToString('2020-08-03T02:35:05+0000'),
     name: 'Iniciante',
     price: 'R$15'
   },
   {
-    date: 'Ter, 29 Out 2019',
+    date: formatDateToString('2020-07-10T01:43:10+0000'),
     name: 'Iniciante',
     price: 'R$15'
   }

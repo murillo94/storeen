@@ -15,27 +15,29 @@ import {
 
 import useLayout from '../../hooks/layout/useLayout';
 
+import { formatDate } from '../../utils/date';
+
 const headers = ['Nome', 'Desconto', 'Data de expiração'];
 const items = [
   {
     name: 'Natal',
     discount: 90.6,
-    date_expire: null
+    date_expire: formatDate(null)
   },
   {
     name: 'Páscoa',
     discount: 30.5,
-    date_expire: null
+    date_expire: formatDate(null)
   },
   {
     name: 'Ano novo',
     discount: 59.0,
-    date_expire: '31/12/2019'
+    date_expire: formatDate('2019-12-31T05:24:00+0000')
   },
   {
     name: 'Dia das mães',
     discount: 89.0,
-    date_expire: '05/05/2019'
+    date_expire: formatDate('2019-05-05T02:39:00+0000')
   }
 ];
 

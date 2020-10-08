@@ -12,6 +12,7 @@
     "@storeen/components": "*",
     "@storeen/system": "*",
     "babel-plugin-styled-components": "^1.10.7",
+    "dayjs": "^1.9.1",
     "feather-icons-react": "^0.4.1",
     "next": "9.5.3",
     "react": "^16.13.1",

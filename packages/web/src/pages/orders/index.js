@@ -18,23 +18,25 @@ import {
 
 import useLayout from '../../hooks/layout/useLayout';
 
+import { formatDateToString } from '../../utils/date';
+
 const headers = ['Número', 'Data', 'Situação', 'Total'];
 const items = [
   {
-    id: '1',
-    date: 'Qui, 10 Jul 2019',
+    id: '#1',
+    date: formatDateToString('2019-07-10T06:30:00+0000'),
     status: 'waiting_payment',
     total: 99.0
   },
   {
-    id: '2',
-    date: 'Seg, 15 Ago 2019',
+    id: '#2',
+    date: formatDateToString('2019-08-15T01:34:00+0000'),
     status: 'canceled',
     total: 89.0
   },
   {
-    id: '3',
-    date: 'Sex, 06 Set 2019',
+    id: '#3',
+    date: formatDateToString('2019-09-06T04:24:00+0000'),
     status: 'sent',
     total: 79.0
   }
