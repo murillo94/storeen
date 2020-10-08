@@ -1,5 +1,7 @@
 import useForm from '../hooks/form/useForm';
 
+import { formatBRL } from '../utils/currency';
+
 export const TYPE = {
   false: 'monthly',
   true: 'annually'
@@ -11,8 +13,8 @@ export const PLANS = [
     value: 'free',
     products: '2 produtos',
     price: {
-      monthly: 'R$0',
-      annually: 'R$0'
+      monthly: formatBRL(0),
+      annually: formatBRL(0)
     }
   },
   {
@@ -20,8 +22,8 @@ export const PLANS = [
     value: 'starter',
     products: '5 produtos',
     price: {
-      monthly: 'R$15',
-      annually: 'R$7.5'
+      monthly: formatBRL(15),
+      annually: formatBRL(7.5)
     }
   },
   {
@@ -29,8 +31,8 @@ export const PLANS = [
     value: 'small',
     products: '15 produtos',
     price: {
-      monthly: 'R$35',
-      annually: 'R$17.5'
+      monthly: formatBRL(35),
+      annually: formatBRL(17.5)
     }
   },
   {
@@ -38,8 +40,8 @@ export const PLANS = [
     value: 'medium',
     products: '20 produtos',
     price: {
-      monthly: 'R$50',
-      annually: 'R$25'
+      monthly: formatBRL(50),
+      annually: formatBRL(25)
     }
   },
   {
@@ -47,8 +49,8 @@ export const PLANS = [
     value: 'platinum',
     products: 'Ilimitado',
     price: {
-      monthly: 'R$109',
-      annually: 'R$54.5'
+      monthly: formatBRL(109),
+      annually: formatBRL(54.5)
     }
   }
 ];

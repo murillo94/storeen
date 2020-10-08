@@ -13,28 +13,29 @@ import {
 import useLayout from '../../../hooks/layout/useLayout';
 
 import { formatDateToString } from '../../../utils/date';
+import { formatBRL } from '../../../utils/currency';
 
 const headers = ['Data', 'Plano', 'Valor', 'Recibo'];
 const items = [
   {
     date: formatDateToString('2020-10-15T06:34:00+0000'),
     name: 'Iniciante',
-    price: 'R$15'
+    price: formatBRL(15.0)
   },
   {
     date: formatDateToString('2020-09-20T07:24:03+0000'),
     name: 'Iniciante',
-    price: 'R$15'
+    price: formatBRL(15.0)
   },
   {
     date: formatDateToString('2020-08-03T02:35:05+0000'),
     name: 'Iniciante',
-    price: 'R$15'
+    price: formatBRL(15.0)
   },
   {
     date: formatDateToString('2020-07-10T01:43:10+0000'),
     name: 'Iniciante',
-    price: 'R$15'
+    price: formatBRL(15.0)
   }
 ];
 

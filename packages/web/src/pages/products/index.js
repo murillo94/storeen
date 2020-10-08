@@ -22,29 +22,31 @@ import {
 
 import useLayout from '../../hooks/layout/useLayout';
 
+import { formatBRL } from '../../utils/currency';
+
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [
   {
     name: 'Vestido Blue Denim',
-    price: 99.0,
+    price: formatBRL(99.0),
     stock: 9,
     visible: true
   },
   {
     name: 'Vestido Yellow Denim',
-    price: 89.0,
+    price: formatBRL(89.0),
     stock: 3,
     visible: false
   },
   {
     name: 'Vestido Pink Denim',
-    price: 79.0,
+    price: formatBRL(79.0),
     stock: 5,
     visible: true
   },
   {
     name: 'Vestido Red Denim',
-    price: 109.0,
+    price: formatBRL(109.0),
     stock: 15,
     visible: false
   }

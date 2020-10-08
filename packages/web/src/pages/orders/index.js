@@ -19,6 +19,7 @@ import {
 import useLayout from '../../hooks/layout/useLayout';
 
 import { formatDateToString } from '../../utils/date';
+import { formatBRL } from '../../utils/currency';
 
 const headers = ['Número', 'Data', 'Situação', 'Total'];
 const items = [
@@ -26,19 +27,19 @@ const items = [
     id: '#1',
     date: formatDateToString('2019-07-10T06:30:00+0000'),
     status: 'waiting_payment',
-    total: 99.0
+    total: formatBRL(99.0)
   },
   {
     id: '#2',
     date: formatDateToString('2019-08-15T01:34:00+0000'),
     status: 'canceled',
-    total: 89.0
+    total: formatBRL(89.0)
   },
   {
     id: '#3',
     date: formatDateToString('2019-09-06T04:24:00+0000'),
     status: 'sent',
-    total: 79.0
+    total: formatBRL(79.0)
   }
 ];
 const OrdersMatchOptions = {
