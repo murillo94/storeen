@@ -12,7 +12,7 @@ import {
 
 import useLayout from '../../../hooks/layout/useLayout';
 
-const headers = ['Data do pagamento', 'Plano', 'Valor', 'Recibo'];
+const headers = ['Data', 'Plano', 'Valor', 'Recibo'];
 const items = [
   {
     date: 'Qui, 10 Jul 2019',
