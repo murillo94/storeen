@@ -21,7 +21,7 @@ import useLayout from '@web/hooks/layout/useLayout';
 const Logo = () => (
   <Box>
     <Image
-      src={require('../public/images/logo-icon.svg')}
+      src={require('@web/public/images/logo-icon.svg')}
       alt="Storeen logo icone"
       width="57px"
       height="57px"
