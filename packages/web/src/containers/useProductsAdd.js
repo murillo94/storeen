@@ -1,4 +1,4 @@
-import useForm from '../hooks/form/useForm';
+import useForm from '@web/hooks/form/useForm';
 
 const customActions = setState => ({
   onClickAddVariation: () => {

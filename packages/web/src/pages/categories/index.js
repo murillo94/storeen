@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Router from 'next/router';
 
-import Page from '../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import {
   Menu,
@@ -19,7 +19,7 @@ import {
   Box
 } from '@storeen/components';
 
-import useLayout from '../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const headers = ['Nome', 'Cor'];
 const items = [

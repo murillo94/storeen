@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import AdminPage from '../adminContent';
+import AdminPage from '@web/layouts/adminContent';
 
 import {
   Box,

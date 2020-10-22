@@ -1,4 +1,4 @@
-import Page from '../index';
+import Page from '@web/layouts/adminSettingsContent';
 
 const options = [
   {

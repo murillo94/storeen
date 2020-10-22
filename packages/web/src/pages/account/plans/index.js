@@ -1,4 +1,4 @@
-import Page from '../../../layouts/adminSettingsContent/account';
+import Page from '@web/layouts/adminSettingsContent/account';
 
 import {
   Table,
@@ -18,12 +18,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useAccountPlans, {
-  TYPE,
-  PLANS
-} from '../../../containers/useAccountPlans';
+import useAccountPlans, { TYPE, PLANS } from '@web/containers/useAccountPlans';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const headers = ['Plano', 'Produtos', 'Preço'];
 

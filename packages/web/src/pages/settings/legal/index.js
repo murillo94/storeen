@@ -1,10 +1,10 @@
-import Page from '../../../layouts/adminSettingsContent/store';
+import Page from '@web/layouts/adminSettingsContent/store';
 
 import { Container, Stack, Input, Footer, Button } from '@storeen/components';
 
-import useSettingsLegal from '../../../containers/useSettingsLegal';
+import useSettingsLegal from '@web/containers/useSettingsLegal';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const LegalSettings = () => {
   const {

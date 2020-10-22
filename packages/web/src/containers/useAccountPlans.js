@@ -1,6 +1,6 @@
-import useForm from '../hooks/form/useForm';
+import useForm from '@web/hooks/form/useForm';
 
-import { formatBRL } from '../utils/currency';
+import { formatBRL } from '@web/utils/currency';
 
 export const TYPE = {
   false: 'monthly',

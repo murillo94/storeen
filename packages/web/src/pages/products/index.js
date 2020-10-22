@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Router from 'next/router';
 
-import Page from '../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import {
   Menu,
@@ -20,9 +20,9 @@ import {
   theming
 } from '@storeen/components';
 
-import useLayout from '../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
-import { formatBRL } from '../../utils/currency';
+import { formatBRL } from '@web/utils/currency';
 
 const headers = ['Nome', 'Preço', 'Estoque', 'Visibilidade'];
 const items = [

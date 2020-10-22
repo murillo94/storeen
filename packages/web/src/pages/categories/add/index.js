@@ -1,6 +1,6 @@
 import Router from 'next/router';
 
-import Page from '../../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import {
   SubHeader,
@@ -17,9 +17,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useCategoriesAdd from '../../../containers/useCategoriesAdd';
+import useCategoriesAdd from '@web/containers/useCategoriesAdd';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const ruleValueOptions = [
   {

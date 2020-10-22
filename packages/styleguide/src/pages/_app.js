@@ -2,12 +2,12 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 
-import Wrapper from '../layouts/wrapper';
+import Wrapper from '@styleguide/layouts/wrapper';
 
 import * as SC from '@storeen/components';
-import { CodeBlock } from '../components/CodeBlock';
-import { PropsTable } from '../components/PropsTable';
-import { ThemeSection } from '../components/ThemeSection';
+import { CodeBlock } from '@styleguide/components/CodeBlock';
+import { PropsTable } from '@styleguide/components/PropsTable';
+import { ThemeSection } from '@styleguide/components/ThemeSection';
 
 const SideSheet = dynamic(
   () => import('@storeen/components').then(mod => mod.SideSheet),

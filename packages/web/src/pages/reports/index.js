@@ -1,8 +1,8 @@
-import Page from '../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import { SubHeader } from '@storeen/components';
 
-import useLayout from '../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const Reports = () => <SubHeader title="Relatórios" marginBottom={8} />;
 

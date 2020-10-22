@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@styleguide/components/*": ["src/components/*"],
+      "@styleguide/layouts/*": ["src/layouts/*"],
+      "@styleguide/public/*": ["src/public/*"]
+    }
+  }
+}

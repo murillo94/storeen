@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 
-import Page from '../../../layouts/adminSettingsContent/store';
+import Page from '@web/layouts/adminSettingsContent/store';
 
 import {
   Container,
@@ -19,9 +19,9 @@ import {
   theming
 } from '@storeen/components';
 
-import useSettingsPayments from '../../../containers/useSettingsPayments';
+import useSettingsPayments from '@web/containers/useSettingsPayments';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const Dialog = dynamic(
   () => import('@storeen/components').then(mod => mod.Dialog),
@@ -88,7 +88,7 @@ const PaymentsSettings = () => {
         >
           <Inline>
             <ImageDescription
-              src={require('../../../public/images/payments/mercadopago.svg')}
+              src={require('@web/public/images/payments/mercadopago.svg')}
               alt="Mercado Pago logo"
               description="Mercado Pago"
               width="32px"
@@ -125,7 +125,7 @@ const PaymentsSettings = () => {
         >
           <Inline>
             <ImageDescription
-              src={require('../../../public/images/payments/wirecard.svg')}
+              src={require('@web/public/images/payments/wirecard.svg')}
               alt="Wirecard logo"
               description="Wirecard"
               width="32px"
@@ -162,7 +162,7 @@ const PaymentsSettings = () => {
         >
           <Inline>
             <ImageDescription
-              src={require('../../../public/images/payments/pagseguro.svg')}
+              src={require('@web/public/images/payments/pagseguro.svg')}
               alt="PagSeguro logo"
               description="PagSeguro"
               width="32px"
@@ -199,7 +199,7 @@ const PaymentsSettings = () => {
         >
           <Inline>
             <ImageDescription
-              src={require('../../../public/images/payments/paypal.svg')}
+              src={require('@web/public/images/payments/paypal.svg')}
               alt="PayPal logo"
               description="PayPal"
               width="32px"

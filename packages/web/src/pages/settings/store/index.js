@@ -1,4 +1,4 @@
-import Page from '../../../layouts/adminSettingsContent/store';
+import Page from '@web/layouts/adminSettingsContent/store';
 
 import {
   Container,
@@ -11,9 +11,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useSettingsStore from '../../../containers/useSettingsStore';
+import useSettingsStore from '@web/containers/useSettingsStore';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const StoreSettings = () => {
   const {

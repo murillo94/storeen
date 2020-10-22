@@ -1,4 +1,4 @@
-import Page from '../../../layouts/adminSettingsContent/store';
+import Page from '@web/layouts/adminSettingsContent/store';
 
 import {
   Container,
@@ -12,9 +12,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useSettingsShipping from '../../../containers/useSettingsShipping';
+import useSettingsShipping from '@web/containers/useSettingsShipping';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const ContainerShipping = ({ children, disclosure }) => (
   <Container padding={3} marginBottom={4}>

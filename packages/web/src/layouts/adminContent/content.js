@@ -26,7 +26,7 @@ const SideSheet = dynamic(
 const Logo = () => (
   <>
     <Image
-      src={require('../../public/images/logo-all-horizontal.svg')}
+      src={require('@web/public/images/logo-all-horizontal.svg')}
       alt="Storeen logo com nome horizontal"
       width="120px"
       height="auto"
@@ -38,7 +38,7 @@ const Logo = () => (
       }}
     />
     <Image
-      src={require('../../public/images/logo-icon.svg')}
+      src={require('@web/public/images/logo-icon.svg')}
       alt="Storeen logo icone"
       width="34px"
       height="34px"

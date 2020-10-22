@@ -1,6 +1,6 @@
 import Router from 'next/router';
 
-import Page from '../../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import {
   SubHeader,
@@ -16,9 +16,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useProductsAdd from '../../../containers/useProductsAdd';
+import useProductsAdd from '@web/containers/useProductsAdd';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const variationValueOptions = [
   {

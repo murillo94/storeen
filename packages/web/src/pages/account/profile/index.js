@@ -1,4 +1,4 @@
-import Page from '../../../layouts/adminSettingsContent/account';
+import Page from '@web/layouts/adminSettingsContent/account';
 
 import {
   Container,
@@ -9,9 +9,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useAccountProfile from '../../../containers/useAccountProfile';
+import useAccountProfile from '@web/containers/useAccountProfile';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const AccountSettings = () => {
   const {

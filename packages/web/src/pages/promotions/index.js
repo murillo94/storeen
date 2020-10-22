@@ -1,6 +1,6 @@
 import Router from 'next/router';
 
-import Page from '../../layouts/adminContent';
+import Page from '@web/layouts/adminContent';
 
 import {
   SubHeader,
@@ -13,10 +13,10 @@ import {
   TextTableCell
 } from '@storeen/components';
 
-import useLayout from '../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
-import { formatDate } from '../../utils/date';
-import { formatBRL } from '../../utils/currency';
+import { formatDate } from '@web/utils/date';
+import { formatBRL } from '@web/utils/currency';
 
 const headers = ['Nome', 'Desconto', 'Data de expiração'];
 const items = [

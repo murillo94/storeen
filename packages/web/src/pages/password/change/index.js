@@ -1,15 +1,15 @@
-import Page from '../../../layouts/login';
+import Page from '@web/layouts/login';
 
 import { Box, Image, Heading, Input, Button } from '@storeen/components';
 
-import usePasswordChange from '../../../containers/usePasswordChange';
+import usePasswordChange from '@web/containers/usePasswordChange';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const Logo = () => (
   <Box>
     <Image
-      src={require('../../../public/images/logo-icon.svg')}
+      src={require('@web/public/images/logo-icon.svg')}
       alt="Storeen logo icone"
       width="57px"
       height="57px"

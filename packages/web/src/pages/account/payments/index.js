@@ -1,4 +1,4 @@
-import Page from '../../../layouts/adminSettingsContent/account';
+import Page from '@web/layouts/adminSettingsContent/account';
 
 import {
   Table,
@@ -10,10 +10,10 @@ import {
   Button
 } from '@storeen/components';
 
-import useLayout from '../../../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
-import { formatDateToString } from '../../../utils/date';
-import { formatBRL } from '../../../utils/currency';
+import { formatDateToString } from '@web/utils/date';
+import { formatBRL } from '@web/utils/currency';
 
 const headers = ['Data', 'Plano', 'Valor', 'Recibo'];
 const items = [

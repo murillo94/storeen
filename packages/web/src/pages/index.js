@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import Link from 'next/link';
 
-import Page from '../layouts/login';
+import Page from '@web/layouts/login';
 
 import {
   Box,
@@ -14,9 +14,9 @@ import {
   Button
 } from '@storeen/components';
 
-import useLogin from '../containers/useLogin';
+import useLogin from '@web/containers/useLogin';
 
-import useLayout from '../hooks/layout/useLayout';
+import useLayout from '@web/hooks/layout/useLayout';
 
 const Logo = () => (
   <Box>
