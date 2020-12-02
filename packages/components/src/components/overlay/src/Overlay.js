@@ -34,7 +34,6 @@ export const Overlay = ({
         <Portal id={id}>
           <Box
             onClick={onClose}
-            teste="lala"
             styleConfig={{
               backgroundColor: 'rgba(51, 51, 51, 0.3)',
               position: 'fixed',
