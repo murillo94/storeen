@@ -1,10 +1,11 @@
 import { Box } from '../../box';
 import { Button } from '../../button';
-import { Heading } from '../../typography';
+import { Heading, Paragraph } from '../../typography';
 
 export const SubHeader = ({
   children,
   title = '',
+  subTitle = '',
   hasBack = false,
   onClick = null,
   ...props
@@ -35,7 +36,17 @@ export const SubHeader = ({
             onClick={onClick}
           />
         )}
-        <Heading marginLeft={hasBack ? 1 : 0}>{title}</Heading>
+        <Box
+          marginLeft={hasBack ? 1 : 0}
+          styleConfig={{ display: 'flex', flexDirection: 'column' }}
+        >
+          <Heading>{title}</Heading>
+          {subTitle && (
+            <Paragraph color="muted" marginTop={1} marginBottom={2}>
+              {subTitle}
+            </Paragraph>
+          )}
+        </Box>
       </Box>
       {children && (
         <Box

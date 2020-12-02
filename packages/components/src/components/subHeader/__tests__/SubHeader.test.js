@@ -22,6 +22,12 @@ describe('SubHeader', () => {
     expect(getByRole('heading')).toHaveTextContent('im title');
   });
 
+  test('should have sub title', () => {
+    const { getByText } = render(<SubHeader subTitle="im sub title" />);
+
+    expect(getByText('im sub title')).toBeInTheDocument();
+  });
+
   test('should have click back button', () => {
     const onClick = jest.fn();
     const { getByRole } = render(
