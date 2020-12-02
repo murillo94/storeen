@@ -15,18 +15,14 @@ export const Container = ({
       as="section"
       className={`${orientation} ${align}`}
       padding={4}
-      marginBottom={9}
       styleConfig={{
         backgroundColor: 'gray0',
         borderWidth: '1px',
         borderStyle: 'solid',
         borderColor: 'gray300',
         borderRadius: 3,
-        width: '100%',
-        overflow: 'hidden',
-        '&:last-of-type': {
-          marginBottom: 6
-        }
+        width: 'auto',
+        overflow: 'hidden'
       }}
       {...props}
     >

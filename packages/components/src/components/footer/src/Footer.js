@@ -5,6 +5,7 @@ export const Footer = ({ children, align = 'left', ...props }) => (
     <Box
       as="footer"
       className={align}
+      marginTop={9}
       styleConfig={{
         display: 'flex',
         alignItems: 'center',

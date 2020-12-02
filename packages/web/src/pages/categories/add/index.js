@@ -4,8 +4,8 @@ import Page from '@web/layouts/adminContent';
 
 import {
   SubHeader,
-  Container,
   Stack,
+  Container,
   Input,
   Radio,
   Disclosure,
@@ -146,118 +146,120 @@ const AddCategorie = () => {
         onClick={handleBack}
         marginBottom={8}
       />
-      <Container title="Geral">
-        <Stack>
-          <Input
-            labelText="Título da categoria"
-            id="categorie-title"
-            name="categorie.title"
-            value={categorie.title}
-            onChange={onChange}
-          />
-          <Input
-            labelText="Descrição"
-            id="categorie-description"
-            name="categorie.description"
-            value={categorie.description}
-            onChange={onChange}
-          />
-        </Stack>
-      </Container>
-      <Container title="Tipo">
-        <Stack space="medium">
-          <Radio
-            id="type-mode-manual"
-            name="type.mode"
-            value="manual"
-            description="Escolha os produtos manualmente para essa coleção."
-            isChecked={type.mode === 'manual'}
-            onChange={onChange}
-          >
-            Manual
-          </Radio>
-          <Disclosure
-            as={
-              <Radio
-                id="type-mode-automated"
-                name="type.mode"
-                value="automated"
-                description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
-                isChecked={type.mode === 'automated'}
-                onChange={onChange}
-              >
-                Automatizada
-              </Radio>
-            }
-            isVisible={type.mode === 'automated'}
-          >
-            <Stack>
-              <Heading is="h3">Condições</Heading>
-              <Inline isProportional={false}>
-                <Text>Produtos devem ter:</Text>
+      <Stack space="xlarge">
+        <Container title="Geral">
+          <Stack>
+            <Input
+              labelText="Título da categoria"
+              id="categorie-title"
+              name="categorie.title"
+              value={categorie.title}
+              onChange={onChange}
+            />
+            <Input
+              labelText="Descrição"
+              id="categorie-description"
+              name="categorie.description"
+              value={categorie.description}
+              onChange={onChange}
+            />
+          </Stack>
+        </Container>
+        <Container title="Tipo">
+          <Stack space="medium">
+            <Radio
+              id="type-mode-manual"
+              name="type.mode"
+              value="manual"
+              description="Escolha os produtos manualmente para essa coleção."
+              isChecked={type.mode === 'manual'}
+              onChange={onChange}
+            >
+              Manual
+            </Radio>
+            <Disclosure
+              as={
                 <Radio
-                  id="type-condition-all"
-                  name="type.condition"
-                  value="all"
-                  isChecked={type.condition === 'all'}
+                  id="type-mode-automated"
+                  name="type.mode"
+                  value="automated"
+                  description="Crie condições para que produtos existentes ou futuros sejam inseridos nessa coleção."
+                  isChecked={type.mode === 'automated'}
                   onChange={onChange}
                 >
-                  Todas condições
+                  Automatizada
                 </Radio>
-                <Radio
-                  id="type-condition-any"
-                  name="type.condition"
-                  value="any"
-                  isChecked={type.condition === 'any'}
-                  onChange={onChange}
-                >
-                  Qualquer condição
-                </Radio>
-              </Inline>
-              {type.rules.map((rule, index) => (
-                <Inline key={index}>
-                  <Select
-                    ariaLabel="Condição"
-                    id={`type.rules.${index}.match`}
-                    name={`type.rules.${index}.match`}
-                    options={ruleValueOptions}
-                    value={rule.match}
-                    placeholder="Condição"
+              }
+              isVisible={type.mode === 'automated'}
+            >
+              <Stack>
+                <Heading is="h3">Condições</Heading>
+                <Inline isProportional={false}>
+                  <Text>Produtos devem ter:</Text>
+                  <Radio
+                    id="type-condition-all"
+                    name="type.condition"
+                    value="all"
+                    isChecked={type.condition === 'all'}
                     onChange={onChange}
-                  />
-                  <Select
-                    ariaLabel="Operador"
-                    id={`type.rules.${index}.operator`}
-                    name={`type.rules.${index}.operator`}
-                    options={ruleMatchOptions}
-                    value={rule.operator}
-                    placeholder="Operador"
+                  >
+                    Todas condições
+                  </Radio>
+                  <Radio
+                    id="type-condition-any"
+                    name="type.condition"
+                    value="any"
+                    isChecked={type.condition === 'any'}
                     onChange={onChange}
-                  />
-                  <Input
-                    ariaLabel="Valor"
-                    id={`type.rules.${index}.value`}
-                    name={`type.rules.${index}.value`}
-                    value={rule.value}
-                    placeholder="Valor"
-                    onChange={onChange}
-                  />
-                  {hasMultipleConditions && (
-                    <Button
-                      appearance="minimal"
-                      icon="trash"
-                      onClick={() => onClickRemoveCondition(index)}
-                    />
-                  )}
+                  >
+                    Qualquer condição
+                  </Radio>
                 </Inline>
-              ))}
-              <Button appearance="minimal" onClick={onClickAddCondition}>
-                Adicionar outra condição
-              </Button>
-            </Stack>
-          </Disclosure>
-        </Stack>
-      </Container>
+                {type.rules.map((rule, index) => (
+                  <Inline key={index}>
+                    <Select
+                      ariaLabel="Condição"
+                      id={`type.rules.${index}.match`}
+                      name={`type.rules.${index}.match`}
+                      options={ruleValueOptions}
+                      value={rule.match}
+                      placeholder="Condição"
+                      onChange={onChange}
+                    />
+                    <Select
+                      ariaLabel="Operador"
+                      id={`type.rules.${index}.operator`}
+                      name={`type.rules.${index}.operator`}
+                      options={ruleMatchOptions}
+                      value={rule.operator}
+                      placeholder="Operador"
+                      onChange={onChange}
+                    />
+                    <Input
+                      ariaLabel="Valor"
+                      id={`type.rules.${index}.value`}
+                      name={`type.rules.${index}.value`}
+                      value={rule.value}
+                      placeholder="Valor"
+                      onChange={onChange}
+                    />
+                    {hasMultipleConditions && (
+                      <Button
+                        appearance="minimal"
+                        icon="trash"
+                        onClick={() => onClickRemoveCondition(index)}
+                      />
+                    )}
+                  </Inline>
+                ))}
+                <Button appearance="minimal" onClick={onClickAddCondition}>
+                  Adicionar outra condição
+                </Button>
+              </Stack>
+            </Disclosure>
+          </Stack>
+        </Container>
+      </Stack>
       <Footer>
         <Button>Salvar</Button>
       </Footer>
