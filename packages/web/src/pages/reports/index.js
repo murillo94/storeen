@@ -15,6 +15,8 @@ const Reports = () => (
       <Inline>
         <Container title="Média do valor dos pedidos">todo</Container>
         <Container title="Total de visitas">todo</Container>
+      </Inline>
+      <Inline>
         <Container title="Páginas mais visitadas">todo</Container>
       </Inline>
     </Stack>
