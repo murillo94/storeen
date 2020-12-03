@@ -4,7 +4,7 @@ const spaces = {
   small: 2,
   medium: 3,
   large: 4,
-  xlarge: 9
+  xlarge: 7
 };
 
 export const Stack = ({ children, space = 'large', ...props }) => (

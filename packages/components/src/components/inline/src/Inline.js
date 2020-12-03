@@ -12,6 +12,8 @@ export const Inline = ({ children, isProportional = true, ...props }) => (
       },
       '> *': {
         flexGrow: isProportional ? '1' : '0',
+        flexShrink: '0',
+        flexBasis: '0',
         '+ *': {
           marginLeft: [0, 4]
         }
