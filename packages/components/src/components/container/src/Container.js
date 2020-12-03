@@ -21,8 +21,7 @@ export const Container = ({
         borderStyle: 'solid',
         borderColor: 'gray300',
         borderRadius: 3,
-        width: 'auto',
-        overflow: 'hidden'
+        width: 'auto'
       }}
       {...props}
     >
