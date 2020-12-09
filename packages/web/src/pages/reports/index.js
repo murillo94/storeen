@@ -1,3 +1,5 @@
+import Chart from 'react-frappe-charts';
+
 import Page from '@web/layouts/adminContent';
 
 import {
@@ -5,7 +7,8 @@ import {
   Stack,
   Inline,
   Container,
-  Anchor
+  Anchor,
+  theming
 } from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
@@ -25,8 +28,22 @@ const Reports = () => (
               visitar relatório
             </Anchor>
           }
+          paddingBottom={0}
         >
-          todo
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [18, 40, 30, 35, 8, 52, 17, 4] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
         </Container>
         <Container
           title="Total de pedido"
@@ -38,8 +55,22 @@ const Reports = () => (
               visitar relatório
             </Anchor>
           }
+          paddingBottom={0}
         >
-          todo
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [257, 80, 130, 126, 254, 137, 22, 123] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
         </Container>
       </Inline>
       <Inline>
@@ -53,8 +84,22 @@ const Reports = () => (
               visitar relatório
             </Anchor>
           }
+          paddingBottom={0}
         >
-          todo
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [112, 2, 12, 228, 23, 15, 106, 12] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
         </Container>
         <Container
           title="Total de visitas"
@@ -67,7 +112,20 @@ const Reports = () => (
             </Anchor>
           }
         >
-          todo
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [159, 169, 213, 95, 106, 34, 65, 130] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
         </Container>
       </Inline>
       <Inline>
@@ -81,8 +139,22 @@ const Reports = () => (
               visitar relatório
             </Anchor>
           }
+          paddingBottom={0}
         >
-          todo
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [131, 294, 251, 283, 211, 298, 100, 199] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
         </Container>
       </Inline>
     </Stack>
