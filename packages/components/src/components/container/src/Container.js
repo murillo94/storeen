@@ -32,7 +32,11 @@ export const Container = ({
           paddingBottom={4}
         >
           <Box
-            styleConfig={{ display: 'flex', justifyContent: 'space-between' }}
+            styleConfig={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center'
+            }}
           >
             <Heading is="h2">{title}</Heading>
             {optionsTitle}
