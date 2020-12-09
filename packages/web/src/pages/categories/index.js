@@ -16,28 +16,29 @@ import {
   Tr,
   Td,
   TextTableCell,
-  Box
+  Badge,
+  theming
 } from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
 
-const headers = ['Nome', 'Cor'];
+const headers = ['Nome', 'Identificação'];
 const items = [
   {
     name: 'Calças',
-    color: '#4848fd'
+    color: theming.colors.blue600
   },
   {
     name: 'Camisetas',
-    color: '#ef4040'
+    color: theming.colors.red600
   },
   {
     name: 'Vestidos',
-    color: '#e6a8b3'
+    color: theming.colors.green600
   },
   {
     name: 'Chinelos',
-    color: '#a950a9'
+    color: theming.colors.red700
   }
 ];
 
@@ -93,14 +94,15 @@ const Categories = () => {
               </Td>
               <Td>
                 <TextTableCell>
-                  <Box
-                    styleConfig={{
+                  <Badge
+                    sx={{
                       backgroundColor: item.color,
-                      borderRadius: 1,
-                      width: '10px',
-                      height: '10px'
+                      borderColor: item.color,
+                      color: theming.colors.gray0
                     }}
-                  />
+                  >
+                    {item.name}
+                  </Badge>
                 </TextTableCell>
               </Td>
             </Tr>
