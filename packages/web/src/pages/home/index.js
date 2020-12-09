@@ -1,8 +1,17 @@
 import Page from '@web/layouts/adminContent';
 
-import { SubHeader, Container, Stack, Inline } from '@storeen/components';
+import {
+  SubHeader,
+  Stack,
+  Inline,
+  Container,
+  Anchor,
+  Heading
+} from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
+
+import { formatBRL } from '@web/utils/currency';
 
 const Home = () => (
   <>
@@ -13,10 +22,54 @@ const Home = () => (
     />
     <Stack space="xlarge">
       <Inline>
-        <Container title="Total de vendas">todo</Container>
-        <Container title="Total de visitas">todo</Container>
+        <Container
+          title="Total de vendas"
+          optionsTitle={
+            <Anchor
+              ariaLabel="Visitar relatório detalhado de total de vendas"
+              color="muted"
+            >
+              visitar relatório
+            </Anchor>
+          }
+        >
+          <Stack space="xlarge">
+            <Heading is="h3" color="muted">
+              {formatBRL(9932.5)}
+            </Heading>
+          </Stack>
+        </Container>
+        <Container
+          title="Total de visitas"
+          optionsTitle={
+            <Anchor
+              ariaLabel="Visitar relatório detalhado de total de visitas"
+              color="muted"
+            >
+              visitar relatório
+            </Anchor>
+          }
+        >
+          <Heading is="h3" color="muted">
+            100
+          </Heading>
+        </Container>
       </Inline>
-      <Container title="Total de pedidos">todo</Container>
+      <Container
+        title="Total de pedidos"
+        optionsTitle={
+          <Anchor
+            ariaLabel="Visitar relatório detalhado de total de pedidos"
+            color="muted"
+          >
+            visitar relatório
+          </Anchor>
+        }
+      >
+        <Heading is="h3" color="muted">
+          8 pedidos foram realizados
+        </Heading>
+      </Container>
     </Stack>
   </>
 );
