@@ -15,30 +15,28 @@ import {
   Tbody,
   Tr,
   Td,
-  TextTableCell,
-  Badge,
-  theming
+  TextTableCell
 } from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
 
-const headers = ['Nome', 'Identificação'];
+const headers = ['Nome', 'Descrição'];
 const items = [
   {
     name: 'Calças',
-    color: theming.colors.blue600
+    description: 'Excepteur sint occaecat cupidatat non proident.'
   },
   {
     name: 'Camisetas',
-    color: theming.colors.red600
+    description: 'Excepteur sint occaecat cupidatat non proident.'
   },
   {
     name: 'Vestidos',
-    color: theming.colors.green600
+    description: 'Excepteur sint occaecat cupidatat non proident.'
   },
   {
     name: 'Chinelos',
-    color: theming.colors.red700
+    description: 'Excepteur sint occaecat cupidatat non proident.'
   }
 ];
 
@@ -93,17 +91,7 @@ const Categories = () => {
                 <TextTableCell text={item.name} />
               </Td>
               <Td>
-                <TextTableCell>
-                  <Badge
-                    sx={{
-                      backgroundColor: item.color,
-                      borderColor: item.color,
-                      color: theming.colors.gray0
-                    }}
-                  >
-                    {item.name}
-                  </Badge>
-                </TextTableCell>
+                <TextTableCell text={item.description} />
               </Td>
             </Tr>
           ))}
