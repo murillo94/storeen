@@ -3,7 +3,8 @@ const withPlugins = require('next-compose-plugins');
 const withOptimizedImages = require('next-optimized-images');
 const withTranspileModules = require('next-transpile-modules')([
   '@storeen/components',
-  '@storeen/system'
+  '@storeen/system',
+  'frappe-charts'
 ]);
 
 const plugins = [
