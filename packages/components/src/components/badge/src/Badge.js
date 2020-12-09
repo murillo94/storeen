@@ -27,18 +27,13 @@ export const Badge = ({
           onClick={onClick}
           paddingY={0}
           paddingX={1}
+          sx={badgeStyle}
           {...props}
-          sx={{ ...badgeStyle, ...props.sx }}
         >
           {children}
         </Button>
       ) : (
-        <Text
-          paddingY={0}
-          paddingX={1}
-          {...props}
-          sx={{ ...badgeStyle, ...props.sx }}
-        >
+        <Text paddingY={0} paddingX={1} sx={badgeStyle} {...props}>
           {children}
         </Text>
       )}
