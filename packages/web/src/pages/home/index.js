@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Page from '@web/layouts/adminContent';
 
 import {
@@ -25,13 +27,14 @@ const Home = () => (
         <Container
           title="Total de vendas"
           optionsTitle={
-            <Anchor
-              href="/reports/sales-over-time"
-              ariaLabel="Ver relatório detalhado de total de vendas"
-              color="muted"
-            >
-              ver relatório
-            </Anchor>
+            <Link href="/reports/sales-over-time" passHref>
+              <Anchor
+                ariaLabel="Ver relatório detalhado de total de vendas"
+                color="muted"
+              >
+                ver relatório
+              </Anchor>
+            </Link>
           }
         >
           <Stack space="xlarge">
@@ -43,13 +46,14 @@ const Home = () => (
         <Container
           title="Total de visitas"
           optionsTitle={
-            <Anchor
-              href="/reports/visits-over-time"
-              ariaLabel="Ver relatório detalhado de total de visitas"
-              color="muted"
-            >
-              ver relatório
-            </Anchor>
+            <Link href="/reports/visits-over-time" passHref>
+              <Anchor
+                ariaLabel="Ver relatório detalhado de total de visitas"
+                color="muted"
+              >
+                ver relatório
+              </Anchor>
+            </Link>
           }
         >
           <Heading is="h3" color="muted">
@@ -60,13 +64,14 @@ const Home = () => (
       <Container
         title="Total de pedidos"
         optionsTitle={
-          <Anchor
-            href="/reports/orders-over-time"
-            ariaLabel="Ver relatório detalhado de total de pedidos"
-            color="muted"
-          >
-            ver relatório
-          </Anchor>
+          <Link href="/reports/orders-over-time" passHref>
+            <Anchor
+              ariaLabel="Ver relatório detalhado de total de pedidos"
+              color="muted"
+            >
+              ver relatório
+            </Anchor>
+          </Link>
         }
       >
         <Heading is="h3" color="muted">
