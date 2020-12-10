@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import Chart from 'react-frappe-charts';
 import Router from 'next/router';
 
 import Page from '@web/layouts/adminContent';
 
 import {
+  Menu,
+  MenuGroup,
+  MenuItem,
+  MenuItemButton,
   Stack,
   SubHeader,
   Container,
@@ -49,6 +54,35 @@ const items = [
   }
 ];
 
+const Filter = () => {
+  const [visibleFilter, setVisibleFilter] = useState(false);
+
+  const handleClickFilter = () => {
+    setVisibleFilter(!visibleFilter);
+  };
+
+  return (
+    <Menu
+      id="filter"
+      isVisible={visibleFilter}
+      hasBorder
+      appearance="minimal"
+      icon="calendar"
+      text="Hoje"
+      onClick={handleClickFilter}
+    >
+      <MenuGroup id="filter" isVisible={!visibleFilter}>
+        <MenuItem>
+          <MenuItemButton>todo</MenuItemButton>
+        </MenuItem>
+        <MenuItem>
+          <MenuItemButton>todo</MenuItemButton>
+        </MenuItem>
+      </MenuGroup>
+    </Menu>
+  );
+};
+
 const SalesOverTime = () => {
   const handleBack = () => Router.back();
 
@@ -59,7 +93,9 @@ const SalesOverTime = () => {
         hasBack
         onClick={handleBack}
         marginBottom={8}
-      />
+      >
+        <Filter />
+      </SubHeader>
       <Container title="Total de vendas" paddingBottom={0}>
         <Chart
           type="line"
