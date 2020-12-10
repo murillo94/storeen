@@ -47,7 +47,7 @@ const AddPromotion = () => {
     actions: { onChange }
   } = usePromotionsAdd();
 
-  const handleBack = () => Router.push('/promotions');
+  const handleBack = () => Router.back();
 
   return (
     <>

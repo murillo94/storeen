@@ -7,7 +7,7 @@ import { SubHeader } from '@storeen/components';
 import useLayout from '@web/hooks/layout/useLayout';
 
 const AverageOrdersOverTime = () => {
-  const handleBack = () => Router.push('/reports');
+  const handleBack = () => Router.back();
 
   return (
     <>

@@ -51,7 +51,7 @@ const AddProduct = () => {
 
   const hasMultipleVariations = variations.options.length > 1;
 
-  const handleBack = () => Router.push('/products');
+  const handleBack = () => Router.back();
 
   return (
     <>

@@ -136,7 +136,7 @@ const AddCategorie = () => {
 
   const hasMultipleConditions = type.rules.length > 1;
 
-  const handleBack = () => Router.push('/categories');
+  const handleBack = () => Router.back();
 
   return (
     <>
