@@ -19,11 +19,11 @@ const Reports = () => (
     <Stack space="xlarge">
       <Inline>
         <Container
-          title="Venda geral"
+          title="Total de vendas"
           optionsTitle={
             <Anchor
               href="/reports/sales-over-time"
-              ariaLabel="Ver relatório detalhado de venda geral"
+              ariaLabel="Ver relatório detalhado de total de vendas"
               color="muted"
             >
               ver relatório
@@ -48,11 +48,11 @@ const Reports = () => (
           />
         </Container>
         <Container
-          title="Total de pedido"
+          title="Total de pedidos"
           optionsTitle={
             <Anchor
               href="/reports/orders-over-time"
-              ariaLabel="Ver relatório detalhado de total de pedido "
+              ariaLabel="Ver relatório detalhado de total de pedidos"
               color="muted"
             >
               ver relatório
@@ -79,11 +79,11 @@ const Reports = () => (
       </Inline>
       <Inline>
         <Container
-          title="Média do valor dos pedidos"
+          title="Valor médio do pedido"
           optionsTitle={
             <Anchor
-              href="/reports/average-orders-over-time"
-              ariaLabel="Ver relatório detalhado de média do valor dos pedidos"
+              href="/reports/average-order-over-time"
+              ariaLabel="Ver relatório detalhado de valor médio do pedido"
               color="muted"
             >
               ver relatório

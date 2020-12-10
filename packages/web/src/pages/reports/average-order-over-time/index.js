@@ -7,18 +7,18 @@ import { SubHeader, Container, theming } from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
 
-const OrdersOverTime = () => {
+const AverageOrdersOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
     <>
       <SubHeader
-        title="Pedidos ao longo do tempo"
+        title="Valor médio do pedido ao longo do tempo"
         hasBack
         onClick={handleBack}
         marginBottom={8}
       />
-      <Container title="Total de pedidos" paddingBottom={0}>
+      <Container title="Valor médio do pedido" paddingBottom={0}>
         <Chart
           type="line"
           colors={[theming.colors.blue600]}
@@ -27,7 +27,7 @@ const OrdersOverTime = () => {
           animate={0}
           data={{
             labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
-            datasets: [{ values: [257, 80, 130, 126, 254, 137, 22, 123] }]
+            datasets: [{ values: [112, 2, 12, 228, 23, 15, 106, 12] }]
           }}
           lineOptions={{
             spline: 1,
@@ -39,4 +39,4 @@ const OrdersOverTime = () => {
   );
 };
 
-export default useLayout(Page)(OrdersOverTime);
+export default useLayout(Page)(AverageOrdersOverTime);
