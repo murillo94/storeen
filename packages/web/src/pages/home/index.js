@@ -26,10 +26,11 @@ const Home = () => (
           title="Total de vendas"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de total de vendas"
+              href="/reports/sales-over-time"
+              ariaLabel="Ver relatório detalhado de total de vendas"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
         >
@@ -43,10 +44,11 @@ const Home = () => (
           title="Total de visitas"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de total de visitas"
+              href="/reports/visits-over-time"
+              ariaLabel="Ver relatório detalhado de total de visitas"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
         >
@@ -59,10 +61,11 @@ const Home = () => (
         title="Total de pedidos"
         optionsTitle={
           <Anchor
-            ariaLabel="Visitar relatório detalhado de total de pedidos"
+            href="/reports/orders-over-time"
+            ariaLabel="Ver relatório detalhado de total de pedidos"
             color="muted"
           >
-            visitar relatório
+            ver relatório
           </Anchor>
         }
       >

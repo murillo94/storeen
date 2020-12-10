@@ -22,10 +22,11 @@ const Reports = () => (
           title="Venda geral"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de venda geral"
+              href="/reports/sales-over-time"
+              ariaLabel="Ver relatório detalhado de venda geral"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
           paddingBottom={0}
@@ -50,10 +51,11 @@ const Reports = () => (
           title="Total de pedido"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de total de pedido "
+              href="/reports/orders-over-time"
+              ariaLabel="Ver relatório detalhado de total de pedido "
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
           paddingBottom={0}
@@ -80,10 +82,11 @@ const Reports = () => (
           title="Média do valor dos pedidos"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de média do valor dos pedidos"
+              href="/reports/average-orders-over-time"
+              ariaLabel="Ver relatório detalhado de média do valor dos pedidos"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
           paddingBottom={0}
@@ -108,10 +111,11 @@ const Reports = () => (
           title="Total de visitas"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de total de visitas"
+              href="/reports/visits-over-time"
+              ariaLabel="Ver relatório detalhado de total de visitas"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
         >
@@ -137,10 +141,11 @@ const Reports = () => (
           title="Páginas mais visitadas"
           optionsTitle={
             <Anchor
-              ariaLabel="Visitar relatório detalhado de páginas mais visitadas"
+              href="/reports/top-pages"
+              ariaLabel="Ver relatório detalhado de páginas mais visitadas"
               color="muted"
             >
-              visitar relatório
+              ver relatório
             </Anchor>
           }
           paddingBottom={0}
