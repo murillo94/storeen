@@ -18,6 +18,8 @@ import {
   SideNavigationItemLink
 } from '@storeen/components';
 
+import { matchUrl } from '@web/utils/url';
+
 const SideSheet = dynamic(
   () => import('@storeen/components').then(mod => mod.SideSheet),
   { ssr: false }
@@ -71,7 +73,7 @@ const Nav = () => {
         <Logo />
         <SideNavigationGroup>
           <SideNavigationItem
-            isActive={!!pathname.match('/home')}
+            isActive={matchUrl(pathname, 'home')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -82,7 +84,7 @@ const Nav = () => {
             </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            isActive={!!pathname.match('/reports')}
+            isActive={matchUrl(pathname, 'reports')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -93,7 +95,7 @@ const Nav = () => {
             </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            isActive={!!pathname.match('/orders')}
+            isActive={matchUrl(pathname, 'orders')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -104,7 +106,7 @@ const Nav = () => {
             </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            isActive={!!pathname.match('/products')}
+            isActive={matchUrl(pathname, 'products')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -115,7 +117,7 @@ const Nav = () => {
             </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            isActive={!!pathname.match('/promotions')}
+            isActive={matchUrl(pathname, 'promotions')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -126,7 +128,7 @@ const Nav = () => {
             </Link>
           </SideNavigationItem>
           <SideNavigationItem
-            isActive={!!pathname.match('/categories')}
+            isActive={matchUrl(pathname, 'categories')}
             marginY={tabMarginY}
             sx={tabStyle}
           >
@@ -140,7 +142,7 @@ const Nav = () => {
       </Box>
       <SideNavigationGroup>
         <SideNavigationItem
-          isActive={!!pathname.match('/settings')}
+          isActive={matchUrl(pathname, 'settings')}
           marginY={tabMarginY}
           sx={tabStyle}
         >
