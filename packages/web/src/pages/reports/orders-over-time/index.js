@@ -3,15 +3,57 @@ import Router from 'next/router';
 
 import Page from '@web/layouts/adminContent';
 
-import { SubHeader, Container, theming } from '@storeen/components';
+import {
+  Stack,
+  SubHeader,
+  Container,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
+  TextTableCell,
+  theming
+} from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
+
+import { formatBRL } from '@web/utils/currency';
+
+const headers = ['Hora', 'Pedidos', 'Total de vendas'];
+const items = [
+  {
+    hour: 'Vestido Blue Denim',
+    orders: 10,
+    total: formatBRL(82.0)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    orders: 51,
+    total: formatBRL(68.0)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    orders: 25,
+    total: formatBRL(197.0)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    orders: 96,
+    total: formatBRL(46.0)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    orders: 81,
+    total: formatBRL(57.0)
+  }
+];
 
 const OrdersOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
-    <>
+    <Stack>
       <SubHeader
         title="Pedidos ao longo do tempo"
         hasBack
@@ -35,7 +77,25 @@ const OrdersOverTime = () => {
           }}
         />
       </Container>
-    </>
+      <Table ariaLabel="Total de pedidos">
+        <Thead headers={headers} />
+        <Tbody>
+          {items.map(item => (
+            <Tr key={item.hour}>
+              <Td>
+                <TextTableCell text={item.hour} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.orders} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.total} />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </Stack>
   );
 };
 

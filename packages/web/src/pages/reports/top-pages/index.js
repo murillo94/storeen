@@ -3,15 +3,50 @@ import Router from 'next/router';
 
 import Page from '@web/layouts/adminContent';
 
-import { SubHeader, Container, theming } from '@storeen/components';
+import {
+  Stack,
+  SubHeader,
+  Container,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
+  TextTableCell,
+  theming
+} from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
+
+const headers = ['Página', 'Total de visitas'];
+const items = [
+  {
+    page: 'Vestido Blue Denim',
+    total: 140
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: 47
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: 71
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: 21
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: 35
+  }
+];
 
 const TopPages = () => {
   const handleBack = () => Router.back();
 
   return (
-    <>
+    <Stack>
       <SubHeader
         title="Páginas mais visitadas ao longo do tempo"
         hasBack
@@ -35,7 +70,22 @@ const TopPages = () => {
           }}
         />
       </Container>
-    </>
+      <Table ariaLabel="Total de visitas">
+        <Thead headers={headers} />
+        <Tbody>
+          {items.map(item => (
+            <Tr key={item.page}>
+              <Td>
+                <TextTableCell text={item.page} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.total} />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </Stack>
   );
 };
 

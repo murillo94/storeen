@@ -3,15 +3,62 @@ import Router from 'next/router';
 
 import Page from '@web/layouts/adminContent';
 
-import { SubHeader, Container, theming } from '@storeen/components';
+import {
+  Stack,
+  SubHeader,
+  Container,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
+  TextTableCell,
+  theming
+} from '@storeen/components';
 
 import useLayout from '@web/hooks/layout/useLayout';
+
+import { formatBRL } from '@web/utils/currency';
+
+const headers = ['Hora', 'Total de vendas', 'Pedidos', 'Valor médio do pedido'];
+const items = [
+  {
+    hour: 'Vestido Blue Denim',
+    total: formatBRL(45.0),
+    orders: 2,
+    average: formatBRL(22.5)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: formatBRL(161.0),
+    orders: 5,
+    average: formatBRL(32.2)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: formatBRL(63.0),
+    orders: 8,
+    average: formatBRL(7.875)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: formatBRL(116.0),
+    orders: 9,
+    average: formatBRL(12.8888888889)
+  },
+  {
+    hour: 'Vestido Blue Denim',
+    total: formatBRL(163.0),
+    orders: 4,
+    average: formatBRL(40.75)
+  }
+];
 
 const AverageOrdersOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
-    <>
+    <Stack space="xlarge">
       <SubHeader
         title="Valor médio do pedido ao longo do tempo"
         hasBack
@@ -35,7 +82,28 @@ const AverageOrdersOverTime = () => {
           }}
         />
       </Container>
-    </>
+      <Table ariaLabel="Valor médio do pedido">
+        <Thead headers={headers} />
+        <Tbody>
+          {items.map(item => (
+            <Tr key={item.hour}>
+              <Td>
+                <TextTableCell text={item.hour} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.total} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.orders} />
+              </Td>
+              <Td>
+                <TextTableCell text={item.average} />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </Stack>
   );
 };
 
