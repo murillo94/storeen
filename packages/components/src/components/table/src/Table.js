@@ -34,7 +34,9 @@ export const Table = ({
           as="table"
           aria-label={title || ariaLabel}
           styleConfig={{
+            borderRadius: 3,
             borderCollapse: 'collapse',
+            overflow: 'hidden',
             width: '100%'
           }}
         >
