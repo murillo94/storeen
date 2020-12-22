@@ -7,6 +7,7 @@ export const Inline = ({ children, isProportional = true, ...props }) => (
       display: 'flex',
       flexDirection: ['column', 'row'],
       flexWrap: 'wrap',
+      alignItems: 'center',
       '> button': {
         flexGrow: 'initial'
       },
