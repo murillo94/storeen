@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "app",
-  "alias": "app.storeen",
+  "alias": "app-storeen",
   "builds": [{ "src": "/next.config.js", "use": "@now/next" }],
   "routes": [
     {
