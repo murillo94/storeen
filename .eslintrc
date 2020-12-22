@@ -78,7 +78,9 @@
           ["@app/layouts/*", "./packages/app/src/layouts"],
           ["@app/pages/*", "./packages/app/src/pages"],
           ["@app/public/*", "./packages/app/src/public"],
-          ["@app/utils/*", "./packages/app/src/utils"]
+          ["@app/utils/*", "./packages/app/src/utils"],
+          ["@site/pages/*", "./packages/site/src/pages"],
+          ["@site/public/*", "./packages/site/src/public"]
         ]
       }
     }

@@ -25,10 +25,15 @@
     "prettier": "^2.0.5"
   },
   "scripts": {
-    "dev": "yarn --cwd packages/app dev",
-    "build": "yarn --cwd packages/app build",
-    "start": "yarn --cwd packages/app start",
-    "styleguide": "yarn --cwd packages/styleguide dev",
+    "app:dev": "yarn --cwd packages/app dev",
+    "app:build": "yarn --cwd packages/app build",
+    "app:start": "yarn --cwd packages/app start",
+    "styleguide:dev": "yarn --cwd packages/styleguide dev",
+    "styleguide:build": "yarn --cwd packages/styleguide build",
+    "styleguide:start": "yarn --cwd packages/styleguide start",
+    "site:dev": "yarn --cwd packages/site dev",
+    "site:build": "yarn --cwd packages/site build",
+    "site:start": "yarn --cwd packages/site start",
     "lint": "eslint .",
     "test": "jest"
   },

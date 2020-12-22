@@ -1,0 +1,35 @@
+{
+  "name": "@storeen/site",
+  "version": "1.0.0",
+  "devDependencies": {
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.0",
+    "next-transpile-modules": "^4.1.0"
+  },
+  "dependencies": {
+    "@storeen/components": "*",
+    "@storeen/system": "*",
+    "babel-plugin-styled-components": "^1.10.7",
+    "next": "9.5.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
