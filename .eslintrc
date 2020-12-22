@@ -73,12 +73,12 @@
           ["@styleguide/components/*", "./packages/styleguide/src/components"],
           ["@styleguide/layouts/*", "./packages/styleguide/src/layouts"],
           ["@styleguide/public/*", "./packages/styleguide/src/public"],
-          ["@web/containers/*", "./packages/web/src/containers"],
-          ["@web/hooks/*", "./packages/web/src/hooks"],
-          ["@web/layouts/*", "./packages/web/src/layouts"],
-          ["@web/pages/*", "./packages/web/src/pages"],
-          ["@web/public/*", "./packages/web/src/public"],
-          ["@web/utils/*", "./packages/web/src/utils"]
+          ["@app/containers/*", "./packages/app/src/containers"],
+          ["@app/hooks/*", "./packages/app/src/hooks"],
+          ["@app/layouts/*", "./packages/app/src/layouts"],
+          ["@app/pages/*", "./packages/app/src/pages"],
+          ["@app/public/*", "./packages/app/src/public"],
+          ["@app/utils/*", "./packages/app/src/utils"]
         ]
       }
     }

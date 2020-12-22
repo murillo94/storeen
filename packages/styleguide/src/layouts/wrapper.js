@@ -123,10 +123,10 @@ const Nav = () => {
         </SideNavigationItem>
         <SideNavigationItem>
           <SideNavigationItemLink
-            href="https://github.com/murillo94/storeen/tree/master/packages/web"
+            href="https://github.com/murillo94/storeen/tree/master/packages/app"
             isExternal
           >
-            Storeen web
+            Storeen app
           </SideNavigationItemLink>
         </SideNavigationItem>
       </SideNavigationGroup>

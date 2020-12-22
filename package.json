@@ -25,9 +25,9 @@
     "prettier": "^2.0.5"
   },
   "scripts": {
-    "dev": "yarn --cwd packages/web dev",
-    "build": "yarn --cwd packages/web build",
-    "start": "yarn --cwd packages/web start",
+    "dev": "yarn --cwd packages/app dev",
+    "build": "yarn --cwd packages/app build",
+    "start": "yarn --cwd packages/app start",
     "styleguide": "yarn --cwd packages/styleguide dev",
     "lint": "eslint .",
     "test": "jest"
