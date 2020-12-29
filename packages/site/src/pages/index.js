@@ -37,7 +37,7 @@ const Home = () => (
       <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
       <Paragraph marginBottom={10}>
         Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia e
-        você só precisa se preocupar em vender.
+        você só precisa se preocupar em vender
       </Paragraph>
       <Box marginBottom={10}>
         <Box
@@ -58,8 +58,15 @@ const Home = () => (
       <Stack space="xlarge">
         <Inline>
           <Box>
-            <Heading is="h2">Fácil de usar</Heading>
-            <Paragraph>teste</Paragraph>
+            <Heading is="h2" marginBottom={4}>
+              Fácil de usar
+            </Heading>
+            <Paragraph>
+              Por meio de uma interface simples em menos de 10 minutos o seu
+              site está no ar pronto para os seus clientes comprarem. É tão
+              simples que você pode usar imediatamente sem nenhum tipo de
+              treinamento!
+            </Paragraph>
           </Box>
           <Box>
             <Box
@@ -84,13 +91,22 @@ const Home = () => (
             />
           </Box>
           <Box>
-            <Heading is="h2">Rápido, elegante e simples</Heading>
-            <Paragraph>teste</Paragraph>
+            <Heading is="h2" marginBottom={4}>
+              Rápido, elegante e simples
+            </Heading>
+            <Paragraph>
+              Seja no computador, celular ou qualquer outro tipo de tela. Nós
+              entregamos uma experiência interetiva e rápida ao seu cliente
+              final do jeito que eles desejam
+            </Paragraph>
           </Box>
         </Inline>
       </Stack>
     </Box>
     <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+      <Heading is="h2" marginBottom={10}>
+        Focamos na tecnologia para que você possa focar na receita
+      </Heading>
       <Stack space="xlarge">
         <Inline>
           <Box>
@@ -102,8 +118,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 1</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Acompanhe seus pedidos</Heading>
             </Box>
           </Box>
           <Box>
@@ -115,8 +130,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 2</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Pagamento integrado</Heading>
             </Box>
           </Box>
           <Box>
@@ -128,8 +142,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 3</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Crie cupons</Heading>
             </Box>
           </Box>
         </Inline>
@@ -143,8 +156,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 4</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Checkout seguro</Heading>
             </Box>
           </Box>
           <Box>
@@ -156,8 +168,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 5</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Mix de produtos</Heading>
             </Box>
           </Box>
           <Box>
@@ -169,8 +180,7 @@ const Home = () => (
               }}
               marginX="auto"
             >
-              <Heading is="h3">teste 6</Heading>
-              <Paragraph>teste</Paragraph>
+              <Heading is="h3">Otimização e altíssima velocidade</Heading>
             </Box>
           </Box>
         </Inline>
@@ -181,7 +191,11 @@ const Home = () => (
         <Inline>
           <Box>
             <Heading is="h2">Sem limitações</Heading>
-            <Paragraph>teste</Paragraph>
+            <Paragraph>
+              De vida a sua loja de maneira escalável sem qualquer tipo de
+              empecilho, sem pegadinhas. Sem limite de produtos, fotos ou
+              acessos. Seja livre!
+            </Paragraph>
           </Box>
           <Box>
             <Box
@@ -207,7 +221,61 @@ const Home = () => (
           </Box>
           <Box>
             <Heading is="h2">Aprenda com o seu público</Heading>
-            <Paragraph>teste</Paragraph>
+            <Paragraph>
+              Atráves do acompanhamento dos gráficos e resultados da loja, você
+              elimina custos e cria uma inteligência para sempre entender
+              intenção e gostos do seu cliente final
+            </Paragraph>
+          </Box>
+        </Inline>
+      </Stack>
+    </Box>
+    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+      <Heading is="h2" marginBottom={4}>
+        Estamos aqui para te ajudar
+      </Heading>
+      <Paragraph marginBottom={10}>
+        Saiba como fazer uma ótima loja, atrair seu público e muito mais, tudo
+        isso em nossa universidade ou em nossa páginas de FAQs
+      </Paragraph>
+      <Stack space="xlarge">
+        <Inline>
+          <Box>
+            <Box
+              sx={{
+                backgroundColor: 'gray300',
+                width: ['100px', '50%'],
+                height: '100px'
+              }}
+              marginX="auto"
+            >
+              <Heading is="h2" marginBottom={4}>
+                Universidade
+              </Heading>
+              <Paragraph>
+                Não se sinta mais sozinho neste imenso e desafiador mundo do
+                empreendedorismo. Vamos te ajudar a entender melhor a dinâmica
+                do e-commerce.
+              </Paragraph>
+            </Box>
+          </Box>
+          <Box>
+            <Box
+              sx={{
+                backgroundColor: 'gray300',
+                width: ['100px', '50%'],
+                height: '100px'
+              }}
+              marginX="auto"
+            >
+              <Heading is="h2" marginBottom={4}>
+                FAQ&apos;s
+              </Heading>
+              <Paragraph>
+                Aprenda sobre a plataforma e a como vender, com respostas às
+                perguntas mais comuns de vendas
+              </Paragraph>
+            </Box>
           </Box>
         </Inline>
       </Stack>
