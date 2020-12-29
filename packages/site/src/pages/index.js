@@ -74,7 +74,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             />
@@ -86,7 +86,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             />
@@ -115,7 +115,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -127,7 +127,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -139,7 +139,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -153,7 +153,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -165,7 +165,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -177,7 +177,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -203,7 +203,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             />
@@ -215,7 +215,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             />
@@ -246,7 +246,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -265,7 +265,7 @@ const Home = () => (
               sx={{
                 backgroundColor: 'gray300',
                 width: ['100px', '50%'],
-                height: '100px'
+                height: ['auto', '100px']
               }}
               marginX="auto"
             >
@@ -298,7 +298,6 @@ const Home = () => (
             <Box
               sx={{
                 width: ['100px', '50%'],
-                height: '100px',
                 '> a': {
                   display: 'block',
                   marginBottom: 2
@@ -315,7 +314,6 @@ const Home = () => (
             <Box
               sx={{
                 width: ['100px', '50%'],
-                height: '100px',
                 '> a': {
                   display: 'block',
                   marginBottom: 2
