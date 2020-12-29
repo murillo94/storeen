@@ -6,7 +6,8 @@ import {
   Heading,
   Paragraph,
   Button,
-  Stack
+  Stack,
+  Footer
 } from '@storeen/components';
 
 const Home = () => (
@@ -280,6 +281,59 @@ const Home = () => (
         </Inline>
       </Stack>
     </Box>
+    <Footer>
+      <Box as="section" padding={6} sx={{ textAlign: 'center', width: '100%' }}>
+        <Inline sx={{ justifyContent: 'space-between' }}>
+          <Image
+            src={require('@site/public/images/logo-all-horizontal.svg')}
+            alt="Storeen logo com nome horizontal"
+            width="200px"
+            height="50px"
+            marginX="auto"
+            sx={{
+              display: ['block']
+            }}
+          />
+          <Inline>
+            <Box
+              sx={{
+                width: ['100px', '50%'],
+                height: '100px',
+                '> a': {
+                  display: 'block',
+                  marginBottom: 2
+                }
+              }}
+              marginX="auto"
+            >
+              <Heading is="h3" marginBottom={2}>
+                Produto
+              </Heading>
+              <Anchor href="#">funcionalidades</Anchor>
+              <Anchor href="#">planos</Anchor>
+            </Box>
+            <Box
+              sx={{
+                width: ['100px', '50%'],
+                height: '100px',
+                '> a': {
+                  display: 'block',
+                  marginBottom: 2
+                }
+              }}
+              marginX="auto"
+            >
+              <Heading is="h3" marginBottom={2}>
+                Empresa
+              </Heading>
+              <Anchor href="#">Sobre nós</Anchor>
+              <Anchor href="#">Carreiras</Anchor>
+              <Anchor href="#">Contato</Anchor>
+            </Box>
+          </Inline>
+        </Inline>
+      </Box>
+    </Footer>
   </Box>
 );
 
