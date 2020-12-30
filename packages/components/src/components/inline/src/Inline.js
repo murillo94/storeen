@@ -1,6 +1,19 @@
 import { Box } from '../../box';
 
-export const Inline = ({ children, isProportional = true, ...props }) => (
+const spaces = {
+  small: 2,
+  medium: 3,
+  large: 4,
+  xlarge: 7
+};
+
+export const Inline = ({
+  children,
+  isProportional = true,
+  spaceX = 'large',
+  spaceY = 'large',
+  ...props
+}) => (
   <Box
     className="form-group"
     styleConfig={{
@@ -16,11 +29,11 @@ export const Inline = ({ children, isProportional = true, ...props }) => (
         flexShrink: '0',
         flexBasis: !isProportional ? '1' : '0',
         '+ *': {
-          marginLeft: [0, 4]
+          marginLeft: [0, spaces[spaceX]]
         }
       },
       '> *:not(:last-child)': {
-        marginBottom: [4, 0]
+        marginBottom: [spaces[spaceY], 0]
       }
     }}
     {...props}
