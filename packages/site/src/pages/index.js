@@ -7,6 +7,7 @@ import {
   Paragraph,
   Button,
   Stack,
+  Icon,
   Footer
 } from '@storeen/components';
 
@@ -34,7 +35,13 @@ const Home = () => (
         </Inline>
       </Inline>
     </Box>
-    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+    <Box
+      as="section"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      paddingX={3}
+      marginBottom={12}
+      marginX="auto"
+    >
       <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
       <Paragraph marginBottom={10}>
         Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia e
@@ -55,10 +62,20 @@ const Home = () => (
         <Button>criar minha loja agora</Button>
       </Inline>
     </Box>
-    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+    <Box
+      as="section"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      paddingX={3}
+      marginBottom={12}
+      marginX="auto"
+    >
       <Stack space="xlarge">
         <Inline>
-          <Box>
+          <Box
+            sx={{
+              textAlign: 'left'
+            }}
+          >
             <Heading is="h2" marginBottom={4}>
               Fácil de usar
             </Heading>
@@ -91,7 +108,11 @@ const Home = () => (
               marginX="auto"
             />
           </Box>
-          <Box>
+          <Box
+            sx={{
+              textAlign: 'right'
+            }}
+          >
             <Heading is="h2" marginBottom={4}>
               Rápido, elegante e simples
             </Heading>
@@ -104,93 +125,165 @@ const Home = () => (
         </Inline>
       </Stack>
     </Box>
-    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+    <Box
+      as="section"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      paddingX={3}
+      marginBottom={12}
+      marginX="auto"
+    >
       <Heading is="h2" marginBottom={10}>
         Focamos na tecnologia para que você possa focar na receita
       </Heading>
       <Stack space="xlarge">
-        <Inline>
+        <Inline
+          isProportional={false}
+          spaceX="xlarge"
+          sx={{ justifyContent: 'center' }}
+        >
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
               <Heading is="h3">Acompanhe seus pedidos</Heading>
+              <Icon name="package" size={30} />
             </Box>
           </Box>
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
               <Heading is="h3">Pagamento integrado</Heading>
+              <Icon name="credit-card" size={30} />
             </Box>
           </Box>
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
               <Heading is="h3">Crie cupons</Heading>
+              <Icon name="gift" size={30} />
             </Box>
           </Box>
         </Inline>
-        <Inline>
+        <Inline
+          isProportional={false}
+          spaceX="xlarge"
+          sx={{ justifyContent: 'center' }}
+        >
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
               <Heading is="h3">Checkout seguro</Heading>
+              <Icon name="shield" size={30} />
             </Box>
           </Box>
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
               <Heading is="h3">Mix de produtos</Heading>
+              <Icon name="tag" size={30} />
             </Box>
           </Box>
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray0',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 40px',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['160px'],
+                height: ['auto', '160px']
               }}
+              padding={3}
               marginX="auto"
             >
-              <Heading is="h3">Otimização e altíssima velocidade</Heading>
+              <Heading is="h3">Altíssima velocidade</Heading>
+              <Icon name="upload-cloud" size={30} />
             </Box>
           </Box>
         </Inline>
       </Stack>
     </Box>
-    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+    <Box
+      as="section"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      paddingX={3}
+      marginBottom={12}
+      marginX="auto"
+    >
       <Stack space="xlarge">
         <Inline>
-          <Box>
+          <Box
+            sx={{
+              textAlign: 'left'
+            }}
+          >
             <Heading is="h2">Sem limitações</Heading>
             <Paragraph>
               De vida a sua loja de maneira escalável sem qualquer tipo de
@@ -220,7 +313,11 @@ const Home = () => (
               marginX="auto"
             />
           </Box>
-          <Box>
+          <Box
+            sx={{
+              textAlign: 'right'
+            }}
+          >
             <Heading is="h2">Aprenda com o seu público</Heading>
             <Paragraph>
               Atráves do acompanhamento dos gráficos e resultados da loja, você
@@ -231,7 +328,13 @@ const Home = () => (
         </Inline>
       </Stack>
     </Box>
-    <Box as="section" padding={6} sx={{ textAlign: 'center' }}>
+    <Box
+      as="section"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      paddingX={3}
+      marginBottom={12}
+      marginX="auto"
+    >
       <Heading is="h2" marginBottom={4}>
         Estamos aqui para te ajudar
       </Heading>
@@ -240,97 +343,120 @@ const Home = () => (
         isso em nossa universidade ou em nossa páginas de FAQs
       </Paragraph>
       <Stack space="xlarge">
-        <Inline>
+        <Inline
+          isProportional={false}
+          spaceX="xlarge"
+          sx={{ justifyContent: 'center' }}
+        >
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['400px'],
+                height: ['auto', '260px']
               }}
+              padding={3}
               marginX="auto"
             >
-              <Heading is="h2" marginBottom={4}>
-                Universidade
-              </Heading>
-              <Paragraph>
-                Não se sinta mais sozinho neste imenso e desafiador mundo do
-                empreendedorismo. Vamos te ajudar a entender melhor a dinâmica
-                do e-commerce.
-              </Paragraph>
+              <Box>
+                <Heading is="h2" marginBottom={4}>
+                  Universidade
+                </Heading>
+                <Paragraph>
+                  Não se sinta mais sozinho neste imenso e desafiador mundo do
+                  empreendedorismo. Vamos te ajudar a entender melhor a dinâmica
+                  do e-commerce.
+                </Paragraph>
+              </Box>
+              <Icon name="edit-2" size={30} />
             </Box>
           </Box>
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
-                width: ['100px', '50%'],
-                height: ['auto', '100px']
+                textAlign: 'left',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                display: 'flex',
+                width: ['400px'],
+                height: ['auto', '260px']
               }}
+              padding={3}
               marginX="auto"
             >
-              <Heading is="h2" marginBottom={4}>
-                FAQ&apos;s
-              </Heading>
-              <Paragraph>
-                Aprenda sobre a plataforma e a como vender, com respostas às
-                perguntas mais comuns de vendas
-              </Paragraph>
+              <Box>
+                <Heading is="h2" marginBottom={4}>
+                  FAQ&apos;s
+                </Heading>
+                <Paragraph>
+                  Aprenda sobre a plataforma e a como vender, com respostas às
+                  perguntas mais comuns de vendas
+                </Paragraph>
+              </Box>
+              <Icon name="book-open" size={30} />
             </Box>
           </Box>
         </Inline>
       </Stack>
     </Box>
-    <Footer>
-      <Box as="section" padding={6} sx={{ textAlign: 'center', width: '100%' }}>
-        <Inline sx={{ justifyContent: 'space-between' }}>
-          <Image
-            src={require('@site/public/images/logo-all-horizontal.svg')}
-            alt="Storeen logo com nome horizontal"
-            width="200px"
-            height="50px"
-            marginX="auto"
+    <Footer padding={6}>
+      <Inline
+        sx={{
+          textAlign: 'center',
+          maxWidth: ['38em', '50em', '62em', '78em']
+        }}
+        paddingX={3}
+        marginX="auto"
+      >
+        <Image
+          src={require('@site/public/images/logo-all-horizontal.svg')}
+          alt="Storeen logo com nome horizontal"
+          width="200px"
+          height="50px"
+        />
+        <Inline
+          isProportional={false}
+          spaceX="xlarge"
+          sx={{ flexWrap: 'initial' }}
+        >
+          <Box
             sx={{
-              display: ['block']
+              '> a': {
+                display: 'block',
+                marginBottom: 2
+              }
             }}
-          />
-          <Inline>
-            <Box
-              sx={{
-                width: ['100px', '50%'],
-                '> a': {
-                  display: 'block',
-                  marginBottom: 2
-                }
-              }}
-              marginX="auto"
-            >
-              <Heading is="h3" marginBottom={2}>
-                Produto
-              </Heading>
-              <Anchor href="#">funcionalidades</Anchor>
-              <Anchor href="#">planos</Anchor>
-            </Box>
-            <Box
-              sx={{
-                width: ['100px', '50%'],
-                '> a': {
-                  display: 'block',
-                  marginBottom: 2
-                }
-              }}
-              marginX="auto"
-            >
-              <Heading is="h3" marginBottom={2}>
-                Empresa
-              </Heading>
-              <Anchor href="#">Sobre nós</Anchor>
-              <Anchor href="#">Carreiras</Anchor>
-              <Anchor href="#">Contato</Anchor>
-            </Box>
-          </Inline>
+          >
+            <Heading is="h3" marginBottom={2}>
+              Produto
+            </Heading>
+            <Anchor href="#">funcionalidades</Anchor>
+            <Anchor href="#">planos</Anchor>
+          </Box>
+          <Box
+            sx={{
+              '> a': {
+                display: 'block',
+                marginBottom: 2
+              }
+            }}
+          >
+            <Heading is="h3" marginBottom={2}>
+              Empresa
+            </Heading>
+            <Anchor href="#">Sobre nós</Anchor>
+            <Anchor href="#">Carreiras</Anchor>
+            <Anchor href="#">Contato</Anchor>
+          </Box>
         </Inline>
-      </Box>
+      </Inline>
     </Footer>
   </Box>
 );

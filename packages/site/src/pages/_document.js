@@ -51,7 +51,7 @@ class CustomDocument extends Document {
                   -webkit-font-smoothing: antialiased;
 	                -moz-osx-font-smoothing: grayscale;
                   line-height: 1.3;
-                  background-color: ${theming.colors.gray100};
+                  background-color: ${theming.colors.gray0};
                   color: ${theming.colors.gray900};
                   margin: 0;
                 }
