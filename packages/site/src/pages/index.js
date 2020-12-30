@@ -13,7 +13,7 @@ import {
 
 const Home = () => (
   <Box as="main">
-    <Box as="nav" padding={6}>
+    <Box as="nav" padding={6} marginBottom={10}>
       <Inline>
         <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
           <Anchor href="#">funcionalidades</Anchor>
