@@ -360,7 +360,7 @@ const Home = () => (
                 width: ['400px'],
                 height: ['auto', '260px']
               }}
-              padding={3}
+              padding={5}
               marginX="auto"
             >
               <Box>
@@ -373,7 +373,24 @@ const Home = () => (
                   do e-commerce.
                 </Paragraph>
               </Box>
-              <Icon name="edit-2" size={30} />
+              <Inline
+                isProportional={false}
+                sx={{ justifyContent: 'space-between' }}
+              >
+                <Anchor
+                  href="#"
+                  sx={{
+                    display: 'flex',
+                    alignItens: 'center',
+                    '> svg': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  Ver universidade <Icon name="arrow-right" size={18} />
+                </Anchor>
+                <Icon name="edit-2" size={30} />
+              </Inline>
             </Box>
           </Box>
           <Box>
@@ -388,7 +405,7 @@ const Home = () => (
                 width: ['400px'],
                 height: ['auto', '260px']
               }}
-              padding={3}
+              padding={5}
               marginX="auto"
             >
               <Box>
@@ -400,7 +417,25 @@ const Home = () => (
                   perguntas mais comuns de vendas
                 </Paragraph>
               </Box>
-              <Icon name="book-open" size={30} />
+              <Inline
+                isProportional={false}
+                sx={{ justifyContent: 'space-between' }}
+              >
+                <Anchor
+                  href="#"
+                  sx={{
+                    display: 'flex',
+                    alignItens: 'center',
+                    '> svg': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  Confira as FAQ&apos;s
+                  <Icon name="arrow-right" size={18} />
+                </Anchor>
+                <Icon name="book-open" size={30} />
+              </Inline>
             </Box>
           </Box>
         </Inline>
@@ -412,19 +447,20 @@ const Home = () => (
           textAlign: 'center',
           maxWidth: ['38em', '50em', '62em', '78em']
         }}
+        spaceX="xxlarge"
         paddingX={3}
         marginX="auto"
       >
         <Image
           src={require('@site/public/images/logo-all-horizontal.svg')}
           alt="Storeen logo com nome horizontal"
-          width="200px"
+          width="150px"
           height="50px"
         />
         <Inline
           isProportional={false}
-          spaceX="xlarge"
-          sx={{ flexWrap: 'initial' }}
+          spaceX="xxlarge"
+          sx={{ flexWrap: 'initial', textAlign: 'left' }}
         >
           <Box
             sx={{
@@ -434,7 +470,7 @@ const Home = () => (
               }
             }}
           >
-            <Heading is="h3" marginBottom={2}>
+            <Heading is="h3" marginBottom={4}>
               Produto
             </Heading>
             <Anchor href="#">funcionalidades</Anchor>
@@ -448,7 +484,7 @@ const Home = () => (
               }
             }}
           >
-            <Heading is="h3" marginBottom={2}>
+            <Heading is="h3" marginBottom={4}>
               Empresa
             </Heading>
             <Anchor href="#">Sobre nós</Anchor>
