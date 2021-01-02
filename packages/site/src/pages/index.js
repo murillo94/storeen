@@ -487,9 +487,9 @@ const Home = () => (
             <Heading is="h3" marginBottom={4}>
               Empresa
             </Heading>
-            <Anchor href="#">Sobre nós</Anchor>
-            <Anchor href="#">Carreiras</Anchor>
-            <Anchor href="#">Contato</Anchor>
+            <Anchor href="#">sobre nós</Anchor>
+            <Anchor href="#">carreiras</Anchor>
+            <Anchor href="#">contato</Anchor>
           </Box>
         </Inline>
       </Inline>
