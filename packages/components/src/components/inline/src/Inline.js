@@ -1,10 +1,12 @@
 import { Box } from '../../box';
 
 const spaces = {
+  xsmall: 1,
   small: 2,
   medium: 3,
   large: 4,
-  xlarge: 7
+  xlarge: 7,
+  xxlarge: 10
 };
 
 export const Inline = ({
