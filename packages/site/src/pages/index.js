@@ -50,7 +50,8 @@ const Home = () => (
       <Box marginBottom={10}>
         <Box
           sx={{
-            backgroundColor: 'gray300',
+            backgroundColor: 'gray200',
+            borderRadius: 4,
             width: ['100px', '50%'],
             height: '100px'
           }}
@@ -89,7 +90,8 @@ const Home = () => (
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
                 width: ['100px', '50%'],
                 height: ['auto', '100px']
               }}
@@ -101,7 +103,8 @@ const Home = () => (
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
                 width: ['100px', '50%'],
                 height: ['auto', '100px']
               }}
@@ -294,7 +297,8 @@ const Home = () => (
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
                 width: ['100px', '50%'],
                 height: ['auto', '100px']
               }}
@@ -306,7 +310,8 @@ const Home = () => (
           <Box>
             <Box
               sx={{
-                backgroundColor: 'gray300',
+                backgroundColor: 'gray200',
+                borderRadius: 4,
                 width: ['100px', '50%'],
                 height: ['auto', '100px']
               }}
@@ -444,23 +449,29 @@ const Home = () => (
     <Footer padding={6}>
       <Inline
         sx={{
-          textAlign: 'center',
+          textAlign: 'left',
+          alignItems: 'self-start',
           maxWidth: ['38em', '50em', '62em', '78em']
         }}
         spaceX="xxlarge"
         paddingX={3}
         marginX="auto"
       >
-        <Image
-          src={require('@site/public/images/logo-all-horizontal.svg')}
-          alt="Storeen logo com nome horizontal"
-          width="150px"
-          height="50px"
-        />
+        <Stack space="small">
+          <Image
+            src={require('@site/public/images/logo-all-horizontal.svg')}
+            alt="Storeen logo com nome horizontal"
+            width="150px"
+            height="50px"
+          />
+          <Paragraph>
+            O jeito mais fácil de criar uma loja virtual completa
+          </Paragraph>
+        </Stack>
         <Inline
           isProportional={false}
           spaceX="xxlarge"
-          sx={{ flexWrap: 'initial', textAlign: 'left' }}
+          sx={{ flexWrap: 'initial', alignItems: 'self-start' }}
         >
           <Box
             sx={{
