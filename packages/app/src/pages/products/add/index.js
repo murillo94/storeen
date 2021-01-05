@@ -61,7 +61,7 @@ const AddProduct = () => {
         onClick={handleBack}
         marginBottom={8}
       />
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container title="Geral">
           <Stack>
             <Input

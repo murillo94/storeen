@@ -17,7 +17,7 @@ import useLayout from '@app/hooks/layout/useLayout';
 const Reports = () => (
   <>
     <SubHeader title="Relatórios" marginBottom={8} />
-    <Stack space="xlarge">
+    <Stack space="large">
       <Inline>
         <Container
           title="Total de vendas"

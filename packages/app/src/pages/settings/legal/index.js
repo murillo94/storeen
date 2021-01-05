@@ -14,7 +14,7 @@ const LegalSettings = () => {
 
   return (
     <>
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container
           title="Política de reembolso"
           subTitle="Uma boa política de devolução ou reembolso pode ajudar a proteger a sua empresa e ganhar a confiança dos clientes."

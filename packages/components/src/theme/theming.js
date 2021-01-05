@@ -23,7 +23,10 @@ export const theming = {
     '45px',
     '60px',
     '65px',
-    '80px'
+    '80px',
+    '85px',
+    '90px',
+    '100px'
   ],
   radii: ['0', '4px', '5px', '6px', '8px'],
   shadows: [

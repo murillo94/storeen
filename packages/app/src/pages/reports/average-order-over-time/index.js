@@ -92,7 +92,7 @@ const AverageOrdersOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
-    <Stack space="xlarge">
+    <Stack space="large">
       <SubHeader
         title="Valor médio do pedido ao longo do tempo"
         hasBack

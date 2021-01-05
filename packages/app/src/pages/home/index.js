@@ -22,7 +22,7 @@ const Home = () => (
       subTitle="Veja o que está acontecendo na sua loja hoje."
       marginBottom={8}
     />
-    <Stack space="xlarge">
+    <Stack space="large">
       <Inline>
         <Container
           title="Total de vendas"
@@ -37,7 +37,7 @@ const Home = () => (
             </Link>
           }
         >
-          <Stack space="xlarge">
+          <Stack space="large">
             <Heading is="h3" color="muted">
               {formatBRL(9932.5)}
             </Heading>

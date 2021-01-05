@@ -21,7 +21,7 @@ const AccountSettings = () => {
 
   return (
     <>
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container
           title="Dados pessoais"
           subTitle="Iremos usar essas informações para entrar em contato com você."

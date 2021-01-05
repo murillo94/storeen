@@ -146,7 +146,7 @@ const AddCategorie = () => {
         onClick={handleBack}
         marginBottom={8}
       />
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container title="Geral">
           <Stack>
             <Input
@@ -166,7 +166,7 @@ const AddCategorie = () => {
           </Stack>
         </Container>
         <Container title="Tipo">
-          <Stack space="medium">
+          <Stack>
             <Radio
               id="type-mode-manual"
               name="type.mode"

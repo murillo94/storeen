@@ -57,7 +57,7 @@ const AddPromotion = () => {
         onClick={handleBack}
         marginBottom={8}
       />
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container title="Geral">
           <Stack>
             <Input
@@ -95,7 +95,7 @@ const AddPromotion = () => {
           </Stack>
         </Container>
         <Container title="Aplicável">
-          <Stack space="small">
+          <Stack space="xsmall">
             <Radio
               id="applicable-mode-all"
               name="applicable.mode"
@@ -153,7 +153,7 @@ const AddPromotion = () => {
           </Stack>
         </Container>
         <Container title="Requisitos mínimos">
-          <Stack space="small">
+          <Stack space="xsmall">
             <Radio
               id="minimum-requirements-mode-none"
               name="minimumRequirements.mode"

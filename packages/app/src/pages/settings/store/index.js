@@ -23,7 +23,7 @@ const StoreSettings = () => {
 
   return (
     <>
-      <Stack space="xlarge">
+      <Stack space="large">
         <Container
           title="Dados da loja"
           subTitle="Algumas informações que são necessárias para o seu público conhecer melhor a sua marca."

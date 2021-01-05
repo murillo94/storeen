@@ -51,7 +51,7 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
         <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
@@ -79,10 +79,10 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
-        <Stack space="xlarge">
+        <Stack space="large">
           <Inline>
             <Box
               sx={{
@@ -144,13 +144,13 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
         <Heading is="h2" marginBottom={10}>
           Focamos na tecnologia para que você possa focar na receita
         </Heading>
-        <Stack space="xlarge">
+        <Stack space="large">
           <Inline
             isProportional={false}
             spaceX="xlarge"
@@ -289,10 +289,10 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
-        <Stack space="xlarge">
+        <Stack space="large">
           <Inline>
             <Box
               sx={{
@@ -349,7 +349,7 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
         <Heading is="h2" marginBottom={4}>
@@ -359,7 +359,7 @@ const Home = () => {
           Saiba como fazer uma ótima loja, atrair seu público e muito mais, tudo
           isso em nossa universidade ou em nossa páginas de FAQs
         </Paragraph>
-        <Stack space="xlarge">
+        <Stack space="large">
           <Inline
             isProportional={false}
             spaceX="xlarge"
@@ -462,7 +462,7 @@ const Home = () => {
         as="section"
         sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
         paddingX={3}
-        marginBottom={12}
+        marginBottom={15}
         marginX="auto"
       >
         <Heading is="h2" marginBottom={4}>
@@ -513,7 +513,7 @@ const Home = () => {
             <Paragraph marginBottom={6}>
               {plan === TYPE.monthly ? 'R$ 59,90' : '575,04'}
             </Paragraph>
-            <Stack space="small">
+            <Stack space="xsmall">
               <Inline
                 isProportional={false}
                 isCollapse={false}
@@ -673,7 +673,7 @@ const Home = () => {
           paddingX={3}
           marginX="auto"
         >
-          <Stack space="small">
+          <Stack space="xsmall">
             <Image
               src={require('@site/public/images/logo-all-horizontal.svg')}
               alt="Storeen logo com nome horizontal"
