@@ -51,7 +51,7 @@ const Home = () => {
           </Inline>
         </Inline>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
         <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
         <Paragraph marginBottom={10}>
           Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia e
@@ -73,8 +73,8 @@ const Home = () => {
           <Button>criar minha loja agora</Button>
         </Inline>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
-        <Stack space="large">
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
+        <Stack space="xxlarge">
           <Inline>
             <Box
               sx={{
@@ -132,7 +132,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
         <Heading is="h2" marginBottom={10}>
           Focamos na tecnologia para que você possa focar na receita
         </Heading>
@@ -271,8 +271,8 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
-        <Stack space="large">
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
+        <Stack space="xxlarge">
           <Inline>
             <Box
               sx={{
@@ -325,7 +325,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
         <Heading is="h2" marginBottom={4}>
           Estamos aqui para te ajudar
         </Heading>
@@ -355,7 +355,7 @@ const Home = () => {
                 marginX="auto"
               >
                 <Box>
-                  <Heading is="h2" marginBottom={4}>
+                  <Heading is="h3" marginBottom={4}>
                     Universidade
                   </Heading>
                   <Paragraph>
@@ -400,7 +400,7 @@ const Home = () => {
                 marginX="auto"
               >
                 <Box>
-                  <Heading is="h2" marginBottom={4}>
+                  <Heading is="h3" marginBottom={4}>
                     FAQ&apos;s
                   </Heading>
                   <Paragraph>
@@ -432,7 +432,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={5} marginBottom={15}>
+      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
         <Heading is="h2" marginBottom={4}>
           Planos
         </Heading>
@@ -475,12 +475,12 @@ const Home = () => {
             padding={6}
             marginX="auto"
           >
-            <Heading is="h5" marginBottom={3}>
+            <Heading is="h3" marginBottom={3}>
               {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
             </Heading>
-            <Paragraph marginBottom={6}>
+            <Heading is="h2" marginBottom={6}>
               {plan === TYPE.monthly ? 'R$ 59,90' : '575,04'}
-            </Paragraph>
+            </Heading>
             <Stack space="xsmall">
               <Inline
                 isProportional={false}
