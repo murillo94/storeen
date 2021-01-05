@@ -24,7 +24,11 @@ const Home = () => {
   const [plan, setPlan] = useState(TYPE.monthly);
 
   return (
-    <Box as="main">
+    <Box
+      as="main"
+      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      marginX="auto"
+    >
       <Box as="nav" padding={6} marginBottom={10}>
         <Inline>
           <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
@@ -47,13 +51,7 @@ const Home = () => {
           </Inline>
         </Inline>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
         <Paragraph marginBottom={10}>
           Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia e
@@ -75,13 +73,7 @@ const Home = () => {
           <Button>criar minha loja agora</Button>
         </Inline>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Stack space="large">
           <Inline>
             <Box
@@ -140,13 +132,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Heading is="h2" marginBottom={10}>
           Focamos na tecnologia para que você possa focar na receita
         </Heading>
@@ -285,13 +271,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Stack space="large">
           <Inline>
             <Box
@@ -345,13 +325,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Heading is="h2" marginBottom={4}>
           Estamos aqui para te ajudar
         </Heading>
@@ -458,13 +432,7 @@ const Home = () => {
           </Inline>
         </Stack>
       </Box>
-      <Box
-        as="section"
-        sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
-        paddingX={3}
-        marginBottom={15}
-        marginX="auto"
-      >
+      <Box as="section" paddingX={3} marginBottom={15}>
         <Heading is="h2" marginBottom={4}>
           Planos
         </Heading>
