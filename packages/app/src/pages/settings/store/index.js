@@ -101,7 +101,7 @@ const StoreSettings = () => {
             >
               <Stack>
                 {company.hasLegalPerson && (
-                  <Heading is="h3" marginBottom={4}>
+                  <Heading is="h5" marginBottom={4}>
                     Dados da empresa
                   </Heading>
                 )}
@@ -138,7 +138,7 @@ const StoreSettings = () => {
               </Stack>
             </Disclosure>
             {company.hasLegalPerson && (
-              <Heading is="h3" marginBottom={4}>
+              <Heading is="h5" marginBottom={4}>
                 Dados do responsável
               </Heading>
             )}

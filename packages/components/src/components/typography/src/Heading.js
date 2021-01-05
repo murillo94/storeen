@@ -6,19 +6,23 @@ import useFont from '../utils/useFont';
 
 const headings = {
   h1: {
-    fontSize: 3,
+    fontSize: 7,
     fontWeight: 2
   },
   h2: {
-    fontSize: 2,
+    fontSize: 5,
     fontWeight: 2
   },
   h3: {
-    fontSize: 1,
+    fontSize: 3,
     fontWeight: 2
   },
   h4: {
-    fontSize: 0,
+    fontSize: 2,
+    fontWeight: 2
+  },
+  h5: {
+    fontSize: 1,
     fontWeight: 2
   }
 };

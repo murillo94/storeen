@@ -28,7 +28,7 @@ export const Alert = ({
       }}
       {...props}
     >
-      {title && <Heading is="h4">{title}</Heading>}
+      {title && <Heading is="h5">{title}</Heading>}
       {description && (
         <Paragraph color="muted" marginTop={2}>
           {description}

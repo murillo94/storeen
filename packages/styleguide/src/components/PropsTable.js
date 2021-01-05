@@ -8,7 +8,7 @@ export const PropsTable = ({ title = 'Props', data = {} }) => {
 
   return (
     <>
-      <Heading is="h2" marginTop={11} marginBottom={5}>
+      <Heading is="h4" marginTop={11} marginBottom={5}>
         {title}
       </Heading>
       {hasProps && (

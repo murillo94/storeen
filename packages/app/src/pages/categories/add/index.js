@@ -193,7 +193,7 @@ const AddCategorie = () => {
               isVisible={type.mode === 'automated'}
             >
               <Stack>
-                <Heading is="h3">Condições</Heading>
+                <Heading is="h5">Condições</Heading>
                 <Inline isProportional={false}>
                   <Text>Produtos devem ter:</Text>
                   <Radio

@@ -4,7 +4,7 @@ const Layout = ({ children, frontMatter }) => (
   <>
     <Heading>{frontMatter.title}</Heading>
     <Heading
-      is="h2"
+      is="h4"
       color="muted"
       marginTop={2}
       marginBottom={8}

@@ -9,7 +9,7 @@ import {
 const removeUnit = str => str.replace('px', '');
 
 const Heading = props => (
-  <StoreenHeading is="h2" marginTop={8} marginBottom={4} {...props} />
+  <StoreenHeading is="h4" marginTop={8} marginBottom={4} {...props} />
 );
 
 const SectionTitle = ({ textTransform = 'capitalize', ...props }) => (
@@ -63,7 +63,7 @@ const ColorCard = ({ color, name, props }) => (
         }}
       />
       <Box marginTop={1}>
-        <StoreenHeading is="h4" marginTop={2} marginBottom={1}>
+        <StoreenHeading is="h5" marginTop={2} marginBottom={1}>
           <Text sx={{ textTransform: 'capitalize' }}>{name}</Text>
         </StoreenHeading>
         <SectionTitle marginBottom={2} textTransform="uppercase">

@@ -43,6 +43,9 @@ const customComponents = {
   h4: props => (
     <SC.Heading {...props} is="h4" marginTop={11} marginBottom={1} />
   ),
+  h5: props => (
+    <SC.Heading {...props} is="h5" marginTop={11} marginBottom={1} />
+  ),
   p: props => <SC.Paragraph color="muted" marginY={2} {...props} />,
   a: props => <SC.Anchor {...props} />,
   table: SC.Table,

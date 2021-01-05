@@ -158,7 +158,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Acompanhe seus pedidos</Heading>
+                <Heading is="h5">Acompanhe seus pedidos</Heading>
                 <Icon name="package" size={30} />
               </Box>
             </Box>
@@ -178,7 +178,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Pagamento integrado</Heading>
+                <Heading is="h5">Pagamento integrado</Heading>
                 <Icon name="credit-card" size={30} />
               </Box>
             </Box>
@@ -198,7 +198,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Crie cupons</Heading>
+                <Heading is="h5">Crie cupons</Heading>
                 <Icon name="gift" size={30} />
               </Box>
             </Box>
@@ -224,7 +224,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Checkout seguro</Heading>
+                <Heading is="h5">Checkout seguro</Heading>
                 <Icon name="shield" size={30} />
               </Box>
             </Box>
@@ -244,7 +244,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Mix de produtos</Heading>
+                <Heading is="h5">Mix de produtos</Heading>
                 <Icon name="tag" size={30} />
               </Box>
             </Box>
@@ -264,7 +264,7 @@ const Home = () => {
                 padding={3}
                 marginX="auto"
               >
-                <Heading is="h3">Altíssima velocidade</Heading>
+                <Heading is="h5">Altíssima velocidade</Heading>
                 <Icon name="upload-cloud" size={30} />
               </Box>
             </Box>
@@ -475,7 +475,7 @@ const Home = () => {
             padding={6}
             marginX="auto"
           >
-            <Heading is="h3" marginBottom={3}>
+            <Heading is="h5" marginBottom={3}>
               {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
             </Heading>
             <Paragraph marginBottom={6}>
@@ -665,7 +665,7 @@ const Home = () => {
                 }
               }}
             >
-              <Heading is="h3" marginBottom={4}>
+              <Heading is="h5" marginBottom={4}>
                 Produto
               </Heading>
               <Anchor href="#">funcionalidades</Anchor>
@@ -679,7 +679,7 @@ const Home = () => {
                 }
               }}
             >
-              <Heading is="h3" marginBottom={4}>
+              <Heading is="h5" marginBottom={4}>
                 Empresa
               </Heading>
               <Anchor href="#">sobre nós</Anchor>

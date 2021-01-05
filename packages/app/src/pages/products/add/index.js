@@ -200,7 +200,7 @@ const AddProduct = () => {
             }
           >
             <Stack>
-              <Heading is="h3">Opções</Heading>
+              <Heading is="h5">Opções</Heading>
               {variations.options.map((option, index) => (
                 <Inline key={index}>
                   <Select

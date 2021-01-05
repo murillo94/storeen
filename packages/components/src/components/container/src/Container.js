@@ -38,7 +38,7 @@ export const Container = ({
               alignItems: 'center'
             }}
           >
-            <Heading is="h2">{title}</Heading>
+            <Heading is="h4">{title}</Heading>
             {optionsTitle}
           </Box>
           {subTitle && (

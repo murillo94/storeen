@@ -8,7 +8,7 @@ breakpoints.xlarge = xlarge;
 
 export const theming = {
   breakpoints,
-  fontSizes: ['14px', '16px', '18px', '28px'],
+  fontSizes: ['14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px'],
   fontWeights: ['400', '500', '600'],
   space: [
     '0',

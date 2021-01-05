@@ -38,7 +38,7 @@ const Home = () => (
           }
         >
           <Stack space="large">
-            <Heading is="h3" color="muted">
+            <Heading is="h5" color="muted">
               {formatBRL(9932.5)}
             </Heading>
           </Stack>
@@ -56,7 +56,7 @@ const Home = () => (
             </Link>
           }
         >
-          <Heading is="h3" color="muted">
+          <Heading is="h5" color="muted">
             100
           </Heading>
         </Container>
@@ -74,7 +74,7 @@ const Home = () => (
           </Link>
         }
       >
-        <Heading is="h3" color="muted">
+        <Heading is="h5" color="muted">
           8 pedidos foram realizados
         </Heading>
       </Container>
