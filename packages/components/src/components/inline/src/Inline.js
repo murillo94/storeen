@@ -12,6 +12,7 @@ const spaces = {
 export const Inline = ({
   children,
   isProportional = true,
+  isCollapse = true,
   spaceX = 'large',
   spaceY = 'large',
   ...props
@@ -20,7 +21,7 @@ export const Inline = ({
     className="form-group"
     styleConfig={{
       display: 'flex',
-      flexDirection: ['column', 'row'],
+      flexDirection: [isCollapse ? 'column' : 'row', 'row'],
       flexWrap: 'wrap',
       alignItems: 'center',
       '> button': {
@@ -35,7 +36,7 @@ export const Inline = ({
         }
       },
       '> *:not(:last-child)': {
-        marginBottom: [spaces[spaceY], 0]
+        marginBottom: [isCollapse ? spaces[spaceY] : 0, 0]
       }
     }}
     {...props}

@@ -21,6 +21,7 @@ export const Switch = ({
     <Box
       styleConfig={{
         display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center'
       }}
     >
