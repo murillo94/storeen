@@ -129,6 +129,14 @@ const Nav = () => {
             Storeen app
           </SideNavigationItemLink>
         </SideNavigationItem>
+        <SideNavigationItem>
+          <SideNavigationItemLink
+            href="https://github.com/murillo94/storeen/tree/master/packages/site"
+            isExternal
+          >
+            Storeen site
+          </SideNavigationItemLink>
+        </SideNavigationItem>
       </SideNavigationGroup>
     </>
   );

@@ -46,7 +46,7 @@ const Home = () => {
             }}
           />
           <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
-            <Anchor href="https://app-storeen.vercel.app/">entrar</Anchor>
+            <Anchor href="https://app-storeen.vercel.app">entrar</Anchor>
             <Anchor href="#">criar loja</Anchor>
           </Inline>
         </Inline>
