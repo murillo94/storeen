@@ -30,19 +30,19 @@ const items = [
     total: 140
   },
   {
-    hour: 'Vestido Blue Denim',
+    page: 'Vestido Blue Denim',
     total: 47
   },
   {
-    hour: 'Vestido Blue Denim',
+    page: 'Vestido Blue Denim',
     total: 71
   },
   {
-    hour: 'Vestido Blue Denim',
+    page: 'Vestido Blue Denim',
     total: 21
   },
   {
-    hour: 'Vestido Blue Denim',
+    page: 'Vestido Blue Denim',
     total: 35
   }
 ];
