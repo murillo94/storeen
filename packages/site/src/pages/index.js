@@ -153,7 +153,7 @@ const Home = () => {
         <Stack space="large">
           <Inline
             isProportional={false}
-            spaceX="xlarge"
+            spaceX="large"
             sx={{ justifyContent: 'center' }}
           >
             <Box>
@@ -219,7 +219,7 @@ const Home = () => {
           </Inline>
           <Inline
             isProportional={false}
-            spaceX="xlarge"
+            spaceX="large"
             sx={{ justifyContent: 'center' }}
           >
             <Box>
@@ -362,7 +362,7 @@ const Home = () => {
         <Stack space="large">
           <Inline
             isProportional={false}
-            spaceX="xlarge"
+            spaceX="large"
             sx={{ justifyContent: 'center' }}
           >
             <Box>
@@ -669,7 +669,7 @@ const Home = () => {
             alignItems: 'self-start',
             maxWidth: ['38em', '50em', '62em', '78em']
           }}
-          spaceX="xxlarge"
+          spaceX="xlarge"
           paddingX={3}
           marginX="auto"
         >
@@ -686,7 +686,7 @@ const Home = () => {
           </Stack>
           <Inline
             isProportional={false}
-            spaceX="xxlarge"
+            spaceX="xlarge"
             sx={{ flexWrap: 'initial', alignItems: 'self-start' }}
           >
             <Box

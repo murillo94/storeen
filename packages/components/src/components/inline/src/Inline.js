@@ -1,20 +1,21 @@
 import { Box } from '../../box';
 
 const spaces = {
-  xsmall: 1,
-  small: 2,
-  medium: 3,
-  large: 4,
-  xlarge: 7,
-  xxlarge: 10
+  xxsmall: 1,
+  xsmall: 2,
+  small: 3,
+  medium: 5,
+  large: 7,
+  xlarge: 10,
+  xxlarge: 15
 };
 
 export const Inline = ({
   children,
   isProportional = true,
   isCollapse = true,
-  spaceX = 'large',
-  spaceY = 'large',
+  spaceX = 'medium',
+  spaceY = 'medium',
   ...props
 }) => (
   <Box
