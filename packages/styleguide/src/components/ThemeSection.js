@@ -113,9 +113,7 @@ export const ThemeSection = () => (
             }}
           >
             <Paragraph marginBottom={1} marginRight={4}>
-              <Text sx={{ fontSize: theming.fontSizes[3], fontWeight: value }}>
-                Aa
-              </Text>
+              <Text sx={{ fontSize: 3, fontWeight: value }}>Aa</Text>
             </Paragraph>
             <SectionTitle>{removeUnit(value)}</SectionTitle>
           </Box>
