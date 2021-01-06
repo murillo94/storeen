@@ -455,7 +455,7 @@ const Home = () => {
             }}
           />
         </Box>
-        <Paragraph marginBottom={8} color="success">
+        <Paragraph marginBottom={8} color="positive">
           Economize 20% (R$ 143,76) no plano anual!
         </Paragraph>
         <Box>
@@ -475,157 +475,162 @@ const Home = () => {
             padding={6}
             marginX="auto"
           >
-            <Heading is="h3" marginBottom={3}>
-              {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
-            </Heading>
-            <Heading is="h2" marginBottom={6}>
-              {plan === TYPE.monthly ? 'R$ 59,90' : '575,04'}
-            </Heading>
-            <Stack space="xsmall">
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Suporte exclusivo por chat</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Produtos ilimitados</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Imagens ilimitados</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Acessos ilimitadas</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Certificado de segurança SSL</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Otimizações de SEO para produtos</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Checkout transparente</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Utilização de domínio próprio</Paragraph>
-              </Inline>
-              <Inline
-                isProportional={false}
-                isCollapse={false}
-                sx={{
-                  '> p': {
-                    marginLeft: 2
-                  }
-                }}
-              >
-                <Icon
-                  name="check-circle"
-                  color={theming.colors.blue700}
-                  size={24}
-                />
-                <Paragraph>Estatísticas em tempo real</Paragraph>
-              </Inline>
+            <Stack space="large">
+              <Box>
+                <Heading is="h3" marginBottom={3}>
+                  {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
+                </Heading>
+                <Heading is="h2">
+                  R$ {plan === TYPE.monthly ? '59,90' : '575,04'}
+                </Heading>
+              </Box>
+              <Stack space="xsmall">
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Suporte exclusivo por chat</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Produtos ilimitados</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Imagens ilimitados</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Acessos ilimitadas</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Certificado de segurança SSL</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Otimizações de SEO para produtos</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Checkout transparente</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Utilização de domínio próprio</Paragraph>
+                </Inline>
+                <Inline
+                  isProportional={false}
+                  isCollapse={false}
+                  sx={{
+                    '> p': {
+                      marginLeft: 2
+                    }
+                  }}
+                >
+                  <Icon
+                    name="check-circle"
+                    color={theming.colors.blue700}
+                    size={24}
+                  />
+                  <Paragraph>Estatísticas em tempo real</Paragraph>
+                </Inline>
+              </Stack>
+              <Button>criar minha loja agora</Button>
             </Stack>
           </Box>
         </Box>
