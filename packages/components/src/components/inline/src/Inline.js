@@ -33,7 +33,7 @@ export const Inline = ({
         flexShrink: '0',
         flexBasis: !isProportional ? '1' : '0',
         '+ *': {
-          marginLeft: [0, spaces[spaceX]]
+          marginLeft: [!isCollapse ? spaces[spaceX] : 0, spaces[spaceX]]
         }
       },
       '> *:not(:last-child)': {
