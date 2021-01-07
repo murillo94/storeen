@@ -13,10 +13,16 @@ import {
 } from '@storeen/components';
 
 const Page = ({ children }) => (
-  <>
+  <Box
+    as="main"
+    sx={{ position: 'relative', minHeight: '100vh' }}
+    paddingBottom="315px"
+  >
     <Box
-      as="main"
-      sx={{ textAlign: 'center', maxWidth: ['100%', '50em', '62em', '78em'] }}
+      sx={{
+        textAlign: 'center',
+        maxWidth: ['100%', '50em', '62em', '78em']
+      }}
       marginX="auto"
       paddingX={3}
     >
@@ -68,7 +74,15 @@ const Page = ({ children }) => (
       </Box>
       {children}
     </Box>
-    <Footer padding={12} sx={{ backgroundColor: 'blue200' }}>
+    <Footer
+      padding={12}
+      sx={{
+        backgroundColor: 'blue200',
+        position: 'absolute',
+        bottom: '0',
+        width: '100%'
+      }}
+    >
       <Inline
         sx={{
           textAlign: 'left',
@@ -186,7 +200,7 @@ const Page = ({ children }) => (
         </Inline>
       </Inline>
     </Footer>
-  </>
+  </Box>
 );
 
 export default Page;
