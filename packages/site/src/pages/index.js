@@ -104,65 +104,73 @@ const Home = () => (
           spaceX="large"
           sx={{ justifyContent: 'center' }}
         >
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Acompanhe seus pedidos</Heading>
-              <Icon name="package" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Acompanhe seus pedidos</Heading>
+            <Icon name="package" size={30} />
           </Box>
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Pagamento integrado</Heading>
-              <Icon name="credit-card" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Pagamento integrado</Heading>
+            <Icon name="credit-card" size={30} />
           </Box>
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Crie cupons</Heading>
-              <Icon name="gift" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Crie cupons</Heading>
+            <Icon name="gift" size={30} />
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Crie cupons</Heading>
+            <Icon name="gift" size={30} />
           </Box>
         </Inline>
         <Inline
@@ -170,65 +178,73 @@ const Home = () => (
           spaceX="large"
           sx={{ justifyContent: 'center' }}
         >
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Checkout seguro</Heading>
-              <Icon name="shield" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Checkout seguro</Heading>
+            <Icon name="shield" size={30} />
           </Box>
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Mix de produtos</Heading>
-              <Icon name="tag" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Mix de produtos</Heading>
+            <Icon name="tag" size={30} />
           </Box>
-          <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray0',
-                boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['160px'],
-                height: ['auto', '160px']
-              }}
-              padding={3}
-              marginX="auto"
-            >
-              <Heading is="h5">Altíssima velocidade</Heading>
-              <Icon name="upload-cloud" size={30} />
-            </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Altíssima velocidade</Heading>
+            <Icon name="upload-cloud" size={30} />
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
+            <Heading is="h5">Altíssima velocidade</Heading>
+            <Icon name="upload-cloud" size={30} />
           </Box>
         </Inline>
       </Stack>
@@ -295,104 +311,96 @@ const Home = () => (
         Saiba como fazer uma ótima loja, atrair seu público e muito mais, tudo
         isso em nossa universidade ou em nossa páginas de FAQs
       </Paragraph>
-      <Stack space="large">
-        <Inline
-          isProportional={false}
-          spaceX="large"
-          sx={{ justifyContent: 'center' }}
+      <Inline
+        isProportional={false}
+        spaceX="large"
+        sx={{ justifyContent: 'center' }}
+      >
+        <Box
+          sx={{
+            textAlign: 'left',
+            backgroundColor: 'gray200',
+            borderRadius: 4,
+            justifyContent: 'space-between',
+            flexDirection: 'column',
+            display: 'flex',
+            width: ['100%', '250px', '360px'],
+            height: ['auto', '260px']
+          }}
+          padding={5}
         >
           <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray200',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['400px'],
-                height: ['auto', '260px']
-              }}
-              padding={5}
-              marginX="auto"
-            >
-              <Box>
-                <Heading is="h3" marginBottom={4}>
-                  Universidade
-                </Heading>
-                <Paragraph>
-                  Não se sinta mais sozinho neste imenso e desafiador mundo do
-                  empreendedorismo. Vamos te ajudar a entender melhor a dinâmica
-                  do e-commerce.
-                </Paragraph>
-              </Box>
-              <Inline
-                isProportional={false}
-                sx={{ justifyContent: 'space-between' }}
-              >
-                <Anchor
-                  href="#"
-                  sx={{
-                    display: 'flex',
-                    alignItens: 'center',
-                    '> svg': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  Ver universidade <Icon name="arrow-right" size={18} />
-                </Anchor>
-                <Icon name="edit-2" size={30} />
-              </Inline>
-            </Box>
+            <Heading is="h3" marginBottom={4}>
+              Universidade
+            </Heading>
+            <Paragraph>
+              Não se sinta mais sozinho neste imenso e desafiador mundo do
+              empreendedorismo. Vamos te ajudar a entender melhor a dinâmica do
+              e-commerce.
+            </Paragraph>
           </Box>
+          <Inline
+            isProportional={false}
+            sx={{ justifyContent: 'space-between' }}
+          >
+            <Anchor
+              href="#"
+              sx={{
+                display: 'flex',
+                alignItens: 'center',
+                '> svg': {
+                  marginLeft: 2
+                }
+              }}
+            >
+              Ver universidade <Icon name="arrow-right" size={18} />
+            </Anchor>
+            <Icon name="edit-2" size={30} />
+          </Inline>
+        </Box>
+        <Box
+          sx={{
+            textAlign: 'left',
+            backgroundColor: 'gray200',
+            borderRadius: 4,
+            justifyContent: 'space-between',
+            flexDirection: 'column',
+            display: 'flex',
+            width: ['100%', '250px', '360px'],
+            height: ['auto', '260px']
+          }}
+          padding={5}
+        >
           <Box>
-            <Box
-              sx={{
-                textAlign: 'left',
-                backgroundColor: 'gray200',
-                borderRadius: 4,
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-                display: 'flex',
-                width: ['400px'],
-                height: ['auto', '260px']
-              }}
-              padding={5}
-              marginX="auto"
-            >
-              <Box>
-                <Heading is="h3" marginBottom={4}>
-                  FAQ&apos;s
-                </Heading>
-                <Paragraph>
-                  Aprenda sobre a plataforma e a como vender, com respostas às
-                  perguntas mais comuns de vendas
-                </Paragraph>
-              </Box>
-              <Inline
-                isProportional={false}
-                sx={{ justifyContent: 'space-between' }}
-              >
-                <Anchor
-                  href="#"
-                  sx={{
-                    display: 'flex',
-                    alignItens: 'center',
-                    '> svg': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  Confira as FAQ&apos;s
-                  <Icon name="arrow-right" size={18} />
-                </Anchor>
-                <Icon name="book-open" size={30} />
-              </Inline>
-            </Box>
+            <Heading is="h3" marginBottom={4}>
+              FAQ&apos;s
+            </Heading>
+            <Paragraph>
+              Aprenda sobre a plataforma e a como vender, com respostas às
+              perguntas mais comuns de vendas
+            </Paragraph>
           </Box>
-        </Inline>
-      </Stack>
+          <Inline
+            isProportional={false}
+            sx={{ justifyContent: 'space-between' }}
+          >
+            <Anchor
+              href="#"
+              sx={{
+                display: 'flex',
+                alignItens: 'center',
+                '> svg': {
+                  marginLeft: 2
+                }
+              }}
+            >
+              Confira as FAQ&apos;s
+              <Icon name="arrow-right" size={18} />
+            </Anchor>
+            <Icon name="book-open" size={30} />
+          </Inline>
+        </Box>
+      </Inline>
     </Box>
     <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
       <Heading is="h2" marginBottom={10}>

@@ -16,11 +16,28 @@ const Page = ({ children }) => (
   <>
     <Box
       as="main"
-      sx={{ textAlign: 'center', maxWidth: ['38em', '50em', '62em', '78em'] }}
+      sx={{ textAlign: 'center', maxWidth: ['100%', '50em', '62em', '78em'] }}
       marginX="auto"
+      paddingX={3}
     >
       <Box as="nav" padding={6} marginBottom={10}>
-        <Inline>
+        <Link href="/" passHref>
+          <Anchor
+            sx={{
+              display: ['block', 'none']
+            }}
+          >
+            <Image
+              src={require('@site/public/images/logo-all-horizontal.svg')}
+              alt="Storeen logo com nome horizontal"
+              width="170px"
+              height="50px"
+              marginX="auto"
+              marginBottom={5}
+            />
+          </Anchor>
+        </Link>
+        <Inline spaceX="small">
           <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
             <Link href="#" passHref>
               <Anchor>funcionalidades</Anchor>
@@ -29,16 +46,20 @@ const Page = ({ children }) => (
               <Anchor>planos</Anchor>
             </Link>
           </Inline>
-          <Image
-            src={require('@site/public/images/logo-all-horizontal.svg')}
-            alt="Storeen logo com nome horizontal"
-            width="200px"
-            height="50px"
-            marginX="auto"
-            sx={{
-              display: ['block']
-            }}
-          />
+          <Link href="/" passHref>
+            <Anchor
+              sx={{
+                display: ['none', 'block']
+              }}
+            >
+              <Image
+                src={require('@site/public/images/logo-all-horizontal.svg')}
+                alt="Storeen logo com nome horizontal"
+                width={['180px']}
+                height="50px"
+              />
+            </Anchor>
+          </Link>
           <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
             <Anchor href="https://app-storeen.vercel.app">entrar</Anchor>
             <Anchor href="#">criar loja</Anchor>
