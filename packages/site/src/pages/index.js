@@ -118,6 +118,23 @@ const Home = () => (
             }}
             padding={4}
           >
+            <Heading is="h5">Site próprio</Heading>
+            <Icon name="database" size={30} />
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              backgroundColor: 'gray0',
+              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
+              borderRadius: 4,
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              display: 'flex',
+              width: ['100%', '160px'],
+              height: ['auto', '160px']
+            }}
+            padding={4}
+          >
             <Heading is="h5">Acompanhe seus pedidos</Heading>
             <Icon name="package" size={30} />
           </Box>
@@ -137,23 +154,6 @@ const Home = () => (
           >
             <Heading is="h5">Pagamento integrado</Heading>
             <Icon name="credit-card" size={30} />
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'left',
-              backgroundColor: 'gray0',
-              boxShadow: '0px 2px 40px rgba(0, 0, 0, 0.15)',
-              borderRadius: 4,
-              justifyContent: 'space-between',
-              flexDirection: 'column',
-              display: 'flex',
-              width: ['100%', '160px'],
-              height: ['auto', '160px']
-            }}
-            padding={4}
-          >
-            <Heading is="h5">Crie cupons</Heading>
-            <Icon name="gift" size={30} />
           </Box>
           <Box
             sx={{
@@ -226,8 +226,8 @@ const Home = () => (
             }}
             padding={4}
           >
-            <Heading is="h5">Altíssima velocidade</Heading>
-            <Icon name="upload-cloud" size={30} />
+            <Heading is="h5">SEO</Heading>
+            <Icon name="share-2" size={30} />
           </Box>
           <Box
             sx={{
