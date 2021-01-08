@@ -95,12 +95,20 @@ const Page = ({ children }) => (
       >
         <Stack space="medium">
           <Box>
-            <Image
-              src={require('@site/public/images/logo-all-horizontal.svg')}
-              alt="Storeen logo com nome horizontal"
-              width="150px"
-              height="50px"
-            />
+            <Link href="/" passHref>
+              <Anchor
+                sx={{
+                  display: ['none', 'block']
+                }}
+              >
+                <Image
+                  src={require('@site/public/images/logo-all-horizontal.svg')}
+                  alt="Storeen logo com nome horizontal"
+                  width="150px"
+                  height="50px"
+                />
+              </Anchor>
+            </Link>
             <Paragraph>
               O jeito mais fácil de criar uma loja virtual completa
             </Paragraph>
