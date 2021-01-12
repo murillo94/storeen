@@ -20,7 +20,7 @@ const Contact = () => (
     </Paragraph>
     <Stack space="large">
       <Stack sx={{ maxWidth: ['100%', '38em'] }} marginX="auto">
-        <Inline>
+        <Inline spaceX="small">
           <Input placeholder="Nome" id="first-name" name="first-name" />
           <Input placeholder="Sobrenome" id="second-name" name="second-name" />
         </Inline>

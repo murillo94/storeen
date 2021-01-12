@@ -14,8 +14,8 @@ export const Inline = ({
   children,
   isProportional = true,
   isCollapse = true,
+  spaceY = 'small',
   spaceX = 'medium',
-  spaceY = 'medium',
   ...props
 }) => (
   <Box
@@ -24,7 +24,6 @@ export const Inline = ({
       display: 'flex',
       flexDirection: [isCollapse ? 'column' : 'row', 'row'],
       flexWrap: 'wrap',
-      alignItems: 'center',
       '> button': {
         flexGrow: 'initial'
       },

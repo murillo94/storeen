@@ -92,7 +92,7 @@ const AverageOrdersOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
-    <Stack space="large">
+    <>
       <SubHeader
         title="Valor médio do pedido ao longo do tempo"
         hasBack
@@ -101,45 +101,47 @@ const AverageOrdersOverTime = () => {
       >
         <Filter />
       </SubHeader>
-      <Container title="Valor médio do pedido" paddingBottom={0}>
-        <Chart
-          type="line"
-          colors={[theming.colors.blue600]}
-          axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
-          height={250}
-          animate={0}
-          data={{
-            labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
-            datasets: [{ values: [112, 2, 12, 228, 23, 15, 106, 12] }]
-          }}
-          lineOptions={{
-            spline: 1,
-            hideDots: 1
-          }}
-        />
-      </Container>
-      <Table ariaLabel="Valor médio do pedido">
-        <Thead headers={headers} />
-        <Tbody>
-          {items.map(item => (
-            <Tr key={item.hour}>
-              <Td>
-                <TextTableCell text={item.hour} />
-              </Td>
-              <Td>
-                <TextTableCell text={item.total} />
-              </Td>
-              <Td>
-                <TextTableCell text={item.orders} />
-              </Td>
-              <Td>
-                <TextTableCell text={item.average} />
-              </Td>
-            </Tr>
-          ))}
-        </Tbody>
-      </Table>
-    </Stack>
+      <Stack space="large">
+        <Container title="Valor médio do pedido" paddingBottom={0}>
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            animate={0}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [112, 2, 12, 228, 23, 15, 106, 12] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
+        </Container>
+        <Table ariaLabel="Valor médio do pedido">
+          <Thead headers={headers} />
+          <Tbody>
+            {items.map(item => (
+              <Tr key={item.hour}>
+                <Td>
+                  <TextTableCell text={item.hour} />
+                </Td>
+                <Td>
+                  <TextTableCell text={item.total} />
+                </Td>
+                <Td>
+                  <TextTableCell text={item.orders} />
+                </Td>
+                <Td>
+                  <TextTableCell text={item.average} />
+                </Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Stack>
+    </>
   );
 };
 

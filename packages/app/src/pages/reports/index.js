@@ -18,7 +18,7 @@ const Reports = () => (
   <>
     <SubHeader title="Relatórios" marginBottom={8} />
     <Stack space="large">
-      <Inline>
+      <Inline spaceY="large">
         <Container
           title="Total de vendas"
           optionsTitle={
@@ -80,7 +80,7 @@ const Reports = () => (
           />
         </Container>
       </Inline>
-      <Inline>
+      <Inline spaceY="large">
         <Container
           title="Valor médio do pedido"
           optionsTitle={
@@ -141,7 +141,7 @@ const Reports = () => (
           />
         </Container>
       </Inline>
-      <Inline>
+      <Inline spaceY="large">
         <Container
           title="Páginas mais visitadas"
           optionsTitle={

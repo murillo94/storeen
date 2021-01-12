@@ -87,7 +87,7 @@ const SalesOverTime = () => {
   const handleBack = () => Router.back();
 
   return (
-    <Stack>
+    <>
       <SubHeader
         title="Vendas ao longo do tempo"
         hasBack
@@ -96,42 +96,44 @@ const SalesOverTime = () => {
       >
         <Filter />
       </SubHeader>
-      <Container title="Total de vendas" paddingBottom={0}>
-        <Chart
-          type="line"
-          colors={[theming.colors.blue600]}
-          axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
-          height={250}
-          animate={0}
-          data={{
-            labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
-            datasets: [{ values: [18, 40, 30, 35, 8, 52, 17, 4] }]
-          }}
-          lineOptions={{
-            spline: 1,
-            hideDots: 1
-          }}
-        />
-      </Container>
-      <Table ariaLabel="Total de vendas">
-        <Thead headers={headers} />
-        <Tbody>
-          {items.map(item => (
-            <Tr key={item.hour}>
-              <Td>
-                <TextTableCell text={item.hour} />
-              </Td>
-              <Td>
-                <TextTableCell text={item.orders} />
-              </Td>
-              <Td>
-                <TextTableCell text={item.total} />
-              </Td>
-            </Tr>
-          ))}
-        </Tbody>
-      </Table>
-    </Stack>
+      <Stack space="large">
+        <Container title="Total de vendas" paddingBottom={0}>
+          <Chart
+            type="line"
+            colors={[theming.colors.blue600]}
+            axisOptions={{ xAxisMode: 'tick', xIsSeries: 1 }}
+            height={250}
+            animate={0}
+            data={{
+              labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              datasets: [{ values: [18, 40, 30, 35, 8, 52, 17, 4] }]
+            }}
+            lineOptions={{
+              spline: 1,
+              hideDots: 1
+            }}
+          />
+        </Container>
+        <Table ariaLabel="Total de vendas">
+          <Thead headers={headers} />
+          <Tbody>
+            {items.map(item => (
+              <Tr key={item.hour}>
+                <Td>
+                  <TextTableCell text={item.hour} />
+                </Td>
+                <Td>
+                  <TextTableCell text={item.orders} />
+                </Td>
+                <Td>
+                  <TextTableCell text={item.total} />
+                </Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Stack>
+    </>
   );
 };
 

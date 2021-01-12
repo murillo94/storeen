@@ -16,7 +16,7 @@ const Page = ({ children }) => (
   <Box
     as="main"
     sx={{ position: 'relative', minHeight: '100vh' }}
-    paddingBottom="315px"
+    paddingBottom={['500px', '315px']}
   >
     <Box
       sx={{
@@ -89,6 +89,7 @@ const Page = ({ children }) => (
           alignItems: 'self-start',
           maxWidth: ['38em', '50em', '62em', '78em']
         }}
+        spaceY="medium"
         spaceX="xxlarge"
         paddingX={3}
         marginX="auto"
@@ -163,6 +164,7 @@ const Page = ({ children }) => (
         </Stack>
         <Inline
           isProportional={false}
+          spaceY="medium"
           spaceX="xxlarge"
           sx={{ flexWrap: 'initial', alignItems: 'self-start' }}
         >
@@ -196,11 +198,17 @@ const Page = ({ children }) => (
               Empresa
             </Heading>
             <Link href="#" passHref>
+              <Anchor>termos de uso</Anchor>
+            </Link>
+            <Link href="#" passHref>
+              <Anchor>política de privacidade</Anchor>
+            </Link>
+            {/* <Link href="#" passHref>
               <Anchor>sobre nós</Anchor>
             </Link>
             <Link href="/careers" passHref>
               <Anchor>carreiras</Anchor>
-            </Link>
+            </Link> */}
             <Link href="/contact" passHref>
               <Anchor>contato</Anchor>
             </Link>

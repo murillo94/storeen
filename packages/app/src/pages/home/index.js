@@ -23,7 +23,7 @@ const Home = () => (
       marginBottom={8}
     />
     <Stack space="large">
-      <Inline>
+      <Inline spaceY="large">
         <Container
           title="Total de vendas"
           optionsTitle={
