@@ -197,10 +197,10 @@ const Page = ({ children }) => (
             <Heading is="h5" marginBottom={4}>
               Empresa
             </Heading>
-            <Link href="#" passHref>
+            <Link href="/terms" passHref>
               <Anchor>termos de uso</Anchor>
             </Link>
-            <Link href="#" passHref>
+            <Link href="/privacy" passHref>
               <Anchor>política de privacidade</Anchor>
             </Link>
             {/* <Link href="#" passHref>
