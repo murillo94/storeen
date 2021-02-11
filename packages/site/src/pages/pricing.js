@@ -11,8 +11,9 @@ import {
   Button,
   theming
 } from '@storeen/components';
+import { Wrapper } from '@site/components';
 
-import useLayout from '@site/hooks/useLayout';
+import { useLayout } from '@site/hooks';
 
 const TYPE = {
   monthly: 'monthly',
@@ -23,8 +24,14 @@ const Pricing = () => {
   const [plan, setPlan] = useState(TYPE.monthly);
 
   return (
-    <>
-      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
+    <Wrapper>
+      <Box
+        as="section"
+        paddingX={3}
+        paddingY={4}
+        marginBottom={15}
+        sx={{ textAlign: 'center' }}
+      >
         <Heading is="h2" marginBottom={4}>
           Planos
         </Heading>
@@ -312,7 +319,7 @@ const Pricing = () => {
           <Button>Começar</Button>
         </Inline>
       </Box>
-    </>
+    </Wrapper>
   );
 };
 

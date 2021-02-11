@@ -9,24 +9,30 @@ import {
   Paragraph,
   Stack,
   Icon,
-  Footer
+  Footer,
+  theming
 } from '@storeen/components';
+import { Wrapper } from '@site/components';
 
 const Page = ({ children }) => (
   <Box
-    as="main"
     sx={{ position: 'relative', minHeight: '100vh' }}
     paddingBottom={['500px', '315px']}
   >
     <Box
+      as="nav"
+      paddingY={4}
+      paddingX={6}
+      marginBottom={10}
       sx={{
+        backgroundColor: 'hsla(0, 0%, 100%, 0.85)',
+        borderBottom: `1px solid ${theming.colors.gray200}`,
         textAlign: 'center',
-        maxWidth: ['100%', '50em', '62em', '78em']
+        position: 'sticky',
+        top: 0
       }}
-      marginX="auto"
-      paddingX={3}
     >
-      <Box as="nav" padding={6} marginBottom={10}>
+      <Wrapper>
         <Link href="/" passHref>
           <Anchor
             sx={{
@@ -36,7 +42,7 @@ const Page = ({ children }) => (
             <Image
               src={require('@site/public/images/logo-all-horizontal.svg')}
               alt="Storeen logo com nome horizontal"
-              width="170px"
+              width="150px"
               height="50px"
               marginX="auto"
               marginBottom={5}
@@ -44,7 +50,10 @@ const Page = ({ children }) => (
           </Anchor>
         </Link>
         <Inline spaceX="small">
-          <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
+          <Inline
+            isProportional={false}
+            sx={{ justifyContent: 'center', alignItems: 'center' }}
+          >
             <Link href="#" passHref>
               <Anchor>funcionalidades</Anchor>
             </Link>
@@ -61,23 +70,27 @@ const Page = ({ children }) => (
               <Image
                 src={require('@site/public/images/logo-all-horizontal.svg')}
                 alt="Storeen logo com nome horizontal"
-                width={['180px']}
+                width="150px"
                 height="50px"
               />
             </Anchor>
           </Link>
-          <Inline isProportional={false} sx={{ justifyContent: 'center' }}>
+          <Inline
+            isProportional={false}
+            sx={{ justifyContent: 'center', alignItems: 'center' }}
+          >
             <Anchor href="https://app-storeen.vercel.app">entrar</Anchor>
             <Anchor href="#">criar loja</Anchor>
           </Inline>
         </Inline>
-      </Box>
-      {children}
+      </Wrapper>
     </Box>
+    <Box as="main">{children}</Box>
     <Footer
       padding={12}
+      marginTop={6}
       sx={{
-        backgroundColor: 'blue200',
+        backgroundColor: 'gray0',
         position: 'absolute',
         bottom: '0',
         width: '100%'

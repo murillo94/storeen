@@ -1,9 +1,7 @@
 import Page from '@site/layouts/wrapper';
 
-const useLayout = WrappedComponent => props => (
+export const useLayout = WrappedComponent => props => (
   <Page>
     <WrappedComponent {...props} />
   </Page>
 );
-
-export default useLayout;

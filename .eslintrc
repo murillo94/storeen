@@ -79,7 +79,8 @@
           ["@app/pages/*", "./packages/app/src/pages"],
           ["@app/public/*", "./packages/app/src/public"],
           ["@app/utils/*", "./packages/app/src/utils"],
-          ["@site/hooks/*", "./packages/site/src/hooks"],
+          ["@site/components", "./packages/site/src/components"],
+          ["@site/hooks", "./packages/site/src/hooks"],
           ["@site/layouts/*", "./packages/site/src/layouts"],
           ["@site/pages/*", "./packages/site/src/pages"],
           ["@site/public/*", "./packages/site/src/public"]

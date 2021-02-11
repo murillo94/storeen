@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@site/hooks/*": ["src/hooks/*"],
+      "@site/components": ["src/components"],
+      "@site/hooks": ["src/hooks"],
       "@site/layouts/*": ["src/layouts/*"],
       "@site/pages/*": ["src/pages/*"],
       "@site/public/*": ["src/public/*"]
