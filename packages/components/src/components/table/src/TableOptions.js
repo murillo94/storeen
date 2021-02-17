@@ -15,7 +15,7 @@ export const TableOptions = ({
     styleConfig={{
       display: 'flex',
       justifyContent: 'space-between',
-      alignItens: 'center',
+      alignItems: 'center',
       flexDirection: ['column', 'row'],
       input: {
         width: '300px'
