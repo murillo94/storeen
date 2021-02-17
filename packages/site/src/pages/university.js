@@ -14,8 +14,14 @@ const University = () => (
     <Wrapper>
       <Heading marginBottom={4}>Universidade</Heading>
       <Paragraph marginBottom={10} color="muted">
-        todo
+        Aprenda tudo sobre e-commerce e não tenha dúvidas sobre nossa
+        plataforma.
       </Paragraph>
+      <Box as="section" paddingX={3} paddingY={4}>
+        <Heading is="h3">
+          Novidades saindo do forno logo mais, fique atento!
+        </Heading>
+      </Box>
     </Wrapper>
   </Box>
 );

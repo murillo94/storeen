@@ -38,58 +38,59 @@ const About = () => {
         />
         <Box as="section" paddingX={3} paddingY={4} marginY={10}>
           <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
-            <Box>
-              <Heading is="h3" marginBottom={2}>
-                Por que a Storeen?
-              </Heading>
-              <Paragraph marginBottom={4}>todo</Paragraph>
-            </Box>
-            <Box>
-              <Heading is="h3" marginBottom={2}>
-                Autônomo e independente
-              </Heading>
-              <Paragraph marginBottom={4}>
-                Somos uma equipe pequena, não temos que reportar a nenhum
-                investidor, as únicas partes interessadas que temos, são nossos
-                clientes e respondemos apenas a eles.
+            <Stack space="xsmall">
+              <Heading is="h3">Por que a Storeen?</Heading>
+              <Paragraph>
+                Loja online é a nossa especialidade e acreditamos que somos o
+                caminho mais rápido e fácil para você digitalizar o seu negócio
+                e assim explorar todo o potencial de vendas que sua loja tem na
+                internet. Estudamos e projetamos cuidadosamente cada
+                característica a fim de proporcionar a melhor experiência ao
+                usuário final e você.
               </Paragraph>
-              <Paragraph marginBottom={4}>
-                Somos independentes e sempre seremos. Não estamos procurando
-                acrescentar características inúteis apenas para justificar a
-                taxa ou para atingir algum alvo comercial imposto de fora. Nosso
-                objetivo é criar uma ferramenta inteligente que possa realmente
-                ajudar as pessoas a venderem mais e aumentar a lucratividade dos
-                seus negócios, por isso queremos fazê-lo a um preço justo e
-                sustentável. Tão simples quanto isso.
-              </Paragraph>
-            </Box>
-            <Box>
-              <Heading is="h3" marginBottom={2}>
-                Focado na privacidade
-              </Heading>
-              <Paragraph marginBottom={4}>
-                Sabemos o quanto seus dados são importantes e, por esta razão,
-                construímos todos os recursos a partir do zero, tendo em mente a
-                privacidade. Podemos prometer isso a todos os clientes que
-                utilizam a Storeen porque nosso modal de negócios é baseado em
-                uma assinatura. Se você não está pagando por um produto, você é
-                o produto.
-              </Paragraph>
-              <Paragraph marginBottom={4}>
-                Nós não vendemos ou compartilhamos dados, você é o único
-                proprietário de seus dados e pode apagá-los ou exportá-los a
-                qualquer momento sem nenhum motivo e com um simples clique a
-                partir de sua página de configurações.
-              </Paragraph>
-            </Box>
-            <Box>
-              <Heading is="h3" marginBottom={2}>
-                Perguntas
-              </Heading>
-              <Paragraph marginBottom={4}>
-                Entre em contato com a gente por e-mail.
-              </Paragraph>
-            </Box>
+            </Stack>
+            <Stack space="xsmall">
+              <Heading is="h3">Autônomo e independente</Heading>
+              <Stack>
+                <Paragraph>
+                  Somos uma equipe pequena, não temos que reportar a nenhum
+                  investidor, as únicas partes interessadas que temos, são
+                  nossos clientes e respondemos apenas a eles.
+                </Paragraph>
+                <Paragraph>
+                  Somos independentes e sempre seremos. Não estamos procurando
+                  acrescentar características inúteis apenas para justificar a
+                  taxa ou para atingir algum alvo comercial imposto de fora.
+                  Nosso objetivo é criar uma ferramenta inteligente que possa
+                  realmente ajudar as pessoas a venderem mais e aumentar a
+                  lucratividade dos seus negócios, por isso queremos fazê-lo a
+                  um preço justo e sustentável. Tão simples quanto isso.
+                </Paragraph>
+              </Stack>
+            </Stack>
+            <Stack space="xsmall">
+              <Heading is="h3">Focado na privacidade</Heading>
+              <Stack>
+                <Paragraph>
+                  Sabemos o quanto seus dados são importantes e, por esta razão,
+                  construímos todos os recursos a partir do zero, tendo em mente
+                  a privacidade. Podemos prometer isso a todos os clientes que
+                  utilizam a Storeen porque nosso modal de negócios é baseado em
+                  uma assinatura. Se você não está pagando por um produto, você
+                  é o produto.
+                </Paragraph>
+                <Paragraph>
+                  Nós não vendemos ou compartilhamos dados, você é o único
+                  proprietário de seus dados e pode apagá-los ou exportá-los a
+                  qualquer momento sem nenhum motivo e com um simples clique a
+                  partir de sua página de configurações.
+                </Paragraph>
+              </Stack>
+            </Stack>
+            <Stack space="xsmall">
+              <Heading is="h3">Perguntas</Heading>
+              <Paragraph>Entre em contato com a gente por e-mail.</Paragraph>
+            </Stack>
           </Stack>
         </Box>
         <Box as="section" paddingX={3} paddingY={4}>

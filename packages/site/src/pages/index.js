@@ -426,8 +426,8 @@ const Home = () => {
                   FAQ&apos;s
                 </Heading>
                 <Paragraph>
-                  Aprenda sobre a plataforma e a como vender, com respostas às
-                  perguntas mais comuns de vendas
+                  Aprenda sobre a plataforma e a como vender, com respostas para
+                  as perguntas mais comuns de vendas
                 </Paragraph>
               </Box>
               <Inline

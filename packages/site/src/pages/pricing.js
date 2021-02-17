@@ -255,27 +255,25 @@ const Pricing = () => {
           </Paragraph>
         </Box>
         <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
-              Como funciona o pagamento do plano?
-            </Heading>
+          <Stack space="xsmall">
+            <Heading is="h3">Como funciona o pagamento do plano?</Heading>
             <Paragraph>
               Existem dois métodos de pagamento o mensal e o anual, optando pelo
               anual você conta com desconto extra na contratação da sua loja
               virtual.
             </Paragraph>
-          </Box>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
+          </Stack>
+          <Stack space="xsmall">
+            <Heading is="h3">
               Em quanto tempo minha loja virtual entra no ar?
             </Heading>
             <Paragraph>
               Após a confirmação do pagamento via cartão, transferência ou
               pagamentos via boleto a sua loja estará no ar instantaneamente.
             </Paragraph>
-          </Box>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
+          </Stack>
+          <Stack space="xsmall">
+            <Heading is="h3">
               É possível gerenciar minha loja usando celular?
             </Heading>
             <Paragraph>
@@ -283,11 +281,9 @@ const Pricing = () => {
               responsivo para qualquer tipo de dispositivo para que você consiga
               acompanhar a performance da sua loja de qualquer lugar.
             </Paragraph>
-          </Box>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
-              Como funciona o sistema de frete?
-            </Heading>
+          </Stack>
+          <Stack space="xsmall">
+            <Heading is="h3">Como funciona o sistema de frete?</Heading>
             <Paragraph>
               O frete é calculado de acordo com o CEP que você(Vendedor)
               cadastrou e com o CEP que o cliente digita no site para efetuar a
@@ -296,25 +292,21 @@ const Pricing = () => {
               criar fretes personalizados por cidade, estado ou para o país e
               também habilitar a retirada do produto na loja.
             </Paragraph>
-          </Box>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
-              Preciso de CNPJ para criar uma loja?
-            </Heading>
+          </Stack>
+          <Stack space="xsmall">
+            <Heading is="h3">Preciso de CNPJ para criar uma loja?</Heading>
             <Paragraph>
               Não precisa! Você consegue criar a sua loja na Bagy mesmo sendo
               pessoa física.
             </Paragraph>
-          </Box>
-          <Box>
-            <Heading is="h3" marginBottom={2}>
-              A Storeen disponibiliza um teste grátis?
-            </Heading>
+          </Stack>
+          <Stack space="xsmall">
+            <Heading is="h3">A Storeen disponibiliza um teste grátis?</Heading>
             <Paragraph>
               O nosso plano fornece um período experimental de 14 dias para uso
               da plataforma sem qualquer tipo de cobrança.
             </Paragraph>
-          </Box>
+          </Stack>
         </Stack>
       </Box>
       <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
