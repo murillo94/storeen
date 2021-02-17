@@ -23,6 +23,9 @@ const TYPE = {
 const Pricing = () => {
   const [plan, setPlan] = useState(TYPE.monthly);
 
+  const handleSignUp = () =>
+    window.open('https://app-storeen.vercel.app/', '_ blank');
+
   return (
     <Wrapper>
       <Box
@@ -329,7 +332,7 @@ const Pricing = () => {
           <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
             Experimente a Storeen grátis por 14 dias
           </Heading>
-          <Button>Começar</Button>
+          <Button onClick={handleSignUp}>Começar</Button>
         </Inline>
       </Box>
     </Wrapper>
