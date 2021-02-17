@@ -98,7 +98,7 @@ describe('Button', () => {
     const button = getByRole('button');
 
     expect(button).toHaveStyle(`color: ${theming.colors.gray900};`);
-    expect(button).toHaveStyle('background-color: transparent;');
+    expect(button).toHaveStyle(`background-color: ${theming.colors.gray0};`);
     expect(button).toHaveStyle(`border: 1px solid ${theming.colors.gray300};`);
   });
 

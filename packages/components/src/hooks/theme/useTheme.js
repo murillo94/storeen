@@ -17,7 +17,7 @@ const theme = {
   },
   minimal: {
     color: theming.colors.gray900,
-    backgroundColor: 'transparent',
+    backgroundColor: theming.colors.gray0,
     borderColor: theming.colors.gray300,
     hover: {
       color: theming.colors.gray900,
