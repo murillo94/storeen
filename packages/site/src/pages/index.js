@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {
   Box,
   Inline,
@@ -389,18 +391,20 @@ const Home = () => {
                 isProportional={false}
                 sx={{ justifyContent: 'space-between' }}
               >
-                <Anchor
-                  href="#"
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    '> svg': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  Ver universidade <Icon name="arrow-right" size={18} />
-                </Anchor>
+                <Link href="/university" passHref>
+                  <Anchor
+                    href=""
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      '> svg': {
+                        marginLeft: 2
+                      }
+                    }}
+                  >
+                    Ver universidade <Icon name="arrow-right" size={18} />
+                  </Anchor>
+                </Link>
                 <Icon name="edit-2" size={30} />
               </Inline>
             </Box>
@@ -430,19 +434,21 @@ const Home = () => {
                 isProportional={false}
                 sx={{ justifyContent: 'space-between' }}
               >
-                <Anchor
-                  href="#"
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    '> svg': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  Confira as FAQ&apos;s
-                  <Icon name="arrow-right" size={18} />
-                </Anchor>
+                <Link href="/faq" passHref>
+                  <Anchor
+                    href="#"
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      '> svg': {
+                        marginLeft: 2
+                      }
+                    }}
+                  >
+                    Confira as FAQ&apos;s
+                    <Icon name="arrow-right" size={18} />
+                  </Anchor>
+                </Link>
                 <Icon name="book-open" size={30} />
               </Inline>
             </Box>

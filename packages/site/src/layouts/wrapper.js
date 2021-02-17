@@ -63,7 +63,7 @@ const Page = ({ children }) => {
               isProportional={false}
               sx={{ justifyContent: 'center', alignItems: 'center' }}
             >
-              <Link href="#" passHref>
+              <Link href="/features" passHref>
                 <Anchor>funcionalidades</Anchor>
               </Link>
               <Link href="/pricing" passHref>
@@ -205,7 +205,7 @@ const Page = ({ children }) => {
               <Heading is="h5" marginBottom={4}>
                 Produto
               </Heading>
-              <Link href="/" passHref>
+              <Link href="/features" passHref>
                 <Anchor>funcionalidades</Anchor>
               </Link>
               <Link href="/pricing" passHref>
@@ -237,6 +237,24 @@ const Page = ({ children }) => {
               </Link>
               <Link href="/privacy" passHref>
                 <Anchor>política de privacidade</Anchor>
+              </Link>
+            </Box>
+            <Box
+              sx={{
+                '> a': {
+                  display: 'block',
+                  marginBottom: 2
+                }
+              }}
+            >
+              <Heading is="h5" marginBottom={4}>
+                Ajuda
+              </Heading>
+              <Link href="/university" passHref>
+                <Anchor>Universidade</Anchor>
+              </Link>
+              <Link href="/faq" passHref>
+                <Anchor>FAQ&apos;s</Anchor>
               </Link>
             </Box>
           </Inline>
