@@ -59,7 +59,7 @@ const Home = () => (
     >
       <Wrapper>
         <Stack space="xxlarge">
-          <Inline>
+          <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
             <Box
               sx={{
                 textAlign: 'left'
@@ -79,17 +79,22 @@ const Home = () => (
               <Image
                 src={require('@site/public/images/product-1.png')}
                 alt="Storeen product"
-                width="100%"
+                width="95%"
                 height="100%"
               />
             </Box>
           </Inline>
-          <Inline>
+          <Inline
+            sx={{
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
             <Box>
               <Image
                 src={require('@site/public/images/product-2.png')}
                 alt="Storeen product"
-                width="100%"
+                width="95%"
                 height="100%"
               />
             </Box>
@@ -283,13 +288,15 @@ const Home = () => (
     >
       <Wrapper>
         <Stack space="xxlarge">
-          <Inline>
+          <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
             <Box
               sx={{
                 textAlign: 'left'
               }}
             >
-              <Heading is="h2">Sem limitações</Heading>
+              <Heading is="h2" marginBottom={4}>
+                Sem limitações
+              </Heading>
               <Paragraph>
                 De vida a sua loja de maneira escalável sem qualquer tipo de
                 empecilho, sem pegadinhas. Sem limite de produtos, fotos ou
@@ -300,17 +307,17 @@ const Home = () => (
               <Image
                 src={require('@site/public/images/product-3.png')}
                 alt="Storeen product"
-                width="100%"
+                width="95%"
                 height="100%"
               />
             </Box>
           </Inline>
-          <Inline>
+          <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
             <Box>
               <Image
                 src={require('@site/public/images/product-4.png')}
                 alt="Storeen product"
-                width="100%"
+                width="95%"
                 height="100%"
               />
             </Box>
@@ -319,7 +326,9 @@ const Home = () => (
                 textAlign: 'right'
               }}
             >
-              <Heading is="h2">Aprenda com o seu público</Heading>
+              <Heading is="h2" marginBottom={4}>
+                Aprenda com o seu público
+              </Heading>
               <Paragraph>
                 Atráves do acompanhamento dos gráficos e resultados da loja,
                 você elimina custos e cria uma inteligência para sempre entender
@@ -381,7 +390,7 @@ const Home = () => (
                 href="#"
                 sx={{
                   display: 'flex',
-                  alignItens: 'center',
+                  alignItems: 'center',
                   '> svg': {
                     marginLeft: 2
                   }
@@ -422,7 +431,7 @@ const Home = () => (
                 href="#"
                 sx={{
                   display: 'flex',
-                  alignItens: 'center',
+                  alignItems: 'center',
                   '> svg': {
                     marginLeft: 2
                   }
@@ -439,16 +448,21 @@ const Home = () => (
     </Box>
     <Box
       as="section"
-      padding={6}
+      paddingY={8}
+      paddingX={6}
       sx={{
-        backgroundColor: 'blue200',
+        backgroundColor: 'blue600',
         textAlign: 'center'
       }}
     >
-      <Heading is="h2" marginBottom={10}>
-        Comece, é fácil
+      <Heading is="h2" marginBottom={4} color="gray100">
+        Pronto para começar a vender?
       </Heading>
-      <Button>Abrir minha loja</Button>
+      <Paragraph marginBottom={6} color="gray100">
+        Nossa plataforma está pronta para te receber. Comece a vender hoje
+        mesmo!
+      </Paragraph>
+      <Button appearance="default">Abrir minha loja</Button>
     </Box>
   </>
 );

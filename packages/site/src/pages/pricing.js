@@ -32,10 +32,10 @@ const Pricing = () => {
         marginBottom={15}
         sx={{ textAlign: 'center' }}
       >
-        <Heading is="h2" marginBottom={4}>
-          Planos
+        <Heading is="h1" marginBottom={4}>
+          Um preço. Simples.
         </Heading>
-        <Paragraph marginBottom={6}>
+        <Paragraph marginBottom={6} color="muted">
           Preço simples, resultados massivos. Venda todos os dias por menos de
           R$ 2 por dia.
         </Paragraph>
@@ -54,17 +54,17 @@ const Pricing = () => {
             }}
           />
         </Box>
-        <Paragraph marginBottom={8} color="positive">
+        <Paragraph marginBottom={10} color="positive">
           Economize 20% (R$ 143,76) no plano anual!
         </Paragraph>
         <Box>
           <Box
             sx={{
               backgroundColor: 'gray0',
-              boxShadow: '0 4px 6px 0 rgba(0, 0, 0, 0.1)',
+              boxShadow: '0 1px 6px 0 rgba(0, 0, 0, 0.1)',
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'gray300',
+              borderColor: 'blue700',
               borderRadius: 4,
               justifyContent: 'space-between',
               flexDirection: 'column',
@@ -238,9 +238,19 @@ const Pricing = () => {
         </Box>
       </Box>
       <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
-        <Heading is="h2" marginBottom={10}>
-          Perguntas frequentes sobre o plano
-        </Heading>
+        <Box
+          marginBottom={10}
+          sx={{ borderBottom: `1px solid ${theming.colors.gray200}` }}
+        >
+          <Heading is="h2" marginBottom={2}>
+            Perguntas frequentes sobre o plano
+          </Heading>
+          <Paragraph color="muted" marginBottom={8}>
+            Verifique as perguntas e respostas abaixo, caso a sua dúvida não
+            esteja nas perguntas nos envie um e-mail e iremos entrar em contato
+            com você.
+          </Paragraph>
+        </Box>
         <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
           <Box>
             <Heading is="h3" marginBottom={2}>
@@ -308,6 +318,7 @@ const Pricing = () => {
         <Inline
           sx={{
             backgroundColor: 'gray0',
+            boxShadow: '0 1px 6px 0 rgba(0, 0, 0, 0.1)',
             borderWidth: '1px',
             borderStyle: 'solid',
             borderColor: 'gray300',
@@ -315,7 +326,9 @@ const Pricing = () => {
           }}
           padding={6}
         >
-          <Heading is="h3">Experimente a Storeen grátis por 14 dias</Heading>
+          <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
+            Experimente a Storeen grátis por 14 dias
+          </Heading>
           <Button>Começar</Button>
         </Inline>
       </Box>

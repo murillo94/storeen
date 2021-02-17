@@ -17,11 +17,11 @@ import { Wrapper } from '@site/components';
 const Page = ({ children }) => (
   <Box
     sx={{ position: 'relative', minHeight: '100vh' }}
-    paddingBottom={['500px', '315px']}
+    paddingBottom={['530px', '295px']}
   >
     <Box
       as="nav"
-      paddingY={4}
+      paddingY={3}
       paddingX={6}
       marginBottom={10}
       sx={{
@@ -29,7 +29,8 @@ const Page = ({ children }) => (
         borderBottom: `1px solid ${theming.colors.gray200}`,
         textAlign: 'center',
         position: 'sticky',
-        top: 0
+        top: 0,
+        zIndex: 1
       }}
     >
       <Wrapper>
@@ -88,9 +89,10 @@ const Page = ({ children }) => (
     <Box as="main">{children}</Box>
     <Footer
       padding={12}
-      marginTop={6}
+      margin={0}
       sx={{
         backgroundColor: 'gray0',
+        borderTop: `1px solid ${theming.colors.gray200}`,
         position: 'absolute',
         bottom: '0',
         width: '100%'
@@ -210,20 +212,20 @@ const Page = ({ children }) => (
             <Heading is="h5" marginBottom={4}>
               Empresa
             </Heading>
+            <Link href="/about" passHref>
+              <Anchor>sobre nós</Anchor>
+            </Link>
+            {/* <Link href="/careers" passHref>
+              <Anchor>carreiras</Anchor>
+            </Link> */}
+            <Link href="/contact" passHref>
+              <Anchor>contato</Anchor>
+            </Link>
             <Link href="/terms" passHref>
               <Anchor>termos de uso</Anchor>
             </Link>
             <Link href="/privacy" passHref>
               <Anchor>política de privacidade</Anchor>
-            </Link>
-            {/* <Link href="#" passHref>
-              <Anchor>sobre nós</Anchor>
-            </Link>
-            <Link href="/careers" passHref>
-              <Anchor>carreiras</Anchor>
-            </Link> */}
-            <Link href="/contact" passHref>
-              <Anchor>contato</Anchor>
             </Link>
           </Box>
         </Inline>

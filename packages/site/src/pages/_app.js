@@ -2,8 +2,12 @@ import Head from 'next/head';
 
 import { ThemeProvider } from '@storeen/components';
 
+const teste = {
+  fontSizes: ['14px', '16px', '20px', '22px', '26px', '30px', '34px', '38px']
+};
+
 const App = ({ Component, pageProps }) => (
-  <ThemeProvider>
+  <ThemeProvider theme={teste}>
     <Head>
       <meta
         name="viewport"

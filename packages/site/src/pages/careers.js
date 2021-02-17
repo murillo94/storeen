@@ -13,11 +13,13 @@ const Carrers = () => (
   >
     <Wrapper>
       <Heading marginBottom={4}>Trabalhe na Storeen</Heading>
-      <Paragraph marginBottom={10}>
+      <Paragraph marginBottom={10} color="muted">
         Junte-se à nossa equipe e faça parte da construção de uma nova era de
         vender online
       </Paragraph>
-      <Heading is="h3">Não temos vagas em aberto no momento</Heading>
+      <Box as="section" paddingX={3} paddingY={4}>
+        <Heading is="h3">Não temos vagas em aberto no momento</Heading>
+      </Box>
     </Wrapper>
   </Box>
 );
