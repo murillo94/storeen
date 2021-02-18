@@ -84,7 +84,7 @@ const Home = () => {
                 <Image
                   src={require('@site/public/images/product-1.png')}
                   alt="Storeen product"
-                  width="95%"
+                  width={['100%', '95%']}
                   height="100%"
                 />
               </Box>
@@ -99,7 +99,7 @@ const Home = () => {
                 <Image
                   src={require('@site/public/images/product-2.png')}
                   alt="Storeen product"
-                  width="95%"
+                  width={['100%', '95%']}
                   height="100%"
                 />
               </Box>
@@ -312,7 +312,7 @@ const Home = () => {
                 <Image
                   src={require('@site/public/images/product-3.png')}
                   alt="Storeen product"
-                  width="95%"
+                  width={['100%', '95%']}
                   height="100%"
                 />
               </Box>
@@ -322,7 +322,7 @@ const Home = () => {
                 <Image
                   src={require('@site/public/images/product-4.png')}
                   alt="Storeen product"
-                  width="95%"
+                  width={['100%', '95%']}
                   height="100%"
                 />
               </Box>
@@ -459,6 +459,7 @@ const Home = () => {
         as="section"
         paddingY={8}
         paddingX={6}
+        marginBottom={-15}
         sx={{
           backgroundColor: 'blue600',
           textAlign: 'center'

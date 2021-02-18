@@ -23,10 +23,7 @@ const Page = ({ children }) => {
     window.open('https://app-storeen.vercel.app/', '_ blank');
 
   return (
-    <Box
-      sx={{ position: 'relative', minHeight: '100vh' }}
-      paddingBottom={['530px', '310px']}
-    >
+    <Box>
       <Box
         as="nav"
         paddingY={3}
@@ -36,7 +33,7 @@ const Page = ({ children }) => {
           backgroundColor: 'hsla(0, 0%, 100%, 0.85)',
           borderBottom: `1px solid ${theming.colors.gray200}`,
           textAlign: 'center',
-          position: 'sticky',
+          position: ['initial', 'sticky'],
           top: 0,
           zIndex: 1
         }}
@@ -100,13 +97,10 @@ const Page = ({ children }) => {
       <Box as="main">{children}</Box>
       <Footer
         padding={12}
-        margin={0}
+        marginTop={15}
         sx={{
           backgroundColor: 'gray0',
-          borderTop: `1px solid ${theming.colors.gray200}`,
-          position: 'absolute',
-          bottom: '0',
-          width: '100%'
+          borderTop: `1px solid ${theming.colors.gray200}`
         }}
       >
         <Inline

@@ -28,13 +28,7 @@ const Pricing = () => {
 
   return (
     <Wrapper>
-      <Box
-        as="section"
-        paddingX={3}
-        paddingY={4}
-        marginBottom={15}
-        sx={{ textAlign: 'center' }}
-      >
+      <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
         <Heading is="h1" marginBottom={4}>
           Um preço. Simples.
         </Heading>
@@ -309,7 +303,7 @@ const Pricing = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
+      <Box as="section" paddingX={3} paddingY={4}>
         <Inline
           sx={{
             backgroundColor: 'gray0',

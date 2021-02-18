@@ -16,13 +16,7 @@ const About = () => {
     window.open('https://app-storeen.vercel.app/', '_ blank');
 
   return (
-    <Box
-      as="section"
-      paddingX={3}
-      paddingY={4}
-      marginBottom={15}
-      sx={{ textAlign: 'center' }}
-    >
+    <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
       <Wrapper>
         <Heading marginBottom={4}>Sobre a Storeen</Heading>
         <Paragraph marginBottom={10} color="muted">
@@ -33,7 +27,7 @@ const About = () => {
         <Image
           src={require('@site/public/images/about-1.png')}
           alt="Storeen about"
-          width="65%"
+          width={['100%', '65%']}
           height="100%"
         />
         <Box as="section" paddingX={3} paddingY={4} marginY={10}>

@@ -12,13 +12,7 @@ import { Wrapper } from '@site/components';
 import { useLayout } from '@site/hooks';
 
 const Contact = () => (
-  <Box
-    as="section"
-    paddingX={3}
-    paddingY={4}
-    marginBottom={15}
-    sx={{ textAlign: 'center' }}
-  >
+  <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
     <Wrapper>
       <Heading marginBottom={4}>Fale conosco</Heading>
       <Paragraph marginBottom={10} color="muted">
