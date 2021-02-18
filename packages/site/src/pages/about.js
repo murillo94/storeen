@@ -5,6 +5,7 @@ import {
   Image,
   Stack,
   Inline,
+  Anchor,
   Button
 } from '@storeen/components';
 import { Wrapper } from '@site/components';
@@ -83,7 +84,13 @@ const About = () => {
             </Stack>
             <Stack space="xsmall">
               <Heading is="h3">Perguntas</Heading>
-              <Paragraph>Entre em contato com a gente por e-mail.</Paragraph>
+              <Paragraph>
+                Entre em contato com a gente por{' '}
+                <Anchor href="mailto:contato@storeen.com.br" color="primary">
+                  e-mail
+                </Anchor>
+                .
+              </Paragraph>
             </Stack>
           </Stack>
         </Box>
@@ -102,7 +109,7 @@ const About = () => {
             <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
               Pronto para impulsionar seus negócios?
             </Heading>
-            <Button onClick={handleSignUp}>Começar</Button>
+            <Button onClick={handleSignUp}>começar</Button>
           </Inline>
         </Box>
       </Wrapper>

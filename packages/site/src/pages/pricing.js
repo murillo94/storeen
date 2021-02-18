@@ -9,6 +9,7 @@ import {
   Stack,
   Icon,
   Button,
+  Anchor,
   theming
 } from '@storeen/components';
 import { Wrapper } from '@site/components';
@@ -28,7 +29,13 @@ const Pricing = () => {
 
   return (
     <Wrapper>
-      <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
+      <Box
+        as="section"
+        paddingX={3}
+        paddingY={4}
+        marginBottom={12}
+        sx={{ textAlign: 'center' }}
+      >
         <Heading is="h1" marginBottom={4}>
           Um preço. Simples.
         </Heading>
@@ -226,10 +233,10 @@ const Pricing = () => {
                   <Paragraph>Estatísticas em tempo real</Paragraph>
                 </Inline>
               </Stack>
-              <Box>
-                <Button marginBottom={2}>criar minha loja agora</Button>
-                <Paragraph color="muted">Teste gratuito por 14 dias</Paragraph>
-              </Box>
+              <Stack space="xsmall">
+                <Button onClick={handleSignUp}>criar minha loja agora</Button>
+                <Paragraph color="muted">teste gratuito por 14 dias</Paragraph>
+              </Stack>
             </Stack>
           </Box>
         </Box>
@@ -244,8 +251,11 @@ const Pricing = () => {
           </Heading>
           <Paragraph color="muted" marginBottom={8}>
             Verifique as perguntas e respostas abaixo, caso a sua dúvida não
-            esteja nas perguntas nos envie um e-mail e iremos entrar em contato
-            com você.
+            esteja nas perguntas nos envie um{' '}
+            <Anchor href="mailto:contato@storeen.com.br" color="primary">
+              e-mail
+            </Anchor>{' '}
+            e iremos entrar em contato com você.
           </Paragraph>
         </Box>
         <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
@@ -318,7 +328,7 @@ const Pricing = () => {
           <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
             Experimente a Storeen grátis por 14 dias
           </Heading>
-          <Button onClick={handleSignUp}>Começar</Button>
+          <Button onClick={handleSignUp}>começar</Button>
         </Inline>
       </Box>
     </Wrapper>

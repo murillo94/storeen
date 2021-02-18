@@ -38,13 +38,10 @@ const Home = () => {
             Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia
             e você só precisa se preocupar em vender
           </Paragraph>
-          <Inline
-            isProportional={false}
-            marginBottom={4}
-            sx={{ justifyContent: 'center' }}
-          >
+          <Stack space="xsmall" marginBottom={4}>
             <Button onClick={handleSignUp}>criar minha loja agora</Button>
-          </Inline>
+            <Paragraph color="muted">teste gratuito por 14 dias</Paragraph>
+          </Stack>
           <Box>
             <Image
               src={require('@site/public/images/intro-product.png')}
@@ -473,7 +470,7 @@ const Home = () => {
           mesmo!
         </Paragraph>
         <Button appearance="default" onClick={handleSignUp}>
-          Abrir minha loja
+          abrir minha loja
         </Button>
       </Box>
     </>

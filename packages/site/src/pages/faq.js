@@ -1,4 +1,11 @@
-import { Box, Button, Heading, Paragraph, Stack } from '@storeen/components';
+import {
+  Box,
+  Button,
+  Heading,
+  Paragraph,
+  Anchor,
+  Stack
+} from '@storeen/components';
 import { Wrapper } from '@site/components';
 
 import { useLayout } from '@site/hooks';
@@ -13,8 +20,11 @@ const FAQ = () => {
         <Heading marginBottom={4}>Perguntas frequentes</Heading>
         <Paragraph marginBottom={10} color="muted">
           Verifique as perguntas e respostas abaixo, caso a sua dúvida não
-          esteja nas perguntas nos envie um e-mail e iremos entrar em contato
-          com você.
+          esteja nas perguntas nos envie um{' '}
+          <Anchor href="mailto:contato@storeen.com.br" color="primary">
+            e-mail
+          </Anchor>{' '}
+          e iremos entrar em contato com você.
         </Paragraph>
         <Box as="section" paddingX={3} paddingY={4}>
           <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
@@ -25,7 +35,7 @@ const FAQ = () => {
                   Para abrir uma loja na Storeen é muito simples. =) Tudo o que
                   você precisa fazer é clicar no botão abaixo:
                 </Paragraph>
-                <Button onClick={handleSignUp}>Criar loja agora</Button>
+                <Button onClick={handleSignUp}>criar loja agora</Button>
                 <Paragraph>
                   Ao criar sua loja na Storeen, iniciará automaticamente nosso
                   tour virtual, este que certamente vai te ajudar com os
@@ -58,7 +68,15 @@ const FAQ = () => {
                   Essa formalização evita por exemplo que o seu e-commerce tenha
                   problemas de ordem tributária no futuro. Uma vez que para
                   gerar a nota fiscal da venda é necessário o CNPJ. Um opção
-                  seria abrir uma empresa MEI (microempreendedor individual).
+                  seria abrir uma empresa{' '}
+                  <Anchor
+                    href="https://www.gov.br/empresas-e-negocios/pt-br"
+                    color="primary"
+                    target="_blank"
+                  >
+                    MEI
+                  </Anchor>{' '}
+                  (microempreendedor individual).
                 </Paragraph>
                 <Paragraph>
                   E é claro que possuir um CNPJ tende também a ajudar na questão
@@ -94,7 +112,7 @@ const FAQ = () => {
                 <Paragraph>
                   E para criar sua loja agora mesmo clique no botão abaixo:
                 </Paragraph>
-                <Button onClick={handleSignUp}>Criar loja agora</Button>
+                <Button onClick={handleSignUp}>criar loja agora</Button>
               </Stack>
             </Stack>
             <Stack space="xsmall">
@@ -129,10 +147,25 @@ const FAQ = () => {
                 <Paragraph>
                   Porém caso queira utilizar um domínio próprio (exemplo:
                   nomedasualoja.com.br) você vai precisar adquiri-lo por exemplo
-                  no registro.br ou no Godaddy. Para saber mais sobre
-                  disponibilidade de domínio, valores e planos solicitamos que
-                  entre em contato diretamente com eles. Nós da Storeen não
-                  realizamos venda de domínios próprios.
+                  no{' '}
+                  <Anchor
+                    href="https://registro.br/"
+                    color="primary"
+                    target="_blank"
+                  >
+                    registro.br
+                  </Anchor>{' '}
+                  ou no{' '}
+                  <Anchor
+                    href="https://www.godaddy.com/pt-br"
+                    color="primary"
+                    target="_blank"
+                  >
+                    GoDaddy
+                  </Anchor>
+                  . Para saber mais sobre disponibilidade de domínio, valores e
+                  planos solicitamos que entre em contato diretamente com eles.
+                  Nós da Storeen não realizamos venda de domínios próprios.
                 </Paragraph>
               </Stack>
             </Stack>

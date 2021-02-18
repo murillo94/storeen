@@ -220,9 +220,6 @@ const Page = ({ children }) => {
               <Link href="/about" passHref>
                 <Anchor>sobre nós</Anchor>
               </Link>
-              <Link href="/contact" passHref>
-                <Anchor>contato</Anchor>
-              </Link>
               <Link href="/terms" passHref>
                 <Anchor>termos de uso</Anchor>
               </Link>
