@@ -17,7 +17,7 @@ const About = () => {
     window.open('https://app-storeen.vercel.app/', '_ blank');
 
   return (
-    <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
+    <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
       <Wrapper>
         <Heading marginBottom={4}>Sobre a Storeen</Heading>
         <Paragraph marginBottom={10} color="muted">
@@ -31,7 +31,7 @@ const About = () => {
           width={['100%', '65%']}
           height="100%"
         />
-        <Box as="section" paddingX={3} paddingY={4} marginY={10}>
+        <Box as="section" paddingY={4} marginY={10}>
           <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
             <Stack space="xsmall">
               <Heading is="h3">Por que a Storeen?</Heading>
@@ -94,7 +94,7 @@ const About = () => {
             </Stack>
           </Stack>
         </Box>
-        <Box as="section" paddingX={3} paddingY={4}>
+        <Box as="section" paddingY={4} paddingX={3}>
           <Inline
             sx={{
               backgroundColor: 'gray0',
@@ -106,7 +106,14 @@ const About = () => {
             }}
             padding={6}
           >
-            <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
+            <Heading
+              is="h3"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                textAlign: 'center'
+              }}
+            >
               Pronto para impulsionar seus negócios?
             </Heading>
             <Button onClick={handleSignUp}>começar</Button>

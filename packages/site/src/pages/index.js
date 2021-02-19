@@ -23,8 +23,8 @@ const Home = () => {
     <>
       <Box
         as="section"
-        paddingX={3}
         paddingY={4}
+        paddingX={3}
         marginBottom={15}
         sx={{
           background:
@@ -361,18 +361,18 @@ const Home = () => {
             spaceX="large"
             sx={{ justifyContent: 'center' }}
           >
-            <Box
+            <Stack
+              space="large"
+              padding={5}
               sx={{
                 textAlign: 'left',
                 backgroundColor: 'gray100',
                 borderRadius: 4,
+                display: 'flex',
                 justifyContent: 'space-between',
                 flexDirection: 'column',
-                display: 'flex',
-                width: ['100%', '250px', '360px'],
-                height: ['auto', '260px']
+                width: ['100%', '250px', '360px']
               }}
-              padding={5}
             >
               <Box>
                 <Heading is="h3" marginBottom={4}>
@@ -404,19 +404,19 @@ const Home = () => {
                 </Link>
                 <Icon name="edit-2" size={30} />
               </Inline>
-            </Box>
-            <Box
+            </Stack>
+            <Stack
+              space="large"
+              padding={5}
               sx={{
                 textAlign: 'left',
                 backgroundColor: 'gray100',
                 borderRadius: 4,
+                display: 'flex',
                 justifyContent: 'space-between',
                 flexDirection: 'column',
-                display: 'flex',
-                width: ['100%', '250px', '360px'],
-                height: ['auto', '260px']
+                width: ['100%', '250px', '360px']
               }}
-              padding={5}
             >
               <Box>
                 <Heading is="h3" marginBottom={4}>
@@ -448,14 +448,14 @@ const Home = () => {
                 </Link>
                 <Icon name="book-open" size={30} />
               </Inline>
-            </Box>
+            </Stack>
           </Inline>
         </Wrapper>
       </Box>
       <Box
         as="section"
+        paddingX={3}
         paddingY={8}
-        paddingX={6}
         marginBottom={-15}
         sx={{
           backgroundColor: 'blue600',

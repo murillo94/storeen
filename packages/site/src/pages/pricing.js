@@ -31,8 +31,8 @@ const Pricing = () => {
     <Wrapper>
       <Box
         as="section"
-        paddingX={3}
         paddingY={4}
+        paddingX={3}
         marginBottom={12}
         sx={{ textAlign: 'center' }}
       >
@@ -61,187 +61,186 @@ const Pricing = () => {
         <Paragraph marginBottom={10} color="positive">
           Economize 20% (R$ 143,76) no plano anual!
         </Paragraph>
-        <Box>
-          <Box
-            sx={{
-              backgroundColor: 'gray0',
-              boxShadow: '0 1px 6px 0 rgba(0, 0, 0, 0.1)',
-              borderWidth: '1px',
-              borderStyle: 'solid',
-              borderColor: 'blue700',
-              borderRadius: 4,
-              justifyContent: 'space-between',
-              flexDirection: 'column',
-              display: 'flex',
-              width: ['80%', '350px']
-            }}
-            padding={6}
-            marginX="auto"
-          >
-            <Stack space="large">
-              <Box>
-                <Heading is="h3" marginBottom={3}>
-                  {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
-                </Heading>
-                <Heading is="h2">
-                  R$ {plan === TYPE.monthly ? '59,90' : '575,04'}
-                </Heading>
-              </Box>
-              <Stack space="xsmall">
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Suporte exclusivo por chat</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Produtos ilimitados</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Imagens ilimitados</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Acessos ilimitadas</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Certificado de segurança SSL</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Otimizações de SEO para produtos</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Checkout transparente</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Utilização de domínio próprio</Paragraph>
-                </Inline>
-                <Inline
-                  isProportional={false}
-                  isCollapse={false}
-                  sx={{
-                    '> p': {
-                      marginLeft: 2
-                    }
-                  }}
-                >
-                  <Icon
-                    name="check-circle"
-                    color={theming.colors.blue700}
-                    size={24}
-                  />
-                  <Paragraph>Estatísticas em tempo real</Paragraph>
-                </Inline>
-              </Stack>
-              <Stack space="xsmall">
-                <Button onClick={handleSignUp}>criar minha loja agora</Button>
-                <Paragraph color="muted">teste gratuito por 14 dias</Paragraph>
-              </Stack>
+        <Box
+          sx={{
+            backgroundColor: 'gray0',
+            boxShadow: '0 1px 6px 0 rgba(0, 0, 0, 0.1)',
+            borderWidth: '1px',
+            borderStyle: 'solid',
+            borderColor: 'blue700',
+            borderRadius: 4,
+            justifyContent: 'space-between',
+            flexDirection: 'column',
+            display: 'flex',
+            width: ['100%', '350px']
+          }}
+          paddingX={[4, 6]}
+          paddingY={6}
+          marginX="auto"
+        >
+          <Stack space="large">
+            <Box>
+              <Heading is="h3" marginBottom={3}>
+                {plan === TYPE.monthly ? 'Mensal' : 'Anual'}
+              </Heading>
+              <Heading is="h2">
+                R$ {plan === TYPE.monthly ? '59,90' : '575,04'}
+              </Heading>
+            </Box>
+            <Stack space="xsmall">
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Suporte exclusivo por chat</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Produtos ilimitados</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Imagens ilimitados</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Acessos ilimitadas</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Certificado de segurança SSL</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Otimizações de SEO para produtos</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Checkout transparente</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Utilização de domínio próprio</Paragraph>
+              </Inline>
+              <Inline
+                isProportional={false}
+                isCollapse={false}
+                sx={{
+                  '> p': {
+                    marginLeft: [1, 2]
+                  }
+                }}
+              >
+                <Icon
+                  name="check-circle"
+                  color={theming.colors.blue700}
+                  size={24}
+                />
+                <Paragraph>Estatísticas em tempo real</Paragraph>
+              </Inline>
             </Stack>
-          </Box>
+            <Stack space="xsmall">
+              <Button onClick={handleSignUp}>criar minha loja agora</Button>
+              <Paragraph color="muted">teste gratuito por 14 dias</Paragraph>
+            </Stack>
+          </Stack>
         </Box>
       </Box>
-      <Box as="section" paddingX={3} paddingY={4} marginBottom={15}>
+      <Box as="section" paddingY={4} paddingX={3} marginBottom={15}>
         <Box
           marginBottom={10}
           sx={{ borderBottom: `1px solid ${theming.colors.gray200}` }}
@@ -313,7 +312,7 @@ const Pricing = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box as="section" paddingX={3} paddingY={4}>
+      <Box as="section" paddingY={4} paddingX={3}>
         <Inline
           sx={{
             backgroundColor: 'gray0',
@@ -325,7 +324,14 @@ const Pricing = () => {
           }}
           padding={6}
         >
-          <Heading is="h3" sx={{ display: 'flex', alignItems: 'center' }}>
+          <Heading
+            is="h3"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
+          >
             Experimente a Storeen grátis por 14 dias
           </Heading>
           <Button onClick={handleSignUp}>começar</Button>

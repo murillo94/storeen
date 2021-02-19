@@ -15,7 +15,7 @@ const FAQ = () => {
     window.open('https://app-storeen.vercel.app/', '_ blank');
 
   return (
-    <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
+    <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
       <Wrapper>
         <Heading marginBottom={4}>Perguntas frequentes</Heading>
         <Paragraph marginBottom={10} color="muted">
@@ -26,7 +26,7 @@ const FAQ = () => {
           </Anchor>{' '}
           e iremos entrar em contato com você.
         </Paragraph>
-        <Box as="section" paddingX={3} paddingY={4}>
+        <Box as="section" paddingY={4}>
           <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
             <Stack space="xsmall">
               <Heading is="h3">Como abrir uma loja virtual na Storeen?</Heading>

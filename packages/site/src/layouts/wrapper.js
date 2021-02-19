@@ -96,7 +96,8 @@ const Page = ({ children }) => {
       </Box>
       <Box as="main">{children}</Box>
       <Footer
-        padding={12}
+        paddingX={[6, 12]}
+        paddingY={12}
         marginTop={15}
         sx={{
           backgroundColor: 'gray0',
@@ -111,7 +112,6 @@ const Page = ({ children }) => {
           }}
           spaceY="medium"
           spaceX="xxlarge"
-          paddingX={3}
           marginX="auto"
         >
           <Stack space="medium">

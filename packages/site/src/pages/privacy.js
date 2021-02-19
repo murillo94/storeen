@@ -4,13 +4,13 @@ import { Wrapper } from '@site/components';
 import { useLayout } from '@site/hooks';
 
 const Privacy = () => (
-  <Box as="section" paddingX={3} paddingY={4} sx={{ textAlign: 'center' }}>
+  <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
     <Wrapper>
       <Heading marginBottom={4}>Política de privacidade</Heading>
       <Paragraph marginBottom={10} color="muted">
         Última modificação: 16 de fevereiro de 2021.
       </Paragraph>
-      <Box as="section" paddingX={3} paddingY={4}>
+      <Box as="section" paddingY={4}>
         <Stack space="xlarge" sx={{ textAlign: 'justify' }}>
           <Stack space="xsmall">
             <Heading is="h3">Tipo de informação armazenada</Heading>
