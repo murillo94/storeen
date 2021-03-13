@@ -1,45 +1,28 @@
 import { memo } from 'react';
 
-import { Box } from '../../box';
-
-import useFont from '../utils/useFont';
+import { Text } from './Text';
 
 const headings = {
-  h1: {
-    fontSize: 7,
-    fontWeight: 2
-  },
-  h2: {
-    fontSize: 5,
-    fontWeight: 2
-  },
-  h3: {
-    fontSize: 3,
-    fontWeight: 2
-  },
-  h4: {
-    fontSize: 2,
-    fontWeight: 2
-  },
-  h5: {
-    fontSize: 1,
-    fontWeight: 2
-  }
+  h1: 800,
+  h2: 600,
+  h3: 400,
+  h4: 300,
+  h5: 200
 };
 
 export const Heading = memo(
   ({ children, is = 'h1', color = 'inherit', ...props }) => {
-    const fontColor = useFont(color);
-
     return (
-      <Box
+      <Text
         as={is}
+        color={color}
+        size={headings[is]}
         margin={0}
-        styleConfig={{ ...headings[is], color: fontColor }}
+        sx={{ fontWeight: 2 }}
         {...props}
       >
         {children}
-      </Box>
+      </Text>
     );
   }
 );

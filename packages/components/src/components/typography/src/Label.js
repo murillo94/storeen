@@ -1,28 +1,22 @@
 import { memo } from 'react';
 
-import { Box } from '../../box';
-
-import useFont from '../utils/useFont';
+import { Text } from './Text';
 
 export const Label = memo(
-  ({ children, id = null, htmlFor = null, color = 'inherit', ...props }) => {
-    const fontColor = useFont(color);
-
-    return (
-      <Box
-        as="label"
-        id={id}
-        htmlFor={htmlFor}
-        styleConfig={{
-          fontSize: 0,
-          color: fontColor,
-          textAlign: 'left',
-          display: 'block'
-        }}
-        {...props}
-      >
-        {children}
-      </Box>
-    );
-  }
+  ({ children, id = null, htmlFor = null, color = 'inherit', ...props }) => (
+    <Text
+      as="label"
+      id={id}
+      htmlFor={htmlFor}
+      color={color}
+      size={100}
+      sx={{
+        textAlign: 'left',
+        display: 'block'
+      }}
+      {...props}
+    >
+      {children}
+    </Text>
+  )
 );
