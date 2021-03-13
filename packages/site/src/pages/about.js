@@ -20,7 +20,7 @@ const About = () => {
     <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
       <Wrapper>
         <Heading marginBottom={4}>Sobre a Storeen</Heading>
-        <Paragraph marginBottom={10} color="muted">
+        <Paragraph color="muted" marginBottom={10}>
           Aqui prezamos pelo sucesso e pela ótima experiência do nosso cliente.
           Estamos focando naquilo em que somos melhores, construindo um bom
           produto, para ter o impacto que queremos ter sobre o mundo.

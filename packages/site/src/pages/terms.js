@@ -7,7 +7,7 @@ const Terms = () => (
   <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
     <Wrapper>
       <Heading marginBottom={4}>Termos de uso</Heading>
-      <Paragraph marginBottom={10} color="muted">
+      <Paragraph color="muted" marginBottom={10}>
         Última modificação: 16 de fevereiro de 2021.
       </Paragraph>
       <Box as="section" paddingY={4}>

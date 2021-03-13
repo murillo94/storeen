@@ -34,7 +34,7 @@ const Home = () => {
       >
         <Wrapper>
           <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
-          <Paragraph marginBottom={10}>
+          <Paragraph size={200} marginBottom={10}>
             Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia
             e você só precisa se preocupar em vender
           </Paragraph>
@@ -64,13 +64,18 @@ const Home = () => {
             <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
               <Box
                 sx={{
-                  textAlign: 'left'
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start'
                 }}
               >
                 <Heading is="h2" marginBottom={4}>
                   Fácil de usar
                 </Heading>
-                <Paragraph>
+                <Paragraph
+                  size={200}
+                  sx={{ textAlign: 'justify', width: ['100%', '80%'] }}
+                >
                   Por meio de uma interface simples em menos de 10 minutos o seu
                   site está no ar pronto para os seus clientes comprarem. É tão
                   simples que você pode usar imediatamente sem nenhum tipo de
@@ -102,13 +107,18 @@ const Home = () => {
               </Box>
               <Box
                 sx={{
-                  textAlign: 'right'
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: ['flex-start', 'flex-end']
                 }}
               >
                 <Heading is="h2" marginBottom={4}>
                   Rápido, elegante e simples
                 </Heading>
-                <Paragraph>
+                <Paragraph
+                  size={200}
+                  sx={{ textAlign: 'justify', width: ['100%', '80%'] }}
+                >
                   Seja no computador, celular ou qualquer outro tipo de tela.
                   Nós entregamos uma experiência interetiva e rápida ao seu
                   cliente final do jeito que eles desejam
@@ -293,13 +303,18 @@ const Home = () => {
             <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
               <Box
                 sx={{
-                  textAlign: 'left'
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start'
                 }}
               >
                 <Heading is="h2" marginBottom={4}>
                   Sem limitações
                 </Heading>
-                <Paragraph>
+                <Paragraph
+                  size={200}
+                  sx={{ textAlign: 'justify', width: ['100%', '80%'] }}
+                >
                   De vida a sua loja de maneira escalável sem qualquer tipo de
                   empecilho, sem pegadinhas. Sem limite de produtos, fotos ou
                   acessos. Seja livre!
@@ -325,13 +340,18 @@ const Home = () => {
               </Box>
               <Box
                 sx={{
-                  textAlign: 'right'
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: ['flex-start', 'flex-end']
                 }}
               >
                 <Heading is="h2" marginBottom={4}>
                   Aprenda com o seu público
                 </Heading>
-                <Paragraph>
+                <Paragraph
+                  size={200}
+                  sx={{ textAlign: 'justify', width: ['100%', '80%'] }}
+                >
                   Atráves do acompanhamento dos gráficos e resultados da loja,
                   você elimina custos e cria uma inteligência para sempre
                   entender intenção e gostos do seu cliente final
@@ -352,7 +372,7 @@ const Home = () => {
           <Heading is="h2" marginBottom={4}>
             Estamos aqui para te ajudar
           </Heading>
-          <Paragraph marginBottom={10}>
+          <Paragraph size={200} marginBottom={10}>
             Saiba como fazer uma ótima loja, atrair seu público e muito mais,
             tudo isso em nossa universidade ou em nossa páginas de FAQs
           </Paragraph>
@@ -462,10 +482,10 @@ const Home = () => {
           textAlign: 'center'
         }}
       >
-        <Heading is="h2" marginBottom={4} color="gray100">
+        <Heading is="h2" color="gray100" marginBottom={4}>
           Pronto para começar a vender?
         </Heading>
-        <Paragraph marginBottom={6} color="gray100">
+        <Paragraph size={200} color="gray100" marginBottom={6}>
           Nossa plataforma está pronta para te receber. Comece a vender hoje
           mesmo!
         </Paragraph>

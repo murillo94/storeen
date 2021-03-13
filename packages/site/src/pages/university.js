@@ -7,7 +7,7 @@ const University = () => (
   <Box as="section" paddingY={4} paddingX={3} sx={{ textAlign: 'center' }}>
     <Wrapper>
       <Heading marginBottom={4}>Universidade</Heading>
-      <Paragraph marginBottom={10} color="muted">
+      <Paragraph color="muted" marginBottom={10}>
         Aprenda tudo sobre e-commerce e não tenha dúvidas sobre nossa
         plataforma.
       </Paragraph>
