@@ -23,14 +23,14 @@ export const Inline = ({
     styleConfig={{
       display: 'flex',
       flexDirection: [isCollapse ? 'column' : 'row', 'row'],
-      flexWrap: 'wrap',
+      flexWrap: 'initial',
       '> button': {
         flexGrow: 'initial'
       },
       '> *': {
         flexGrow: isProportional ? '1' : '0',
-        flexShrink: '0',
-        flexBasis: !isProportional ? '1' : '0',
+        flexShrink: '1',
+        flexBasis: !isProportional ? 'auto' : '0',
         '+ *': {
           marginLeft: [!isCollapse ? spaces[spaceX] : 0, spaces[spaceX]]
         }
