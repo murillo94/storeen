@@ -95,7 +95,7 @@ const About = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box as="section" paddingY={4} paddingX={3}>
+      <Box as="section" paddingY={4}>
         <Inline
           sx={{
             backgroundColor: 'gray0',

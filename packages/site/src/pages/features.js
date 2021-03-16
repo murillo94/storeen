@@ -24,7 +24,7 @@ const Features = () => {
       <Paragraph color="muted" marginBottom={10} sx={{ textAlign: 'center' }}>
         Tudo o que você precisa para encantar seus clientes e vender mais
       </Paragraph>
-      <Box as="section" paddingY={4} paddingX={3} marginBottom={15}>
+      <Box as="section" paddingY={4} marginBottom={15}>
         <Inline isProportional={false} spaceX="xxlarge">
           <Stack sx={{ minWidth: '150px' }}>
             <Box>
@@ -352,7 +352,7 @@ const Features = () => {
           </Stack>
         </Inline>
       </Box>
-      <Box as="section" paddingY={4} paddingX={3}>
+      <Box as="section" paddingY={4}>
         <Inline
           sx={{
             backgroundColor: 'gray0',

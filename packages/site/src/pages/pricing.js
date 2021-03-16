@@ -237,7 +237,7 @@ const Pricing = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box as="section" paddingY={4} paddingX={3} marginBottom={15}>
+      <Box as="section" paddingY={4} marginBottom={15}>
         <Box
           marginBottom={10}
           sx={{ borderBottom: `1px solid ${theming.colors.gray200}` }}
@@ -309,7 +309,7 @@ const Pricing = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box as="section" paddingY={4} paddingX={3}>
+      <Box as="section" paddingY={4}>
         <Inline
           sx={{
             backgroundColor: 'gray0',
