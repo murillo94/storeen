@@ -40,7 +40,14 @@ const sizes = {
 };
 
 export const Text = memo(
-  ({ as = 'span', children, color = 'inherit', size = 100, ...props }) => {
+  ({
+    as = 'span',
+    children,
+    color = 'inherit',
+    size = 100,
+    fontWeight = 'initial',
+    ...props
+  }) => {
     const fontColor = useFont(color);
 
     return (
@@ -48,7 +55,8 @@ export const Text = memo(
         as={as}
         styleConfig={{
           ...sizes[size],
-          color: fontColor
+          color: fontColor,
+          fontWeight
         }}
         {...props}
       >

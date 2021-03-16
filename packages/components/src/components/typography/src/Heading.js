@@ -11,18 +11,16 @@ const headings = {
 };
 
 export const Heading = memo(
-  ({ children, is = 'h1', color = 'inherit', ...props }) => {
-    return (
-      <Text
-        as={is}
-        color={color}
-        size={headings[is]}
-        margin={0}
-        sx={{ fontWeight: 2 }}
-        {...props}
-      >
-        {children}
-      </Text>
-    );
-  }
+  ({ children, is = 'h1', color = 'inherit', ...props }) => (
+    <Text
+      as={is}
+      color={color}
+      size={headings[is]}
+      fontWeight={2}
+      margin={0}
+      {...props}
+    >
+      {children}
+    </Text>
+  )
 );
