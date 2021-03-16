@@ -26,8 +26,6 @@ const Page = ({ children }) => {
     <Box>
       <Box
         as="nav"
-        paddingY={3}
-        paddingX={6}
         marginBottom={10}
         sx={{
           backgroundColor: 'hsla(0, 0%, 100%, 0.85)',

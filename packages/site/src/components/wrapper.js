@@ -7,7 +7,8 @@ export const Wrapper = ({ children }) => {
         maxWidth: ['100%', '50em', '62em', '78em']
       }}
       marginX="auto"
-      paddingX={3}
+      paddingY={4}
+      paddingX={6}
     >
       {children}
     </Box>

@@ -23,8 +23,6 @@ const Home = () => {
     <>
       <Box
         as="section"
-        paddingY={4}
-        paddingX={3}
         marginBottom={15}
         sx={{
           background:
@@ -33,7 +31,9 @@ const Home = () => {
         }}
       >
         <Wrapper>
-          <Heading marginBottom={4}>Crie sua loja virtual completa</Heading>
+          <Heading is="h1" marginBottom={4} sx={{ textAlign: 'center' }}>
+            Crie sua loja virtual completa
+          </Heading>
           <Paragraph size={200} marginBottom={10}>
             Sem limites de acessos, fotos e produtos. Nós cuidamos da tecnologia
             e você só precisa se preocupar em vender
@@ -52,13 +52,7 @@ const Home = () => {
           </Box>
         </Wrapper>
       </Box>
-      <Box
-        as="section"
-        paddingX={3}
-        paddingY={4}
-        marginBottom={15}
-        sx={{ textAlign: 'center' }}
-      >
+      <Box as="section" marginBottom={15}>
         <Wrapper>
           <Stack space="xxlarge">
             <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -128,15 +122,9 @@ const Home = () => {
           </Stack>
         </Wrapper>
       </Box>
-      <Box
-        as="section"
-        paddingX={3}
-        paddingY={4}
-        marginBottom={15}
-        sx={{ textAlign: 'center' }}
-      >
+      <Box as="section" marginBottom={15}>
         <Wrapper>
-          <Heading is="h2" marginBottom={10}>
+          <Heading is="h2" marginBottom={10} sx={{ textAlign: 'center' }}>
             Focamos na tecnologia para que você possa focar na receita
           </Heading>
           <Stack space="large">
@@ -291,13 +279,7 @@ const Home = () => {
           </Stack>
         </Wrapper>
       </Box>
-      <Box
-        as="section"
-        paddingX={3}
-        paddingY={4}
-        marginBottom={15}
-        sx={{ textAlign: 'center' }}
-      >
+      <Box as="section" marginBottom={15}>
         <Wrapper>
           <Stack space="xxlarge">
             <Inline sx={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -361,18 +343,12 @@ const Home = () => {
           </Stack>
         </Wrapper>
       </Box>
-      <Box
-        as="section"
-        paddingX={3}
-        paddingY={4}
-        marginBottom={15}
-        sx={{ textAlign: 'center' }}
-      >
+      <Box as="section" marginBottom={15}>
         <Wrapper>
-          <Heading is="h2" marginBottom={4}>
+          <Heading is="h2" marginBottom={4} sx={{ textAlign: 'center' }}>
             Estamos aqui para te ajudar
           </Heading>
-          <Paragraph size={200} marginBottom={10}>
+          <Paragraph size={200} marginBottom={10} sx={{ textAlign: 'center' }}>
             Saiba como fazer uma ótima loja, atrair seu público e muito mais,
             tudo isso em nossa universidade ou em nossa páginas de FAQs
           </Paragraph>
