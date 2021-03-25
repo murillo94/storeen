@@ -14,7 +14,7 @@ import { useLayout } from '@site/hooks';
 
 const Features = () => {
   const handleSignUp = () =>
-    window.open('https://app-storeen.vercel.app/', '_ blank');
+    window.open('https://app-storeen.vercel.app/sign-up', '_ blank');
 
   return (
     <Wrapper>
