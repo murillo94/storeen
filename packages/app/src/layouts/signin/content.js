@@ -2,19 +2,17 @@ import { Box } from '@storeen/components';
 
 const Page = ({ children }) => (
   <Box
-    as="section"
+    as="main"
+    padding={[14, 10]}
     sx={{
       textAlign: 'center',
       minHeight: '100vh',
       width: '100%',
       display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
+      justifyContent: 'center'
     }}
   >
-    <Box as="main" padding={6}>
-      <Box sx={{ width: '300px' }}>{children}</Box>
-    </Box>
+    <Box sx={{ width: '410px' }}>{children}</Box>
   </Box>
 );
 

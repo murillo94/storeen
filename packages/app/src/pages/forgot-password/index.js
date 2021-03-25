@@ -3,7 +3,7 @@ import Router from 'next/router';
 
 export default class extends Component {
   static async getInitialProps({ res }) {
-    const url = '/password/new';
+    const url = '/forgot-password/email';
     if (res) {
       res.writeHead(302, {
         Location: url

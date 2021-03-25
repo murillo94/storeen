@@ -43,8 +43,7 @@ const Logo = () => (
 const Hr = () => (
   <Box
     as="hr"
-    marginTop={0}
-    marginX={0}
+    margin={0}
     marginBottom={1}
     sx={{
       width: '100%',

@@ -25,7 +25,7 @@ const FAQ = () => (
               Para abrir uma loja na Storeen é muito simples. =) Tudo o que você
               precisa fazer é{' '}
               <Anchor
-                href="https://app-storeen.vercel.app/"
+                href="https://app-storeen.vercel.app/sign-up"
                 color="primary"
                 target="_blank"
               >
@@ -108,7 +108,7 @@ const FAQ = () => (
             <Paragraph>
               E para criar sua loja agora mesmo clique{' '}
               <Anchor
-                href="https://app-storeen.vercel.app/"
+                href="https://app-storeen.vercel.app/sign-up"
                 color="primary"
                 target="_blank"
               >

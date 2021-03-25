@@ -41,7 +41,7 @@ const Logo = () => (
     />
     <Image
       src={require('@app/public/images/logo-icon.svg')}
-      alt="Storeen logo icone"
+      alt="Desenho da logo da Storeen"
       width="34px"
       height="34px"
       marginBottom={9}
