@@ -48,7 +48,7 @@ const Privacy = () => (
               como comunicados da ferramenta, changelog, condições e políticas,
               informações sobre o pacote do plano adquirido, entre outras. Como
               estas informações são importantes para a sua interação com a
-              storeen, você não poderá optar por não receber esse tipo de
+              Storeen, você não poderá optar por não receber esse tipo de
               comunicação.
             </Paragraph>
             <Paragraph>

@@ -286,7 +286,7 @@ const Features = () => {
                 </Stack>
                 <Stack>
                   <Heading is="h4" marginBottom={2}>
-                    Utilize o domínio da storeen
+                    Utilize o domínio da Storeen
                   </Heading>
                   <Paragraph color="muted" marginBottom={8}>
                     Se você não quiser ou tiver um domínio próprio, pode

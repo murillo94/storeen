@@ -4,31 +4,24 @@
   </a>
 </p>
 
-> WIP
-
 **Storeen** is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) real application with your own design system and component library in comprised of modern, responsive, living components.
 
-The storeen frontend structure was designed to try use shared code in all the application pages taking the design system into consideration.
-
-## Usage
-
-```
-$ yarn install
-$ yarn dev
-# or
-$ yarn dev -p <custom_port>
-```
+The Storeen frontend structure was designed to try use shared code in all the application pages taking the design system into consideration.
 
 ## Design System
 
-The [@storeen/system](./packages/system) is the core of all components theme-based style props for building all the components inside **storeen**.
+The [@storeen/system](./packages/system) is the core of all components theme-based style props for building all the components inside **Storeen**.
 
 ## Component Library
 
-The [@storeen/components](./packages/components) is the UI components built on top of **storeen** design system.
+The [@storeen/components](./packages/components) is the UI components built on top of **Storeen** design system.
 
 ## Styleguide
 
 The [@storeen/styleguide](./packages/styleguide) is our design system, the home for all our reusable/principles patterns, components and assets.
 
-Check out our [styleguide](https://styleguide-storeen.vercel.app/) documentation for more details.
+## Application
+The [@storeen/app](./packages/app) is the final application, using all the design system implemented.
+
+## Site
+The [@storeen/site](./packages/site) is the final site, where the **Storeen** share the product.
